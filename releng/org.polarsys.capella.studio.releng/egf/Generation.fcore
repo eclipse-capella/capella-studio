@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fcore:FactoryComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:domain="http://www.eclipse.org/egf/1.0.0/domain"
+    xmlns:fcore="http://www.eclipse.org/egf/1.0.0/fcore" xmlns:fprod="http://www.eclipse.org/egf/1.0.0/fprod"
+    xmlns:types="http://www.eclipse.org/egf/1.0.0/types" xmi:id="_u2NK8I3DEd-jLJFvCqxXvA" name="Generation Launcher">
+  <contractContainer xmi:id="_-z7hUKx4EeCY7YPdntiIaQ">
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_-z7hUax4EeCY7YPdntiIaQ"
+        name="generationPath" invocationContracts="#_p8ivc81cEeSQpbp6WoTKiQ">
+      <type xmi:type="types:TypeString" xmi:id="_-z7hUqx4EeCY7YPdntiIaQ" value="platform:/resource/org.polarsys.capella.studio.releng/jobs"/>
+    </contracts>
+  </contractContainer>
+  <viewpointContainer xmi:id="_wBJ7II3DEd-jLJFvCqxXvA">
+    <viewpoints xmi:type="domain:DomainViewpoint" xmi:id="_wScfcI3DEd-jLJFvCqxXvA">
+      <domains xmi:type="domain:EMFDomain" xmi:id="_4o2qMd8yEeKiPNz7tWm6rg" helperImplementation="org.eclipse.egf.domain.emf.EMFDomainHelper"
+          uri="platform:/resource/org.polarsys.capella.studio.releng/model/studio_nightly.egfbuild"/>
+    </viewpoints>
+  </viewpointContainer>
+  <orchestration xmi:type="fprod:ProductionPlan" xmi:id="_vUTcMI3DEd-jLJFvCqxXvA">
+    <invocations xmi:id="_p8ivcM1cEeSQpbp6WoTKiQ" invokedActivity="fcore:FactoryComponent platform:/plugin/org.polarsys.kitalpha.releng/egf/Generation.fcore#_-QI6QB2KEeC7y6GV_k_dkg">
+      <invocationContractContainer xmi:id="_p8ivcc1cEeSQpbp6WoTKiQ">
+        <invocationContracts xmi:id="_p8ivcs1cEeSQpbp6WoTKiQ" invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.releng/egf/Generation.fcore#_IBFP4B2LEeC7y6GV_k_dkg">
+          <type xmi:type="domain:TypeDomain" xmi:id="_uw2L8M1cEeSQpbp6WoTKiQ" domain="#_4o2qMd8yEeKiPNz7tWm6rg"/>
+        </invocationContracts>
+        <invocationContracts xmi:id="_p8ivc81cEeSQpbp6WoTKiQ" factoryComponentContract="#_-z7hUax4EeCY7YPdntiIaQ"
+            invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.releng/egf/Generation.fcore#_D9GakKx5EeCY7YPdntiIaQ"/>
+      </invocationContractContainer>
+    </invocations>
+  </orchestration>
+</fcore:FactoryComponent>

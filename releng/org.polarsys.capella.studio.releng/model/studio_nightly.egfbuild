@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildcore:Chain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:buildcore="http://www.eclipse.org/egf/1.0.1/buildcore" xmlns:builddeploy="http://www.eclipse.org/egf/1.0.0/builddeploy" xmlns:buildscm="http://www.eclipse.org/egf/1.0.0/buildscm" xmlns:buildstep="http://www.eclipse.org/egf/1.0.2/buildstep" xmi:id="_kiSDAM1YEeSQpbp6WoTKiQ" name="Capella_Studio">
+  <propertyPackages xmi:id="_lb5k0I5EEeOQ8YcnVfa6Wg" name="urls">
+    <properties xmi:id="_kt6SMEE8EeOcseK798bpbA" key="egf.repo.url" value="https://hudson.eclipse.org/egf/job/buckminster-egf-juno/lastSuccessfulBuild/artifact/result/publish/org.eclipse.egf.sdk/site.p2/"/>
+    <properties xmi:id="_MWwdkPlvEeCFCIE_fWd_VQ" key="cloudsmith.download.prefix" value="http://download.eclipse.org/external/"/>
+    <properties xmi:id="_MlqcQPlvEeCFCIE_fWd_VQ" key="polarion.download.prefix" value="http://download.eclipse.org/external/"/>
+    <properties xmi:id="_LPrgwPlvEeCFCIE_fWd_VQ" key="eclipse.download.prefix" value="http://download.eclipse.org/"/>
+    <properties xmi:id="_7e-7UI5hEeOQ8YcnVfa6Wg" key="sirius.repo.url" value="${eclipse.download.prefix}/sirius/updates/releases/2.0.4/juno"/>
+    <properties xmi:id="_n0G4oJPyEeODqo9Nw0Mw6Q" key="orbit.repo.url" value="${eclipse.download.prefix}/tools/orbit/downloads/drops/R20130827064939/repository/"/>
+    <properties xmi:id="_eRQHEZk8EeOez_jbx14D1w" key="eclipse38.download" value="${eclipse.download.prefix}/eclipse/updates/3.8/"/>
+    <properties xmi:id="_gReNwM1bEeSQpbp6WoTKiQ" key="eclipse38.download.prefix" value="$'eclipse38.download}"/>
+    <properties xmi:id="_efiO4BGGEeS7tbIPWaBUAQ" key="eef.repo.url" value="${eclipse.download.prefix}/modeling/emft/eef/updates/releases/1.3"/>
+    <properties xmi:id="_snr1UBGGEeS7tbIPWaBUAQ" key="acceleo.repo.url" value="${eclipse.download.prefix}/acceleo/updates/releases/3.4"/>
+    <properties xmi:id="_dtoK4AdAEeSxv713mpB8TA" key="ecoretools2.repo.url" value="${eclipse.download.prefix}/ecoretools/updates/nightly/3.0.x/luna"/>
+    <properties xmi:id="_BukoEVkbEeSo0vu-C-A3cw" key="diffmerge.repo.url" value="${eclipse.download.prefix}/diffmerge/releases/0.4.0/emf-diffmerge-site"/>
+    <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="${eclipse.download.prefix}/diffmerge/releases/0.4.0/edm-patterns-site"/>
+  </propertyPackages>
+  <propertyPackages xmi:id="_vtRuAI5EEeOQ8YcnVfa6Wg" name="versions">
+    <properties xmi:id="_SowkIEhiEeOxuMV9a71i9w" key="eclipse_version" value="juno"/>
+  </propertyPackages>
+  <jobs xmi:id="_Htxz8PqoEeKFaurHIkYR0w" name="main">
+    <properties xmi:id="_pAapkPq5EeKXG4Dej4PCUQ" key="main_version" value="trunk"/>
+    <steps xsi:type="buildstep:CleanStep" xmi:id="_oIj20DZJEeOP8MSofnrGNA" type="Result"/>
+    <steps xsi:type="buildcore:StepContainer" xmi:id="_Hh5UQJKEEeSPapwxSH2ZqQ" name="TP_juno">
+      <properties xmi:id="_S07kMJKDEeSPapwxSH2ZqQ" key="TP_name" value="TP_juno" type="INLINED"/>
+      <properties xmi:id="_eG7gEJKHEeSPapwxSH2ZqQ" key="TP_arch" value="x86" type="INLINED"/>
+      <properties xmi:id="_eayQMJKHEeSPapwxSH2ZqQ" key="TP_os" value="win32" type="INLINED"/>
+      <properties xmi:id="_evriIJKHEeSPapwxSH2ZqQ" key="TP_ws" value="win32" type="INLINED"/>
+      <properties xmi:id="_d2Gu0aF6EeSwPMM9dkSLiw" key="TP_profile" value="SDKProfile" type="INLINED"/>
+      <steps xsi:type="buildcore:ReuseStep" xmi:id="_Cs0RIJKDEeSPapwxSH2ZqQ" name="">
+        <reusedStep xsi:type="buildcore:StepContainer" href="../../../plugin/org.polarsys.kitalpha.releng/model/platformSetup.egfbuild#_3DxKYJKCEeSPapwxSH2ZqQ"/>
+      </steps>
+    </steps>
+    <steps xsi:type="buildcore:StepContainer" xmi:id="_mxKwAD5LEeSicsfEyxBYkg" name="TP_build">
+      <steps xsi:type="buildstep:InstallStep" xmi:id="_P-70gBceEeSiX7noNBdBeQ" name="TP_build" id="TP_build" profile="SDKProfile" p2_os="" p2_ws="" p2_arch="">
+        <updateSiteUrls>${eclipse38.download}</updateSiteUrls>
+        <featureNames>org.eclipse.sdk</featureNames>
+        <productNames>org.eclipse.sdk.ide</productNames>
+      </steps>
+      <steps xsi:type="buildstep:InstallStep" xmi:id="_c8yE0D5LEeSicsfEyxBYkg" name="install egf TP_build" id="TP_build" profile="SDKProfile" p2_os="" p2_ws="" p2_arch="">
+        <updateSiteUrls>${egf.repo.url}</updateSiteUrls>
+        <updateSiteUrls>${eclipse.download.prefix}/releases/${eclipse_version}</updateSiteUrls>
+        <featureNames>org.eclipse.egf.sdk</featureNames>
+      </steps>
+    </steps>
+    <scms xsi:type="buildscm:GIT" xmi:id="_LbOo4fx8EeO7zY3f-pIrjg">
+      <locations xmi:id="_L0O-wPx8EeO7zY3f-pIrjg" protocol="https://" url="www.polarsys.org/r/capella/capella-studio" localPath="" username="" password=""/>
+    </scms>
+    <deployment xsi:type="builddeploy:HudsonDeployment" xmi:id="_GaCUIPqoEeKFaurHIkYR0w" assignedNode="master" jdkName="jdk6u18" antName="ant-1.8.2" userDeployServerUrl="https://www.polarsys.org/kitalpha/hudson/" userDeployJobName="">
+      <users xmi:id="_8MIb4INCEeO4K7leE9IQQw" login="thomas.guiu@soyatec.com" permission="WRITE"/>
+      <triggers xsi:type="builddeploy:SCMTrigger" xmi:id="_PkkxEAYrEeGvu-Y1KM--ag"/>
+      <triggers xsi:type="builddeploy:CronTrigger" xmi:id="_AmyRsQ8MEeKIuPgeX8UkeA" planning="* * * * 5"/>
+      <generationLocation xsi:type="buildscm:GITGenerationLocation" xmi:id="_UkTtQPx8EeO7zY3f-pIrjg" folderName="releng/org.polarsys.capella.studio.releng/jobs" gitLocation="_L0O-wPx8EeO7zY3f-pIrjg"/>
+    </deployment>
+  </jobs>
+</buildcore:Chain>
