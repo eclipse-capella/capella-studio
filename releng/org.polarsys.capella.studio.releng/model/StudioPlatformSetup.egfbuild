@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildcore:StepContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:buildcore="http://www.eclipse.org/egf/1.0.1/buildcore" xmlns:buildstep="http://www.eclipse.org/egf/1.0.2/buildstep" xmi:id="_SOcV4M1xEeSFroBhAlzk1g" name="root">
+  <steps xsi:type="buildcore:StepContainer" xmi:id="_Y4cvwM1xEeSFroBhAlzk1g" name="build studio platform">
+    <steps xsi:type="buildcore:ReuseStep" xmi:id="_aCzqEM1xEeSFroBhAlzk1g">
+      <reusedStep xsi:type="buildcore:StepContainer" href="../../org.polarsys.kitalpha.releng/model/platformSetup.egfbuild#_3DxKYJKCEeSPapwxSH2ZqQ"/>
+    </steps>
+    <steps xsi:type="buildstep:InstallStep" xmi:id="_tEnuIM1xEeSFroBhAlzk1g" name="install query legacy features" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
+      <updateSiteUrls>${query.legacy.repo.url}</updateSiteUrls>
+      <featureNames>org.eclipse.sirius.query.legacy.feature.source</featureNames>
+      <featureNames>org.eclipse.sirius.query.legacy.feature</featureNames>
+    </steps>
+    <steps xsi:type="buildstep:InstallStep" xmi:id="_tEnuIc1xEeSFroBhAlzk1g" name="install kitalpha features" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
+      <updateSiteUrls>${kitalpha.repo.url}</updateSiteUrls>
+      <featureNames>org.polarsys.kitalpha.sdk.feature</featureNames>
+      <featureNames>org.polarsys.kitalpha.releng.feature</featureNames>
+    </steps>
+    <steps xsi:type="buildstep:InstallStep" xmi:id="_kRhrYM1yEeSFroBhAlzk1g" name="install capella features" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
+      <updateSiteUrls>${kitalpha.repo.url}</updateSiteUrls>
+      <updateSiteUrls>${capella.repo.url}</updateSiteUrls>
+      <featureNames>org.polarsys.capella.common.advance.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.advance.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.base.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.base.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.compare.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.compare.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.dependencies.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.dependencies.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.libraries.definition.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.libraries.definition.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.libraries.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.libraries.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.mdsofa.common.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.mdsofa.common.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.model.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.model.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.re.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.re.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.common.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.advance.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.advance.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.af.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.af.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.common.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.common.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.common.ui.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.common.ui.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.compare.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.compare.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.dashboard.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.dashboard.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.data.merged.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.data.merged.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.doc.developer.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.doc.developer.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.doc.user.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.doc.user.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.libraries.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.libraries.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.properties.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.properties.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.re.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.re.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.transfo.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.transfo.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.transition.common.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.transition.common.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.transition.system.topdown.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.transition.system.topdown.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.ui.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.ui.quickfix.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.ui.quickfix.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.ui.semantic.browser.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.ui.semantic.browser.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.ui.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.ui.wizards.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.ui.wizards.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.validation.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.validation.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.shared.feature</featureNames>
+      <featureNames>org.polarsys.capella.shared.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.patterns.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.patterns.feature</featureNames>
+      <featureNames>org.polarsys.capella.detachment.version.precondition.feature</featureNames>
+      <featureNames>org.polarsys.capella.detachment.version.precondition.source.feature</featureNames>
+    </steps>
+  </steps>
+</buildcore:StepContainer>

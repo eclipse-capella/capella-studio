@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<buildcore:Chain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:buildcore="http://www.eclipse.org/egf/1.0.1/buildcore" xmlns:builddeploy="http://www.eclipse.org/egf/1.0.0/builddeploy" xmlns:buildscm="http://www.eclipse.org/egf/1.0.0/buildscm" xmlns:buildstep="http://www.eclipse.org/egf/1.0.2/buildstep" xmi:id="_kiSDAM1YEeSQpbp6WoTKiQ" name="Capella_Studio">
+<buildcore:Chain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:buildcore="http://www.eclipse.org/egf/1.0.1/buildcore" xmlns:builddeploy="http://www.eclipse.org/egf/1.0.0/builddeploy" xmlns:buildfile="http://www.eclipse.org/egf/1.0.0/buildfile" xmlns:buildscm="http://www.eclipse.org/egf/1.0.0/buildscm" xmlns:buildstep="http://www.eclipse.org/egf/1.0.2/buildstep" xmi:id="_kiSDAM1YEeSQpbp6WoTKiQ" name="Capella_Studio">
   <propertyPackages xmi:id="_lb5k0I5EEeOQ8YcnVfa6Wg" name="urls">
     <properties xmi:id="_kt6SMEE8EeOcseK798bpbA" key="egf.repo.url" value="https://hudson.eclipse.org/egf/job/buckminster-egf-juno/lastSuccessfulBuild/artifact/result/publish/org.eclipse.egf.sdk/site.p2/"/>
     <properties xmi:id="_MWwdkPlvEeCFCIE_fWd_VQ" key="cloudsmith.download.prefix" value="http://download.eclipse.org/external/"/>
@@ -11,15 +11,18 @@
     <properties xmi:id="_gReNwM1bEeSQpbp6WoTKiQ" key="eclipse38.download.prefix" value="${eclipse38.download}"/>
     <properties xmi:id="_efiO4BGGEeS7tbIPWaBUAQ" key="eef.repo.url" value="${eclipse.download.prefix}/modeling/emft/eef/updates/releases/1.3"/>
     <properties xmi:id="_snr1UBGGEeS7tbIPWaBUAQ" key="acceleo.repo.url" value="${eclipse.download.prefix}/acceleo/updates/releases/3.4"/>
-    <properties xmi:id="_dtoK4AdAEeSxv713mpB8TA" key="ecoretools2.repo.url" value="${eclipse.download.prefix}/ecoretools/updates/nightly/3.0.x/luna"/>
-    <properties xmi:id="_BukoEVkbEeSo0vu-C-A3cw" key="diffmerge.repo.url" value="${eclipse.download.prefix}/diffmerge/releases/0.4.0/emf-diffmerge-site"/>
+    <properties xmi:id="_dtoK4AdAEeSxv713mpB8TA" key="ecoretools2.repo.url" value="${eclipse.download.prefix}/ecoretools/updates/nightly/3.0.0-N20150305-021244/luna/"/>
+    <properties xmi:id="_BukoEVkbEeSo0vu-C-A3cw" key="diffmerge.repo.url" value="http://download.eclipse.org/diffmerge/releases/0.4.1/emf-diffmerge-site"/>
     <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="${eclipse.download.prefix}/diffmerge/releases/0.4.0/edm-patterns-site"/>
+    <properties xmi:id="_7UOncM1xEeSFroBhAlzk1g" key="query.legacy.repo.url" value="${eclipse.download.prefix}/sirius/updates/legacy"/>
+    <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_Nightly/lastSuccessfulBuild/artifact/result/publish/kitalpha/site.p2/"/>
+    <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/job/capella-v0.8.x//lastSuccessfulBuild/artifact/result/publish/org.polarsys.capella/site.p2/"/>
   </propertyPackages>
   <propertyPackages xmi:id="_vtRuAI5EEeOQ8YcnVfa6Wg" name="versions">
     <properties xmi:id="_SowkIEhiEeOxuMV9a71i9w" key="eclipse_version" value="juno"/>
+    <properties xmi:id="_JYCjYNL3EeSCstxmhDJ57A" key="studio_version" value="0.8.1"/>
   </propertyPackages>
-  <jobs xmi:id="_Htxz8PqoEeKFaurHIkYR0w" name="main">
-    <properties xmi:id="_pAapkPq5EeKXG4Dej4PCUQ" key="main_version" value="trunk"/>
+  <jobs xmi:id="_Htxz8PqoEeKFaurHIkYR0w" name="init">
     <steps xsi:type="buildstep:CleanStep" xmi:id="_oIj20DZJEeOP8MSofnrGNA" type="Result"/>
     <steps xsi:type="buildcore:StepContainer" xmi:id="_Hh5UQJKEEeSPapwxSH2ZqQ" name="TP_juno">
       <properties xmi:id="_S07kMJKDEeSPapwxSH2ZqQ" key="TP_name" value="TP_juno" type="INLINED"/>
@@ -28,7 +31,7 @@
       <properties xmi:id="_evriIJKHEeSPapwxSH2ZqQ" key="TP_ws" value="win32" type="INLINED"/>
       <properties xmi:id="_d2Gu0aF6EeSwPMM9dkSLiw" key="TP_profile" value="SDKProfile" type="INLINED"/>
       <steps xsi:type="buildcore:ReuseStep" xmi:id="_Cs0RIJKDEeSPapwxSH2ZqQ" name="">
-        <reusedStep xsi:type="buildcore:StepContainer" href="../../../plugin/org.polarsys.kitalpha.releng/model/platformSetup.egfbuild#_3DxKYJKCEeSPapwxSH2ZqQ"/>
+        <reusedStep xsi:type="buildcore:StepContainer" href="StudioPlatformSetup.egfbuild#_Y4cvwM1xEeSFroBhAlzk1g"/>
       </steps>
     </steps>
     <steps xsi:type="buildcore:StepContainer" xmi:id="_mxKwAD5LEeSicsfEyxBYkg" name="TP_build">
@@ -44,7 +47,7 @@
       </steps>
     </steps>
     <scms xsi:type="buildscm:GIT" xmi:id="_LbOo4fx8EeO7zY3f-pIrjg">
-      <locations xmi:id="_L0O-wPx8EeO7zY3f-pIrjg" protocol="https://" url="www.polarsys.org/r/capella/capella-studio" localPath="" username="" password=""/>
+      <locations xmi:id="_L0O-wPx8EeO7zY3f-pIrjg" protocol="https://" url="git.polarsys.org/r/capella/capella-studio" localPath="" username="" password=""/>
     </scms>
     <deployment xsi:type="builddeploy:HudsonDeployment" xmi:id="_GaCUIPqoEeKFaurHIkYR0w" assignedNode="master" jdkName="jdk6u18" antName="ant-1.8.2" userDeployServerUrl="https://www.polarsys.org/kitalpha/hudson/" userDeployJobName="">
       <users xmi:id="_8MIb4INCEeO4K7leE9IQQw" login="thomas.guiu@soyatec.com" permission="WRITE"/>
@@ -52,5 +55,36 @@
       <triggers xsi:type="builddeploy:CronTrigger" xmi:id="_AmyRsQ8MEeKIuPgeX8UkeA" planning="* * * * 5"/>
       <generationLocation xsi:type="buildscm:GITGenerationLocation" xmi:id="_UkTtQPx8EeO7zY3f-pIrjg" folderName="releng/org.polarsys.capella.studio.releng/jobs" gitLocation="_L0O-wPx8EeO7zY3f-pIrjg"/>
     </deployment>
+  </jobs>
+  <jobs xmi:id="_oHFSkM1wEeSFroBhAlzk1g" name="main" enabled="false">
+    <properties xmi:id="_pAapkPq5EeKXG4Dej4PCUQ" key="main_version" value="trunk"/>
+    <steps xsi:type="buildstep:BuildStep" xmi:id="_vHcW8M1wEeSFroBhAlzk1g" name="common">
+      <buildLocations xsi:type="buildscm:GITBuildLocation" xmi:id="_vHcW8c1wEeSFroBhAlzk1g" gitLocation="_L0O-wPx8EeO7zY3f-pIrjg" folderName="common/plugins"/>
+      <buildLocations xsi:type="buildscm:GITBuildLocation" xmi:id="_vHcW8s1wEeSFroBhAlzk1g" gitLocation="_L0O-wPx8EeO7zY3f-pIrjg" folderName="common/features"/>
+      <buildLocations xsi:type="buildstep:TargetPlatformBuildLocation" xmi:id="_vHcW881wEeSFroBhAlzk1g" path="${publish}/TP_build"/>
+      <buildLocations xsi:type="buildstep:TargetPlatformBuildLocation" xmi:id="_vHcW9M1wEeSFroBhAlzk1g" path="${publish}/TP_juno"/>
+      <components xsi:type="buildstep:Feature" xmi:id="_vHcW9c1wEeSFroBhAlzk1g" id="org.polarsys.kitalpha.common.feature"/>
+    </steps>
+  </jobs>
+  <jobs xmi:id="_5GLecdL2EeSCstxmhDJ57A" name="platforms">
+    <steps xsi:type="buildcore:StepContainer" xmi:id="_A4dvANL3EeSCstxmhDJ57A" name="TP_win32-win32-x86">
+      <properties xmi:id="_A4dvAdL3EeSCstxmhDJ57A" key="TP_name" value="TP_win32-win32-x86" type="INLINED"/>
+      <properties xmi:id="_A4dvAtL3EeSCstxmhDJ57A" key="TP_arch" value="x86" type="INLINED"/>
+      <properties xmi:id="_A4dvA9L3EeSCstxmhDJ57A" key="TP_os" value="win32" type="INLINED"/>
+      <properties xmi:id="_A4dvBNL3EeSCstxmhDJ57A" key="TP_ws" value="win32" type="INLINED"/>
+      <properties xmi:id="_A4dvBdL3EeSCstxmhDJ57A" key="TP_profile" value="SDKProfile" type="INLINED"/>
+      <steps xsi:type="buildcore:ReuseStep" xmi:id="_A4dvBtL3EeSCstxmhDJ57A" name="">
+        <reusedStep xsi:type="buildcore:StepContainer" href="StudioPlatformSetup.egfbuild#_Y4cvwM1xEeSFroBhAlzk1g"/>
+      </steps>
+      <steps xsi:type="buildstep:InstallStep" xmi:id="_GZ5-UNL3EeSCstxmhDJ57A" name="install kitalpha" enabled="false" id="${TP_name}" profile="SDKProfile" installResultStepsSourceFeatures="true"/>
+      <steps xsi:type="buildstep:EgfStep" xmi:id="_GZ5-UdL3EeSCstxmhDJ57A" enabled="false">
+        <properties xmi:id="_GZ5-UtL3EeSCstxmhDJ57A" key="platformPath" value="${publish}/${TP_name}"/>
+        <properties xmi:id="_GZ5-U9L3EeSCstxmhDJ57A" key="version" value="${mdk_version}"/>
+        <properties xmi:id="_GZ5-VdL3EeSCstxmhDJ57A" key="product" value="org.polarsys.kitalpha.product"/>
+        <properties xmi:id="_GZ5-VtL3EeSCstxmhDJ57A" key="application" value="org.polarsys.kitalpha.application"/>
+        <egfActivities xmi:id="_GZ5-V9L3EeSCstxmhDJ57A" uri="platform:/plugin/org.polarsys.kitalpha.releng/egf/customPlatform.fcore#_iQtBQK1QEeCY7YPdntiIaQ"/>
+      </steps>
+      <steps xsi:type="buildfile:ZipStep" xmi:id="_HEqykNL3EeSCstxmhDJ57A" name="zip juno results" baseDir="${publish}/${TP_name}" destinationFilePath="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}-incubation.zip"/>
+    </steps>
   </jobs>
 </buildcore:Chain>
