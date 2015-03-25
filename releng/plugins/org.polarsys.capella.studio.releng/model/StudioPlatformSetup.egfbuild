@@ -84,5 +84,10 @@
       <featureNames>org.polarsys.capella.detachment.version.precondition.feature</featureNames>
       <featureNames>org.polarsys.capella.detachment.version.precondition.source.feature</featureNames>
     </steps>
+    <steps xsi:type="buildstep:InstallStep" xmi:id="_w1HJsNMCEeSCstxmhDJ57A" name="install capella egf features" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
+      <updateSiteUrls>${capella.egf.repo.url}</updateSiteUrls>
+      <featureNames>org.polarsys.capella.core.egf.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.egf.source.feature</featureNames>
+    </steps>
   </steps>
 </buildcore:StepContainer>
