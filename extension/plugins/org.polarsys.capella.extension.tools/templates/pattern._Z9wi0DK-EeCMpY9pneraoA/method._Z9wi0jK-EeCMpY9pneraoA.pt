@@ -1,0 +1,29 @@
+package PACKAGE;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.emf.codegen.ecore.genmodel.GenClass;
+import org.eclipse.emf.codegen.ecore.genmodel.GenPackage;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.*;
+import org.eclipse.egf.model.pattern.*;
+import org.eclipse.egf.pattern.execution.*;
+import org.eclipse.egf.pattern.query.*;
+import org.eclipse.egf.common.helper.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import org.polarsys.capella.extension.tools.MenuContributorClassGenerator;
+import org.polarsys.capella.extension.tools.HelperClassGenerator;
+import org.polarsys.capella.extension.tools.HelperClassGenerator.HelperInfo;
+
+
+public class CLASS {
+
+	public CLASS() {
+		//Here is the constructor
+	}
+
+

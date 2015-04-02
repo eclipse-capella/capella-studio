@@ -1,0 +1,51 @@
+/**
+ * <copyright>
+ *
+ * </copyright>
+ */
+
+package <%=packageName%>;
+
+import org.eclipse.emf.common.util.BasicEList;
+
+import org.eclipse.emf.ecore.EAnnotation;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+
+import org.polarsys.capella.common.model.helpers.IHelper;
+
+<%
+	for (GenClass feature : CapellaMetamodelHelper.getCapellaGenClasses(parameter.getGenClasses())) 
+	{
+%>
+	import <%=parameter.getInterfacePackageName()%>.<%=feature.getInterfaceName()%>;
+<%
+	}
+%>
+/**
+ * @generated 
+ */
+public class <%=className%> implements  IHelper {
+
+	/**
+	 * @generated
+	 */
+	public Object getValue(EObject object, EStructuralFeature feature, EAnnotation annotation) {
+		Object ret = null;
+		
+
+<%
+	for (GenClass feature : CapellaMetamodelHelper.getCapellaGenClasses(parameter.getGenClasses())) 
+	{
+%>
+if (ret == null && object instanceof <%=feature.getInterfaceName()%>)
+{
+	ret = <%= HelperClassGenerator.getHelperClassname(feature)%>.getInstance().doSwitch((<%=feature.getInterfaceName()%>)object, feature);
+}
+<%
+	}
+%>
+			return ret;
+	}
+
+}

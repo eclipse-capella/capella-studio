@@ -1,0 +1,36 @@
+		if (importer == null)
+			return;
+		GenModel genModel = importer.getGenModel();
+		String emfModelPath = parameter.getModelPath();
+		for (GenPackage genPackage : genModel.getGenPackages()) {
+			String ecoreFileName = genPackage.getEcorePackage().eResource().getURI().lastSegment();
+			if (emfModelPath.contains(ecoreFileName)) {
+				genPackage.setBasePackage(parameter.getBasePackage());
+			}
+
+			// EMDE Extension Genmodel
+			genPackage.setResource(GenResourceKind.XMI_LITERAL);
+			genPackage.setDisposableProviderFactory(true);
+			genPackage.setGenerateExampleClass(false);
+			genPackage.setMultipleEditorPages(false);
+			genPackage.setExtensibleProviderFactory(true);
+			genPackage.setChildCreationExtenders(true);
+			// EMDE Extension Genmodel
+
+		}
+
+		String emfPluginName = parameter.getPluginName();
+		genModel.setModelPluginID(emfPluginName);
+		genModel.setModelDirectory("/" + emfPluginName + "/src");
+
+		// EMDE Extension Genmodel
+		genModel.setNonNLSMarkers(true);
+		Bundle bundle = Platform.getBundle("org.eclipse.egf.emf.pattern");
+		genModel.setRuntimeVersion(GenRuntimeVersionHelper.getVersion(bundle.getVersion()));
+		genModel.setRootExtendsClass("org.eclipse.emf.ecore.impl.EObjectImpl");
+		genModel.setCodeFormatting(true);
+		genModel.setOptimizedHasChildren(true);
+		genModel.setTableProviders(false);
+		genModel.setColorProviders(false);
+		// EMDE Extension Genmodel
+		

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.polarsys.org/capella/extension/genchain/0.8.0"
+            class="org.polarsys.capella.extension.genchain.capellaextension.CapellaExtensionPackage"/>
+   </extension>
+
+</plugin>

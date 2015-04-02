@@ -1,0 +1,57 @@
+        Map<GenerationElement, FactoryComponent> fcs = (Map<GenerationElement, FactoryComponent>) ctx.getValue(FcoreBuilderConstants.CURRENT_FCORE);
+
+        FactoryComponent fc = fcs.get((GenerationElement) (parameter.eContainer()));
+
+        ProductionPlan pp = (ProductionPlan) fc.getOrchestration();
+        DomainViewpoint dvp = (DomainViewpoint) fc.getViewpointContainer().getViewpoint(DomainViewpoint.class);
+
+        EMFDomain genModelDomain = null;
+        URI uri = ((HashMap<String, URI>) ctx.getValue(FcoreBuilderConstants.GENMODEL_URIS)).get(parameter.getModelPath());
+        genModelDomain = ActivityInvocationHelper.getDomain(dvp, uri);
+        if (genModelDomain == null) {
+            genModelDomain = DomainFactory.eINSTANCE.createEMFDomain();
+            genModelDomain.setUri(uri);
+            dvp.getDomains().add(genModelDomain);
+        }
+
+        Map<String, Type> contracts = new HashMap<String, Type>();
+        Map<String, OrchestrationParameter> parameters = new HashMap<String, OrchestrationParameter>();
+
+        for (OrchestrationParameter param : pp.getOrchestrationParameters()) {
+            if (ActivityInvocationHelper.GENERATION_EXTENSION_PARAMETER_NAME.equals(param.getName())) {
+                parameters.put("pattern.substitutions", param);
+            }
+        }
+
+        ResourceSet resourceSet = fc.eResource().getResourceSet();
+        if (parameter.isGenerateModel()) {
+            TypeDomain typeDomain = DomainFactory.eINSTANCE.createTypeDomain();
+            typeDomain.setDomain(genModelDomain);
+            contracts.put("genModelURI", typeDomain);
+            ActivityInvocationHelper.addInvocation(pp, (Activity) resourceSet.getEObject(URI.createURI(this.modelActivity, false), true), contracts, parameters);
+        }
+        if (parameter.isGenerateEdit()) {
+            TypeDomain typeDomain = DomainFactory.eINSTANCE.createTypeDomain();
+            typeDomain.setDomain(genModelDomain);
+            contracts.put("genModelURI", typeDomain);
+            ActivityInvocationHelper.addInvocation(pp, (Activity) resourceSet.getEObject(URI.createURI(this.editActivity, false), true), contracts, parameters);
+        }
+        if (parameter.isGenerateEditor()) {
+            TypeDomain typeDomain = DomainFactory.eINSTANCE.createTypeDomain();
+            typeDomain.setDomain(genModelDomain);
+            contracts.put("genModelURI", typeDomain);
+            ActivityInvocationHelper.addInvocation(pp, (Activity) resourceSet.getEObject(URI.createURI(this.editorActivity, false), true), contracts, parameters);
+        }
+		if (parameter.isGenerateTest()) {
+			TypeDomain typeEMFDomain = DomainFactory.eINSTANCE.createTypeDomain();
+			typeEMFDomain.setDomain(genModelDomain);
+			contracts.put("genModelURI", typeEMFDomain);
+			ActivityInvocationHelper.addInvocation(pp, (Activity) resourceSet.getEObject(URI.createURI(this.testActivity, false), true), contracts, parameters);
+		}
+		if (parameter.isGenerateJavadoc()) {
+			TypeDomain typeEMFDomain = DomainFactory.eINSTANCE.createTypeDomain();
+			typeEMFDomain.setDomain(genModelDomain);
+			contracts.put("genModelURI", typeEMFDomain);
+			ActivityInvocationHelper.addInvocation(pp, (Activity) resourceSet.getEObject(URI.createURI(this.javadocActivity, false), true), contracts, parameters);
+		}
+

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:domain="http://www.eclipse.org/egf/1.0.0/domain"
+    xmlns:fcore="http://www.eclipse.org/egf/1.0.0/fcore" xmlns:fprod="http://www.eclipse.org/egf/1.0.0/fprod"
+    xmlns:ftask="http://www.eclipse.org/egf/1.0.0/ftask" xmlns:pattern="http://www.eclipse.org/egf/1.0.0/pattern"
+    xmlns:types="http://www.eclipse.org/egf/1.0.0/types">
+  <fcore:FactoryComponent xmi:id="_WJu-4B_3EeCuNfuGnuOPDw" name="capella.emf.gen.edit">
+    <contractContainer xmi:id="_tYvcIB_3EeCuNfuGnuOPDw">
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_tt5z0B_3EeCuNfuGnuOPDw"
+          description="EMF Model Pattern" name="genModelURI" mandatory="true" invocationContracts="#_QNKn4h_5EeCuNfuGnuOPDw #_0u3_osW5EeGPRMaJiqZqsA">
+        <type xmi:type="domain:TypeDomain" xmi:id="_tt5z0R_3EeCuNfuGnuOPDw"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_tt5z0h_3EeCuNfuGnuOPDw"
+          name="mergeRulesURI" invocationContracts="#_QNKn4x_5EeCuNfuGnuOPDw">
+        <type xmi:type="types:TypeURI" xmi:id="_tt5z0x_3EeCuNfuGnuOPDw"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_tt5z1B_3EeCuNfuGnuOPDw"
+          description="EMF Model Pattern" name="pattern.substitutions" invocationContracts="#_Q3aUNB_4EeCuNfuGnuOPDw">
+        <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_tt5z1R_3EeCuNfuGnuOPDw"/>
+      </contracts>
+    </contractContainer>
+    <orchestration xmi:type="fprod:ProductionPlan" xmi:id="_QdVAQB_4EeCuNfuGnuOPDw">
+      <invocations xmi:id="_0u3_oMW5EeGPRMaJiqZqsA" name="Register Helper classes"
+          invokedActivity="ftask:Task platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Model_driven_pattern_strategy_task.fcore#_8FZ3aof6eEd64XYPo3s6sPg">
+        <invocationContractContainer xmi:id="_0u3_ocW5EeGPRMaJiqZqsA">
+          <invocationContracts xmi:id="_0u3_osW5EeGPRMaJiqZqsA" factoryComponentContract="#_tt5z0B_3EeCuNfuGnuOPDw"
+              invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Model_driven_pattern_strategy_task.fcore#_DgB2IP6fEd64XaYPo3s6sPg"/>
+          <invocationContracts xmi:id="_0u3_o8W5EeGPRMaJiqZqsA" invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Model_driven_pattern_strategy_task.fcore#_nz1HkSCaEd-Sse0r9LJWbA">
+            <type xmi:type="pattern:TypePatternList" xmi:id="_0u3_pMW5EeGPRMaJiqZqsA"
+                elements="pattern:Pattern platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_5ACm0KJWEeCGDtMIGvx3Bw"/>
+          </invocationContracts>
+        </invocationContractContainer>
+      </invocations>
+      <invocations xmi:id="_Q3aUMB_4EeCuNfuGnuOPDw" invokedActivity="ftask:Task platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Substitution_composition.fcore#_N9g3oElcEd-TSsH7K-_bxQ">
+        <invocationContractContainer xmi:id="_Q3aUMR_4EeCuNfuGnuOPDw">
+          <invocationContracts xmi:id="_Q3aUMh_4EeCuNfuGnuOPDw" invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Substitution_composition.fcore#_UVURwEldEd-TSsH7K-_bxQ">
+            <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_Q3aUMx_4EeCuNfuGnuOPDw">
+              <substitutions xmi:id="_44Y1sV61EeCOnKMtCcA1xg" replacement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_8ePF8YYQEeCqd8q73i8qtQ platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_j2VdcU3TEeOL8st2xd1DTA"/>
+              <substitutions xmi:id="_aAXMUCh1EeCTVvkI_lmQiA" replacedElement="platform:/plugin/org.eclipse.egf.emf.pattern/egf/EMF_Pattern.fcore#_PjwukDG0Ed-kc8dEZsdm2w"
+                  replacement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_Uc2LUChzEeCTVvkI_lmQiA"/>
+              <substitutions xmi:id="_Wl_D0DLAEeCMpY9pneraoA" replacedElement="platform:/plugin/org.polarsys.kitalpha.emde.egf/egf/eMDE_EMF_Extension.fcore#_xdtBEDA3EeCJ8qG0PlPcqA"
+                  replacement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_Z9wi0DK-EeCMpY9pneraoA platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_mWbvccj8EeKY_O2PPVQwHw platform:/plugin/org.polarsys.kitalpha.emde.egf/egf/eMDE_EMF_Extension.fcore#_xdtBEDA3EeCJ8qG0PlPcqA"/>
+              <substitutions xmi:id="_2q72QBMjEeSGsoanbnLdDg" replacedElement="platform:/plugin/org.polarsys.kitalpha.emde.egf/egf/eMDE_EMF_Extension.fcore#_9y_7cEiYEd-PHrwGynb-Gg"
+                  replacement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_7dpMwBMiEeSGsoanbnLdDg"/>
+            </type>
+          </invocationContracts>
+          <invocationContracts xmi:id="_Q3aUNB_4EeCuNfuGnuOPDw" factoryComponentContract="#_tt5z1B_3EeCuNfuGnuOPDw"
+              invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Substitution_composition.fcore#_ahgHMEldEd-TSsH7K-_bxQ"/>
+          <invocationContracts xmi:id="_Q3aUNR_4EeCuNfuGnuOPDw" targetInvocationContract="#_QNKn5B_5EeCuNfuGnuOPDw"
+              invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Substitution_composition.fcore#_gBdIwEldEd-TSsH7K-_bxQ"/>
+        </invocationContractContainer>
+      </invocations>
+      <invocations xmi:id="_QNKn4B_5EeCuNfuGnuOPDw" invokedActivity="fcore:FactoryComponent platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.edit.fcore#__rEKAFjjEd-5FJ833LkcRA">
+        <invocationContractContainer xmi:id="_QNKn4R_5EeCuNfuGnuOPDw">
+          <invocationContracts xmi:id="_QNKn4h_5EeCuNfuGnuOPDw" factoryComponentContract="#_tt5z0B_3EeCuNfuGnuOPDw"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.edit.fcore#__rEKAljjEd-5FJ833LkcRA"/>
+          <invocationContracts xmi:id="_QNKn4x_5EeCuNfuGnuOPDw" factoryComponentContract="#_tt5z0h_3EeCuNfuGnuOPDw"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.edit.fcore#_1e-I4GmLEd-WDNIQ7luqOw"/>
+          <invocationContracts xmi:id="_QNKn5B_5EeCuNfuGnuOPDw" sourceInvocationContract="#_Q3aUNR_4EeCuNfuGnuOPDw"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.edit.fcore#__rEKBljjEd-5FJ833LkcRA"/>
+        </invocationContractContainer>
+      </invocations>
+    </orchestration>
+  </fcore:FactoryComponent>
+  <fcore:FactoryComponent xmi:id="_eBZesB_3EeCuNfuGnuOPDw" name="capella.emf.gen.editor">
+    <contractContainer xmi:id="_sbfwwB_3EeCuNfuGnuOPDw">
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_sy49EB_3EeCuNfuGnuOPDw"
+          description="EMF Model Pattern" name="genModelURI" mandatory="true" invocationContracts="#_TwezEh_4EeCuNfuGnuOPDw">
+        <type xmi:type="domain:TypeDomain" xmi:id="_sy49ER_3EeCuNfuGnuOPDw"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_sy49Eh_3EeCuNfuGnuOPDw"
+          name="mergeRulesURI" invocationContracts="#_TwezEx_4EeCuNfuGnuOPDw">
+        <type xmi:type="types:TypeURI" xmi:id="_sy49Ex_3EeCuNfuGnuOPDw"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_sy49FB_3EeCuNfuGnuOPDw"
+          description="EMF Model Pattern" name="pattern.substitutions" invocationContracts="#_N08oxB_4EeCuNfuGnuOPDw">
+        <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_sy49FR_3EeCuNfuGnuOPDw"/>
+      </contracts>
+    </contractContainer>
+    <orchestration xmi:type="fprod:ProductionPlan" xmi:id="_Nd_hUB_4EeCuNfuGnuOPDw">
+      <invocations xmi:id="_N08owB_4EeCuNfuGnuOPDw" invokedActivity="ftask:Task platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Substitution_composition.fcore#_N9g3oElcEd-TSsH7K-_bxQ">
+        <invocationContractContainer xmi:id="_N08owR_4EeCuNfuGnuOPDw">
+          <invocationContracts xmi:id="_N08owh_4EeCuNfuGnuOPDw" invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Substitution_composition.fcore#_UVURwEldEd-TSsH7K-_bxQ">
+            <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_N08owx_4EeCuNfuGnuOPDw"/>
+          </invocationContracts>
+          <invocationContracts xmi:id="_N08oxB_4EeCuNfuGnuOPDw" factoryComponentContract="#_sy49FB_3EeCuNfuGnuOPDw"
+              invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Substitution_composition.fcore#_ahgHMEldEd-TSsH7K-_bxQ"/>
+          <invocationContracts xmi:id="_N08oxR_4EeCuNfuGnuOPDw" targetInvocationContract="#_TwezFB_4EeCuNfuGnuOPDw"
+              invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Substitution_composition.fcore#_gBdIwEldEd-TSsH7K-_bxQ"/>
+        </invocationContractContainer>
+      </invocations>
+      <invocations xmi:id="_TwezEB_4EeCuNfuGnuOPDw" invokedActivity="fcore:FactoryComponent platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.editor.fcore#_AItvUFjkEd-5FJ833LkcRA">
+        <invocationContractContainer xmi:id="_TwezER_4EeCuNfuGnuOPDw">
+          <invocationContracts xmi:id="_TwezEh_4EeCuNfuGnuOPDw" factoryComponentContract="#_sy49EB_3EeCuNfuGnuOPDw"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.editor.fcore#_AItvUljkEd-5FJ833LkcRA"/>
+          <invocationContracts xmi:id="_TwezEx_4EeCuNfuGnuOPDw" factoryComponentContract="#_sy49Eh_3EeCuNfuGnuOPDw"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.editor.fcore#_678H4GmLEd-WDNIQ7luqOw"/>
+          <invocationContracts xmi:id="_TwezFB_4EeCuNfuGnuOPDw" sourceInvocationContract="#_N08oxR_4EeCuNfuGnuOPDw"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.editor.fcore#_AItvVljkEd-5FJ833LkcRA"/>
+        </invocationContractContainer>
+      </invocations>
+    </orchestration>
+  </fcore:FactoryComponent>
+  <fcore:FactoryComponent xmi:id="_fRRLIB_3EeCuNfuGnuOPDw" description="" name="capella.emf.gen.model">
+    <contractContainer xmi:id="_iKfbAB_3EeCuNfuGnuOPDw">
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_l7ckIB_3EeCuNfuGnuOPDw"
+          description="EMF Model Pattern" name="genModelURI" mandatory="true" invocationContracts="#_BKAnMh_4EeCuNfuGnuOPDw #_K5crwqMwEeCGDtMIGvx3Bw">
+        <type xmi:type="domain:TypeDomain" xmi:id="_l7ckIR_3EeCuNfuGnuOPDw"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_l7ckIh_3EeCuNfuGnuOPDw"
+          name="mergeRulesURI" invocationContracts="#_BKAnMx_4EeCuNfuGnuOPDw">
+        <type xmi:type="types:TypeURI" xmi:id="_l7ckIx_3EeCuNfuGnuOPDw"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_l7ckJB_3EeCuNfuGnuOPDw"
+          description="EMF Model Pattern" name="pattern.substitutions" invocationContracts="#_Ei09Ix_4EeCuNfuGnuOPDw">
+        <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_l7ckJR_3EeCuNfuGnuOPDw"/>
+      </contracts>
+    </contractContainer>
+    <orchestration xmi:type="fprod:ProductionPlan" xmi:id="_vtTfwB_3EeCuNfuGnuOPDw">
+      <invocations xmi:id="_K5crwKMwEeCGDtMIGvx3Bw" name="Register Helper classes"
+          invokedActivity="ftask:Task platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Model_driven_pattern_strategy_task.fcore#_8FZ3aof6eEd64XYPo3s6sPg">
+        <invocationContractContainer xmi:id="_K5crwaMwEeCGDtMIGvx3Bw">
+          <invocationContracts xmi:id="_K5crwqMwEeCGDtMIGvx3Bw" factoryComponentContract="#_l7ckIB_3EeCuNfuGnuOPDw"
+              invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Model_driven_pattern_strategy_task.fcore#_DgB2IP6fEd64XaYPo3s6sPg"/>
+          <invocationContracts xmi:id="_K5crxqMwEeCGDtMIGvx3Bw" invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Model_driven_pattern_strategy_task.fcore#_nz1HkSCaEd-Sse0r9LJWbA">
+            <type xmi:type="pattern:TypePatternList" xmi:id="_zq1aoKMwEeCGDtMIGvx3Bw"
+                elements="pattern:Pattern platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_5ACm0KJWEeCGDtMIGvx3Bw"/>
+          </invocationContracts>
+        </invocationContractContainer>
+      </invocations>
+      <invocations xmi:id="_Ei09IB_4EeCuNfuGnuOPDw" invokedActivity="ftask:Task platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Substitution_composition.fcore#_N9g3oElcEd-TSsH7K-_bxQ">
+        <invocationContractContainer xmi:id="_Ei09IR_4EeCuNfuGnuOPDw">
+          <invocationContracts xmi:id="_Ei09Ih_4EeCuNfuGnuOPDw" invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Substitution_composition.fcore#_UVURwEldEd-TSsH7K-_bxQ">
+            <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_HsmKcB_4EeCuNfuGnuOPDw">
+              <substitutions xmi:id="_w_2scCPLEeCsgK3kJ-zlmA" replacedElement="platform:/plugin/org.eclipse.egf.emf.pattern/egf/EMF_Pattern.fcore#_0lbPAWJ-Ed-FqczH3ESmRw"
+                  replacement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_oFkMMBpuEeCwetI_TIuiwg"/>
+              <substitutions xmi:id="_-VBpwSVrEeCvobh4zWkRbQ" replacedElement="platform:/plugin/org.polarsys.kitalpha.emde.egf/egf/eMDE_EMF_Extension.fcore#_1870cEejEd-o3oTHnj_3Dw"
+                  replacement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_GBnoMSVPEeCKmph44vWKAQ"/>
+              <substitutions xmi:id="_Bw3oMTKWEeCp57t1wDE61w" replacedElement="platform:/plugin/org.polarsys.kitalpha.emde.egf/egf/eMDE_EMF_Extension.fcore#_xy4qIS93EeCJ8qG0PlPcqA"
+                  replacement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_tJCB4DBuEeCfsLM1ABhRyQ platform:/plugin/org.polarsys.kitalpha.emde.egf/egf/eMDE_EMF_Extension.fcore#_xy4qIS93EeCJ8qG0PlPcqA"/>
+              <substitutions xmi:id="_uR52kKO-EeCGDtMIGvx3Bw" replacement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_N_awYaF-EeCGDtMIGvx3Bw platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_AxLy0NZAEeGDE6svG499fQ"/>
+            </type>
+          </invocationContracts>
+          <invocationContracts xmi:id="_Ei09Ix_4EeCuNfuGnuOPDw" factoryComponentContract="#_l7ckJB_3EeCuNfuGnuOPDw"
+              invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Substitution_composition.fcore#_ahgHMEldEd-TSsH7K-_bxQ"/>
+          <invocationContracts xmi:id="_Ei09JB_4EeCuNfuGnuOPDw" targetInvocationContract="#_BKAnNB_4EeCuNfuGnuOPDw"
+              invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Substitution_composition.fcore#_gBdIwEldEd-TSsH7K-_bxQ"/>
+        </invocationContractContainer>
+      </invocations>
+      <invocations xmi:id="_BKAnMB_4EeCuNfuGnuOPDw" invokedActivity="fcore:FactoryComponent platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.model.fcore#_fpAN4VhCEd-5FJ833LkcRA">
+        <invocationContractContainer xmi:id="_BKAnMR_4EeCuNfuGnuOPDw">
+          <invocationContracts xmi:id="_BKAnMh_4EeCuNfuGnuOPDw" factoryComponentContract="#_l7ckIB_3EeCuNfuGnuOPDw"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.model.fcore#_orkvcVjjEd-5FJ833LkcRA"/>
+          <invocationContracts xmi:id="_BKAnMx_4EeCuNfuGnuOPDw" factoryComponentContract="#_l7ckIh_3EeCuNfuGnuOPDw"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.model.fcore#_uBRBMGmLEd-WDNIQ7luqOw"/>
+          <invocationContracts xmi:id="_BKAnNB_4EeCuNfuGnuOPDw" sourceInvocationContract="#_Ei09JB_4EeCuNfuGnuOPDw"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.model.fcore#_orkvdVjjEd-5FJ833LkcRA"/>
+        </invocationContractContainer>
+      </invocations>
+    </orchestration>
+  </fcore:FactoryComponent>
+</xmi:XMI>

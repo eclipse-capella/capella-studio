@@ -1,0 +1,6 @@
+<%
+genModel.getImportedName("org.eclipse.emf.common.util.BasicEList");
+%>
+//INJECTED-CODE-BEGIN
+	return new BasicEList<AbstractTrace>();
+//INJECTED-CODE-END

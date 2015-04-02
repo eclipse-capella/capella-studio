@@ -1,0 +1,4 @@
+<%
+GenClass genClass = parameter;
+argument = parameter;
+%>

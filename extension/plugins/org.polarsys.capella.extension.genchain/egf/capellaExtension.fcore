@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fcore:FactoryComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fcore="http://www.eclipse.org/egf/1.0.0/fcore"
+    xmlns:javapattern="http://www.eclipse.org/egf/1.0.0/javapattern" xmlns:pattern="http://www.eclipse.org/egf/1.0.0/pattern"
+    xmi:id="_5grMYB_5EeCuNfuGnuOPDw" name="CapellaExtension">
+  <viewpointContainer xmi:id="_irflACIVEeCuNfuGnuOPDw">
+    <viewpoints xmi:type="pattern:PatternViewpoint" xmi:id="_jIaKgCIVEeCuNfuGnuOPDw">
+      <libraries xmi:id="_jewN8CIVEeCuNfuGnuOPDw" name="org.polarsys.capella.extension.genchain.patterns">
+        <elements xmi:id="__Az0wCIVEeCuNfuGnuOPDw" name="CapellaGenerationPattern"
+            headerMethod="#__Az0wiIVEeCuNfuGnuOPDw" conditionMethod="#__Az0xCIVEeCuNfuGnuOPDw"
+            initMethod="#__Az0wyIVEeCuNfuGnuOPDw" footerMethod="#__Az0xiIVEeCuNfuGnuOPDw">
+          <nature xmi:type="javapattern:JavaNature" xmi:id="_CxldESIpEeCkc_7OLLz7bw"
+              name="Java"/>
+          <methods xmi:id="__Az0wiIVEeCuNfuGnuOPDw" name="header" patternFilePath="templates/pattern.__Az0wCIVEeCuNfuGnuOPDw/method.__Az0wiIVEeCuNfuGnuOPDw.pt"/>
+          <methods xmi:id="__Az0wyIVEeCuNfuGnuOPDw" name="init" patternFilePath="templates/pattern.__Az0wCIVEeCuNfuGnuOPDw/method.__Az0wyIVEeCuNfuGnuOPDw.pt"/>
+          <methods xmi:id="__Az0xCIVEeCuNfuGnuOPDw" name="preCondition" patternFilePath="templates/pattern.__Az0wCIVEeCuNfuGnuOPDw/method.__Az0xCIVEeCuNfuGnuOPDw.pt"/>
+          <methods xmi:id="__Az0xSIVEeCuNfuGnuOPDw" name="body" patternFilePath="templates/pattern.__Az0wCIVEeCuNfuGnuOPDw/method.__Az0xSIVEeCuNfuGnuOPDw.pt"/>
+          <methods xmi:id="__Az0xiIVEeCuNfuGnuOPDw" name="footer" patternFilePath="templates/pattern.__Az0wCIVEeCuNfuGnuOPDw/method.__Az0xiIVEeCuNfuGnuOPDw.pt"/>
+          <parameters xmi:id="_WnsZ8CIrEeCkc_7OLLz7bw" name="parameter" type="http://www.polarsys.org/capella/extension/genchain/0.8.0#//CapellaEmfGeneration"/>
+          <variables xmi:id="_Nq_IMCIsEeC6gY3KNCaVZQ" name="modelActivity" type="java.lang.String"/>
+          <variables xmi:id="_O8DugCIsEeC6gY3KNCaVZQ" name="editActivity" type="java.lang.String"/>
+          <variables xmi:id="_QMFzACIsEeC6gY3KNCaVZQ" name="editorActivity" type="java.lang.String"/>
+          <variables xmi:id="_XX5mgDYaEeGWF-mrFIsVzA" name="testActivity" type="java.lang.String"/>
+          <variables xmi:id="_Yo0b0DYaEeGWF-mrFIsVzA" name="javadocActivity" type="java.lang.String"/>
+          <orchestration xmi:type="pattern:SuperCall" xmi:id="__Az0xyIVEeCuNfuGnuOPDw"/>
+          <orchestration xmi:type="pattern:MethodCall" xmi:id="_P9sh8CI9EeCqJufaXnLE-A"
+              called="#__Az0xSIVEeCuNfuGnuOPDw"/>
+        </elements>
+        <elements xmi:id="_bvRiUCIsEeCkc_7OLLz7bw" name="CapellaGenmodelPattern" headerMethod="#_bvRiUiIsEeCkc_7OLLz7bw"
+            conditionMethod="#_bvRiVCIsEeCkc_7OLLz7bw" initMethod="#_bvRiUyIsEeCkc_7OLLz7bw"
+            footerMethod="#_bvRiViIsEeCkc_7OLLz7bw">
+          <nature xmi:type="javapattern:JavaNature" xmi:id="_bvRiUSIsEeCkc_7OLLz7bw"
+              name="Java"/>
+          <methods xmi:id="_bvRiUiIsEeCkc_7OLLz7bw" name="header" patternFilePath="templates/pattern._bvRiUCIsEeCkc_7OLLz7bw/method._bvRiUiIsEeCkc_7OLLz7bw.pt"/>
+          <methods xmi:id="_bvRiUyIsEeCkc_7OLLz7bw" name="init" patternFilePath="templates/pattern._bvRiUCIsEeCkc_7OLLz7bw/method._bvRiUyIsEeCkc_7OLLz7bw.pt"/>
+          <methods xmi:id="_bvRiVCIsEeCkc_7OLLz7bw" name="preCondition" patternFilePath="templates/pattern._bvRiUCIsEeCkc_7OLLz7bw/method._bvRiVCIsEeCkc_7OLLz7bw.pt"/>
+          <methods xmi:id="_bvRiVSIsEeCkc_7OLLz7bw" name="create" patternFilePath="templates/pattern._bvRiUCIsEeCkc_7OLLz7bw/method._bvRiVSIsEeCkc_7OLLz7bw.pt"/>
+          <methods xmi:id="_bvRiViIsEeCkc_7OLLz7bw" name="footer" patternFilePath="templates/pattern._bvRiUCIsEeCkc_7OLLz7bw/method._bvRiViIsEeCkc_7OLLz7bw.pt"/>
+          <methods xmi:id="_bvRiVyIsEeCkc_7OLLz7bw" name="save" patternFilePath="templates/pattern._bvRiUCIsEeCkc_7OLLz7bw/method._bvRiVyIsEeCkc_7OLLz7bw.pt"/>
+          <methods xmi:id="_bvRiWCIsEeCkc_7OLLz7bw" name="updateContent" patternFilePath="templates/pattern._bvRiUCIsEeCkc_7OLLz7bw/method._bvRiWCIsEeCkc_7OLLz7bw.pt"/>
+          <parameters xmi:id="_o5SskCIsEeC6gY3KNCaVZQ" name="parameter" type="http://www.polarsys.org/capella/extension/genchain/0.8.0#//CapellaEmfGeneration"/>
+          <variables xmi:id="_bvRiWiIsEeCkc_7OLLz7bw" name="importer" type="org.eclipse.emf.importer.ecore.EcoreImporter"/>
+          <orchestration xmi:type="pattern:SuperCall" xmi:id="_bvRiWyIsEeCkc_7OLLz7bw"/>
+          <orchestration xmi:type="pattern:MethodCall" xmi:id="_bvRiXCIsEeCkc_7OLLz7bw"
+              called="#_bvRiVSIsEeCkc_7OLLz7bw"/>
+          <orchestration xmi:type="pattern:MethodCall" xmi:id="_bvRiXSIsEeCkc_7OLLz7bw"
+              called="#_bvRiWCIsEeCkc_7OLLz7bw"/>
+          <orchestration xmi:type="pattern:MethodCall" xmi:id="_bvRiXiIsEeCkc_7OLLz7bw"
+              called="#_bvRiVyIsEeCkc_7OLLz7bw"/>
+        </elements>
+      </libraries>
+    </viewpoints>
+  </viewpointContainer>
+</fcore:FactoryComponent>

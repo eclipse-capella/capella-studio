@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-Version: 0.8.0.qualifier
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-SymbolicName: org.polarsys.capella.extension.genchain.model;singleton:=true
+Bundle-ClassPath: .
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.polarsys.kitalpha.emde.genchain.model;visibility:=reexport,
+ org.eclipse.egf.portfolio.genchain;visibility:=reexport
+Bundle-ActivationPolicy: lazy
+Export-Package: org.polarsys.capella.extension.genchain.capellaextension,
+ org.polarsys.capella.extension.genchain.capellaextension.impl,
+ org.polarsys.capella.extension.genchain.capellaextension.util

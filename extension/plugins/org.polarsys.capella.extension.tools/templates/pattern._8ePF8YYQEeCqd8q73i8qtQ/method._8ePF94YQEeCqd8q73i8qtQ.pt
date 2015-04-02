@@ -1,0 +1,9 @@
+<%
+GenClass genClass = parameter;
+targetPath = genClass.getGenModel().getEditDirectory();
+packageName = MenuContributorClassGenerator.getPackagename(genClass);
+className = MenuContributorClassGenerator.getClassname(genClass);
+HelperInfo info = HelperClassGenerator.getInfo(genClass.getEcoreClass());
+menuContributorBaseClass = info == null ? "no_type" : info.getMenuContributorBaseClass();
+
+%>

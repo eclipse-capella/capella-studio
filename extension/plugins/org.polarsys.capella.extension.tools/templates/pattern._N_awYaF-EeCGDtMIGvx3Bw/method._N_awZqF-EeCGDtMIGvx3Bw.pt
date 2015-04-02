@@ -1,0 +1,7 @@
+<%
+GenPackage genPackage = parameter;
+targetPath = genPackage.getGenModel().getModelDirectory();
+packageName = HelperClassGenerator.getHelperPackagename(genPackage);
+className = HelperClassGenerator.getHelperClassname(genPackage); 
+//className = genPackage.getPrefix()+"Helper"; 
+%>

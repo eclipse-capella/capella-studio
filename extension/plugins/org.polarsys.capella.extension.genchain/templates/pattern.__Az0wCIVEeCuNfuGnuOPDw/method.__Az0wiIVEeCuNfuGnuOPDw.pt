@@ -1,0 +1,35 @@
+package PACKAGE;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.egf.model.pattern.Node;
+import org.eclipse.egf.model.domain.Domain;
+import org.eclipse.egf.model.domain.DomainFactory;
+import org.eclipse.egf.model.domain.EMFDomain;
+import org.eclipse.egf.model.domain.DomainViewpoint;
+import org.eclipse.egf.model.domain.TypeDomain;
+import org.eclipse.egf.model.fcore.Activity;
+import org.eclipse.egf.model.fcore.FactoryComponent;
+import org.eclipse.egf.model.fcore.OrchestrationParameter;
+import org.eclipse.egf.model.fprod.ProductionPlan;
+import org.eclipse.egf.model.pattern.PatternContext;
+import org.eclipse.egf.model.types.Type;
+import org.eclipse.egf.pattern.execution.*;
+import org.eclipse.egf.pattern.query.IQuery;
+import org.eclipse.egf.portfolio.genchain.generationChain.EmfGeneration;
+import org.eclipse.egf.portfolio.genchain.generationChain.GenerationElement;
+import org.eclipse.egf.portfolio.genchain.tools.FcoreBuilderConstants;
+import org.eclipse.egf.portfolio.genchain.tools.utils.ActivityInvocationHelper;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+
+
+public class CLASS {
+
+	public CLASS() {
+		//Here is the constructor
+	}
+
+
