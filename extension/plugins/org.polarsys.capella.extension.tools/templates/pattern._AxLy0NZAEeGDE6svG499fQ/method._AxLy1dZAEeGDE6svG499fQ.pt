@@ -1,0 +1,45 @@
+package <%=packageName%>;
+
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.polarsys.capella.common.model.helpers.HelperNotFoundException;
+import <%=parameter.getGenPackage().getInterfacePackageName()%>.<%=parameter.getInterfaceName()%>;
+
+/**
+ * @generated
+ */ 
+public class <%=className%> {
+
+private static final <%=className%> instance = new <%=className%>();
+
+/**
+ * @generated
+ */ 
+public static <%=className%> getInstance()
+{
+	return instance;
+}
+
+/**
+ * @generated
+ */ 
+public Object doSwitch(<%=parameter.getInterfaceName()%> object, EStructuralFeature feature) 
+{
+	// handle derivated feature
+	
+	
+	<% if (HelperClassGenerator.getInfo(parameter.getEcoreClass()) == null) {%>
+		return null;
+	<% } else { %>
+		<% if (HelperClassGenerator.getInfo(parameter.getEcoreClass()).getHelperClass() == null) {%>
+		// Unfortunately the generator was unable to find appropriate helper class
+		throw new HelperNotFoundException();
+		<% } else { %>
+		// delegate to parent helper
+		return <%=HelperClassGenerator.getInfo(parameter.getEcoreClass()).getHelperClass()%>.getInstance().doSwitch(object, feature);
+		<%}%>
+	<%}%>
+}
+
+
+
+}

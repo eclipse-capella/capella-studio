@@ -1,0 +1,2 @@
+		String name = genFeature.getName();
+		return "incomingTraces".equals(name) || "outgoingTraces".equals(name);

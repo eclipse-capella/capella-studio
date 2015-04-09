@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="org.polarsys.capella.studio"
+            class="org.polarsys.capella.extension.tools.ui.CapellaExtensionProjectWizard"
+            icon="icons/capella16x16.png"
+            id="org.polarsys.capella.extension.tools.ui.CapellaExtensionProjectWizard"
+            name="%capellaExtensionProject"
+            project="true">
+      </wizard>
+      <category
+            id="org.polarsys.capella.studio"
+            name="%capellaStudioGroup">
+      </category>
+   </extension>
+
+</plugin>

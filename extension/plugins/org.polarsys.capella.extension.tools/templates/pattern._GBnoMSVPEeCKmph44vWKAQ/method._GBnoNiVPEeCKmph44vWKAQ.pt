@@ -1,0 +1,1 @@
+genModel.getModelPluginVariables().add("org.polarsys.capella.core.data.helpers");

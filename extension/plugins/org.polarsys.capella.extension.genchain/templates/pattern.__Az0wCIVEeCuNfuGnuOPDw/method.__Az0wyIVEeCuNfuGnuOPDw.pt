@@ -1,0 +1,6 @@
+// add initialisation of the pattern variables (declaration has been already done).
+this.modelActivity = "platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaTools.fcore#_fRRLIB_3EeCuNfuGnuOPDw";
+this.editActivity = "platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaTools.fcore#_WJu-4B_3EeCuNfuGnuOPDw";
+this.editorActivity = "platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaTools.fcore#_eBZesB_3EeCuNfuGnuOPDw";
+this.testActivity = "platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.tests.fcore#_79dGwDYdEeGWF-mrFIsVzA";
+this.javadocActivity = "platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/javadoc.fcore#_CycMIDYfEeGWF-mrFIsVzA";

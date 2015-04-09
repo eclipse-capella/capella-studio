@@ -1,0 +1,69 @@
+		Document doc = root.getOwnerDocument();
+
+		root.appendChild(doc.createTextNode("\n"));
+		root.appendChild(doc.createComment("@generated"));
+		root.appendChild(doc.createTextNode("\n  "));
+		Element extension = doc.createElement("extension");
+		extension.setAttribute("point", "org.polarsys.capella.common.menu.dynamic.MDEMenuItemContribution");
+		extension.appendChild(doc.createTextNode("\n"));
+		root.appendChild(extension);
+		root.appendChild(doc.createTextNode("\n"));
+
+		TreeIterator<EObject> eAllContents = genModel.eAllContents();
+		while (eAllContents.hasNext()) {
+			EObject obj = eAllContents.next();
+			if (obj instanceof GenClass && MenuContributorClassGenerator.isValidTarget((GenClass) obj)) {
+				extension.appendChild(doc.createTextNode("    "));
+				Element itemContribution = doc.createElement("MDEMenuItemContribution");
+				itemContribution.setAttribute("class", MenuContributorClassGenerator.getFullClassname((GenClass) obj));
+				itemContribution.setAttribute("id",    MenuContributorClassGenerator.getFullClassname((GenClass) obj));
+				extension.appendChild(itemContribution);
+				extension.appendChild(doc.createTextNode("\n"));
+				
+			}
+		}
+		
+/*	
+		root.appendChild(doc.createTextNode("\n"));
+		root.appendChild(doc.createComment("@generated"));
+		root.appendChild(doc.createTextNode("\n  "));
+		extension = doc.createElement("extension");
+		extension.setAttribute("point", "org.eclipse.ui.views.properties.tabbed.propertySections");
+		extension.appendChild(doc.createTextNode("\n"));
+		extension.appendChild(doc.createTextNode("    "));
+		root.appendChild(extension);
+		root.appendChild(doc.createTextNode("\n"));
+
+		Element itemContribution = doc.createElement("propertySections");
+		itemContribution.setAttribute("contributorId", "org.polarsys.capella.core.data.capellamodeller.properties");
+		itemContribution.appendChild(doc.createTextNode("\n"));
+		eAllContents = genModel.eAllContents();
+		while (eAllContents.hasNext()) {
+			EObject obj = eAllContents.next();
+			if (obj instanceof GenClass) {
+				GenClass genClass = (GenClass)obj;
+				HelperInfo info = HelperClassGenerator.getInfo(genClass.getEcoreClass());
+				if (info == null || info.getSectionClass() == null)
+					continue ;
+				Element subItemContribution = doc.createElement("propertySection");
+				subItemContribution.setAttribute("class", info.getSectionClass());
+				subItemContribution.setAttribute("id",    MenuContributorClassGenerator.getFullClassname(genClass) + ".section");
+				subItemContribution.setAttribute("tab", "Base");
+				itemContribution.appendChild(doc.createTextNode("        "));
+				itemContribution.appendChild(subItemContribution);
+				itemContribution.appendChild(doc.createTextNode("\n"));
+				Element input = doc.createElement("input");
+				GenPackage genPackage = genClass.getGenPackage();
+				input.setAttribute("type", genPackage.getInterfacePackageName()+"."+genClass.getName());
+				subItemContribution.appendChild(doc.createTextNode("\n"));
+				subItemContribution.appendChild(doc.createTextNode("            "));
+				subItemContribution.appendChild(input);
+				subItemContribution.appendChild(doc.createTextNode("\n"));
+				subItemContribution.appendChild(doc.createTextNode("        "));
+			}
+		}
+		extension.appendChild(itemContribution);
+		extension.appendChild(doc.createTextNode("\n"));
+		extension.appendChild(doc.createTextNode("    "));
+*/		
+		

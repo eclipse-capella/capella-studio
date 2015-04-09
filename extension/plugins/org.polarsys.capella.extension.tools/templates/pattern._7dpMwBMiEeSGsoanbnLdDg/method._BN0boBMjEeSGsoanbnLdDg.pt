@@ -1,0 +1,22 @@
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.menu.contributions");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.menu.dynamic");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.ui.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.sharedmodel.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.requirement.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.common.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.core.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.cs.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.ctx.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.epbs.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.fa.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.information.communication.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.information.datatype.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.information.datavalue.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.information.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.interaction.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.la.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.modeller.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.oa.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.pa.deployment.properties");
+		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.pa.properties");
+				

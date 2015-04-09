@@ -1,0 +1,17 @@
+		Document doc = root.getOwnerDocument();
+		
+		for (GenPackage genPackage : genModel.getAllGenPackagesWithClassifiers()) {
+			root.appendChild(doc.createTextNode("\n"));
+			root.appendChild(doc.createComment("@generated"));
+			root.appendChild(doc.createTextNode("\n  "));
+			Element extension = doc.createElement("extension");
+			extension.setAttribute("point", "org.polarsys.capella.common.model.helpers.helper");
+			extension.appendChild(doc.createTextNode("\n    "));
+			Element helper = doc.createElement("helperImpl");
+			helper.setAttribute("class", HelperClassGenerator.getHelperFullClassname(genPackage));
+			helper.setAttribute("nsURI", genPackage.getEcorePackage().getNsURI());
+			extension.appendChild(helper);
+			extension.appendChild(doc.createTextNode("\n  "));
+			root.appendChild(extension);
+			root.appendChild(doc.createTextNode("\n"));
+		}
