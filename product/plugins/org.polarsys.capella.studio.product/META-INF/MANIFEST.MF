@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-Vendor: %providerName
+Bundle-SymbolicName: org.polarsys.capella.studio.product;singleton:=true
+Bundle-Version: 0.8.1.qualifier
+Bundle-Activator: org.polarsys.capella.studio.product.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.ide,
+ org.eclipse.ui.ide.application,
+ org.polarsys.kitalpha.ad.services,
+ org.eclipse.ui.navigator.resources,
+ org.eclipse.jdt.ui
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="CapellaStudio" uid="org.polarsys.capella.studio.product" id="org.polarsys.capella.studio.product" application="org.polarsys.capella.studio.application" useFeatures="false" includeLaunchers="false">
+
+   <aboutInfo>
+      <image path="/org.polarsys.capella.studio.product/icons/CapellaStudioAbout.png"/>
+      <text>
+         Capella Studio
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="/org.polarsys.capella.studio.product/icons/CapellaStudio16x16.png" i32="/org.polarsys.capella.studio.product/icons/CapellaStudio32x32.png" i48="/org.polarsys.capella.studio.product/icons/CapellaStudio48x48.png"/>
+
+   <splash
+      location="org.polarsys.capella.studio.product" />
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+
+</product>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+  Copyright (c) 2015 THALES GLOBAL SERVICES.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+
+  Contributors:
+       Thales - initial API and implementation
+-->
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.polarsys.capella.studio.product.PerspectiveFactory"
+            icon="icons/CapellaStudio16x16.png"
+            id="org.polarsys.capella.studio.product.perspective"
+            name="Capella Studio">
+         <description>
+            This is the Capella Studio Perspective.
+         </description>
+      </perspective>
+   </extension>
+   <extension
+         id="org.polarsys.capella.studio.application"
+         name="Capella Studio"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            icon="icons/CapellaStudio16x16.png"
+            thread="main"
+            visible="true">
+         <run
+               class="org.polarsys.capella.studio.product.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         id="org.polarsys.capella.studio.product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.polarsys.capella.studio.application"
+            name="Capella Studio">
+         <property
+               name="windowImages"
+               value="icons/CapellaStudio16x16.png,icons/CapellaStudio32x32.png,icons/CapellaStudio48x48.png">
+         </property>
+         <property
+               name="aboutText"
+               value="Capella Studio platform provided by Thales Corporate Services S.A.S">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/CapellaStudioAbout.png">
+         </property>
+         <property
+               name="appName"
+               value="Capella Studio">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.splashHandlers">
+      <splashHandler
+            class="org.polarsys.capella.studio.product.CapellaStudioSplashHandler"
+            id="org.polarsys.capella.studio.product.splashHandler">
+      </splashHandler>
+      <splashHandlerProductBinding
+            productId="org.polarsys.capella.studio.product"
+            splashId="org.polarsys.capella.studio.product.splashHandler">
+      </splashHandlerProductBinding>
+   </extension>
+
+</plugin>

@@ -1,0 +1,10 @@
+These followings icons are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+
+<icon file path> - <original eclipse plug-in> - <original file path>
+
+/icons/CapellaStudio16x16.png - capella.platform.sirius.ui.perspective - capella.platform.sirius.ui.perspective/icons/Capella16x16.bmp
+/icons/CapellaStudio32x32.png - capella.platform.sirius.ui.perspective - capella.platform.sirius.ui.perspective/icons/Capella32x32.png
+/icons/CapellaStudio48x48.png - capella.platform.sirius.ui.perspective - capella.platform.sirius.ui.perspective/icons/Capella48x48.png
+/icons/CapellaStudioAbout.png - capella.platform.sirius.ui.perspective - capella.platform.sirius.ui.perspective/icons/CapellaAbout.png
