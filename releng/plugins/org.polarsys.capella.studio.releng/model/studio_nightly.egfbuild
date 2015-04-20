@@ -104,6 +104,6 @@
     </steps>
   </jobs>
   <jobs xmi:id="_OD0VANMCEeSCstxmhDJ57A" name="clean all">
-    <steps xsi:type="buildstep:AntStep" xmi:id="_OD0VAdMCEeSCstxmhDJ57A" targetName="cleanUp" xml="&lt;target name=&quot;cleanUp&quot;>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella*/**&quot;/>&#xD;&#xA;&lt;/target>&#xD;&#xA;"/>
+    <steps xsi:type="buildstep:AntStep" xmi:id="_OD0VAdMCEeSCstxmhDJ57A" targetName="cleanUp" xml="&lt;target name=&quot;cleanUp&quot;>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.extension.sdk.feature&quot; verbose=&quot;true&quot;/>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.studio.releng.feature&quot; verbose=&quot;true&quot;/>&#xD;&#xA;&lt;/target>&#xD;&#xA;"/>
   </jobs>
 </buildcore:Chain>
