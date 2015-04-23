@@ -1,0 +1,5 @@
+<%classname = epfUtility.getWidgetName(parameter)+"FieldController";%>
+<%projectname = UIProjectManager.INSTANCE.getUiProject().getName();%>
+<%String tabID = ((UI)section.eContainer()).getName();%>
+<%packagename = JDTUtility.getValidPackageName(projectname + ".controllers");%>
+<%epfUtility.registerClassToImportInMainClass(parameter, packagename+"."+classname);%>

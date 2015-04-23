@@ -1,0 +1,31 @@
+<%
+DataWidget iDataWidget = epfUtility.getDataOf(parameter);
+String associatedEStructuralFeature = iDataWidget.widgetFieldAccessorName;
+String inWidgetControllerName = iDataWidget.widgetName+"FieldController";
+
+char first = Character.toUpperCase(inWidgetControllerName.charAt(0));
+inWidgetControllerName = first + inWidgetControllerName.substring(1);
+%>
+  /**
+ * <!-- begin-user-doc -->
+ * The '<em><b>[<%=inWidgetControllerName%>]</b></em>' customized MultipleSemanticFieldController.
+ * <!-- end-user-doc -->
+ * <p>
+ * </p>
+ *
+ * @generated
+ */
+  
+public class <%=inWidgetControllerName%> extends AbstractMultipleSemanticFieldController {
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.polarsys.capella.core.ui.properties.controllers.AbstractMultipleSemanticFieldController#getReadOpenValuesQuery(org.polarsys.capella.core.data.capellacore.CapellaElement)
+   * @param semanticElement_p
+   * @generated
+   */
+  @Override
+  protected IBusinessQuery getReadOpenValuesQuery(CapellaElement semanticElement_p) {
+    return BusinessQueriesProvider.getInstance().getContribution(semanticElement_p.eClass(), <%=associatedEStructuralFeature%>);
+  }
+}

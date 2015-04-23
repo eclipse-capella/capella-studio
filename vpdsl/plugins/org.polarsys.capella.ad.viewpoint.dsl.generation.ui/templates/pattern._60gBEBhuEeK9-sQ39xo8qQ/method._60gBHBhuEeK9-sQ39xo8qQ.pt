@@ -1,0 +1,2 @@
+<%DataWidget dataWidget = epfUtility.getDataOf(parameter);%>
+import <%=dataWidget.widgetFieldTypeEnumerator.enumImportName%>;

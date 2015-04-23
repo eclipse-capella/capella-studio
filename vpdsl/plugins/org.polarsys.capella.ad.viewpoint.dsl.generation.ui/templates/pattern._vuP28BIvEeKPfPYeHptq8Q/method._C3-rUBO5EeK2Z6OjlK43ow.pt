@@ -1,0 +1,11 @@
+// create the extension
+<%
+DataWidget iDataWidget = epfUtility.getDataOf(parameter);
+String classQualifiedName = packagename+"."+classname;
+String extensionPoint = "org.polarsys.capella.core.data.business.queries.MDEBusinessQueries";
+String extension =  "   <MDEBusinessQueries \n"+
+					"         class=\""+classQualifiedName+"\" \n"+
+					"         id=\""+classQualifiedName+"\"> \n"+
+					"   </MDEBusinessQueries> \n";
+iDataWidget.PluginExtensionEntries.add(new PluginExtensionEntry(extensionPoint, true, extension));
+%>

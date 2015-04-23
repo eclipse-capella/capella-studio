@@ -1,0 +1,6 @@
+<%Object value = ctx.getValue("domain");
+if (value instanceof EList<?>)
+{
+	value = ((EList) value).get(0);
+}
+targetApplication = VpDslConfigurationHelper.getTargetApplication(value);%>

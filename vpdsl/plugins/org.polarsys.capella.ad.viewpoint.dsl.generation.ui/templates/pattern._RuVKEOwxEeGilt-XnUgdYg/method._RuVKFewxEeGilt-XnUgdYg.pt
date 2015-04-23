@@ -1,0 +1,25 @@
+<% 	String ctName = JDTUtility.getValidClassName(tabID+"_"+parameter.getName());
+	String className = packageName+"."+ctName;
+	
+	UI ui = (UI)parameter.eContainer();
+	EObject ds = ui.getUI_DataSource();
+	String datasourceImport = null;
+	if (ds != null){
+		LocalClass localClass = (LocalClass)ui.getUI_DataSource();
+		Class clazz = (Class)localClass.getUI_For_LocalClass();
+		datasourceImport = GenmodelUtility.getInstance().getSemanticEClassImport(clazz);
+	}
+	
+	
+	JDTUtility.createPackage(projectName, packageName);
+	String sectionID = tabID+"."+parameter.getName();%>
+			<propertySection
+		    	class="<%=className%>"
+		        filter="<%=className%>"
+		        id="<%=sectionID%>"
+		        tab="<%=tabID%>">
+		        <%if (datasourceImport != null && datasourceImport.trim().length() > 0){%><input
+                  type="<%=datasourceImport%>">
+               </input><%}%>
+		    </propertySection> 
+		    

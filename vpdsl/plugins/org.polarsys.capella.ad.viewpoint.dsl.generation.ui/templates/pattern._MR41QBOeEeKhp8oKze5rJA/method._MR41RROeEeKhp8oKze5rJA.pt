@@ -1,0 +1,9 @@
+EObject parent = parameter.eContainer();
+
+// Go back the the UIContainer used to generate a section (UIContainer which parent is an UI)
+while (parent instanceof UIContainer && !(parent.eContainer() instanceof UI))
+	parent = parent.eContainer();
+
+EPFUtility epfUtility = EPFUtility.getEPFUtilityFor((UIContainer)parent);
+
+epfUtility.generateDataforUIField(parameter);

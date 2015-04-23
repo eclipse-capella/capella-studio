@@ -1,0 +1,7 @@
+<%
+EObject eObject = parameter.eContainer();
+while( eObject instanceof UIContainer && !(eObject.eContainer() instanceof UI)){
+	eObject = eObject.eContainer();
+}
+section = (UIContainer)eObject;
+%>

@@ -1,0 +1,4 @@
+<%String tabID = ((UI)section.eContainer()).getName();%>
+<%classname = epfUtility.getWidgetName(parameter)+"Query";%>
+<%projectname = UIProjectManager.INSTANCE.getUiProject().getName();%>
+<%packagename = JDTUtility.getValidPackageName(projectname + ".queries");%>

@@ -1,0 +1,5 @@
+<%classname = epfUtility.getWidgetClassName(parameter);%>
+<%projectname = UIProjectManager.INSTANCE.getUiProject().getName();%>
+<%String tabID = ((UI)section.eContainer()).getName();%>
+<%packagename = JDTUtility.getValidPackageName(projectname + ".fields");%>
+<%epfUtility.registerClassToImportInMainClass(parameter, packagename+"."+classname);%>

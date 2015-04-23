@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+ 
+  Contributors:
+     Thales - initial API and implementation
+-->
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.polarsys.kitalpha.ad.ta.definition">
+      <definition
+            RootNsURI="http://www.polarsys.org/capella/"
+            RootProjectName="org.polarsys.capella.vp"
+            class="org.polarsys.capella.ta.definition.CapellaTargetApplication"
+            description="Capella Target Application "
+            name="Capella">
+         <metaModel
+               nsuri="http://www.polarsys.org/capella/core/.*"
+               type="Regex">
+         </metaModel>
+         <metaModel
+               nsuri="http://www.polarsys.org/capella/common/.*"
+               type="Regex">
+         </metaModel>
+      </definition>
+   </extension>
+</plugin>

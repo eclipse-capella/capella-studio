@@ -1,0 +1,67 @@
+<%class widgetPropertyGenerator{%>
+<% // Group UIFields generation recursive method %>
+<%private void generateLoadData(UIContainer container){%>
+	<%for (UIField uiField : container.getUI_fields()) {
+		String widgetName = epfUtility.getWidgetName(uiField);
+		String widgetFieldAccessorName = epfUtility.getWidgetAccessor(uiField);
+		switch (uiField.getType()) {
+				case TEXT:
+				case TEXTAREA:
+				case MULTIPLE_CHOICE_LIST:
+				case SIMPLE_CHOICE_LIST:
+				case RADIOBOX:%>
+			<%=widgetName%>.loadData(capellaElement_p, 
+									<%=widgetFieldAccessorName%>);	
+			  	<%break;
+				
+				case CHECKBOX:%>
+			<%=widgetName%>.loadData(capellaElement_p);			
+			  	<%break;
+				default:
+					break;
+		}
+	}%>
+	<%if (container.getSubContainers() != null && container.getSubContainers().size() > 0){
+		for (UIContainer iUIContainer : container.getSubContainers()) {
+			generateLoadData(iUIContainer);
+		}
+	}%>
+<%}%>
+<% // Group UIFields generation recursive method %>
+<%private void generateAddSematics(UIContainer container){%>
+	<%for (UIField uiField : container.getUI_fields()) {
+		String widgetName = epfUtility.getWidgetName(uiField);%>
+		abstractSemanticFields.add(<%=widgetName%>);
+	<%}%>
+	<%if (container.getSubContainers() != null && container.getSubContainers().size() > 0){
+		for (UIContainer iUIContainer : container.getSubContainers()) {
+			generateAddSematics(iUIContainer);
+		}
+	}%>
+<%}%>
+<%}%>
+
+<%widgetPropertyGenerator wpg = new widgetPropertyGenerator();%>
+
+	/**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @param capellaElement_p
+	* @generated
+	*/
+	public void loadData(CapellaElement capellaElement_p) {
+		super.loadData(capellaElement_p);
+		<%wpg.generateLoadData(parameter);%>
+	} 
+	
+   /**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated
+	*/
+	public List<AbstractSemanticField> getSemanticFields() {
+		List<AbstractSemanticField> abstractSemanticFields = new ArrayList<AbstractSemanticField>();
+		<%wpg.generateAddSematics(parameter);%>
+		return abstractSemanticFields;
+	}
+	

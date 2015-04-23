@@ -1,0 +1,21 @@
+import org.polarsys.capella.core.ui.properties.fields.*;
+<%class widgetPropertyGenerator{%>
+<% // Group declaration generation recursive method %>
+<%private void generateImports(UIContainer container){%>
+	<%for (UIField uiField : container.getUI_fields()) {%>
+		<%DataWidget iDataWidget = epfUtility.getDataOf(uiField);%>
+		<%for(String currentImport : iDataWidget.generatedClassesImports){%>
+			import <%=currentImport%>;
+		<%}%>
+	<%}%>
+	<%if (container.getSubContainers() != null && container.getSubContainers().size() > 0){
+		for (UIContainer iUIContainer : container.getSubContainers()) {
+			generateImports(iUIContainer);
+		}
+	}%>
+<%}%>
+<%}%>
+
+<%widgetPropertyGenerator wpg = new widgetPropertyGenerator();%>
+<%wpg.generateImports(parameter);%>
+

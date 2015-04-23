@@ -1,0 +1,4 @@
+<%String tabID = ((UI)parameter.eContainer()).getName();%>
+<%classname = JDTUtility.getValidClassName(tabID+"_"+parameter.getName());%>
+<%projectname = UIProjectManager.INSTANCE.getUiProject().getName();%>
+<%packagename = JDTUtility.getValidPackageName(projectname +".sections");%>

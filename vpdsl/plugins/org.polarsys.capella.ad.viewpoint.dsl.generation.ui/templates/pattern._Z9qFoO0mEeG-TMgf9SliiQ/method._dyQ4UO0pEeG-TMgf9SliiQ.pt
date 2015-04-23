@@ -1,0 +1,150 @@
+
+	/**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @param eObject: current object
+	* @generated
+	*/
+	public boolean select(Object eObject) {
+		EObject eObjectToTest = super.selection(eObject);
+		
+<%class WidgetSelectGenerator{%>
+<%	private List<String> classList = new ArrayList<String>();%>
+<% 	// Group creation generation recursive method %>
+<%	private void init(){%>
+		<%classList.clear();%>
+<%	}%>
+<%  public String getFirstClassName(){%>
+<%		String result = "";%>
+<%      if (classList != null && classList.size() > 0) %>
+<%			result = classList.get(0);%>
+<%		return result;%>
+<%	}%>
+<%	private void createSelectList(UIContainer container){%>
+<% 		//Parse all UIFields to collect data %>
+<%		for (UIField uiField : container.getUI_fields()) {
+			boolean addClass = true;
+			String className = ((NamedElement)uiField.getMapping().getUI_Field_Mapped_To().eContainer()).getName();
+			for (String clazzName : classList) 
+			{
+				if (clazzName.equals(className))
+					addClass = false;
+			}
+			if (addClass)
+				classList.add(className);
+		}
+	
+		// Loop in the UIContainer child of the current UIContainer 
+		if (container.getSubContainers() != null && container.getSubContainers().size() > 0)
+		{
+			for (UIContainer iUIContainer : container.getSubContainers()) 
+			{
+				createSelectList(iUIContainer);
+			}
+		}
+	}	
+
+	private void generateSelect(UIContainer container){
+		init();
+		createSelectList(container);
+		// Generate the selection instruction
+		String result = "";
+		for (String clazzName : classList) 
+		{
+			if (result.trim().length() != 0)
+				result += " || ";	
+			
+			result += "eObjectToTest instanceof " + clazzName; 
+		}
+	
+		if (result.trim().length() != 0)
+		{%>
+			if (<%=result%>)
+				return true;
+				
+<%			if ( UISectionUtility.canGenerateSelectionForContainer(parameter)
+						&& getFirstClassName().trim().length() > 0)%>
+<%			{%>
+			else
+			{
+				EObject children = get<%=getFirstClassName()%>Object(eObjectToTest);
+				if (children != null)
+					return true;
+			}
+			<%}%>
+<%		}%>
+<%	}%>
+<%}%>
+<%WidgetSelectGenerator wsg = new WidgetSelectGenerator();%>
+<%wsg.generateSelect(parameter);%>
+<%String extensionClassName = wsg.getFirstClassName();%>
+
+		return false;
+	}
+	
+	/**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @param part
+	* @param selection
+	* @generated
+	*/
+	public void setInput(IWorkbenchPart part, ISelection selection) {
+		EObject newEObject = super.setInputSelection(part, selection);
+<%	if (UISectionUtility.canGenerateSelectionForContainer(parameter)
+			&& wsg.getFirstClassName().trim().length() > 0)%>
+<%	{%>		
+
+		if (newEObject != null && !(newEObject instanceof <%=extensionClassName%>))
+			newEObject = get<%=extensionClassName%>Object(newEObject);
+
+<%	}%>			
+		if (newEObject != null){
+			loadData((CapellaElement) newEObject);
+		}else{
+			return;
+		}
+	}	
+
+<%if (UISectionUtility.canGenerateSelectionForContainer(parameter)
+			&& extensionClassName.trim().length() > 0)%>
+<%{%>
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param parent: An EObject. It is considered as the Parent of an EMDE extension (a Viewpoint element)
+	 * @return 
+	 * @generated
+	 */
+	private EObject get<%=extensionClassName%>Object(EObject parent){
+		if (! isViewpointActive())
+			return null;
+			
+		if (parent == null || (parent != null && parent.eContents() == null))
+			return null;
+			 
+		EObject result = null;
+		for (EObject iEObject : parent.eContents()) 
+		{
+			if (iEObject instanceof <%=extensionClassName%>)
+			{
+				result = (result == null ? (<%=wsg.getFirstClassName()%>)iEObject : null );
+				// This case is true when there is more then one extension of the same type. 
+				if (result == null)
+					break;
+			}
+		}
+		return result;
+	}
+
+<%	String afViewpointID = VpDslConfigurationHelper.getRootProjectName(parameter);%>
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return True is the AF viewpoint is active. False else. 
+	 * @generated
+	 */
+	private boolean isViewpointActive() {
+		return ViewpointManager.INSTANCE.isActive("<%=afViewpointID%>");
+	}
+<%}%>

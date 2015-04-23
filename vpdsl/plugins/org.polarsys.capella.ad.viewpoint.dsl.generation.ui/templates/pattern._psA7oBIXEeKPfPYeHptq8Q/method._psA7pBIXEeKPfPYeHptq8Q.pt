@@ -1,0 +1,1 @@
+return parameter.getType().equals(UI_Field_Type.CHECKBOX);
