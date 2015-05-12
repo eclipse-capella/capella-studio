@@ -1,0 +1,5 @@
+import org.polarsys.capella.core.data.capellacore.CapellaElement;
+<%ArrayList<String> importList = epfUtility.getSematicImportsFor(parameter);
+	for(String currentImport : importList){%>
+		import <%=currentImport%>;
+	<%}%>

@@ -1,0 +1,60 @@
+<%class WidgetExtensionGenerator{%>
+<%Map<String, ArrayList<String>> availableExtesionPoint = new HashMap<String, ArrayList<String>>();%>
+<%private void init(){%>
+	<%availableExtesionPoint.clear();%>
+<%}%>
+<%private void browseUIContainer(UIContainer container, EPFUtility epfUtility){%>
+<%	for (UIField uiField : container.getUI_fields()) {
+		DataWidget iDataWidget = epfUtility.getDataOf(uiField);
+		ArrayList<PluginExtensionEntry> pluginExtensionEntryList = iDataWidget.PluginExtensionEntries;
+		if (pluginExtensionEntryList != null
+				&& !pluginExtensionEntryList.isEmpty()) {
+			for (PluginExtensionEntry pluginExtensionEntry : pluginExtensionEntryList) {
+				String point = pluginExtensionEntry.extensionPoint_ID;
+				if (pluginExtensionEntry.share_ExtensionPoint_ID) {
+					if (availableExtesionPoint.containsKey(point)) {
+						((ArrayList<String>) availableExtesionPoint
+								.get(point))
+								.add(pluginExtensionEntry.extension);
+					} else {
+						ArrayList<String> array = new ArrayList<String>();
+						array.add(pluginExtensionEntry.extension);
+						availableExtesionPoint.put(point, array);
+					}
+				} else {
+					ArrayList<String> array = new ArrayList<String>();
+					array.add(pluginExtensionEntry.extension);
+					availableExtesionPoint.put(point, array);
+				}
+			}
+		}
+	}
+	if (container.getSubContainers() != null && container.getSubContainers().size() > 0){
+		for (UIContainer iUIContainer : container.getSubContainers()) {
+			browseUIContainer(iUIContainer, epfUtility);
+		}
+	}
+}
+
+private void generateExtensions(UI ui){	
+	init();		
+	for (UIContainer uiContainer : ui.getUI_Containers()) {
+		EPFUtility epfUtility = EPFUtility.getEPFUtilityFor(uiContainer);
+		browseUIContainer(uiContainer, epfUtility);
+	}
+	// Generation of the Extensions
+	if (! availableExtesionPoint.isEmpty()){
+		for (String iPoint : availableExtesionPoint.keySet()) {
+			ArrayList<String> array = availableExtesionPoint.get(iPoint); %>
+<extension 
+	point="<%=iPoint%>">
+				<%for (String iExtension : array) { %>
+	<%=iExtension +"\n"%>
+				<%}%>
+</extension><%="\n"%>
+		<%}
+	}%>
+<%}%>
+<%}%>
+<%WidgetExtensionGenerator weg = new WidgetExtensionGenerator();%> 
+<%weg.generateExtensions(parameter);%>

@@ -1,0 +1,107 @@
+/*******************************************************************************
+* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
+* All rights reserved. This program and the accompanying materials
+* are made available under the terms of the Eclipse Public License v1.0
+* which accompanies this distribution, and is available at
+* http://www.eclipse.org/legal/epl-v10.html
+*
+* Contributors:
+*    Thales - initial API and implementation
+*******************************************************************************/
+package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util;
+
+import java.io.ByteArrayInputStream;
+
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.jdt.core.ToolFactory;
+import org.eclipse.jdt.core.formatter.CodeFormatter;
+import org.eclipse.jface.text.Document;
+import org.eclipse.jface.text.IDocument;
+import org.eclipse.text.edits.MalformedTreeException;
+import org.eclipse.text.edits.TextEdit;
+
+/**
+ * @author Boubekeur Zendagui
+ */
+public class JDTUtility {
+	
+	public static IFolder packageToFolder(IProject project, String packageName){
+		String folder = JDTUtility.getValidPackageName("src."+packageName);
+		folder = folder.replaceAll("\\.", "/");
+		return project.getFolder(new Path(folder));
+	}
+	
+	public static String formatJavaCode(String javaCode){
+		CodeFormatter cf = ToolFactory.createCodeFormatter(null);
+
+        TextEdit te = cf.format(CodeFormatter.K_UNKNOWN, javaCode, 0,javaCode.length(),0,null);
+        IDocument dc = new Document(javaCode);
+        try {
+                te.apply(dc);
+                javaCode = dc.get();
+        } catch (MalformedTreeException e) {
+                e.printStackTrace();
+        } catch (org.eclipse.jface.text.BadLocationException e) {
+                e.printStackTrace();
+        }
+
+		return javaCode;
+	}
+	
+	public static void writeJavaContent(IFile javaFile, String javaCode){
+		String formatedOutput = formatJavaCode(javaCode);
+		ByteArrayInputStream outputContent = new ByteArrayInputStream(formatedOutput.getBytes());
+		try {
+			if (javaFile.exists())
+				javaFile.setContents(outputContent, true, false, null);
+			else
+				javaFile.create(outputContent, true, null);
+
+		} catch (CoreException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static String getValidPackageName(String name){
+		return name.replaceAll("[^a-zA-Z0-9_.]","").toLowerCase();
+	}
+	
+	public static String getValidClassName(String name){
+		String cName = name.replaceAll("[^a-zA-Z0-9_]","");
+		return cName.substring(0,1).toUpperCase() + cName.substring(1);
+	}
+	
+	public static void createPackage(String projectName, String packageName){
+		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(projectName);
+		IFolder src = project.getFolder("src");
+		if (! src.exists()){
+			try {
+				src.create(true, true, null);
+			} catch (CoreException e) {
+				e.printStackTrace();
+			}
+		}
+		Path packageFolderPath = new Path(packageName.replace('.', '/'));
+		if (src.getFolder(packageFolderPath).exists())
+			return;
+		
+		IFolder parent = src;
+		for (int i = 0; i < packageFolderPath.segmentCount(); i++) {
+			IFolder curFolder = parent.getFolder(packageFolderPath.segment(i));
+			if (! curFolder.exists()){
+				try {
+					curFolder.create(true, true, null);
+				} catch (CoreException e) {
+					e.printStackTrace();
+				}
+			}
+			parent = curFolder;
+		}
+		
+	}
+}

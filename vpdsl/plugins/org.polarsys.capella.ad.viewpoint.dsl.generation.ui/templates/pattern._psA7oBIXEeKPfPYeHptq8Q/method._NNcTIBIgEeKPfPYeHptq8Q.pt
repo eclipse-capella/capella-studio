@@ -1,0 +1,9 @@
+
+import java.util.List;
+import java.util.ArrayList;
+
+import org.eclipse.swt.widgets.*;
+import org.eclipse.swt.layout.*;
+
+import org.polarsys.capella.core.ui.properties.fields.*;
+import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetWidgetFactory;

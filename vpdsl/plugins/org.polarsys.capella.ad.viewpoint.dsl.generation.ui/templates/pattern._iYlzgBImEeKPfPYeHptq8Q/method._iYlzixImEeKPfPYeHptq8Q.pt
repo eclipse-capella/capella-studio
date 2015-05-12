@@ -1,0 +1,4 @@
+
+import org.polarsys.capella.core.ui.properties.controllers.AbstractMultipleSemanticFieldController;
+import org.polarsys.capella.core.business.queries.IBusinessQuery;
+import org.polarsys.capella.core.business.queries.capellacore.BusinessQueriesProvider;

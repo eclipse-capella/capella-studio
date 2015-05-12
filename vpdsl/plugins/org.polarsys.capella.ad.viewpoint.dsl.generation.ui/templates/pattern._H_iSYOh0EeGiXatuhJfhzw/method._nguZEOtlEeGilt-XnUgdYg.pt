@@ -1,0 +1,30 @@
+<% // Get the Properties Contributors list 
+ArrayList<IConfigurationElement> propertiesContributors = 
+					UIPropertiesExtensionsManager.getPropertiesContributors(targetApplication);
+%>
+<%for (IConfigurationElement iPropertiesContributor : propertiesContributors) {
+		ArrayList<IConfigurationElement> contributors = UIPropertiesExtensionsManager
+															.getContributors(iPropertiesContributor);
+		for (IConfigurationElement iContributor : contributors) {
+			String cID = UIPropertiesExtensionsManager.getContributorID(iContributor);
+			String cCategory = UIPropertiesExtensionsManager.getPropertyTabCategory(iContributor); %>
+<extension
+	point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+	<propertyTabs 
+		contributorId="<%=cID%>">
+			<%for (UI iUI : parameter.getUIs()) {
+				String ContainerName = iUI.getName(); 
+				String uiLabel = iUI.getLabel();
+				uiLabel = (uiLabel != null && uiLabel.trim().length() > 0 ? uiLabel : ContainerName );%>
+			<propertyTab
+		    	afterTab="Base"
+		        category="<%=cCategory%>"
+		        id="<%=ContainerName%>"
+		        label="<%=uiLabel%>">
+		    </propertyTab> 
+			<%} %>
+	</propertyTabs>
+</extension> 
+
+<%		}
+}%>

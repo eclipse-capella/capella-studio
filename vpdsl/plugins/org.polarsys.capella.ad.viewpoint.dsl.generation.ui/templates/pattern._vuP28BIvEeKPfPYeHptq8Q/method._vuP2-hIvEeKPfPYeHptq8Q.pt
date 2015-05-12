@@ -1,0 +1,82 @@
+<%
+DataWidget iDataWidget = epfUtility.getDataOf(parameter);
+String associatedEStructuralFeature = iDataWidget.widgetFieldAccessorName;
+String inWidgetQueryName = iDataWidget.widgetName+"Query";
+
+char first = Character.toUpperCase(inWidgetQueryName.charAt(0));
+inWidgetQueryName = first + inWidgetQueryName.substring(1);
+
+String widgetFieldEType = iDataWidget.widgetFieldETypeName;
+String widgetFieldETypeLiteral = iDataWidget.widgetFieldETypeLiteral;
+String widgetFieldContainerLiteral = iDataWidget.widgetFieldContainerLiteral;
+String widgetFieldEContainerAccessorName = iDataWidget.widgetFieldContainerAccessorName;
+String widgetFieldGetter = iDataWidget.widgetFieldGetter;
+%>
+  /**
+ * <!-- begin-user-doc -->
+ * The '<em><b>[<%=inWidgetQueryName%>]</b></em>' BusinessQuery defined for 
+ * '<em><b>[<%=associatedEStructuralFeature%>]</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * </p>
+ *
+ * @generated
+ */
+public class <%=inWidgetQueryName%> implements IBusinessQuery {
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * @param elementP
+    * @generated
+    */
+	public List<CapellaElement> getAvailableElements(CapellaElement elementP) {
+		List<CapellaElement> availableElements = new ArrayList<CapellaElement>();
+		SystemEngineering systemEngineering = CapellaQueries.getInstance()
+				.getRootQueries().getSystemEngineering(elementP);
+		if (null != systemEngineering) {
+			for (EObject elt : EObjectExt.getAll(systemEngineering, <%=widgetFieldETypeLiteral%>)) {
+				availableElements.add((CapellaElement) elt);
+			}
+		}
+		availableElements = ListExt.removeDuplicates(availableElements);
+		availableElements.remove(elementP);
+		return availableElements;
+	}
+
+	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param elementP
+     * @param onlyGeneratedP
+     * @generated
+     */
+	public List<CapellaElement> getCurrentElements(CapellaElement elementP,
+			boolean onlyGeneratedP) {
+		List<CapellaElement> currentsElements = new ArrayList<CapellaElement>();
+		if (elementP instanceof <%=widgetFieldEContainerAccessorName%>)
+			currentsElements.addAll(((<%=widgetFieldEContainerAccessorName%>) elementP).<%=widgetFieldGetter%>);
+		return currentsElements;
+	}
+
+	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+	public EClass getEClass() {
+		return <%=widgetFieldContainerLiteral%>;
+	}
+
+	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+	public List<EReference> getEStructuralFeatures() {
+		List<EReference> eReferences = new ArrayList<EReference>();
+		eReferences.add(<%=associatedEStructuralFeature%>);
+		return eReferences;
+	}
+
+}

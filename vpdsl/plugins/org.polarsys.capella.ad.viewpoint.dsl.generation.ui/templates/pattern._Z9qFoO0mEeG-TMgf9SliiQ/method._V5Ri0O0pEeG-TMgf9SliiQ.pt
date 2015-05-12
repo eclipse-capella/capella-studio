@@ -1,0 +1,61 @@
+<%class widgetPropertyGenerator{%>
+<% // Group declaration generation recursive method %>
+<%private void generateWidgets(UIContainer uiContainer){%>
+	<%for (UIField uiField : uiContainer.getUI_fields()) {%>
+		<%String widgetName = epfUtility.getWidgetName(uiField);%>
+		<%String className = epfUtility.getWidgetClassName(uiField);%>
+		<%String description = uiField.getDescription();%>
+		/**<% if ( description != null && description.trim().length() > 0) {%>
+		* <!-- begin-model-doc -->
+		* <%=description%>
+		* <!-- end-model-doc --><%}else{%>
+		* <!-- begin-model-doc -->
+		* <!-- end-model-doc --><%}%>
+		* <!-- begin-user-doc -->
+		* <!-- end-user-doc -->
+		* @generated
+		*/
+		private <%=className%> <%=widgetName%>;
+	
+	<%}%>
+	<%if (uiContainer.getSubContainers() != null && uiContainer.getSubContainers().size() > 0){
+		for (UIContainer iUIContainer : uiContainer.getSubContainers()) {
+			generateWidgets(iUIContainer);
+		}
+	}%>
+<%}%>
+<%}%>
+
+<%widgetPropertyGenerator wpg = new widgetPropertyGenerator();%>
+<%wpg.generateWidgets(parameter);%>
+
+<%class GroupPropertyGenerator{%>
+<% // Group declaration generation recursive method %>
+<%private void generateGroups(UIContainer uiContainer){%>
+	<%if (uiContainer.eContainer() instanceof UIContainer){%>
+		<%String groupName = uiContainer.getName();%>
+		<%String description = uiContainer.getDescription();%>
+		/**<% if ( description != null && description.trim().length() > 0) {%>
+		* <!-- begin-model-doc -->
+		* <%=description%>
+		* <!-- end-model-doc --><%}else{%>
+		* <!-- begin-model-doc -->
+		* <!-- end-model-doc --><%}%>
+ 		* <!-- begin-user-doc -->
+ 		* <!-- end-user-doc -->
+ 		* @generated
+ 		*/
+		private Group <%=groupName%>;
+		
+	<%}%>
+	
+	<%if (uiContainer.getSubContainers() != null && uiContainer.getSubContainers().size() > 0){
+		for (UIContainer iUIContainer : uiContainer.getSubContainers()) {
+			generateGroups(iUIContainer);
+		}
+	}%>
+<%}%>
+<%}%>
+
+<%GroupPropertyGenerator gpg = new GroupPropertyGenerator();%>
+<%gpg.generateGroups(parameter);%>

@@ -1,0 +1,7 @@
+<%ArrayList<String> importList = epfUtility.getSematicImportsFor(parameter);
+	for(String currentImport : importList){%>
+		import <%=currentImport%>;
+	<%} %>
+<%DataWidget iDataWidget = epfUtility.getDataOf(parameter);
+String associatedEStructuralFeature = iDataWidget.widgetFieldAccessorName;%>
+import <%=iDataWidget.computeWidgetFieldETypeEPackage()%>;

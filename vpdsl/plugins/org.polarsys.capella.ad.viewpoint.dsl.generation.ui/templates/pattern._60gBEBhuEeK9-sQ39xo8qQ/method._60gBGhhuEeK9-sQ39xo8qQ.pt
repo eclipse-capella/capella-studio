@@ -1,0 +1,77 @@
+<%
+DataWidget iDataWidget = epfUtility.getDataOf(parameter);
+String enumName = iDataWidget.widgetFieldTypeEnumerator.enumName;
+ArrayList<String> enumLiterals = iDataWidget.widgetFieldTypeEnumerator.enumLiterals;
+String inClassName =  iDataWidget.widgetGraphicalClassName;
+
+char first = Character.toUpperCase(inClassName.charAt(0));
+inClassName = first + inClassName.substring(1);
+
+String label = "\""+ iDataWidget.widgetLabel+"\""; 
+%>
+
+ /**
+ * <!-- begin-user-doc -->
+ * The '<em><b>[<%=inClassName%>]</b></em>' customized RadioboxGroup field. 
+ * <!-- end-user-doc -->
+ * <p>
+ * </p>
+ *
+ * @generated
+ */ 
+ 
+public class <%=inClassName%> extends AbstractSemanticKindGroup {
+
+<% for (String enumLiteral : enumLiterals) {%>
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private Button _<%=enumName+"Btn"+enumLiteral%>;
+	
+<%}%>
+
+  /**
+   * Constructor.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param parent_p
+   * @param widgetFactory_p
+   * @generated
+   */
+  public <%=inClassName%>(Composite parent_p, TabbedPropertySheetWidgetFactory widgetFactory_p) {
+    super(parent_p, widgetFactory_p, <%=label%>, 6); //$NON-NLS-1$
+
+<% for (String enumLiteral : enumLiterals) {%>
+	_<%=enumName+"Btn"+enumLiteral%> = createButton(<%=enumName+"."+enumLiteral%>);
+<%}%>
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * {@inheritDoc}
+   * @generated   
+   */
+  @Override
+  public List<Button> getSemanticFields() {
+    List<Button> fields = new ArrayList<Button>();
+<% for (String enumLiteral : enumLiterals) {%>
+	fields.add(_<%=enumName+"Btn"+enumLiteral%>);
+<%}%>
+    return fields;
+  }
+
+   /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * {@inheritDoc}
+   * @generated   
+   */
+  @Override
+  public Button getDefaultSemanticField() {
+  <%String enumLiteral = enumLiterals.get(0);%>
+    return _<%=enumName+"Btn"+enumLiteral%>;
+  }
+}

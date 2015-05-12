@@ -1,0 +1,98 @@
+
+	/**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @param parent:
+	* @param aTabbedPropertySheetPage:
+	* @generated
+	*/
+	public void createControls(Composite parent, TabbedPropertySheetPage aTabbedPropertySheetPage) {
+		super.createControls(parent, aTabbedPropertySheetPage);
+		<%// UIField 2 widget %>
+<%class widgetCreationGenerator{%>
+<%private int getParentColumns(UIContainer container){
+	int result = 1;
+	for (UIField uiField : container.getUI_fields())
+	if (uiField.getType().equals(UI_Field_Type.SIMPLE_CHOICE_LIST)
+			|| uiField.getType().equals(UI_Field_Type.MULTIPLE_CHOICE_LIST)) {
+		result = 6;
+		break;
+	}
+	return result;
+}%>
+<%private void generateGroups(UIContainer container){%>
+		<%// Ignore the UIContainers child of an UI. These UIContainer are used to define the PropertySection%> 
+		<%if (!(container.eContainer() instanceof UI)){%>
+			<%//Data initialization %>
+			<%String groupName = container.getName();%>
+			<%String groupLabel = ( container.getLabel() != null && container.getLabel().trim().length() > 0 ? "\""+container.getLabel()+"\"" : "ICommonConstants.EMPTY_STRING");%>
+			<%String groupParent = "";%>
+			<%EObject parent = container.eContainer();%>
+			<%if (parent.eContainer() instanceof UI)
+				groupParent = "_rootParentComposite";
+			else
+				groupParent = ((UIContainer)parent).getName();%>
+			<%//Code generation%>
+			<%=groupName%> = getWidgetFactory().createGroup(<%=groupParent%>, <%=groupLabel%>);
+			<%=groupName%>.setLayout(new GridLayout(<%=getParentColumns(container)%>, false));
+			GridData gd<%=groupName%> = new GridData(GridData.FILL_HORIZONTAL);
+			gd<%=groupName%>.horizontalSpan = ((GridLayout)<%=groupParent%>.getLayout()).numColumns;
+			<%=groupName%>.setLayoutData(gd<%=groupName%>);
+		<%}%>
+<%}%>
+<%private String TextValueWidgetSkipParent(UIField uiField){
+	if (uiField.eContainer().eContainer() instanceof UI)
+		return "false";
+	return "true";
+}%>
+<% // Widget creation generation recursive method %>
+<%private void generateWidgets(UIContainer uiContainer){%>
+	<%for (UIField uiField : uiContainer.getUI_fields()) {
+				DataWidget iDatawidget = epfUtility.getDataOf(uiField);
+		String widgetName = iDatawidget.widgetName; 
+		String className = iDatawidget.widgetGraphicalClassName;
+		String widgetLabel = iDatawidget.widgetLabel;
+		String widgetParent = iDatawidget.widgetParentName;
+	
+	switch (uiField.getType()) {
+			case TEXT:
+			case TEXTAREA:%>
+		<%=widgetName%> = new <%= className%>(<%=widgetParent%>, 
+										"<%= widgetLabel%> :", 
+										getWidgetFactory(), <%=TextValueWidgetSkipParent(uiField)%>);	
+			  <%break;
+			
+			case CHECKBOX:
+			case RADIOBOX:%>
+		<%=widgetName%> = new <%= className%>(<%=widgetParent%>,
+										getWidgetFactory());			
+			  <%break;
+			  
+			case SIMPLE_CHOICE_LIST: %>
+			<%=widgetName%> = new SimpleSemanticField(<%=widgetParent%>, 
+											"<%=widgetLabel%> :", 
+											getWidgetFactory(), 
+											new SimpleSemanticFieldController()); 
+				<%break;
+			case MULTIPLE_CHOICE_LIST:%>
+		<%=widgetName%> = new <%= className%>(<%=widgetParent%>, 
+										"<%= widgetLabel%> :", 
+										getWidgetFactory(),
+										new <%=widgetName+"FieldController()"%>);
+				<%break;
+			default:
+				break;
+		}
+}%>
+<%if (uiContainer.getSubContainers() != null && uiContainer.getSubContainers().size() > 0){
+		for (UIContainer iUIContainer : uiContainer.getSubContainers()) {
+			generateGroups(iUIContainer);
+			generateWidgets(iUIContainer);
+		}
+	}%>
+<%}%>
+<%}%>
+
+<%widgetCreationGenerator wcg = new widgetCreationGenerator();%>
+<%wcg.generateWidgets(parameter);%>
+	}

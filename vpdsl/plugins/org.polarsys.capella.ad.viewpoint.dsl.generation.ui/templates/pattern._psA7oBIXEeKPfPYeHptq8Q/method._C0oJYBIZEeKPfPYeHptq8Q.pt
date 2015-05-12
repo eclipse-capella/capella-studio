@@ -1,0 +1,62 @@
+<%
+DataWidget iDataWidget = epfUtility.getDataOf(parameter);
+String inClassName =  iDataWidget.widgetGraphicalClassName;
+char first = Character.toUpperCase(inClassName.charAt(0));
+inClassName = first + inClassName.substring(1);
+String inWidgetName = "_"+iDataWidget.widgetName+"Button";
+String associatedEStructuralFeature = iDataWidget.widgetFieldAccessorName;
+String label = "\""+ iDataWidget.widgetLabel+"\""; 
+%>
+
+ /**
+ * <!-- begin-user-doc -->
+ * The '<em><b>[<%=inClassName%>]</b></em>' customized CheckboxGroup field. 
+ * <!-- end-user-doc -->
+ * <p>
+ * </p>
+ *
+ * @generated
+ */ 
+ 
+public class <%=inClassName%> extends AbstractSemanticCheckboxGroup {
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+  private Button <%=inWidgetName%>;
+
+  /**
+   * Constructor.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param parent_p
+   * @param widgetFactory_p
+   * @generated
+   */
+  public <%=inClassName%>(Composite parent_p, TabbedPropertySheetWidgetFactory widgetFactory_p) {
+    super(parent_p, widgetFactory_p);
+    <%=inWidgetName%> = createButton(<%=associatedEStructuralFeature%>, <%=label%>, parent_p); //$NON-NLS-1$ 
+    // Set the GridData of the checkBox
+    Layout parentLayout = parent_p.getLayout();
+	if (parentLayout != null && parentLayout instanceof GridLayout){
+		GridData gd = new GridData(GridData.FILL_HORIZONTAL);
+		gd.horizontalSpan = ((GridLayout)parentLayout).numColumns;
+		<%=inWidgetName%>.setLayoutData(gd);
+	}
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * {@inheritDoc}
+   * @generated   
+   */
+  @Override
+  public List<Button> getSemanticFields() {
+    List<Button> fields = new ArrayList<Button>();
+    fields.add(<%=inWidgetName%>);
+    return fields;
+  }
+}

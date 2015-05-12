@@ -1,0 +1,32 @@
+import org.polarsys.capella.core.data.capellacore.CapellaElement;
+<%class WidgetModelDependentImportGenerator{%>
+<%ArrayList<String> imported = new ArrayList<String>();%>
+<%	private void init(){%>
+<%		imported.clear();%>
+<%	}%>
+<%	private void createImportList(UIContainer container){%>
+<% 		//Parse all UIFields to collect data %>
+<%		for (UIField uiField : container.getUI_fields())%>
+<%		{ %>
+<%			ArrayList<String> importList = epfUtility.getSematicImportsFor(uiField); %>
+<%			for(String currentImport : importList)%>
+<%			{%>
+<%				if (! imported.contains(currentImport))%>
+<%				{%>
+					import <%=currentImport%>;
+<% 					imported.add(currentImport);%>
+<%				}%>
+<%			}%>
+<%		}%>
+<%		if (container.getSubContainers() != null && container.getSubContainers().size() > 0)
+		{
+			for (UIContainer iUIContainer : container.getSubContainers()) 
+			{
+				createImportList(iUIContainer);
+			}
+		}%>
+<%	}%>
+<%}%>
+<%WidgetModelDependentImportGenerator wmdig = new WidgetModelDependentImportGenerator();%>
+<%wmdig.init();%>
+<%wmdig.createImportList(parameter);%>

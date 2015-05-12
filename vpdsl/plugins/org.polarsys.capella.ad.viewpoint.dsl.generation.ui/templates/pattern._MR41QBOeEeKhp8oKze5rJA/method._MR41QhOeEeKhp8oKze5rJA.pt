@@ -1,0 +1,21 @@
+package PACKAGE;
+
+import java.util.*;
+import org.eclipse.emf.ecore.*;
+import org.eclipse.egf.model.pattern.*;
+import org.eclipse.egf.pattern.execution.*;
+import org.eclipse.egf.pattern.query.*;
+import org.eclipse.egf.common.helper.*;
+
+import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UI;
+import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer;
+import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility;
+
+
+public class CLASS {
+
+	public CLASS() {
+		//Here is the constructor
+	}
+
+
