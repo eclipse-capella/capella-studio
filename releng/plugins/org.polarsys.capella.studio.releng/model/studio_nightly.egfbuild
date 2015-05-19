@@ -94,9 +94,20 @@
     <steps xsi:type="buildstep:PublishStep" xmi:id="_-GxSqN6rEeS384y2Q9u2Fg" component="_-GxSp96rEeS384y2Q9u2Fg"/>
     <steps xsi:type="buildstep:InstallStep" xmi:id="_uk3OgN6sEeS384y2Q9u2Fg" name="extension sdk feature" id="TP_juno" profile="SDKProfile" resultSteps="_-GxSqN6rEeS384y2Q9u2Fg"/>
   </jobs>
+  <jobs xmi:id="_IP-Ckf3tEeSW086H-yDPeg" name="vpdsl">
+    <steps xsi:type="buildstep:BuildStep" xmi:id="_IP-Ckv3tEeSW086H-yDPeg" name="vpdsl">
+      <buildLocations xsi:type="buildscm:GITBuildLocation" xmi:id="_IP-Ck_3tEeSW086H-yDPeg" gitLocation="_L0O-wPx8EeO7zY3f-pIrjg" folderName="vpdsl/plugins"/>
+      <buildLocations xsi:type="buildscm:GITBuildLocation" xmi:id="_IP-ClP3tEeSW086H-yDPeg" gitLocation="_L0O-wPx8EeO7zY3f-pIrjg" folderName="vpdsl/features"/>
+      <buildLocations xsi:type="buildstep:TargetPlatformBuildLocation" xmi:id="_IP-Clf3tEeSW086H-yDPeg" path="${publish}/TP_build"/>
+      <buildLocations xsi:type="buildstep:TargetPlatformBuildLocation" xmi:id="_IP-Clv3tEeSW086H-yDPeg" path="${publish}/TP_juno"/>
+      <components xsi:type="buildstep:Feature" xmi:id="_IP-Cl_3tEeSW086H-yDPeg" id="org.polarsys.capella.ta.viewpoint.dsl.feature"/>
+    </steps>
+    <steps xsi:type="buildstep:PublishStep" xmi:id="_IP-CmP3tEeSW086H-yDPeg" component="_IP-Cl_3tEeSW086H-yDPeg"/>
+    <steps xsi:type="buildstep:InstallStep" xmi:id="_IP-Cmf3tEeSW086H-yDPeg" name="vpdsl feature" id="TP_juno" profile="SDKProfile" resultSteps="_IP-CmP3tEeSW086H-yDPeg"/>
+  </jobs>
   <jobs xmi:id="_awBh4NMCEeSCstxmhDJ57A" name="All in one">
     <steps xsi:type="buildstep:AntStep" xmi:id="_dfuEcOddEeSYhdkYY0fPMw" targetName="move_egf_to_tools2" xml="&lt;target name=&quot;move_egf_to_tools2&quot;>&#xD;&#xA;&#x9;&lt;delete dir=&quot;${tools}/egf&quot;/>&#xD;&#xA;&#x9;&lt;move file=&quot;${publish}/TP_build&quot; tofile=&quot;${tools}/egf&quot; />&#xD;&#xA;&lt;/target>"/>
-    <steps xsi:type="buildstep:AggregateStep" xmi:id="_dmxskNMCEeSCstxmhDJ57A" name="all studio features" id="studio" publishSteps="_22zYoNL9EeSCstxmhDJ57A _-GxSqN6rEeS384y2Q9u2Fg _iw9VkOdSEeSYhdkYY0fPMw"/>
+    <steps xsi:type="buildstep:AggregateStep" xmi:id="_dmxskNMCEeSCstxmhDJ57A" name="all studio features" id="studio" publishSteps="_22zYoNL9EeSCstxmhDJ57A _-GxSqN6rEeS384y2Q9u2Fg _iw9VkOdSEeSYhdkYY0fPMw _IP-CmP3tEeSW086H-yDPeg"/>
   </jobs>
   <jobs xmi:id="_5GLecdL2EeSCstxmhDJ57A" name="platforms">
     <steps xsi:type="buildcore:StepContainer" xmi:id="_A4dvANL3EeSCstxmhDJ57A" name="TP_win32-win32-x86">
@@ -120,6 +131,6 @@
     </steps>
   </jobs>
   <jobs xmi:id="_OD0VANMCEeSCstxmhDJ57A" name="clean all">
-    <steps xsi:type="buildstep:AntStep" xmi:id="_OD0VAdMCEeSCstxmhDJ57A" targetName="cleanUp" xml="&lt;target name=&quot;cleanUp&quot;>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.extension.sdk.feature&quot; verbose=&quot;true&quot;/>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.studio.releng.feature&quot; verbose=&quot;true&quot;/>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.studio.product.feature&quot;/>&#xD;&#xA;&lt;/target>&#xD;&#xA;"/>
+    <steps xsi:type="buildstep:AntStep" xmi:id="_OD0VAdMCEeSCstxmhDJ57A" targetName="cleanUp" xml="&lt;target name=&quot;cleanUp&quot;>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.extension.sdk.feature&quot; verbose=&quot;true&quot;/>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.studio.releng.feature&quot; verbose=&quot;true&quot;/>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.studio.product.feature&quot;/>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.ta.viewpoint.dsl.feature&quot;/>&#xD;&#xA;&lt;/target>&#xD;&#xA;"/>
   </jobs>
 </buildcore:Chain>
