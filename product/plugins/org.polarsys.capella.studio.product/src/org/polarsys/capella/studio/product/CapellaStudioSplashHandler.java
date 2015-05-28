@@ -12,11 +12,14 @@
 package org.polarsys.capella.studio.product;
 
 
+import org.eclipse.core.runtime.IBundleGroup;
+import org.eclipse.core.runtime.IBundleGroupProvider;
 import org.eclipse.core.runtime.IProduct;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.resource.StringConverter;
 import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.events.PaintListener;
+import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Point;
@@ -59,31 +62,51 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 		setForeground(new RGB((foregroundColorInteger & 0xFF0000) >> 16, (foregroundColorInteger & 0xFF00) >> 8, foregroundColorInteger & 0xFF));
 
 		// Custom
-		Version version2 = product.getDefiningBundle().getVersion();
-
+		Version studioVersion = product.getDefiningBundle().getVersion();
+		String capellaVersion = "n/a";
+		String kitalphaVersion = "n/a";
+		for (IBundleGroupProvider bundleGroupProvider : Platform.getBundleGroupProviders())
+		{
+			for (IBundleGroup bundleGroups : bundleGroupProvider.getBundleGroups())
+			{
+				if ("org.polarsys.capella.core.advance.feature".equals(bundleGroups.getIdentifier()))
+					capellaVersion = bundleGroups.getVersion();
+				else if ("org.polarsys.kitalpha.runtime.feature".equals(bundleGroups.getIdentifier()))
+					kitalphaVersion = bundleGroups.getVersion();
+			}
+		}
 		StringBuilder builder = new StringBuilder();
-		builder.append("Version : ");
-		builder.append(version2.getMajor()).append('.');
-		builder.append(version2.getMinor()).append('.');
-		builder.append(version2.getMicro()).append("");
-		builder.append("\n");
-		builder.append("Build id : ");
-		builder.append(version2.getQualifier());
+		builder.append(studioVersion.getMajor()).append('.');
+		builder.append(studioVersion.getMinor()).append('.');
+		builder.append(studioVersion.getMicro()).append('.');
+		builder.append(studioVersion.getQualifier());
 		final String text = builder.toString();
+		final String fCapellaVersion = "Capella "+capellaVersion;
+		final String fKitalphaVersion = "Kitalpha "+kitalphaVersion;
 
-		final Point buildIdPoint = new Point(240, 205);
 		getContent().addPaintListener(new PaintListener() {
 
 			public void paintControl(PaintEvent e) {
-				e.gc.setForeground(getForeground());
 
+				e.gc.setForeground(new Color(getSplash().getShell().getDisplay(), new RGB(38, 32, 87)));
+				Font newFont = computeFont(e, 12);
+				e.gc.setFont(newFont);
+				e.gc.drawText(text, 330, 185, true);
+				
+				e.gc.setForeground(getForeground());
+				newFont = computeFont(e, 10);
+				e.gc.setFont(newFont);
+				e.gc.drawText(fCapellaVersion, 240, 225, true);
+				e.gc.drawText(fKitalphaVersion, 240, 245, true);
+				newFont.dispose();
+			}
+
+			private Font computeFont(PaintEvent e, int height) {
 				FontData[] fontData = e.gc.getFont().getFontData();
 				for (int i = 0; i < fontData.length; ++i)
-					fontData[i].setHeight(12);
+					fontData[i].setHeight(height);
 				final Font newFont = new Font(e.display, fontData);
-				e.gc.setFont(newFont);
-
-				e.gc.drawText(text, buildIdPoint.x, buildIdPoint.y, true);
+				return newFont;
 			}
 		});
 	}
