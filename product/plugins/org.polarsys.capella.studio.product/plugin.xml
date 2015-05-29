@@ -49,7 +49,7 @@
          </property>
          <property
                name="aboutText"
-               value="Capella Studio platform provided by Thales Corporate Services S.A.S">
+               value="%productBlurb">
          </property>
          <property
                name="aboutImage"
@@ -57,7 +57,7 @@
          </property>
          <property
                name="appName"
-               value="Capella Studio">
+               value="%pluginName">
          </property>
          <property
                name="preferenceCustomization"

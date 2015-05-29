@@ -12,6 +12,7 @@
 package org.polarsys.capella.studio.product;
 
 
+
 import org.eclipse.core.runtime.IBundleGroup;
 import org.eclipse.core.runtime.IBundleGroupProvider;
 import org.eclipse.core.runtime.IProduct;
@@ -22,7 +23,6 @@ import org.eclipse.swt.events.PaintListener;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
-import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Shell;
@@ -31,7 +31,6 @@ import org.eclipse.ui.splash.BasicSplashHandler;
 import org.osgi.framework.Version;
 
 public class CapellaStudioSplashHandler extends BasicSplashHandler {
-
 	/**
 	 * Copied from EclipseSplashHandler
 	 */
@@ -89,15 +88,15 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 			public void paintControl(PaintEvent e) {
 
 				e.gc.setForeground(new Color(getSplash().getShell().getDisplay(), new RGB(38, 32, 87)));
-				Font newFont = computeFont(e, 12);
+				Font newFont = computeFont(e, 11);
 				e.gc.setFont(newFont);
-				e.gc.drawText(text, 330, 185, true);
+				e.gc.drawText(text, 325, 185, true);
 				
 				e.gc.setForeground(getForeground());
-				newFont = computeFont(e, 10);
+				newFont = computeFont(e, 9);
 				e.gc.setFont(newFont);
-				e.gc.drawText(fCapellaVersion, 240, 225, true);
-				e.gc.drawText(fKitalphaVersion, 240, 245, true);
+				e.gc.drawText(fCapellaVersion, 225, 225, true);
+				e.gc.drawText(fKitalphaVersion, 225, 245, true);
 				newFont.dispose();
 			}
 

@@ -12,6 +12,7 @@ Require-Bundle: org.eclipse.ui,
  org.polarsys.kitalpha.ad.services,
  org.eclipse.ui.navigator.resources,
  org.eclipse.jdt.ui
+Bundle-Localization: plugin
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 
