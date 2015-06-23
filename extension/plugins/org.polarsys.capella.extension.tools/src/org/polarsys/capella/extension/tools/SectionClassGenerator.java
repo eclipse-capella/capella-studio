@@ -42,7 +42,7 @@ public class SectionClassGenerator {
 
 	public static String getFilterTest(GenClass model) {
 		GenPackage genPackage = model.getGenPackage();
-		return "obj.eClass().equals(" + genPackage.getInterfacePackageName() + '.' + genPackage.getBasicPackageName() + ".eINSTANCE.get" + model.getEcoreClass().getName() + "())";
+		return "obj != null && obj.eClass().equals(" + genPackage.getInterfacePackageName() + '.' + genPackage.getBasicPackageName() + ".eINSTANCE.get" + model.getEcoreClass().getName() + "())";
 	}
 
 	public static String getPackagename(GenClass model) {
