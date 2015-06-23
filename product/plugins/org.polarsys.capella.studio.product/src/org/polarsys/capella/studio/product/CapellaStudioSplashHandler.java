@@ -61,25 +61,8 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 		setForeground(new RGB((foregroundColorInteger & 0xFF0000) >> 16, (foregroundColorInteger & 0xFF00) >> 8, foregroundColorInteger & 0xFF));
 
 		// Custom
-		Version studioVersion = product.getDefiningBundle().getVersion();
-		String capellaVersion = "n/a";
-		String kitalphaVersion = "n/a";
-		for (IBundleGroupProvider bundleGroupProvider : Platform.getBundleGroupProviders())
-		{
-			for (IBundleGroup bundleGroups : bundleGroupProvider.getBundleGroups())
-			{
-				if ("org.polarsys.capella.core.advance.feature".equals(bundleGroups.getIdentifier()))
-					capellaVersion = bundleGroups.getVersion();
-				else if ("org.polarsys.kitalpha.runtime.feature".equals(bundleGroups.getIdentifier()))
-					kitalphaVersion = bundleGroups.getVersion();
-			}
-		}
-		StringBuilder builder = new StringBuilder();
-		builder.append(studioVersion.getMajor()).append('.');
-		builder.append(studioVersion.getMinor()).append('.');
-		builder.append(studioVersion.getMicro()).append('.');
-		builder.append(studioVersion.getQualifier());
-		final String text = builder.toString();
+		String capellaVersion = "0.8.2";
+		String kitalphaVersion = "0.5.1";
 		final String fCapellaVersion = "Capella "+capellaVersion;
 		final String fKitalphaVersion = "Kitalpha "+kitalphaVersion;
 
@@ -87,16 +70,11 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 
 			public void paintControl(PaintEvent e) {
 
-				e.gc.setForeground(new Color(getSplash().getShell().getDisplay(), new RGB(38, 32, 87)));
-				Font newFont = computeFont(e, 11);
-				e.gc.setFont(newFont);
-				e.gc.drawText(text, 325, 185, true);
-				
 				e.gc.setForeground(getForeground());
-				newFont = computeFont(e, 9);
+				Font newFont = computeFont(e, 9);
 				e.gc.setFont(newFont);
-				e.gc.drawText(fCapellaVersion, 225, 225, true);
-				e.gc.drawText(fKitalphaVersion, 225, 245, true);
+				e.gc.drawText(fCapellaVersion, 285, 225, true);
+				e.gc.drawText(fKitalphaVersion, 285, 245, true);
 				newFont.dispose();
 			}
 
