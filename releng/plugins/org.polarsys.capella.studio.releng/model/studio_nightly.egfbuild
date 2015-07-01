@@ -5,7 +5,7 @@
     <properties xmi:id="_MWwdkPlvEeCFCIE_fWd_VQ" key="cloudsmith.download.prefix" value="http://download.eclipse.org/external/"/>
     <properties xmi:id="_MlqcQPlvEeCFCIE_fWd_VQ" key="polarion.download.prefix" value="http://download.eclipse.org/external/"/>
     <properties xmi:id="_LPrgwPlvEeCFCIE_fWd_VQ" key="eclipse.download.prefix" value="http://download.eclipse.org/"/>
-    <properties xmi:id="_7e-7UI5hEeOQ8YcnVfa6Wg" key="sirius.repo.url" value="${eclipse.download.prefix}/sirius/updates/releases/2.0.4/juno"/>
+    <properties xmi:id="_7e-7UI5hEeOQ8YcnVfa6Wg" key="sirius.repo.url" value="${eclipse.download.prefix}/sirius/updates/releases/2.0.6/juno"/>
     <properties xmi:id="_n0G4oJPyEeODqo9Nw0Mw6Q" key="orbit.repo.url" value="${eclipse.download.prefix}/tools/orbit/downloads/drops/R20130827064939/repository/"/>
     <properties xmi:id="_eRQHEZk8EeOez_jbx14D1w" key="eclipse38.download" value="${eclipse.download.prefix}/eclipse/updates/3.8/"/>
     <properties xmi:id="_gReNwM1bEeSQpbp6WoTKiQ" key="eclipse38.download.prefix" value="${eclipse38.download}"/>
@@ -136,4 +136,3 @@
     <steps xsi:type="buildstep:AntStep" xmi:id="_OD0VAdMCEeSCstxmhDJ57A" targetName="cleanUp" xml="&lt;target name=&quot;cleanUp&quot;>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.extension.sdk.feature&quot; verbose=&quot;true&quot;/>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.studio.releng.feature&quot; verbose=&quot;true&quot;/>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.studio.product.feature&quot;/>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.ta.viewpoint.dsl.feature&quot;/>&#xD;&#xA;&lt;/target>&#xD;&#xA;"/>
   </jobs>
 </buildcore:Chain>
-
