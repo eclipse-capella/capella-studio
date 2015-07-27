@@ -32,5 +32,6 @@
 		genModel.setOptimizedHasChildren(true);
 		genModel.setTableProviders(false);
 		genModel.setColorProviders(false);
+		genModel.setOperationReflection(false);
 		// EMDE Extension Genmodel
 		

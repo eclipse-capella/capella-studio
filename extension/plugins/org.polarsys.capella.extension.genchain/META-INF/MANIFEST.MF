@@ -22,5 +22,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.egf.emf.pattern,
  org.eclipse.search,
  org.polarsys.capella.extension.genchain.model,
- org.polarsys.kitalpha.emde.genchain
+ org.polarsys.kitalpha.emde.genchain,
+ org.polarsys.kitalpha.ad.common
 Bundle-ActivationPolicy: lazy

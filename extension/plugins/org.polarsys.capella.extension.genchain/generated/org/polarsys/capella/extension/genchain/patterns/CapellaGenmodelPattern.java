@@ -44,6 +44,7 @@ public class CapellaGenmodelPattern {
 	public CapellaGenmodelPattern() {
 		//Here is the constructor
 		// add initialisation of the pattern variables (declaration has been already done).
+
 	}
 
 	public void generate(Object argument) throws Exception {
@@ -91,7 +92,8 @@ public class CapellaGenmodelPattern {
 	protected void method_create(final StringBuffer out,
 			final PatternContext ctx) throws Exception {
 		IPath ecorePath = new Path(parameter.getModelPath());
-		URI ecoreURI = URI.createPlatformPluginURI(ecorePath.toString(), false);
+		URI ecoreURI = URI.createPlatformResourceURI(ecorePath.toString(),
+				false);
 
 		String fileName = ecorePath.removeFileExtension()
 				.addFileExtension("genmodel").lastSegment();
@@ -202,6 +204,7 @@ public class CapellaGenmodelPattern {
 		genModel.setOptimizedHasChildren(true);
 		genModel.setTableProviders(false);
 		genModel.setColorProviders(false);
+		genModel.setOperationReflection(false);
 		// EMDE Extension Genmodel
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;

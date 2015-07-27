@@ -1,5 +1,5 @@
 		IPath ecorePath = new Path(parameter.getModelPath());
-		URI ecoreURI = URI.createPlatformPluginURI(ecorePath.toString(), false);
+		URI ecoreURI = URI.createPlatformResourceURI(ecorePath.toString(), false);
 
 		String fileName = ecorePath.removeFileExtension().addFileExtension("genmodel").lastSegment();
 
