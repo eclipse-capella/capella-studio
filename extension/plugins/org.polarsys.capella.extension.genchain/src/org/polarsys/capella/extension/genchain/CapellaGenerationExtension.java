@@ -31,8 +31,8 @@ import org.polarsys.capella.extension.genchain.capellaextension.CapellaExtension
  * 
  */
 public class CapellaGenerationExtension extends DefaultEmfGenerationExtension {
-	private static final URI PATTERN_ECORE = URI.createPlatformPluginURI("/org.polarsys.capella.extension.genchain/egf/capellaExtension.fcore#__Az0wCIVEeCuNfuGnuOPDw", false);
-	private static final URI PATTERN_GENMODEL = URI.createPlatformPluginURI("/org.polarsys.capella.extension.genchain/egf/capellaExtension.fcore#_bvRiUCIsEeCkc_7OLLz7bw", false);
+	private static final URI PATTERN_ECORE = URI.createURI("platform:/plugin/org.polarsys.capella.extension.genchain/egf/capellaExtension.fcore#__Az0wCIVEeCuNfuGnuOPDw", false);
+	private static final URI PATTERN_GENMODEL = URI.createURI("platform:/plugin/org.polarsys.capella.extension.genchain/egf/capellaExtension.fcore#_bvRiUCIsEeCkc_7OLLz7bw", false);
 
 	private static final List<String> CONFLICT_LIST = Arrays.asList(new String[] { "basic.emf.generation", "emde.emf.generation" });
 
