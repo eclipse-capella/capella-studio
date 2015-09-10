@@ -61,8 +61,8 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 		setForeground(new RGB((foregroundColorInteger & 0xFF0000) >> 16, (foregroundColorInteger & 0xFF00) >> 8, foregroundColorInteger & 0xFF));
 
 		// Custom
-		String capellaVersion = "0.8.2";
-		String kitalphaVersion = "0.5.1";
+		String capellaVersion = "0.8.3";
+		String kitalphaVersion = "0.5.2";
 		final String fCapellaVersion = "Capella "+capellaVersion;
 		final String fKitalphaVersion = "Kitalpha "+kitalphaVersion;
 

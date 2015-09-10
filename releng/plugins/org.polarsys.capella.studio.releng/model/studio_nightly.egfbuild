@@ -12,17 +12,17 @@
     <properties xmi:id="_efiO4BGGEeS7tbIPWaBUAQ" key="eef.repo.url" value="${eclipse.download.prefix}/modeling/emft/eef/updates/releases/1.3"/>
     <properties xmi:id="_snr1UBGGEeS7tbIPWaBUAQ" key="acceleo.repo.url" value="${eclipse.download.prefix}/acceleo/updates/releases/3.4"/>
     <properties xmi:id="_dtoK4AdAEeSxv713mpB8TA" key="ecoretools2.repo.url" value="${eclipse.download.prefix}/ecoretools/updates/nightly/3.0.0-N20150305-021244/luna/"/>
-    <properties xmi:id="_BukoEVkbEeSo0vu-C-A3cw" key="diffmerge.repo.url" value="http://download.eclipse.org/diffmerge/releases/0.4.1/emf-diffmerge-site"/>
-    <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="${eclipse.download.prefix}/diffmerge/releases/0.4.0/edm-patterns-site"/>
-    <properties xmi:id="_7UOncM1xEeSFroBhAlzk1g" key="query.legacy.repo.url" value="${eclipse.download.prefix}/sirius/updates/legacy"/>
-    <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_Nightly-v0.5.x/103/artifact/result/publish/kitalpha/site.p2/"/>
-    <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/job/capella-v0.8.x/173/artifact/result/publish/org.polarsys.capella/site.p2"/>
+    <properties xmi:id="_BukoEVkbEeSo0vu-C-A3cw" key="diffmerge.repo.url" value="http://download.eclipse.org/diffmerge/releases/0.4.2/emf-diffmerge-site"/>
+    <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="${eclipse.download.prefix}/diffmerge/releases/0.4.2/edm-patterns-site"/>
+    <properties xmi:id="_7UOncM1xEeSFroBhAlzk1g" key="query.legacy.repo.url" value="${eclipse.download.prefix}/sirius/updates/legacy/1.1.0/"/>
+    <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_Nightly-v0.5.x/218/artifact/result/publish/kitalpha/site.p2/"/>
+    <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/job/capella-v0.8.x/lastSuccessfulBuild/artifact/result/publish/org.polarsys.capella/site.p2/"/>
     <properties xmi:id="_rstsgNMCEeSCstxmhDJ57A" key="capella.egf.repo.url" value="https://hudson.polarsys.org/capella/job/capella-v0.8.x/173/artifact/result/publish/org.polarsys.capella.core.egf.feature/site.p2"/>
-    <properties xmi:id="_-jrxkA9SEeW7CM9Somx7YA" key="docgen.addon.url" value="https://hudson.polarsys.org/capella/job/capella-addon-docgen-v0.8.x/109/artifact/result/publish/CapellaXHTMLDocGen-updateSite-0.8.1.2015-06-18_05-07-45-incubation.zip"/>
+    <properties xmi:id="_-jrxkA9SEeW7CM9Somx7YA" key="docgen.addon.url" value="https://hudson.polarsys.org/capella/view/Capella%20Add-ons/job/capella-addon-docgen-v0.8.x/110/artifact/result/publish/CapellaXHTMLDocGen-updateSite-0.8.2.2015-06-29_10-02-02-incubation.zip"/>
   </propertyPackages>
   <propertyPackages xmi:id="_vtRuAI5EEeOQ8YcnVfa6Wg" name="versions">
     <properties xmi:id="_SowkIEhiEeOxuMV9a71i9w" key="eclipse_version" value="juno"/>
-    <properties xmi:id="_JYCjYNL3EeSCstxmhDJ57A" key="studio_version" value="0.8.2"/>
+    <properties xmi:id="_JYCjYNL3EeSCstxmhDJ57A" key="studio_version" value="0.8.3"/>
   </propertyPackages>
   <jobs xmi:id="_Htxz8PqoEeKFaurHIkYR0w" name="init">
     <steps xsi:type="buildstep:CleanStep" xmi:id="_oIj20DZJEeOP8MSofnrGNA" type="Result"/>
@@ -129,6 +129,82 @@
         <egfActivities xmi:id="_GZ5-V9L3EeSCstxmhDJ57A" uri="platform:/plugin/org.polarsys.kitalpha.releng/egf/customPlatform.fcore#_iQtBQK1QEeCY7YPdntiIaQ"/>
       </steps>
       <steps xsi:type="buildfile:ZipStep" xmi:id="_HEqykNL3EeSCstxmhDJ57A" name="zip juno results" baseDir="${publish}/${TP_name}" destinationFilePath="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}-incubation.zip"/>
+    </steps>
+    <steps xsi:type="buildcore:StepContainer" xmi:id="_Aj27YVhWEeWCM-QZS3f4gA" name="TP_win32-win32-x86_64">
+      <properties xmi:id="_Aj27YlhWEeWCM-QZS3f4gA" key="TP_name" value="TP_win32-win32-x86_64" type="INLINED"/>
+      <properties xmi:id="_Aj27Y1hWEeWCM-QZS3f4gA" key="TP_arch" value="x86_64" type="INLINED"/>
+      <properties xmi:id="_Aj27ZFhWEeWCM-QZS3f4gA" key="TP_os" value="win32" type="INLINED"/>
+      <properties xmi:id="_Aj27ZVhWEeWCM-QZS3f4gA" key="TP_ws" value="win32" type="INLINED"/>
+      <properties xmi:id="_Aj27ZlhWEeWCM-QZS3f4gA" key="TP_profile" value="SDKProfile" type="INLINED"/>
+      <steps xsi:type="buildcore:ReuseStep" xmi:id="_Aj27Z1hWEeWCM-QZS3f4gA" name="">
+        <reusedStep xsi:type="buildcore:StepContainer" href="StudioPlatformSetup.egfbuild#_Y4cvwM1xEeSFroBhAlzk1g"/>
+      </steps>
+      <steps xsi:type="buildstep:InstallStep" xmi:id="_Aj27aFhWEeWCM-QZS3f4gA" name="install studio" id="${TP_name}" profile="SDKProfile" resultSteps="_dmxskNMCEeSCstxmhDJ57A" installResultStepsSourceFeatures="true"/>
+      <steps xsi:type="buildstep:EgfStep" xmi:id="_Aj27aVhWEeWCM-QZS3f4gA">
+        <properties xmi:id="_Aj27alhWEeWCM-QZS3f4gA" key="platformPath" value="${publish}/${TP_name}"/>
+        <properties xmi:id="_Aj27a1hWEeWCM-QZS3f4gA" key="version" value="${studio_version}"/>
+        <properties xmi:id="_Aj27bFhWEeWCM-QZS3f4gA" key="product" value="org.polarsys.capella.studio.product"/>
+        <properties xmi:id="_Aj27bVhWEeWCM-QZS3f4gA" key="application" value="org.polarsys.capella.studio.application"/>
+        <egfActivities xmi:id="_Aj27blhWEeWCM-QZS3f4gA" uri="platform:/plugin/org.polarsys.kitalpha.releng/egf/customPlatform.fcore#_iQtBQK1QEeCY7YPdntiIaQ"/>
+      </steps>
+      <steps xsi:type="buildfile:ZipStep" xmi:id="_Aj27b1hWEeWCM-QZS3f4gA" name="zip juno results" baseDir="${publish}/${TP_name}" destinationFilePath="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}-incubation.zip"/>
+    </steps>
+    <steps xsi:type="buildcore:StepContainer" xmi:id="_Mbrd8FhWEeWCM-QZS3f4gA" name="TP_linux-gtk-x86">
+      <properties xmi:id="_Mbrd8VhWEeWCM-QZS3f4gA" key="TP_name" value="TP_linux-gtk-x86" type="INLINED"/>
+      <properties xmi:id="_Mbrd8lhWEeWCM-QZS3f4gA" key="TP_arch" value="x86" type="INLINED"/>
+      <properties xmi:id="_Mbrd81hWEeWCM-QZS3f4gA" key="TP_os" value="linux" type="INLINED"/>
+      <properties xmi:id="_Mbrd9FhWEeWCM-QZS3f4gA" key="TP_ws" value="gtk" type="INLINED"/>
+      <properties xmi:id="_Mbrd9VhWEeWCM-QZS3f4gA" key="TP_profile" value="SDKProfile" type="INLINED"/>
+      <steps xsi:type="buildcore:ReuseStep" xmi:id="_Mbrd9lhWEeWCM-QZS3f4gA" name="">
+        <reusedStep xsi:type="buildcore:StepContainer" href="StudioPlatformSetup.egfbuild#_Y4cvwM1xEeSFroBhAlzk1g"/>
+      </steps>
+      <steps xsi:type="buildstep:InstallStep" xmi:id="_Mbrd91hWEeWCM-QZS3f4gA" name="install studio" id="${TP_name}" profile="SDKProfile" resultSteps="_dmxskNMCEeSCstxmhDJ57A" installResultStepsSourceFeatures="true"/>
+      <steps xsi:type="buildstep:EgfStep" xmi:id="_Mbrd-FhWEeWCM-QZS3f4gA">
+        <properties xmi:id="_Mbrd-VhWEeWCM-QZS3f4gA" key="platformPath" value="${publish}/${TP_name}"/>
+        <properties xmi:id="_Mbrd-lhWEeWCM-QZS3f4gA" key="version" value="${studio_version}"/>
+        <properties xmi:id="_Mbrd-1hWEeWCM-QZS3f4gA" key="product" value="org.polarsys.capella.studio.product"/>
+        <properties xmi:id="_Mbrd_FhWEeWCM-QZS3f4gA" key="application" value="org.polarsys.capella.studio.application"/>
+        <egfActivities xmi:id="_Mbrd_VhWEeWCM-QZS3f4gA" uri="platform:/plugin/org.polarsys.kitalpha.releng/egf/customPlatform.fcore#_iQtBQK1QEeCY7YPdntiIaQ"/>
+      </steps>
+      <steps xsi:type="buildfile:ZipStep" xmi:id="_Mbrd_lhWEeWCM-QZS3f4gA" name="zip juno results" baseDir="${publish}/${TP_name}" destinationFilePath="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}-incubation.zip"/>
+    </steps>
+    <steps xsi:type="buildcore:StepContainer" xmi:id="_SwnmwFhWEeWCM-QZS3f4gA" name="TP_linux-gtk-x86_64">
+      <properties xmi:id="_SwnmwVhWEeWCM-QZS3f4gA" key="TP_name" value="TP_linux-gtk-x86_64" type="INLINED"/>
+      <properties xmi:id="_SwnmwlhWEeWCM-QZS3f4gA" key="TP_arch" value="x86_64" type="INLINED"/>
+      <properties xmi:id="_Swnmw1hWEeWCM-QZS3f4gA" key="TP_os" value="linux" type="INLINED"/>
+      <properties xmi:id="_SwnmxFhWEeWCM-QZS3f4gA" key="TP_ws" value="gtk" type="INLINED"/>
+      <properties xmi:id="_SwnmxVhWEeWCM-QZS3f4gA" key="TP_profile" value="SDKProfile" type="INLINED"/>
+      <steps xsi:type="buildcore:ReuseStep" xmi:id="_SwnmxlhWEeWCM-QZS3f4gA" name="">
+        <reusedStep xsi:type="buildcore:StepContainer" href="StudioPlatformSetup.egfbuild#_Y4cvwM1xEeSFroBhAlzk1g"/>
+      </steps>
+      <steps xsi:type="buildstep:InstallStep" xmi:id="_Swnmx1hWEeWCM-QZS3f4gA" name="install studio" id="${TP_name}" profile="SDKProfile" resultSteps="_dmxskNMCEeSCstxmhDJ57A" installResultStepsSourceFeatures="true"/>
+      <steps xsi:type="buildstep:EgfStep" xmi:id="_SwnmyFhWEeWCM-QZS3f4gA">
+        <properties xmi:id="_SwnmyVhWEeWCM-QZS3f4gA" key="platformPath" value="${publish}/${TP_name}"/>
+        <properties xmi:id="_SwnmylhWEeWCM-QZS3f4gA" key="version" value="${studio_version}"/>
+        <properties xmi:id="_Swnmy1hWEeWCM-QZS3f4gA" key="product" value="org.polarsys.capella.studio.product"/>
+        <properties xmi:id="_SwnmzFhWEeWCM-QZS3f4gA" key="application" value="org.polarsys.capella.studio.application"/>
+        <egfActivities xmi:id="_SwnmzVhWEeWCM-QZS3f4gA" uri="platform:/plugin/org.polarsys.kitalpha.releng/egf/customPlatform.fcore#_iQtBQK1QEeCY7YPdntiIaQ"/>
+      </steps>
+      <steps xsi:type="buildfile:ZipStep" xmi:id="_SwnmzlhWEeWCM-QZS3f4gA" name="zip juno results" baseDir="${publish}/${TP_name}" destinationFilePath="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}-incubation.zip"/>
+    </steps>
+    <steps xsi:type="buildcore:StepContainer" xmi:id="_Wddr8FhWEeWCM-QZS3f4gA" name="TP_macosx-cocoa-x86_64">
+      <properties xmi:id="_Wddr8VhWEeWCM-QZS3f4gA" key="TP_name" value="TP_macosx-cocoa-x86_64" type="INLINED"/>
+      <properties xmi:id="_Wddr8lhWEeWCM-QZS3f4gA" key="TP_arch" value="x86_64" type="INLINED"/>
+      <properties xmi:id="_Wddr81hWEeWCM-QZS3f4gA" key="TP_os" value="macosx" type="INLINED"/>
+      <properties xmi:id="_Wddr9FhWEeWCM-QZS3f4gA" key="TP_ws" value="cocoa" type="INLINED"/>
+      <properties xmi:id="_Wddr9VhWEeWCM-QZS3f4gA" key="TP_profile" value="SDKProfile" type="INLINED"/>
+      <steps xsi:type="buildcore:ReuseStep" xmi:id="_Wddr9lhWEeWCM-QZS3f4gA" name="">
+        <reusedStep xsi:type="buildcore:StepContainer" href="StudioPlatformSetup.egfbuild#_Y4cvwM1xEeSFroBhAlzk1g"/>
+      </steps>
+      <steps xsi:type="buildstep:InstallStep" xmi:id="_Wddr91hWEeWCM-QZS3f4gA" name="install studio" id="${TP_name}" profile="SDKProfile" resultSteps="_dmxskNMCEeSCstxmhDJ57A" installResultStepsSourceFeatures="true"/>
+      <steps xsi:type="buildstep:EgfStep" xmi:id="_Wddr-FhWEeWCM-QZS3f4gA">
+        <properties xmi:id="_Wddr-VhWEeWCM-QZS3f4gA" key="platformPath" value="${publish}/${TP_name}"/>
+        <properties xmi:id="_Wddr-lhWEeWCM-QZS3f4gA" key="version" value="${studio_version}"/>
+        <properties xmi:id="_Wddr-1hWEeWCM-QZS3f4gA" key="product" value="org.polarsys.capella.studio.product"/>
+        <properties xmi:id="_Wddr_FhWEeWCM-QZS3f4gA" key="application" value="org.polarsys.capella.studio.application"/>
+        <egfActivities xmi:id="_Wddr_VhWEeWCM-QZS3f4gA" uri="platform:/plugin/org.polarsys.kitalpha.releng/egf/customPlatform.fcore#_iQtBQK1QEeCY7YPdntiIaQ"/>
+      </steps>
+      <steps xsi:type="buildfile:ZipStep" xmi:id="_Wddr_lhWEeWCM-QZS3f4gA" name="zip juno results" baseDir="${publish}/${TP_name}" destinationFilePath="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}-incubation.zip"/>
     </steps>
   </jobs>
   <jobs xmi:id="_OD0VANMCEeSCstxmhDJ57A" name="clean all">
