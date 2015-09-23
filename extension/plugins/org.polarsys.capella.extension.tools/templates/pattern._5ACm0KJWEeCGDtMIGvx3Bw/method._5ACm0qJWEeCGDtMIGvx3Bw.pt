@@ -110,6 +110,7 @@ import org.polarsys.capella.core.data.helpers.capellacommon.delegates.AbstractSt
 import org.polarsys.capella.core.data.helpers.capellacommon.delegates.CapabilityRealizationInvolvedElementHelper;
 import org.polarsys.capella.core.data.helpers.capellacommon.delegates.CapabilityRealizationInvolvementHelper;
 import org.polarsys.capella.core.data.helpers.capellacommon.delegates.GenericTraceHelper;
+import org.polarsys.capella.core.data.helpers.capellacommon.delegates.StateHelper;
 import org.polarsys.capella.core.data.helpers.capellacommon.delegates.StateTransitionRealizationHelper;
 import org.polarsys.capella.core.data.helpers.capellacore.delegates.AbstractPropertyValueHelper;
 import org.polarsys.capella.core.data.helpers.capellacore.delegates.AllocationHelper;

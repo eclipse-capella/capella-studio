@@ -157,7 +157,7 @@
 		HelperClassGenerator.registerHelperAndSection(CapellacommonPackage.eINSTANCE.getInitialPseudoState(), null, InitialPseudoStateItemContribution.class, InitialPseudoStateSection.class);
 		HelperClassGenerator.registerHelperAndSection(CapellacommonPackage.eINSTANCE.getJoinPseudoState(), null, JoinPseudoStateItemContribution.class, JoinPseudoStateSection.class);
 		HelperClassGenerator.registerHelperAndSection(CapellacommonPackage.eINSTANCE.getMode(), null, ModeItemContribution.class, ModeSection.class);
-		HelperClassGenerator.registerHelperAndSection(CapellacommonPackage.eINSTANCE.getState(), null, StateItemContribution.class, StateSection.class);
+		HelperClassGenerator.registerHelperAndSection(CapellacommonPackage.eINSTANCE.getState(), StateHelper.class, StateItemContribution.class, StateSection.class);
 		HelperClassGenerator.registerHelperAndSection(CapellacommonPackage.eINSTANCE.getStateMachine(), null, StateMachineItemContribution.class, StateMachineSection.class);
 		HelperClassGenerator.registerHelperAndSection(CapellacommonPackage.eINSTANCE.getTerminatePseudoState(), null, TerminatePseudoStateItemContribution.class, TerminatePseudoStateSection.class);
 		HelperClassGenerator.registerHelper(CapellacorePackage.eINSTANCE.getAbstractPropertyValue(), AbstractPropertyValueHelper.class, AbstractPropertyValueItemContribution.class);
