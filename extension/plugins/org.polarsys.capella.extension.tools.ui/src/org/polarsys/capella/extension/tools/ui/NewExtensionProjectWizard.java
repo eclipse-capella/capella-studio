@@ -235,7 +235,8 @@ public abstract class NewExtensionProjectWizard extends Wizard implements INewWi
 			cls2.getESuperTypes().add(elementExtensionCls);
 			anno = EcoreFactory.eINSTANCE.createEAnnotation();
 			anno.setSource(ExtensionAnnotationsHelper.CONSTRAINT_NS_URI);
-			anno.getDetails().put(ExtensionAnnotationsHelper.EXTENDED_ELEMENT, "http://www.polarsys.org/capella/core/la/0.8.0#//LogicalComponent");
+			
+			anno.getDetails().put(ExtensionAnnotationsHelper.EXTENDED_ELEMENT,  lcCls.getEPackage().getNsURI()+"#//LogicalComponent");
 			cls2.getEAnnotations().add(anno);
 
 			ePackage.getEClassifiers().add(cls1);
