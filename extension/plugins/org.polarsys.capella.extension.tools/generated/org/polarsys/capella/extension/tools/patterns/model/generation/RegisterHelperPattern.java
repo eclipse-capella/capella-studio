@@ -1,4 +1,4 @@
-//Generated with EGF 1.3.0.v20150608-0917
+//Generated with EGF 1.3.0.v20150924-1035
 package org.polarsys.capella.extension.tools.patterns.model.generation;
 
 import java.util.HashMap;
@@ -199,7 +199,6 @@ import org.polarsys.capella.core.data.helpers.information.delegates.BinaryExpres
 import org.polarsys.capella.core.data.helpers.information.delegates.ClassHelper;
 import org.polarsys.capella.core.data.helpers.information.delegates.CollectionHelper;
 import org.polarsys.capella.core.data.helpers.information.delegates.CommunicationItemHelper;
-import org.polarsys.capella.core.data.helpers.information.delegates.CommunicationLinkAllocationHelper;
 import org.polarsys.capella.core.data.helpers.information.delegates.CommunicationLinkExchangerHelper;
 import org.polarsys.capella.core.data.helpers.information.delegates.CommunicationLinkHelper;
 import org.polarsys.capella.core.data.helpers.information.delegates.DataTypeHelper;
@@ -270,7 +269,6 @@ import org.polarsys.capella.core.data.helpers.requirement.delegates.AbstractRequ
 import org.polarsys.capella.core.data.information.InformationPackage;
 import org.polarsys.capella.core.data.information.communication.CommunicationPackage;
 import org.polarsys.capella.core.data.information.communication.properties.sections.CommunicationItemSection;
-import org.polarsys.capella.core.data.information.communication.properties.sections.CommunicationLinkAllocationSection;
 import org.polarsys.capella.core.data.information.communication.properties.sections.CommunicationLinkSection;
 import org.polarsys.capella.core.data.information.communication.properties.sections.SignalInstanceSection;
 import org.polarsys.capella.core.data.information.communication.properties.sections.SignalSection;
@@ -506,6 +504,7 @@ public class RegisterHelperPattern {
 	public RegisterHelperPattern() {
 		//Here is the constructor
 		// add initialisation of the pattern variables (declaration has been already done).
+
 	}
 
 	public void generate(Object argument) throws Exception {
@@ -683,8 +682,6 @@ public class RegisterHelperPattern {
 				CollectionHelper.class, CollectionItemContribution.class, CollectionSection.class);
 		HelperClassGenerator.registerHelperAndSection(CommunicationPackage.eINSTANCE.getCommunicationItem(),
 				CommunicationItemHelper.class, CommunicationItemSection.class);
-		HelperClassGenerator.registerHelperAndSection(CommunicationPackage.eINSTANCE.getCommunicationLinkAllocation(),
-				CommunicationLinkAllocationHelper.class, CommunicationLinkAllocationSection.class);
 		HelperClassGenerator.registerHelper(CommunicationPackage.eINSTANCE.getCommunicationLinkExchanger(),
 				CommunicationLinkExchangerHelper.class);
 		HelperClassGenerator.registerHelperAndSection(CommunicationPackage.eINSTANCE.getCommunicationLink(),

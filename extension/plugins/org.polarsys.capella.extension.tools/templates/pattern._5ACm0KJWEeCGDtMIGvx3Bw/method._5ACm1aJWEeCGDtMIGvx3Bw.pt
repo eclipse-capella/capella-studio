@@ -64,7 +64,6 @@
 		HelperClassGenerator.registerHelperAndSection(InformationPackage.eINSTANCE.getClass_(), ClassHelper.class, ClassItemContribution.class, ClassSection.class);
 		HelperClassGenerator.registerHelperAndSection(InformationPackage.eINSTANCE.getCollection(), CollectionHelper.class, CollectionItemContribution.class, CollectionSection.class);
 		HelperClassGenerator.registerHelperAndSection(CommunicationPackage.eINSTANCE.getCommunicationItem(), CommunicationItemHelper.class, CommunicationItemSection.class);
-		HelperClassGenerator.registerHelperAndSection(CommunicationPackage.eINSTANCE.getCommunicationLinkAllocation(), CommunicationLinkAllocationHelper.class, CommunicationLinkAllocationSection.class);
 		HelperClassGenerator.registerHelper(CommunicationPackage.eINSTANCE.getCommunicationLinkExchanger(), CommunicationLinkExchangerHelper.class);
 		HelperClassGenerator.registerHelperAndSection(CommunicationPackage.eINSTANCE.getCommunicationLink(), CommunicationLinkHelper.class, CommunicationLinkSection.class);
 		HelperClassGenerator.registerHelperAndSection(DatatypePackage.eINSTANCE.getDataType(), DataTypeHelper.class, DataTypeSection.class);

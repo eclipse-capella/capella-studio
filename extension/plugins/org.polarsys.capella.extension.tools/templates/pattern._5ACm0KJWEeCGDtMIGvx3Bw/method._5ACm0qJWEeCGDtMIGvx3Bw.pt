@@ -269,7 +269,6 @@ import org.polarsys.capella.core.data.helpers.requirement.delegates.AbstractRequ
 import org.polarsys.capella.core.data.information.InformationPackage;
 import org.polarsys.capella.core.data.information.communication.CommunicationPackage;
 import org.polarsys.capella.core.data.information.communication.properties.sections.CommunicationItemSection;
-import org.polarsys.capella.core.data.information.communication.properties.sections.CommunicationLinkAllocationSection;
 import org.polarsys.capella.core.data.information.communication.properties.sections.CommunicationLinkSection;
 import org.polarsys.capella.core.data.information.communication.properties.sections.SignalInstanceSection;
 import org.polarsys.capella.core.data.information.communication.properties.sections.SignalSection;
