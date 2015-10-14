@@ -48,7 +48,7 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 		Rectangle progressRect = StringConverter.asRectangle(progressRectString, new Rectangle(1, 10, 452, 15));
 		setProgressRect(progressRect);
 
-		Rectangle messageRect = StringConverter.asRectangle(messageRectString, new Rectangle(10, 35, 300, 15));
+		Rectangle messageRect = StringConverter.asRectangle(messageRectString, new Rectangle(10, 35, 300, 25));
 		setMessageRect(messageRect);
 
 		int foregroundColorInteger;
@@ -70,7 +70,7 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 			{
 				if ("org.polarsys.capella.core.advance.feature".equals(bundleGroups.getIdentifier()))
 					capellaVersion = bundleGroups.getVersion();
-				else if ("org.polarsys.kitalpha.runtime.feature".equals(bundleGroups.getIdentifier()))
+				else if ("org.polarsys.kitalpha.sdk.feature".equals(bundleGroups.getIdentifier()))
 					kitalphaVersion = bundleGroups.getVersion();
 			}
 		}
@@ -80,8 +80,8 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 		builder.append(studioVersion.getMicro()).append('.');
 		builder.append(studioVersion.getQualifier());
 		final String text = builder.toString();
-		final String fCapellaVersion = "Capella "+capellaVersion;
-		final String fKitalphaVersion = "Kitalpha "+kitalphaVersion;
+		final String fCapellaVersion = "Capella\t"+capellaVersion;
+		final String fKitalphaVersion = "Kitalpha\t"+kitalphaVersion;
 
 		getContent().addPaintListener(new PaintListener() {
 
@@ -95,8 +95,8 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 				e.gc.setForeground(getForeground());
 				newFont = computeFont(e, 9);
 				e.gc.setFont(newFont);
-				e.gc.drawText(fCapellaVersion, 225, 225, true);
-				e.gc.drawText(fKitalphaVersion, 225, 245, true);
+				e.gc.drawText(fCapellaVersion, 10, 255, true);
+				e.gc.drawText(fKitalphaVersion, 10, 275, true);
 				newFont.dispose();
 			}
 
