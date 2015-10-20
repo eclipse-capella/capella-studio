@@ -196,7 +196,7 @@ public class SectionJavaClass
 			+ "\tprivate EObject get";
 	protected final String TEXT_62 = "Object(EObject parent){"
 			+ NL
-			+ "\t\tif (! isViewpointActive())"
+			+ "\t\tif (! isViewpointActive(parent))"
 			+ NL
 			+ "\t\t\treturn null;"
 			+ NL
@@ -215,13 +215,22 @@ public class SectionJavaClass
 			+ NL + "\t\t\t\tif (result == null)" + NL + "\t\t\t\t\tbreak;" + NL
 			+ "\t\t\t}" + NL + "\t\t}" + NL + "\t\treturn result;" + NL + "\t}"
 			+ NL;
-	protected final String TEXT_65 = NL + "\t/**" + NL
-			+ "\t * <!-- begin-user-doc -->" + NL
-			+ "\t * <!-- end-user-doc -->" + NL
+	protected final String TEXT_65 = NL
+			+ "\t/**"
+			+ NL
+			+ "\t * <!-- begin-user-doc -->"
+			+ NL
+			+ "\t * <!-- end-user-doc -->"
+			+ NL
 			+ "\t * @return True is the AF viewpoint is active. False else. "
-			+ NL + "\t * @generated" + NL + "\t */" + NL
-			+ "\tprivate boolean isViewpointActive() {" + NL
-			+ "\t\treturn ViewpointManager.INSTANCE.isActive(\"";
+			+ NL
+			+ "\t * @generated"
+			+ NL
+			+ "\t */"
+			+ NL
+			+ "\tprivate boolean isViewpointActive(EObject modelElement) {"
+			+ NL
+			+ "\t\treturn ViewpointManager.getInstance(modelElement).isActive(\"";
 	protected final String TEXT_66 = "\");" + NL + "\t}";
 	protected final String TEXT_67 = NL
 			+ "\t/**"

@@ -26,7 +26,7 @@
 			boolean addClass = true;
 			String className = ((NamedElement)uiField.getMapping().getUI_Field_Mapped_To().eContainer()).getName();
 			for (String clazzName : classList) 
-			{
+			{ 
 				if (clazzName.equals(className))
 					addClass = false;
 			}
@@ -117,7 +117,7 @@
 	 * @generated
 	 */
 	private EObject get<%=extensionClassName%>Object(EObject parent){
-		if (! isViewpointActive())
+		if (! isViewpointActive(parent))
 			return null;
 			
 		if (parent == null || (parent != null && parent.eContents() == null))
@@ -144,7 +144,7 @@
 	 * @return True is the AF viewpoint is active. False else. 
 	 * @generated
 	 */
-	private boolean isViewpointActive() {
-		return ViewpointManager.INSTANCE.isActive("<%=afViewpointID%>");
+	private boolean isViewpointActive(EObject modelElement) {
+		return ViewpointManager.getInstance(modelElement).isActive("<%=afViewpointID%>");
 	}
 <%}%>
