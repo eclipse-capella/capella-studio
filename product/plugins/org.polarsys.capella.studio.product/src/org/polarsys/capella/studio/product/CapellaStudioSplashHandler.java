@@ -69,9 +69,9 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 			for (IBundleGroup bundleGroups : bundleGroupProvider.getBundleGroups())
 			{
 				if ("org.polarsys.capella.core.advance.feature".equals(bundleGroups.getIdentifier()))
-					capellaVersion = bundleGroups.getVersion();
+					capellaVersion = trunkQualifier(bundleGroups.getVersion());
 				else if ("org.polarsys.kitalpha.sdk.feature".equals(bundleGroups.getIdentifier()))
-					kitalphaVersion = bundleGroups.getVersion();
+					kitalphaVersion = trunkQualifier(bundleGroups.getVersion());
 			}
 		}
 		StringBuilder builder = new StringBuilder();
@@ -80,8 +80,8 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 		builder.append(studioVersion.getMicro()).append('.');
 		builder.append(studioVersion.getQualifier());
 		final String text = builder.toString();
-		final String fCapellaVersion = "Capella\t"+capellaVersion;
-		final String fKitalphaVersion = "Kitalpha\t"+kitalphaVersion;
+		final String fCapellaVersion =  "Capella  "+capellaVersion;
+		final String fKitalphaVersion = "Kitalpha "+kitalphaVersion;
 
 		getContent().addPaintListener(new PaintListener() {
 
@@ -108,6 +108,12 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 				return newFont;
 			}
 		});
+	}
+	private String trunkQualifier(String version) {
+		int index = version.lastIndexOf('.');
+		if (index < 0)
+		return version;
+		return version.substring(0, index);
 	}
 
 }
