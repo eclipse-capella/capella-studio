@@ -16,9 +16,9 @@
     <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="${eclipse.download.prefix}/diffmerge/releases/0.4.2/edm-patterns-site"/>
     <properties xmi:id="_7UOncM1xEeSFroBhAlzk1g" key="query.legacy.repo.url" value="${eclipse.download.prefix}/sirius/updates/legacy/1.1.0/"/>
     <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_Nightly-v0.5.x/218/artifact/result/publish/kitalpha/site.p2/"/>
-    <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/job/capella-v0.8.x/lastSuccessfulBuild/artifact/result/publish/org.polarsys.capella/site.p2/"/>
-    <properties xmi:id="_rstsgNMCEeSCstxmhDJ57A" key="capella.egf.repo.url" value="https://hudson.polarsys.org/capella/job/capella-v0.8.x/173/artifact/result/publish/org.polarsys.capella.core.egf.feature/site.p2"/>
-    <properties xmi:id="_-jrxkA9SEeW7CM9Somx7YA" key="docgen.addon.url" value="https://hudson.polarsys.org/capella/view/Capella%20Add-ons/job/capella-addon-docgen-v0.8.x/110/artifact/result/publish/CapellaXHTMLDocGen-updateSite-0.8.2.2015-06-29_10-02-02-incubation.zip"/>
+    <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/job/capella-v0.8.x/218/artifact/result/publish/org.polarsys.capella/site.p2/"/>
+    <properties xmi:id="_rstsgNMCEeSCstxmhDJ57A" key="capella.egf.repo.url" value="https://hudson.polarsys.org/capella/job/capella-v0.8.x/218/artifact/result/publish/org.polarsys.capella.core.egf.feature/site.p2"/>
+    <properties xmi:id="_-jrxkA9SEeW7CM9Somx7YA" key="docgen.addon.url" value="https://hudson.polarsys.org/capella/job/capella-addon-docgen-v0.8.x/121/artifact/result/publish/CapellaXHTMLDocGen-updateSite-0.8.3.2015-10-14_13-49-55-incubation.zip"/>
   </propertyPackages>
   <propertyPackages xmi:id="_vtRuAI5EEeOQ8YcnVfa6Wg" name="versions">
     <properties xmi:id="_SowkIEhiEeOxuMV9a71i9w" key="eclipse_version" value="juno"/>
