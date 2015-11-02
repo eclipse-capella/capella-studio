@@ -1,4 +1,4 @@
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.3.0.v20150924-1035
 package org.polarsys.capella.extension.genchain.patterns;
 
 import java.util.HashMap;
@@ -36,15 +36,14 @@ import org.eclipse.search.ui.text.FileTextSearchScope;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.Version;
 import org.polarsys.kitalpha.emde.genchain.utils.GenRuntimeVersionHelper;
-
 import org.polarsys.kitalpha.emde.genchain.utils.EmdeEcoreImporterHelper;
+import org.polarsys.kitalpha.emde.genchain.utils.GenmodelLocator;
 
 public class CapellaGenmodelPattern {
 
 	public CapellaGenmodelPattern() {
 		//Here is the constructor
 		// add initialisation of the pattern variables (declaration has been already done).
-
 	}
 
 	public void generate(Object argument) throws Exception {
@@ -66,8 +65,7 @@ public class CapellaGenmodelPattern {
 			}
 		}
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 	}
 
@@ -83,82 +81,52 @@ public class CapellaGenmodelPattern {
 			parameterValues.put("parameter", this.parameter);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
 
-	protected void method_create(final StringBuffer out,
-			final PatternContext ctx) throws Exception {
+	protected void method_create(final StringBuffer out, final PatternContext ctx) throws Exception {
 		IPath ecorePath = new Path(parameter.getModelPath());
-		URI ecoreURI = URI.createPlatformResourceURI(ecorePath.toString(),
-				false);
 
-		String fileName = ecorePath.removeFileExtension()
-				.addFileExtension("genmodel").lastSegment();
+		IFile file = GenmodelLocator.lookup(ecorePath);
 
-		// look up in the workspace
-		TextSearchScope fScope = FileTextSearchScope.newWorkspaceScope(
-				new String[] { fileName }, false);
-		final ObjectHolder<IFile> genModelFile = new ObjectHolder<IFile>();
-		TextSearchRequestor collector = new TextSearchRequestor() {
-			@Override
-			public boolean acceptFile(IFile file) throws CoreException {
-				genModelFile.object = file;
-				return super.acceptFile(file);
-			}
-		};
-		Pattern searchPattern = Pattern.compile("");
-		TextSearchEngine.create()
-				.search(fScope, collector, searchPattern, null);
-
-		if (genModelFile.object == null) {
+		if (file == null) {
 			ResourceSet resourceSet = new TargetPlatformResourceSet();
 			Resource resource = null;
-			IPath genmodelPath = ecorePath.removeFileExtension()
-					.addFileExtension("genmodel");
-			genmodelPath = new Path(parameter.getPluginName())
-					.append(genmodelPath.removeFirstSegments(1));
-			URI genmodelURI = URI.createPlatformPluginURI(
-					genmodelPath.toString(), false);
+			IPath genmodelPath = ecorePath.removeFileExtension().addFileExtension("genmodel");
+			genmodelPath = new Path(parameter.getPluginName()).append(genmodelPath.removeFirstSegments(1));
+			URI genmodelURI = URI.createPlatformPluginURI(genmodelPath.toString(), false);
 
 			try {
 				// see if a created genmodel exists
 				resource = resourceSet.getResource(genmodelURI, true);
 			} catch (Exception e1) {
 				// create it
-				IProject project = ResourcesPlugin.getWorkspace().getRoot()
-						.getProject(parameter.getPluginName());
+				IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(parameter.getPluginName());
 				if (!project.exists())
 					project.create(null);
 				if (!project.isOpen())
 					project.open(null);
 
-				importer = EmdeEcoreImporterHelper
-						.createEcoreImporter(
-								genmodelPath.removeLastSegments(1), ecoreURI,
-								parameter);
+				URI ecoreURI = URI.createPlatformResourceURI(ecorePath.toString(), false);
+				importer = EmdeEcoreImporterHelper.createEcoreImporter(genmodelPath.removeLastSegments(1), ecoreURI,
+						parameter);
 			}
-			genmodelURI = URI.createPlatformResourceURI(
-					genmodelPath.toString(), false);
-			((HashMap<String, URI>) ctx
-					.getValue(FcoreBuilderConstants.GENMODEL_URIS)).put(
-					parameter.getModelPath(), genmodelURI);
+			genmodelURI = URI.createPlatformResourceURI(genmodelPath.toString(), false);
+			((HashMap<String, URI>) ctx.getValue(FcoreBuilderConstants.GENMODEL_URIS)).put(parameter.getModelPath(),
+					genmodelURI);
 		} else {
-			URI uri = URI.createPlatformResourceURI(genModelFile.object
-					.getFullPath().toString(), false);
-			((HashMap<String, URI>) ctx
-					.getValue(FcoreBuilderConstants.GENMODEL_URIS)).put(
-					parameter.getModelPath(), uri);
+			URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), false);
+			((HashMap<String, URI>) ctx.getValue(FcoreBuilderConstants.GENMODEL_URIS)).put(parameter.getModelPath(),
+					uri);
 		}
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
 		new Node.DataLeaf(ictx.getNode(), getClass(), "create", out.toString());
 	}
 
-	protected void method_save(final StringBuffer out, final PatternContext ctx)
-			throws Exception {
+	protected void method_save(final StringBuffer out, final PatternContext ctx) throws Exception {
 		if (importer != null)
 			importer.saveGenModelAndEPackages(new BasicMonitor());
 
@@ -166,15 +134,13 @@ public class CapellaGenmodelPattern {
 		new Node.DataLeaf(ictx.getNode(), getClass(), "save", out.toString());
 	}
 
-	protected void method_updateContent(final StringBuffer out,
-			final PatternContext ctx) throws Exception {
+	protected void method_updateContent(final StringBuffer out, final PatternContext ctx) throws Exception {
 		if (importer == null)
 			return;
 		GenModel genModel = importer.getGenModel();
 		String emfModelPath = parameter.getModelPath();
 		for (GenPackage genPackage : genModel.getGenPackages()) {
-			String ecoreFileName = genPackage.getEcorePackage().eResource()
-					.getURI().lastSegment();
+			String ecoreFileName = genPackage.getEcorePackage().eResource().getURI().lastSegment();
 			if (emfModelPath.contains(ecoreFileName)) {
 				genPackage.setBasePackage(parameter.getBasePackage());
 			}
@@ -197,8 +163,7 @@ public class CapellaGenmodelPattern {
 		// EMDE Extension Genmodel
 		genModel.setNonNLSMarkers(true);
 		Bundle bundle = Platform.getBundle("org.eclipse.egf.emf.pattern");
-		genModel.setRuntimeVersion(GenRuntimeVersionHelper.getVersion(bundle
-				.getVersion()));
+		genModel.setRuntimeVersion(GenRuntimeVersionHelper.getVersion(bundle.getVersion()));
 		genModel.setRootExtendsClass("org.eclipse.emf.ecore.impl.EObjectImpl");
 		genModel.setCodeFormatting(true);
 		genModel.setOptimizedHasChildren(true);
@@ -208,8 +173,7 @@ public class CapellaGenmodelPattern {
 		// EMDE Extension Genmodel
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "updateContent",
-				out.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "updateContent", out.toString());
 	}
 
 	public boolean preCondition(PatternContext ctx) throws Exception {
@@ -218,15 +182,13 @@ public class CapellaGenmodelPattern {
 
 	protected org.polarsys.capella.extension.genchain.capellaextension.CapellaEmfGeneration parameter;
 
-	public void set_parameter(
-			org.polarsys.capella.extension.genchain.capellaextension.CapellaEmfGeneration parameter) {
+	public void set_parameter(org.polarsys.capella.extension.genchain.capellaextension.CapellaEmfGeneration parameter) {
 		this.parameter = parameter;
 	}
 
 	protected org.eclipse.emf.importer.ecore.EcoreImporter importer;
 
-	public void set_importer(
-			org.eclipse.emf.importer.ecore.EcoreImporter importer) {
+	public void set_importer(org.eclipse.emf.importer.ecore.EcoreImporter importer) {
 		this.importer = importer;
 	}
 

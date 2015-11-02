@@ -1,22 +1,8 @@
 		IPath ecorePath = new Path(parameter.getModelPath());
-		URI ecoreURI = URI.createPlatformResourceURI(ecorePath.toString(), false);
-
-		String fileName = ecorePath.removeFileExtension().addFileExtension("genmodel").lastSegment();
-
-		// look up in the workspace
-		TextSearchScope fScope = FileTextSearchScope.newWorkspaceScope(new String[] { fileName }, false);
-		final ObjectHolder<IFile> genModelFile = new ObjectHolder<IFile>();
-		TextSearchRequestor collector = new TextSearchRequestor() {
-			@Override
-			public boolean acceptFile(IFile file) throws CoreException {
-				genModelFile.object = file;
-				return super.acceptFile(file);
-			}
-		};
-		Pattern searchPattern = Pattern.compile("");
-		TextSearchEngine.create().search(fScope, collector, searchPattern, null);
-
-		if (genModelFile.object == null) {
+		
+		IFile file = GenmodelLocator.lookup(ecorePath);
+		
+		if (file == null) {
 			ResourceSet resourceSet = new TargetPlatformResourceSet();
 			Resource resource = null;
 			IPath genmodelPath = ecorePath.removeFileExtension().addFileExtension("genmodel");
@@ -34,11 +20,12 @@
 				if (!project.isOpen())
 					project.open(null);
 
+				URI ecoreURI = URI.createPlatformResourceURI(ecorePath.toString(), false);
 				importer = EmdeEcoreImporterHelper.createEcoreImporter(genmodelPath.removeLastSegments(1), ecoreURI, parameter);
 			}
 			genmodelURI = URI.createPlatformResourceURI(genmodelPath.toString(), false);
 			((HashMap<String, URI>) ctx.getValue(FcoreBuilderConstants.GENMODEL_URIS)).put(parameter.getModelPath(), genmodelURI);
 		} else {
-			URI uri = URI.createPlatformResourceURI(genModelFile.object.getFullPath().toString(), false);
+			URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), false);
 			((HashMap<String, URI>) ctx.getValue(FcoreBuilderConstants.GENMODEL_URIS)).put(parameter.getModelPath(), uri);
 		}

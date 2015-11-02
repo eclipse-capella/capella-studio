@@ -35,8 +35,8 @@ import org.eclipse.search.ui.text.FileTextSearchScope;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.Version;
 import org.polarsys.kitalpha.emde.genchain.utils.GenRuntimeVersionHelper;
-
 import org.polarsys.kitalpha.emde.genchain.utils.EmdeEcoreImporterHelper;
+import org.polarsys.kitalpha.emde.genchain.utils.GenmodelLocator;
 
 public class CLASS {
 
