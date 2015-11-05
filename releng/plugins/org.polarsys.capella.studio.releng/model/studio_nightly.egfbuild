@@ -5,7 +5,7 @@
     <properties xmi:id="_MWwdkPlvEeCFCIE_fWd_VQ" key="cloudsmith.download.prefix" value="http://download.eclipse.org/external/"/>
     <properties xmi:id="_MlqcQPlvEeCFCIE_fWd_VQ" key="polarion.download.prefix" value="http://download.eclipse.org/external/"/>
     <properties xmi:id="_LPrgwPlvEeCFCIE_fWd_VQ" key="eclipse.download.prefix" value="http://download.eclipse.org/"/>
-    <properties xmi:id="_7e-7UI5hEeOQ8YcnVfa6Wg" key="sirius.repo.url" value="http://download.eclipse.org/sirius/updates/releases/3.1.0/mars"/>
+    <properties xmi:id="_7e-7UI5hEeOQ8YcnVfa6Wg" key="sirius.repo.url" value="http://download.eclipse.org/sirius/updates/stable/3.1.2-S20151103-034241/mars"/>
     <properties xmi:id="_n0G4oJPyEeODqo9Nw0Mw6Q" key="orbit.repo.url" value="${eclipse.download.prefix}/tools/orbit/downloads/drops/R20130827064939/repository/"/>
     <properties xmi:id="_eRQHEZk8EeOez_jbx14D1w" key="eclipse38.download" value="http://download.eclipse.org/releases/mars"/>
     <properties xmi:id="_gReNwM1bEeSQpbp6WoTKiQ" key="eclipse38.download.prefix" value="${eclipse38.download}"/>
