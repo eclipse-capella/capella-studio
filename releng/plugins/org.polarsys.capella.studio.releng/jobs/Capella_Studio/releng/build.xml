@@ -867,7 +867,9 @@ eclipse.p2.data.area=@config.dir/../p2/
 
 
                 <arg value="-i" />
-                <arg value="org.eclipse.sdk.feature.group" />                
+                <arg value="org.eclipse.sdk.feature.group" />
+                <arg value="-i" />
+                <arg value="org.eclipse.egit.feature.group" />                
 
                 <arg value="-i" />
                 <arg value="org.eclipse.sdk.ide" />
@@ -1119,9 +1121,15 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="-i" />
                 <arg value="org.eclipse.amalgam.explorer.activity.feature.group" />
                 <arg value="-i" />
+                <arg value="org.eclipse.amalgam.explorer.activity.source.feature.group" />
+                <arg value="-i" />
                 <arg value="org.eclipse.amalgam.explorer.contextual.feature.group" />
                 <arg value="-i" />
-                <arg value="org.eclipse.amalgam.explorer.contextual.sirius.feature.group" />                
+                <arg value="org.eclipse.amalgam.explorer.contextual.source.feature.group" />
+                <arg value="-i" />
+                <arg value="org.eclipse.amalgam.explorer.contextual.sirius.feature.group" />
+                <arg value="-i" />
+                <arg value="org.eclipse.amalgam.explorer.contextual.sirius.source.feature.group" />                
 
 
 
@@ -1731,7 +1739,9 @@ eclipse.p2.data.area=@config.dir/../p2/
 
 
                 <arg value="-i" />
-                <arg value="org.eclipse.sdk.feature.group" />                
+                <arg value="org.eclipse.sdk.feature.group" />
+                <arg value="-i" />
+                <arg value="org.eclipse.egit.feature.group" />                
 
                 <arg value="-i" />
                 <arg value="org.eclipse.sdk.ide" />
@@ -1983,9 +1993,15 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="-i" />
                 <arg value="org.eclipse.amalgam.explorer.activity.feature.group" />
                 <arg value="-i" />
+                <arg value="org.eclipse.amalgam.explorer.activity.source.feature.group" />
+                <arg value="-i" />
                 <arg value="org.eclipse.amalgam.explorer.contextual.feature.group" />
                 <arg value="-i" />
-                <arg value="org.eclipse.amalgam.explorer.contextual.sirius.feature.group" />                
+                <arg value="org.eclipse.amalgam.explorer.contextual.source.feature.group" />
+                <arg value="-i" />
+                <arg value="org.eclipse.amalgam.explorer.contextual.sirius.feature.group" />
+                <arg value="-i" />
+                <arg value="org.eclipse.amalgam.explorer.contextual.sirius.source.feature.group" />                
 
 
 
@@ -2431,7 +2447,9 @@ eclipse.p2.data.area=@config.dir/../p2/
 
 
                 <arg value="-i" />
-                <arg value="org.eclipse.sdk.feature.group" />                
+                <arg value="org.eclipse.sdk.feature.group" />
+                <arg value="-i" />
+                <arg value="org.eclipse.egit.feature.group" />                
 
                 <arg value="-i" />
                 <arg value="org.eclipse.sdk.ide" />
@@ -2683,9 +2701,15 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="-i" />
                 <arg value="org.eclipse.amalgam.explorer.activity.feature.group" />
                 <arg value="-i" />
+                <arg value="org.eclipse.amalgam.explorer.activity.source.feature.group" />
+                <arg value="-i" />
                 <arg value="org.eclipse.amalgam.explorer.contextual.feature.group" />
                 <arg value="-i" />
-                <arg value="org.eclipse.amalgam.explorer.contextual.sirius.feature.group" />                
+                <arg value="org.eclipse.amalgam.explorer.contextual.source.feature.group" />
+                <arg value="-i" />
+                <arg value="org.eclipse.amalgam.explorer.contextual.sirius.feature.group" />
+                <arg value="-i" />
+                <arg value="org.eclipse.amalgam.explorer.contextual.sirius.source.feature.group" />                
 
 
 
