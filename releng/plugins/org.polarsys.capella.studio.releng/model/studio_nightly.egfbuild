@@ -15,8 +15,8 @@
     <properties xmi:id="_BukoEVkbEeSo0vu-C-A3cw" key="diffmerge.repo.url" value="${eclipse.download.prefix}/diffmerge/releases/0.5.1/emf-diffmerge-site"/>
     <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="${eclipse.download.prefix}/diffmerge/releases/0.5.1/edm-patterns-site"/>
     <properties xmi:id="_7UOncM1xEeSFroBhAlzk1g" key="query.legacy.repo.url" value="http://download.eclipse.org/sirius/updates/legacy/1.1.0/"/>
-    <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalphaCTK.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_CTK/lastSuccessfulBuild/artifact/result/publish/kitalpha_ctk/site.p2/"/>
-    <properties xmi:id="_FinS8DQ8EeWzhdVFzhPIIQ" key="kitalphaSDK.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_SDK/lastSuccessfulBuild/artifact/result/publish/kitalpha_sdk/site.p2/"/>
+    <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha_runtime.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_runtime/lastSuccessfulBuild/artifact/result/publish/kitalpha_runtime/site.p2/"/>
+    <properties xmi:id="_FinS8DQ8EeWzhdVFzhPIIQ" key="kitalpha_sdk.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_SDK/lastSuccessfulBuild/artifact/result/publish/kitalpha_sdk/site.p2/"/>
     <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/job/capella-master-experimental/lastSuccessfulBuild/artifact/result/publish/org.polarsys.capella/site.p2/"/>
     <properties xmi:id="_rstsgNMCEeSCstxmhDJ57A" key="capella.egf.repo.url" value="https://hudson.polarsys.org/capella/job/capella-master-experimental/lastSuccessfulBuild/artifact/result/publish/org.polarsys.capella.core.egf.feature/site.p2/"/>
     <properties xmi:id="_-jrxkA9SEeW7CM9Somx7YA" key="docgen.addon.location" value="https://hudson.polarsys.org/capella/job/capella-addon-docgen-master/lastSuccessfulBuild"/>
@@ -51,7 +51,7 @@
         <featureNames>org.eclipse.egf.sdk</featureNames>
       </steps>
       <steps xsi:type="buildstep:InstallStep" xmi:id="_Cvf30e1_EeSrPuKJgj8pcA" name="install kitalpha releng TP_build" id="TP_build" profile="SDKProfile" p2_os="" p2_ws="" p2_arch="">
-        <updateSiteUrls>${kitalphaCTK.repo.url}</updateSiteUrls>
+        <updateSiteUrls>${kitalpha_runtime.repo.url}</updateSiteUrls>
         <featureNames>org.polarsys.kitalpha.releng.feature</featureNames>
       </steps>
     </steps>
