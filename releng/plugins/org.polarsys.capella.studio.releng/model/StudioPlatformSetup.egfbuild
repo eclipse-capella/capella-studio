@@ -52,10 +52,6 @@
       <featureNames>org.polarsys.capella.core.dashboard.source.feature</featureNames>
       <featureNames>org.polarsys.capella.core.data.merged.feature</featureNames>
       <featureNames>org.polarsys.capella.core.data.merged.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.doc.developer.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.doc.developer.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.doc.user.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.doc.user.source.feature</featureNames>
       <featureNames>org.polarsys.capella.core.libraries.feature</featureNames>
       <featureNames>org.polarsys.capella.core.libraries.source.feature</featureNames>
       <featureNames>org.polarsys.capella.core.properties.feature</featureNames>
@@ -84,6 +80,7 @@
       <featureNames>org.polarsys.capella.patterns.feature</featureNames>
       <featureNames>org.polarsys.capella.detachment.version.precondition.feature</featureNames>
       <featureNames>org.polarsys.capella.detachment.version.precondition.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.doc.feature</featureNames>
     </steps>
     <steps xsi:type="buildstep:InstallStep" xmi:id="_w1HJsNMCEeSCstxmhDJ57A" name="install capella egf features" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
       <updateSiteUrls>${capella.egf.repo.url}</updateSiteUrls>

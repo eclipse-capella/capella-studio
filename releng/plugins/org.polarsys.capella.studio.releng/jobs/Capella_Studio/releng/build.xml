@@ -1351,14 +1351,6 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="-i" />
                 <arg value="org.polarsys.capella.core.data.merged.source.feature.feature.group" />
                 <arg value="-i" />
-                <arg value="org.polarsys.capella.core.doc.developer.feature.feature.group" />
-                <arg value="-i" />
-                <arg value="org.polarsys.capella.core.doc.developer.source.feature.feature.group" />
-                <arg value="-i" />
-                <arg value="org.polarsys.capella.core.doc.user.feature.feature.group" />
-                <arg value="-i" />
-                <arg value="org.polarsys.capella.core.doc.user.source.feature.feature.group" />
-                <arg value="-i" />
                 <arg value="org.polarsys.capella.core.libraries.feature.feature.group" />
                 <arg value="-i" />
                 <arg value="org.polarsys.capella.core.libraries.source.feature.feature.group" />
@@ -1413,7 +1405,9 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="-i" />
                 <arg value="org.polarsys.capella.detachment.version.precondition.feature.feature.group" />
                 <arg value="-i" />
-                <arg value="org.polarsys.capella.detachment.version.precondition.source.feature.feature.group" />                
+                <arg value="org.polarsys.capella.detachment.version.precondition.source.feature.feature.group" />
+                <arg value="-i" />
+                <arg value="org.polarsys.capella.doc.feature.feature.group" />                
 
 
 
@@ -2223,14 +2217,6 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="-i" />
                 <arg value="org.polarsys.capella.core.data.merged.source.feature.feature.group" />
                 <arg value="-i" />
-                <arg value="org.polarsys.capella.core.doc.developer.feature.feature.group" />
-                <arg value="-i" />
-                <arg value="org.polarsys.capella.core.doc.developer.source.feature.feature.group" />
-                <arg value="-i" />
-                <arg value="org.polarsys.capella.core.doc.user.feature.feature.group" />
-                <arg value="-i" />
-                <arg value="org.polarsys.capella.core.doc.user.source.feature.feature.group" />
-                <arg value="-i" />
                 <arg value="org.polarsys.capella.core.libraries.feature.feature.group" />
                 <arg value="-i" />
                 <arg value="org.polarsys.capella.core.libraries.source.feature.feature.group" />
@@ -2285,7 +2271,9 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="-i" />
                 <arg value="org.polarsys.capella.detachment.version.precondition.feature.feature.group" />
                 <arg value="-i" />
-                <arg value="org.polarsys.capella.detachment.version.precondition.source.feature.feature.group" />                
+                <arg value="org.polarsys.capella.detachment.version.precondition.source.feature.feature.group" />
+                <arg value="-i" />
+                <arg value="org.polarsys.capella.doc.feature.feature.group" />                
 
 
 
@@ -2931,14 +2919,6 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="-i" />
                 <arg value="org.polarsys.capella.core.data.merged.source.feature.feature.group" />
                 <arg value="-i" />
-                <arg value="org.polarsys.capella.core.doc.developer.feature.feature.group" />
-                <arg value="-i" />
-                <arg value="org.polarsys.capella.core.doc.developer.source.feature.feature.group" />
-                <arg value="-i" />
-                <arg value="org.polarsys.capella.core.doc.user.feature.feature.group" />
-                <arg value="-i" />
-                <arg value="org.polarsys.capella.core.doc.user.source.feature.feature.group" />
-                <arg value="-i" />
                 <arg value="org.polarsys.capella.core.libraries.feature.feature.group" />
                 <arg value="-i" />
                 <arg value="org.polarsys.capella.core.libraries.source.feature.feature.group" />
@@ -2993,7 +2973,9 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="-i" />
                 <arg value="org.polarsys.capella.detachment.version.precondition.feature.feature.group" />
                 <arg value="-i" />
-                <arg value="org.polarsys.capella.detachment.version.precondition.source.feature.feature.group" />                
+                <arg value="org.polarsys.capella.detachment.version.precondition.source.feature.feature.group" />
+                <arg value="-i" />
+                <arg value="org.polarsys.capella.doc.feature.feature.group" />                
 
 
 
