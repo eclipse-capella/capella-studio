@@ -1069,8 +1069,6 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="${sirius.repo.url}" />
                 <arg value="-r" />
                 <arg value="${orbit.repo.url}" />
-                <arg value="-r" />
-                <arg value="${eclipse.download.prefix}/releases/${eclipse_version}" />
 
 
                 <arg value="-i" />
@@ -1935,8 +1933,6 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="${sirius.repo.url}" />
                 <arg value="-r" />
                 <arg value="${orbit.repo.url}" />
-                <arg value="-r" />
-                <arg value="${eclipse.download.prefix}/releases/${eclipse_version}" />
 
 
                 <arg value="-i" />
@@ -2637,8 +2633,6 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="${sirius.repo.url}" />
                 <arg value="-r" />
                 <arg value="${orbit.repo.url}" />
-                <arg value="-r" />
-                <arg value="${eclipse.download.prefix}/releases/${eclipse_version}" />
 
 
                 <arg value="-i" />
@@ -3339,8 +3333,6 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="${sirius.repo.url}" />
                 <arg value="-r" />
                 <arg value="${orbit.repo.url}" />
-                <arg value="-r" />
-                <arg value="${eclipse.download.prefix}/releases/${eclipse_version}" />
 
 
                 <arg value="-i" />
@@ -4041,8 +4033,6 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="${sirius.repo.url}" />
                 <arg value="-r" />
                 <arg value="${orbit.repo.url}" />
-                <arg value="-r" />
-                <arg value="${eclipse.download.prefix}/releases/${eclipse_version}" />
 
 
                 <arg value="-i" />
@@ -4743,8 +4733,6 @@ eclipse.p2.data.area=@config.dir/../p2/
                 <arg value="${sirius.repo.url}" />
                 <arg value="-r" />
                 <arg value="${orbit.repo.url}" />
-                <arg value="-r" />
-                <arg value="${eclipse.download.prefix}/releases/${eclipse_version}" />
 
 
                 <arg value="-i" />
