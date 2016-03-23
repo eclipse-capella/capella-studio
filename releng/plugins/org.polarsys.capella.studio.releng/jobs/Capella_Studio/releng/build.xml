@@ -868,6 +868,8 @@ eclipse.p2.data.area=@config.dir/../p2/
 
                 <arg value="-i" />
                 <arg value="org.eclipse.sdk.feature.group" />                
+                <arg value="-i" />
+                <arg value="org.eclipse.egit.feature.group" />                
 
                 <arg value="-i" />
                 <arg value="org.eclipse.sdk.ide" />
@@ -1724,6 +1726,8 @@ eclipse.p2.data.area=@config.dir/../p2/
 
                 <arg value="-i" />
                 <arg value="org.eclipse.sdk.feature.group" />                
+                <arg value="-i" />
+                <arg value="org.eclipse.egit.feature.group" />                
 
                 <arg value="-i" />
                 <arg value="org.eclipse.sdk.ide" />
@@ -2416,6 +2420,8 @@ eclipse.p2.data.area=@config.dir/../p2/
 
                 <arg value="-i" />
                 <arg value="org.eclipse.sdk.feature.group" />                
+                <arg value="-i" />
+                <arg value="org.eclipse.egit.feature.group" />                
 
                 <arg value="-i" />
                 <arg value="org.eclipse.sdk.ide" />
