@@ -1,0 +1,47 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _nGk20J0AEeWgmKoQjPKcMA,_YDG0MKAMEeWTy5kdXs0erQ,_u4Of4KAOEeWTy5kdXs0erQ
+Element-Name: Aspect - UI
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _BtDVQJz4EeWgmKoQjPKcMA
+Runtime-Version: 2.0.1.201508250612
+Save-Time: 12/11/15 2:56 PM
+Testcase-Type: ecl
+Verifications: _xe8uEJkJEeW9roo66l64HA,_QATpIJ2gEeWgmKoQjPKcMA
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Project Explorer" | get-tree
+    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.spec.vptext" 
+    | get-menu "Open With/Vptext Specification Editor" | click
+    
+with [get-editor "QualityAssessment.spec.vptext" | get-text-viewer] {
+    set-caret-pos 11 32
+    key-type Enter
+    key-type "M1+SPACE"
+}
+
+get-window -from "CompletionProposalPopup.createProposalSelector()" | get-table | select "UI - New User Interface" 
+    | click -default
+get-window "Viewpoint UI File Creation Wizard" | get-button Finish | click
+with [get-editor "QualityAssessment.ui.vptext" | get-text-viewer] {
+    set-caret-pos 10 5
+    key-type "M1+SPACE"
+}
+get-window -from "CompletionProposalPopup.createProposalSelector()" | get-table 
+    | select "UI - Generate User Interface for all classes" | click -default
+with [get-editor "QualityAssessment.ui.vptext" | get-text-viewer] {
+    key-type "M1+M2+f"
+    key-type "M1+s"
+}
+//get-tab-folder -index 2 | get-tab-item "*QualityAssessment.spec.vptext" | click
+//get-button "Save (M1+S)" | click
+get-button "Save All (M1+M2+S)" | click
+
+get-view "Project Explorer" | get-tree 
+    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.vpdesc" | double-click
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

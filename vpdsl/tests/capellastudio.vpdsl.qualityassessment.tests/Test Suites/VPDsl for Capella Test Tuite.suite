@@ -1,0 +1,22 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: VPDsl for Capella Test Tuite
+Element-Type: testsuite
+Element-Version: 2.0
+Id: _XeTeYJkDEeW9rYo66l64HA
+Runtime-Version: 2.0.1.201508250612
+Save-Time: 12/14/15 3:12 PM
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
+Content-Type: text/testcase
+Entry-Name: testcase-items
+
+_sBBM8JjhEeW9rYo66l64HA	// kind: 'test' name: 'Aspect - Data' path: '../Test Cases/Aspects/Aspect - Data.test'
+_6BizIJ2cEeWgmKoQjPKcMA	// kind: 'test' name: 'Aspect - Releng' path: '../Test Cases/Aspects/Aspect - Releng.test'
+_vOFfUJ2WEeWgmKoQjPKcMA	// kind: 'test' name: 'Aspect - Diagram' path: '../Test Cases/Aspects/Aspect - Diagram.test'
+_nKc4sJ2ZEeWgmKoQjPKcMA	// kind: 'test' name: 'Aspect - Service' path: '../Test Cases/Aspects/Aspect - Service.test'
+_BtDVQJz4EeWgmKoQjPKcMA	// kind: 'test' name: 'Aspect - UI' path: '../Test Cases/Aspects/Aspect - UI.test'
+_FqJDkJjfEeW9rYo66l64HA	// kind: 'test' name: 'New Project creation' path: '../Test Cases/Project/New Project creation.test'
+_i8QSwJjfEeW9rYo66l64HA	// kind: 'test' name: 'Viewpoint Generation and Packaging' path: '../Test Cases/Generation/Viewpoint Generation and Packaging.test'
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--

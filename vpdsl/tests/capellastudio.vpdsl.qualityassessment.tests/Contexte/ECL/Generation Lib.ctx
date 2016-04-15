@@ -1,0 +1,96 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.ecl
+Element-Name: Generation Lib
+Element-Type: context
+Element-Version: 2.0
+Id: _KOH-MKJ5EeWqlNQu-Q0L2A
+Runtime-Version: 2.0.1.201508250612
+Save-Time: 12/18/15 10:50 AM
+
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
+Content-Type: text/ecl
+Entry-Name: .ecl.context
+
+/** Get the system temporary folder **/
+proc "getTempFolder" {
+	concat "file:/" [ get-file [ get-java-property "java.io.tmpdir"] 
+						| get uri 
+						| invoke replace "\\" "/" 
+						| invoke replace " " "%20" 
+					]
+}
+
+/** Get the today date with the given format **/
+proc "getDate" [val format "yyyyMMdd"] {
+	get-time | format-time -format $format
+}
+
+/** Parse a folder and look for a given folder/file **/
+/** The action values are: 1= Check existence; 2= Delete; 3- echo full name; 4- echo full path. **/
+proc "lookForDropinsFolder" [val contextFolderPath] [val parentFilter] [val folderFilter] [val action 1]{
+	get-file [ $contextFolderPath ] | get children | foreach [val item] {
+	   if [$item | get name | contains [ $parentFilter ] ]
+	   {
+	   		get-file [$item | get uri] | get children | foreach [val sitem] 
+	   		{
+	   			if [ $sitem | get name | contains [ $folderFilter ] ]
+	   			{
+	   				$action | switch 
+		   						[case 1 {
+									echo "Found"
+								}] 
+								[case 2 {
+									$item | get uri | delete-file
+								}] 
+								[case 3 {
+									$sitem | get name | echo
+								}] 
+								[case 4 {
+									$sitem | get uri | echo
+								}]
+	   			}
+			}
+	   }
+	}        
+}
+
+// Prepare model to validation
+proc "OpenModel" [val fileFQN] [val fileName]{
+	// 1- Close the current editor if it is open
+	try -catch {} -command {
+		get-editor $fileName | close
+	}
+	
+	// 2- Open the editor
+	try -command {
+		get-view "Project Explorer" | get-tree | select $fileFQN | double-click 
+		get-editor $fileName | get-tree | emit
+	}
+}
+
+// Prepare model to validation
+proc "OpenAndValidateModel" [val fileFQN] [val fileName] [val selection ""]{
+	// 1- Close the current editor if it is open
+	try -catch {} -command {
+		get-editor $fileName | close
+	}
+	
+	// 2- Open the editor
+	try -command {
+		get-view "Project Explorer" | get-tree | select $fileFQN | double-click 
+		if [ $selection | not-eq ""]{
+			get-editor $fileName| get-tree | get-item $selection | click
+		}
+		
+		with [get-editor $fileName | get-tree] {
+			get-menu Validate | click
+		}
+		get-window "Validation Information" | get-button OK | click
+	}
+	-catch {
+		//log ["Your model " $fileFQN " is NOT VALID"]
+		get-window "Validation Problems" | get-button OK | click
+	}
+}
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998--

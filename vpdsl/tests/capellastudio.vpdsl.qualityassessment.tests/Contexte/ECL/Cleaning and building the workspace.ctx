@@ -1,0 +1,20 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.ecl
+Element-Name: Cleaning and building the workspace
+Element-Type: context
+Element-Version: 2.0
+Id: _u4Of4KAOEeWTy5kdXs0erQ
+Runtime-Version: 2.0.1.201508250612
+Save-Time: 12/11/15 3:26 PM
+
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
+Content-Type: text/ecl
+Entry-Name: .ecl.context
+
+get-menu "Project/Clean..." | click
+with [get-window Clean] {
+    get-button "Clean all projects" | click
+    get-button OK | click
+}
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998--

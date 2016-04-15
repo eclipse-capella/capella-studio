@@ -1,0 +1,48 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _akaGkKJtEeWqlNQu-Q0L2A,_dOxj0JjlEeW9rYo66l64HA,_YDG0MKAMEeWTy5kdXs0erQ,_u4Of4KAOEeWTy5kdXs0erQ
+Element-Name: Aspect - Data
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _sBBM8JjhEeW9rYo66l64HA
+Runtime-Version: 2.0.1.201508250612
+Save-Time: 12/14/15 3:18 PM
+Testcase-Type: ecl
+Verifications: _xe8uEJkJEeW9roo66l64HA,_m-EFsJ2dEeWgmKoQjPKcMA
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Project Explorer" | get-tree
+    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.spec.vptext" 
+    | get-menu "Open With/Vptext Specification Editor" | click
+    
+with [get-editor "QualityAssessment.spec.vptext" | get-text-viewer] {
+    set-caret-pos 11 30
+    key-type F3
+}
+
+get-editor "QualityAssessment.data.vptext" | get-text-viewer | set-caret-pos 10 5
+get-view "Project Explorer" | get-tree 
+    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.data" 
+    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.data" 
+    | get-menu "Open With/Text Editor" | click
+with [get-editor "QualityAssessment.data"] {
+    with [get-text-viewer] {
+        set-caret-pos 11 5
+        select-range 10 5 39 6
+        get-menu Copy | click
+    }
+    close
+}
+with [get-editor "QualityAssessment.data.vptext" | get-text-viewer] {
+    get-menu Paste | click
+    set-caret-pos 32 20
+//    key-type "M1+M2+f"
+    key-type "M1+s"
+}
+get-view "Project Explorer" | get-tree 
+    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.vpdesc" | double-click
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

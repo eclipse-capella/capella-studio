@@ -1,0 +1,98 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.workspace
+Element-Name: Workspace with projet
+Element-Type: context
+Element-Version: 2.0
+Id: _64VnUKJ1EeWqlNQu-Q0L2A
+Runtime-Version: 2.0.1.201508250612
+Save-Time: 12/14/15 4:18 PM
+
+------=_contents/org.polarsys.capella.vp.qualityassessment.original/META-INF/MANIFEST.MF-18aed7d0-3644-354c-bb53-30b9f10360b9
+Content-Type: q7/binary
+Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.original/META-INF/MANIFEST.MF
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAAALmNvbnRlbnRdjrEOgkAQRHu+gh/gAhYWGBsTGhNM
+lMR+hYVscuzB7h2RvxeDUFi/mTdTAlOL6pMnipLjPM5MGl0CNxaT8gd3dtjIDXrM43sAS34GVVTtkf2G
+q7l/OUv1GnPSmcFZEJ3V1DCgtWCmwYz/deOEOmKwJyXuLPpl8+wl4Obdj6RmubkKWkLZ+APHQIJN8cY6
++CVZ8ETi+CvP4ytMUBVJZo7RB1BLBwhqyvwGoQAAAPcAAABQSwECFAAUAAgICAAAACEAasr8BqEAAAD3
+AAAACAAAAAAAAAAAAAAAAAAAAAAALmNvbnRlbnRQSwUGAAAAAAEAAQA2AAAA1wAAAAAA
+------=_contents/org.polarsys.capella.vp.qualityassessment.original/META-INF/MANIFEST.MF-18aed7d0-3644-354c-bb53-30b9f10360b9--
+------=_contents/org.polarsys.capella.vp.qualityassessment.original/models/QualityAssessment.ecore-831107e5-2143-3c83-89ba-9d9ab3fdd68a
+Content-Type: q7/binary
+Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.original/models/QualityAssessment.ecore
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAAALmNvbnRlbnS9V8lu2zAQvRfIPxDsOaKdXlojTuG4
+DhrAbtMmKXorGGksEeEikFRs/32H2mzVcbOoqBHDAGfmzeObRcrpx7WS5AGsE0aP6TAaUAI6NonQ6Zje
+3lwcv6cfz47enEJsLIxmVzy+5ymQtRKjNuokRCGOdiM8H9PM+3zE2Gq1ioxKI2NT9nNx2bq4rsvqXelx
+MhgM0W1+HWeg+LHQznMdAz16Q/BThZYkOsEQS5E7KBFALQPKCZsFN0o0V+j8reBS+M3EOXBOgfZocLff
+LzswuZHcuo0rcWKeg5Sc7UdWXLS7srAU68ewz4LLKUwld04sBSpE8L4jv8mRSq1hafwLPbgucrA3GOLG
+NJfcL41VI5bLIhWaIcMt3ZpqFICjhHsepaCZMglINq1s02AqM79l7AvmTGYSQiLyd+h74bnMMx6BSqCG
+hMWnWYtVw8zWHnTog+ru4fYTrY3nHs8ccaawcadmq8hnXIJLrSlyZK5YSJCYuAhwZVgDhWAJeC6kI/ew
+GVNXKMXthpIHLgsEvcmEI/jnMyC1kGSrJKmEZg0vtkvsmWS7ndFowkpNcFiiAYsx0FsumuLvsy4VSlrd
+W/bkqQYMQrMlZ4PofTRAxSd3IVPsLwodB8LPA5BbgLlJRczl1Kjc6KDQswDyLcBVtnEdhP+n7oLnOS6l
+QyI35lbc1w9OIy+XE/zihV3b83sVeH2WuhYTG2fCQ+yLnTHdq9Pr0zQVezTPi8t57W0RILi8AB6gHllv
+32EJFsLqrlfcHXeQfNWUFDnutXNT6GRMj4e0KSQhcFMCIKP9dcj6JccG8rD2TyffXc499H5q6/a9jwLu
+gutL1FxUMZQEMXCWAo8xxezwQjYT7624K/yWTfDEDHN4AEn/kPITKhMOyLOe1+GJghy6I/4vHyV/bgwE
+hnZd/Ag/ZGmNIkPiDfnQKnNoFtgjivUTE6uzFEkodldOVGZam7zgsjL2LBwvBwyS/jU7N0YC1zUhlGXn
+3ee1b0Ntw/6nVyHas3A4AmBDs/2rCeg7lpV+ZVP353TZbq2XV3emC9Ww2m/i9pbzICDHyaw8vxj/a9J2
+qKyM5TFpj9mh4LlZtWM93IkO5weDFpCIwLSOO9mJq00HQz+LNGsD3+0EloYDwuFB5x8qPPoNUEsHCHd7
+LjdYAwAAiw0AAFBLAQIUABQACAgIAAAAIQB3ey43WAMAAIsNAAAIAAAAAAAAAAAAAAAAAAAAAAAuY29u
+dGVudFBLBQYAAAAAAQABADYAAACOAwAAAAA=
+------=_contents/org.polarsys.capella.vp.qualityassessment.original/models/QualityAssessment.ecore-831107e5-2143-3c83-89ba-9d9ab3fdd68a--
+------=_contents/org.polarsys.capella.vp.qualityassessment.original/.project-7df3e3d1-aa75-354b-9fcc-4fcb298951e8
+Content-Type: q7/binary
+Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.original/.project
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAAALmNvbnRlbnS9U8tOwzAQPIPEP1S548CNg5tKPMoJ
+VKnwAVtnG1w5tvHaEf17bDcBogiph6q3nfGOZ+y1+eKrVbMOHUmj58UtuylmqIWppW7mxfvb8vquWFRX
+l9w6s0PhH5GEk9bH7shecA0tVsY1zBoFjvbEBFhUClhn2WcAJf0eiJCoRe2ZcbKRGhQvszDtIEyblipe
+DlViezvKoByhTZCqXlsUCfXwIUpB15n5EwqFkpaQYbNlFrxHp1mQbHUo75MS3W+WKAXXhBSCelyOCV5O
+7I4KsKs9E8bFAjrYnM/X1sheQMstkj/jcZPtWnxgCycx7Zlh5tHPB4d99wFMxp1v++l5+ZqXk39u+08y
+GpA+TpNOuVIhPuipyVCnkD/vd/x5vgFQSwcIcY+TCx0BAAB7AwAAUEsBAhQAFAAICAgAAAAhAHGPkwsd
+AQAAewMAAAgAAAAAAAAAAAAAAAAAAAAAAC5jb250ZW50UEsFBgAAAAABAAEANgAAAFMBAAAAAA==
+------=_contents/org.polarsys.capella.vp.qualityassessment.original/.project-7df3e3d1-aa75-354b-9fcc-4fcb298951e8--
+------=_.q7.content-3d2e0690-ce48-3609-83e0-c704d49f1eaf
+Content-Type: q7/binary
+Entry-Name: .q7.content
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAAALmNvbnRlbnSlU1tLIzEUfhf2P4S8N1FZFilTpSwt
+dHdbKOrqm6SZ0zZuJonJGWf8956pnekiDFV8S8J3O5dkV3Vh2TPEZLwb8TNxyhk47XPjNiNe4npwwa8u
+v51kPm4EaGtCAhF1QBQaa1H5+C8FpWF4155+eodQI6sLM+x0zxtdcnJpSO8jvkUMQymrqhK+2AgSl/fz
+WQs54tXRW0xD3+Ek4WSH48ypgtBdNFYZ3LIQ/SMgZyYf8Ycf3/+629+/ziZw92QXy3KwPP1zPuZUMWOZ
+bkpxuLvQdUfUmPayTcrgrYrpJQmtAlirxHMQT6WyBl9USpBSQXzKZzbGKcv3SqS1NhZaIaEtgYPCLfW+
+Bl2iWll6x1gClz2cfZiPM1alsXlDCxDRQDrC9Dan4bVuCRBpI9Khgnfq/4/sMaeB+QhkBusjPnJv1Oc8
+n9yMB7PFtNd4Pl7MppPrGzGffs1pZVx/Awqfg+2vfvk28vFh5NA04GuBUtQdPJPt8r1tpjysZiY/+zWJ
+9ApQSwcIJG0HOIABAAD3AwAAUEsBAhQAFAAICAgAAAAhACRtBziAAQAA9wMAAAgAAAAAAAAAAAAAAAAA
+AAAAAC5jb250ZW50UEsFBgAAAAABAAEANgAAALYBAAAAAA==
+------=_.q7.content-3d2e0690-ce48-3609-83e0-c704d49f1eaf--
+------=_contents/org.polarsys.capella.vp.qualityassessment.original/.classpath-80b78278-5a36-3098-b49b-2fbca9214c59
+Content-Type: q7/binary
+Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.original/.classpath
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAAALmNvbnRlbnSdkE9PAjEQxc+a+B02vTMrF+NhV2LM
+mkAiGFi9ktJOlpE6LdOWwLcH/xCNCRy8zZv85r2XqQbbd1dsUCJ5rlUfrlWBbLwl7mr10j72btXg7uqy
+Mk7HGHRaHsTFj0JOsitWxLZWUYwqPpZfY3maNJ6PpJcO0DgKEeHNJnA6s1ke0mE0beYPk3F7Pxw30/Iv
+R5xQWDuwuMgdZPq+RIFZ0my12NendhewHOmNnjW9Ptz8o1KwCMYLguA6k6B9drkjjuesfE4hp6PbgvgT
+rsrfL9wDUEsHCPSlsdLQAAAAeAEAAFBLAQIUABQACAgIAAAAIQD0pbHS0AAAAHgBAAAIAAAAAAAAAAAA
+AAAAAAAAAAAuY29udGVudFBLBQYAAAAAAQABADYAAAAGAQAAAAA=
+------=_contents/org.polarsys.capella.vp.qualityassessment.original/.classpath-80b78278-5a36-3098-b49b-2fbca9214c59--
+------=_contents/org.polarsys.capella.vp.qualityassessment.original/build.properties-f8c7b036-78dc-35c6-888c-3735c861c352
+Content-Type: q7/binary
+Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.original/build.properties
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAAALmNvbnRlbnQrzi8tSk7V01OwVSguStbn5covLSko
+LQELJGXmAQWApF5mXnJOaUpqMVDQ1zXEUdfTz01fJ4aXSwEV6GERy81PSc0pBpoDAFBLBwhRBQ3QRwAA
+AGoAAABQSwECFAAUAAgICAAAACEAUQUN0EcAAABqAAAACAAAAAAAAAAAAAAAAAAAAAAALmNvbnRlbnRQ
+SwUGAAAAAAEAAQA2AAAAfQAAAAAA
+------=_contents/org.polarsys.capella.vp.qualityassessment.original/build.properties-f8c7b036-78dc-35c6-888c-3735c861c352--
+------=_contents/org.polarsys.capella.vp.qualityassessment.original/.settings/org.eclipse.jdt.core.prefs-128b9359-6182-3408-840a-c0bdb94aae8a
+Content-Type: q7/binary
+Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.original/.settings/org.eclipse.jdt.core.prefs
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAAALmNvbnRlbnSVjrEKAjEQRHvBXwnY2KWx08pfiJe5
+YyXZDbM5wb83gtaezTIs84aHqUhzhEbMIHSChwfoYhoP+51xCfhU7rmHyYhxapMCjpCxQINoEcXFeXp2
+vJ8Rmm4FeetAT1zQryX12VjjIRx/k7UVScN3S7vRhk4NyR3s5wztMgsYQRq30tC1/su6rfw6vgBQSwcI
+Cr5lb4oAAABsAQAAUEsBAhQAFAAICAgAAAAhAAq+ZW+KAAAAbAEAAAgAAAAAAAAAAAAAAAAAAAAAAC5j
+b250ZW50UEsFBgAAAAABAAEANgAAAMAAAAAAAA==
+------=_contents/org.polarsys.capella.vp.qualityassessment.original/.settings/org.eclipse.jdt.core.prefs-128b9359-6182-3408-840a-c0bdb94aae8a--

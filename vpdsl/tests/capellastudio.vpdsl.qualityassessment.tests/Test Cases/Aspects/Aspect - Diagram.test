@@ -1,0 +1,82 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _nGk20J0AEeWgmKoQjPKcMA,_YDG0MKAMEeWTy5kdXs0erQ,_u4Of4KAOEeWTy5kdXs0erQ
+Element-Name: Aspect - Diagram
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _vOFfUJ2WEeWgmKoQjPKcMA
+Runtime-Version: 2.0.1.201508250612
+Save-Time: 1/21/16 5:31 PM
+Testcase-Type: ecl
+Verifications: _xe8uEJkJEeW9roo66l64HA,_CfrnoJ2eEeWgmKoQjPKcMA
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Project Explorer" | get-tree
+    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.spec.vptext" 
+    | get-menu "Open With/Vptext Specification Editor" | click
+    
+with [get-editor "QualityAssessment.spec.vptext" | get-text-viewer] {
+    set-caret-pos 11 32
+    key-type Enter
+    key-type "M1+SPACE"
+}
+get-window -from "CompletionProposalPopup.createProposalSelector()" | get-table | select "Diagrams - New Diagrams" 
+    | click -default
+get-window "Viewpoint Diagram File Creation Wizard" | get-button Finish | click
+with [get-editor "QualityAssessment.diagram.vptext" | get-text-viewer] {
+    set-caret-pos 9 37
+    key-type Enter
+    key-type "M1+SPACE"
+}
+get-window -from "CompletionProposalPopup.createProposalSelector()" | get-table 
+    | select "New Diagram - Generate Diagrams for all classes" | click -default
+with [get-window "Accelerator of diagram creation"] {
+    get-button "New diagram extension" | click
+    get-button Finish | click
+}
+
+get-window -from "CompletionProposalPopup2.createProposalSelector()" | get-table | select PhysicalArchitectureBlank | double-click
+get-window -from "CompletionProposalPopup2.createProposalSelector()" | get-table | select "PAB_PC" | double-click
+
+with [get-editor "QualityAssessment.diagram.vptext" | get-text-viewer] {
+ 	// renaming the diagram
+ 	set-caret-pos 10 23
+    type-text QualityAssessment_PAB
+    set-caret-pos 10 44
+    key-type "M1+M2+ARROW_RIGHT"
+    key-type "M1+M2+ARROW_RIGHT"
+    key-type BackSpace
+
+    // Renaming tools
+    set-caret-pos 49 40
+    key-type "M1+M2+ARROW_RIGHT"
+    key-type BackSpace
+    
+    set-caret-pos 52 38
+    key-type "M1+M2+ARROW_RIGHT"
+    key-type BackSpace
+    
+    set-caret-pos 55 40
+    key-type "M1+M2+ARROW_RIGHT"    
+    key-type BackSpace
+    
+    set-caret-pos 60 37 
+    key-type "M1+M2+ARROW_RIGHT" 
+    key-type BackSpace
+    
+    set-caret-pos 63 35
+    key-type "M1+M2+ARROW_RIGHT" 
+    key-type BackSpace
+}
+get-button "Save All (M1+M2+S)" | click
+
+get-view "Project Explorer" | get-tree 
+    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.vpdesc" | double-click
+get-editor "QualityAssessment.vpdesc" | get-tree 
+    | get-item "platform:\\/resource\\/org.polarsys.capella.vp.qualityassessment.vpdsl\\/model\\/QualityAssessment.vpdesc/Viewpoint QualityAssessment/Diagram Set QualityAssessment.diagram/Diagram Extension QualityAssessment_PAB" 
+    | click
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
