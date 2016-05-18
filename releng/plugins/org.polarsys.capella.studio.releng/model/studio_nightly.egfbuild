@@ -26,7 +26,7 @@
   <propertyPackages xmi:id="_vtRuAI5EEeOQ8YcnVfa6Wg" name="versions">
     <properties xmi:id="_SowkIEhiEeOxuMV9a71i9w" key="eclipse_version" value="mars"/>
     <properties xmi:id="_JYCjYNL3EeSCstxmhDJ57A" key="studio_version" value="1.0.0"/>
-    <properties xmi:id="_7jHjkA9SEeW7CM9Somx7YA" key="docgen.addon_version" value="1.0.0"/>
+    <properties xmi:id="_7jHjkA9SEeW7CM9Somx7YA" key="docgen.addon_version" value="1.1.0"/>
   </propertyPackages>
   <jobs xmi:id="_Htxz8PqoEeKFaurHIkYR0w" name="init">
     <steps xsi:type="buildstep:CleanStep" xmi:id="_oIj20DZJEeOP8MSofnrGNA" type="Result"/>
