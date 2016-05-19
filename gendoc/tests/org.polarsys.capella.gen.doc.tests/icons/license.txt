@@ -1,0 +1,10 @@
+These followings icons are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+
+<icon file path> - <origin> - <original file path>
+
+/icons/capella.png - https://www.polarsys.org/capella/ - https://www.polarsys.org/capella/images/logo_capella_350.png
+/icons/capellaStudio.png - https://polarsys.org/wiki/Capella/Studio - https://polarsys.org/wiki/images/3/3b/Capella-studio.png
+/icons/capellaStudioAbout.png - org.polarsys.capella.studio.product - /org.polarsys.capella.studio.product/icons//CapellaAbout.png
+/icons/kitalpha.png - https://polarsys.org/kital<pha/ - https://polarsys.org/kitalpha/images/logo_kitalpha.png
