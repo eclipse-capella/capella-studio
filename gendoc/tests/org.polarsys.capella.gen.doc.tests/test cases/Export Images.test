@@ -1,0 +1,45 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _b2blQB3WEeaSp7ijjugg7g,_hext0B3WEeaSp7ijjugg7g
+Element-Name: Export Images
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _KModAB3WEeaSp7ijjugg7g
+Runtime-Version: 2.0.2.201511100828
+Save-Time: 5/24/16 3:07 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Test if export images found in the description of element
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+with [get-view "Capella Project Explorer" | get-tree] {
+    select "capellastudio/capellastudio.aird" | get-menu "Open Session" | click
+    select "capellastudio/capellastudio.aird" | get-menu "HTML Documentation Generation" | click
+}
+with [get-window -class WizardDialog] {
+    get-editbox -after [get-label "Output folder:"] | set-text "/capellastudio/doc"
+    get-button Finish | click
+}
+
+wait 1000
+
+get-view "Capella Project Explorer" | get-tree | select capellastudio | get-menu Refresh | click
+
+get-button "Open Perspective" | click
+with [get-window "Open Perspective"] {
+    get-table | select "Capella Studio \\(default\\)"
+    get-button OK | click
+}
+get-view "Project Explorer" | get-tree | select "capellastudio/doc/output/index.html" | double-click
+get-view "Error Log" | click
+get-view "Error Log" | get-editbox | set-text "org.polarsys.capella.docgen"
+get-view "Error Log" | get-tree | get-property itemCount | equals 0 | verify-true
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
