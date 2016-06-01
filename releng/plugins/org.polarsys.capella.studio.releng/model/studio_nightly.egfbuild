@@ -154,6 +154,66 @@
       </steps>
       <steps xsi:type="buildfile:ZipStep" xmi:id="_4BdAj0_FEeWA7YBbftrtfw" name="zip mars results" baseDir="${publish}/${TP_name}" destinationFilePath="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}.zip"/>
     </steps>
+    <steps xsi:type="buildcore:StepContainer" xmi:id="_WXTakCfQEeaEA_moRmDWEw" name="TP_linux-gtk-x86">
+      <properties xmi:id="_WXTakSfQEeaEA_moRmDWEw" key="TP_name" value="TP_linux-gtk-x86" type="INLINED"/>
+      <properties xmi:id="_WXTakifQEeaEA_moRmDWEw" key="TP_arch" value="x86" type="INLINED"/>
+      <properties xmi:id="_WXTakyfQEeaEA_moRmDWEw" key="TP_os" value="linux" type="INLINED"/>
+      <properties xmi:id="_WXTalCfQEeaEA_moRmDWEw" key="TP_ws" value="gtk" type="INLINED"/>
+      <properties xmi:id="_WXTalSfQEeaEA_moRmDWEw" key="TP_profile" value="SDKProfile" type="INLINED"/>
+      <steps xsi:type="buildcore:ReuseStep" xmi:id="_WXTalifQEeaEA_moRmDWEw" name="">
+        <reusedStep xsi:type="buildcore:StepContainer" href="StudioPlatformSetup.egfbuild#_Y4cvwM1xEeSFroBhAlzk1g"/>
+      </steps>
+      <steps xsi:type="buildstep:InstallStep" xmi:id="_WXTalyfQEeaEA_moRmDWEw" name="install studio" id="${TP_name}" profile="SDKProfile" resultSteps="_dmxskNMCEeSCstxmhDJ57A" installResultStepsSourceFeatures="true"/>
+      <steps xsi:type="buildstep:AntStep" xmi:id="_WXTamCfQEeaEA_moRmDWEw" name="fix config" enabled="false" targetName="fix_config_${TP_name}" xml="&lt;target name=&quot;fix_config_${TP_name}&quot;>&#xD;&#xA;&lt;echo file=&quot;${publish}/${TP_name}/eclipse.ini&quot; append=&quot;false&quot;>-showLocation&#xD;&#xA;-startup&#xD;&#xA;plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar&#xD;&#xA;--launcher.library&#xD;&#xA;plugins/org.eclipse.equinox.launcher.win32.win32.x86_1.1.300.v20150602-1417&#xD;&#xA;-showsplash&#xD;&#xA;org.polarsys.capella.studio.product&#xD;&#xA;--launcher.XXMaxPermSize&#xD;&#xA;256m&#xD;&#xA;--launcher.defaultAction&#xD;&#xA;openFile&#xD;&#xA;--launcher.appendVmargs&#xD;&#xA;-vmargs&#xD;&#xA;-Dosgi.requiredJavaVersion=1.7&#xD;&#xA;-Xms256m&#xD;&#xA;-Xmx1024m&#xD;&#xA;&lt;/echo>&#xD;&#xA;&#xD;&#xA;&lt;echo file=&quot;${publish}/${TP_name}/configuration/config.ini&quot; append=&quot;false&quot;>#This configuration file was written by: org.eclipse.equinox.internal.frameworkadmin.equinox.EquinoxFwConfigFileParser&#xD;&#xA;org.eclipse.update.reconcile=false&#xD;&#xA;eclipse.p2.profile=SDKProfile&#xD;&#xA;osgi.instance.area.default=@user.home/workspace&#xD;&#xA;osgi.framework=file\:plugins/org.eclipse.osgi_3.10.101.v20150820-1432.jar&#xD;&#xA;equinox.use.ds=true&#xD;&#xA;eclipse.buildId=4.5.0.I20150603-2000&#xD;&#xA;osgi.bundles=reference\:file\:org.eclipse.equinox.simpleconfigurator_1.1.100.v20150423-1455.jar@1\:start&#xD;&#xA;org.eclipse.equinox.simpleconfigurator.configUrl=file\:org.eclipse.equinox.simpleconfigurator/bundles.info&#xD;&#xA;eclipse.product=org.polarsys.capella.studio.product&#xD;&#xA;osgi.splashPath=platform\:/base/plugins/org.polarsys.capella.studio.product&#xD;&#xA;osgi.framework.extensions=reference\:file\:org.eclipse.osgi.compatibility.state_1.0.100.v20150402-1551.jar&#xD;&#xA;osgi.bundles.defaultStartLevel=4&#xD;&#xA;eclipse.application=org.polarsys.capella.studio.application&#xD;&#xA;eclipse.p2.data.area=@config.dir/../p2/&#xD;&#xA;&lt;/echo>&#xD;&#xA;&#xD;&#xA;&lt;/target>&#xD;&#xA;&#xD;&#xA;"/>
+      <steps xsi:type="buildstep:EgfStep" xmi:id="_WXTamSfQEeaEA_moRmDWEw">
+        <properties xmi:id="_WXTamifQEeaEA_moRmDWEw" key="platformPath" value="${publish}/${TP_name}"/>
+        <properties xmi:id="_WXTamyfQEeaEA_moRmDWEw" key="version" value="${studio_version}"/>
+        <properties xmi:id="_WXTanCfQEeaEA_moRmDWEw" key="product" value="org.polarsys.capella.studio.product"/>
+        <properties xmi:id="_WXTanSfQEeaEA_moRmDWEw" key="application" value="org.polarsys.capella.studio.application"/>
+        <egfActivities xmi:id="_WXTanifQEeaEA_moRmDWEw" uri="platform:/plugin/org.polarsys.kitalpha.releng/egf/customPlatform.fcore#_iQtBQK1QEeCY7YPdntiIaQ"/>
+      </steps>
+      <steps xsi:type="buildfile:ZipStep" xmi:id="_WXTanyfQEeaEA_moRmDWEw" name="zip mars results" baseDir="${publish}/${TP_name}" destinationFilePath="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}.zip"/>
+    </steps>
+    <steps xsi:type="buildcore:StepContainer" xmi:id="_cMFKsCfSEeaEA_moRmDWEw" name="TP_linux-gtk-x86_64">
+      <properties xmi:id="_cMFKsSfSEeaEA_moRmDWEw" key="TP_name" value="TP_linux-gtk-x86_64" type="INLINED"/>
+      <properties xmi:id="_cMFKsifSEeaEA_moRmDWEw" key="TP_arch" value="x86_64" type="INLINED"/>
+      <properties xmi:id="_cMFKsyfSEeaEA_moRmDWEw" key="TP_os" value="linux" type="INLINED"/>
+      <properties xmi:id="_cMFKtCfSEeaEA_moRmDWEw" key="TP_ws" value="gtk" type="INLINED"/>
+      <properties xmi:id="_cMFKtSfSEeaEA_moRmDWEw" key="TP_profile" value="SDKProfile" type="INLINED"/>
+      <steps xsi:type="buildcore:ReuseStep" xmi:id="_cMFKtifSEeaEA_moRmDWEw" name="">
+        <reusedStep xsi:type="buildcore:StepContainer" href="StudioPlatformSetup.egfbuild#_Y4cvwM1xEeSFroBhAlzk1g"/>
+      </steps>
+      <steps xsi:type="buildstep:InstallStep" xmi:id="_cMFKtyfSEeaEA_moRmDWEw" name="install studio" id="${TP_name}" profile="SDKProfile" resultSteps="_dmxskNMCEeSCstxmhDJ57A" installResultStepsSourceFeatures="true"/>
+      <steps xsi:type="buildstep:AntStep" xmi:id="_cMFKuCfSEeaEA_moRmDWEw" name="fix config" enabled="false" targetName="fix_config_${TP_name}" xml="&lt;target name=&quot;fix_config_${TP_name}&quot;>&#xD;&#xA;&lt;echo file=&quot;${publish}/${TP_name}/eclipse.ini&quot; append=&quot;false&quot;>-showLocation&#xD;&#xA;-startup&#xD;&#xA;plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar&#xD;&#xA;--launcher.library&#xD;&#xA;plugins/org.eclipse.equinox.launcher.win32.win32.x86_1.1.300.v20150602-1417&#xD;&#xA;-showsplash&#xD;&#xA;org.polarsys.capella.studio.product&#xD;&#xA;--launcher.XXMaxPermSize&#xD;&#xA;256m&#xD;&#xA;--launcher.defaultAction&#xD;&#xA;openFile&#xD;&#xA;--launcher.appendVmargs&#xD;&#xA;-vmargs&#xD;&#xA;-Dosgi.requiredJavaVersion=1.7&#xD;&#xA;-Xms256m&#xD;&#xA;-Xmx1024m&#xD;&#xA;&lt;/echo>&#xD;&#xA;&#xD;&#xA;&lt;echo file=&quot;${publish}/${TP_name}/configuration/config.ini&quot; append=&quot;false&quot;>#This configuration file was written by: org.eclipse.equinox.internal.frameworkadmin.equinox.EquinoxFwConfigFileParser&#xD;&#xA;org.eclipse.update.reconcile=false&#xD;&#xA;eclipse.p2.profile=SDKProfile&#xD;&#xA;osgi.instance.area.default=@user.home/workspace&#xD;&#xA;osgi.framework=file\:plugins/org.eclipse.osgi_3.10.101.v20150820-1432.jar&#xD;&#xA;equinox.use.ds=true&#xD;&#xA;eclipse.buildId=4.5.0.I20150603-2000&#xD;&#xA;osgi.bundles=reference\:file\:org.eclipse.equinox.simpleconfigurator_1.1.100.v20150423-1455.jar@1\:start&#xD;&#xA;org.eclipse.equinox.simpleconfigurator.configUrl=file\:org.eclipse.equinox.simpleconfigurator/bundles.info&#xD;&#xA;eclipse.product=org.polarsys.capella.studio.product&#xD;&#xA;osgi.splashPath=platform\:/base/plugins/org.polarsys.capella.studio.product&#xD;&#xA;osgi.framework.extensions=reference\:file\:org.eclipse.osgi.compatibility.state_1.0.100.v20150402-1551.jar&#xD;&#xA;osgi.bundles.defaultStartLevel=4&#xD;&#xA;eclipse.application=org.polarsys.capella.studio.application&#xD;&#xA;eclipse.p2.data.area=@config.dir/../p2/&#xD;&#xA;&lt;/echo>&#xD;&#xA;&#xD;&#xA;&lt;/target>&#xD;&#xA;&#xD;&#xA;"/>
+      <steps xsi:type="buildstep:EgfStep" xmi:id="_cMFKuSfSEeaEA_moRmDWEw">
+        <properties xmi:id="_cMFKuifSEeaEA_moRmDWEw" key="platformPath" value="${publish}/${TP_name}"/>
+        <properties xmi:id="_cMFKuyfSEeaEA_moRmDWEw" key="version" value="${studio_version}"/>
+        <properties xmi:id="_cMFKvCfSEeaEA_moRmDWEw" key="product" value="org.polarsys.capella.studio.product"/>
+        <properties xmi:id="_cMFKvSfSEeaEA_moRmDWEw" key="application" value="org.polarsys.capella.studio.application"/>
+        <egfActivities xmi:id="_cMFKvifSEeaEA_moRmDWEw" uri="platform:/plugin/org.polarsys.kitalpha.releng/egf/customPlatform.fcore#_iQtBQK1QEeCY7YPdntiIaQ"/>
+      </steps>
+      <steps xsi:type="buildfile:ZipStep" xmi:id="_cMFKvyfSEeaEA_moRmDWEw" name="zip mars results" baseDir="${publish}/${TP_name}" destinationFilePath="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}.zip"/>
+    </steps>
+    <steps xsi:type="buildcore:StepContainer" xmi:id="_hflrsCfSEeaEA_moRmDWEw" name="TP_macosx-cocoa-x86_64">
+      <properties xmi:id="_hflrsSfSEeaEA_moRmDWEw" key="TP_name" value="TP_macosx-cocoa-x86_64" type="INLINED"/>
+      <properties xmi:id="_hflrsifSEeaEA_moRmDWEw" key="TP_arch" value="x86_64" type="INLINED"/>
+      <properties xmi:id="_hflrsyfSEeaEA_moRmDWEw" key="TP_os" value="macosx" type="INLINED"/>
+      <properties xmi:id="_hflrtCfSEeaEA_moRmDWEw" key="TP_ws" value="cocoa" type="INLINED"/>
+      <properties xmi:id="_hflrtSfSEeaEA_moRmDWEw" key="TP_profile" value="SDKProfile" type="INLINED"/>
+      <steps xsi:type="buildcore:ReuseStep" xmi:id="_hflrtifSEeaEA_moRmDWEw" name="">
+        <reusedStep xsi:type="buildcore:StepContainer" href="StudioPlatformSetup.egfbuild#_Y4cvwM1xEeSFroBhAlzk1g"/>
+      </steps>
+      <steps xsi:type="buildstep:InstallStep" xmi:id="_hflrtyfSEeaEA_moRmDWEw" name="install studio" id="${TP_name}" profile="SDKProfile" resultSteps="_dmxskNMCEeSCstxmhDJ57A" installResultStepsSourceFeatures="true"/>
+      <steps xsi:type="buildstep:AntStep" xmi:id="_hflruCfSEeaEA_moRmDWEw" name="fix config" enabled="false" targetName="fix_config_${TP_name}" xml="&lt;target name=&quot;fix_config_${TP_name}&quot;>&#xD;&#xA;&lt;echo file=&quot;${publish}/${TP_name}/eclipse.ini&quot; append=&quot;false&quot;>-showLocation&#xD;&#xA;-startup&#xD;&#xA;plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar&#xD;&#xA;--launcher.library&#xD;&#xA;plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.1.300.v20150602-1417&#xD;&#xA;-showsplash&#xD;&#xA;org.polarsys.capella.studio.product&#xD;&#xA;--launcher.XXMaxPermSize&#xD;&#xA;256m&#xD;&#xA;--launcher.defaultAction&#xD;&#xA;openFile&#xD;&#xA;--launcher.appendVmargs&#xD;&#xA;-vmargs&#xD;&#xA;-Dosgi.requiredJavaVersion=1.7&#xD;&#xA;-Xms256m&#xD;&#xA;-Xmx1024m&#xD;&#xA;&lt;/echo>&#xD;&#xA;&#xD;&#xA;&lt;echo file=&quot;${publish}/${TP_name}/configuration/config.ini&quot; append=&quot;false&quot;>#This configuration file was written by: org.eclipse.equinox.internal.frameworkadmin.equinox.EquinoxFwConfigFileParser&#xD;&#xA;org.eclipse.update.reconcile=false&#xD;&#xA;eclipse.p2.profile=SDKProfile&#xD;&#xA;osgi.instance.area.default=@user.home/workspace&#xD;&#xA;osgi.framework=file\:plugins/org.eclipse.osgi_3.10.101.v20150820-1432.jar&#xD;&#xA;equinox.use.ds=true&#xD;&#xA;eclipse.buildId=4.5.0.I20150603-2000&#xD;&#xA;osgi.bundles=reference\:file\:org.eclipse.equinox.simpleconfigurator_1.1.100.v20150423-1455.jar@1\:start&#xD;&#xA;org.eclipse.equinox.simpleconfigurator.configUrl=file\:org.eclipse.equinox.simpleconfigurator/bundles.info&#xD;&#xA;eclipse.product=org.polarsys.capella.studio.product&#xD;&#xA;osgi.splashPath=platform\:/base/plugins/org.polarsys.capella.studio.product&#xD;&#xA;osgi.framework.extensions=reference\:file\:org.eclipse.osgi.compatibility.state_1.0.100.v20150402-1551.jar&#xD;&#xA;osgi.bundles.defaultStartLevel=4&#xD;&#xA;eclipse.application=org.polarsys.capella.studio.application&#xD;&#xA;eclipse.p2.data.area=@config.dir/../p2/&#xD;&#xA;&lt;/echo>&#xD;&#xA;&#xD;&#xA;&lt;/target>&#xD;&#xA;&#xD;&#xA;"/>
+      <steps xsi:type="buildstep:EgfStep" xmi:id="_hflruSfSEeaEA_moRmDWEw">
+        <properties xmi:id="_hflruifSEeaEA_moRmDWEw" key="platformPath" value="${publish}/${TP_name}"/>
+        <properties xmi:id="_hflruyfSEeaEA_moRmDWEw" key="version" value="${studio_version}"/>
+        <properties xmi:id="_hflrvCfSEeaEA_moRmDWEw" key="product" value="org.polarsys.capella.studio.product"/>
+        <properties xmi:id="_hflrvSfSEeaEA_moRmDWEw" key="application" value="org.polarsys.capella.studio.application"/>
+        <egfActivities xmi:id="_hflrvifSEeaEA_moRmDWEw" uri="platform:/plugin/org.polarsys.kitalpha.releng/egf/customPlatform.fcore#_iQtBQK1QEeCY7YPdntiIaQ"/>
+      </steps>
+      <steps xsi:type="buildfile:ZipStep" xmi:id="_hflrvyfSEeaEA_moRmDWEw" name="zip mars results" baseDir="${publish}/${TP_name}" destinationFilePath="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}.zip"/>
+    </steps>
   </jobs>
   <jobs xmi:id="_OD0VANMCEeSCstxmhDJ57A" name="clean all">
     <steps xsi:type="buildstep:AntStep" xmi:id="_OD0VAdMCEeSCstxmhDJ57A" targetName="cleanUp" xml="&lt;target name=&quot;cleanUp&quot;>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.extension.sdk.feature&quot; verbose=&quot;true&quot;/>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.studio.releng.feature&quot; verbose=&quot;true&quot;/>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.studio.product.feature&quot;/>&#xD;&#xA;    &lt;delete dir=&quot;${publish}/org.polarsys.capella.ta.viewpoint.dsl.feature&quot;/>&#xD;&#xA;&lt;/target>&#xD;&#xA;"/>
