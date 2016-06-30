@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.polarsys.capella.studio.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.polarsys.capella.studio.test.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.polarsys.kitalpha.ad.viewpoint.dsl.as.diagram.expression.helper;bundle-version="1.0.0",
+ org.junit,
+ org.eclipse.emf.ecore,
+ org.polarsys.kitalpha.ad.viewpoint.dsl.generation.provider;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Bundle-Localization: plugin
+Bundle-Vendor: %providerName
