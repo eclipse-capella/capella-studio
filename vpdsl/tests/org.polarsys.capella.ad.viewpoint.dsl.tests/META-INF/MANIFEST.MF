@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.polarsys.capella.ad.viewpoint.dsl.tests
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.polarsys.capella.ad.viewpoint.dsl.tests.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.junit,
+ org.eclipse.egf.portfolio.genchain,
+ org.polarsys.capella.ta,
+ org.polarsys.kitalpha.ad.ta
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
