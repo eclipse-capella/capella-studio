@@ -216,7 +216,13 @@
         <properties xmi:id="_z7wBfcXcEeWzIrBUSQpMFA" key="application" value="org.polarsys.capella.studio.application"/>
         <egfActivities xmi:id="_z7wBfsXcEeWzIrBUSQpMFA" uri="platform:/plugin/org.polarsys.kitalpha.releng/egf/customPlatform.fcore#_iQtBQK1QEeCY7YPdntiIaQ"/>
       </steps>
-      <steps xsi:type="buildfile:TarStep" xmi:id="_z7wBf8XcEeWzIrBUSQpMFA" name="zip mars results" destfile="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}.tar.gz" baseDir="${publish}/${TP_name}" compression="gzip"/>
+      <steps xsi:type="buildfile:TarStep" xmi:id="_z7wBf8XcEeWzIrBUSQpMFA" name="zip mars results" enabled="false" destfile="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}.tar.gz" baseDir="${publish}" compression="gzip">
+        <filePaths>${publish}/Info.plist</filePaths>
+        <dirPaths>${publish}/MacOS</dirPaths>
+        <dirPaths>${publish}/Resources</dirPaths>
+        <dirPaths>${publish}/${TP_name}</dirPaths>
+      </steps>
+      <steps xsi:type="buildstep:AntStep" xmi:id="_2ImT4EKpEea5b-JCuEbJYw" targetName="Tar_macos_platform" xml="&#x9;&lt;target name=&quot;Tar_macos_platform&quot;>&#xD;&#xA;&#x9;&#x9;&lt;tar destfile=&quot;${publish}/capella_studio-${studio_version}-${timestamp}-macosx-cocoa-x86_64-${eclipse_version}.tar.gz&quot; compression=&quot;gzip&quot;>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;tarfileset dir=&quot;${publish}&quot; filemode=&quot;755&quot; username=&quot;ant&quot; group=&quot;ant&quot;>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;include name=&quot;MacOS/eclipse&quot;/>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;/tarfileset>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;tarfileset dir=&quot;${publish}&quot;>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;include name=&quot;Info.plist&quot;/>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;/tarfileset>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;tarfileset dir=&quot;${publish}&quot;>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;include name=&quot;Resources/Eclipse.icns&quot;/>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;/tarfileset>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;tarfileset dir=&quot;${publish}&quot;>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;include name=&quot;TP_macosx-cocoa-x86_64/**&quot;/>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;/tarfileset>&#xD;&#xA;&#x9;&#x9;&lt;/tar>&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;&lt;delete dir=&quot;${publish}/MacOS&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;delete dir=&quot;${publish}/Resources&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;delete file=&quot;${publish}/Info.plist&quot;/>&#xD;&#xA;&#x9;&lt;/target>&#xD;&#xA;"/>
     </steps>
   </jobs>
   <jobs xmi:id="_NNVAoD7BEeaTpOlaI4QSGQ" name="run junit tests">
