@@ -28,7 +28,7 @@
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.polarsys.capella.ad.viewpoint.dsl.tests"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dosgi.requiredJavaVersion=1.7 -Xms256m -Xmx1024m -XX:PermSize=64M -XX:MaxPermSize=512M"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dosgi.requiredJavaVersion=1.7 -Xms256m -Xmx1024m -XX:PermSize=64M -XX:MaxPermSize=512M -javaagent:${tools}/jacoco/lib/jacocoagent.jar=destfile=../../plugins/jacoco.exec"/>
 <stringAttribute key="pde.version" value="3.3"/>
 <stringAttribute key="product" value="org.polarsys.capella.studio.product"/>
 <booleanAttribute key="run_in_ui_thread" value="true"/>

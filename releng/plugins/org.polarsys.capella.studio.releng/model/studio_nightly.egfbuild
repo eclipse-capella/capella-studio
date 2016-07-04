@@ -28,6 +28,9 @@
     <properties xmi:id="_JYCjYNL3EeSCstxmhDJ57A" key="studio_version" value="1.0.0"/>
     <properties xmi:id="_7jHjkA9SEeW7CM9Somx7YA" key="docgen.addon_version" value="1.1.0"/>
   </propertyPackages>
+  <propertyPackages xmi:id="_XZIigEHQEeaZAZkHbu4H5w" name="Tests urls">
+    <properties xmi:id="_ZSiUIEHQEeaZAZkHbu4H5w" key="jacoco.url" value="http://search.maven.org/remotecontent?filepath=org/jacoco/jacoco/0.7.1.201405082137/jacoco-0.7.1.201405082137.zip"/>
+  </propertyPackages>
   <jobs xmi:id="_Htxz8PqoEeKFaurHIkYR0w" name="init">
     <steps xsi:type="buildstep:CleanStep" xmi:id="_oIj20DZJEeOP8MSofnrGNA" type="Result"/>
     <steps xsi:type="buildcore:StepContainer" xmi:id="_Hh5UQJKEEeSPapwxSH2ZqQ" name="TP_mars">
@@ -111,15 +114,14 @@
     <steps xsi:type="buildstep:InstallStep" xmi:id="_IP-Cmf3tEeSW086H-yDPeg" name="vpdsl feature" id="TP_mars" profile="SDKProfile" resultSteps="_IP-CmP3tEeSW086H-yDPeg"/>
   </jobs>
   <jobs xmi:id="_NNVAoD7BEeaTpOlaI4QSGQ" name="run junit tests">
+    <steps xsi:type="buildstep:AntStep" xmi:id="_EodO8D-lEeajQ-m-CCVk5Q" name="install jacoco" targetName="install.jacoco" xml="&lt;target name=&quot;install.jacoco&quot;>&#xD;&#xA;&#x9;&lt;available file=&quot;${tools}/jacoco&quot; property=&quot;jacoco.exists&quot; />&#xD;&#xA;&#x9;&lt;antcall target=&quot;do.install.jacoco&quot; />&#xD;&#xA;&lt;/target>&#xD;&#xA;&#xD;&#xA;&lt;target name=&quot;do.install.jacoco&quot; unless=&quot;jacoco.exists&quot;>&#xD;&#xA;&#x9;&lt;echo message=&quot;Fetching jacoco library&quot; />&#xD;&#xA;&#x9;&lt;tempfile destdir=&quot;${java.io.tmpdir}&quot; prefix=&quot;jacoco-&quot; suffix=&quot;.zip&quot; property=&quot;jacoco.zip&quot; deleteonexit=&quot;true&quot; />&#xD;&#xA;&#x9;&lt;get src=&quot;${jacoco.url}&quot; dest=&quot;${jacoco.zip}&quot; />&#xD;&#xA;&#x9;&lt;mkdir dir=&quot;${tools}&quot; />&#xD;&#xA;&#x9;&lt;unzip src=&quot;${jacoco.zip}&quot; dest=&quot;${tools}/jacoco&quot; />&#xD;&#xA;&#x9;&lt;delete file=&quot;${jacoco.zip}&quot; />&#xD;&#xA;&lt;/target>"/>
     <steps xsi:type="buildstep:BuildStep" xmi:id="_NNVAoT7BEeaTpOlaI4QSGQ" name="Build Test Feature">
-      <buildLocations xsi:type="buildscm:GITBuildLocation" xmi:id="_NNVAoj7BEeaTpOlaI4QSGQ" gitLocation="_L0O-wPx8EeO7zY3f-pIrjg" folderName="tests/plugins"/>
-      <buildLocations xsi:type="buildscm:GITBuildLocation" xmi:id="_Dojg8D7QEeaTpOlaI4QSGQ" gitLocation="_L0O-wPx8EeO7zY3f-pIrjg" folderName="tests/features"/>
+      <buildLocations xsi:type="buildscm:GITBuildLocation" xmi:id="_NNVAoj7BEeaTpOlaI4QSGQ" gitLocation="_L0O-wPx8EeO7zY3f-pIrjg" folderName="vpdsl/tests"/>
       <buildLocations xsi:type="buildstep:TargetPlatformBuildLocation" xmi:id="_0-SWkD9sEeajQ-m-CCVk5Q" path="${publish}/TP_build"/>
       <buildLocations xsi:type="buildstep:TargetPlatformBuildLocation" xmi:id="_KUbjED7QEeaTpOlaI4QSGQ" path="${publish}/TP_mars"/>
-      <components xsi:type="buildstep:Feature" xmi:id="_NNVApD7BEeaTpOlaI4QSGQ" id="org.polarsys.capella.studio.test.feature"/>
+      <components xsi:type="buildstep:Plugin" xmi:id="_0vCGgEHFEeaZAZkHbu4H5w" id="org.polarsys.capella.ad.viewpoint.dsl.tests"/>
     </steps>
-    <steps xsi:type="buildstep:PublishStep" xmi:id="_NNVApT7BEeaTpOlaI4QSGQ" name="Publish" component="_NNVApD7BEeaTpOlaI4QSGQ"/>
-    <steps xsi:type="buildstep:TestStep" xmi:id="_NNVApj7BEeaTpOlaI4QSGQ" name="Launch test suite" launchConfigurationPath="org.polarsys.capella.studio.test/AllTests.launch"/>
+    <steps xsi:type="buildstep:TestStep" xmi:id="_NNVApj7BEeaTpOlaI4QSGQ" name="Launch test suite" launchConfigurationPath="org.polarsys.capella.ad.viewpoint.dsl.tests/AllTests.launch"/>
   </jobs>
   <jobs xmi:id="_awBh4NMCEeSCstxmhDJ57A" name="All in one">
     <steps xsi:type="buildstep:AntStep" xmi:id="_dfuEcOddEeSYhdkYY0fPMw" targetName="move_egf_to_tools2" xml="&lt;target name=&quot;move_egf_to_tools2&quot;>&#xD;&#xA;&#x9;&lt;delete dir=&quot;${tools}/egf&quot;/>&#xD;&#xA;&#x9;&lt;move file=&quot;${publish}/TP_build&quot; tofile=&quot;${tools}/egf&quot; />&#xD;&#xA;&lt;/target>"/>
