@@ -1,0 +1,104 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _BxGEMEKuEeaBh4I34RcO7g
+Element-Name: Reverse from Ecore
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _FZjYoEKuEeaBh4I34RcO7g
+Runtime-Version: 2.0.1.201508250612
+Save-Time: 7/5/16 2:44 PM
+Testcase-Type: ecl
+Verifications: _y1WTIJ5VEeWls8gZXhaHLg,_L-z1YEKuEeaBh4I34RcO7g
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Project Explorer" | get-tree 
+    | select "org.polarsys.capella.vp.qualityassessment.original/models/QualityAssessment.ecore" 
+    | get-menu "Kitalpha/Reverse ecore to viewpoint DSL" | click
+
+with [get-window "Reverse from ecore model"] {
+    get-combo -after [get-label "Target application :"] | select Capella
+    get-button "Next >" | click
+    get-button Finish | click
+}
+
+// Checking the creation of vptext files and vpdesc file with the right names
+with [get-view "Project Explorer" | get-tree] {
+    get-item "org.polarsys.capella.vp.qualityassessment.vpdsl/model" | get-property childCount | equals 4 | verify-true
+    get-item "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.conf.vptext" 
+        | get-property caption | equals "QualityAssessment.conf.vptext" | verify-true
+    get-item "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.data.vptext" 
+        | get-property caption | equals "QualityAssessment.data.vptext" | verify-true
+    get-item "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.spec.vptext" 
+        | get-property caption | equals "QualityAssessment.spec.vptext" | verify-true
+    get-item "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.vpdesc" | get-property caption 
+        | equals "QualityAssessment.vpdesc" | verify-true
+}
+
+// Checking the creation of the resource reuse extensions for all vptext and vpdesc file
+get-view "Project Explorer" | get-tree | select "org.polarsys.capella.vp.qualityassessment.vpdsl/plugin.xml" 
+    | double-click
+    
+get-editor "org.polarsys.capella.vp.qualityassessment.vpdsl" | get-tab-folder | get-tab-item Extensions | click
+get-editor "org.polarsys.capella.vp.qualityassessment.vpdsl" | get-section "All Extensions" | get-tree 
+    | get-property itemCount | equals 4 | verify-true
+with [get-editor "org.polarsys.capella.vp.qualityassessment.vpdsl"] {
+    get-section "All Extensions" | get-tree 
+        | select "org.polarsys.kitalpha.resourcereuse.resources/qualityassessment (resource)"
+    //get-section "Extension Element Details" | get-editbox -after [get-label "path*:"] | click-text 50 80
+}
+with [get-editor "org.polarsys.capella.vp.qualityassessment.vpdsl" | get-section "Extension Element Details"] {
+    get-editbox -after [get-label "id*:"] | get-property text 
+        | equals "org.polarsys.capella.vp.qualityassessment.vpdsl.description" | verify-true
+    get-editbox -after [get-label "name*:"] | get-property text | equals qualityassessment | verify-true
+    get-editbox -after [get-label "path*:"] | get-property text 
+        | equals "/org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.vpdesc" | verify-true
+    get-editbox -after [get-label "domain:"] | get-property text | equals vpdsl | verify-true
+    get-editbox -after [get-label "tags:"] | get-property text | equals vpdesc | verify-true
+}
+get-editor "org.polarsys.capella.vp.qualityassessment.vpdsl" | get-section "All Extensions" | get-tree 
+    | select [get-item "org.polarsys.kitalpha.resourcereuse.resources" -index 1 | get-item "spec \\(resource\\)"] 
+    | double-click
+with [get-editor "org.polarsys.capella.vp.qualityassessment.vpdsl" | get-section "Extension Element Details"] {
+    get-editbox -after [get-label "id*:"] | get-property text 
+        | equals "org.polarsys.capella.vp.qualityassessment.vpdsl.resource.QualityAssessment.spec" | verify-true
+    get-editbox -after [get-label "name*:"] | get-property text | equals spec | verify-true
+    get-editbox -after [get-label "path*:"] | get-property text 
+        | equals "/org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.spec.vptext" | verify-true
+    get-editbox -after [get-label "domain:"] | get-property text | equals vpdsl | verify-true
+    get-editbox -after [get-label "tags:"] | get-property text | equals Viewpoint | verify-true
+}
+with [get-editor "org.polarsys.capella.vp.qualityassessment.vpdsl" | get-section "All Extensions" | get-tree] {
+    select [get-item "org.polarsys.kitalpha.resourcereuse.resources" -index 2 | get-item "data \\(resource\\)"] 
+        | double-click
+    //select [get-item "org.polarsys.kitalpha.resourcereuse.resources" -index 2 | get-item "data \\(resource\\)"] 
+    //    | double-click
+}
+with [get-editor "org.polarsys.capella.vp.qualityassessment.vpdsl" | get-section "Extension Element Details"] {
+    get-editbox -after [get-label "id*:"] | get-property text 
+        | equals "org.polarsys.capella.vp.qualityassessment.vpdsl.resource.QualityAssessment.data" | verify-true
+    get-editbox -after [get-label "name*:"] | get-property text | equals data | verify-true
+    get-editbox -after [get-label "path*:"] | get-property text 
+        | equals "/org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.data.vptext" | verify-true
+    get-editbox -after [get-label "domain:"] | get-property text | equals vpdsl | verify-true
+    get-editbox -after [get-label "tags:"] | get-property text | equals Viewpoint | verify-true
+}
+get-editor "org.polarsys.capella.vp.qualityassessment.vpdsl" | get-section "All Extensions" | get-tree 
+    | select [get-item "org.polarsys.kitalpha.resourcereuse.resources" -index 3 | get-item "conf \\(resource\\)"] 
+    | double-click
+with [get-editor "org.polarsys.capella.vp.qualityassessment.vpdsl" | get-section "Extension Element Details"] {
+    get-editbox -after [get-label "id*:"] | get-property text 
+        | equals "org.polarsys.capella.vp.qualityassessment.vpdsl.resource.QualityAssessment.conf" | verify-true
+    get-editbox -after [get-label "name*:"] | get-property text | equals conf | verify-true
+    get-editbox -after [get-label "path*:"] | get-property text 
+        | equals "/org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.conf.vptext" | verify-true
+    get-editbox -after [get-label "domain:"] | get-property text | equals vpdsl | verify-true
+    get-editbox -after [get-label "tags:"] | get-property text | equals Viewpoint | verify-true
+}
+
+// Switcing to the Build tab in order to make a check of build properties
+get-editor "org.polarsys.capella.vp.qualityassessment.vpdsl" | get-tab-folder | get-tab-item Build | click
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
