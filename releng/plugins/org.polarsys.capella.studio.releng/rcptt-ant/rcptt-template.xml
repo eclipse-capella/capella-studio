@@ -1,0 +1,58 @@
+<project name="rcptt-project" default="test">
+	<!-- properties below configure all intermediate and result files to be put in "results" folder next 
+	     to a project folder. If that's ok, you can leave them as is -->
+
+	<!-- - - - - - - - - - - - - - - - - - - - Properties setting - - - - - - - - - - - - - - - - - - - - -->
+	<property name="test-location" location="..."/> <!-- Put here the RCPTT project path -->
+	
+	<property name="test-results" location="${result}"/>
+	<property name="runner-workspace" location="${test-results}/runner-workspace"/>
+	<property name="aut-workspace" location="${test-results}/aut-workspace-"/>
+	<property name="aut-stdout" location="${test-results}/aut-out-"/>
+	<property name="junit-report" location="${test-results}/test-results.xml"/>
+	<property name="html-report" location="${test-results}/test-results.html"/>
+	<property name="jacoco-report" location="${test-results}/jacoco.exec"/><!--Jenkins error jacoco-it.exec-->
+	
+	<!-- - - - - - - - - - - - - - - - - - - - -  Main target - - - - - - - - - - - - - - - - - - - - - - -->
+	<target name="test"><!-- FIXME mix to one after memory leak is fixed-->
+		<antcall target="TestsuiteAntTaskName"/>
+	</target>
+	
+	<!-- - - - - - - - - - - - - - - - - - - -  Testsuites targets - - - - - - - - - - - - - - - - - - - - -->
+	<target name="TestsuiteAntTaskName">
+		<java jar="${runner-path}/plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar" fork="true">
+			<arg value="-application" />      
+			<arg value="org.eclipse.rcptt.runner.headless" />
+
+			<arg value="-data" />
+			<arg value="${runner-workspace}" />
+
+			<arg value="-aut" />      
+			<arg value="${aut-path}" />
+
+			<arg value="-autWsPrefix" />      
+			<arg value="${aut-workspace}" />
+	   
+			<arg value="-autConsolePrefix" />
+			<arg value="${aut-stdout}"/>
+			
+			<arg value="-htmlReport" />
+			<arg value="${test-results}/test-results_VSL1.html" />
+			
+			<arg value="-junitReport" />
+			<arg value="${test-results}/test-results_VSL1.xml" />
+			
+			<arg value="-autVMArgs" />      
+			<arg value="-Xmx2048m;-XX:MaxPermSize=2048M;-javaagent:${jacoco-agent-path}=destfile=${jacoco-report},append=true"/>
+						
+			<arg value="-import" />
+			<arg value="${test-location}" />
+
+			<arg value="-suites" />      
+			<arg value="!!TestSuiteName!!" /> <!-- Put here the testsuite name -->
+
+			<arg value="-testOptions" />      
+			<arg value="testExecTimeout=600;execTimeout=3600" />
+		</java>
+	</target>
+</project>
