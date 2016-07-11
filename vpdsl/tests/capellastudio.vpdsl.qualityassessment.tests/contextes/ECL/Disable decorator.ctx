@@ -1,0 +1,26 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.ecl
+Element-Name: Disable decorator
+Element-Type: context
+Element-Version: 2.0
+Id: _be4tgEUeEeaQfdwj0DWY2Q
+Runtime-Version: 2.0.2.201511100828
+Save-Time: 7/8/16 5:16 PM
+
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
+Content-Type: text/ecl
+Entry-Name: .ecl.context
+
+get-preferences-menu | click
+with [get-window Preferences] {
+    with [get-editbox] {
+        set-text ""
+        set-text deco
+    }
+    get-tree | select "General/Appearance/Label Decorations"
+    get-table | get-item "Unsynchronized Vpdesc Resource" | uncheck
+    get-button Apply | click
+    get-button OK | click
+}
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998--

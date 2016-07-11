@@ -5,8 +5,8 @@ Element-Name: Generation Lib
 Element-Type: context
 Element-Version: 2.0
 Id: _KOH-MKJ5EeWqlNQu-Q0L2A
-Runtime-Version: 2.0.1.201508250612
-Save-Time: 12/18/15 10:50 AM
+Runtime-Version: 2.0.2.201511100828
+Save-Time: 7/11/16 11:34 AM
 
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
 Content-Type: text/ecl
@@ -24,6 +24,16 @@ proc "getTempFolder" {
 /** Get the today date with the given format **/
 proc "getDate" [val format "yyyyMMdd"] {
 	get-time | format-time -format $format
+}
+
+proc refershAllGeneratedProjects {
+	with [get-view "Project Explorer"] {
+	    get-button "Collapse All  (M1+M2+Numpad_Divide)" | click
+	    with [get-tree] {
+	        select "org.polarsys.capella.vp.qualityassessment" "org.polarsys.capella.vp.qualityassessment.af" "org.polarsys.capella.vp.qualityassessment.af.feature" "org.polarsys.capella.vp.qualityassessment.contextual.explorer" "org.polarsys.capella.vp.qualityassessment.design" "org.polarsys.capella.vp.qualityassessment.fc" "org.polarsys.capella.vp.qualityassessment.feature" "org.polarsys.capella.vp.qualityassessment.model" "org.polarsys.capella.vp.qualityassessment.model.edit" "org.polarsys.capella.vp.qualityassessment.releng" "org.polarsys.capella.vp.qualityassessment.representation.feature" "org.polarsys.capella.vp.qualityassessment.rules.analysis" "org.polarsys.capella.vp.qualityassessment.rules.computation" "org.polarsys.capella.vp.qualityassessment.rules.feature" "org.polarsys.capella.vp.qualityassessment.rules.generation" "org.polarsys.capella.vp.qualityassessment.rules.transformation" "org.polarsys.capella.vp.qualityassessment.rules.validation" "org.polarsys.capella.vp.qualityassessment.ui" "org.polarsys.capella.vp.qualityassessment.vpdsl"
+	        get-menu Refresh | click
+	    }
+	}
 }
 
 /** Parse a folder and look for a given folder/file **/
