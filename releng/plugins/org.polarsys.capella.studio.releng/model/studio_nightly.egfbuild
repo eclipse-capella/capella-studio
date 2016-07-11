@@ -195,7 +195,7 @@
       <steps xsi:type="buildfile:TarStep" xmi:id="_z7dtn8XcEeWzIrBUSQpMFA" name="zip mars results" destfile="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}.tar.gz" baseDir="${publish}/${TP_name}" compression="gzip"/>
     </steps>
     <steps xsi:type="buildcore:StepContainer" xmi:id="_hflrsCfSEeaEA_moRmDWEw" name="TP_macosx-cocoa-x86_64">
-      <properties xmi:id="_hflrsSfSEeaEA_moRmDWEw" key="TP_name" value="TP_macosx-cocoa-x86_64" type="INLINED"/>
+      <properties xmi:id="_hflrsSfSEeaEA_moRmDWEw" key="TP_name" value="eclipse" type="INLINED"/>
       <properties xmi:id="_hflrsifSEeaEA_moRmDWEw" key="TP_arch" value="x86_64" type="INLINED"/>
       <properties xmi:id="_hflrsyfSEeaEA_moRmDWEw" key="TP_os" value="macosx" type="INLINED"/>
       <properties xmi:id="_hflrtCfSEeaEA_moRmDWEw" key="TP_ws" value="cocoa" type="INLINED"/>
@@ -212,7 +212,8 @@
         <properties xmi:id="_hflrvSfSEeaEA_moRmDWEw" key="application" value="org.polarsys.capella.studio.application"/>
         <egfActivities xmi:id="_hflrvifSEeaEA_moRmDWEw" uri="platform:/plugin/org.polarsys.kitalpha.releng/egf/customPlatform.fcore#_iQtBQK1QEeCY7YPdntiIaQ"/>
       </steps>
-      <steps xsi:type="buildfile:TarStep" xmi:id="_z7wBf8XcEeWzIrBUSQpMFA" name="zip mars results" destfile="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}.tar.gz" baseDir="${publish}/${TP_name}" compression="gzip"/>
+      <steps xsi:type="buildfile:TarStep" xmi:id="_z7wBf8XcEeWzIrBUSQpMFA" name="zip mars results" enabled="false" destfile="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}.tar.gz" baseDir="${publish}/${TP_name}" compression="gzip"/>
+      <steps xsi:type="buildstep:AntStep" xmi:id="_2ImT4EKpEea5b-JCuEbJYw" targetName="Tar_macos_platform" xml="&#x9;&lt;target name=&quot;Tar_macos_platform&quot;>&#xD;&#xA;&#x9;&#x9;&lt;tar destfile=&quot;${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}.tar.gz&quot; compression=&quot;gzip&quot;>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;tarfileset dir=&quot;${publish}&quot; filemode=&quot;750&quot; username=&quot;ant&quot; group=&quot;ant&quot;>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;include name=&quot;MacOS/eclipse&quot;/>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;/tarfileset>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;tarfileset dir=&quot;${publish}&quot;>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;include name=&quot;Info.plist&quot;/>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;/tarfileset>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;tarfileset dir=&quot;${publish}&quot;>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;include name=&quot;Resources/Eclipse.icns&quot;/>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;/tarfileset>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;tarfileset dir=&quot;${publish}&quot;>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;include name=&quot;eclipse/**&quot;/>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;/tarfileset>&#xD;&#xA;&#x9;&#x9;&lt;/tar>&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;&lt;delete dir=&quot;${publish}/MacOS&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;delete dir=&quot;${publish}/Resources&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;delete file=&quot;${publish}/Info.plist&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;delete dir=&quot;${publish}/eclipse&quot;/>&#xD;&#xA;&#x9;&lt;/target>&#xD;&#xA;"/>
     </steps>
   </jobs>
   <jobs xmi:id="_OD0VANMCEeSCstxmhDJ57A" name="clean all">
