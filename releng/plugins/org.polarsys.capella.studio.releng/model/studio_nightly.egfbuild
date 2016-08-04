@@ -5,7 +5,7 @@
     <properties xmi:id="_MWwdkPlvEeCFCIE_fWd_VQ" key="cloudsmith.download.prefix" value="http://download.eclipse.org/external/"/>
     <properties xmi:id="_MlqcQPlvEeCFCIE_fWd_VQ" key="polarion.download.prefix" value="http://download.eclipse.org/external/"/>
     <properties xmi:id="_LPrgwPlvEeCFCIE_fWd_VQ" key="eclipse.download.prefix" value="http://download.eclipse.org/"/>
-    <properties xmi:id="_7e-7UI5hEeOQ8YcnVfa6Wg" key="sirius.repo.url" value="${eclipse.download.prefix}/sirius/updates/stable/4.0.0-S20160526-075916/${eclipse_version}"/>
+    <properties xmi:id="_7e-7UI5hEeOQ8YcnVfa6Wg" key="sirius.repo.url" value="http://download.eclipse.org/sirius/updates/stable/4.1.0-S20160708/mars/"/>
     <properties xmi:id="_n0G4oJPyEeODqo9Nw0Mw6Q" key="orbit.repo.url" value="${eclipse.download.prefix}/tools/orbit/downloads/drops/R20130827064939/repository/"/>
     <properties xmi:id="_eRQHEZk8EeOez_jbx14D1w" key="eclipse38.download" value="http://download.eclipse.org/releases/mars"/>
     <properties xmi:id="_gReNwM1bEeSQpbp6WoTKiQ" key="eclipse38.download.prefix" value="${eclipse38.download}"/>
@@ -15,12 +15,11 @@
     <properties xmi:id="_BukoEVkbEeSo0vu-C-A3cw" key="diffmerge.repo.url" value="${eclipse.download.prefix}/diffmerge/releases/0.7.0/emf-diffmerge-site"/>
     <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="${eclipse.download.prefix}/diffmerge/releases/0.7.0/edm-patterns-site"/>
     <properties xmi:id="_7UOncM1xEeSFroBhAlzk1g" key="query.legacy.repo.url" value="http://download.eclipse.org/sirius/updates/legacy/1.1.0/"/>
-    <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha_runtime.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_runtime/lastSuccessfulBuild/artifact/result/publish/kitalpha_runtime/site.p2/"/>
-    <properties xmi:id="_FinS8DQ8EeWzhdVFzhPIIQ" key="kitalpha_sdk.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_SDK/lastSuccessfulBuild/artifact/result/publish/kitalpha_sdk/site.p2/"/>
+    <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_master/lastSuccessfulBuild/artifact/result/publish/kitalpha_sdk/site.p2/"/>
     <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/job/capella-master/lastSuccessfulBuild/artifact/result/publish/org.polarsys.capella/site.p2/"/>
     <properties xmi:id="_rstsgNMCEeSCstxmhDJ57A" key="capella.egf.repo.url" value="https://hudson.polarsys.org/capella/job/capella-master/lastSuccessfulBuild/artifact/result/publish/org.polarsys.capella.core.egf.feature/site.p2/"/>
     <properties xmi:id="_-jrxkA9SEeW7CM9Somx7YA" key="docgen.addon.location" value="https://hudson.polarsys.org/capella/job/capella-addon-docgen-master/lastSuccessfulBuild"/>
-    <properties xmi:id="_hJrtIVq-EeW9LJvhZUfugg" key="amalgam.repo.url" value="http://download.eclipse.org/modeling/amalgam/updates/nightly/1.7.x/mars/"/>
+    <properties xmi:id="_hJrtIVq-EeW9LJvhZUfugg" key="amalgam.repo.url" value="http://download.eclipse.org/modeling/amalgam/updates/nightly/1.7.0-N20160610-082445/neon/"/>
     <properties xmi:id="_ja26cAU0Eeajha5FGgk9Cw" key="gmf.repo.url" value="${sirius.repo.url}"/>
   </propertyPackages>
   <propertyPackages xmi:id="_vtRuAI5EEeOQ8YcnVfa6Wg" name="versions">
@@ -56,7 +55,7 @@
         <featureNames>org.eclipse.egf.sdk</featureNames>
       </steps>
       <steps xsi:type="buildstep:InstallStep" xmi:id="_Cvf30e1_EeSrPuKJgj8pcA" name="install kitalpha releng TP_build" id="TP_build" profile="SDKProfile" p2_os="" p2_ws="" p2_arch="">
-        <updateSiteUrls>${kitalpha_runtime.repo.url}</updateSiteUrls>
+        <updateSiteUrls>${kitalpha.repo.url}</updateSiteUrls>
         <featureNames>org.polarsys.kitalpha.releng.feature</featureNames>
       </steps>
     </steps>
