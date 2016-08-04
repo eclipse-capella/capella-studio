@@ -1,4 +1,4 @@
-//Generated with EGF 1.3.0.v20150924-1035
+//Generated with EGF 1.3.0.v20160112-1239
 package org.polarsys.capella.extension.tools.patterns.model.generation;
 
 import java.util.HashMap;

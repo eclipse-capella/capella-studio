@@ -198,7 +198,6 @@ import org.polarsys.capella.core.data.helpers.information.delegates.BinaryExpres
 import org.polarsys.capella.core.data.helpers.information.delegates.ClassHelper;
 import org.polarsys.capella.core.data.helpers.information.delegates.CollectionHelper;
 import org.polarsys.capella.core.data.helpers.information.delegates.CommunicationItemHelper;
-import org.polarsys.capella.core.data.helpers.information.delegates.CommunicationLinkAllocationHelper;
 import org.polarsys.capella.core.data.helpers.information.delegates.CommunicationLinkExchangerHelper;
 import org.polarsys.capella.core.data.helpers.information.delegates.CommunicationLinkHelper;
 import org.polarsys.capella.core.data.helpers.information.delegates.DataTypeHelper;
