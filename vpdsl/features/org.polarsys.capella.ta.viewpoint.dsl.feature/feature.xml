@@ -12,7 +12,7 @@
 <feature
       id="org.polarsys.capella.ta.viewpoint.dsl.feature"
       label="%featureName"
-      version="1.0.0.qualifier"
+      version="1.1.0.qualifier"
       provider-name="%providerName">
 
    <description>
@@ -28,7 +28,7 @@
    </license>
 
    <requires>
-      <import feature="org.polarsys.kitalpha.ad.dsl.feature" version="0.5.1.v20150306-0533"/>
+      <import feature="org.polarsys.kitalpha.ad.dsl.feature" version="1.1.0.qualifier"/>
    </requires>
 
    <plugin
