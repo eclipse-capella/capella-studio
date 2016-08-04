@@ -1,14 +1,4 @@
-/*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the Eclipse Public License v1.0
-* which accompanies this distribution, and is available at
-* http://www.eclipse.org/legal/epl-v10.html
-*
-* Contributors:
-*    Thales - initial API and implementation
-*******************************************************************************/
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.4.0.v20160519-0641
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extension;
 
 import org.eclipse.egf.common.helper.*;
@@ -24,9 +14,7 @@ import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extensions.UIProperti
 import org.eclipse.emf.common.util.EList;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.desc.helper.configuration.VpDslConfigurationHelper;
 
-public class UI2PropertyTab
-		extends
-		org.polarsys.capella.ad.viewpoint.dsl.generation.ui.common.UIAbstractPattern {
+public class UI2PropertyTab extends org.polarsys.capella.ad.viewpoint.dsl.generation.ui.common.UIAbstractPattern {
 	protected static String nl;
 
 	public static synchronized UI2PropertyTab create(String lineSeparator) {
@@ -36,21 +24,17 @@ public class UI2PropertyTab
 		return result;
 	}
 
-	public final String NL = nl == null ? (System.getProperties()
-			.getProperty("line.separator")) : nl;
-	protected final String TEXT_1 = "<extension"
-			+ NL
-			+ "\tpoint=\"org.eclipse.ui.views.properties.tabbed.propertyTabs\">"
-			+ NL + "\t<propertyTabs " + NL + "\t\tcontributorId=\"";
+	public final String NL = nl == null ? (System.getProperties().getProperty("line.separator")) : nl;
+	protected final String TEXT_1 = "<extension" + NL
+			+ "\tpoint=\"org.eclipse.ui.views.properties.tabbed.propertyTabs\">" + NL + "\t<propertyTabs " + NL
+			+ "\t\tcontributorId=\"";
 	protected final String TEXT_2 = "\">" + NL + "\t\t\t";
-	protected final String TEXT_3 = NL + "\t\t\t<propertyTab" + NL
-			+ "\t\t    \tafterTab=\"Base\"" + NL + "\t\t        category=\"";
+	protected final String TEXT_3 = NL + "\t\t\t<propertyTab" + NL + "\t\t    \tafterTab=\"Base\"" + NL
+			+ "\t\t        category=\"";
 	protected final String TEXT_4 = "\"" + NL + "\t\t        id=\"";
 	protected final String TEXT_5 = "\"" + NL + "\t\t        label=\"";
-	protected final String TEXT_6 = "\">" + NL + "\t\t    </propertyTab> " + NL
-			+ "\t\t\t";
-	protected final String TEXT_7 = NL + "\t</propertyTabs>" + NL
-			+ "</extension> " + NL;
+	protected final String TEXT_6 = "\">" + NL + "\t\t    </propertyTab> " + NL + "\t\t\t";
+	protected final String TEXT_7 = NL + "\t</propertyTabs>" + NL + "</extension> " + NL;
 	protected final String TEXT_8 = NL;
 	protected final String TEXT_9 = NL;
 
@@ -85,8 +69,7 @@ public class UI2PropertyTab
 		}
 		ctx.setNode(currentNode);
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
 		stringBuffer.append(TEXT_8);
@@ -108,8 +91,7 @@ public class UI2PropertyTab
 			parameterValues.put("parameter", this.parameter);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
@@ -122,8 +104,7 @@ public class UI2PropertyTab
 
 	protected org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIDescription parameter = null;
 
-	public void set_parameter(
-			org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIDescription object) {
+	public void set_parameter(org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIDescription object) {
 		this.parameter = object;
 	}
 
@@ -133,8 +114,7 @@ public class UI2PropertyTab
 		return parameters;
 	}
 
-	protected void method_generatePropertyTabsExtensions(
-			final StringBuffer stringBuffer, final PatternContext ctx)
+	protected void method_generatePropertyTabsExtensions(final StringBuffer stringBuffer, final PatternContext ctx)
 			throws Exception {
 
 		// Get the Properties Contributors list 
@@ -145,18 +125,15 @@ public class UI2PropertyTab
 			ArrayList<IConfigurationElement> contributors = UIPropertiesExtensionsManager
 					.getContributors(iPropertiesContributor);
 			for (IConfigurationElement iContributor : contributors) {
-				String cID = UIPropertiesExtensionsManager
-						.getContributorID(iContributor);
-				String cCategory = UIPropertiesExtensionsManager
-						.getPropertyTabCategory(iContributor);
+				String cID = UIPropertiesExtensionsManager.getContributorID(iContributor);
+				String cCategory = UIPropertiesExtensionsManager.getPropertyTabCategory(iContributor);
 				stringBuffer.append(TEXT_1);
 				stringBuffer.append(cID);
 				stringBuffer.append(TEXT_2);
 				for (UI iUI : parameter.getUIs()) {
 					String ContainerName = iUI.getName();
 					String uiLabel = iUI.getLabel();
-					uiLabel = (uiLabel != null && uiLabel.trim().length() > 0 ? uiLabel
-							: ContainerName);
+					uiLabel = (uiLabel != null && uiLabel.trim().length() > 0 ? uiLabel : ContainerName);
 					stringBuffer.append(TEXT_3);
 					stringBuffer.append(cCategory);
 					stringBuffer.append(TEXT_4);
@@ -169,22 +146,18 @@ public class UI2PropertyTab
 			}
 		}
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(),
-				"generatePropertyTabsExtensions", stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "generatePropertyTabsExtensions", stringBuffer.toString());
 	}
 
-	protected void method_getTargetApplicationName(
-			final StringBuffer stringBuffer, final PatternContext ctx)
+	protected void method_getTargetApplicationName(final StringBuffer stringBuffer, final PatternContext ctx)
 			throws Exception {
 
 		Object value = ctx.getValue("domain");
 		if (value instanceof EList<?>) {
 			value = ((EList) value).get(0);
 		}
-		targetApplication = VpDslConfigurationHelper
-				.getTargetApplication(value);
+		targetApplication = VpDslConfigurationHelper.getTargetApplication(value);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(),
-				"getTargetApplicationName", stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "getTargetApplicationName", stringBuffer.toString());
 	}
 }

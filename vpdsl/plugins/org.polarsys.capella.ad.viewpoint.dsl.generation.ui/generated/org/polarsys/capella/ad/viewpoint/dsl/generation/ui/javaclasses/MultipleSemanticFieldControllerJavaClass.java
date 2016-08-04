@@ -1,14 +1,4 @@
-/*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the Eclipse Public License v1.0
-* which accompanies this distribution, and is available at
-* http://www.eclipse.org/legal/epl-v10.html
-*
-* Contributors:
-*    Thales - initial API and implementation
-*******************************************************************************/
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.4.0.v20160519-0641
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.javaclasses;
 
 import org.eclipse.egf.common.helper.*;
@@ -26,68 +16,33 @@ import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.JDTUtility;
 import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.UIProjectManager;
 
 public class MultipleSemanticFieldControllerJavaClass
-		extends
-		org.polarsys.capella.ad.viewpoint.dsl.generation.ui.common.AbstractLoopFinishedJavaClass {
+		extends org.polarsys.capella.ad.viewpoint.dsl.generation.ui.common.AbstractLoopFinishedJavaClass {
 	protected static String nl;
 
-	public static synchronized MultipleSemanticFieldControllerJavaClass create(
-			String lineSeparator) {
+	public static synchronized MultipleSemanticFieldControllerJavaClass create(String lineSeparator) {
 		nl = lineSeparator;
 		MultipleSemanticFieldControllerJavaClass result = new MultipleSemanticFieldControllerJavaClass();
 		nl = null;
 		return result;
 	}
 
-	public final String NL = nl == null ? (System.getProperties()
-			.getProperty("line.separator")) : nl;
+	public final String NL = nl == null ? (System.getProperties().getProperty("line.separator")) : nl;
 	protected final String TEXT_1 = "package ";
 	protected final String TEXT_2 = ";";
-	protected final String TEXT_3 = NL + "  /**" + NL
-			+ " * <!-- begin-user-doc -->" + NL + " * The '<em><b>[";
-	protected final String TEXT_4 = "]</b></em>' customized MultipleSemanticFieldController."
-			+ NL
-			+ " * <!-- end-user-doc -->"
-			+ NL
-			+ " * <p>"
-			+ NL
-			+ " * </p>"
-			+ NL
-			+ " *"
-			+ NL
-			+ " * @generated"
-			+ NL
-			+ " */"
-			+ NL
-			+ "  "
-			+ NL
-			+ "public class ";
-	protected final String TEXT_5 = " extends AbstractMultipleSemanticFieldController {"
-			+ NL
-			+ "  /**"
-			+ NL
-			+ "   * <!-- begin-user-doc -->"
-			+ NL
-			+ "   * <!-- end-user-doc -->"
-			+ NL
+	protected final String TEXT_3 = NL + "  /**" + NL + " * <!-- begin-user-doc -->" + NL + " * The '<em><b>[";
+	protected final String TEXT_4 = "]</b></em>' customized MultipleSemanticFieldController." + NL
+			+ " * <!-- end-user-doc -->" + NL + " * <p>" + NL + " * </p>" + NL + " *" + NL + " * @generated" + NL
+			+ " */" + NL + "  " + NL + "public class ";
+	protected final String TEXT_5 = " extends AbstractMultipleSemanticFieldController {" + NL + "  /**" + NL
+			+ "   * <!-- begin-user-doc -->" + NL + "   * <!-- end-user-doc -->" + NL
 			+ "   * @see org.polarsys.capella.core.ui.properties.controllers.AbstractMultipleSemanticFieldController#getReadOpenValuesQuery(org.polarsys.capella.core.data.capellacore.CapellaElement)"
-			+ NL
-			+ "   * @param semanticElement_p"
-			+ NL
-			+ "   * @generated"
-			+ NL
-			+ "   */"
-			+ NL
-			+ "  @Override"
-			+ NL
-			+ "  protected IBusinessQuery getReadOpenValuesQuery(CapellaElement semanticElement_p) {"
-			+ NL
+			+ NL + "   * @param semanticElement_p" + NL + "   * @generated" + NL + "   */" + NL + "  @Override" + NL
+			+ "  protected IBusinessQuery getReadOpenValuesQuery(EObject semanticElement_p) {" + NL
 			+ "    return BusinessQueriesProvider.getInstance().getContribution(semanticElement_p.eClass(), ";
 	protected final String TEXT_6 = ");" + NL + "  }" + NL + "}";
-	protected final String TEXT_7 = NL
-			+ "import org.polarsys.capella.core.ui.properties.controllers.AbstractMultipleSemanticFieldController;"
-			+ NL
-			+ "import org.polarsys.capella.core.business.queries.IBusinessQuery;"
-			+ NL
+	protected final String TEXT_7 = NL + "import org.eclipse.emf.ecore.EObject;" + NL
+			+ "import org.polarsys.capella.core.ui.properties.controllers.AbstractMultipleSemanticFieldController;" + NL
+			+ "import org.polarsys.capella.core.business.queries.IBusinessQuery;" + NL
 			+ "import org.polarsys.capella.core.business.queries.capellacore.BusinessQueriesProvider;";
 	protected final String TEXT_8 = "import org.polarsys.capella.core.data.capellacore.CapellaElement;";
 	protected final String TEXT_9 = NL + "\t\timport ";
@@ -126,8 +81,7 @@ public class MultipleSemanticFieldControllerJavaClass
 		}
 		ctx.setNode(currentNode);
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
 		stringBuffer.append(TEXT_11);
@@ -156,30 +110,26 @@ public class MultipleSemanticFieldControllerJavaClass
 			parameterValues.put("parameter", this.parameter);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
 
 	protected org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility epfUtility = null;
 
-	public void set_epfUtility(
-			org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility object) {
+	public void set_epfUtility(org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility object) {
 		this.epfUtility = object;
 	}
 
 	protected org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer section = null;
 
-	public void set_section(
-			org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer object) {
+	public void set_section(org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer object) {
 		this.section = object;
 	}
 
 	protected org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIField parameter = null;
 
-	public void set_parameter(
-			org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIField object) {
+	public void set_parameter(org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIField object) {
 		this.parameter = object;
 	}
 
@@ -189,63 +139,50 @@ public class MultipleSemanticFieldControllerJavaClass
 		return parameters;
 	}
 
-	protected void method_setParameters(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_setParameters(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		classname = epfUtility.getWidgetName(parameter) + "FieldController";
 		projectname = UIProjectManager.INSTANCE.getUiProject().getName();
 		String tabID = ((UI) section.eContainer()).getName();
-		packagename = JDTUtility.getValidPackageName(projectname
-				+ ".controllers");
-		epfUtility.registerClassToImportInMainClass(parameter, packagename
-				+ "." + classname);
+		packagename = JDTUtility.getValidPackageName(projectname + ".controllers");
+		epfUtility.registerClassToImportInMainClass(parameter, packagename + "." + classname);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "setParameters",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "setParameters", stringBuffer.toString());
 	}
 
-	protected void method_setEPFUtility(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_setEPFUtility(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		epfUtility = EPFUtility.getEPFUtilityFor(section);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "setEPFUtility",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "setEPFUtility", stringBuffer.toString());
 	}
 
-	protected void method_setSection(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_setSection(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		EObject eObject = parameter.eContainer();
-		while (eObject instanceof UIContainer
-				&& !(eObject.eContainer() instanceof UI)) {
+		while (eObject instanceof UIContainer && !(eObject.eContainer() instanceof UI)) {
 			eObject = eObject.eContainer();
 		}
 		section = (UIContainer) eObject;
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "setSection",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "setSection", stringBuffer.toString());
 	}
 
-	protected void method_genPackage(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_genPackage(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		stringBuffer.append(TEXT_1);
 		stringBuffer.append(packagename);
 		stringBuffer.append(TEXT_2);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "genPackage",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "genPackage", stringBuffer.toString());
 	}
 
-	protected void method_genClass(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_genClass(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		DataWidget iDataWidget = epfUtility.getDataOf(parameter);
 		String associatedEStructuralFeature = iDataWidget.widgetFieldAccessorName;
-		String inWidgetControllerName = iDataWidget.widgetName
-				+ "FieldController";
+		String inWidgetControllerName = iDataWidget.widgetName + "FieldController";
 
 		char first = Character.toUpperCase(inWidgetControllerName.charAt(0));
 		inWidgetControllerName = first + inWidgetControllerName.substring(1);
@@ -258,33 +195,28 @@ public class MultipleSemanticFieldControllerJavaClass
 		stringBuffer.append(associatedEStructuralFeature);
 		stringBuffer.append(TEXT_6);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "genClass",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "genClass", stringBuffer.toString());
 	}
 
-	protected void method_genDefaultImport(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_genDefaultImport(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		stringBuffer.append(TEXT_7);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "genDefaultImport",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "genDefaultImport", stringBuffer.toString());
 	}
 
-	protected void method_genSematicImports(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_genSematicImports(final StringBuffer stringBuffer, final PatternContext ctx)
+			throws Exception {
 
 		stringBuffer.append(TEXT_8);
-		ArrayList<String> importList = epfUtility
-				.getSematicImportsFor(parameter);
+		ArrayList<String> importList = epfUtility.getSematicImportsFor(parameter);
 		for (String currentImport : importList) {
 			stringBuffer.append(TEXT_9);
 			stringBuffer.append(currentImport);
 			stringBuffer.append(TEXT_10);
 		}
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "genSematicImports",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "genSematicImports", stringBuffer.toString());
 	}
 
 	public boolean preCondition(PatternContext ctx) throws Exception {

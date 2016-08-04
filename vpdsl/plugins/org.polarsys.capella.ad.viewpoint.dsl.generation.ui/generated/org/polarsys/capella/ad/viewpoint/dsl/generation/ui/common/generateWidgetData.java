@@ -1,14 +1,4 @@
-/*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the Eclipse Public License v1.0
-* which accompanies this distribution, and is available at
-* http://www.eclipse.org/legal/epl-v10.html
-*
-* Contributors:
-*    Thales - initial API and implementation
-*******************************************************************************/
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.4.0.v20160519-0641
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.common;
 
 import java.util.*;
@@ -48,8 +38,7 @@ public class generateWidgetData {
 			}
 		}
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 	}
 
@@ -63,29 +52,24 @@ public class generateWidgetData {
 			parameterValues.put("parameter", this.parameter);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
 
-	protected void method_InitDataWidget(final StringBuffer out,
-			final PatternContext ctx) throws Exception {
+	protected void method_InitDataWidget(final StringBuffer out, final PatternContext ctx) throws Exception {
 		EObject parent = parameter.eContainer();
 
 		// Go back the the UIContainer used to generate a section (UIContainer which parent is an UI)
-		while (parent instanceof UIContainer
-				&& !(parent.eContainer() instanceof UI))
+		while (parent instanceof UIContainer && !(parent.eContainer() instanceof UI))
 			parent = parent.eContainer();
 
-		EPFUtility epfUtility = EPFUtility
-				.getEPFUtilityFor((UIContainer) parent);
+		EPFUtility epfUtility = EPFUtility.getEPFUtilityFor((UIContainer) parent);
 
 		epfUtility.generateDataforUIField(parameter);
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "InitDataWidget",
-				out.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "InitDataWidget", out.toString());
 	}
 
 	public boolean preCondition(PatternContext ctx) throws Exception {
@@ -94,8 +78,7 @@ public class generateWidgetData {
 
 	protected org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIField parameter;
 
-	public void set_parameter(
-			org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIField parameter) {
+	public void set_parameter(org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIField parameter) {
 		this.parameter = parameter;
 	}
 

@@ -25,7 +25,7 @@ public class <%=inWidgetControllerName%> extends AbstractMultipleSemanticFieldCo
    * @generated
    */
   @Override
-  protected IBusinessQuery getReadOpenValuesQuery(CapellaElement semanticElement_p) {
+  protected IBusinessQuery getReadOpenValuesQuery(EObject semanticElement_p) {
     return BusinessQueriesProvider.getInstance().getContribution(semanticElement_p.eClass(), <%=associatedEStructuralFeature%>);
   }
 }
