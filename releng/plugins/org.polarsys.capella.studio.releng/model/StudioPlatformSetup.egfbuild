@@ -79,6 +79,8 @@
       <featureNames>org.polarsys.capella.patterns.feature</featureNames>
       <featureNames>org.polarsys.capella.detachment.version.precondition.feature</featureNames>
       <featureNames>org.polarsys.capella.detachment.version.precondition.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.detachment.propertyvalue.feature</featureNames>
+      <featureNames>org.polarsys.capella.detachment.propertyvalue.source.feature</featureNames>
       <featureNames>org.polarsys.capella.doc.feature</featureNames>
     </steps>
     <steps xsi:type="buildstep:InstallStep" xmi:id="_w1HJsNMCEeSCstxmhDJ57A" name="install capella egf features" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
