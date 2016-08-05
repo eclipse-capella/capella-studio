@@ -35,12 +35,12 @@ public class <%=inWidgetQueryName%> implements IBusinessQuery {
 
 		Project project = CapellaProjectHelper.getProject(element_p);
 		SystemEngineering systemEngineering = project != null ? SystemEngineeringExt.getSystemEngineering(project) : null;				
-				
+		
 		if (null != systemEngineering) {
-			for (EObject elt : EObjectExt.getAll(systemEngineering, <%=widgetFieldETypeLiteral%>)) {
-				availableElements.add((CapellaElement) elt);
-			}
+			Set<EObject> all = EObjectExt.getAll(systemEngineering, <%=widgetFieldETypeLiteral%>);
+			availableElements.addAll(all);
 		}
+				
 		availableElements = ListExt.removeDuplicates(availableElements);
 		availableElements.remove(element_p);
 		return availableElements;

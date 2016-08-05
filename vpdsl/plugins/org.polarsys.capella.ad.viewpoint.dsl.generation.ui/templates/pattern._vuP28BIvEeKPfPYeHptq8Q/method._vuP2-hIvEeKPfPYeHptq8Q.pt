@@ -37,9 +37,8 @@ public class <%=inWidgetQueryName%> implements IBusinessQuery {
 		SystemEngineering systemEngineering = project != null ? SystemEngineeringExt.getSystemEngineering(project) : null;	
 
 		if (null != systemEngineering) {
-			for (EObject elt : EObjectExt.getAll(systemEngineering, <%=widgetFieldETypeLiteral%>)) {
-				availableElements.add((EObject) elt);
-			}
+			Set<EObject> all = EObjectExt.getAll(systemEngineering, <%=widgetFieldETypeLiteral%>);
+			availableElements.addAll(all);
 		}
 		availableElements = ListExt.removeDuplicates(availableElements);
 		availableElements.remove(elementP);

@@ -39,12 +39,12 @@ public class SimpleSemanticFieldsQueryJavaClass
 			+ "\t\tList<EObject> availableElements = new ArrayList<EObject>();" + NL + "" + NL
 			+ "\t\tProject project = CapellaProjectHelper.getProject(element_p);" + NL
 			+ "\t\tSystemEngineering systemEngineering = project != null ? SystemEngineeringExt.getSystemEngineering(project) : null;\t\t\t\t"
-			+ NL + "\t\t\t\t" + NL + "\t\tif (null != systemEngineering) {" + NL
-			+ "\t\t\tfor (EObject elt : EObjectExt.getAll(systemEngineering, ";
-	protected final String TEXT_5 = ")) {" + NL + "\t\t\t\tavailableElements.add((CapellaElement) elt);" + NL
-			+ "\t\t\t}" + NL + "\t\t}" + NL + "\t\tavailableElements = ListExt.removeDuplicates(availableElements);"
-			+ NL + "\t\tavailableElements.remove(element_p);" + NL + "\t\treturn availableElements;" + NL + "\t}" + NL
-			+ "" + NL + "\t/**" + NL + "     * <!-- begin-user-doc -->" + NL + "     * <!-- end-user-doc -->" + NL
+			+ NL + "\t\t" + NL + "\t\tif (null != systemEngineering) {" + NL
+			+ "\t\t\tSet<EObject> all = EObjectExt.getAll(systemEngineering, ";
+	protected final String TEXT_5 = ");" + NL + "\t\t\tavailableElements.addAll(all);" + NL + "\t\t}" + NL + "\t\t\t\t"
+			+ NL + "\t\tavailableElements = ListExt.removeDuplicates(availableElements);" + NL
+			+ "\t\tavailableElements.remove(element_p);" + NL + "\t\treturn availableElements;" + NL + "\t}" + NL + ""
+			+ NL + "\t/**" + NL + "     * <!-- begin-user-doc -->" + NL + "     * <!-- end-user-doc -->" + NL
 			+ "     * @param element_p" + NL + "     * @param onlyGenerated_p" + NL + "     * @generated" + NL
 			+ "     */" + NL + "\tpublic List<EObject> getCurrentElements(EObject element_p, boolean onlyGenerated_p) {"
 			+ NL + "\t\tArrayList<EObject> result = new ArrayList<EObject>();" + NL + "\t\tresult.add(((";
@@ -59,9 +59,9 @@ public class SimpleSemanticFieldsQueryJavaClass
 	protected final String TEXT_9 = ");" + NL + "\t\treturn eReferences;" + NL + "\t}" + NL + "" + NL + "}";
 	protected final String TEXT_10 = "package ";
 	protected final String TEXT_11 = ";";
-	protected final String TEXT_12 = "import java.util.ArrayList;" + NL + "import java.util.List;" + NL + "" + NL
-			+ "import org.eclipse.emf.ecore.EClass;" + NL + "import org.eclipse.emf.ecore.EObject;" + NL
-			+ "import org.eclipse.emf.ecore.EReference;" + NL + "" + NL
+	protected final String TEXT_12 = "import java.util.ArrayList;" + NL + "import java.util.List;" + NL
+			+ "import java.util.Set;" + NL + "" + NL + "import org.eclipse.emf.ecore.EClass;" + NL
+			+ "import org.eclipse.emf.ecore.EObject;" + NL + "import org.eclipse.emf.ecore.EReference;" + NL + "" + NL
 			+ "import org.polarsys.capella.common.helpers.EObjectExt;" + NL
 			+ "import org.polarsys.capella.core.business.queries.IBusinessQuery;" + NL
 			+ "import org.polarsys.capella.core.data.capellacore.CapellaElement;" + NL

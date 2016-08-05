@@ -42,9 +42,9 @@ public class MultipleSemanticFieldsQueryJavaClass
 			+ "\t\tProject project = CapellaProjectHelper.getProject(elementP);" + NL
 			+ "\t\tSystemEngineering systemEngineering = project != null ? SystemEngineeringExt.getSystemEngineering(project) : null;\t"
 			+ NL + "" + NL + "\t\tif (null != systemEngineering) {" + NL
-			+ "\t\t\tfor (EObject elt : EObjectExt.getAll(systemEngineering, ";
-	protected final String TEXT_7 = ")) {" + NL + "\t\t\t\tavailableElements.add((EObject) elt);" + NL + "\t\t\t}" + NL
-			+ "\t\t}" + NL + "\t\tavailableElements = ListExt.removeDuplicates(availableElements);" + NL
+			+ "\t\t\tSet<EObject> all = EObjectExt.getAll(systemEngineering, ";
+	protected final String TEXT_7 = ");" + NL + "\t\t\tavailableElements.addAll(all);" + NL + "\t\t}" + NL
+			+ "\t\tavailableElements = ListExt.removeDuplicates(availableElements);" + NL
 			+ "\t\tavailableElements.remove(elementP);" + NL + "\t\treturn availableElements;" + NL + "\t}" + NL + ""
 			+ NL + "\t/**" + NL + "     * <!-- begin-user-doc -->" + NL + "     * <!-- end-user-doc -->" + NL
 			+ "     * @param elementP" + NL + "     * @param onlyGeneratedP" + NL + "     * @generated" + NL + "     */"
@@ -60,9 +60,9 @@ public class MultipleSemanticFieldsQueryJavaClass
 			+ "\tpublic List<EReference> getEStructuralFeatures() {" + NL
 			+ "\t\tList<EReference> eReferences = new ArrayList<EReference>();" + NL + "\t\teReferences.add(";
 	protected final String TEXT_12 = ");" + NL + "\t\treturn eReferences;" + NL + "\t}" + NL + "}" + NL;
-	protected final String TEXT_13 = NL + "import java.util.ArrayList;" + NL + "import java.util.List;" + NL + "" + NL
-			+ "import org.eclipse.emf.ecore.EClass;" + NL + "import org.eclipse.emf.ecore.EObject;" + NL
-			+ "import org.eclipse.emf.ecore.EReference;" + NL + "" + NL
+	protected final String TEXT_13 = NL + "import java.util.ArrayList;" + NL + "import java.util.List;" + NL
+			+ "import java.util.Set;" + NL + "" + NL + "import org.eclipse.emf.ecore.EClass;" + NL
+			+ "import org.eclipse.emf.ecore.EObject;" + NL + "import org.eclipse.emf.ecore.EReference;" + NL + "" + NL
 			+ "import org.polarsys.capella.common.helpers.EObjectExt;" + NL
 			+ "import org.polarsys.capella.core.business.queries.IBusinessQuery;" + NL
 			+ "import org.polarsys.capella.core.data.capellacore.CapellaElement;" + NL
