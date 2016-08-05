@@ -1,14 +1,4 @@
-/*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the Eclipse Public License v1.0
-* which accompanies this distribution, and is available at
-* http://www.eclipse.org/legal/epl-v10.html
-*
-* Contributors:
-*    Thales - initial API and implementation
-*******************************************************************************/
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.4.0.v20160519-0641
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extension;
 
 import org.eclipse.egf.common.helper.*;
@@ -24,30 +14,25 @@ import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.JDTUtility;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpdesc.Class;
 
 public class UIContainer2PropertySection
-		extends
-		org.polarsys.capella.ad.viewpoint.dsl.generation.ui.common.UIAbstractPattern {
+		extends org.polarsys.capella.ad.viewpoint.dsl.generation.ui.common.UIAbstractPattern {
 	protected static String nl;
 
-	public static synchronized UIContainer2PropertySection create(
-			String lineSeparator) {
+	public static synchronized UIContainer2PropertySection create(String lineSeparator) {
 		nl = lineSeparator;
 		UIContainer2PropertySection result = new UIContainer2PropertySection();
 		nl = null;
 		return result;
 	}
 
-	public final String NL = nl == null ? (System.getProperties()
-			.getProperty("line.separator")) : nl;
-	protected final String TEXT_1 = "\t\t\t<propertySection" + NL
-			+ "\t\t    \tclass=\"";
+	public final String NL = nl == null ? (System.getProperties().getProperty("line.separator")) : nl;
+	protected final String TEXT_1 = "\t\t\t<propertySection" + NL + "\t\t    \tclass=\"";
 	protected final String TEXT_2 = "\"" + NL + "\t\t        filter=\"";
 	protected final String TEXT_3 = "\"" + NL + "\t\t        id=\"";
 	protected final String TEXT_4 = "\"" + NL + "\t\t        tab=\"";
 	protected final String TEXT_5 = "\">" + NL + "\t\t        ";
 	protected final String TEXT_6 = "<input" + NL + "                  type=\"";
 	protected final String TEXT_7 = "\">" + NL + "               </input>";
-	protected final String TEXT_8 = NL + "\t\t    </propertySection> " + NL
-			+ "\t\t    ";
+	protected final String TEXT_8 = NL + "\t\t    </propertySection> " + NL + "\t\t    ";
 	protected final String TEXT_9 = NL;
 	protected final String TEXT_10 = NL;
 
@@ -82,8 +67,7 @@ public class UIContainer2PropertySection
 		}
 		ctx.setNode(currentNode);
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
 		stringBuffer.append(TEXT_9);
@@ -107,8 +91,7 @@ public class UIContainer2PropertySection
 			parameterValues.put("parameter", this.parameter);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
@@ -127,8 +110,7 @@ public class UIContainer2PropertySection
 
 	protected org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer parameter = null;
 
-	public void set_parameter(
-			org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer object) {
+	public void set_parameter(org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer object) {
 		this.parameter = object;
 	}
 
@@ -138,12 +120,10 @@ public class UIContainer2PropertySection
 		return parameters;
 	}
 
-	protected void method_generatePropertySectionsExtensions(
-			final StringBuffer stringBuffer, final PatternContext ctx)
+	protected void method_generatePropertySectionsExtensions(final StringBuffer stringBuffer, final PatternContext ctx)
 			throws Exception {
 
-		String ctName = JDTUtility.getValidClassName(tabID + "_"
-				+ parameter.getName());
+		String ctName = JDTUtility.getValidClassName(tabID + "_" + parameter.getName());
 		String className = packageName + "." + ctName;
 
 		UI ui = (UI) parameter.eContainer();
@@ -152,8 +132,7 @@ public class UIContainer2PropertySection
 		if (ds != null) {
 			LocalClass localClass = (LocalClass) ui.getUI_DataSource();
 			Class clazz = (Class) localClass.getUI_For_LocalClass();
-			datasourceImport = GenmodelUtility.getInstance()
-					.getSemanticEClassImport(clazz);
+			datasourceImport = GenmodelUtility.getInstance().getSemanticEClassImport(clazz);
 		}
 
 		JDTUtility.createPackage(projectName, packageName);
@@ -174,28 +153,23 @@ public class UIContainer2PropertySection
 		}
 		stringBuffer.append(TEXT_8);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(),
-				"generatePropertySectionsExtensions", stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "generatePropertySectionsExtensions", stringBuffer.toString());
 	}
 
-	protected void method_setPackageName(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_setPackageName(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		packageName = projectName + ".sections";
 		packageName = JDTUtility.getValidPackageName(packageName);
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "setPackageName",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "setPackageName", stringBuffer.toString());
 	}
 
-	protected void method_setTabID(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_setTabID(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		tabID = ((UI) parameter.eContainer()).getName();
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "setTabID",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "setTabID", stringBuffer.toString());
 	}
 
 	public boolean preCondition(PatternContext ctx) throws Exception {

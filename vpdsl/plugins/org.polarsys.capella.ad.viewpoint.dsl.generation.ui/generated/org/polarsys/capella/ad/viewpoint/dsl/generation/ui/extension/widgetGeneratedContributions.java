@@ -1,14 +1,4 @@
-/*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the Eclipse Public License v1.0
-* which accompanies this distribution, and is available at
-* http://www.eclipse.org/legal/epl-v10.html
-*
-* Contributors:
-*    Thales - initial API and implementation
-*******************************************************************************/
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.4.0.v20160519-0641
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extension;
 
 import org.eclipse.egf.common.helper.*;
@@ -27,16 +17,14 @@ import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.PluginExtensionE
 public class widgetGeneratedContributions {
 	protected static String nl;
 
-	public static synchronized widgetGeneratedContributions create(
-			String lineSeparator) {
+	public static synchronized widgetGeneratedContributions create(String lineSeparator) {
 		nl = lineSeparator;
 		widgetGeneratedContributions result = new widgetGeneratedContributions();
 		nl = null;
 		return result;
 	}
 
-	public final String NL = nl == null ? (System.getProperties()
-			.getProperty("line.separator")) : nl;
+	public final String NL = nl == null ? (System.getProperties().getProperty("line.separator")) : nl;
 	protected final String TEXT_1 = "\t";
 	protected final String TEXT_2 = NL + "<extension " + NL + "\tpoint=\"";
 	protected final String TEXT_3 = "\">" + NL + "\t\t\t\t";
@@ -79,8 +67,7 @@ public class widgetGeneratedContributions {
 		}
 		ctx.setNode(currentNode);
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
 		stringBuffer.append(TEXT_9);
@@ -98,16 +85,14 @@ public class widgetGeneratedContributions {
 			parameterValues.put("parameter", this.parameter);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
 
 	protected org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UI parameter = null;
 
-	public void set_parameter(
-			org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UI object) {
+	public void set_parameter(org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UI object) {
 		this.parameter = object;
 	}
 
@@ -117,8 +102,7 @@ public class widgetGeneratedContributions {
 		return parameters;
 	}
 
-	protected void method_genExtensions(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_genExtensions(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		class WidgetExtensionGenerator {
 			Map<String, ArrayList<String>> availableExtesionPoint = new HashMap<String, ArrayList<String>>();
@@ -128,19 +112,16 @@ public class widgetGeneratedContributions {
 				availableExtesionPoint.clear();
 			}
 
-			private void browseUIContainer(UIContainer container,
-					EPFUtility epfUtility) {
+			private void browseUIContainer(UIContainer container, EPFUtility epfUtility) {
 				for (UIField uiField : container.getUI_fields()) {
 					DataWidget iDataWidget = epfUtility.getDataOf(uiField);
 					ArrayList<PluginExtensionEntry> pluginExtensionEntryList = iDataWidget.PluginExtensionEntries;
-					if (pluginExtensionEntryList != null
-							&& !pluginExtensionEntryList.isEmpty()) {
+					if (pluginExtensionEntryList != null && !pluginExtensionEntryList.isEmpty()) {
 						for (PluginExtensionEntry pluginExtensionEntry : pluginExtensionEntryList) {
 							String point = pluginExtensionEntry.extensionPoint_ID;
 							if (pluginExtensionEntry.share_ExtensionPoint_ID) {
 								if (availableExtesionPoint.containsKey(point)) {
-									((ArrayList<String>) availableExtesionPoint
-											.get(point))
+									((ArrayList<String>) availableExtesionPoint.get(point))
 											.add(pluginExtensionEntry.extension);
 								} else {
 									ArrayList<String> array = new ArrayList<String>();
@@ -155,10 +136,8 @@ public class widgetGeneratedContributions {
 						}
 					}
 				}
-				if (container.getSubContainers() != null
-						&& container.getSubContainers().size() > 0) {
-					for (UIContainer iUIContainer : container
-							.getSubContainers()) {
+				if (container.getSubContainers() != null && container.getSubContainers().size() > 0) {
+					for (UIContainer iUIContainer : container.getSubContainers()) {
 						browseUIContainer(iUIContainer, epfUtility);
 					}
 				}
@@ -167,15 +146,13 @@ public class widgetGeneratedContributions {
 			private void generateExtensions(UI ui) {
 				init();
 				for (UIContainer uiContainer : ui.getUI_Containers()) {
-					EPFUtility epfUtility = EPFUtility
-							.getEPFUtilityFor(uiContainer);
+					EPFUtility epfUtility = EPFUtility.getEPFUtilityFor(uiContainer);
 					browseUIContainer(uiContainer, epfUtility);
 				}
 				// Generation of the Extensions
 				if (!availableExtesionPoint.isEmpty()) {
 					for (String iPoint : availableExtesionPoint.keySet()) {
-						ArrayList<String> array = availableExtesionPoint
-								.get(iPoint);
+						ArrayList<String> array = availableExtesionPoint.get(iPoint);
 						stringBuffer.append(TEXT_2);
 						stringBuffer.append(iPoint);
 						stringBuffer.append(TEXT_3);
@@ -195,8 +172,7 @@ public class widgetGeneratedContributions {
 		stringBuffer.append(TEXT_8);
 		weg.generateExtensions(parameter);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "genExtensions",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "genExtensions", stringBuffer.toString());
 	}
 
 	public boolean preCondition(PatternContext ctx) throws Exception {

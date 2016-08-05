@@ -1,14 +1,4 @@
-/*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the Eclipse Public License v1.0
-* which accompanies this distribution, and is available at
-* http://www.eclipse.org/legal/epl-v10.html
-*
-* Contributors:
-*    Thales - initial API and implementation
-*******************************************************************************/
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.4.0.v20160519-0641
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.common;
 
 import org.eclipse.egf.common.helper.*;
@@ -29,8 +19,7 @@ public class UIAbstractPattern {
 		return result;
 	}
 
-	public final String NL = nl == null ? (System.getProperties()
-			.getProperty("line.separator")) : nl;
+	public final String NL = nl == null ? (System.getProperties().getProperty("line.separator")) : nl;
 	protected final String TEXT_1 = "";
 	protected final String TEXT_2 = NL;
 
@@ -57,8 +46,7 @@ public class UIAbstractPattern {
 
 		ctx.setNode(currentNode);
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
 		stringBuffer.append(TEXT_1);
@@ -85,13 +73,11 @@ public class UIAbstractPattern {
 		return parameters;
 	}
 
-	protected void method_getProjectName(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_getProjectName(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		projectName = UIProjectManager.INSTANCE.getUiProject().getName();
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "getProjectName",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "getProjectName", stringBuffer.toString());
 	}
 
 	public boolean preCondition(PatternContext ctx) throws Exception {

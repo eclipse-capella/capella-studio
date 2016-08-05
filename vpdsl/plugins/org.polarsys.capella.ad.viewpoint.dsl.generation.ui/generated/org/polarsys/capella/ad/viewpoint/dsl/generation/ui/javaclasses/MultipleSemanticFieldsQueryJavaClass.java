@@ -1,14 +1,4 @@
-/*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the Eclipse Public License v1.0
-* which accompanies this distribution, and is available at
-* http://www.eclipse.org/legal/epl-v10.html
-*
-* Contributors:
-*    Thales - initial API and implementation
-*******************************************************************************/
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.4.0.v20160519-0641
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.javaclasses;
 
 import org.eclipse.egf.common.helper.*;
@@ -27,134 +17,61 @@ import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.PluginExtensionE
 import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.UIProjectManager;
 
 public class MultipleSemanticFieldsQueryJavaClass
-		extends
-		org.polarsys.capella.ad.viewpoint.dsl.generation.ui.common.AbstractLoopFinishedJavaClass {
+		extends org.polarsys.capella.ad.viewpoint.dsl.generation.ui.common.AbstractLoopFinishedJavaClass {
 	protected static String nl;
 
-	public static synchronized MultipleSemanticFieldsQueryJavaClass create(
-			String lineSeparator) {
+	public static synchronized MultipleSemanticFieldsQueryJavaClass create(String lineSeparator) {
 		nl = lineSeparator;
 		MultipleSemanticFieldsQueryJavaClass result = new MultipleSemanticFieldsQueryJavaClass();
 		nl = null;
 		return result;
 	}
 
-	public final String NL = nl == null ? (System.getProperties()
-			.getProperty("line.separator")) : nl;
+	public final String NL = nl == null ? (System.getProperties().getProperty("line.separator")) : nl;
 	protected final String TEXT_1 = "package ";
 	protected final String TEXT_2 = ";";
-	protected final String TEXT_3 = NL + "  /**" + NL
-			+ " * <!-- begin-user-doc -->" + NL + " * The '<em><b>[";
-	protected final String TEXT_4 = "]</b></em>' BusinessQuery defined for "
-			+ NL + " * '<em><b>[";
-	protected final String TEXT_5 = "]</b></em>'." + NL
-			+ " * <!-- end-user-doc -->" + NL + " * <p>" + NL + " * </p>" + NL
-			+ " *" + NL + " * @generated" + NL + " */" + NL + "public class ";
-	protected final String TEXT_6 = " implements IBusinessQuery {"
-			+ NL
-			+ ""
-			+ NL
-			+ "   /**"
-			+ NL
-			+ "    * <!-- begin-user-doc -->"
-			+ NL
-			+ "    * <!-- end-user-doc -->"
-			+ NL
-			+ "    * @param elementP"
-			+ NL
-			+ "    * @generated"
-			+ NL
-			+ "    */"
-			+ NL
-			+ "\tpublic List<CapellaElement> getAvailableElements(CapellaElement elementP) {"
-			+ NL
-			+ "\t\tList<CapellaElement> availableElements = new ArrayList<CapellaElement>();"
-			+ NL
-			+ "\t\tSystemEngineering systemEngineering = CapellaQueries.getInstance()"
-			+ NL + "\t\t\t\t.getRootQueries().getSystemEngineering(elementP);"
-			+ NL + "\t\tif (null != systemEngineering) {" + NL
+	protected final String TEXT_3 = NL + "  /**" + NL + " * <!-- begin-user-doc -->" + NL + " * The '<em><b>[";
+	protected final String TEXT_4 = "]</b></em>' BusinessQuery defined for " + NL + " * '<em><b>[";
+	protected final String TEXT_5 = "]</b></em>'." + NL + " * <!-- end-user-doc -->" + NL + " * <p>" + NL + " * </p>"
+			+ NL + " *" + NL + " * @generated" + NL + " */" + NL + "public class ";
+	protected final String TEXT_6 = " implements IBusinessQuery {" + NL + "" + NL + "   /**" + NL
+			+ "    * <!-- begin-user-doc -->" + NL + "    * <!-- end-user-doc -->" + NL + "    * @param elementP" + NL
+			+ "    * @generated" + NL + "    */" + NL
+			+ "\tpublic List<EObject> getAvailableElements(EObject elementP) {" + NL
+			+ "\t\tList<EObject> availableElements = new ArrayList<EObject>();" + NL + "\t\t" + NL
+			+ "\t\tProject project = CapellaProjectHelper.getProject(elementP);" + NL
+			+ "\t\tSystemEngineering systemEngineering = project != null ? SystemEngineeringExt.getSystemEngineering(project) : null;\t"
+			+ NL + "" + NL + "\t\tif (null != systemEngineering) {" + NL
 			+ "\t\t\tfor (EObject elt : EObjectExt.getAll(systemEngineering, ";
-	protected final String TEXT_7 = ")) {"
-			+ NL
-			+ "\t\t\t\tavailableElements.add((CapellaElement) elt);"
-			+ NL
-			+ "\t\t\t}"
-			+ NL
-			+ "\t\t}"
-			+ NL
-			+ "\t\tavailableElements = ListExt.removeDuplicates(availableElements);"
-			+ NL
-			+ "\t\tavailableElements.remove(elementP);"
-			+ NL
-			+ "\t\treturn availableElements;"
-			+ NL
-			+ "\t}"
-			+ NL
-			+ ""
-			+ NL
-			+ "\t/**"
-			+ NL
-			+ "     * <!-- begin-user-doc -->"
-			+ NL
-			+ "     * <!-- end-user-doc -->"
-			+ NL
-			+ "     * @param elementP"
-			+ NL
-			+ "     * @param onlyGeneratedP"
-			+ NL
-			+ "     * @generated"
-			+ NL
-			+ "     */"
-			+ NL
-			+ "\tpublic List<CapellaElement> getCurrentElements(CapellaElement elementP,"
-			+ NL
-			+ "\t\t\tboolean onlyGeneratedP) {"
-			+ NL
-			+ "\t\tList<CapellaElement> currentsElements = new ArrayList<CapellaElement>();"
-			+ NL + "\t\tif (elementP instanceof ";
-	protected final String TEXT_8 = ")" + NL
-			+ "\t\t\tcurrentsElements.addAll(((";
+	protected final String TEXT_7 = ")) {" + NL + "\t\t\t\tavailableElements.add((EObject) elt);" + NL + "\t\t\t}" + NL
+			+ "\t\t}" + NL + "\t\tavailableElements = ListExt.removeDuplicates(availableElements);" + NL
+			+ "\t\tavailableElements.remove(elementP);" + NL + "\t\treturn availableElements;" + NL + "\t}" + NL + ""
+			+ NL + "\t/**" + NL + "     * <!-- begin-user-doc -->" + NL + "     * <!-- end-user-doc -->" + NL
+			+ "     * @param elementP" + NL + "     * @param onlyGeneratedP" + NL + "     * @generated" + NL + "     */"
+			+ NL + "\tpublic List<EObject> getCurrentElements(EObject elementP, boolean onlyGeneratedP) {" + NL
+			+ "\t\tList<EObject> currentsElements = new ArrayList<EObject>();" + NL + "\t\tif (elementP instanceof ";
+	protected final String TEXT_8 = ")" + NL + "\t\t\tcurrentsElements.addAll(((";
 	protected final String TEXT_9 = ") elementP).";
-	protected final String TEXT_10 = ");" + NL + "\t\treturn currentsElements;"
-			+ NL + "\t}" + NL + "" + NL + "\t/**" + NL
-			+ "     * <!-- begin-user-doc -->" + NL
-			+ "     * <!-- end-user-doc -->" + NL + "     * @generated" + NL
-			+ "     */" + NL + "\tpublic EClass getEClass() {" + NL
-			+ "\t\treturn ";
-	protected final String TEXT_11 = ";" + NL + "\t}" + NL + "" + NL + "\t/**"
-			+ NL + "     * <!-- begin-user-doc -->" + NL
-			+ "     * <!-- end-user-doc -->" + NL + "     * @generated" + NL
-			+ "     */" + NL
+	protected final String TEXT_10 = ");" + NL + "\t\treturn currentsElements;" + NL + "\t}" + NL + "" + NL + "\t/**"
+			+ NL + "     * <!-- begin-user-doc -->" + NL + "     * <!-- end-user-doc -->" + NL + "     * @generated"
+			+ NL + "     */" + NL + "\tpublic EClass getEClass() {" + NL + "\t\treturn ";
+	protected final String TEXT_11 = ";" + NL + "\t}" + NL + "" + NL + "\t/**" + NL + "     * <!-- begin-user-doc -->"
+			+ NL + "     * <!-- end-user-doc -->" + NL + "     * @generated" + NL + "     */" + NL
 			+ "\tpublic List<EReference> getEStructuralFeatures() {" + NL
-			+ "\t\tList<EReference> eReferences = new ArrayList<EReference>();"
-			+ NL + "\t\teReferences.add(";
-	protected final String TEXT_12 = ");" + NL + "\t\treturn eReferences;" + NL
-			+ "\t}" + NL + "" + NL + "}" + NL;
-	protected final String TEXT_13 = NL
-			+ "import java.util.ArrayList;"
-			+ NL
-			+ "import java.util.List;"
-			+ NL
-			+ ""
-			+ NL
-			+ "import org.eclipse.emf.ecore.EClass;"
-			+ NL
-			+ "import org.eclipse.emf.ecore.EObject;"
-			+ NL
-			+ "import org.eclipse.emf.ecore.EReference;"
-			+ NL
-			+ ""
-			+ NL
-			+ "import org.polarsys.capella.common.helpers.EObjectExt;"
-			+ NL
-			+ "import org.polarsys.capella.core.business.queries.IBusinessQuery;"
-			+ NL
-			+ "import org.polarsys.capella.core.data.capellacore.CapellaElement;"
-			+ NL
-			+ "import org.polarsys.capella.core.data.capellamodeller.SystemEngineering;"
-			+ NL
-			+ "import org.polarsys.capella.core.model.helpers.query.CapellaQueries;"
-			+ NL + "import org.polarsys.capella.core.model.utils.ListExt;";
+			+ "\t\tList<EReference> eReferences = new ArrayList<EReference>();" + NL + "\t\teReferences.add(";
+	protected final String TEXT_12 = ");" + NL + "\t\treturn eReferences;" + NL + "\t}" + NL + "}" + NL;
+	protected final String TEXT_13 = NL + "import java.util.ArrayList;" + NL + "import java.util.List;" + NL + "" + NL
+			+ "import org.eclipse.emf.ecore.EClass;" + NL + "import org.eclipse.emf.ecore.EObject;" + NL
+			+ "import org.eclipse.emf.ecore.EReference;" + NL + "" + NL
+			+ "import org.polarsys.capella.common.helpers.EObjectExt;" + NL
+			+ "import org.polarsys.capella.core.business.queries.IBusinessQuery;" + NL
+			+ "import org.polarsys.capella.core.data.capellacore.CapellaElement;" + NL
+			+ "import org.polarsys.capella.core.data.capellamodeller.SystemEngineering;" + NL
+			+ "import org.polarsys.capella.core.model.helpers.query.CapellaQueries;" + NL
+			+ "import org.polarsys.capella.core.model.utils.ListExt;" + NL + "" + NL
+			+ "import org.polarsys.capella.core.model.handler.helpers.CapellaProjectHelper;" + NL
+			+ "import org.polarsys.capella.core.model.helpers.SystemEngineeringExt;" + NL
+			+ "import org.polarsys.capella.core.data.capellamodeller.Project;";
 	protected final String TEXT_14 = NL + "\t\timport ";
 	protected final String TEXT_15 = ";" + NL + "\t";
 	protected final String TEXT_16 = NL + "import ";
@@ -194,8 +111,7 @@ public class MultipleSemanticFieldsQueryJavaClass
 		}
 		ctx.setNode(currentNode);
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
 		stringBuffer.append(TEXT_19);
@@ -226,30 +142,26 @@ public class MultipleSemanticFieldsQueryJavaClass
 			parameterValues.put("parameter", this.parameter);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
 
 	protected org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility epfUtility = null;
 
-	public void set_epfUtility(
-			org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility object) {
+	public void set_epfUtility(org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility object) {
 		this.epfUtility = object;
 	}
 
 	protected org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer section = null;
 
-	public void set_section(
-			org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer object) {
+	public void set_section(org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer object) {
 		this.section = object;
 	}
 
 	protected org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIField parameter = null;
 
-	public void set_parameter(
-			org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIField object) {
+	public void set_parameter(org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIField object) {
 		this.parameter = object;
 	}
 
@@ -259,55 +171,45 @@ public class MultipleSemanticFieldsQueryJavaClass
 		return parameters;
 	}
 
-	protected void method_setParameters(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_setParameters(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		String tabID = ((UI) section.eContainer()).getName();
 		classname = epfUtility.getWidgetName(parameter) + "Query";
 		projectname = UIProjectManager.INSTANCE.getUiProject().getName();
 		packagename = JDTUtility.getValidPackageName(projectname + ".queries");
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "setParameters",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "setParameters", stringBuffer.toString());
 	}
 
-	protected void method_setEPFUtility(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_setEPFUtility(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		epfUtility = EPFUtility.getEPFUtilityFor(section);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "setEPFUtility",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "setEPFUtility", stringBuffer.toString());
 	}
 
-	protected void method_setSection(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_setSection(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		EObject eObject = parameter.eContainer();
-		while (eObject instanceof UIContainer
-				&& !(eObject.eContainer() instanceof UI)) {
+		while (eObject instanceof UIContainer && !(eObject.eContainer() instanceof UI)) {
 			eObject = eObject.eContainer();
 		}
 		section = (UIContainer) eObject;
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "setSection",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "setSection", stringBuffer.toString());
 	}
 
-	protected void method_genPackage(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_genPackage(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		stringBuffer.append(TEXT_1);
 		stringBuffer.append(packagename);
 		stringBuffer.append(TEXT_2);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "genPackage",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "genPackage", stringBuffer.toString());
 	}
 
-	protected void method_genClass(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_genClass(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		DataWidget iDataWidget = epfUtility.getDataOf(parameter);
 		String associatedEStructuralFeature = iDataWidget.widgetFieldAccessorName;
@@ -342,24 +244,20 @@ public class MultipleSemanticFieldsQueryJavaClass
 		stringBuffer.append(associatedEStructuralFeature);
 		stringBuffer.append(TEXT_12);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "genClass",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "genClass", stringBuffer.toString());
 	}
 
-	protected void method_genDefaultImport(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_genDefaultImport(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		stringBuffer.append(TEXT_13);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "genDefaultImport",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "genDefaultImport", stringBuffer.toString());
 	}
 
-	protected void method_genSematicImports(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_genSematicImports(final StringBuffer stringBuffer, final PatternContext ctx)
+			throws Exception {
 
-		ArrayList<String> importList = epfUtility
-				.getSematicImportsFor(parameter);
+		ArrayList<String> importList = epfUtility.getSematicImportsFor(parameter);
 		for (String currentImport : importList) {
 			stringBuffer.append(TEXT_14);
 			stringBuffer.append(currentImport);
@@ -371,27 +269,23 @@ public class MultipleSemanticFieldsQueryJavaClass
 		stringBuffer.append(iDataWidget.computeWidgetFieldETypeEPackage());
 		stringBuffer.append(TEXT_17);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "genSematicImports",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "genSematicImports", stringBuffer.toString());
 	}
 
-	protected void method_registerExtension(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_registerExtension(final StringBuffer stringBuffer, final PatternContext ctx)
+			throws Exception {
 
 		stringBuffer.append(TEXT_18);
 
 		DataWidget iDataWidget = epfUtility.getDataOf(parameter);
 		String classQualifiedName = packagename + "." + classname;
 		String extensionPoint = "org.polarsys.capella.core.data.business.queries.MDEBusinessQueries";
-		String extension = "   <MDEBusinessQueries \n" + "         class=\""
-				+ classQualifiedName + "\" \n" + "         id=\""
-				+ classQualifiedName + "\"> \n" + "   </MDEBusinessQueries> \n";
-		iDataWidget.PluginExtensionEntries.add(new PluginExtensionEntry(
-				extensionPoint, true, extension));
+		String extension = "   <MDEBusinessQueries \n" + "         class=\"" + classQualifiedName + "\" \n"
+				+ "         id=\"" + classQualifiedName + "\"> \n" + "   </MDEBusinessQueries> \n";
+		iDataWidget.PluginExtensionEntries.add(new PluginExtensionEntry(extensionPoint, true, extension));
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "registerExtension",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "registerExtension", stringBuffer.toString());
 	}
 
 	public boolean preCondition(PatternContext ctx) throws Exception {

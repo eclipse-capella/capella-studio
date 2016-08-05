@@ -30,13 +30,15 @@ public class <%=inWidgetQueryName%> implements IBusinessQuery {
     * @param elementP
     * @generated
     */
-	public List<CapellaElement> getAvailableElements(CapellaElement elementP) {
-		List<CapellaElement> availableElements = new ArrayList<CapellaElement>();
-		SystemEngineering systemEngineering = CapellaQueries.getInstance()
-				.getRootQueries().getSystemEngineering(elementP);
+	public List<EObject> getAvailableElements(EObject elementP) {
+		List<EObject> availableElements = new ArrayList<EObject>();
+		
+		Project project = CapellaProjectHelper.getProject(elementP);
+		SystemEngineering systemEngineering = project != null ? SystemEngineeringExt.getSystemEngineering(project) : null;	
+
 		if (null != systemEngineering) {
 			for (EObject elt : EObjectExt.getAll(systemEngineering, <%=widgetFieldETypeLiteral%>)) {
-				availableElements.add((CapellaElement) elt);
+				availableElements.add((EObject) elt);
 			}
 		}
 		availableElements = ListExt.removeDuplicates(availableElements);
@@ -51,9 +53,8 @@ public class <%=inWidgetQueryName%> implements IBusinessQuery {
      * @param onlyGeneratedP
      * @generated
      */
-	public List<CapellaElement> getCurrentElements(CapellaElement elementP,
-			boolean onlyGeneratedP) {
-		List<CapellaElement> currentsElements = new ArrayList<CapellaElement>();
+	public List<EObject> getCurrentElements(EObject elementP, boolean onlyGeneratedP) {
+		List<EObject> currentsElements = new ArrayList<EObject>();
 		if (elementP instanceof <%=widgetFieldEContainerAccessorName%>)
 			currentsElements.addAll(((<%=widgetFieldEContainerAccessorName%>) elementP).<%=widgetFieldGetter%>);
 		return currentsElements;
@@ -78,5 +79,4 @@ public class <%=inWidgetQueryName%> implements IBusinessQuery {
 		eReferences.add(<%=associatedEStructuralFeature%>);
 		return eReferences;
 	}
-
 }
