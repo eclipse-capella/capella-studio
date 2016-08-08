@@ -130,7 +130,7 @@ public class SectionJavaClass
 	protected final String TEXT_65 = NL + "\t/**" + NL + "\t * <!-- begin-user-doc -->" + NL
 			+ "\t * <!-- end-user-doc -->" + NL + "\t * @return True is the AF viewpoint is active. False else. " + NL
 			+ "\t * @generated" + NL + "\t */" + NL + "\tprivate boolean isViewpointActive(EObject modelElement) {" + NL
-			+ "\t\treturn ViewpointManager.getInstance(modelElement).isActive(\"";
+			+ "\t\treturn ViewpointManager.getInstance(modelElement).isUsed(\"";
 	protected final String TEXT_66 = "\")" + NL
 			+ "\t\t\t\t&& ! ViewpointManager.getInstance(modelElement).isFiltered(\"";
 	protected final String TEXT_67 = "\");" + NL + "\t}";

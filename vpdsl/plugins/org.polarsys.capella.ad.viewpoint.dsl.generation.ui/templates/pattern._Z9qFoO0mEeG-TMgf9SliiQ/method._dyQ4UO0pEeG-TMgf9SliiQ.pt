@@ -145,7 +145,7 @@
 	 * @generated
 	 */
 	private boolean isViewpointActive(EObject modelElement) {
-		return ViewpointManager.getInstance(modelElement).isActive("<%=afViewpointID%>")
+		return ViewpointManager.getInstance(modelElement).isUsed("<%=afViewpointID%>")
 				&& ! ViewpointManager.getInstance(modelElement).isFiltered("<%=afViewpointID%>");
 	}
 <%}%>
