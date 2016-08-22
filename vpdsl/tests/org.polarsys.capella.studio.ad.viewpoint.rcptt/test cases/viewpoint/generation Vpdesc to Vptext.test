@@ -1,0 +1,46 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _smWEoGVSEeafoPkljqA9vA,_ezhrYGh7Eeab7okcBYwVdA
+Element-Name: generation Vpdesc to Vptext
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _1sPnQGVUEeafoPkljqA9vA
+Runtime-Version: 2.0.2.201511100828
+Save-Time: 8/22/16 5:21 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Test generation of vptext from vpdesc
+Test generation of vpdesc from vptext
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Project Explorer" | get-tree | get-item "org.polarsys.kitalpha.vp.security.vpdsl/model" 
+    | get-property childCount | equals 4 | verify-true
+with [get-view "Project Explorer" | get-tree] {
+    select "org.polarsys.kitalpha.vp.security.vpdsl/model/security.conf.vptext" "org.polarsys.kitalpha.vp.security.vpdsl/model/security.data.vptext" "org.polarsys.kitalpha.vp.security.vpdsl/model/security.spec.vptext"
+    key-type Del
+}
+get-window Delete | get-button OK | click
+get-view "Project Explorer" | get-tree | get-item "org.polarsys.kitalpha.vp.security.vpdsl/model" 
+    | get-property childCount | equals 1 | verify-true
+get-view "Project Explorer" | get-tree | select "org.polarsys.kitalpha.vp.security.vpdsl/model/security.vpdesc" 
+    | get-menu "Viewpoint DSL/Generate vptext files" | click
+get-view "Project Explorer" | get-tree | get-item "org.polarsys.kitalpha.vp.security.vpdsl/model" 
+    | get-property childCount | equals 4 | verify-true
+get-view "Project Explorer" | get-tree | select "org.polarsys.kitalpha.vp.security.vpdsl/model/security.vpdesc" 
+    | get-menu "Viewpoint DSL/Generate viewpoint" | click
+get-view "Project Explorer" | get-tree | get-item "org.polarsys.capella.vp.security4capella.vpdsl/model" 
+    | get-property childCount | equals 1 | verify-true
+get-view "Project Explorer" | get-tree 
+    | select "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.vpdesc" 
+    | get-menu "Viewpoint DSL/Generate vptext files" | click
+get-view "Project Explorer" | get-tree | get-item "org.polarsys.capella.vp.security4capella.vpdsl/model" 
+    | get-property childCount | equals 9 | verify-true
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

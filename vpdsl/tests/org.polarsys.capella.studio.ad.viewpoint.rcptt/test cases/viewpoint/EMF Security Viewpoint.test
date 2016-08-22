@@ -1,0 +1,128 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _smWEoGVSEeafoPkljqA9vA,_byW-QGhsEeab7okcBYwVdA
+Element-Name: EMF Security Viewpoint
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _h6Y4QGVSEeafoPkljqA9vA
+Runtime-Version: 2.0.2.201511100828
+Save-Time: 8/22/16 3:35 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Create a viewpoint related to the security of concepts. Use Target Application EMF to be generic
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Project Explorer" | get-tree | get-menu "New/Other..." | click
+with [get-window New] {
+    get-editbox -after [get-label "Wizards:"] | set-text dsl
+    get-tree | select "Kitalpha/Architecture description/Viewpoint DSL project" | double-click
+}
+with [get-window "New Viewpoint DSL Project"] {
+    get-editbox -after [get-label "Viewpoint short name :"] | set-text security
+    get-button Finish | click
+}
+with [get-editor "security.spec.vptext" | get-text-viewer] {
+    set-caret-pos 11 16
+    open-declaration
+}
+get-view "Project Explorer" | get-tree | select "project.tmp/kitalpha/data" | double-click
+with [get-editor data] {
+    with [get-text-viewer] {
+        key-type "M1+a"
+        key-type "M1+c"
+    }
+    close
+}
+with [get-editor "security.data.vptext" | get-text-viewer] {
+    key-type "M1+a"
+    key-type "M1+v"
+    key-type "M1+s"
+}
+get-view Outline | get-tree | get-item "security.data/security.data" | get-property caption | equals "security.data" 
+    | verify-true
+get-view Outline | get-tree | get-item "security.data/security.data" | get-property childCount | equals 11 | verify-true
+get-editor "security.data.vptext" | get-text-viewer | get-property text | equals "/**\n"
+    + " * Copyright (c) PolarSys, 2016. All rights reserved. \n"
+    + " *\n"
+    + " *\tViewpoint security\n"
+    + " *\t@author: Faycal ABKA\n"
+    + " *\t@date: 8/22/16\n"
+    + " *\n"
+    + " */ \n"
+    + " Data security.data {\n"
+    + "\tClass SecurityElement {\n"
+    + "\t\tabstract: true\n"
+    + "\t}\n"
+    + "\tClass SecurityDescriptionElement {\n"
+    + "\t\tsuperClass SecurityElement\n"
+    + "\t\tabstract: true\n"
+    + "\t\tAttributes:\n"
+    + "\t\t\tSecurityDescription type ecore.EString\n"
+    + "\t}\n"
+    + "\tClass SecurityNamedElement {\n"
+    + "\t\tsuperClass SecurityElement\n"
+    + "\t\tabstract: true\n"
+    + "\t\tAttributes:\n"
+    + "\t\t\tname type ecore.EString\n"
+    + "\t}\n"
+    + "\tClass SecurityEvaluatedElement {\n"
+    + "\t\tsuperClass SecurityElement\n"
+    + "\t\tabstract: true\n"
+    + "\t\tAttributes:\n"
+    + "\t\t\trate type ecore.EDouble\n"
+    + "\t}\n"
+    + "\tClass SecurityEnemyElement {\n"
+    + "\t\tsuperClass SecurityDescriptionElement , SecurityEvaluatedElement\n"
+    + "\t\tabstract: true\n"
+    + "\t}\n"
+    + "\tClass securityFriendElement {\n"
+    + "\t\tsuperClass SecurityDescriptionElement , SecurityEvaluatedElement\n"
+    + "\t\tabstract: true\n"
+    + "\t}\n"
+    + "\tClass SecurityThreat {\n"
+    + "\t\tsuperClass SecurityEnemyElement\n"
+    + "\t}\n"
+    + "\tClass SecurityVulnerability {\n"
+    + "\t\tsuperClass SecurityEnemyElement\n"
+    + "\t}\n"
+    + "\tClass SecurityCounterMeasure {\n"
+    + "\t\tsuperClass securityFriendElement\n"
+    + "\t\tAttributes:\n"
+    + "\t\t\tgoals enum SecurityGoal changeable: true ordered: true unique: true\n"
+    + "\t\tAssociations:\n"
+    + "\t\t\ttoCounter refers [0,*] SecurityEnemyElement changeable: true ordered: true unique: true\n"
+    + "\t}\n"
+    + "\tClass SecurityMeasure {\n"
+    + "\t\tsuperClass SecurityElement\n"
+    + "\t\tAttributes:\n"
+    + "\t\t\tefficient type ecore.EDouble changeable: true derived: true ordered: true transient: true\n"
+    + "\t\tOperations:\n"
+    + "\t\t\tcomputeGloblEfficiency ( ) returns external ecore.EDouble [1,1]\n"
+    + "\t}\n"
+    + "\tEnumeration SecurityGoal {\n"
+    + "\t\tINTEGRITY literal INTEGRITY, \n"
+    + "\t\tCONFIDENTIALITY literal CONFIDENTIALITY, \n"
+    + "\t\tAVAILABILITY literal AVAILABILITY, \n"
+    + "\t\tNON_REPUDATION literal NON_REPUDATION,\n"
+    + "\t\tAUTHENTIFICATION literal AUTHENTIFICATION\n"
+    + "\t}\n"
+    + "}" | verify-true
+get-view "Project Explorer" | get-tree | select "org.polarsys.kitalpha.vp.security.vpdsl/model/security.vpdesc" 
+    | double-click
+with [get-editor "security.vpdesc" | get-tree] {
+    get-item "platform:\\/resource\\/org.polarsys.kitalpha.vp.security.vpdsl\\/model\\/security.vpdesc/Viewpoint security/\\[Data\\] security.data" 
+        | get-property caption | equals "[Data] security.data" | verify-true
+    get-item "platform:\\/resource\\/org.polarsys.kitalpha.vp.security.vpdsl\\/model\\/security.vpdesc/Viewpoint security/\\[Data\\] security.data" 
+        | get-property childCount | equals 11 | verify-true
+}
+get-view "Project Explorer" | get-tree | select "org.polarsys.kitalpha.vp.security.vpdsl/model/security.vpdesc" 
+    | get-menu "Viewpoint DSL/Generate viewpoint" | click
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

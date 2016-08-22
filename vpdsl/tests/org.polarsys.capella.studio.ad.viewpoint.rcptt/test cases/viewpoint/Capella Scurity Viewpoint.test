@@ -1,0 +1,249 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _smWEoGVSEeafoPkljqA9vA,_dmcVkGhtEeab7okcBYwVdA
+Element-Name: Capella Scurity Viewpoint
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _ZNVScGVbEeafoPkljqA9vA
+Runtime-Version: 2.0.2.201511100828
+Save-Time: 8/22/16 5:16 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Project Explorer" | get-tree | get-menu "New/Other..." | click
+with [get-window New] {
+    get-editbox -after [get-label "Wizards:"] | set-text ds
+    get-tree | select "Kitalpha/Architecture description/Viewpoint DSL project" | double-click
+}
+
+with [get-window "New Viewpoint DSL Project"] {
+    get-editbox -after [get-label "Viewpoint short name :"] | set-text security4Capella
+    get-combo -after [get-label "Target application :"] | select Capella
+    get-button Finish | click
+}
+
+with [get-editor "security4Capella.spec.vptext" | get-text-viewer] {
+    set-caret-pos 10 29
+    key-type Enter
+    key-type "M1+SPACE"
+    key-type Down -times 3
+    key-type Enter
+    type-text " "
+    key-type "M1+SPACE"
+    key-type Enter
+    set-caret-pos 12 20
+    key-type "M1+s"
+}
+with [get-editor "security4Capella.spec.vptext" | get-text-viewer] {
+    set-caret-pos 12 20
+    key-type F3
+}
+get-view "Project Explorer" | get-tree | select "project.tmp/capella/data" | double-click
+with [get-editor data | get-text-viewer] {
+    set-caret-pos 11 16
+    key-type "M1+a"
+    key-type "M1+c"
+}
+get-tab-folder -index 2 | get-tab-item "security4Capella.data.vptext" | click
+with [get-editor "security4Capella.data.vptext" | get-text-viewer] {
+    set-caret-pos 11 2
+    key-type "M1+a"
+    key-type "M1+v"
+    key-type "M1+s"
+}
+get-editor data | close
+with [get-view Outline | get-tree] {
+    get-item "security4Capella.data/security4Capella.data" | get-property caption | equals "security4Capella.data" 
+        | verify-true
+    get-item "security4Capella.data/security4Capella.data" | get-property childCount | equals 6 | verify-true
+}
+get-view "Project Explorer" | get-tree 
+    | select "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.vpdesc" | double-click
+with [get-editor "security4Capella.vpdesc" | get-tree] {
+    get-item "platform:\\/resource\\/org.polarsys.capella.vp.security4capella.vpdsl\\/model\\/security4Capella.vpdesc/Viewpoint security4Capella/\\[Data\\] security4Capella.data" 
+        | get-property caption | equals "[Data] security4Capella.data" | verify-true
+    get-item "platform:\\/resource\\/org.polarsys.capella.vp.security4capella.vpdsl\\/model\\/security4Capella.vpdesc/Viewpoint security4Capella/\\[Data\\] security4Capella.data" 
+        | get-property childCount | equals 6 | verify-true
+}
+get-editor "security4Capella.vpdesc" | close
+get-tab-folder -index 2 | get-tab-item "security4Capella.spec.vptext" | click
+with [get-editor "security4Capella.spec.vptext" | get-text-viewer] {
+    set-caret-pos 12 31
+    key-type Enter
+    key-type "M1+SPACE"
+    key-type Down -times 6
+    key-type Enter
+}
+
+get-window "Viewpoint UI File Creation Wizard" | get-button Finish | click
+with [get-editor "security4Capella.ui.vptext" | get-text-viewer] {
+    set-caret-pos 10 5
+    key-type "M1+SPACE"
+    key-type Down -times 2
+    key-type Enter
+}
+get-button "Save All (M1+M2+S)" | click
+with [get-view Outline | get-tree] {
+    get-item "security4Capella.ui/security4Capella.ui" | get-property caption | equals "security4Capella.ui" 
+        | verify-true
+    get-item "security4Capella.ui/security4Capella.ui" | get-property childCount | equals 6 | verify-true
+}
+get-view "Project Explorer" | get-tree 
+    | select "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.vpdesc" | double-click
+with [get-editor "security4Capella.vpdesc" | get-tree] {
+    get-item "platform:\\/resource\\/org.polarsys.capella.vp.security4capella.vpdsl\\/model\\/security4Capella.vpdesc/Viewpoint security4Capella/\\[UI Description\\] security4Capella.ui" 
+        | get-property caption | equals "[UI Description] security4Capella.ui" | verify-true
+    get-item "platform:\\/resource\\/org.polarsys.capella.vp.security4capella.vpdsl\\/model\\/security4Capella.vpdesc/Viewpoint security4Capella/\\[UI Description\\] security4Capella.ui" 
+        | get-property childCount | equals 6 | verify-true
+}
+get-editor "security4Capella.vpdesc" | close
+get-editor "security4Capella.ui.vptext" | close
+with [get-editor "security4Capella.spec.vptext" | get-text-viewer] {
+    set-caret-pos 13 27
+    key-type Enter
+    key-type "M1+SPACE"
+    key-type Down -times 5
+    key-type Enter
+}
+get-window "Viewpoint Diagram File Creation Wizard" | get-button Finish | click
+get-view "Project Explorer" | get-tree | select "project.tmp/capella/diagram" | double-click
+with [get-editor diagram | get-text-viewer] {
+    set-caret-pos 15 15
+    key-type "M1+a"
+    key-type "M1+c"
+}
+get-tab-folder -index 2 | get-tab-item "security4Capella.diagram.vptext" | click
+with [get-editor "security4Capella.diagram.vptext" | get-text-viewer] {
+    key-type "M1+a"
+    key-type "M1+v"
+    key-type "M1+s"
+}
+with [get-view Outline | get-tree] {
+    get-item "security4Capella.diagram/security4Capella.diagram/Security4CapellaPhysicalDiagram/Action Set" 
+        | get-property caption | equals "Action Set" | verify-true
+    get-item "security4Capella.diagram/security4Capella.diagram/Security4CapellaPhysicalDiagram/Action Set" 
+        | get-property childCount | equals 5 | verify-true
+    get-item "security4Capella.diagram/security4Capella.diagram/Security4CapellaPhysicalDiagram/Mapping Set/Security4CapellaElementContainerFunction" 
+        | get-property caption | equals Security4CapellaElementContainerFunction | verify-true
+    get-item "security4Capella.diagram/security4Capella.diagram/Security4CapellaPhysicalDiagram/Mapping Set/Security4CapellaElementContainerFunction" 
+        | get-property childCount | equals 1 | verify-true
+    get-item "security4Capella.diagram/security4Capella.diagram/Security4CapellaPhysicalDiagram/Mapping Set/Security4CapellaElementContainer/Children" 
+        | get-property caption | equals Children | verify-true
+    get-item "security4Capella.diagram/security4Capella.diagram/Security4CapellaPhysicalDiagram/Mapping Set/Security4CapellaElementContainer/Children" 
+        | get-property childCount | equals 4 | verify-true
+}
+get-editor diagram | close
+with [get-editor "security4Capella.diagram.vptext"] {
+    click
+    close
+}
+get-editor "security4Capella.data.vptext" | close
+with [get-editor "security4Capella.spec.vptext" | get-text-viewer] {
+    key-type Enter
+    key-type "M1+SPACE"
+    key-type Down -times 4
+    key-type Enter
+}
+get-window "Viewpoint Activity Explorer File Creation Wizard" | get-button Finish | click
+get-view "Project Explorer" | get-tree | select "project.tmp/capella/activityexplorer" | double-click
+with [get-editor activityexplorer | get-text-viewer] {
+    key-type "M1+a"
+    key-type "M1+c"
+}
+get-tab-folder -index 2 | get-tab-item "security4Capella.activityexplorer.vptext" | click
+with [get-editor "security4Capella.activityexplorer.vptext" | get-text-viewer] {
+    key-type "M1+a"
+    key-type "M1+v"
+    key-type "M1+s"
+}
+get-tab-folder -index 2 | get-tab-item "*security4Capella.spec.vptext" | click
+get-button "Save All (M1+M2+S)" | click
+get-editor activityexplorer | close
+get-editor "security4Capella.activityexplorer.vptext" | close
+
+with [get-editor "security4Capella.spec.vptext" | get-text-viewer] {
+    set-caret-pos 14 38
+    set-caret-pos 15 56
+    key-type Enter
+    key-type "M1+SPACE"
+    key-type Down -times 3
+    key-type Enter
+}
+get-window "Viewpoint Services File Creation Wizard" | get-button Finish | click
+get-view "Project Explorer" | get-tree | select "project.tmp/capella/services" | double-click
+with [get-editor services | get-text-viewer] {
+    key-type "M1+a"
+    key-type "M1+c"
+}
+with [get-tab-folder -index 2] {
+    get-tab-item "*security4Capella.spec.vptext" | click
+    get-tab-item "security4Capella.services.vptext" | click
+}
+with [get-editor "security4Capella.services.vptext" | get-text-viewer] {
+    key-type "M1+a"
+    key-type "M1+v"
+    key-type "M1+s"
+}
+get-button "Save All (M1+M2+S)" | click
+get-editor services | close
+with [get-editor "security4Capella.services.vptext"] {
+    click
+    close
+}
+with [get-editor "security4Capella.spec.vptext" | get-text-viewer] {
+	set-caret-pos 16 39
+    key-type Enter
+    key-type "M1+SPACE"
+    key-type Down -times 2
+    key-type Enter
+}
+get-window "Viewpoint Build File Creation Wizard" | get-button Finish | click
+get-button "Save All (M1+M2+S)" | click
+with [get-view "Project Explorer" | get-tree] {
+    get-item "org.polarsys.capella.vp.security4capella.vpdsl/model" | get-property caption | equals model | verify-true
+    get-item "org.polarsys.capella.vp.security4capella.vpdsl/model" | get-property childCount | equals 9 | verify-true
+    get-item "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.activityexplorer.vptext" 
+        | get-property caption | equals "security4Capella.activityexplorer.vptext" | verify-true
+    get-item "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.spec.vptext" | get-property caption 
+        | equals "security4Capella.spec.vptext" | verify-true
+    get-item "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.build.vptext" 
+        | get-property caption | equals "security4Capella.build.vptext" | verify-true
+    get-item "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.conf.vptext" | get-property caption 
+        | equals "security4Capella.conf.vptext" | verify-true
+    get-item "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.diagram.vptext" 
+        | get-property caption | equals "security4Capella.diagram.vptext" | verify-true
+    get-item "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.services.vptext" 
+        | get-property caption | equals "security4Capella.services.vptext" | verify-true
+    get-item "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.ui.vptext" | get-property caption 
+        | equals "security4Capella.ui.vptext" | verify-true
+    get-item "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.vpdesc" | get-property caption 
+        | equals "security4Capella.vpdesc" | verify-true
+}
+get-view "Project Explorer" | get-tree 
+    | select "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.vpdesc" | double-click
+with [get-editor "security4Capella.vpdesc" | get-tree] {
+    get-item "platform:\\/resource\\/org.polarsys.capella.vp.security4capella.vpdsl\\/model\\/security4Capella.vpdesc/Viewpoint security4Capella/\\[Data\\] security4Capella.data" 
+        | get-property caption | equals "[Data] security4Capella.data" | verify-true
+    get-item "platform:\\/resource\\/org.polarsys.capella.vp.security4capella.vpdsl\\/model\\/security4Capella.vpdesc/Viewpoint security4Capella/\\[UI Description\\] security4Capella.ui" 
+        | get-property caption | equals "[UI Description] security4Capella.ui" | verify-true
+    get-item "platform:\\/resource\\/org.polarsys.capella.vp.security4capella.vpdsl\\/model\\/security4Capella.vpdesc/Viewpoint security4Capella/\\[Viewpoint Activity Explorer\\] security4Capella.activityexplorer" 
+        | get-property caption | equals "[Viewpoint Activity Explorer] security4Capella.activityexplorer" | verify-true
+    get-item "platform:\\/resource\\/org.polarsys.capella.vp.security4capella.vpdsl\\/model\\/security4Capella.vpdesc/Viewpoint security4Capella/Diagram Set security4Capella.diagram" 
+        | get-property caption | equals "Diagram Set security4Capella.diagram" | verify-true
+    get-item "platform:\\/resource\\/org.polarsys.capella.vp.security4capella.vpdsl\\/model\\/security4Capella.vpdesc/Viewpoint security4Capella/\\[Service Set\\] security4Capella.services" 
+        | get-property caption | equals "[Service Set] security4Capella.services" | verify-true
+    get-item "platform:\\/resource\\/org.polarsys.capella.vp.security4capella.vpdsl\\/model\\/security4Capella.vpdesc/Viewpoint security4Capella/Property Set security.properties" 
+        | get-property caption | equals "Property Set security.properties" | verify-true
+    get-item "platform:\\/resource\\/org.polarsys.capella.vp.security4capella.vpdsl\\/model\\/security4Capella.vpdesc/Viewpoint security4Capella/\\[Rule Set\\] security4Capella.rules" 
+        | get-property caption | equals "[Rule Set] security4Capella.rules" | verify-true
+}
+
+get-view "Project Explorer" | get-tree 
+    | select "org.polarsys.capella.vp.security4capella.vpdsl/model/security4Capella.vpdesc" 
+    | get-menu "Viewpoint DSL/Generate viewpoint" | click
+get-view "Project Explorer" | get-tree | get-property itemCount | equals 36 | verify-true
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

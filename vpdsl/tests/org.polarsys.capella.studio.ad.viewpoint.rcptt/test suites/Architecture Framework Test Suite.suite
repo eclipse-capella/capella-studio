@@ -1,0 +1,17 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Architecture Framework Test Suite
+Element-Type: testsuite
+Element-Version: 2.0
+Id: _bRHeMGVSEeafoPkljqA9vA
+Runtime-Version: 2.0.2.201511100828
+Save-Time: 8/22/16 5:36 PM
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
+Content-Type: text/testcase
+Entry-Name: testcase-items
+
+_jDxGoGh9Eeab7okcBYwVdA	// kind: 'test' name: 'AF For Capella Security' path: '../test cases/architecture framework/AF For Capella Security.test'
+_r2-eIGh8Eeab7okcBYwVdA	// kind: 'test' name: 'AF For EMF Security' path: '../test cases/architecture framework/AF For EMF Security.test'
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--
