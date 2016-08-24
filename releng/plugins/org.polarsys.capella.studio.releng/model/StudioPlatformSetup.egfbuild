@@ -17,71 +17,8 @@
     <steps xsi:type="buildstep:InstallStep" xmi:id="_kRhrYM1yEeSFroBhAlzk1g" name="install capella features" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
       <updateSiteUrls>${capella.repo.url}</updateSiteUrls>
       <updateSiteUrls>${kitalpha.repo.url}</updateSiteUrls>
-      <featureNames>org.polarsys.capella.common.advance.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.advance.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.base.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.base.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.compare.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.compare.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.dependencies.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.dependencies.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.libraries.definition.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.libraries.definition.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.libraries.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.libraries.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.mdsofa.common.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.mdsofa.common.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.model.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.model.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.re.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.re.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.common.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.advance.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.advance.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.af.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.af.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.common.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.common.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.common.ui.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.common.ui.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.compare.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.compare.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.dashboard.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.dashboard.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.data.merged.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.data.merged.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.libraries.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.libraries.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.properties.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.properties.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.re.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.re.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.transfo.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.transfo.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.transition.common.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.transition.common.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.transition.system.topdown.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.transition.system.topdown.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.ui.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.ui.quickfix.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.ui.quickfix.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.ui.semantic.browser.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.ui.semantic.browser.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.ui.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.ui.wizards.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.ui.wizards.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.validation.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.validation.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.shared.feature</featureNames>
-      <featureNames>org.polarsys.capella.shared.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.patterns.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.patterns.feature</featureNames>
-      <featureNames>org.polarsys.capella.detachment.version.precondition.feature</featureNames>
-      <featureNames>org.polarsys.capella.detachment.version.precondition.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.detachment.propertyvalue.feature</featureNames>
-      <featureNames>org.polarsys.capella.detachment.propertyvalue.source.feature</featureNames>
-      <featureNames>org.polarsys.capella.doc.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.source.feature</featureNames>
     </steps>
     <steps xsi:type="buildstep:InstallStep" xmi:id="_w1HJsNMCEeSCstxmhDJ57A" name="install capella egf features" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
       <updateSiteUrls>${capella.egf.repo.url}</updateSiteUrls>
