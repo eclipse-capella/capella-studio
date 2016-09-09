@@ -512,7 +512,7 @@
         <type xmi:type="types:TypeString" xmi:id="_Fc1SoXThEeaB09-X-Mc_1g"/>
       </contracts>
       <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_NzO84HThEeaB09-X-Mc_1g"
-          name="viewpoint.version" invocationContracts="#_biWSM-0vEeWIDN8jHBcB7A">
+          name="viewpoint.version" invocationContracts="#_biWSM-0vEeWIDN8jHBcB7A #_a-OAY3T1EeaB09-X-Mc_1g">
         <type xmi:type="types:TypeString" xmi:id="_NzO84XThEeaB09-X-Mc_1g"/>
       </contracts>
     </contractContainer>
@@ -557,7 +557,7 @@
               invokedContract="platform:/plugin/org.polarsys.kitalpha.ad.viewpoint.dsl.generation.core/models/vpdslGeneratorsUtilTasks.fcore#_s4CIIuq5EeGh0fmNAy-1lA"/>
           <invocationContracts xmi:id="_DJs-I-rgEeGilt-XnUgdYg" factoryComponentContract="#_3CtOoPt0EeK-QL-B45qveg"
               invokedContract="platform:/plugin/org.polarsys.kitalpha.ad.viewpoint.dsl.generation.core/models/vpdslGeneratorsUtilTasks.fcore#_s4CIJOq5EeGh0fmNAy-1lA"/>
-          <invocationContracts xmi:id="_DJs-JOrgEeGilt-XnUgdYg" targetInvocationContract="#_2q57IurfEeGilt-XnUgdYg #_So3a0urgEeGilt-XnUgdYg #_a-OAYnT1EeaB09-X-Mc_1g #_a-OAY3T1EeaB09-X-Mc_1g"
+          <invocationContracts xmi:id="_DJs-JOrgEeGilt-XnUgdYg" targetInvocationContract="#_2q57IurfEeGilt-XnUgdYg #_So3a0urgEeGilt-XnUgdYg #_a-OAYnT1EeaB09-X-Mc_1g"
               invokedContract="platform:/plugin/org.polarsys.kitalpha.ad.viewpoint.dsl.generation.core/models/vpdslGeneratorsUtilTasks.fcore#_s4CIJuq5EeGh0fmNAy-1lA"/>
         </invocationContractContainer>
       </invocations>
@@ -598,7 +598,7 @@
         <invocationContractContainer xmi:id="_a-OAYXT1EeaB09-X-Mc_1g">
           <invocationContracts xmi:id="_a-OAYnT1EeaB09-X-Mc_1g" sourceInvocationContract="#_DJs-JOrgEeGilt-XnUgdYg"
               invokedContract="platform:/plugin/org.polarsys.kitalpha.ad.viewpoint.dsl.generation.helper/egf/GenerationPdeHelper.fcore#_CmsuQubfEeW2XNOYuXmJgg"/>
-          <invocationContracts xmi:id="_a-OAY3T1EeaB09-X-Mc_1g" sourceInvocationContract="#_DJs-JOrgEeGilt-XnUgdYg"
+          <invocationContracts xmi:id="_a-OAY3T1EeaB09-X-Mc_1g" factoryComponentContract="#_NzO84HThEeaB09-X-Mc_1g"
               invokedContract="platform:/plugin/org.polarsys.kitalpha.ad.viewpoint.dsl.generation.helper/egf/GenerationPdeHelper.fcore#_CmsuRObfEeW2XNOYuXmJgg"/>
         </invocationContractContainer>
       </invocations>
