@@ -1,4 +1,4 @@
-//Generated with EGF 1.4.0.v20160519-0641
+//Generated with EGF 1.4.1.v20161010-1511
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.javaclasses;
 
 import org.eclipse.egf.common.helper.*;
@@ -97,11 +97,12 @@ public class SectionJavaClass
 			+ "\t*/" + NL + "\tpublic boolean select(Object eObject) {" + NL
 			+ "\t\tEObject eObjectToTest = super.selection(eObject);" + NL + "\t\t";
 	protected final String TEXT_51 = NL + "\t\t";
-	protected final String TEXT_52 = NL + "\t\t\tif (";
-	protected final String TEXT_53 = ")" + NL + "\t\t\t\treturn true;" + NL + "\t\t\t\t";
-	protected final String TEXT_54 = NL + "\t\t\telse" + NL + "\t\t\t{" + NL + "\t\t\t\tEObject children = get";
-	protected final String TEXT_55 = "Object(eObjectToTest);" + NL + "\t\t\t\tif (children != null)" + NL
-			+ "\t\t\t\t\treturn true;" + NL + "\t\t\t}" + NL + "\t\t\t";
+	protected final String TEXT_52 = NL + "\t\t\tif (eObjectToTest == null){" + NL + "\t\t\t\treturn false; " + NL
+			+ "\t\t\t} else if (";
+	protected final String TEXT_53 = "){" + NL + "\t\t\t\treturn true;" + NL + "\t\t\t}\t";
+	protected final String TEXT_54 = NL + "\t\t\telse {" + NL + "\t\t\t\tEObject children = get";
+	protected final String TEXT_55 = "Object(eObjectToTest);" + NL + "\t\t\t\tif (children != null) {" + NL
+			+ "\t\t\t\t\treturn true;" + NL + "\t\t\t\t}" + NL + "\t\t\t}" + NL + "\t\t\t";
 	protected final String TEXT_56 = NL + NL + "\t\treturn false;" + NL + "\t}" + NL + "\t" + NL + "\t/**" + NL
 			+ "\t* <!-- begin-user-doc -->" + NL + "\t* <!-- end-user-doc -->" + NL + "\t* @param part" + NL
 			+ "\t* @param selection" + NL + "\t* @generated" + NL + "\t*/" + NL

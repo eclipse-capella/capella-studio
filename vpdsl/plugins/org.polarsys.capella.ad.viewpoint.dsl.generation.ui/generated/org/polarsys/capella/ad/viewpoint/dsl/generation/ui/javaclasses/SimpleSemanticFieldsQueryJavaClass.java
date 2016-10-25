@@ -1,4 +1,4 @@
-//Generated with EGF 1.4.0.v20160519-0641
+//Generated with EGF 1.4.1.v20161010-1511
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.javaclasses;
 
 import org.eclipse.egf.common.helper.*;

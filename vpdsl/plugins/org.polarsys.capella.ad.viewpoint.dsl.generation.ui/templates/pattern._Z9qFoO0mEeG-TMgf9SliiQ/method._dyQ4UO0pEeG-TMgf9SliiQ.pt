@@ -59,17 +59,19 @@
 	
 		if (result.trim().length() != 0)
 		{%>
-			if (<%=result%>)
+			if (eObjectToTest == null){
+				return false; 
+			} else if (<%=result%>){
 				return true;
-				
+			}	
 <%			if ( UISectionUtility.canGenerateSelectionForContainer(parameter)
 						&& getFirstClassName().trim().length() > 0)%>
 <%			{%>
-			else
-			{
+			else {
 				EObject children = get<%=getFirstClassName()%>Object(eObjectToTest);
-				if (children != null)
+				if (children != null) {
 					return true;
+				}
 			}
 			<%}%>
 <%		}%>
