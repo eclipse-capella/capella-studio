@@ -17,8 +17,8 @@
     <properties xmi:id="_7UOncM1xEeSFroBhAlzk1g" key="query.legacy.repo.url" value="http://download.eclipse.org/sirius/updates/legacy/1.1.0/"/>
     <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalphaCTK.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_runtime-v1.0.x/lastSuccessfulBuild/artifact/result/publish/kitalpha_runtime/site.p2/"/>
     <properties xmi:id="_FinS8DQ8EeWzhdVFzhPIIQ" key="kitalphaSDK.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_SDK-v1.0.x/lastSuccessfulBuild/artifact/result/publish/kitalpha_sdk/site.p2/"/>
-    <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/job/capella-master-experimental/14/artifact/result/publish/org.polarsys.capella/site.p2/"/>
-    <properties xmi:id="_rstsgNMCEeSCstxmhDJ57A" key="capella.egf.repo.url" value="https://hudson.polarsys.org/capella/job/capella-master-experimental/14/artifact/result/publish/org.polarsys.capella.core.egf.feature/site.p2/"/>
+    <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/job/capella-v1.0.x/lastSuccessfulBuild/artifact/result/publish/org.polarsys.capella/site.p2/"/>
+    <properties xmi:id="_rstsgNMCEeSCstxmhDJ57A" key="capella.egf.repo.url" value="https://hudson.polarsys.org/capella/job/capella-v1.0.x/lastSuccessfulBuild/artifact/result/publish/org.polarsys.capella.core.egf.feature/site.p2"/>
     <properties xmi:id="_-jrxkA9SEeW7CM9Somx7YA" key="docgen.addon.location" value="https://hudson.polarsys.org/capella/job/capella-addon-docgen-v1.0.x/lastSuccessfulBuild"/>
     <properties xmi:id="_hJrtIVq-EeW9LJvhZUfugg" key="amalgam.repo.url" value="http://download.eclipse.org/modeling/amalgam/updates/nightly/1.7.x/mars/"/>
   </propertyPackages>
