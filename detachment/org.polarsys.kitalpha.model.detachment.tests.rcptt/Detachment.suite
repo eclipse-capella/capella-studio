@@ -1,0 +1,20 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Detachment
+Element-Type: testsuite
+Element-Version: 2.0
+Id: _gSHGIMIIEea6etaRIbK09g
+Runtime-Version: 2.0.2.201511100828
+Save-Time: 12/14/16 3:20 PM
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
+Content-Type: text/testcase
+Entry-Name: testcase-items
+
+_tWr4EMH6Eea6etaRIbK09g	// kind: 'test' name: 'Detachment_00005' path: 'test cases/Detachment_00005.test'
+_zdgCIMH2Eea6etaRIbK09g	// kind: 'test' name: 'Detachment_00002' path: 'test cases/Detachment_00002.test'
+_nUU0YMH3Eea6etaRIbK09g	// kind: 'test' name: 'Detachment_00003' path: 'test cases/Detachment_00003.test'
+_aD7z0MHgEea6etaRIbK09g	// kind: 'test' name: 'Detachment_00001' path: 'test cases/Detachment_00001.test'
+_fheRMMH5Eea6etaRIbK09g	// kind: 'test' name: 'Detachment_00004' path: 'test cases/Detachment_00004.test'
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--
