@@ -238,7 +238,7 @@
       <steps xsi:type="buildstep:AntStep" xmi:id="_dWqjwEKHEeaswdbkgEdmkQ" name="Test vpdsl" targetName="test-vpdsl" xml="&lt;target name=&quot;test-vpdsl&quot;>&#xD;&#xA;&#x9;&lt;ant antfile=&quot;../../../rcptt-ant/rcptt-vpdsl.xml&quot;/>&#xD;&#xA;&lt;/target>"/>
     </steps>
   </jobs>
-  <jobs xmi:id="_NNVAoD7BEeaTpOlaI4QSGQ" name="run junit tests">
+  <jobs xmi:id="_NNVAoD7BEeaTpOlaI4QSGQ" name="run junit tests" enabled="false">
     <steps xsi:type="buildstep:BuildStep" xmi:id="_NNVAoT7BEeaTpOlaI4QSGQ" name="Build Test Feature">
       <buildLocations xsi:type="buildscm:GITBuildLocation" xmi:id="_NNVAoj7BEeaTpOlaI4QSGQ" gitLocation="_L0O-wPx8EeO7zY3f-pIrjg" folderName="vpdsl/tests"/>
       <buildLocations xsi:type="buildstep:TargetPlatformBuildLocation" xmi:id="_0-SWkD9sEeajQ-m-CCVk5Q" path="${tools}/egf"/>
