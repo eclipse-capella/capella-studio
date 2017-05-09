@@ -1,4 +1,4 @@
-//Generated with EGF 1.4.1.v20161010-1511
+//Generated with EGF 1.4.0.v20160516-1506
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.javaclasses;
 
 import org.eclipse.egf.common.helper.*;
@@ -118,11 +118,11 @@ public class SectionJavaClass
 			+ "\t * <!-- end-user-doc -->" + NL
 			+ "\t * @param parent: An EObject. It is considered as the Parent of an EMDE extension (a Viewpoint element)"
 			+ NL + "\t * @return " + NL + "\t * @generated" + NL + "\t */" + NL + "\tprivate EObject get";
-	protected final String TEXT_62 = "Object(EObject parent){" + NL + "\t\tif (! isViewpointActive(parent))" + NL
-			+ "\t\t\treturn null;" + NL + "\t\t\t" + NL
-			+ "\t\tif (parent == null || (parent != null && parent.eContents() == null))" + NL + "\t\t\treturn null;"
-			+ NL + "\t\t\t " + NL + "\t\tEObject result = null;" + NL
-			+ "\t\tfor (EObject iEObject : parent.eContents()) " + NL + "\t\t{" + NL + "\t\t\tif (iEObject instanceof ";
+	protected final String TEXT_62 = "Object(EObject parent){" + NL + "\t\tif (parent == null)" + NL
+			+ "\t\t\treturn null;" + NL + "" + NL + "\t\tif (!isViewpointActive(parent))" + NL + "\t\t\treturn null;"
+			+ NL + "" + NL + "\t\tif (parent.eContents() == null)" + NL + "\t\t\treturn null;" + NL + "\t\t\t " + NL
+			+ "\t\tEObject result = null;" + NL + "\t\tfor (EObject iEObject : parent.eContents()) " + NL + "\t\t{" + NL
+			+ "\t\t\tif (iEObject instanceof ";
 	protected final String TEXT_63 = ")" + NL + "\t\t\t{" + NL + "\t\t\t\tresult = (result == null ? (";
 	protected final String TEXT_64 = ")iEObject : null );" + NL
 			+ "\t\t\t\t// This case is true when there is more then one extension of the same type. " + NL
@@ -701,7 +701,7 @@ public class SectionJavaClass
 					EObject parent = container.eContainer();
 					stringBuffer.append(TEXT_76);
 					if (parent.eContainer() instanceof UI)
-						groupParent = "_rootParentComposite";
+						groupParent = "rootParentComposite";
 					else
 						groupParent = ((UIContainer) parent).getName();
 					stringBuffer.append(TEXT_77);

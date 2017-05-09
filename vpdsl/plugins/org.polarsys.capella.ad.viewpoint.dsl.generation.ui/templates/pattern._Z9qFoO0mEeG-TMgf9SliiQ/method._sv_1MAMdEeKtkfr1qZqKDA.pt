@@ -29,7 +29,7 @@
 			<%String groupParent = "";%>
 			<%EObject parent = container.eContainer();%>
 			<%if (parent.eContainer() instanceof UI)
-				groupParent = "_rootParentComposite";
+				groupParent = "rootParentComposite";
 			else
 				groupParent = ((UIContainer)parent).getName();%>
 			<%//Code generation%>
