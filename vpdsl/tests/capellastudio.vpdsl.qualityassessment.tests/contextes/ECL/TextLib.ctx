@@ -1,0 +1,31 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.ecl
+Element-Name: TextLib
+Element-Type: context
+Element-Version: 2.0
+Id: _ogj4gDYrEeeb38NqTlPkJA
+Runtime-Version: 2.0.2.201511100828
+Save-Time: 5/11/17 11:24 AM
+
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
+Content-Type: text/ecl
+Entry-Name: .ecl.context
+
+proc findTextInFile [ val fileName] [ val text ]{
+	// Press Crtl + F
+	get-editor $fileName | get-text-viewer | key-type "M1+f"
+	
+	// Set the text to search in the Find/Replace dialog
+	with [get-window "Find/Replace"] {
+	    get-combo -after [get-label "Find:"] | set-text $text
+	    get-button Find | click
+	}
+	
+	// Check the existence of the text in the file
+	get-editor $fileName | get-text-viewer | get-property "getSelectionText()" | equals $text | verify-true
+	
+	// Close the Find/Replace dialog
+	get-window "Find/Replace" | get-button Close | click
+}
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998--

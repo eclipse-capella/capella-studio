@@ -1,0 +1,17 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: vpdsl-bugs
+Element-Type: testsuite
+Element-Version: 2.0
+Id: _nMrj4DYtEeeb38NqTlPkJA
+Manually-Ordered: true
+Runtime-Version: 2.0.2.201511100828
+Save-Time: 5/11/17 11:39 AM
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
+Content-Type: text/testcase
+Entry-Name: testcase-items
+
+_QhqE0DYqEeeb38NqTlPkJA	// kind: 'test' name: 'Bug - vpui-1275' path: '../testcases/Bugs/Bug - vpui-1275.test'
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--

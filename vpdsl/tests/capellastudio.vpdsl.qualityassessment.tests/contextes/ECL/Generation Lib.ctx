@@ -6,11 +6,23 @@ Element-Type: context
 Element-Version: 2.0
 Id: _KOH-MKJ5EeWqlNQu-Q0L2A
 Runtime-Version: 2.0.2.201511100828
-Save-Time: 7/11/16 11:34 AM
+Save-Time: 5/11/17 11:22 AM
 
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
 Content-Type: text/ecl
 Entry-Name: .ecl.context
+
+proc generateViewpointWithSelection [val vpdescFilePath] [val generationName]{
+	// Right click on the vpdesc file and click on the menu action
+	get-view "Project Explorer" | get-tree | select $vpdescFilePath | get-menu "Viewpoint DSL/Generate viewpoint with selection" | click
+	
+	// Desable all generations and enable only the choosen one 
+	with [get-window "User Extension Selection"] {
+	    get-button "Unselect all" | uncheck
+	    get-table | get-item $generationName -column Name | check
+	    get-button Finish | click
+	}
+}
 
 /** Get the system temporary folder **/
 proc "getTempFolder" {
