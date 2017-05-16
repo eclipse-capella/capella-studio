@@ -119,10 +119,13 @@
 	 * @generated
 	 */
 	private EObject get<%=extensionClassName%>Object(EObject parent){
-		if (! isViewpointActive(parent))
+		if (parent == null)
 			return null;
-			
-		if (parent == null || (parent != null && parent.eContents() == null))
+
+		if (!isViewpointActive(parent))
+			return null;
+
+		if (parent.eContents() == null)
 			return null;
 			 
 		EObject result = null;
