@@ -14,7 +14,7 @@ Contributors:
 <feature
       id="org.polarsys.capella.extension.sdk.feature"
       label="Capella Extension SDK Feature"
-      version="1.1.1.qualifier"
+      version="1.1.2.qualifier"
       provider-name="%providerName">
 
    <description>
@@ -30,7 +30,7 @@ Contributors:
    </license>
 
    <requires>
-      <import feature="org.polarsys.kitalpha.runtime.feature" version="1.1.1.qualifier"/>
+      <import feature="org.polarsys.kitalpha.runtime.feature" version="1.1.2.qualifier"/>
    </requires>
 
    <plugin
