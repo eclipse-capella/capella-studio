@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.polarsys.capella.studio.releng.capella.feature"
+      label="Feature Capella for capella studio"
+      version="1.2.0.qualifier"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <includes
+         id="org.polarsys.capella.common.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.polarsys.capella.core.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.polarsys.capella.detachment.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.polarsys.capella.doc.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.polarsys.capella.patterns.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.polarsys.capella.studio.product.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.polarsys.capella.ta.viewpoint.dsl.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.polarsys.capella.extension.sdk.feature"
+         version="0.0.0"/>
+
+</feature>

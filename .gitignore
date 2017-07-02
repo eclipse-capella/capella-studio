@@ -66,3 +66,11 @@ $RECYCLE.BIN/
 ._*
 .Spotlight-V100
 .Trashes
+
+##########
+## Git build
+## Pomless
+###########
+target
+.polyglot.build.properties
+

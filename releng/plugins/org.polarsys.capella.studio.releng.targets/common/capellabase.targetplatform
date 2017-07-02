@@ -1,0 +1,282 @@
+/*******************************************************************************
+ * Copyright (c) 2017 THALES GLOBAL SERVICES.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Thales - initial API and implementation
+ *******************************************************************************/
+target "CapellaStudio"
+
+with source, requirements
+
+
+
+location eclipse-releases-neon "http://download.eclipse.org/releases/neon" {
+	org.eclipse.sdk.feature.group lazy
+	org.eclipse.egit.feature.group lazy
+	org.eclipse.egit.source.feature.group lazy
+	org.eclipse.equinox.executable.feature.group lazy
+	org.eclipse.uml2.sdk.feature.group lazy
+	org.eclipse.xtext.sdk.feature.group lazy
+	org.eclipse.emf.sdk.feature.group lazy
+	org.eclipse.emf.validation.ocl lazy
+	org.eclipse.emf.validation.ocl.source lazy
+	org.eclipse.emf.query.ocl.feature.group lazy
+	org.eclipse.emf.query.ocl.source.feature.group lazy
+	org.eclipse.emf.query.sdk.feature.group lazy
+	org.eclipse.emf.query.doc.feature.group lazy
+	org.eclipse.emf.transaction.sdk.feature.group lazy
+	org.eclipse.emf.transaction.doc.feature.group lazy
+	org.eclipse.gmf.sdk lazy
+	org.eclipse.gmf.sdk.feature.group lazy
+	org.eclipse.gmf.runtime.sdk.feature.group lazy
+	org.eclipse.gmf.examples.runtime.feature.group lazy
+	org.eclipse.gmf.examples.runtime.ui.pde.feature.group lazy
+	org.eclipse.gmf.doc.feature.group lazy
+	org.eclipse.gmf.runtime.notation.sdk.feature.group lazy
+	org.eclipse.gef.sdk.feature.group lazy
+	org.eclipse.ui.ide lazy
+	org.eclipse.ui.ide.source lazy
+	org.eclipse.ui.workbench lazy
+	org.eclipse.ui.workbench.source lazy
+	lpg.runtime.java lazy
+	lpg.runtime.java.source lazy
+	org.eclipse.ocl.common lazy
+	org.eclipse.ocl.common.source lazy
+	org.eclipse.ocl.ecore lazy
+	org.eclipse.ocl.ecore.source lazy
+	org.eclipse.ocl lazy
+	org.eclipse.ocl.source lazy
+	org.eclipse.xtend lazy
+	org.eclipse.xtend.source lazy
+	org.eclipse.xpand lazy
+	org.eclipse.xpand.source lazy
+	org.eclipse.emf.mwe.core lazy
+	org.eclipse.emf.mwe.core.source lazy
+	org.eclipse.xtend.typesystem.emf lazy
+	org.eclipse.xtend.typesystem.emf.source lazy
+	org.eclipse.emf.mwe.utils lazy
+	org.eclipse.emf.mwe.utils.source lazy
+	org.eclipse.emf.mwe2.runtime lazy
+	org.eclipse.emf.mwe2.runtime.source lazy
+	org.eclipse.cvs.feature.group lazy
+	org.eclipse.cvs.source.feature.group lazy
+	org.eclipse.draw2d.sdk.feature.group lazy
+	org.eclipse.draw2d.feature.group lazy
+	org.eclipse.draw2d.source.feature.group lazy
+	org.eclipse.e4.rcp.feature.group lazy
+	org.eclipse.e4.rcp.source.feature.group lazy
+	org.eclipse.ecf.core.feature.feature.group lazy
+	org.eclipse.ecf.core.source.feature.feature.group lazy
+	org.eclipse.ecf.core.ssl.feature.feature.group lazy
+	org.eclipse.ecf.core.ssl.source.feature.feature.group lazy
+	org.eclipse.ecf.filetransfer.feature.feature.group lazy
+	org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group lazy
+	org.eclipse.ecf.filetransfer.httpclient4.source.feature.feature.group lazy
+	org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group lazy
+	org.eclipse.ecf.filetransfer.httpclient4.ssl.source.feature.feature.group lazy
+	org.eclipse.ecf.filetransfer.source.feature.feature.group lazy
+	org.eclipse.ecf.filetransfer.ssl.feature.feature.group lazy
+	org.eclipse.ecf.filetransfer.ssl.source.feature.feature.group lazy
+	org.eclipse.emf.codegen.ecore lazy
+	org.eclipse.emf.codegen.ecore.source lazy
+	org.eclipse.emf.codegen.ecore.ui lazy
+	org.eclipse.emf.codegen.ecore.ui.source lazy
+	org.eclipse.emf.codegen lazy
+	org.eclipse.emf.codegen.source lazy
+	org.eclipse.emf.codegen.ui lazy
+	org.eclipse.emf.codegen.ui.source lazy
+	org.eclipse.emf.common lazy
+	org.eclipse.emf.common.source lazy
+	org.eclipse.emf.common.ui.source lazy
+	org.eclipse.emf.converter.source lazy
+	org.eclipse.emf.databinding.edit.source lazy
+	org.eclipse.emf.databinding.source lazy
+	org.eclipse.emf.doc.source.feature.group lazy
+	org.eclipse.emf.ecore.edit.source lazy
+	org.eclipse.emf.ecore.editor.source lazy
+	org.eclipse.emf.ecore.source lazy
+	org.eclipse.emf.edit.source lazy
+	org.eclipse.emf.edit.ui.source lazy
+	org.eclipse.emf.mapping.ecore.editor.source.feature.group lazy
+	org.eclipse.emf.mapping.ecore.source.feature.group lazy
+	org.eclipse.emf.mapping.source lazy
+	org.eclipse.emf.mapping.ui.source lazy
+	org.eclipse.emf.query.doc lazy
+	org.eclipse.emf.query.ocl.source lazy
+	org.eclipse.emf.query.source lazy
+	org.eclipse.emf.source.feature.group lazy
+	org.eclipse.emf.transaction.doc lazy
+	org.eclipse.emf.transaction.source lazy
+	org.eclipse.emf.validation.doc lazy
+	org.eclipse.emf.validation.sdk.feature.group lazy
+	org.eclipse.emf.validation.source lazy
+	org.eclipse.emf.workspace.doc lazy
+	org.eclipse.emf.workspace.source lazy
+	org.eclipse.equinox.p2.core.feature.source.feature.group lazy
+	org.eclipse.equinox.p2.extras.feature.source.feature.group lazy
+	org.eclipse.equinox.p2.rcp.feature.source.feature.group lazy
+	org.eclipse.equinox.p2.user.ui.source.feature.group lazy
+	org.eclipse.gef.source lazy
+	org.eclipse.gmf.doc lazy
+	org.eclipse.gmf.examples.runtime lazy
+	org.eclipse.gmf.examples.runtime.ui.pde lazy
+	org.eclipse.gmf.runtime.notation.sdk lazy
+	org.eclipse.gmf.runtime.notation.source lazy
+	org.eclipse.gmf.runtime.sdk lazy
+	org.eclipse.gmf.runtime.thirdparty.source.feature.group lazy
+	org.eclipse.gmf.source.feature.group lazy
+	org.eclipse.gmf.tooling lazy
+	org.eclipse.gmf.tooling.runtime.source lazy
+	org.eclipse.gmf.tooling.source.feature.group lazy
+	org.eclipse.help.source lazy
+	org.eclipse.jdt.source.feature.group lazy
+	org.eclipse.jgit lazy
+	org.eclipse.pde.source.feature.group lazy
+	org.eclipse.platform.source lazy
+	org.eclipse.rcp.source.feature.group lazy
+	org.eclipse.team.svn.feature.group lazy
+	org.eclipse.uml2.codegen.ecore.ui.source lazy
+	org.eclipse.uml2.common.edit.source lazy
+	org.eclipse.uml2.common.source lazy
+	org.eclipse.uml2.doc lazy
+	org.eclipse.uml2.examples.source lazy
+	org.eclipse.uml2.source lazy
+	org.eclipse.uml2.uml.edit.source lazy
+	org.eclipse.uml2.uml.source lazy
+	org.eclipse.xsd.doc.source.feature.group lazy
+	org.eclipse.xsd.ecore.converter.source.feature.group lazy
+	org.eclipse.xsd.edit.source lazy
+	org.eclipse.xsd.editor.source lazy
+	org.eclipse.xsd.mapping.editor.source.feature.group lazy
+	org.eclipse.xsd.mapping.source.feature.group lazy
+	org.eclipse.xsd.sdk.feature.group lazy
+	org.eclipse.xsd.source lazy
+	org.eclipse.xtend.sdk.feature.group lazy
+	org.eclipse.xtext.docs.feature.group lazy
+	org.eclipse.xtext.examples.source.feature.group lazy
+	org.eclipse.xtext.runtime.source.feature.group lazy
+	org.eclipse.xtext.ui.source lazy
+	org.eclipse.xtext.xbase.lib.source lazy
+	org.eclipse.xtext.xbase.source lazy
+	org.eclipse.xtext.xtext.ui.source lazy
+	org.eclipse.platform.feature.group
+	org.eclipse.emf.query.feature.group
+	org.eclipse.emf.transaction.feature.group
+	org.eclipse.gmf.feature.group
+	com.ibm.icu
+	org.antlr.runtime
+	org.antlr.runtime.source
+}
+
+location acceleo-3.7.1 "http://download.eclipse.org/acceleo/updates/milestones/3.7/S201705121344" {
+	org.eclipse.acceleo.feature.group lazy
+	org.eclipse.acceleo.source.feature.group lazy
+	org.eclipse.acceleo.doc.feature.group lazy
+	org.eclipse.acceleo.examples.feature.group lazy
+	org.eclipse.acceleo.sdk.feature.group lazy
+	org.eclipse.acceleo.ui.capabilities.feature.group lazy
+}
+
+location sirius "http://download.eclipse.org/sirius/updates/milestones/5.1.0rc4/neon" {
+// location sirius-5.0.0 "http://download.eclipse.org/sirius/updates/milestones/5.0.0M6/neon/" {
+	org.eclipse.sirius.doc.feature.feature.group lazy
+	org.eclipse.sirius.doc.feature.source.feature.group lazy
+	org.eclipse.sirius.runtime.ide.eef.feature.group lazy
+	org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group lazy
+	org.eclipse.sirius.runtime.ide.ui.feature.group lazy
+	org.eclipse.sirius.runtime.ide.xtext.feature.group lazy
+	org.eclipse.sirius.runtime.ocl.feature.group lazy
+	org.eclipse.sirius.runtime.feature.group lazy
+	org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group lazy
+	org.eclipse.sirius.specifier.ide.ui.feature.group lazy
+	org.eclipse.sirius.runtime.acceleo.feature.group lazy
+	org.eclipse.sirius.runtime.ide.eef.source.feature.group lazy
+	org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.group lazy
+	org.eclipse.sirius.runtime.ide.ui.source.feature.group lazy
+	org.eclipse.sirius.runtime.ide.xtext.source.feature.group lazy
+	org.eclipse.sirius.runtime.ocl.source.feature.group lazy
+	org.eclipse.sirius.runtime.source.feature.group lazy
+	org.eclipse.sirius.specifier.ide.ui.acceleo.source.feature.group lazy
+	org.eclipse.sirius.specifier.ide.ui.source.feature.group lazy
+	org.eclipse.sirius.runtime.acceleo.source.feature.group lazy
+	org.eclipse.sirius.runtime.aql.feature.group lazy
+	org.eclipse.sirius.runtime.aql.source.feature.group lazy
+	org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.jar lazy
+}
+
+location EEF "http://download.eclipse.org/modeling/emft/eef/updates/milestones/1.5/S201501090502" {
+	org.eclipse.emf.eef.sdk-feature.feature.group lazy
+	org.eclipse.emf.eef.codegen.ecore-feature.feature.group lazy
+	org.eclipse.emf.eef.edt-feature.feature.group lazy
+	org.eclipse.emf.eef.extended-feature.feature.group lazy
+	org.eclipse.emf.eef.runtime-feature.feature.group lazy
+}
+
+location diffmerge-core-master "http://download.eclipse.org/diffmerge/releases/0.9.0/emf-diffmerge-site" {
+	org.eclipse.emf.diffmerge.feature.feature.group lazy
+	org.eclipse.emf.diffmerge.feature.source.feature.group lazy
+	org.eclipse.emf.diffmerge.sirius.feature.feature.group lazy
+	org.eclipse.emf.diffmerge.sirius.feature.source.feature.group lazy
+	org.eclipse.emf.diffmerge.gmf.feature.feature.group lazy
+	org.eclipse.emf.diffmerge.gmf.feature.source.feature.group lazy
+	org.eclipse.emf.diffmerge.sdk.feature.feature.group lazy
+	org.eclipse.emf.diffmerge.sdk.feature.source.feature.group lazy
+	
+}
+
+location diffmerge-patterns-master "http://download.eclipse.org/diffmerge/releases/0.9.0/edm-patterns-site" {
+	org.eclipse.emf.diffmerge.patterns.sdk.feature.feature.group lazy
+	org.eclipse.emf.diffmerge.patterns.sdk.feature.source.feature.group lazy
+	org.eclipse.emf.diffmerge.patterns.sirius.sdk.feature.feature.group lazy
+	org.eclipse.emf.diffmerge.patterns.sirius.sdk.feature.source.feature.group lazy
+}
+
+location amalgam "http://download.eclipse.org/modeling/amalgam/updates/milestones/1.9.0RC1/capella" {
+	org.eclipse.amalgam.explorer.activity.feature.group
+	org.eclipse.amalgam.explorer.activity.source.feature.group lazy
+	org.eclipse.amalgam.explorer.contextual.feature.group lazy
+	org.eclipse.amalgam.explorer.contextual.source.feature.group lazy
+	org.eclipse.amalgam.explorer.contextual.sirius.feature.group lazy
+	org.eclipse.amalgam.explorer.contextual.sirius.source.feature.group lazy
+	org.eclipse.amalgam.explorer.contextual.core lazy
+	org.eclipse.amalgam.explorer.contextual.core.source lazy
+	org.eclipse.amalgam.explorer.contextual.core.feature.group lazy
+	org.eclipse.amalgam.explorer.contextual.core.source.feature.group lazy
+	org.eclipse.amalgam.explorer.contextual.sirius.source lazy
+}
+
+location EcoreTools "http://download.eclipse.org/ecoretools/updates/nightly/3.2.1/neon" {
+	org.eclipse.emf.ecoretools.sdk.feature.group lazy
+	org.eclipse.emf.ecoretools.design lazy
+	org.eclipse.emf.ecoretools.explorer.contextual.feature.group lazy
+}
+
+location sirius-query-legacy-1.1.0 "http://download.eclipse.org/sirius/updates/legacy/1.1.0" {
+	org.eclipse.sirius.query.legacy.feature.feature.group lazy
+	org.eclipse.sirius.query.legacy.feature.source.feature.group lazy
+}
+
+location nebula-1.2.0 "http://download.eclipse.org/nebula/releases/1.2.0" {
+	org.eclipse.nebula.feature.feature.group
+}
+
+location orbit-R20130827064939 "http://download.eclipse.org/tools/orbit/downloads/drops/R20130827064939/repository" {
+	org.apache.log4j [1.2.15.v201012070815,1.2.15.v201012070815]
+	org.apache.commons.lang [2.4.0.v201005080502,2.4.0.v201005080502]
+	org.apache.commons.net [3.2.0.v201305141515,3.2.0.v201305141515]
+	org.jsoup [1.7.2.v201304221138,1.7.2.v201304221138]
+}
+
+location orbit-R20140525021250 "http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository" {
+	com.google.guava [15.0.0.v201403281430,15.0.0.v201403281430]
+}
+
+location EGF "https://hudson.eclipse.org/egf/job/buckminster-egf-neon/lastSuccessfulBuild/artifact/result/publish/org.eclipse.egf.site/site.p2/" {
+	org.eclipse.egf.feature.group lazy
+	org.eclipse.egf.sdk.feature.group lazy
+}
+

@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.polarsys.capella.studio.releng.eclipse.feature"
+      label="Feature Eclipse"
+      version="1.2.0.qualifier"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <includes
+         id="org.eclipse.amalgam.explorer.activity"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.amalgam.explorer.activity.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.amalgam.explorer.contextual"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.amalgam.explorer.contextual.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.amalgam.explorer.contextual.core"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.amalgam.explorer.contextual.core.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.amalgam.explorer.contextual.sirius"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.amalgam.explorer.contextual.sirius.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.cvs"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.draw2d"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.draw2d.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.e4.rcp"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.core.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.core.ssl.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.filetransfer.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.filetransfer.httpclient4.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.filetransfer.ssl.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.common"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.common.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.core"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.core.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.doc"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.fprod"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.fprod.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.ftask"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.ftask.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.portfolio"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.portfolio.emf"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.portfolio.genchain"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.portfolio.task.ant"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.producer"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.producer.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.codegen"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.codegen.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.codegen.ecore"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.codegen.ecore.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.codegen.ecore.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.codegen.ecore.ui.source"
+         version="0.0.0"/>
+
+   <include
+            id="org.eclipse.emf.codegen.ecore"
+         version="0.0.0"/>
+
+   <include
+            id="org.eclipse.emf.codegen.ecore.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.codegen.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.codegen.ui.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.common"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.common.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.converter"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.databinding"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.databinding.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.diffmerge.patterns.sdk.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.diffmerge.patterns.sdk.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.diffmerge.patterns.sirius.sdk.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.diffmerge.patterns.sirius.sdk.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.diffmerge.sdk.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.diffmerge.sdk.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.doc"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore.editor"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecoretools.design"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecoretools.explorer.contextual"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecoretools.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.edit.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.eef.codegen.ecore-feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.eef.edt-feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.eef.extended-feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.eef.runtime-feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.eef.sdk-feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.mapping"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.mapping.ecore"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.mapping.ecore.editor"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.mapping.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.query"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.query.doc"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.query.ocl"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.query.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.transaction"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.transaction.doc"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.transaction.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.validation"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.validation.doc"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.validation.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.workspace"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.workspace.doc"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.core.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.extras.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.rcp.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.user.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gef"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gef.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gmf"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gmf.doc"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gmf.examples.runtime"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gmf.examples.runtime.ui.pde"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gmf.runtime.notation"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gmf.runtime.notation.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gmf.runtime.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gmf.runtime.thirdparty"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gmf.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gmf.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gmf.tooling"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gmf.tooling.runtime"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.help"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.jdt"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.jgit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ocl"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.pde"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.platform"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.rcp"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.doc.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.doc.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.acceleo"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.acceleo.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.aql"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.aql.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.eef"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.eef.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.ui.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.ui.acceleo"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.ui.acceleo.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.xtext"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.xtext.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ocl"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ocl.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.specifier.ide.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.specifier.ide.ui.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.specifier.ide.ui.acceleo"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.specifier.ide.ui.acceleo.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.uml2"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.uml2.codegen.ecore.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.uml2.common"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.uml2.common.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.uml2.doc"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.uml2.examples"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.uml2.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.uml2.uml"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.uml2.uml.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xsd"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xsd.doc"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xsd.ecore.converter"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xsd.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xsd.editor"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xsd.mapping"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xsd.mapping.editor"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xsd.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xtend.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xtext.docs"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xtext.examples"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xtext.runtime"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xtext.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xtext.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xtext.xbase"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xtext.xbase.lib"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xtext.xtext.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.validation.ocl"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.acceleo.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.nebula.widgets.richtext.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.query.legacy.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.team.svn"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.ocl.ecore"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ocl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.google.guava"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ocl.common"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ocl.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="lpg.runtime.java"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.google.inject"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.validation.ocl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtend"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xpand"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.mwe.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtend.typesystem.emf"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.mwe.utils"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.cli"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.mwe2.runtime"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.query"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.antlr.runtime"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.annotations"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

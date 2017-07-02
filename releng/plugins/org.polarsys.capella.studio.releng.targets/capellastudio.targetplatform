@@ -1,0 +1,71 @@
+/*******************************************************************************
+ * Copyright (c) 2017 THALES GLOBAL SERVICES.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Thales - initial API and implementation
+ *******************************************************************************/
+target "capellastudio" with source, requirements
+
+include "common/capellabase.targetplatform"
+
+location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/stable/sdk/1.2.0/" {
+	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group lazy
+	org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group lazy
+	org.polarsys.kitalpha.ad.dsl.feature.feature.group lazy
+	org.polarsys.kitalpha.product.feature.feature.group lazy
+	org.polarsys.kitalpha.sdk.feature.feature.group lazy
+	org.polarsys.kitalpha.richtext.widget.feature.feature.group lazy
+	org.polarsys.kitalpha.emde.genchain.feature.feature.group lazy
+	org.polarsys.kitalpha.ad.feature.feature.group lazy
+	org.polarsys.kitalpha.report.feature.feature.group lazy
+	org.polarsys.kitalpha.resourcereuse.feature.feature.group lazy
+	org.polarsys.kitalpha.ad.metadata.feature.feature.group lazy
+	org.polarsys.kitalpha.ad.integration.sirius.feature.feature.group lazy
+	org.polarsys.kitalpha.report.ui.feature.feature.group lazy
+	org.polarsys.kitalpha.resourcereuse.ui.feature.feature.group lazy
+	org.polarsys.kitalpha.ad.integration.emde.feature.feature.group lazy
+	org.polarsys.kitalpha.ad.integration.amalgam.feature.feature.group lazy
+	org.polarsys.kitalpha.cadence.feature.feature.group lazy
+	org.polarsys.kitalpha.transposer.feature.feature.group lazy
+	org.polarsys.kitalpha.emde.ui.feature.feature.group lazy
+	org.polarsys.kitalpha.emde.explorer.contextual.feature.feature.group lazy
+	org.polarsys.kitalpha.composer.feature.feature.group lazy
+	org.polarsys.kitalpha.accuracy.feature.feature.group lazy
+	org.polarsys.kitalpha.resourcereuse.emfscheme.feature.feature.group lazy
+	org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature.feature.group lazy
+	org.polarsys.kitalpha.model.attachment.feature.feature.group lazy
+	org.polarsys.kitalpha.model.detachment.feature.feature.group lazy
+	org.polarsys.kitalpha.model.detachment.contrib.viewpoints.feature.feature.group lazy
+	org.polarsys.kitalpha.ad.runtime.feature.feature.group lazy
+	org.polarsys.kitalpha.doc.gen.business.core.feature.feature.group lazy
+	org.polarsys.kitalpha.patterns.feature.feature.group lazy
+	org.polarsys.kitalpha.doc.feature.feature.group lazy
+	org.polarsys.kitalpha.runtime.feature.feature.group lazy
+	org.polarsys.kitalpha.ad.sdk.feature.feature.group lazy
+	org.polarsys.kitalpha.ad.ta.feature.feature.group lazy
+	org.polarsys.kitalpha.vp.componentsample.example.installer.feature.feature.group lazy
+	org.polarsys.kitalpha.representation.feature.feature.group lazy
+	org.polarsys.kitalpha.doc.gen.business.ecore.feature.feature.group lazy
+	org.polarsys.kitalpha.emde.sdk.feature.feature.group lazy
+	org.polarsys.kitalpha.cadence.examples.feature.feature.group lazy
+	org.polarsys.kitalpha.composer.examples.feature.feature.group lazy
+	org.polarsys.kitalpha.composer.componentsample.installer.feature.feature.group lazy
+	org.polarsys.kitalpha.transposer.examples.feature.feature.group lazy
+	org.polarsys.kitalpha.transposer.componentsample.installer.feature.feature.group lazy
+	org.polarsys.kitalpha.product.source.feature.feature.group lazy
+	org.polarsys.kitalpha.sdk.source.feature.feature.group lazy
+}
+
+location capella-egf-patterns "https://hudson.polarsys.org/capella/job/capella-master/1001/artifact/releng/plugins/org.polarsys.capella.egf.site/target/repository/" {
+	org.polarsys.capella.core.egf.feature.feature.group lazy
+	org.polarsys.capella.core.egf.feature.source.feature.group lazy
+}
+
+location capella "https://hudson.polarsys.org/capella/view/Capella-master/job/capella-master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.capella.rcp.site/target/repository/" {
+	org.polarsys.capella.rcp.feature.feature.group lazy
+	org.polarsys.capella.rcp.feature.source.feature.group lazy
+}
