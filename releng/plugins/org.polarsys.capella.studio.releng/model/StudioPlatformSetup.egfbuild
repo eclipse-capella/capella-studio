@@ -6,6 +6,7 @@
     </steps>
     <steps xsi:type="buildstep:InstallStep" xmi:id="_tEnuIM1xEeSFroBhAlzk1g" name="install query legacy features" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
       <updateSiteUrls>${query.legacy.repo.url}</updateSiteUrls>
+      <updateSiteUrls>${orbit.repo.url}</updateSiteUrls>
       <featureNames>org.eclipse.sirius.query.legacy.feature.source</featureNames>
       <featureNames>org.eclipse.sirius.query.legacy.feature</featureNames>
     </steps>
