@@ -12,9 +12,9 @@
     <properties xmi:id="_efiO4BGGEeS7tbIPWaBUAQ" key="eef.repo.url" value="http://download.eclipse.org/modeling/emft/eef/updates/releases/1.5/R201505291308"/>
     <properties xmi:id="_snr1UBGGEeS7tbIPWaBUAQ" key="acceleo.repo.url" value="http://download.eclipse.org/acceleo/updates/milestones/3.7/S201705121344"/>
     <properties xmi:id="_dtoK4AdAEeSxv713mpB8TA" key="ecoretools2.repo.url" value="http://download.eclipse.org/ecoretools/updates/releases/3.2.1/neon/"/>
-    <properties xmi:id="_BukoEVkbEeSo0vu-C-A3cw" key="diffmerge.repo.url" value="https://hudson.eclipse.org/diffmerge/job/emf-diffmerge-core-master/167/artifact/releng/org.eclipse.emf.diffmerge.update/target/repository/"/>
+    <properties xmi:id="_BukoEVkbEeSo0vu-C-A3cw" key="diffmerge.repo.url" value="http://download.eclipse.org/diffmerge/releases/0.8.0/emf-diffmerge-site"/>
     <properties xmi:id="_oqevQHWpEeafx85AHNR12g" key="diffmerge.repo.url-temporary" value="https://hudson.eclipse.org/diffmerge/job/buckminster-emf-diffmerge-master/129/artifact/result/publish/org.eclipse.emf.diffmerge.scm.feature/site.p2"/>
-    <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="https://hudson.eclipse.org/diffmerge/job/emf-diffmerge-patterns-master/106/artifact/releng/org.eclipse.emf.diffmerge.patterns.update/target/repository/"/>
+    <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="http://download.eclipse.org/diffmerge/releases/0.8.0/edm-patterns-site"/>
     <properties xmi:id="_7UOncM1xEeSFroBhAlzk1g" key="query.legacy.repo.url" value="http://download.eclipse.org/sirius/updates/legacy/1.1.0/"/>
     <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_master/lastSuccessfulBuild/artifact/result/publish/kitalpha_sdk/site.p2"/>
     <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/job/capella-master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.capella.rcp.site/target/repository/"/>
