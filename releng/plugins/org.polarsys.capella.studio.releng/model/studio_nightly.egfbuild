@@ -5,7 +5,7 @@
     <properties xmi:id="_MWwdkPlvEeCFCIE_fWd_VQ" key="cloudsmith.download.prefix" value="http://download.eclipse.org/external/"/>
     <properties xmi:id="_MlqcQPlvEeCFCIE_fWd_VQ" key="polarion.download.prefix" value="http://download.eclipse.org/external/"/>
     <properties xmi:id="_LPrgwPlvEeCFCIE_fWd_VQ" key="eclipse.download.prefix" value="http://download.eclipse.org/"/>
-    <properties xmi:id="_7e-7UI5hEeOQ8YcnVfa6Wg" key="sirius.repo.url" value="http://download.eclipse.org/sirius/updates/releases/4.1.5/mars/"/>
+    <properties xmi:id="_7e-7UI5hEeOQ8YcnVfa6Wg" key="sirius.repo.url" value="http://download.eclipse.org/sirius/updates/releases/4.1.6/mars/"/>
     <properties xmi:id="_n0G4oJPyEeODqo9Nw0Mw6Q" key="orbit.repo.url" value="${eclipse.download.prefix}/tools/orbit/downloads/drops/R20130827064939/repository/"/>
     <properties xmi:id="_eRQHEZk8EeOez_jbx14D1w" key="eclipse38.download" value="http://download.eclipse.org/releases/mars"/>
     <properties xmi:id="_gReNwM1bEeSQpbp6WoTKiQ" key="eclipse38.download.prefix" value="${eclipse38.download}"/>
@@ -16,7 +16,7 @@
     <properties xmi:id="_oqevQHWpEeafx85AHNR12g" key="diffmerge.repo.url-temporary" value="https://hudson.eclipse.org/diffmerge/job/buckminster-emf-diffmerge-master/129/artifact/result/publish/org.eclipse.emf.diffmerge.scm.feature/site.p2"/>
     <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="${eclipse.download.prefix}/diffmerge/releases/0.7.1/edm-patterns-site/"/>
     <properties xmi:id="_7UOncM1xEeSFroBhAlzk1g" key="query.legacy.repo.url" value="http://download.eclipse.org/sirius/updates/legacy/1.1.0/"/>
-    <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha-v1.1.x/422/artifact/result/publish/kitalpha_sdk/site.p2/"/>
+    <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha-v1.1.x/473/artifact/result/publish/kitalpha_sdk/site.p2"/>
     <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="http://download.polarsys.org/capella/core/updates/releases/1.1.1-R20170328-124145/org.polarsys.capella/site.p2/"/>
     <properties xmi:id="_rstsgNMCEeSCstxmhDJ57A" key="capella.egf.repo.url" value="http://download.polarsys.org/capella/core/updates/releases/1.1.1-R20170328-124145/org.polarsys.capella.core.egf.feature/site.p2/"/>
     <properties xmi:id="_-jrxkA9SEeW7CM9Somx7YA" key="docgen.addon.location" value="https://hudson.polarsys.org/capella/job/capella-addon-docgen-v1.1.x/lastSuccessfulBuild"/>
