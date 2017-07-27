@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2017 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extensions.UIPropertiesExtensionsManager;
 import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.GenmodelUtility;
 import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.UIProjectManager;
+import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.VPUIHelper;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpdesc.Viewpoint;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UI;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer;
@@ -92,7 +93,9 @@ public class PluginXmlReporter implements PatternExecutionReporter {
 			requiredBundles.add(GenmodelUtility.getInstance().getModelPluginID());
 			requiredBundles.add("org.polarsys.kitalpha.ad.services");
 			requiredBundles.add("org.polarsys.capella.core.ui.properties");
-			
+			if (VPUIHelper.generateRichTextForUI(vp)){
+				requiredBundles.add("org.polarsys.kitalpha.richtext.widget");
+			}
 			PDEUtility.updateRequiredBundles(project, requiredBundles, new NullProgressMonitor());
 			PDEUtility.updatePluginXml(project, finalOutput);
 			PDEUtility.updateBuild_BinInclude(project, "plugin.xml", false, new NullProgressMonitor());

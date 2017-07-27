@@ -10,6 +10,7 @@
 		super.createControls(parent, aTabbedPropertySheetPage);
 		<%// UIField 2 widget %>
 <%class widgetCreationGenerator{%>
+<%boolean generateRichTextCreateControl = false;%>
 <%private int getParentColumns(UIContainer container){
 	int result = 1;
 	for (UIField uiField : container.getUI_fields())
@@ -35,7 +36,11 @@
 			<%//Code generation%>
 			<%=groupName%> = getWidgetFactory().createGroup(<%=groupParent%>, <%=groupLabel%>);
 			<%=groupName%>.setLayout(new GridLayout(<%=getParentColumns(container)%>, false));
-			GridData gd<%=groupName%> = new GridData(GridData.FILL_HORIZONTAL);
+			<% if (VPUIHelper.generateRichTextForUI_Container(container)) { %>
+				GridData gd<%=groupName%> = new GridData(GridData.FILL_BOTH);
+			<% } else { %>
+				GridData gd<%=groupName%> = new GridData(GridData.FILL_HORIZONTAL);
+			<%}%>
 			gd<%=groupName%>.horizontalSpan = ((GridLayout)<%=groupParent%>.getLayout()).numColumns;
 			<%=groupName%>.setLayoutData(gd<%=groupName%>);
 		<%}%>
@@ -80,6 +85,12 @@
 										getWidgetFactory(),
 										new <%=widgetName+"FieldController()"%>);
 				<%break;
+			case RICHTEXT:
+			{
+				if (!generateRichTextCreateControl)
+					generateRichTextCreateControl = true;%>
+				<%=widgetName%> = createRichtextControl(<%=widgetParent%>, "<%= widgetLabel%> :");
+			<%}
 			default:
 				break;
 		}
@@ -96,3 +107,110 @@
 <%widgetCreationGenerator wcg = new widgetCreationGenerator();%>
 <%wcg.generateWidgets(parameter);%>
 	}
+<% if (wcg.generateRichTextCreateControl){ %>
+	/**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @param parent
+	* @param label
+	* @generated
+	*/
+	public MDERichTextWidget createRichtextControl(Composite parent, String label) {
+		Label labelWidget = new Label(parent, SWT.NONE);
+		labelWidget.setText(label);
+		final MDERichTextWidget widget = (new MDERichTextFactory()).createMinimalRichTextWidget(parent);
+		widget.setSaveStrategy(new SaveStrategy() {
+			@Override
+			public void save(final String editorText, final EObject owner, final EStructuralFeature feature) {
+				if (NotificationHelper.isNotificationRequired(owner, feature, editorText)) {
+				      AbstractReadWriteCommand command = new AbstractReadWriteCommand() {
+				        public void run() {
+				        	owner.eSet(feature, editorText);
+				        }
+				      };
+				      executeCommand(command);
+				 }
+			}
+			
+			protected void executeCommand(final ICommand command) {
+			    // Precondition
+			    if ((null == command)) {
+			      return;
+			    }
+			    ICommand cmd = command;
+			    if (command instanceof AbstractReadWriteCommand) {
+			      cmd = new AbstractReadWriteCommand() {
+			        /**
+			         * @see java.lang.Runnable#run()
+			         */
+			        public void run() {
+			          command.run();
+			        }
+
+			        /**
+			         * @see org.polarsys.capella.common.tig.ef.command.AbstractCommand#getAffectedObjects()
+			         */
+			        @SuppressWarnings("synthetic-access")
+			        @Override
+			        public Collection<?> getAffectedObjects() {
+			          return Collections.singletonList(widget.getElement());
+			        }
+
+			        /**
+			         * @see org.polarsys.capella.common.tig.ef.command.AbstractCommand#getName()
+			         */
+			        @Override
+			        public String getName() {
+			          return "Model Edition"; //$NON-NLS-1$
+			        }
+
+			        /**
+			         * @see org.polarsys.capella.common.tig.ef.command.AbstractCommand#commandInterrupted()
+			         */
+			        @Override
+			        public void commandInterrupted() {
+			          commandRolledBack();
+			        }
+
+			        /**
+			         * @see org.polarsys.capella.common.tig.ef.command.AbstractCommand#commandRolledBack()
+			         */
+			        @SuppressWarnings("synthetic-access")
+			        @Override
+			        public void commandRolledBack() {
+			          // Reload data >> refresh the UI.
+			          loadData(widget.getElement());
+			        }
+			      };
+			    }
+			    // Execute it against the TED.
+			    TransactionHelper.getExecutionManager(widget.getElement()).execute(cmd);
+			  }
+		});
+		
+		
+		final ISelectionListener listener = new ISelectionListener() {
+			
+			@Override
+			public void selectionChanged(IWorkbenchPart part, ISelection selection) {
+				widget.saveContent();
+			}
+		};
+		
+		/**
+		 * TODO Remove this snippet when found a generic solution to save description in the model
+		 * This solution is based on selection provider of the workbench
+		 */
+		PlatformUI.getWorkbench().getActiveWorkbenchWindow().getSelectionService().addSelectionListener(listener);
+		
+		((BrowserBasedMDERichTextWidget)widget).getBrowser().addDisposeListener(new DisposeListener() {
+			
+			@Override
+			public void widgetDisposed(DisposeEvent e) {
+				PlatformUI.getWorkbench().getActiveWorkbenchWindow().getSelectionService().removeSelectionListener(listener);
+			}
+		});
+		
+		return widget;
+	}
+<%}%>

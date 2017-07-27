@@ -13,7 +13,10 @@
 			<%=widgetName%>.loadData(capellaElement_p, 
 									<%=widgetFieldAccessorName%>);	
 			  	<%break;
-				
+				case RICHTEXT:%>
+			<%=widgetName%>.bind(capellaElement_p, 
+									<%=widgetFieldAccessorName%>);	
+				<%break;
 				case CHECKBOX:%>
 			<%=widgetName%>.loadData(capellaElement_p);			
 			  	<%break;
@@ -30,9 +33,11 @@
 <% // Group UIFields generation recursive method %>
 <%private void generateAddSematics(UIContainer container){%>
 	<%for (UIField uiField : container.getUI_fields()) {
-		String widgetName = epfUtility.getWidgetName(uiField);%>
+		String widgetName = epfUtility.getWidgetName(uiField);
+		if (!uiField.getType().equals(UI_Field_Type.RICHTEXT)){%>
 		abstractSemanticFields.add(<%=widgetName%>);
-	<%}%>
+		<%}
+	}%>
 	<%if (container.getSubContainers() != null && container.getSubContainers().size() > 0){
 		for (UIContainer iUIContainer : container.getSubContainers()) {
 			generateAddSematics(iUIContainer);

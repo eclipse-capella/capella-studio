@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2017 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpdesc.AbstractAttributeType;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpdesc.AbstractFeature;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpdesc.Attribute;
@@ -35,6 +34,7 @@ import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.FieldMapping;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UI;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIField;
+import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UI_Field_Type;
 
 /**
  * @author Boubekeur Zendagui
@@ -64,6 +64,9 @@ public class DataWidget{
 	public ArrayList<String> widgetGraphicalImports;
 	// This property is used in the main generated class to import the other generated EClasses
 	public ArrayList<String> generatedClassesImports;
+	
+	// This property is used in the main generated additional imports
+	public ArrayList<String> additionalImports;
 	
 	// Each widget can have some extension to add to Plugin.xml. 
 	// These extensions are created by Pattern during generation
@@ -98,7 +101,36 @@ public class DataWidget{
 		widgetFieldTypeEnumerator = initEnumerator();
 		
 		generatedClassesImports = new ArrayList<String>();
+		additionalImports = computeAdditionalImports();
 		PluginExtensionEntries = new ArrayList<PluginExtensionEntry>();
+	}
+	
+	private ArrayList<String> computeAdditionalImports() {
+		ArrayList<String> result = new ArrayList<String>();
+		if (this.uiField.getType().equals(UI_Field_Type.RICHTEXT))
+		{
+			result.add("org.eclipse.kitalpha.richtext.common.intf.MDERichTextWidget");
+			result.add("org.polarsys.kitalpha.richtext.widget.factory.MDERichTextFactory");
+			result.add("org.eclipse.kitalpha.richtext.common.intf.SaveStrategy");
+			result.add("org.polarsys.capella.core.ui.properties.helpers.NotificationHelper");
+			result.add("org.polarsys.capella.common.ef.command.AbstractReadWriteCommand");
+			result.add("org.polarsys.capella.common.ef.command.ICommand");
+			result.add("java.util.Collection");
+			result.add("java.util.Collections");
+			result.add("org.polarsys.capella.common.helpers.TransactionHelper");
+			result.add("org.eclipse.emf.ecore.EStructuralFeature");
+			result.add("org.eclipse.swt.SWT");
+			
+			//TODO remove these imports when found a generic solution to save the descrition in model
+			result.add("org.eclipse.ui.ISelectionListener");
+			result.add("org.eclipse.ui.PlatformUI");
+			result.add("org.eclipse.kitalpha.richtext.common.intf.BrowserBasedMDERichTextWidget");
+			result.add("org.eclipse.swt.events.DisposeListener");
+			result.add("org.eclipse.swt.events.DisposeEvent");
+			//End of previous TODO - remove
+		}
+		
+		return result;
 	}
 
 	private String computeWidgetParentName(){
@@ -111,7 +143,7 @@ public class DataWidget{
 				case CHECKBOX:
 					return "getCheckGroup()";
 				default:
-					return "_rootParentComposite";
+					return "rootParentComposite";
 			}
 		else
 			return uiContainer.getName();
@@ -339,6 +371,8 @@ public class DataWidget{
 				return "TextValueGroup";
 			case TEXTAREA:
 				return "TextAreaValueGroup";
+			case RICHTEXT:
+				return "MDERichTextWidget";
 			case CHECKBOX:
 				String checkbox_name = this.uiField.getName()+"_semanticCheckboxGroup";
 				char checkbox_first = Character.toUpperCase(checkbox_name.charAt(0));
