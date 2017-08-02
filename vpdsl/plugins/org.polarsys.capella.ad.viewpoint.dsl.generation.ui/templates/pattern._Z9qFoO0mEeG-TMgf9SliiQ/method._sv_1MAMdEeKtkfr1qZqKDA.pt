@@ -187,30 +187,6 @@
 			    TransactionHelper.getExecutionManager(widget.getElement()).execute(cmd);
 			  }
 		});
-		
-		
-		final ISelectionListener listener = new ISelectionListener() {
-			
-			@Override
-			public void selectionChanged(IWorkbenchPart part, ISelection selection) {
-				widget.saveContent();
-			}
-		};
-		
-		/**
-		 * TODO Remove this snippet when found a generic solution to save description in the model
-		 * This solution is based on selection provider of the workbench
-		 */
-		PlatformUI.getWorkbench().getActiveWorkbenchWindow().getSelectionService().addSelectionListener(listener);
-		
-		((BrowserBasedMDERichTextWidget)widget).getBrowser().addDisposeListener(new DisposeListener() {
-			
-			@Override
-			public void widgetDisposed(DisposeEvent e) {
-				PlatformUI.getWorkbench().getActiveWorkbenchWindow().getSelectionService().removeSelectionListener(listener);
-			}
-		});
-		
 		return widget;
 	}
 <%}%>

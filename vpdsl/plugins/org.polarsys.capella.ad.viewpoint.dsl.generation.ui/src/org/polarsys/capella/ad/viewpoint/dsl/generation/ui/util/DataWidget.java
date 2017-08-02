@@ -109,9 +109,9 @@ public class DataWidget{
 		ArrayList<String> result = new ArrayList<String>();
 		if (this.uiField.getType().equals(UI_Field_Type.RICHTEXT))
 		{
-			result.add("org.eclipse.kitalpha.richtext.common.intf.MDERichTextWidget");
+			result.add("org.polarsys.kitalpha.richtext.common.intf.MDERichTextWidget");
 			result.add("org.polarsys.kitalpha.richtext.widget.factory.MDERichTextFactory");
-			result.add("org.eclipse.kitalpha.richtext.common.intf.SaveStrategy");
+			result.add("org.polarsys.kitalpha.richtext.common.intf.SaveStrategy");
 			result.add("org.polarsys.capella.core.ui.properties.helpers.NotificationHelper");
 			result.add("org.polarsys.capella.common.ef.command.AbstractReadWriteCommand");
 			result.add("org.polarsys.capella.common.ef.command.ICommand");
@@ -124,7 +124,7 @@ public class DataWidget{
 			//TODO remove these imports when found a generic solution to save the descrition in model
 			result.add("org.eclipse.ui.ISelectionListener");
 			result.add("org.eclipse.ui.PlatformUI");
-			result.add("org.eclipse.kitalpha.richtext.common.intf.BrowserBasedMDERichTextWidget");
+			result.add("org.polarsys.kitalpha.richtext.common.intf.BrowserBasedMDERichTextWidget");
 			result.add("org.eclipse.swt.events.DisposeListener");
 			result.add("org.eclipse.swt.events.DisposeEvent");
 			//End of previous TODO - remove

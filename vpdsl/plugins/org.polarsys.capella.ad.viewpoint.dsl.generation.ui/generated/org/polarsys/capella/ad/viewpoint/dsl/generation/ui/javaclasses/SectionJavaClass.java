@@ -245,18 +245,7 @@ public class SectionJavaClass
 			+ "\t\t\t          loadData(widget.getElement());" + NL + "\t\t\t        }" + NL + "\t\t\t      };" + NL
 			+ "\t\t\t    }" + NL + "\t\t\t    // Execute it against the TED." + NL
 			+ "\t\t\t    TransactionHelper.getExecutionManager(widget.getElement()).execute(cmd);" + NL + "\t\t\t  }"
-			+ NL + "\t\t});" + NL + "\t\t" + NL + "\t\t" + NL
-			+ "\t\tfinal ISelectionListener listener = new ISelectionListener() {" + NL + "\t\t\t" + NL
-			+ "\t\t\t@Override" + NL + "\t\t\tpublic void selectionChanged(IWorkbenchPart part, ISelection selection) {"
-			+ NL + "\t\t\t\twidget.saveContent();" + NL + "\t\t\t}" + NL + "\t\t};" + NL + "\t\t" + NL + "\t\t/**" + NL
-			+ "\t\t * TODO Remove this snippet when found a generic solution to save description in the model" + NL
-			+ "\t\t * This solution is based on selection provider of the workbench" + NL + "\t\t */" + NL
-			+ "\t\tPlatformUI.getWorkbench().getActiveWorkbenchWindow().getSelectionService().addSelectionListener(listener);"
-			+ NL + "\t\t" + NL
-			+ "\t\t((BrowserBasedMDERichTextWidget)widget).getBrowser().addDisposeListener(new DisposeListener() {" + NL
-			+ "\t\t\t" + NL + "\t\t\t@Override" + NL + "\t\t\tpublic void widgetDisposed(DisposeEvent e) {" + NL
-			+ "\t\t\t\tPlatformUI.getWorkbench().getActiveWorkbenchWindow().getSelectionService().removeSelectionListener(listener);"
-			+ NL + "\t\t\t}" + NL + "\t\t});" + NL + "\t\t" + NL + "\t\treturn widget;" + NL + "\t}";
+			+ NL + "\t\t});" + NL + "\t\treturn widget;" + NL + "\t}";
 	protected final String TEXT_133 = NL + "\t";
 	protected final String TEXT_134 = NL + "\t\t\t";
 	protected final String TEXT_135 = ".loadData(capellaElement_p, " + NL + "\t\t\t\t\t\t\t\t\t";
