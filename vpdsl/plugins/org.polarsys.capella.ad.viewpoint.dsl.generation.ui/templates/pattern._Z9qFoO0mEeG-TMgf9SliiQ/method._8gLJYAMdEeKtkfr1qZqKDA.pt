@@ -10,15 +10,15 @@
 				case MULTIPLE_CHOICE_LIST:
 				case SIMPLE_CHOICE_LIST:
 				case RADIOBOX:%>
-			<%=widgetName%>.loadData(capellaElement_p, 
+			<%=widgetName%>.loadData(object, 
 									<%=widgetFieldAccessorName%>);	
 			  	<%break;
 				case RICHTEXT:%>
-			<%=widgetName%>.bind(capellaElement_p, 
+			<%=widgetName%>.bind(object, 
 									<%=widgetFieldAccessorName%>);	
 				<%break;
 				case CHECKBOX:%>
-			<%=widgetName%>.loadData(capellaElement_p);			
+			<%=widgetName%>.loadData(object);			
 			  	<%break;
 				default:
 					break;
@@ -51,11 +51,11 @@
 	/**
 	* <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @param capellaElement_p
+	* @param object
 	* @generated
 	*/
-	public void loadData(CapellaElement capellaElement_p) {
-		super.loadData(capellaElement_p);
+	public void loadData(EObject object) {
+		super.loadData(object);
 		<%wpg.generateLoadData(parameter);%>
 	} 
 	

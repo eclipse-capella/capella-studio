@@ -1,25 +1,30 @@
 //Generated with EGF 1.5.0.v20170706-0846
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.javaclasses;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.egf.model.pattern.Node;
+import org.eclipse.egf.model.pattern.PatternContext;
+import org.eclipse.egf.pattern.execution.InternalPatternContext;
+import org.eclipse.egf.pattern.execution.OutputManager;
+import org.eclipse.egf.pattern.execution.SuperOrchestrationContext;
+import org.eclipse.egf.pattern.query.IQuery;
+import org.eclipse.emf.ecore.EObject;
+import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.DataWidget;
+import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility;
+import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.JDTUtility;
+import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.UIProjectManager;
+import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.UISectionUtility;
 import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.VPUIHelper;
-import org.eclipse.egf.common.helper.*;
-import java.util.*;
-import org.eclipse.emf.ecore.*;
-import org.eclipse.egf.model.pattern.*;
-import org.eclipse.egf.pattern.execution.*;
-import org.eclipse.egf.pattern.query.*;
-import java.text.SimpleDateFormat;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.desc.helper.configuration.VpDslConfigurationHelper;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpdesc.NamedElement;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UI;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIField;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UI_Field_Type;
-import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.DataWidget;
-import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility;
-import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.JDTUtility;
-import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.UIProjectManager;
-import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.UISectionUtility;
 
 public class SectionJavaClass
 		extends org.polarsys.capella.ad.viewpoint.dsl.generation.ui.common.AbstractLoopFinishedJavaClass {
@@ -124,9 +129,8 @@ public class SectionJavaClass
 	protected final String TEXT_69 = "\t\t" + NL + "" + NL + "\t\tif (newEObject != null && !(newEObject instanceof ";
 	protected final String TEXT_70 = "))" + NL + "\t\t\tnewEObject = get";
 	protected final String TEXT_71 = "Object(newEObject);" + NL;
-	protected final String TEXT_72 = "\t\t\t" + NL + "\t\tif (newEObject != null){" + NL
-			+ "\t\t\tloadData((CapellaElement) newEObject);" + NL + "\t\t}else{" + NL + "\t\t\treturn;" + NL + "\t\t}"
-			+ NL + "\t}\t" + NL;
+	protected final String TEXT_72 = "\t\t\t" + NL + "\t\tif (newEObject != null){" + NL + "\t\t\tloadData(newEObject);"
+			+ NL + "\t\t}else{" + NL + "\t\t\treturn;" + NL + "\t\t}" + NL + "\t}\t" + NL;
 	protected final String TEXT_73 = NL + "\t/**" + NL + "\t * <!-- begin-user-doc -->" + NL
 			+ "\t * <!-- end-user-doc -->" + NL
 			+ "\t * @param parent: An EObject. It is considered as the Parent of an EMDE extension (a Viewpoint element)"
@@ -248,13 +252,13 @@ public class SectionJavaClass
 			+ NL + "\t\t});" + NL + "\t\treturn widget;" + NL + "\t}";
 	protected final String TEXT_133 = NL + "\t";
 	protected final String TEXT_134 = NL + "\t\t\t";
-	protected final String TEXT_135 = ".loadData(capellaElement_p, " + NL + "\t\t\t\t\t\t\t\t\t";
+	protected final String TEXT_135 = ".loadData(object, " + NL + "\t\t\t\t\t\t\t\t\t";
 	protected final String TEXT_136 = ");\t" + NL + "\t\t\t  \t";
 	protected final String TEXT_137 = NL + "\t\t\t";
-	protected final String TEXT_138 = ".bind(capellaElement_p, " + NL + "\t\t\t\t\t\t\t\t\t";
+	protected final String TEXT_138 = ".bind(object, " + NL + "\t\t\t\t\t\t\t\t\t";
 	protected final String TEXT_139 = ");\t" + NL + "\t\t\t\t";
 	protected final String TEXT_140 = NL + "\t\t\t";
-	protected final String TEXT_141 = ".loadData(capellaElement_p);\t\t\t" + NL + "\t\t\t  \t";
+	protected final String TEXT_141 = ".loadData(object);\t\t\t" + NL + "\t\t\t  \t";
 	protected final String TEXT_142 = NL + "\t";
 	protected final String TEXT_143 = NL + "\t";
 	protected final String TEXT_144 = NL + "\t\tabstractSemanticFields.add(";
@@ -262,9 +266,8 @@ public class SectionJavaClass
 	protected final String TEXT_146 = NL + "\t";
 	protected final String TEXT_147 = NL;
 	protected final String TEXT_148 = NL + NL + "\t/**" + NL + "\t* <!-- begin-user-doc -->" + NL
-			+ "\t* <!-- end-user-doc -->" + NL + "\t* @param capellaElement_p" + NL + "\t* @generated" + NL + "\t*/"
-			+ NL + "\tpublic void loadData(CapellaElement capellaElement_p) {" + NL
-			+ "\t\tsuper.loadData(capellaElement_p);" + NL + "\t\t";
+			+ "\t* <!-- end-user-doc -->" + NL + "\t* @param object" + NL + "\t* @generated" + NL + "\t*/" + NL
+			+ "\tpublic void loadData(EObject object) {" + NL + "\t\tsuper.loadData(object);" + NL + "\t\t";
 	protected final String TEXT_149 = NL + "\t} " + NL + "\t" + NL + "   /**" + NL + "\t* <!-- begin-user-doc -->" + NL
 			+ "\t* <!-- end-user-doc -->" + NL + "\t* @generated" + NL + "\t*/" + NL
 			+ "\tpublic List<AbstractSemanticField> getSemanticFields() {" + NL

@@ -102,7 +102,7 @@
 
 <%	}%>			
 		if (newEObject != null){
-			loadData((CapellaElement) newEObject);
+			loadData(newEObject);
 		}else{
 			return;
 		}
