@@ -14,6 +14,7 @@
       <updateSiteUrls>${kitalpha.repo.url}</updateSiteUrls>
       <featureNames>org.polarsys.kitalpha.sdk.feature</featureNames>
       <featureNames>org.polarsys.kitalpha.releng.feature</featureNames>
+      <featureNames>org.polarsys.kitalpha.doc.feature</featureNames>
     </steps>
     <steps xsi:type="buildstep:InstallStep" xmi:id="_kRhrYM1yEeSFroBhAlzk1g" name="install capella features" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
       <updateSiteUrls>${capella.repo.url}</updateSiteUrls>
