@@ -5,23 +5,23 @@
     <properties xmi:id="_MWwdkPlvEeCFCIE_fWd_VQ" key="cloudsmith.download.prefix" value="http://download.eclipse.org/external/"/>
     <properties xmi:id="_MlqcQPlvEeCFCIE_fWd_VQ" key="polarion.download.prefix" value="http://download.eclipse.org/external/"/>
     <properties xmi:id="_LPrgwPlvEeCFCIE_fWd_VQ" key="eclipse.download.prefix" value="http://download.eclipse.org/"/>
-    <properties xmi:id="_7e-7UI5hEeOQ8YcnVfa6Wg" key="sirius.repo.url" value="http://download.eclipse.org/sirius/updates/stable/5.1.0-S20170707-080022/neon/"/>
+    <properties xmi:id="_7e-7UI5hEeOQ8YcnVfa6Wg" key="sirius.repo.url" value="http://download.eclipse.org/sirius/updates/stable/5.1.0-S20170906-071207/neon"/>
     <properties xmi:id="_n0G4oJPyEeODqo9Nw0Mw6Q" key="orbit.repo.url" value="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/"/>
     <properties xmi:id="_eRQHEZk8EeOez_jbx14D1w" key="eclipse38.download" value="http://download.eclipse.org/releases/neon"/>
     <properties xmi:id="_gReNwM1bEeSQpbp6WoTKiQ" key="eclipse38.download.prefix" value="${eclipse38.download}"/>
     <properties xmi:id="_efiO4BGGEeS7tbIPWaBUAQ" key="eef.repo.url" value="http://download.eclipse.org/modeling/emft/eef/updates/releases/1.5/R201505291308"/>
     <properties xmi:id="_snr1UBGGEeS7tbIPWaBUAQ" key="acceleo.repo.url" value="http://download.eclipse.org/acceleo/updates/milestones/3.7/S201705121344"/>
     <properties xmi:id="_dtoK4AdAEeSxv713mpB8TA" key="ecoretools2.repo.url" value="http://download.eclipse.org/ecoretools/updates/releases/3.2.1/neon/"/>
-    <properties xmi:id="_BukoEVkbEeSo0vu-C-A3cw" key="diffmerge.repo.url" value="http://download.eclipse.org/diffmerge/releases/0.8.0/emf-diffmerge-site"/>
-    <properties xmi:id="_oqevQHWpEeafx85AHNR12g" key="diffmerge.repo.url-temporary" value="https://hudson.eclipse.org/diffmerge/job/buckminster-emf-diffmerge-master/129/artifact/result/publish/org.eclipse.emf.diffmerge.scm.feature/site.p2"/>
-    <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="http://download.eclipse.org/diffmerge/releases/0.8.0/edm-patterns-site"/>
+    <properties xmi:id="_BukoEVkbEeSo0vu-C-A3cw" key="diffmerge.repo.url" value="http://download.eclipse.org/diffmerge/releases/0.9.0/emf-diffmerge-site"/>
+    <properties xmi:id="_oqevQHWpEeafx85AHNR12g" key="diffmerge.repo.url-temporary" value="${diffmerge.repo.url}"/>
+    <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="http://download.eclipse.org/diffmerge/releases/0.9.0/edm-patterns-site"/>
     <properties xmi:id="_7UOncM1xEeSFroBhAlzk1g" key="query.legacy.repo.url" value="http://download.eclipse.org/sirius/updates/legacy/1.1.0/"/>
-    <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_master/lastSuccessfulBuild/artifact/result/publish/kitalpha_sdk/site.p2"/>
-    <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/job/capella-master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.capella.rcp.site/target/repository/"/>
+    <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_master/442/artifact/result/publish/kitalpha_sdk/site.p2/"/>
+    <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/view/Capella-master/job/capella-master/870/artifact/releng/plugins/org.polarsys.capella.rcp.site/target/repository/"/>
     <properties xmi:id="_rstsgNMCEeSCstxmhDJ57A" key="capella.egf.repo.url" value="https://hudson.polarsys.org/capella/job/capella-master/546/artifact/result/publish/org.polarsys.capella.core.egf.feature/site.p2/"/>
     <properties xmi:id="_-jrxkA9SEeW7CM9Somx7YA" key="docgen.addon.location" value="https://hudson.polarsys.org/capella/job/capella-addon-docgen-master/lastSuccessfulBuild"/>
     <properties xmi:id="_Xg5SEE_4EeeHa6ryCGSW_A" key="docgen.addon.location.url" value="https://hudson.polarsys.org/capella/view/Capella%20Addons/job/capella-addon-docgen-master/lastSuccessfulBuild/artifact/releng/org.polarsys.capella.docgen.site/target/repository/"/>
-    <properties xmi:id="_hJrtIVq-EeW9LJvhZUfugg" key="amalgam.repo.url" value="http://download.eclipse.org/modeling/amalgam/updates/nightly/1.8.0-N20170328-042916/mars"/>
+    <properties xmi:id="_hJrtIVq-EeW9LJvhZUfugg" key="amalgam.repo.url" value="http://download.eclipse.org/modeling/amalgam/updates//nightly/1.9.0-N20170906-115135/capella"/>
     <properties xmi:id="_ja26cAU0Eeajha5FGgk9Cw" key="gmf.repo.url" value="${sirius.repo.url}"/>
     <properties xmi:id="_dM0V0EuUEeesIJAuSyFSRQ" key="repo.nebula.url" value="${eclipse.download.prefix}/nebula/releases/${nebula.version}"/>
   </propertyPackages>
@@ -122,7 +122,7 @@
     <steps xsi:type="buildstep:AggregateStep" xmi:id="_dmxskNMCEeSCstxmhDJ57A" name="all studio features" id="studio" publishSteps="_22zYoNL9EeSCstxmhDJ57A _-GxSqN6rEeS384y2Q9u2Fg _iw9VkOdSEeSYhdkYY0fPMw _IP-CmP3tEeSW086H-yDPeg"/>
   </jobs>
   <jobs xmi:id="_5GLecdL2EeSCstxmhDJ57A" name="platforms">
-    <steps xsi:type="buildcore:StepContainer" xmi:id="_A4dvANL3EeSCstxmhDJ57A" name="TP_win32-win32-x86">
+    <steps xsi:type="buildcore:StepContainer" xmi:id="_A4dvANL3EeSCstxmhDJ57A" name="TP_win32-win32-x86" enabled="false">
       <properties xmi:id="_A4dvAdL3EeSCstxmhDJ57A" key="TP_name" value="TP_win32-win32-x86" type="INLINED"/>
       <properties xmi:id="_A4dvAtL3EeSCstxmhDJ57A" key="TP_arch" value="x86" type="INLINED"/>
       <properties xmi:id="_A4dvA9L3EeSCstxmhDJ57A" key="TP_os" value="win32" type="INLINED"/>
@@ -162,7 +162,7 @@
       </steps>
       <steps xsi:type="buildfile:ZipStep" xmi:id="_4BdAj0_FEeWA7YBbftrtfw" name="zip mars results" baseDir="${publish}/${TP_name}" destinationFilePath="${publish}/capella_studio-${studio_version}-${timestamp}-${TP_os}-${TP_ws}-${TP_arch}-${eclipse_version}.zip"/>
     </steps>
-    <steps xsi:type="buildcore:StepContainer" xmi:id="_fUpXMMWzEeWYQ8XiFglFiw" name="TP_linux-gtk-x86">
+    <steps xsi:type="buildcore:StepContainer" xmi:id="_fUpXMMWzEeWYQ8XiFglFiw" name="TP_linux-gtk-x86" enabled="false">
       <properties xmi:id="_fUpXMcWzEeWYQ8XiFglFiw" key="TP_name" value="TP_linux-gtk-x86" type="INLINED"/>
       <properties xmi:id="_fUpXMsWzEeWYQ8XiFglFiw" key="TP_arch" value="x86" type="INLINED"/>
       <properties xmi:id="_fUpXM8WzEeWYQ8XiFglFiw" key="TP_os" value="linux" type="INLINED"/>
