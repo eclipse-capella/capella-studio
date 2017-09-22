@@ -17,11 +17,11 @@
     <properties xmi:id="_YrTv8FkjEeSo0vu-C-A3cw" key="diffmerge.patterns.repo.url" value="http://download.eclipse.org/diffmerge/releases/0.9.0/edm-patterns-site"/>
     <properties xmi:id="_7UOncM1xEeSFroBhAlzk1g" key="query.legacy.repo.url" value="http://download.eclipse.org/sirius/updates/legacy/1.1.0/"/>
     <properties xmi:id="_GYmT0M1yEeSFroBhAlzk1g" key="kitalpha.repo.url" value="https://hudson.polarsys.org/kitalpha/job/Kitalpha_master/475/artifact/result/publish/kitalpha_sdk/site.p2/"/>
-    <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/view/Capella-master/job/capella-master/870/artifact/releng/plugins/org.polarsys.capella.rcp.site/target/repository/"/>
+    <properties xmi:id="_z4c88M1yEeSFroBhAlzk1g" key="capella.repo.url" value="https://hudson.polarsys.org/capella/job/capella-master/896/artifact/releng/plugins/org.polarsys.capella.rcp.site/target/repository"/>
     <properties xmi:id="_rstsgNMCEeSCstxmhDJ57A" key="capella.egf.repo.url" value="https://hudson.polarsys.org/capella/job/capella-master/546/artifact/result/publish/org.polarsys.capella.core.egf.feature/site.p2/"/>
     <properties xmi:id="_-jrxkA9SEeW7CM9Somx7YA" key="docgen.addon.location" value="https://hudson.polarsys.org/capella/job/capella-addon-docgen-master/lastSuccessfulBuild"/>
     <properties xmi:id="_Xg5SEE_4EeeHa6ryCGSW_A" key="docgen.addon.location.url" value="https://hudson.polarsys.org/capella/view/Capella%20Addons/job/capella-addon-docgen-master/lastSuccessfulBuild/artifact/releng/org.polarsys.capella.docgen.site/target/repository/"/>
-    <properties xmi:id="_hJrtIVq-EeW9LJvhZUfugg" key="amalgam.repo.url" value="http://download.eclipse.org/modeling/amalgam/updates//nightly/1.9.0-N20170906-115135/capella"/>
+    <properties xmi:id="_hJrtIVq-EeW9LJvhZUfugg" key="amalgam.repo.url" value="http://download.eclipse.org/modeling/amalgam/updates//nightly/1.9.0-N20170922-073358/capella"/>
     <properties xmi:id="_ja26cAU0Eeajha5FGgk9Cw" key="gmf.repo.url" value="${sirius.repo.url}"/>
     <properties xmi:id="_dM0V0EuUEeesIJAuSyFSRQ" key="repo.nebula.url" value="${eclipse.download.prefix}/nebula/releases/${nebula.version}"/>
   </propertyPackages>
