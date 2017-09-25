@@ -19,6 +19,18 @@
         </elements>
       </libraries>
       <libraries xmi:id="_tVLtgRykEeC14ssng9jRmA" name="org.polarsys.capella.extension.tools.patterns.model.generation">
+          <elements xmi:id="_8wxB8Ho_EeCPR-JnlvMzmg" name="FactoryClass" superPattern="platform:/plugin/org.eclipse.egf.emf.pattern/egf/EMF_Pattern.fcore#_PfcPQDG0Ed-kc8dEZsdm2w"
+              headerMethod="#_8wxB8no_EeCPR-JnlvMzmg" conditionMethod="#_8wxB9Ho_EeCPR-JnlvMzmg"
+              initMethod="#_8wxB83o_EeCPR-JnlvMzmg" footerMethod="#_8wxB9no_EeCPR-JnlvMzmg">
+            <nature xmi:type="jetpattern:JetNature" xmi:id="_8wxB8Xo_EeCPR-JnlvMzmg"
+                name="JET"/>
+            <methods xmi:id="_8wxB8no_EeCPR-JnlvMzmg" name="header" patternFilePath="templates/pattern._8wxB8Ho_EeCPR-JnlvMzmg/method._8wxB8no_EeCPR-JnlvMzmg.pt"/>
+            <methods xmi:id="_8wxB83o_EeCPR-JnlvMzmg" name="init" patternFilePath="templates/pattern._8wxB8Ho_EeCPR-JnlvMzmg/method._8wxB83o_EeCPR-JnlvMzmg.pt"/>
+            <methods xmi:id="_8wxB9Ho_EeCPR-JnlvMzmg" name="preCondition" patternFilePath="templates/pattern._8wxB8Ho_EeCPR-JnlvMzmg/method._8wxB9Ho_EeCPR-JnlvMzmg.pt"/>
+            <methods xmi:id="_8wxB9Xo_EeCPR-JnlvMzmg" name="doGenerate" patternFilePath="templates/pattern._8wxB8Ho_EeCPR-JnlvMzmg/method._8wxB9Xo_EeCPR-JnlvMzmg.pt"/>
+            <methods xmi:id="_8wxB9no_EeCPR-JnlvMzmg" name="footer" patternFilePath="templates/pattern._8wxB8Ho_EeCPR-JnlvMzmg/method._8wxB9no_EeCPR-JnlvMzmg.pt"/>
+            <orchestration xmi:type="pattern:SuperCall" xmi:id="_8wxB93o_EeCPR-JnlvMzmg"/>
+          </elements>
         <elements xmi:id="_N_awYaF-EeCGDtMIGvx3Bw" description=" " name="HelperPackagePattern"
             superPattern="platform:/plugin/org.eclipse.egf.emf.pattern.base/egf/EMF_Pattern_Base.fcore#_VlOiICg6Ed-ROrlGa8LEeQ"
             headerMethod="#_N_awY6F-EeCGDtMIGvx3Bw" conditionMethod="#_N_awZaF-EeCGDtMIGvx3Bw"
