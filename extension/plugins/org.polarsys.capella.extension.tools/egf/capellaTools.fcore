@@ -138,6 +138,8 @@
               <substitutions xmi:id="_Bw3oMTKWEeCp57t1wDE61w" replacedElement="platform:/plugin/org.polarsys.kitalpha.emde.egf/egf/eMDE_EMF_Extension.fcore#_xy4qIS93EeCJ8qG0PlPcqA"
                   replacement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_tJCB4DBuEeCfsLM1ABhRyQ platform:/plugin/org.polarsys.kitalpha.emde.egf/egf/eMDE_EMF_Extension.fcore#_xy4qIS93EeCJ8qG0PlPcqA"/>
               <substitutions xmi:id="_uR52kKO-EeCGDtMIGvx3Bw" replacement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_N_awYaF-EeCGDtMIGvx3Bw platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_AxLy0NZAEeGDE6svG499fQ"/>
+              <substitutions xmi:id="_NseS0J3lEeezXayTnr_PhQ" replacedElement="platform:/plugin/org.eclipse.egf.emf.pattern/egf/EMF_Pattern.fcore#_PfcPQDG0Ed-kc8dEZsdm2w"
+                  replacement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_8wxB8Ho_EeCPR-JnlvMzmg"/>
             </type>
           </invocationContracts>
           <invocationContracts xmi:id="_Ei09Ix_4EeCuNfuGnuOPDw" factoryComponentContract="#_l7ckJB_3EeCuNfuGnuOPDw"
