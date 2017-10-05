@@ -19,7 +19,7 @@
     <steps xsi:type="buildstep:InstallStep" xmi:id="_kRhrYM1yEeSFroBhAlzk1g" name="install capella features" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
       <updateSiteUrls>${capella.repo.url}</updateSiteUrls>
       <updateSiteUrls>${kitalpha.repo.url}</updateSiteUrls>
-      <featureNames>org.polarsys.capella.core.feature</featureNames>
+      <featureNames>org.polarsys.capella.rcp.feature</featureNames>
     </steps>
     <steps xsi:type="buildstep:InstallStep" xmi:id="_w1HJsNMCEeSCstxmhDJ57A" name="install capella egf features" enabled="false" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
       <updateSiteUrls>${capella.egf.repo.url}</updateSiteUrls>

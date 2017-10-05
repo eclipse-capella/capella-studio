@@ -94,6 +94,7 @@ public class PluginXmlReporter implements PatternExecutionReporter {
 			requiredBundles.add("org.polarsys.kitalpha.ad.services");
 			requiredBundles.add("org.polarsys.capella.core.ui.properties");
 			if (VPUIHelper.generateRichTextForUI(vp)){
+				requiredBundles.add("org.polarsys.kitalpha.richtext.common");
 				requiredBundles.add("org.polarsys.kitalpha.richtext.widget");
 			}
 			PDEUtility.updateRequiredBundles(project, requiredBundles, new NullProgressMonitor());
