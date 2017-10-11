@@ -35,11 +35,11 @@ Require-Bundle: org.eclipse.egf.pattern;visibility:=reexport,
  org.polarsys.capella.core.data.pa.deployment.properties,
  org.polarsys.capella.core.data.pa.properties,
  org.polarsys.capella.core.data.menu.contributions,
- org.polarsys.capella.core.ui.properties
+ org.polarsys.capella.core.ui.properties,
+ org.polarsys.capella.core.egf
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ActivationPolicy: lazy
 Export-Package: org.polarsys.capella.extension.tools,
- org.polarsys.capella.extension.tools.annotation,
  org.polarsys.capella.extension.tools.patterns.capellaElement.generation,
  org.polarsys.capella.extension.tools.patterns.edit.generation,
  org.polarsys.capella.extension.tools.patterns.edit.icons.generation,

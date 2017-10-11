@@ -29,6 +29,7 @@
 
    <requires>
       <import feature="org.polarsys.kitalpha.runtime.feature" version="1.2.0.qualifier"/>
+      <import feature="org.polarsys.capella.core.egf.feature" version="1.2.0.qualifier"/>
    </requires>
 
    <plugin

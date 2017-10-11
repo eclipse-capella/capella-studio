@@ -21,10 +21,10 @@
       <updateSiteUrls>${kitalpha.repo.url}</updateSiteUrls>
       <featureNames>org.polarsys.capella.rcp.feature</featureNames>
     </steps>
-    <steps xsi:type="buildstep:InstallStep" xmi:id="_w1HJsNMCEeSCstxmhDJ57A" name="install capella egf features" enabled="false" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
+    <steps xsi:type="buildstep:InstallStep" xmi:id="_w1HJsNMCEeSCstxmhDJ57A" name="install capella egf features" id="${TP_name}" profile="${TP_profile}" p2_os="${TP_os}" p2_ws="${TP_ws}" p2_arch="${TP_arch}">
       <updateSiteUrls>${capella.egf.repo.url}</updateSiteUrls>
       <featureNames>org.polarsys.capella.core.egf.feature</featureNames>
-      <featureNames>org.polarsys.capella.core.egf.source.feature</featureNames>
+      <featureNames>org.polarsys.capella.core.egf.feature.source</featureNames>
     </steps>
     <steps xsi:type="buildcore:StepContainer" xmi:id="_LXa_QA9SEeW7CM9Somx7YA" name="install docgen addon" enabled="false">
       <steps xsi:type="buildstep:AntStep" xmi:id="_zRuKkA9REeW7CM9Somx7YA" targetName="Download docgen addon_${TP_name}" xml="&lt;target name=&quot;Download docgen addon_${TP_name}&quot;>&#xD;&#xA;&#x9;&lt;get &#xD;&#xA;        &#x9;src=&quot;${docgen.addon.location}/buildTimestamp?format=yyyy-MM-dd_HH-mm-ss&quot; &#xD;&#xA;                dest=&quot;${docgenAddon}.ts&quot;/>&#xD;&#xA;        &lt;loadfile srcfile=&quot;${docgenAddon}.ts&quot; property=&quot;docgenAddonTS&quot;/>&#xD;&#xA;        &lt;echo>Docgen addon timestamp: ${docgenAddonTS}&lt;/echo>&#xD;&#xA;&#xD;&#xA;        &lt;get &#xD;&#xA;                src=&quot;${docgen.addon.location}/artifact/result/publish/CapellaXHTMLDocGen-updateSite-${docgen.addon_version}.${docgenAddonTS}-incubation.zip&quot; &#xD;&#xA;                dest=&quot;${result}/docgenAddon.zip&quot;/>     &#xD;&#xA;&lt;/target> "/>
