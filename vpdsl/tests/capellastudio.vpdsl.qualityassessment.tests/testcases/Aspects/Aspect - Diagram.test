@@ -6,8 +6,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _vOFfUJ2WEeWgmKoQjPKcMA
-Runtime-Version: 2.0.2.201511100828
-Save-Time: 7/8/16 5:18 PM
+Runtime-Version: 2.2.0.201706152316
+Save-Time: 10/24/17 11:27 AM
 Testcase-Type: ecl
 Verifications: _xe8uEJkJEeW9roo66l64HA,_CfrnoJ2eEeWgmKoQjPKcMA
 
@@ -50,25 +50,25 @@ with [get-editor "QualityAssessment.diagram.vptext" | get-text-viewer] {
     key-type "M1+M2+ARROW_RIGHT"
     key-type "M1+M2+ARROW_RIGHT"
     key-type BackSpace
-
+    
     // Renaming tools
-    set-caret-pos 49 40
+    set-caret-pos 59 44
     key-type "M1+M2+ARROW_RIGHT"
     key-type BackSpace
     
-    set-caret-pos 52 38
+    set-caret-pos 62 42
     key-type "M1+M2+ARROW_RIGHT"
     key-type BackSpace
     
-    set-caret-pos 55 40
+    set-caret-pos 65 44
     key-type "M1+M2+ARROW_RIGHT"    
     key-type BackSpace
     
-    set-caret-pos 60 37 
+    set-caret-pos 71 40 
     key-type "M1+M2+ARROW_RIGHT" 
     key-type BackSpace
     
-    set-caret-pos 63 35
+    set-caret-pos 74 38
     key-type "M1+M2+ARROW_RIGHT" 
     key-type BackSpace
 }

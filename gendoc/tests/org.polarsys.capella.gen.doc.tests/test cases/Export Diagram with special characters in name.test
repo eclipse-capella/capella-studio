@@ -1,0 +1,63 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _hext0B3WEeaSp7ijjugg7g,_m0x1ALi1EeehOsYlOJ_Nog
+Element-Name: Export Diagram with special characters in name
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _aun7gLi1EeehOsYlOJ_Nog
+Runtime-Version: 2.2.0.201706152316
+Save-Time: 10/24/17 2:30 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+with [get-view "Capella Project Explorer" | get-tree] {
+    select "capellastudio/capellastudio.aird" | get-menu -path "Open Session" | click
+    select "capellastudio/capellastudio.aird/capellastudio/Physical Architecture" | get-menu 
+        -path "HTML Documentation Generation" | click
+}
+with [get-window -class WizardDialog] {
+    get-button "Browse..." -after [get-label "Output folder:"] | click
+    with [get-window "Folder Selection"] {
+        get-tree | select "capellastudio/doc"
+        get-button OK | click
+    }
+    get-button Finish | click
+}
+get-view "Capella Project Explorer" | get-tree | get-item 
+    -path "capellastudio/doc/output/capellastudio/e8d7a73a93e448b79971e99e92fcb73c/PAB  Physical System.jpg" 
+    | get-property caption | equals "PAB  Physical System.jpg" | verify-true
+get-menu -path "Search/File..." | click
+with [get-window Search] {
+    get-combo -after [get-label "Containing text:"] | set-text "PAB  Physical System.jpg\""
+    get-button Search | click
+}
+get-menu -path "Search/Search..." | click
+with [get-window Search] {
+    get-combo -after [get-label "Containing text:"] | set-text "PAB  Physical System.jpg\\\""
+    get-button Search | click
+}
+get-menu -path "Search/File..." | click
+with [get-window Search] {
+    get-combo -after [get-label "Containing text:"] | set-text "PAB  Physical System.jpg"
+    get-button Search | click
+}
+get-view Search | get-link "'PAB  Physical System.jpg' - 2 matches in workspace (*.html)" | get-property caption 
+    | equals "'PAB  Physical System.jpg' - 2 matches in workspace (*.html)" | verify-true
+get-menu -path "Search/File..." | click
+with [get-window Search] {
+    get-combo -after [get-label "Containing text:"] | set-text "&#091;PAB&#093; &#035; Physical System"
+    get-button Search | click
+}
+with [get-view "Fast Linker" | get-canvas] {
+    mouse-enter 410 200 -height 226 -width 412
+    mouse-move 410 206 -height 226 -width 412
+    mouse-exit 412 211 -height 226 -width 412
+}
+get-view Search | get-link "'#091;PAB#093; #035; Physical System' - 12 matches in workspace (*.html)" 
+    | get-property caption | equals "'&&#091;PAB&&#093; &&#035; Physical System' - 12 matches in workspace (*.html)" 
+    | verify-true
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
