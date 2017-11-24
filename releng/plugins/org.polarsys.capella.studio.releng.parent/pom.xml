@@ -53,6 +53,7 @@
 		<rcptt-maven-version>2.1.0</rcptt-maven-version>
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
 		<capellastudio-application>org.polarsys.capella.studio.product.application</capellastudio-application>
+		<sonar-version>3.0.2</sonar-version>
 	</properties>
 	<modules>
 		<!-- module TP -->
@@ -204,6 +205,11 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.sonarsource.scanner.maven</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>${sonar-version}</version>
+				</plugin>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>target-platform-configuration</artifactId>
