@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="capellastudio" sequenceNumber="1510845503">
+<target name="capellastudio" sequenceNumber="1517496514">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
@@ -273,7 +273,6 @@
       <unit id="org.polarsys.kitalpha.ad.dsl.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.product.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.sdk.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.richtext.widget.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.emde.genchain.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.ad.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.report.feature.feature.group" version="0.0.0"/>
@@ -313,17 +312,17 @@
       <unit id="org.polarsys.kitalpha.transposer.componentsample.installer.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.product.source.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.sdk.source.feature.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-sdk" location="http://download.polarsys.org/kitalpha/updates/stable/sdk/1.2.0/"/>
+      <repository id="kitalpha-sdk" location="https://ci.polarsys.org/kitalpha/view/Kitalpha-master/job/Kitalpha_master/lastSuccessfulBuild/artifact/result/publish/kitalpha_sdk/site.p2/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.core.egf.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.egf.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella-egf-patterns" location="https://hudson.polarsys.org/capella/job/capella-master/1001/artifact/releng/plugins/org.polarsys.capella.egf.site/target/repository/"/>
+      <repository id="capella-egf-patterns" location="https://ci.polarsys.org/capella/job/capella-master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.capella.egf.site/target/repository/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.rcp.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.rcp.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella" location="https://hudson.polarsys.org/capella/view/Capella-master/job/capella-master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.capella.rcp.site/target/repository/"/>
+      <repository id="capella" location="https://ci.polarsys.org/capella/job/capella-master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.capella.rcp.site/target/repository/"/>
     </location>
   </locations>
 </target>

@@ -12,13 +12,13 @@ target "capellastudio" with source, requirements
 
 include "common/capellabase.targetplatform"
 
-location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/stable/sdk/1.2.0/" {
+location kitalpha-sdk "https://ci.polarsys.org/kitalpha/view/Kitalpha-master/job/Kitalpha_master/lastSuccessfulBuild/artifact/result/publish/kitalpha_sdk/site.p2/" {
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.dsl.feature.feature.group lazy
 	org.polarsys.kitalpha.product.feature.feature.group lazy
 	org.polarsys.kitalpha.sdk.feature.feature.group lazy
-	org.polarsys.kitalpha.richtext.widget.feature.feature.group lazy
+	//org.polarsys.kitalpha.richtext.widget.feature.feature.group lazy
 	org.polarsys.kitalpha.emde.genchain.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.feature.feature.group lazy
 	org.polarsys.kitalpha.report.feature.feature.group lazy
@@ -60,12 +60,12 @@ location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/stable/sdk/
 	org.polarsys.kitalpha.sdk.source.feature.feature.group lazy
 }
 
-location capella-egf-patterns "https://hudson.polarsys.org/capella/job/capella-master/1001/artifact/releng/plugins/org.polarsys.capella.egf.site/target/repository/" {
+location capella-egf-patterns "https://ci.polarsys.org/capella/job/capella-master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.capella.egf.site/target/repository/" {
 	org.polarsys.capella.core.egf.feature.feature.group lazy
 	org.polarsys.capella.core.egf.feature.source.feature.group lazy
 }
 
-location capella "https://hudson.polarsys.org/capella/view/Capella-master/job/capella-master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.capella.rcp.site/target/repository/" {
+location capella "https://ci.polarsys.org/capella/job/capella-master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.capella.rcp.site/target/repository/" {
 	org.polarsys.capella.rcp.feature.feature.group lazy
 	org.polarsys.capella.rcp.feature.source.feature.group lazy
 }
