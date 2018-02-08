@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="capellastudio" sequenceNumber="1517496514">
+<target name="capellastudio" sequenceNumber="1518094327">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
@@ -194,7 +194,7 @@
       <unit id="org.eclipse.sirius.runtime.aql.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.runtime.aql.source.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.jar" version="0.0.0"/>
-      <repository id="sirius" location="http://download.eclipse.org/sirius/updates/milestones/5.1.0rc4/neon"/>
+      <repository id="sirius" location="http://download.eclipse.org/sirius/updates/stable/6.0.0-S20180113-114649/neon/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.eef.sdk-feature.feature.group" version="0.0.0"/>
