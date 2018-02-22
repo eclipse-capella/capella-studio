@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2017 THALES GLOBAL SERVICES.
+ * Copyright (c) 2017, 2018 THALES GLOBAL SERVICES.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -12,13 +12,13 @@ target "capellastudio" with source, requirements
 
 include "common/capellabase.targetplatform"
 
-location kitalpha-sdk "https://ci.polarsys.org/kitalpha/view/Kitalpha-master/job/Kitalpha_master/lastSuccessfulBuild/artifact/result/publish/kitalpha_sdk/site.p2/" {
+location kitalpha-sdk "https://ci.polarsys.org/kitalpha/job/Kitalpha_master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.kitalpha.releng.sdk.updatesite/target/repository/" {
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.dsl.feature.feature.group lazy
 	org.polarsys.kitalpha.product.feature.feature.group lazy
 	org.polarsys.kitalpha.sdk.feature.feature.group lazy
-	//org.polarsys.kitalpha.richtext.widget.feature.feature.group lazy
+	org.polarsys.kitalpha.richtext.widget.feature.feature.group lazy
 	org.polarsys.kitalpha.emde.genchain.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.feature.feature.group lazy
 	org.polarsys.kitalpha.report.feature.feature.group lazy
@@ -56,16 +56,23 @@ location kitalpha-sdk "https://ci.polarsys.org/kitalpha/view/Kitalpha-master/job
 	org.polarsys.kitalpha.composer.componentsample.installer.feature.feature.group lazy
 	org.polarsys.kitalpha.transposer.examples.feature.feature.group lazy
 	org.polarsys.kitalpha.transposer.componentsample.installer.feature.feature.group lazy
-	org.polarsys.kitalpha.product.source.feature.feature.group lazy
-	org.polarsys.kitalpha.sdk.source.feature.feature.group lazy
+	org.polarsys.kitalpha.product.feature.source.feature.group lazy
+	org.polarsys.kitalpha.sdk.feature.source.feature.group lazy
+	org.polarsys.kitalpha.ad.ui.feature.feature.group lazy
+	org.polarsys.kitalpha.model.common.share.feature.feature.group lazy
 }
 
-location capella-egf-patterns "https://ci.polarsys.org/capella/job/capella-master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.capella.egf.site/target/repository/" {
+location kitalpha-core "https://ci.polarsys.org/kitalpha/job/Kitalpha_master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.kitalpha.releng.runtime.core.updatesite/target/repository/" {
+	org.polarsys.kitalpha.model.common.commands.feature.feature.group lazy
+	org.polarsys.kitalpha.model.common.commands.feature.source.feature.group lazy
+}
+
+location capella-egf-patterns "http://download.polarsys.org/capella/core/updates/releases/1.2.0-R20171103-050121/org.polarsys.capella.egf.site/" {
 	org.polarsys.capella.core.egf.feature.feature.group lazy
 	org.polarsys.capella.core.egf.feature.source.feature.group lazy
 }
 
-location capella "https://ci.polarsys.org/capella/job/capella-master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.capella.rcp.site/target/repository/" {
+location capella "http://download.polarsys.org/capella/core/updates/releases/1.2.0-R20171103-050121/org.polarsys.capella.rcp.site/" {
 	org.polarsys.capella.rcp.feature.feature.group lazy
 	org.polarsys.capella.rcp.feature.source.feature.group lazy
 }

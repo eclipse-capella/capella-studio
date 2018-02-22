@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright (c) 2017 THALES GLOBAL SERVICES.
+  Copyright (c) 2017, 2018 THALES GLOBAL SERVICES.
   All rights reserved. This program and the accompanying materials
   are made available under the terms of the Eclipse Public License v1.0
   which accompanies this distribution, and is available at
@@ -15,12 +15,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.polarsys.capella</groupId>
 	<artifactId>capellastudio</artifactId>
-	<version>1.2.0-SNAPSHOT</version>
+	<version>1.2.1-SNAPSHOT</version>
 	<packaging>eclipse-target-definition</packaging>
 	<parent>
 		<groupId>org.polarsys.capella</groupId>
 		<artifactId>org.polarsys.capella.studio.releng.parent</artifactId>
-		<version>1.2.0-SNAPSHOT</version>
+		<version>1.2.1-SNAPSHOT</version>
 		<relativePath>../org.polarsys.capella.studio.releng.parent</relativePath>
 	</parent>
 	<licenses>
@@ -33,7 +33,6 @@
 			</comments>
 		</license>
 	</licenses>
-<!--
 		<properties>
 		<tycho-version>0.25.0</tycho-version>
 		<tycho-extras-version>0.25.0</tycho-extras-version>
@@ -61,9 +60,8 @@
 							<url>${targetPlatform.repository}</url>
 						</repository>
 					</repositories> 
--->
 					<!-- Set dependencies to launch the application -->
-<!-- 					<dependencies>
+ 					<dependencies>
 						<dependency>
 							<artifactId>fr.obeo.releng.targetplatform-feature</artifactId>
 							<type>eclipse-feature</type>
@@ -75,6 +73,7 @@
 					</dependencies>
 				</configuration>
 				<executions>
+					<!--
 					<execution>
 						<id>generate.capellastudio-nightly.target</id>
 						<phase>validate</phase>
@@ -87,12 +86,13 @@
 							<goal>eclipse-run</goal>
 						</goals>
 					</execution>
+					-->
 					<execution>
 						<id>generate.capellastudio.target</id>
 						<phase>validate</phase>
 						<configuration>
 							<applicationsArgs>
-								<args>-application ${converterApplication.name} release/${targetPlatform.name}</args>
+								<args>-application ${converterApplication.name} ${targetPlatform.name}</args>
 							</applicationsArgs>
 						</configuration>
 						<goals>
@@ -103,5 +103,4 @@
 			</plugin>
 		</plugins>
 	</build>
--->
 </project>
