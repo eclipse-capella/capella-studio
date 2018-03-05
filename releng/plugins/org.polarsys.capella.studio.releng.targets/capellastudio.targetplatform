@@ -10,9 +10,9 @@
  *******************************************************************************/
 target "capellastudio" with source, requirements
 
-include "common/capellabase.targetplatform"
+include "common/capellabase.targetplatform" 
 
-location kitalpha-sdk "https://ci.polarsys.org/kitalpha/job/Kitalpha_master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.kitalpha.releng.sdk.updatesite/target/repository/" {
+location kitalpha-sdk "https://ci.polarsys.org/kitalpha/job/Kitalpha-v1.2.x/5/artifact/releng/plugins/org.polarsys.kitalpha.releng.sdk.updatesite/target/repository/" {
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.dsl.feature.feature.group lazy
@@ -62,7 +62,7 @@ location kitalpha-sdk "https://ci.polarsys.org/kitalpha/job/Kitalpha_master/last
 	org.polarsys.kitalpha.model.common.share.feature.feature.group lazy
 }
 
-location kitalpha-core "https://ci.polarsys.org/kitalpha/job/Kitalpha_master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.kitalpha.releng.runtime.core.updatesite/target/repository/" {
+location kitalpha-core "https://ci.polarsys.org/kitalpha/job/Kitalpha-v1.2.x/5/artifact/releng/plugins/org.polarsys.kitalpha.releng.runtime.core.updatesite/target/repository/" {
 	org.polarsys.kitalpha.model.common.commands.feature.feature.group lazy
 	org.polarsys.kitalpha.model.common.commands.feature.source.feature.group lazy
 }
