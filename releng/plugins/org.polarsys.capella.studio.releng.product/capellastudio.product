@@ -7,6 +7,21 @@
    </configIni>
 
    <launcherArgs>
+      <programArgs>-showLocation
+-showsplash
+org.polarsys.capella.studio.product.CapellaStudio
+--launcher.defaultAction
+openFile
+--launcher.appendVmargs
+      </programArgs>
+      <programArgsLin>--launcher.GTK_version
+2
+      </programArgsLin>
+      <vmArgs>-Dosgi.requiredJavaVersion=1.8
+-Xms512m
+-Xmx2048m
+-XX:PermSize=256M
+      </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
    </launcherArgs>
@@ -39,6 +54,7 @@ http://www.eclipse.org/legal/epl-v10.htm
    </license>
 
    <plugins>
+      <plugin id="org.eclipse.update.configurator"/>
    </plugins>
 
    <features>
@@ -50,11 +66,12 @@ http://www.eclipse.org/legal/epl-v10.htm
    </features>
 
    <configurations>
-      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <property name="org.eclipse.update.reconcile" value="false" />
    </configurations>
 
    <preferencesInfo>
