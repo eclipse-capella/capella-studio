@@ -31,7 +31,6 @@ openFile
    <splash
       location="org.polarsys.capella.studio.product" />
    <launcher>
-      <solaris/>
       <win useIco="false">
          <bmp/>
       </win>
@@ -63,6 +62,7 @@ http://www.eclipse.org/legal/epl-v10.htm
       <feature id="org.polarsys.capella.ta.viewpoint.dsl.feature.source" version="1.2.1.qualifier"/>
       <feature id="org.polarsys.capella.studio.releng.capella.feature" version="1.2.1.qualifier"/>
       <feature id="org.polarsys.capella.studio.releng.capella.feature.source" version="1.2.1.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.kitalpha.feature" version="1.2.1.qualifier"/>
    </features>
 
    <configurations>
