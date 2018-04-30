@@ -67,12 +67,14 @@ location kitalpha-core "http://download.polarsys.org/kitalpha/updates/nightly/ru
 	org.polarsys.kitalpha.model.common.commands.feature.source.feature.group lazy
 }
 
-location capella-egf-patterns "http://download.polarsys.org/capella/core/updates/releases/1.2.0-R20171103-050121/org.polarsys.capella.egf.site/" {
+
+location capella-egf-patterns "http://download.polarsys.org/capella/core/updates/nightly/latest/org.polarsys.capella.egf.site/" {
 	org.polarsys.capella.core.egf.feature.feature.group lazy
 	org.polarsys.capella.core.egf.feature.source.feature.group lazy
 }
 
-location capella "http://download.polarsys.org/capella/core/updates/releases/1.2.0-R20171103-050121/org.polarsys.capella.rcp.site/" {
+
+location capella "http://download.polarsys.org/capella/core/updates/nightly/latest/org.polarsys.capella.rcp.site/" {
 	org.polarsys.capella.rcp.feature.feature.group lazy
 	org.polarsys.capella.rcp.feature.source.feature.group lazy
 }
