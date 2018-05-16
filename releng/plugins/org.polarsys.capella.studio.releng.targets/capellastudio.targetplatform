@@ -12,7 +12,7 @@ target "capellastudio" with source, requirements
 
 include "common/capellabase.targetplatform" 
 
-location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/milestone/sdk/1.2.1rc1/" {
+location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/stable/sdk/1.2.1/" {
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.dsl.feature.feature.group lazy
@@ -62,17 +62,17 @@ location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/milestone/s
 	org.polarsys.kitalpha.model.common.share.feature.feature.group lazy
 }
 
-location kitalpha-core "http://download.polarsys.org/kitalpha/updates/milestone/runtimecore/1.2.1rc1/" {
+location kitalpha-core "http://download.polarsys.org/kitalpha/updates/stable/runtimecore/1.2.1/" {
 	org.polarsys.kitalpha.model.common.commands.feature.feature.group lazy
 	org.polarsys.kitalpha.model.common.commands.feature.source.feature.group lazy
 }
 
-location capella-egf-patterns "http://download.polarsys.org/capella/core/updates/stable/1.2.1-S20180425-144023/org.polarsys.capella.egf.site/" {
+location capella-egf-patterns "http://download.polarsys.org/capella/core/updates/stable/1.2.1-S20180514-133812/org.polarsys.capella.egf.site/" {
 	org.polarsys.capella.core.egf.feature.feature.group lazy
 	org.polarsys.capella.core.egf.feature.source.feature.group lazy
 }
 
-location capella "http://download.polarsys.org/capella/core/updates/stable/1.2.1-S20180425-144023/org.polarsys.capella.rcp.site/" {
+location capella "http://download.polarsys.org/capella/core/updates/stable/1.2.1-S20180514-133812/org.polarsys.capella.rcp.site/" {
 	org.polarsys.capella.rcp.feature.feature.group lazy
 	org.polarsys.capella.rcp.feature.source.feature.group lazy
 }
