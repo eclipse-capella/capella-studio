@@ -44,7 +44,23 @@
             name="Capella Studio Product">
          <property
                name="appName"
-               value="Capella Studio Product">
+               value="Capella Studio">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/CapellaStudio16x16.png,icons/CapellaStudio32x32.png,icons/CapellaStudio48x48.png">
+         </property>
+         <property
+               name="aboutText"
+               value="%productBlurb">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/CapellaStudioAbout.png">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
          </property>
       </product>
    </extension>
@@ -55,9 +71,8 @@
             id="org.polarsys.capella.studio.product.splashHandler">
       </splashHandler>
       <splashHandlerProductBinding
-            productId="org.polarsys.capella.studio.product"
+            productId="org.polarsys.capella.studio.product.CapellaStudio"
             splashId="org.polarsys.capella.studio.product.splashHandler">
       </splashHandlerProductBinding>
    </extension>
-
 </plugin>
