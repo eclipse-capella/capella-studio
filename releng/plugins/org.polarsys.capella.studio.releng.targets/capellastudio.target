@@ -194,7 +194,7 @@
       <unit id="org.eclipse.sirius.runtime.aql.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.runtime.aql.source.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.jar" version="0.0.0"/>
-      <repository id="sirius" location="http://download.eclipse.org/sirius/updates/stable/5.1.2-S20180503-063546/neon"/>
+      <repository id="sirius" location="http://download.eclipse.org/sirius/updates/stable/5.1.2-S20180518-120822/neon"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.eef.sdk-feature.feature.group" version="0.0.0"/>
@@ -234,7 +234,7 @@
       <unit id="org.eclipse.amalgam.explorer.contextual.core.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.amalgam.explorer.contextual.core.source.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.amalgam.explorer.contextual.sirius.source" version="0.0.0"/>
-      <repository id="amalgam" location="http://download.eclipse.org/modeling/amalgam/updates/stable/1.9.0-S20180503/capella/"/>
+      <repository id="amalgam" location="http://download.eclipse.org/modeling/amalgam/updates/stable/1.9.0-S20180522/capella"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.ecoretools.sdk.feature.group" version="0.0.0"/>
@@ -325,12 +325,12 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.core.egf.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.egf.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella-egf-patterns" location="http://download.polarsys.org/capella/core/updates/stable/1.2.1-S20180514-133812/org.polarsys.capella.egf.site/"/>
+      <repository id="capella-egf-patterns" location="http://download.polarsys.org/capella/core/updates/stable/1.2.1-S20180523-113154/org.polarsys.capella.egf.site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.rcp.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.rcp.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella" location="http://download.polarsys.org/capella/core/updates/stable/1.2.1-S20180514-133812/org.polarsys.capella.rcp.site/"/>
+      <repository id="capella" location="http://download.polarsys.org/capella/core/updates/stable/1.2.1-S20180523-113154/org.polarsys.capella.rcp.site/"/>
     </location>
   </locations>
 </target>

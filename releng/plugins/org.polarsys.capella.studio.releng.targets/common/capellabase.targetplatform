@@ -181,7 +181,7 @@ location acceleo-3.7.1 "http://download.eclipse.org/acceleo/updates/milestones/3
 	org.eclipse.acceleo.ui.capabilities.feature.group lazy
 }
 
-location sirius "http://download.eclipse.org/sirius/updates/stable/5.1.2-S20180503-063546/neon/" {
+location sirius "http://download.eclipse.org/sirius/updates/stable/5.1.2-S20180518-120822/neon/" {
 	org.eclipse.sirius.doc.feature.feature.group lazy
 	org.eclipse.sirius.doc.feature.source.feature.group lazy
 	org.eclipse.sirius.runtime.ide.eef.feature.group lazy
@@ -234,7 +234,7 @@ location diffmerge-patterns-master "http://download.eclipse.org/diffmerge/releas
 	org.eclipse.emf.diffmerge.patterns.sirius.sdk.feature.source.feature.group lazy
 }
 
-location amalgam "http://download.eclipse.org/modeling/amalgam/updates/stable/1.9.0-S20180503/capella/" {
+location amalgam "http://download.eclipse.org/modeling/amalgam/updates/stable/1.9.0-S20180522/capella" {
 	org.eclipse.amalgam.explorer.activity.feature.group lazy
 	org.eclipse.amalgam.explorer.activity.source.feature.group lazy
 	org.eclipse.amalgam.explorer.contextual.feature.group lazy
