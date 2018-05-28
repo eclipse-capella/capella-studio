@@ -264,11 +264,11 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.diffmerge.sdk.feature"
+         id="org.eclipse.emf.diffmerge.egit.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.diffmerge.sdk.feature.source"
+         id="org.eclipse.emf.diffmerge.egit.feature.source"
          version="0.0.0"/>
 
    <includes

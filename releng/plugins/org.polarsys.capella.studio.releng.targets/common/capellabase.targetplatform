@@ -222,8 +222,8 @@ location diffmerge-core-master "http://download.eclipse.org/diffmerge/releases/0
 	org.eclipse.emf.diffmerge.sirius.feature.source.feature.group lazy
 	org.eclipse.emf.diffmerge.gmf.feature.feature.group lazy
 	org.eclipse.emf.diffmerge.gmf.feature.source.feature.group lazy
-	org.eclipse.emf.diffmerge.sdk.feature.feature.group lazy
-	org.eclipse.emf.diffmerge.sdk.feature.source.feature.group lazy
+	org.eclipse.emf.diffmerge.egit.feature.feature.group lazy
+	org.eclipse.emf.diffmerge.egit.feature.source.feature.group lazy
 	
 }
 
