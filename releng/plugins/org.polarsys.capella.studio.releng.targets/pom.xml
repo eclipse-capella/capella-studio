@@ -36,7 +36,7 @@
 		<properties>
 		<tycho-version>0.25.0</tycho-version>
 		<tycho-extras-version>0.25.0</tycho-extras-version>
-		<platform-name>neon</platform-name>
+		<platform-name>oxygen</platform-name>
 		<targetPlatform.repository>http://mbarbero.github.com/fr.obeo.releng.targetplatform/p2/latest</targetPlatform.repository>
 		<targetPlatform.name>capellastudio.targetplatform</targetPlatform.name>
 		<converterApplication.name>fr.obeo.releng.targetplatform.targetPlatform.converter</converterApplication.name>

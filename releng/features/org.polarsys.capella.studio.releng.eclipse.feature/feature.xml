@@ -46,7 +46,7 @@
    <includes
          id="org.eclipse.amalgam.explorer.contextual.core"
          version="0.0.0"/>
-         
+
    <includes
          id="org.eclipse.amalgam.explorer.contextual.core.source"
          version="0.0.0"/>
@@ -100,83 +100,7 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.egf"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.common"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.common.ui"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.core"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.core.ui"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.doc"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.model"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.model.edit"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.model.fprod"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.model.fprod.edit"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.model.ftask"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.model.ftask.edit"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.model.ui"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.portfolio"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.portfolio.emf"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.portfolio.genchain"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.portfolio.task.ant"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.producer"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.producer.ui"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.egf.sdk"
+         id="org.eclipse.egf.sdk.feature"
          version="0.0.0"/>
 
    <includes
@@ -202,21 +126,13 @@
    <includes
          id="org.eclipse.emf.codegen.ecore.source"
          version="0.0.0"/>
-         
+
    <includes
          id="org.eclipse.emf.codegen.ecore.ui"
          version="0.0.0"/>
 
    <includes
          id="org.eclipse.emf.codegen.ecore.ui.source"
-         version="0.0.0"/>
-
-   <include
-            id="org.eclipse.emf.codegen.ecore"
-         version="0.0.0"/>
-
-   <include
-            id="org.eclipse.emf.codegen.ecore.source"
          version="0.0.0"/>
 
    <includes
@@ -424,10 +340,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.gmf.doc"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.gmf.examples.runtime"
          version="0.0.0"/>
 
@@ -452,19 +364,11 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.gmf.sdk"
+         id="org.eclipse.gmf.runtime.sdk"
          version="0.0.0"/>
 
    <includes
          id="org.eclipse.gmf.source"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.gmf.tooling"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.gmf.tooling.runtime"
          version="0.0.0"/>
 
    <includes
@@ -501,10 +405,6 @@
 
    <includes
          id="org.eclipse.sirius.doc.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.doc.feature.source"
          version="0.0.0"/>
 
    <includes
@@ -696,7 +596,7 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.acceleo.sdk"
+         id="org.eclipse.acceleo"
          version="0.0.0"/>
 
    <includes
@@ -705,10 +605,6 @@
 
    <includes
          id="org.eclipse.sirius.query.legacy.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.team.svn"
          version="0.0.0"/>
 
    <plugin
