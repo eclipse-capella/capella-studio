@@ -134,7 +134,7 @@ location eclipse-releases-oxygen "http://download.eclipse.org/releases/oxygen/" 
 /**
  * TODO change to the last version
  */
-location sirius "http://download.eclipse.org/sirius/updates/releases/5.1.1/oxygen" {
+location sirius "http://download.eclipse.org/sirius/updates/stable/6.0.0-S20180404-103514/oxygen/" {
 	org.eclipse.sirius.doc.feature.feature.group lazy
 	org.eclipse.sirius.doc.feature.source.feature.group lazy
 	org.eclipse.sirius.runtime.ide.eef.feature.group lazy
