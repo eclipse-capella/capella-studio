@@ -59,7 +59,7 @@
     <module>../../../vpdsl/features/org.polarsys.capella.ta.viewpoint.dsl.feature</module>
     <module>../../../releng/features/org.polarsys.capella.studio.releng.eclipse.feature</module>
     <module>../../../releng/features/org.polarsys.capella.studio.releng.capella.feature</module>
-    <!-- <module>../../../releng/features/org.polarsys.capella.studio.releng.kitalpha.feature</module> -->
+    <module>../../../releng/features/org.polarsys.capella.studio.releng.kitalpha.feature</module>
     
     <!-- Update site  -->
     <module>../../../releng/plugins/org.polarsys.capella.studio.releng.updatesite</module>

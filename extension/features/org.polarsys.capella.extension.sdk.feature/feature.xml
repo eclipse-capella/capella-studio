@@ -28,7 +28,7 @@
    </license>
 
    <requires>
-      <import feature="org.polarsys.kitalpha.runtime.feature" />
+      <import feature="org.polarsys.kitalpha.sdk.feature" />
       <import feature="org.polarsys.capella.core.egf.feature" />
    </requires>
 

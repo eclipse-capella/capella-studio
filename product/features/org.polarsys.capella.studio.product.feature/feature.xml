@@ -29,7 +29,7 @@
    </license>
 
    <requires>
-      <import feature="org.polarsys.kitalpha.runtime.feature" />
+      <import feature="org.polarsys.kitalpha.sdk.feature" />
    </requires>
 
    <plugin
