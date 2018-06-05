@@ -47,6 +47,22 @@
           <orchestration xmi:type="pattern:MethodCall" xmi:id="_bvRiXiIsEeCkc_7OLLz7bw"
               called="#_bvRiVyIsEeCkc_7OLLz7bw"/>
         </elements>
+        <elements xmi:id="_asT3kGS9EeiSLtpvrnge2A" name="CapellaCdoGenerationPattern"
+            headerMethod="#_asT3kmS9EeiSLtpvrnge2A" conditionMethod="#_asT3lGS9EeiSLtpvrnge2A"
+            initMethod="#_asT3k2S9EeiSLtpvrnge2A" footerMethod="#_asT3lmS9EeiSLtpvrnge2A">
+          <nature xmi:type="javapattern:JavaNature" xmi:id="_asT3kWS9EeiSLtpvrnge2A"
+              name="Java"/>
+          <methods xmi:id="_asT3kmS9EeiSLtpvrnge2A" name="header" patternFilePath="templates/pattern._asT3kGS9EeiSLtpvrnge2A/method._asT3kmS9EeiSLtpvrnge2A.pt"/>
+          <methods xmi:id="_asT3k2S9EeiSLtpvrnge2A" name="init" patternFilePath="templates/pattern._asT3kGS9EeiSLtpvrnge2A/method._asT3k2S9EeiSLtpvrnge2A.pt"/>
+          <methods xmi:id="_asT3lGS9EeiSLtpvrnge2A" name="preCondition" patternFilePath="templates/pattern._asT3kGS9EeiSLtpvrnge2A/method._asT3lGS9EeiSLtpvrnge2A.pt"/>
+          <methods xmi:id="_asT3lmS9EeiSLtpvrnge2A" name="footer" patternFilePath="templates/pattern._asT3kGS9EeiSLtpvrnge2A/method._asT3lmS9EeiSLtpvrnge2A.pt"/>
+          <methods xmi:id="_9UtCAGlqEeiEbPQQCj_P9A" name="body" patternFilePath="templates/pattern._asT3kGS9EeiSLtpvrnge2A/method._9UtCAGlqEeiEbPQQCj_P9A.pt"/>
+          <parameters xmi:id="_3q5g4GlqEeiEbPQQCj_P9A" name="parameter" type="http://www.polarsys.org/capella/extension/genchain/0.8.0#//CapellaCdoEmfGeneration"/>
+          <variables xmi:id="__LwqQGlqEeiEbPQQCj_P9A" name="activity" type="java.lang.String"/>
+          <orchestration xmi:type="pattern:SuperCall" xmi:id="_asT3l2S9EeiSLtpvrnge2A"/>
+          <orchestration xmi:type="pattern:MethodCall" xmi:id="_A259cGlrEeiEbPQQCj_P9A"
+              called="#_9UtCAGlqEeiEbPQQCj_P9A"/>
+        </elements>
       </libraries>
     </viewpoints>
   </viewpointContainer>

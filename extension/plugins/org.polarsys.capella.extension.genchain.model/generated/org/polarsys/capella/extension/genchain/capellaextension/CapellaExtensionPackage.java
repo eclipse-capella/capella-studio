@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -178,6 +178,71 @@ public interface CapellaExtensionPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.polarsys.capella.extension.genchain.capellaextension.impl.CapellaCdoEmfGenerationImpl <em>Capella Cdo Emf Generation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.polarsys.capella.extension.genchain.capellaextension.impl.CapellaCdoEmfGenerationImpl
+	 * @see org.polarsys.capella.extension.genchain.capellaextension.impl.CapellaExtensionPackageImpl#getCapellaCdoEmfGeneration()
+	 * @generated
+	 */
+	int CAPELLA_CDO_EMF_GENERATION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPELLA_CDO_EMF_GENERATION__NAME = ExtensionPackage.EMDE_CDO_GENERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Container</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPELLA_CDO_EMF_GENERATION__CONTAINER = ExtensionPackage.EMDE_CDO_GENERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Model Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPELLA_CDO_EMF_GENERATION__MODEL_PATH = ExtensionPackage.EMDE_CDO_GENERATION__MODEL_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Cdo Suffix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPELLA_CDO_EMF_GENERATION__CDO_SUFFIX = ExtensionPackage.EMDE_CDO_GENERATION__CDO_SUFFIX;
+
+	/**
+	 * The feature id for the '<em><b>Feature Delegation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPELLA_CDO_EMF_GENERATION__FEATURE_DELEGATION = ExtensionPackage.EMDE_CDO_GENERATION__FEATURE_DELEGATION;
+
+	/**
+	 * The number of structural features of the '<em>Capella Cdo Emf Generation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPELLA_CDO_EMF_GENERATION_FEATURE_COUNT = ExtensionPackage.EMDE_CDO_GENERATION_FEATURE_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.polarsys.capella.extension.genchain.capellaextension.CapellaEmfGeneration <em>Capella Emf Generation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -186,6 +251,16 @@ public interface CapellaExtensionPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCapellaEmfGeneration();
+
+	/**
+	 * Returns the meta object for class '{@link org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration <em>Capella Cdo Emf Generation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Capella Cdo Emf Generation</em>'.
+	 * @see org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration
+	 * @generated
+	 */
+	EClass getCapellaCdoEmfGeneration();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -218,6 +293,15 @@ public interface CapellaExtensionPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CAPELLA_EMF_GENERATION = eINSTANCE.getCapellaEmfGeneration();
+		/**
+		 * The meta object literal for the '{@link org.polarsys.capella.extension.genchain.capellaextension.impl.CapellaCdoEmfGenerationImpl <em>Capella Cdo Emf Generation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.polarsys.capella.extension.genchain.capellaextension.impl.CapellaCdoEmfGenerationImpl
+		 * @see org.polarsys.capella.extension.genchain.capellaextension.impl.CapellaExtensionPackageImpl#getCapellaCdoEmfGeneration()
+		 * @generated
+		 */
+		EClass CAPELLA_CDO_EMF_GENERATION = eINSTANCE.getCapellaCdoEmfGeneration();
 
 	}
 

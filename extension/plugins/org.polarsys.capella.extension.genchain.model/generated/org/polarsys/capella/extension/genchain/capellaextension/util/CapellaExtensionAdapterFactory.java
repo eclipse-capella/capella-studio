@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -14,6 +14,7 @@
 
 package org.polarsys.capella.extension.genchain.capellaextension.util;
 
+import org.eclipse.egf.portfolio.genchain.cdo.cdoExtension.CdoGeneration;
 import org.eclipse.egf.portfolio.genchain.generationChain.EcoreElement;
 import org.eclipse.egf.portfolio.genchain.generationChain.EmfGeneration;
 import org.eclipse.egf.portfolio.genchain.generationChain.GenerationElement;
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.polarsys.capella.extension.genchain.capellaextension.*;
 
+import org.polarsys.kitalpha.emde.genchain.extension.model.EmdeCdoGeneration;
 import org.polarsys.kitalpha.emde.genchain.extension.model.EmdeGeneration;
 
 /**
@@ -91,6 +93,10 @@ public class CapellaExtensionAdapterFactory extends AdapterFactoryImpl {
 				return createCapellaEmfGenerationAdapter();
 			}
 			@Override
+			public Adapter caseCapellaCdoEmfGeneration(CapellaCdoEmfGeneration object) {
+				return createCapellaCdoEmfGenerationAdapter();
+			}
+			@Override
 			public Adapter caseGenerationElement(GenerationElement object) {
 				return createGenerationElementAdapter();
 			}
@@ -109,6 +115,14 @@ public class CapellaExtensionAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseEmdeGeneration(EmdeGeneration object) {
 				return createEmdeGenerationAdapter();
+			}
+			@Override
+			public Adapter caseCdoGeneration(CdoGeneration object) {
+				return createCdoGenerationAdapter();
+			}
+			@Override
+			public Adapter caseEmdeCdoGeneration(EmdeCdoGeneration object) {
+				return createEmdeCdoGenerationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -141,6 +155,20 @@ public class CapellaExtensionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCapellaEmfGenerationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration <em>Capella Cdo Emf Generation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration
+	 * @generated
+	 */
+	public Adapter createCapellaCdoEmfGenerationAdapter() {
 		return null;
 	}
 
@@ -211,6 +239,34 @@ public class CapellaExtensionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEmdeGenerationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.egf.portfolio.genchain.cdo.cdoExtension.CdoGeneration <em>Cdo Generation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.egf.portfolio.genchain.cdo.cdoExtension.CdoGeneration
+	 * @generated
+	 */
+	public Adapter createCdoGenerationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.polarsys.kitalpha.emde.genchain.extension.model.EmdeCdoGeneration <em>Emde Cdo Generation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.polarsys.kitalpha.emde.genchain.extension.model.EmdeCdoGeneration
+	 * @generated
+	 */
+	public Adapter createEmdeCdoGenerationAdapter() {
 		return null;
 	}
 

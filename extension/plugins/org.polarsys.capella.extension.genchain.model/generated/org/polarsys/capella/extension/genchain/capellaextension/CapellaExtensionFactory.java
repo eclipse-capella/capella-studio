@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -41,6 +41,15 @@ public interface CapellaExtensionFactory extends EFactory {
 	 * @generated
 	 */
 	CapellaEmfGeneration createCapellaEmfGeneration();
+
+	/**
+	 * Returns a new object of class '<em>Capella Cdo Emf Generation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Capella Cdo Emf Generation</em>'.
+	 * @generated
+	 */
+	CapellaCdoEmfGeneration createCapellaCdoEmfGeneration();
 
 	/**
 	 * Returns the package supported by this factory.

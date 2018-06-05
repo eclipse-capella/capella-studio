@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -39,7 +39,7 @@ public class CapellaExtensionFactoryImpl extends EFactoryImpl implements Capella
 	 */
 	public static CapellaExtensionFactory init() {
 		try {
-			CapellaExtensionFactory theCapellaExtensionFactory = (CapellaExtensionFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.polarsys.org/capella/extension/genchain/0.8.0"); 
+			CapellaExtensionFactory theCapellaExtensionFactory = (CapellaExtensionFactory)EPackage.Registry.INSTANCE.getEFactory(CapellaExtensionPackage.eNS_URI);
 			if (theCapellaExtensionFactory != null) {
 				return theCapellaExtensionFactory;
 			}
@@ -69,6 +69,7 @@ public class CapellaExtensionFactoryImpl extends EFactoryImpl implements Capella
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case CapellaExtensionPackage.CAPELLA_EMF_GENERATION: return createCapellaEmfGeneration();
+			case CapellaExtensionPackage.CAPELLA_CDO_EMF_GENERATION: return createCapellaCdoEmfGeneration();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -82,6 +83,16 @@ public class CapellaExtensionFactoryImpl extends EFactoryImpl implements Capella
 	public CapellaEmfGeneration createCapellaEmfGeneration() {
 		CapellaEmfGenerationImpl capellaEmfGeneration = new CapellaEmfGenerationImpl();
 		return capellaEmfGeneration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CapellaCdoEmfGeneration createCapellaCdoEmfGeneration() {
+		CapellaCdoEmfGenerationImpl capellaCdoEmfGeneration = new CapellaCdoEmfGenerationImpl();
+		return capellaCdoEmfGeneration;
 	}
 
 	/**

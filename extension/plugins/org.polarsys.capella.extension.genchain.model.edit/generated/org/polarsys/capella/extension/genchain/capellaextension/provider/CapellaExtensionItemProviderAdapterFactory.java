@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -107,6 +107,29 @@ public class CapellaExtensionItemProviderAdapterFactory extends CapellaExtension
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CapellaCdoEmfGenerationItemProvider capellaCdoEmfGenerationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCapellaCdoEmfGenerationAdapter() {
+		if (capellaCdoEmfGenerationItemProvider == null) {
+			capellaCdoEmfGenerationItemProvider = new CapellaCdoEmfGenerationItemProvider(this);
+		}
+
+		return capellaCdoEmfGenerationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -206,6 +229,7 @@ public class CapellaExtensionItemProviderAdapterFactory extends CapellaExtension
 	 */
 	public void dispose() {
 		if (capellaEmfGenerationItemProvider != null) capellaEmfGenerationItemProvider.dispose();
+		if (capellaCdoEmfGenerationItemProvider != null) capellaCdoEmfGenerationItemProvider.dispose();
 	}
 
 }

@@ -1,4 +1,4 @@
-//Generated with EGF 1.3.0.v20150924-1035
+//Generated with EGF 1.6.0.201805040915
 package org.polarsys.capella.extension.genchain.patterns;
 
 import java.util.HashMap;
@@ -162,7 +162,7 @@ public class CapellaGenmodelPattern {
 
 		// EMDE Extension Genmodel
 		genModel.setNonNLSMarkers(true);
-		Bundle bundle = Platform.getBundle("org.eclipse.egf.emf.pattern");
+		Bundle bundle = Platform.getBundle("org.eclipse.emf.codegen");
 		genModel.setRuntimeVersion(GenRuntimeVersionHelper.getVersion(bundle.getVersion()));
 		genModel.setRootExtendsClass("org.eclipse.emf.ecore.impl.EObjectImpl");
 		genModel.setCodeFormatting(true);

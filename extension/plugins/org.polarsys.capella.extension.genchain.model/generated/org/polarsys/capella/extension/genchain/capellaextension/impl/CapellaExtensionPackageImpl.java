@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -14,11 +14,14 @@
 
 package org.polarsys.capella.extension.genchain.capellaextension.impl;
 
+import org.eclipse.egf.portfolio.genchain.cdo.cdoExtension.CdoExtensionPackage;
+import org.eclipse.egf.portfolio.genchain.generationChain.GenerationChainPackage;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration;
 import org.polarsys.capella.extension.genchain.capellaextension.CapellaEmfGeneration;
 import org.polarsys.capella.extension.genchain.capellaextension.CapellaExtensionFactory;
 import org.polarsys.capella.extension.genchain.capellaextension.CapellaExtensionPackage;
@@ -38,6 +41,13 @@ public class CapellaExtensionPackageImpl extends EPackageImpl implements Capella
 	 * @generated
 	 */
 	private EClass capellaEmfGenerationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass capellaCdoEmfGenerationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -87,6 +97,8 @@ public class CapellaExtensionPackageImpl extends EPackageImpl implements Capella
 
 		// Initialize simple dependencies
 		ExtensionPackage.eINSTANCE.eClass();
+		GenerationChainPackage.eINSTANCE.eClass();
+		CdoExtensionPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theCapellaExtensionPackage.createPackageContents();
@@ -110,6 +122,15 @@ public class CapellaExtensionPackageImpl extends EPackageImpl implements Capella
 	 */
 	public EClass getCapellaEmfGeneration() {
 		return capellaEmfGenerationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCapellaCdoEmfGeneration() {
+		return capellaCdoEmfGenerationEClass;
 	}
 
 	/**
@@ -141,6 +162,8 @@ public class CapellaExtensionPackageImpl extends EPackageImpl implements Capella
 
 		// Create classes and their features
 		capellaEmfGenerationEClass = createEClass(CAPELLA_EMF_GENERATION);
+
+		capellaCdoEmfGenerationEClass = createEClass(CAPELLA_CDO_EMF_GENERATION);
 	}
 
 	/**
@@ -175,9 +198,12 @@ public class CapellaExtensionPackageImpl extends EPackageImpl implements Capella
 
 		// Add supertypes to classes
 		capellaEmfGenerationEClass.getESuperTypes().add(theExtensionPackage.getEmdeGeneration());
+		capellaCdoEmfGenerationEClass.getESuperTypes().add(theExtensionPackage.getEmdeCdoGeneration());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(capellaEmfGenerationEClass, CapellaEmfGeneration.class, "CapellaEmfGeneration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(capellaCdoEmfGenerationEClass, CapellaCdoEmfGeneration.class, "CapellaCdoEmfGeneration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

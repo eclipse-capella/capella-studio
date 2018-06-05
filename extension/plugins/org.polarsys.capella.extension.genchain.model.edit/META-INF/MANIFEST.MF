@@ -15,5 +15,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.polarsys.kitalpha.emde.genchain.model;visibility:=reexport,
  org.polarsys.kitalpha.emde.genchain.model.edit;visibility:=reexport,
  org.eclipse.egf.portfolio.genchain;visibility:=reexport,
- org.eclipse.egf.portfolio.genchain.edit;visibility:=reexport
+ org.eclipse.egf.portfolio.genchain.edit;visibility:=reexport,
+ org.eclipse.egf.portfolio.genchain.cdo.model;visibility:=reexport,
+ org.eclipse.egf.portfolio.genchain.cdo.model.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

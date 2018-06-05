@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -14,6 +14,7 @@
 
 package org.polarsys.capella.extension.genchain.capellaextension.util;
 
+import org.eclipse.egf.portfolio.genchain.cdo.cdoExtension.CdoGeneration;
 import org.eclipse.egf.portfolio.genchain.generationChain.EcoreElement;
 import org.eclipse.egf.portfolio.genchain.generationChain.EmfGeneration;
 import org.eclipse.egf.portfolio.genchain.generationChain.GenerationElement;
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.util.Switch;
 
 import org.polarsys.capella.extension.genchain.capellaextension.*;
 
+import org.polarsys.kitalpha.emde.genchain.extension.model.EmdeCdoGeneration;
 import org.polarsys.kitalpha.emde.genchain.extension.model.EmdeGeneration;
 
 /**
@@ -66,7 +68,7 @@ public class CapellaExtensionSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -96,6 +98,17 @@ public class CapellaExtensionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CapellaExtensionPackage.CAPELLA_CDO_EMF_GENERATION: {
+				CapellaCdoEmfGeneration capellaCdoEmfGeneration = (CapellaCdoEmfGeneration)theEObject;
+				T result = caseCapellaCdoEmfGeneration(capellaCdoEmfGeneration);
+				if (result == null) result = caseEmdeCdoGeneration(capellaCdoEmfGeneration);
+				if (result == null) result = caseCdoGeneration(capellaCdoEmfGeneration);
+				if (result == null) result = caseEcoreElement(capellaCdoEmfGeneration);
+				if (result == null) result = casePluginProvider(capellaCdoEmfGeneration);
+				if (result == null) result = caseGenerationElement(capellaCdoEmfGeneration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -112,6 +125,21 @@ public class CapellaExtensionSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCapellaEmfGeneration(CapellaEmfGeneration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Capella Cdo Emf Generation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Capella Cdo Emf Generation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCapellaCdoEmfGeneration(CapellaCdoEmfGeneration object) {
 		return null;
 	}
 
@@ -187,6 +215,36 @@ public class CapellaExtensionSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEmdeGeneration(EmdeGeneration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cdo Generation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cdo Generation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCdoGeneration(CdoGeneration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Emde Cdo Generation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Emde Cdo Generation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEmdeCdoGeneration(EmdeCdoGeneration object) {
 		return null;
 	}
 

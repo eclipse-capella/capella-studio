@@ -181,7 +181,7 @@ location diffmerge-patterns-master "http://download.eclipse.org/diffmerge/releas
 }
 
 location coevolution "http://download.eclipse.org/diffmerge/releases/0.9.0/edm-coevolution-site/" {
-	 org.eclipse.emf.diffmerge.coevolution.sdk.feature.feature.group
+	 org.eclipse.emf.diffmerge.coevolution.sdk.feature.feature.group lazy
 }
 
 /**

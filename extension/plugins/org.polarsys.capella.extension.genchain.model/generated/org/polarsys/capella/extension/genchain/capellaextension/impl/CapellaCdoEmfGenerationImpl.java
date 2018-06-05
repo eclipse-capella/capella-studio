@@ -16,25 +16,25 @@ package org.polarsys.capella.extension.genchain.capellaextension.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.polarsys.capella.extension.genchain.capellaextension.CapellaEmfGeneration;
+import org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration;
 import org.polarsys.capella.extension.genchain.capellaextension.CapellaExtensionPackage;
 
-import org.polarsys.kitalpha.emde.genchain.extension.model.impl.EmdeGenerationImpl;
+import org.polarsys.kitalpha.emde.genchain.extension.model.impl.EmdeCdoGenerationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Capella Emf Generation</b></em>'.
+ * An implementation of the model object '<em><b>Capella Cdo Emf Generation</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class CapellaEmfGenerationImpl extends EmdeGenerationImpl implements CapellaEmfGeneration {
+public class CapellaCdoEmfGenerationImpl extends EmdeCdoGenerationImpl implements CapellaCdoEmfGeneration {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CapellaEmfGenerationImpl() {
+	protected CapellaCdoEmfGenerationImpl() {
 
 		super();
 
@@ -47,10 +47,10 @@ public class CapellaEmfGenerationImpl extends EmdeGenerationImpl implements Cape
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CapellaExtensionPackage.Literals.CAPELLA_EMF_GENERATION;
+		return CapellaExtensionPackage.Literals.CAPELLA_CDO_EMF_GENERATION;
 	}
 
 
 
 
-} //CapellaEmfGenerationImpl
+} //CapellaCdoEmfGenerationImpl

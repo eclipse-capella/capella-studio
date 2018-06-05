@@ -3,4 +3,5 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="capellaextension" nsURI="http://www.polarsys.org/capella/extension/genchain/0.8.0"
     nsPrefix="CapellaExtension">
   <eClassifiers xsi:type="ecore:EClass" name="CapellaEmfGeneration" eSuperTypes="platform:/plugin/org.polarsys.kitalpha.emde.genchain/model/eMDE_Extension.ecore#//EmdeGeneration"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CapellaCdoEmfGeneration" eSuperTypes="platform:/plugin/org.polarsys.kitalpha.emde.genchain/model/eMDE_Extension.ecore#//EmdeCdoGeneration"/>
 </ecore:EPackage>

@@ -1,0 +1,24 @@
+		Map<GenerationElement, FactoryComponent> fcs = (Map<GenerationElement, FactoryComponent>) ctx.getValue(FcoreBuilderConstants.CURRENT_FCORE);
+		FactoryComponent fc = fcs.get((GenerationElement) (parameter.eContainer()));
+
+		ProductionPlan pp = (ProductionPlan) fc.getOrchestration();
+		DomainViewpoint dvp = (DomainViewpoint) fc.getViewpointContainer().getViewpoint(DomainViewpoint.class);
+		ResourceSet resourceSet = fc.eResource().getResourceSet();
+
+		URI uri = ((HashMap<String, URI>) ctx.getValue(FcoreBuilderConstants.GENMODEL_URIS)).get(parameter.getModelPath());
+		EMFDomain genModelDomain = ActivityInvocationHelper.getDomain(dvp, uri);
+		
+		Map<String, Type> contracts = new HashMap<String, Type>();
+		Map<String, OrchestrationParameter> parameters = new HashMap<String, OrchestrationParameter>();
+
+		for (OrchestrationParameter param : pp.getOrchestrationParameters()) {
+			if (ActivityInvocationHelper.GENERATION_EXTENSION_PARAMETER_NAME.equals(param.getName())) {
+				parameters.put("pattern.substitutions", param);
+			}
+		}
+
+		
+		TypeDomain typeDomain = DomainFactory.eINSTANCE.createTypeDomain();
+		typeDomain.setDomain(genModelDomain);
+		contracts.put("genModel", typeDomain);
+		ActivityInvocationHelper.addInvocation(pp, (Activity) resourceSet.getEObject(URI.createURI(this.activity, false), true), contracts, parameters);

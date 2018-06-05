@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -14,6 +14,7 @@
 
 package org.polarsys.capella.extension.genchain.capellaextension.provider;
 
+import org.eclipse.egf.portfolio.genchain.cdo.cdoExtension.provider.CdoExtensionEditPlugin;
 import org.eclipse.egf.portfolio.genchain.generationChain.provider.GenerationChainEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
@@ -56,6 +57,7 @@ public final class CapellaExtensionEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     Emde_ExtensionEditPlugin.INSTANCE,
 		     GenerationChainEditPlugin.INSTANCE,
+		     CdoExtensionEditPlugin.INSTANCE,
 		   });
 	}
 

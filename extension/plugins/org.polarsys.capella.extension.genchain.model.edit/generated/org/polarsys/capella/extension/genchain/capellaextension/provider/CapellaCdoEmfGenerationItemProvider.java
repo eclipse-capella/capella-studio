@@ -23,32 +23,26 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.polarsys.capella.extension.genchain.capellaextension.CapellaEmfGeneration;
+import org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration;
 
-import org.polarsys.kitalpha.emde.genchain.extension.model.edit.provider.EmdeGenerationItemProvider;
+import org.polarsys.kitalpha.emde.genchain.extension.model.edit.provider.EmdeCdoGenerationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.polarsys.capella.extension.genchain.capellaextension.CapellaEmfGeneration} object.
+ * This is the item provider adapter for a {@link org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class CapellaEmfGenerationItemProvider
-	extends EmdeGenerationItemProvider {
+public class CapellaCdoEmfGenerationItemProvider extends EmdeCdoGenerationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CapellaEmfGenerationItemProvider(AdapterFactory adapterFactory) {
+	public CapellaCdoEmfGenerationItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -68,14 +62,14 @@ public class CapellaEmfGenerationItemProvider
 	}
 
 	/**
-	 * This returns CapellaEmfGeneration.gif.
+	 * This returns CapellaCdoEmfGeneration.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/CapellaEmfGeneration"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CapellaCdoEmfGeneration"));
 	}
 
 	/**
@@ -87,12 +81,13 @@ public class CapellaEmfGenerationItemProvider
 	@Override
 	public String getText(Object object) {
 
-		String label = ((CapellaEmfGeneration)object).getName();
+		String label = ((CapellaCdoEmfGeneration)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_CapellaEmfGeneration_type") :
-			getString("_UI_CapellaEmfGeneration_type") + " " + label;
+			getString("_UI_CapellaCdoEmfGeneration_type") :
+			getString("_UI_CapellaCdoEmfGeneration_type") + " " + label;
 
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

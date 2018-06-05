@@ -160,4 +160,58 @@
       </invocations>
     </orchestration>
   </fcore:FactoryComponent>
+  <fcore:FactoryComponent xmi:id="_gvC8IGiZEeifgdUU8AG3DQ" name="capella.emf.gen.model.cdo">
+    <contractContainer xmi:id="_iW6R0GiZEeifgdUU8AG3DQ">
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_i2DE4GiZEeifgdUU8AG3DQ"
+          description="EMF Model Pattern" name="genModel" mandatory="true" invocationContracts="#_nIFh0miZEeifgdUU8AG3DQ">
+        <type xmi:type="domain:TypeDomain" xmi:id="_i2DE4WiZEeifgdUU8AG3DQ"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_i2DE5miZEeifgdUU8AG3DQ"
+          description="EMF Model Pattern" name="pattern.substitutions" invocationContracts="#_zt8PFGiZEeifgdUU8AG3DQ">
+        <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_i2DE52iZEeifgdUU8AG3DQ"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_i2DE6miZEeifgdUU8AG3DQ"
+          description="EMF Model Pattern" name="mergeRulesURI" invocationContracts="#_zt8PE2iZEeifgdUU8AG3DQ">
+        <type xmi:type="types:TypeURI" xmi:id="_i2DE62iZEeifgdUU8AG3DQ"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_i2DE7GiZEeifgdUU8AG3DQ"
+          name="prepare.patterns.substitutions" invocationContracts="#_nIFh1GiZEeifgdUU8AG3DQ">
+        <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_i2DE7WiZEeifgdUU8AG3DQ"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_i2DE7miZEeifgdUU8AG3DQ"
+          name="cdoSuffix" invocationContracts="#_nIFh1WiZEeifgdUU8AG3DQ">
+        <type xmi:type="types:TypeString" xmi:id="_i2DE72iZEeifgdUU8AG3DQ"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_i2DE8GiZEeifgdUU8AG3DQ"
+          name="featureDelegation" invocationContracts="#_nIFh1miZEeifgdUU8AG3DQ">
+        <type xmi:type="types:TypeString" xmi:id="_i2DE8WiZEeifgdUU8AG3DQ"/>
+      </contracts>
+    </contractContainer>
+    <orchestration xmi:type="fprod:ProductionPlan" xmi:id="_jmLhUGiZEeifgdUU8AG3DQ">
+      <invocations xmi:id="_nIFh0GiZEeifgdUU8AG3DQ" invokedActivity="fcore:FactoryComponent platform:/plugin/org.eclipse.egf.emf.pattern.cdo/egf/EMF_Pattern_CDO.fcore#__UYu0D5JEeiGQ4OFxriD0Q">
+        <invocationContractContainer xmi:id="_nIFh0WiZEeifgdUU8AG3DQ">
+          <invocationContracts xmi:id="_nIFh0miZEeifgdUU8AG3DQ" factoryComponentContract="#_i2DE4GiZEeifgdUU8AG3DQ"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.eclipse.egf.emf.pattern.cdo/egf/EMF_Pattern_CDO.fcore#_2mehSseCEEeGKHKVgqEoOmg"/>
+          <invocationContracts xmi:id="_nIFh02iZEeifgdUU8AG3DQ" targetInvocationContract="#_zt8PEmiZEeifgdUU8AG3DQ"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.eclipse.egf.emf.pattern.cdo/egf/EMF_Pattern_CDO.fcore#_2mehSteCEEeGKHKVgqEoOmg"/>
+          <invocationContracts xmi:id="_nIFh1GiZEeifgdUU8AG3DQ" factoryComponentContract="#_i2DE7GiZEeifgdUU8AG3DQ"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.eclipse.egf.emf.pattern.cdo/egf/EMF_Pattern_CDO.fcore#_2mehSt-CEEeGKHKVgqEoOmg"/>
+          <invocationContracts xmi:id="_nIFh1WiZEeifgdUU8AG3DQ" factoryComponentContract="#_i2DE7miZEeifgdUU8AG3DQ"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.eclipse.egf.emf.pattern.cdo/egf/EMF_Pattern_CDO.fcore#_2yX1xkOFqEeGFJ5Qac-Dqzg"/>
+          <invocationContracts xmi:id="_nIFh1miZEeifgdUU8AG3DQ" factoryComponentContract="#_i2DE8GiZEeifgdUU8AG3DQ"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.eclipse.egf.emf.pattern.cdo/egf/EMF_Pattern_CDO.fcore#_22GHaIOFqEeGFJ5Qac-Dqzg"/>
+        </invocationContractContainer>
+      </invocations>
+      <invocations xmi:id="_zt8PEGiZEeifgdUU8AG3DQ" invokedActivity="#_fRRLIB_3EeCuNfuGnuOPDw">
+        <invocationContractContainer xmi:id="_zt8PEWiZEeifgdUU8AG3DQ">
+          <invocationContracts xmi:id="_zt8PEmiZEeifgdUU8AG3DQ" sourceInvocationContract="#_nIFh02iZEeifgdUU8AG3DQ"
+              invokedContract="#_l7ckIB_3EeCuNfuGnuOPDw"/>
+          <invocationContracts xmi:id="_zt8PE2iZEeifgdUU8AG3DQ" factoryComponentContract="#_i2DE6miZEeifgdUU8AG3DQ"
+              invokedContract="#_l7ckIh_3EeCuNfuGnuOPDw"/>
+          <invocationContracts xmi:id="_zt8PFGiZEeifgdUU8AG3DQ" factoryComponentContract="#_i2DE5miZEeifgdUU8AG3DQ"
+              invokedContract="#_l7ckJB_3EeCuNfuGnuOPDw"/>
+        </invocationContractContainer>
+      </invocations>
+    </orchestration>
+  </fcore:FactoryComponent>
 </xmi:XMI>

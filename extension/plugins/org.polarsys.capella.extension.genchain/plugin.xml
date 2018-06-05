@@ -12,6 +12,7 @@
 
  	<extension point="org.eclipse.egf.portfolio.genchain.elements">
     	<helper id="capella.emf.generation" class="org.polarsys.capella.extension.genchain.CapellaGenerationExtension"/>
+    	<helper id="capella.cdo.generation" class="org.polarsys.capella.extension.genchain.CapellaCdoGenerationExtension"/>
     </extension>
   <extension
         point="org.eclipse.egf.core.fcore">
