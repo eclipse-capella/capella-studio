@@ -276,6 +276,8 @@ location orbit-R20140525021250 "http://download.eclipse.org/tools/orbit/download
 
 location EGF "http://download.eclipse.org/egf/updates/1.5.1/neon" {
 	org.eclipse.egf.feature.group lazy
+	org.eclipse.egf.source.feature.group lazy
 	org.eclipse.egf.sdk.feature.group lazy
+	org.eclipse.egf.sdk.source.feature.group lazy
 }
 

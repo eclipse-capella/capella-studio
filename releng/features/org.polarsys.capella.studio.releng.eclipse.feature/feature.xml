@@ -180,8 +180,17 @@
          version="0.0.0"/>
 
    <includes
+         id="org.eclipse.egf.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.sdk.source"
+         version="0.0.0"/>
+         
+   <includes
          id="org.eclipse.egit"
          version="0.0.0"/>
+         
 
    <includes
          id="org.eclipse.emf"
