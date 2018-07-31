@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -18,7 +18,7 @@ import org.eclipse.core.resources.ResourcesPlugin;
  */
 public class UIProjectManager {
 	
-	public static UIProjectManager INSTANCE = new UIProjectManager();
+	public static final UIProjectManager INSTANCE = new UIProjectManager();
 	
 	private IProject uiProject = null;
 	
@@ -30,13 +30,12 @@ public class UIProjectManager {
 		uiProject = projects;
 	}
 	
-	public void registerUIProject(String name) throws Exception{
+	public void registerUIProject(String name) {
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(name);
-		if (project != null )
-			uiProject = project;
-		else
-			// TODO: Create an appropriate exception
-			throw new Exception();
+		if (project == null ) {
+                  	throw new IllegalStateException();
+                }
+		uiProject = project;
 	}
 
 	public IProject getUiProject() {

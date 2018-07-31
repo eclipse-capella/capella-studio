@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -31,28 +31,29 @@ public class InitUIGeneratorTask implements ITaskProduction {
 
 	public void preExecute(ITaskProductionContext productionContext,
 			IProgressMonitor monitor) throws InvocationException {
+		//nothing to do
 	}
 
 	public void doExecute(ITaskProductionContext productionContext,
 			IProgressMonitor monitor) throws InvocationException {
 		
-		EMFDomain genmodel_domain = productionContext.getInputValue(GeneratorContracts.Generated_Genmodel, EMFDomain.class);
-		EMFDomain ecore_domain = productionContext.getInputValue(GeneratorContracts.Generated_Ecore, EMFDomain.class);
+		EMFDomain genmodelDomain = productionContext.getInputValue(GeneratorContracts.Generated_Genmodel, EMFDomain.class);
+		EMFDomain ecoreDomain = productionContext.getInputValue(GeneratorContracts.Generated_Ecore, EMFDomain.class);
 		
-		if (genmodel_domain != null && ecore_domain != null)
+		if (genmodelDomain != null && ecoreDomain != null)
 		{
 			GenPackage genPackage = null;
-			EList<Object> genmodel_c = genmodel_domain.getContent();
-			if (genmodel_c != null && genmodel_c.size() > 0)
+			EList<Object> genmodelC = genmodelDomain.getContent();
+			if (genmodelC != null && !genmodelC.isEmpty())
 			{
-				GenModel genModel = (GenModel) genmodel_c.get(0);
+				GenModel genModel = (GenModel) genmodelC.get(0);
 				genPackage = genModel.getGenPackages().get(0);
 			}
 
 			EPackage ePackage = null;
-			EList<Object> ecore_c = ecore_domain.getContent();
-			if (ecore_c != null && ecore_c.size() > 0)
-				ePackage = (EPackage) ecore_c.get(0);
+			EList<Object> ecoreC = ecoreDomain.getContent();
+			if (ecoreC != null && !ecoreC.isEmpty())
+				ePackage = (EPackage) ecoreC.get(0);
 
 			GenmodelUtility.getInstance().load(ePackage, genPackage);
 		} 
@@ -70,6 +71,7 @@ public class InitUIGeneratorTask implements ITaskProduction {
 
 	public void postExecute(ITaskProductionContext productionContext,
 			IProgressMonitor monitor) throws InvocationException {
+		//nothing to do
 	}
 
 }

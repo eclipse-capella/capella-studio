@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -44,7 +44,7 @@ public class GenerationCreatingCommand extends RecordingCommand implements Exten
 
 	@Override
 	protected void doExecute() {
-		if (uriList != null && uriList.size() > 0) {
+		if (uriList != null && !uriList.isEmpty()) {
 			String project = gc.eResource().getURI().segment(1);
 			for (URI uri : uriList) {
 				GenerationElement feature1 = createNewElement(uri, project);
@@ -71,7 +71,6 @@ public class GenerationCreatingCommand extends RecordingCommand implements Exten
 
 		String name = uri.trimFileExtension().lastSegment();
 		context.put(CONTEXT_CURRENT_PROJECT_NAME, project);
-		// context.put(CONTEXT_PROJECT_NAME, bundleName);
 		context.put(CONTEXT_MODEL_NAME, name);
 
 		Map<EAttribute, String> defaultProperties = extension.getDefaultProperties(context);

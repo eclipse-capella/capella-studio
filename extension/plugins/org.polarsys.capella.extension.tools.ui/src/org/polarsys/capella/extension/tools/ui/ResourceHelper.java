@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -15,11 +15,11 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Stack;
-
+import java.util.Deque;
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
@@ -33,7 +33,6 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.core.runtime.Status;
 import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
@@ -62,12 +61,13 @@ public class ResourceHelper {
 	public static boolean checkResource(String path) {
 		final String projectName = getProjectName(path);
 		final IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(projectName);
-		if (project.exists() == false) {
+		if (!project.exists()) {
 			PlatformUI.getWorkbench().getDisplay().syncExec(new Runnable() {
 				public void run() {
 					try {
 						createProject(project, true);
 					} catch (Exception e) {
+						e.printStackTrace();
 					}
 				}
 			});
@@ -76,12 +76,13 @@ public class ResourceHelper {
 		final String outputPath = getOutputPath(projectName, path);
 		if (outputPath.length() > 0) {
 			final IFolder folder = project.getFolder(new Path(outputPath));
-			if (folder.exists() == false) {
+			if (!folder.exists()) {
 				PlatformUI.getWorkbench().getDisplay().syncExec(new Runnable() {
 					public void run() {
 						try {
 							createFolder(folder, NULL_PROGRESS_MONITOR);
 						} catch (Exception e) {
+							e.printStackTrace();
 						}
 					}
 				});
@@ -95,26 +96,21 @@ public class ResourceHelper {
 	/*
 	 * 
 	 */
-	private static IStatus makeFilesWritable(IFile[] files, Object display_p) {
-		IStatus result = Status.CANCEL_STATUS;
+	private static IStatus makeFilesWritable(IFile[] files, Object display) {
 
 		// Resulting shell.
 		Shell shell = null;
 		// Given display object must indeed be a display.
-		if (display_p instanceof Display) {
+		if (display instanceof Display) {
 			// Get shell from display.
-			shell = ((Display) display_p).getActiveShell();
+			shell = ((Display) display).getActiveShell();
 		}
 		// If a shell is active, use it to make sure an end-user confirmation is
 		// performed (as needed).
 		// Try validate prompt behavior otherwise.
 		Object context = (null == shell) ? IWorkspace.VALIDATE_PROMPT : shell;
 		// Check given files.
-		result = ResourcesPlugin.getWorkspace().validateEdit(files, context);
-		if (!result.isOK()) {
-			System.out.println(result.getMessage());
-		}
-		return result;
+		return ResourcesPlugin.getWorkspace().validateEdit(files, context);
 
 	}
 
@@ -162,11 +158,9 @@ public class ResourceHelper {
 	private static String getOutputPath(String projectName, String outputDirectoryPath) {
 		StringBuilder builder = new StringBuilder();
 		for (String s : outputDirectoryPath.split(SLASH)) {
-			if (s != null && s.length() > 0) {
-				if (s.equals(projectName) == false) {
-					builder.append(SLASH);
-					builder.append(s);
-				}
+			if (s != null && ! s.isEmpty() && !s.equals(projectName)) {
+				builder.append(SLASH);
+				builder.append(s);
 			}
 		}
 		return builder.toString();
@@ -182,17 +176,17 @@ public class ResourceHelper {
 		return null;
 	}
 
-	private static void createFolder(IFolder folder, IProgressMonitor monitor) throws Exception {
-		Stack<IFolder> folderStack = getStack(folder);
-		while (folderStack.isEmpty() == false) {
+	private static void createFolder(IFolder folder, IProgressMonitor monitor) throws CoreException {
+		Deque<IFolder> folderStack = getStack(folder);
+		while (!folderStack.isEmpty()) {
 			IFolder newFolder = folderStack.pop();
 			newFolder.create(true, true, monitor);
 		}
 	}
 
-	private static Stack<IFolder> getStack(IFolder folder) {
-		Stack<IFolder> stack = new Stack<IFolder>();
-		if (folder != null && folder.exists() == false) {
+	private static Deque<IFolder> getStack(IFolder folder) {
+		Deque<IFolder> stack = new ArrayDeque<IFolder>();
+		if (folder != null && !folder.exists()) {
 			stack.push(folder);
 			IContainer parent = folder.getParent();
 			if (parent instanceof IFolder) {
@@ -207,7 +201,7 @@ public class ResourceHelper {
 	// https://bugs.eclipse.org/bugs/show_bug.cgi?id=188795
 
 	@SuppressWarnings("restriction")
-	private static IProject createProject(IProject project, boolean pde) throws CoreException, JavaModelException {
+	private static IProject createProject(IProject project, boolean pde) throws CoreException {
 		project.create(null);
 		project.open(null);
 		if (pde) {
@@ -219,7 +213,6 @@ public class ResourceHelper {
 			modelFolder.create(true, true, null);
 			createManifest(metaFolder, project.getName());
 			createBuildProperties(project);
-			// generateActivator(project);
 		} else {
 			setupJava(project, false);
 		}
@@ -228,7 +221,7 @@ public class ResourceHelper {
 
 	public static IProject createProject(String name) {
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(name);
-		if (project.exists() == false) {
+		if (!project.exists()) {
 			try {
 				return createProject(project, true);
 			} catch (JavaModelException e) {
@@ -253,7 +246,7 @@ public class ResourceHelper {
 	}
 
 	@SuppressWarnings("restriction")
-	private static void setupJava(IProject project, boolean pde) throws CoreException, JavaModelException {
+	private static void setupJava(IProject project, boolean pde) throws CoreException {
 		addNatureToProject(project, JavaCore.NATURE_ID, null);
 		IFolder srcFolder = project.getFolder("src");
 		srcFolder.create(true, true, null);
@@ -276,22 +269,20 @@ public class ResourceHelper {
 
 	private static void createManifest(IFolder metaFolder, String name) throws CoreException {
 		IFile manifest = metaFolder.getFile("MANIFEST.MF");
-		StringBuffer contents = new StringBuffer();
+		StringBuilder contents = new StringBuilder();
 		contents.append("Manifest-Version: 1.0\n");
 		contents.append("Bundle-ManifestVersion: 2\n");
 		contents.append("Bundle-Name: " + name + "\n");
 		contents.append("Bundle-SymbolicName: " + name + ";singleton:=true\n");
 		contents.append("Bundle-Version: 1.0.0.qualifier\n");
 		contents.append("Bundle-RequiredExecutionEnvironment: J2SE-1.5\n");
-		// contents.append("Bundle-Activator: "
-		// + metaFolder.getProject().getName() + ".Activator");
 		contents.append("\n");
 		manifest.create(new ByteArrayInputStream(contents.toString().getBytes()), false, null);
 	}
 
 	private static void createBuildProperties(IProject project) throws CoreException {
 		IFile buildProperties = project.getFile(BUILD_PROPERTIES);
-		StringBuffer contents = new StringBuffer();
+		StringBuilder contents = new StringBuilder();
 		contents.append("source.. = src/\n");
 		contents.append("output.. = bin/\n");
 		contents.append("bin.includes = META-INF/,\\\n");
@@ -301,7 +292,7 @@ public class ResourceHelper {
 	}
 
 	public static void addNewSourceFolder(IProject project, IFolder sourceFolder, IProgressMonitor monitor) throws CoreException, IOException {
-		if (sourceFolder.exists() == false) {
+		if (!sourceFolder.exists()) {
 			sourceFolder.create(true, true, monitor);
 		}
 
@@ -328,7 +319,7 @@ public class ResourceHelper {
 		while (line != null) {
 			builder.append(line);
 			if (line.startsWith(PREFIX)) {
-				if (line.endsWith(SUFFIX) == false) {
+				if (!line.endsWith(SUFFIX)) {
 					builder.append(SUFFIX);
 					builder.append(NEW_LINE);
 					builder.append(sourceFolder.getName());
@@ -346,6 +337,10 @@ public class ResourceHelper {
 		file.delete(true, monitor);
 		file.create(new ByteArrayInputStream(builder.toString().getBytes()), true, monitor);
 
+	}
+
+	private ResourceHelper() {
+		super();
 	}
 
 }

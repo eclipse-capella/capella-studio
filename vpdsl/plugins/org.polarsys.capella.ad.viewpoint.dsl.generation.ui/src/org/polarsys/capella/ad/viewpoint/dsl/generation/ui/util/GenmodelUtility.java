@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -35,8 +35,8 @@ public class GenmodelUtility {
 
 	protected static GenmodelUtility INSTANCE = null;
 	
-	private static GenPackage _genPackage;
-	private static EPackage   _generatedEPackage;
+	private static GenPackage genPackage;
+	private static EPackage   generatedEPackage;
 	
 	
 	public static GenmodelUtility getInstance(){
@@ -47,35 +47,35 @@ public class GenmodelUtility {
 	}
 	
 	public void load() throws ViewpointResourceException {
-		_generatedEPackage = ViewpointResourceProviderRegistry.getInstance().getEcoreProvider().getEPackage();
-		_genPackage = ViewpointResourceProviderRegistry.getInstance().getGenmodelProvider().getGenPackage();
+		generatedEPackage = ViewpointResourceProviderRegistry.getInstance().getEcoreProvider().getEPackage();
+		genPackage = ViewpointResourceProviderRegistry.getInstance().getGenmodelProvider().getGenPackage();
 	}
 	
 	public void load(EPackage ePackage, GenPackage genPackage) {
-		_generatedEPackage = ePackage;
-		_genPackage = genPackage;
+		generatedEPackage = ePackage;
+		this.genPackage = genPackage;
 	}
 	
 	public void unload(){
-		_genPackage = null;
-		_generatedEPackage = null;
+		genPackage = null;
+		generatedEPackage = null;
 	}
 	
 	public String getModelPluginID(){
-		return _genPackage.getGenModel().getModelPluginID();
+		return genPackage.getGenModel().getModelPluginID();
 	}
 	
 	public String getPackageAccessorName(){
-		return _genPackage.getPackageInterfaceName();
+		return genPackage.getPackageInterfaceName();
 	}
 	
 	public String getPackageImport(){
-		return _genPackage.getQualifiedPackageInterfaceName();
+		return genPackage.getQualifiedPackageInterfaceName();
 	}
 	
 	public GenEnum getGenEnum(String name){
-		for (GenEnum iGenEnum : _genPackage.getGenEnums()) 
-			if (iGenEnum.getName().toLowerCase().equals(name.toLowerCase()))
+		for (GenEnum iGenEnum : genPackage.getGenEnums()) 
+			if (iGenEnum.getName().equalsIgnoreCase(name))
 				return iGenEnum;
 		
 		return null;
@@ -101,43 +101,42 @@ public class GenmodelUtility {
 		return genClass.getQualifiedInterfaceName();
 	}
 	
-	public String getFeatureContainerAccessorName(AbstractFeature feature) throws Exception{
+	public String getFeatureContainerAccessorName(AbstractFeature feature) {
 		if (feature == null)
-			throw new Exception();
+			throw new IllegalStateException();
 		
 		// Get the generated GenClass 
 		GenClass genClass = getFeatureContainerGenClass(feature);
 		return (genClass != null ? genClass.getClassifierAccessorName() : null);
 	}
 	
-	public String getFeatureContainerLiteral(AbstractFeature feature) throws Exception{
+	public String getFeatureContainerLiteral(AbstractFeature feature) {
 		if (feature == null)
-			throw new Exception();
+			throw new IllegalStateException();
 		
 		// Get the generated GenClass 
 		GenClass genClass = getFeatureContainerGenClass(feature);
 		
-		return (genClass != null ? _genPackage.getPackageInterfaceName()
+		return (genClass != null ? genPackage.getPackageInterfaceName()
 									+".Literals."
-									+_genPackage.getClassifierID(genClass)  
+									+genPackage.getClassifierID(genClass)  
 								 : null);
 	}
 	
-	private GenClass getFeatureContainerGenClass(AbstractFeature feature) throws Exception{
+	private GenClass getFeatureContainerGenClass(AbstractFeature feature) {
 		if (feature == null)
-			throw new Exception();
+			throw new IllegalStateException();
 		
 		Class clazz = (Class)feature.eContainer();
 		// Get the generated EClass from the VPDesc clazz Class
 		EClass eClass = getEquivalent(clazz);
 		// Get the generated GenClass 
-		GenClass genClass = getEquivalent(eClass);
-		return genClass;
+		return getEquivalent(eClass);
 	}
 	
-	public String getFeatureShortAccessorName(AbstractFeature feature) throws Exception{
+	public String getFeatureShortAccessorName(AbstractFeature feature) {
 		if (feature == null){
-			throw new Exception();
+			throw new IllegalStateException();
 		}
 		String featureName = feature.getName();
 		Class clazz = (Class)feature.eContainer();
@@ -148,11 +147,11 @@ public class GenmodelUtility {
 		return (genFeature != null ? genFeature.getAccessorName() : null);
 	}
 	
-	public String getFeatureLongAccessorName(NamedElement feature) throws Exception{
+	public String getFeatureLongAccessorName(NamedElement feature) {
 		if (feature == null || 
 				! ((feature instanceof Attribute) || 
 				  (feature instanceof AbstractAssociation))){
-			throw new Exception();
+			throw new IllegalStateException();
 		}
 		String featureName = feature.getName();
 		Class clazz = (Class)feature.eContainer();
@@ -163,7 +162,7 @@ public class GenmodelUtility {
 		return (genFeature != null ? genFeature.getFeatureAccessorName() : null);
 	}
 	
-	public String getFeatureETypeName(NamedElement feature) throws Exception{
+	public String getFeatureETypeName(NamedElement feature) {
 		if (feature == null || 
 				! (feature instanceof AbstractAssociation)){
 			return null;
@@ -178,7 +177,7 @@ public class GenmodelUtility {
 		return (eStructuralFeature instanceof EReference? eStructuralFeature.getEType().getName() : null);
 	}
 	
-	public String getFeatureETypeEPackageImport(NamedElement feature) throws Exception{
+	public String getFeatureETypeEPackageImport(NamedElement feature) {
 		if (feature == null || 
 				! (feature instanceof AbstractAssociation)){
 			return null;
@@ -197,14 +196,14 @@ public class GenmodelUtility {
 		if (! eClass.getEPackage().getNsURI().equals(eTypePackageNsURI)){
 			// We deal here with an external EClass (a target application EClass)
 			// We search this eClass in the referenced GenPackages in the GenModel
-			for (GenPackage iGenPackage : _genPackage.getGenModel().getAllUsedGenPackagesWithClassifiers()) {
+			for (GenPackage iGenPackage : genPackage.getGenModel().getAllUsedGenPackagesWithClassifiers()) {
 				if (iGenPackage.getEcorePackage().getNsURI().equals(eTypePackageNsURI)){
 					eTypeGenPackage = iGenPackage;
 					break;
 				}
 			}
 		}else{
-			eTypeGenPackage = _genPackage;
+			eTypeGenPackage = genPackage;
 		}
 		
 		return (eTypeGenPackage != null ? eTypeGenPackage.getInterfacePackageName()
@@ -213,7 +212,7 @@ public class GenmodelUtility {
 									  : null);
 	}
 	
-	public String getFeatureETypeLiteral(NamedElement feature) throws Exception{
+	public String getFeatureETypeLiteral(NamedElement feature){
 		if (feature == null || 
 				! (feature instanceof AbstractAssociation)){
 			return null;
@@ -233,7 +232,7 @@ public class GenmodelUtility {
 		if (! eClass.getEPackage().getNsURI().equals(eTypePackageNsURI)){
 			// We deal here with an external EClass (a target application EClass)
 			// We search this eClass in the referenced GenPackages in the GenModel
-			for (GenPackage iGenPackage : _genPackage.getGenModel().getAllUsedGenPackagesWithClassifiers()) {
+			for (GenPackage iGenPackage : genPackage.getGenModel().getAllUsedGenPackagesWithClassifiers()) {
 				if (iGenPackage.getEcorePackage().getNsURI().equals(eTypePackageNsURI)){
 					for (GenClass genClass : iGenPackage.getGenClasses()) {
 						EClass clazzz = genClass.getEcoreClass();
@@ -247,7 +246,7 @@ public class GenmodelUtility {
 			}
 		}else{
 			eTypeGenClass = getEquivalent(eType);
-			eTypeGenPackage = _genPackage;
+			eTypeGenPackage = genPackage;
 		}
 		
 		return (eTypeGenClass != null ? eTypeGenPackage.getPackageInterfaceName()
@@ -271,16 +270,15 @@ public class GenmodelUtility {
 	
 	public EClass getEquivalent(Class clazz){
 		String className = clazz.getName();
-		return (EClass)_generatedEPackage.getEClassifier(className);
+		return (EClass)generatedEPackage.getEClassifier(className);
 	}
 
 	public GenClass getEquivalent(EClass eClass){
 		String eClassPackageNsURI = eClass.getEPackage().getNsURI();
 		String className = eClass.getName();
-		for (GenClass genClass : _genPackage.getGenClasses()) 
+		for (GenClass genClass : genPackage.getGenClasses()) 
 		{
 			EClass clazz = genClass.getEcoreClass();
-//			genClass.getItemIconFileName();
 			if (clazz.getName().equals(className) && clazz.getEPackage().getNsURI().equals(eClassPackageNsURI))
 				return genClass;
 		}

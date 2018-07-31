@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -46,12 +46,12 @@ public class CapellaMetamodelHelper {
 
 	public static boolean isCapellaGenClass(GenClass genClass) {
 		EClass ecoreClass = genClass.getEcoreClass();
-		EClass modelElement = (EClass) ModellingcorePackage.eINSTANCE.getModelElement();
+		EClass modelElement = ModellingcorePackage.eINSTANCE.getModelElement();
 		return contains(ecoreClass.getEAllSuperTypes(), modelElement);
 	}
 
 	public static List<GenClass> getCapellaGenClasses(EList<GenClass> allGenClasses) {
-		List<GenClass> result = new ArrayList<GenClass>(allGenClasses.size());
+		List<GenClass> result = new ArrayList<>(allGenClasses.size());
 		for (GenClass gen : allGenClasses) {
 			if (isCapellaGenClass(gen))
 				result.add(gen);
@@ -68,4 +68,9 @@ public class CapellaMetamodelHelper {
 		}
 		return false;
 	}
+
+	private CapellaMetamodelHelper() {
+		super();
+	}
+	
 }

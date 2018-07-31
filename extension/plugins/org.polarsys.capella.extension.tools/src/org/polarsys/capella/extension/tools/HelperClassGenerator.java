@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -33,7 +33,7 @@ import org.eclipse.jdt.core.dom.Modifier;
  */
 public class HelperClassGenerator {
 
-	public static final List<String> SUPPORTED_TYPES = new ArrayList<String>();
+	public static final List<String> SUPPORTED_TYPES = new ArrayList<>();
 
 	private HelperClassGenerator() {
 	}
@@ -124,7 +124,7 @@ public class HelperClassGenerator {
 	}
 
 	public static List<HelperInfo> getInfos(EPackage pack) {
-		Set<String> names = new HashSet<String>();
+		Set<String> names = new HashSet<>();
 		for (EClassifier classifier : pack.getEClassifiers()) {
 			if (classifier instanceof EClass) {
 				EClass eclass = (EClass) classifier;
@@ -133,7 +133,7 @@ public class HelperClassGenerator {
 				}
 			}
 		}
-		List<HelperInfo> result = new ArrayList<HelperInfo>();
+		List<HelperInfo> result = new ArrayList<>();
 		for (String name : infos.keySet()) {
 			if (names.contains(name)) {
 				result.add(infos.get(name));
@@ -188,6 +188,6 @@ public class HelperClassGenerator {
 
 	// We now care about order, Info objects are used to build a kind of emf
 	// switch
-	private static final Map<String, HelperInfo> infos = new LinkedHashMap<String, HelperInfo>();
+	private static final Map<String, HelperInfo> infos = new LinkedHashMap<>();
 
 }

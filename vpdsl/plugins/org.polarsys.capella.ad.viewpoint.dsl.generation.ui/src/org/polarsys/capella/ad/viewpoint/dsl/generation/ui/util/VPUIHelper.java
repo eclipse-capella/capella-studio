@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2017 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -48,8 +48,8 @@ public class VPUIHelper {
 	public static boolean generateRichTextForUI(EList<UI> userIntfs) {
 		boolean result = false;
 		for (UI ui : userIntfs) {
-			EList<UIContainer> ui_Containers = ui.getUI_Containers();
-			result = generateRichTextForUI_Containers(ui_Containers);
+			EList<UIContainer> uiContainers = ui.getUI_Containers();
+			result = generateRichTextForUI_Containers(uiContainers);
 			if (result){
 				break;
 			}
@@ -59,12 +59,12 @@ public class VPUIHelper {
 
 	/**
 	 * Look up of first field in the UI containers typed with richtext
-	 * @param ui_Containers containers
+	 * @param uiContainers containers
 	 * @return true if one field of the UI description is typed with richtext type
 	 */
-	public static boolean generateRichTextForUI_Containers(EList<UIContainer> ui_Containers){
+	public static boolean generateRichTextForUI_Containers(EList<UIContainer> uiContainers){
 		boolean result = false;
-		for (UIContainer uiContainer : ui_Containers) {
+		for (UIContainer uiContainer : uiContainers) {
 			result = generateRichTextForUI_Container(uiContainer);
 			if (result){
 				break;
@@ -80,8 +80,8 @@ public class VPUIHelper {
 	 */
 	public  static boolean generateRichTextForUI_Container(UIContainer uiContainer) {
 		boolean result = false;
-		EList<UIField> ui_fields = uiContainer.getUI_fields();
-		result = generateRichTextForUI_Fields(ui_fields);
+		EList<UIField> uiFields = uiContainer.getUI_fields();
+		result = generateRichTextForUI_Fields(uiFields);
 		if (!result){
 			result = generateRichTextForUI_Containers(uiContainer.getSubContainers());
 		}
@@ -91,12 +91,12 @@ public class VPUIHelper {
 
 	/**
 	 * Look up of first field typed with richtext
-	 * @param ui_fields fields
+	 * @param uiFields fields
 	 * @return true if one field of the UI Container is typed with richtext type
 	 */
-	public static boolean generateRichTextForUI_Fields(EList<UIField> ui_fields) {
+	public static boolean generateRichTextForUI_Fields(EList<UIField> uiFields) {
 		boolean result = false;
-		for (UIField uiField : ui_fields) {
+		for (UIField uiField : uiFields) {
 			result = generateRichTextForUI_Field(uiField);
 			if (result){
 				break;
@@ -115,12 +115,16 @@ public class VPUIHelper {
 	}
 
 	private static UIDescription getUIDescription(Viewpoint vp) {
-		EList<Aspect> vp_Aspects = vp.getVP_Aspects();
-		for (Aspect aspect : vp_Aspects) {
+		EList<Aspect> vpAspects = vp.getVP_Aspects();
+		for (Aspect aspect : vpAspects) {
 			if (aspect instanceof UIDescription){
 				return (UIDescription)aspect;
 			}
 		}
 		return null;
+	}
+
+	private VPUIHelper() {
+		super();
 	}
 }

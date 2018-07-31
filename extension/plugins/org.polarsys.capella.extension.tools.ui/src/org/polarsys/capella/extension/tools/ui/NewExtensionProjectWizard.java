@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -17,10 +17,8 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import org.eclipse.core.resources.IProject;
-import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.egf.portfolio.genchain.generationChain.EmfGeneration;
 import org.eclipse.egf.portfolio.genchain.generationChain.GenerationChain;
@@ -51,8 +49,8 @@ import org.polarsys.kitalpha.emde.extension.utils.ExtensionAnnotationsHelper;
  * 
  */
 public abstract class NewExtensionProjectWizard extends Wizard implements INewWizard {
-	protected final TransactionalEditingDomain EDITING_DOMAIN = TransactionalEditingDomain.Factory.INSTANCE.createEditingDomain();
-	private final ResourceSet RESOURCE_SET = EDITING_DOMAIN.getResourceSet();
+	protected final TransactionalEditingDomain editingDomain = TransactionalEditingDomain.Factory.INSTANCE.createEditingDomain();
+	private final ResourceSet resourceSet = editingDomain.getResourceSet();
 	protected NewExtensionProjectPage page;
 	protected ISelection selection;
 	private static final List<String> ECORE_VIEWPOINTS = new ArrayList<String>();
@@ -79,8 +77,6 @@ public abstract class NewExtensionProjectWizard extends Wizard implements INewWi
 			public void run(IProgressMonitor monitor) throws InvocationTargetException {
 				try {
 					doFinish(fileName, ecorePath, monitor);
-				} catch (CoreException e) {
-					throw new InvocationTargetException(e);
 				} finally {
 					monitor.done();
 				}
@@ -105,9 +101,9 @@ public abstract class NewExtensionProjectWizard extends Wizard implements INewWi
 	 * @param ecorePath
 	 */
 
-	private void doFinish(final String projectName, final String ecorePath, final IProgressMonitor monitor) throws CoreException {
+	private void doFinish(final String projectName, final String ecorePath, final IProgressMonitor monitor)  {
 		// create a sample file
-		EDITING_DOMAIN.getCommandStack().execute(new RecordingCommand(EDITING_DOMAIN) {
+		editingDomain.getCommandStack().execute(new RecordingCommand(editingDomain) {
 
 			@Override
 			protected void doExecute() {
@@ -135,14 +131,14 @@ public abstract class NewExtensionProjectWizard extends Wizard implements INewWi
 		String[] split = projectName.split("\\.");
 		if (split == null || split.length == 0) 
 			return projectName;
-			return split[split.length - 1];
+		return split[split.length - 1];
 	}
 
 	private void generateDiagrams(IProject project, String fileName, final List<Resource> ecoreResources, final Resource genChainResource) {
 	}
 
 	private Resource getGenChainResource(IProject project, String fileName, List<Resource> ecoreResources) {
-		Resource resource = RESOURCE_SET.createResource(URI.createPlatformResourceURI(project.getName() + "/model/" + fileName + ".generationchain", false));
+		Resource resource = resourceSet.createResource(URI.createPlatformResourceURI(project.getName() + "/model/" + fileName + ".generationchain", false));
 		GenerationChain root = GenerationChainFactory.eINSTANCE.createGenerationChain();
 		resource.getContents().add(root);
 
@@ -161,7 +157,7 @@ public abstract class NewExtensionProjectWizard extends Wizard implements INewWi
 
 			addGenerationCommands(chain, uriList, command);
 
-			RecordingCommand command3 = new RecordingCommand(EDITING_DOMAIN) {
+			RecordingCommand command3 = new RecordingCommand(editingDomain) {
 
 				@Override
 				protected void doExecute() {
@@ -172,7 +168,7 @@ public abstract class NewExtensionProjectWizard extends Wizard implements INewWi
 			};
 			command.append(command3);
 
-			EDITING_DOMAIN.getCommandStack().execute(command);
+			editingDomain.getCommandStack().execute(command);
 
 		}
 		try {
@@ -202,16 +198,16 @@ public abstract class NewExtensionProjectWizard extends Wizard implements INewWi
 			StringTokenizer tokenizer = new StringTokenizer(ecorePath);
 			while (tokenizer.hasMoreTokens()) {
 				String uri = tokenizer.nextToken();
-				Resource resource = RESOURCE_SET.getResource(URI.createURI(uri), true);
+				Resource resource = resourceSet.getResource(URI.createURI(uri), true);
 				if (resource != null) {
 					result.add(resource);
 				}
 			}
 		} else {
-			Resource resource = RESOURCE_SET.createResource(URI.createPlatformResourceURI(project.getName() + "/model/" + resourceName + ".ecore", false));
-			EClass elementExtensionCls = (EClass) RESOURCE_SET.getEObject(URI.createURI("platform:/plugin/org.polarsys.kitalpha.emde/model/eMDE.ecore#//ElementExtension"), true);
-			EClass lcCls = (EClass) RESOURCE_SET.getEObject(URI.createURI("platform:/plugin/org.polarsys.capella.core.data.gen/model/LogicalArchitecture.ecore#//LogicalComponent"), true);
-			EClass namedElementCls = (EClass) RESOURCE_SET.getEObject(URI.createURI("platform:/plugin/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//NamedElement"), true);
+			Resource resource = resourceSet.createResource(URI.createPlatformResourceURI(project.getName() + "/model/" + resourceName + ".ecore", false));
+			EClass elementExtensionCls = (EClass) resourceSet.getEObject(URI.createURI("platform:/plugin/org.polarsys.kitalpha.emde/model/eMDE.ecore#//ElementExtension"), true);
+			EClass lcCls = (EClass) resourceSet.getEObject(URI.createURI("platform:/plugin/org.polarsys.capella.core.data.gen/model/LogicalArchitecture.ecore#//LogicalComponent"), true);
+			EClass namedElementCls = (EClass) resourceSet.getEObject(URI.createURI("platform:/plugin/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//NamedElement"), true);
 			EPackage ePackage = EcoreFactory.eINSTANCE.createEPackage();
 			ePackage.setName(resourceName);
 			ePackage.setNsPrefix(resourceName);

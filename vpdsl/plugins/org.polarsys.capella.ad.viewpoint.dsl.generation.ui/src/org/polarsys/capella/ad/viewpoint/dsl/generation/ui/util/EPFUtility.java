@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -24,19 +24,19 @@ public class EPFUtility {
 	
 	/******************************** CLASS AREA *************************************/
 	
-	private static Map<UIContainer, EPFUtility> EPFUtilityList = new HashMap<UIContainer, EPFUtility>();
+	private static final Map<UIContainer, EPFUtility> EPF_Utility_List = new HashMap<UIContainer, EPFUtility>();
 	
 	public static EPFUtility getEPFUtilityFor(UIContainer section){
-		EPFUtility result = EPFUtilityList.get(section);
+		EPFUtility result = EPF_Utility_List.get(section);
 		if (result == null){
 			result = new EPFUtility();
-			EPFUtilityList.put(section, result);
+			EPF_Utility_List.put(section, result);
 		}
 		return result;
 	}
 	
 	public static void unloadResources(){
-		EPFUtilityList.clear();
+		EPF_Utility_List.clear();
 	}
 	
 	/***************************** INSTANCE OBJECT AREA ********************************/
@@ -86,7 +86,7 @@ public class EPFUtility {
 	}
 	
 	public DataWidget getDataOf(UIField uiField){
-		if (generatedWidgetList.size() == 0)
+		if (generatedWidgetList.isEmpty())
 			return null;
 		
 		for (DataWidget iWidgetData : generatedWidgetList) 

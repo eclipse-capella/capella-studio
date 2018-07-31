@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -37,6 +37,7 @@ public class CapellaGenerationExtension extends DefaultEmfGenerationExtension {
 
 	private static final List<String> CONFLICT_LIST = Arrays.asList(new String[] { "basic.emf.generation", "emde.emf.generation" });
 
+	@Override
 	public List<String> getConflictingExtensions() {
 		return CONFLICT_LIST;
 	}
@@ -46,13 +47,14 @@ public class CapellaGenerationExtension extends DefaultEmfGenerationExtension {
 		return "Capella Emf Generation";
 	}
 
+	@Override
 	protected void computeDefaultProperties(Map<String, String> context) {
 		super.computeDefaultProperties(context);
 		String project = context.get(CONTEXT_CURRENT_PROJECT_NAME);
 		final String modelName = context.get(CONTEXT_MODEL_NAME);
 		if (project != null && modelName != null) {
 			String base = project;
-			int idx = project.lastIndexOf(".");
+			int idx = project.lastIndexOf('.');
 			if (idx != -1) {
 				base = project.substring(0, idx) + ".model";
 				project = base + '.' + modelName;
@@ -60,7 +62,7 @@ public class CapellaGenerationExtension extends DefaultEmfGenerationExtension {
 			properties.put(GenerationChainPackage.eINSTANCE.getEmfGeneration_BasePackage(), base.toLowerCase());
 			properties.put(GenerationChainPackage.eINSTANCE.getEmfGeneration_PluginName(), StringUtils.format1(project).toLowerCase());
 		}
-	};
+	}
 
 	@Override
 	public List<Substitution> getSubstitutions() {

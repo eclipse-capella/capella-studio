@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -44,7 +44,7 @@ public class PluginUtility {
 	 * @throws Exception
 	 */
 	public static void addPropertyTabsExtensions(String pluginName,
-												Map<String, Map<String, String>> propertyTabs) throws Exception{
+												Map<String, Map<String, String>> propertyTabs) throws CoreException{
 		// If the map is empty then there no extension to create
 		if (propertyTabs == null || propertyTabs.size() == 0)
 			return;
@@ -73,8 +73,8 @@ public class PluginUtility {
 	}
 	
 	public static IPluginElement createPropertyTabsExtensionElement(IPluginModelBase pluginModelBase, 
-															String contributor_ID,
-															Map<String, String> propertyTabAttributes) throws Exception{
+															String contributorID,
+															Map<String, String> propertyTabAttributes) throws CoreException{
 		// Extension creation
 		IPluginExtension extension = null;
 		try {
@@ -84,27 +84,25 @@ public class PluginUtility {
 		}
 		
 		if (extension == null)
-			throw new Exception();
+			throw new IllegalStateException();
 		
 		// propertyTabs Element element creation
 		IPluginElement propertyTabsElement = createPluginElement(extension, UIConstants.CONF_ELEMENT_PROPERTY_TABS);
 		
 		if (propertyTabsElement != null) {
             // Set it its id.
-            propertyTabsElement.setAttribute(UIConstants.ATTRIBUTE_CONTRIBUTOR_ID, contributor_ID);
+            propertyTabsElement.setAttribute(UIConstants.ATTRIBUTE_CONTRIBUTOR_ID, contributorID);
         }
 		
 		// propertyTab Element element creation
 		IPluginElement propertyTabElement = createPluginElement(propertyTabsElement, UIConstants.CONF_ELEMENT_PROPERTY_TAB);
 		
-		if (propertyTabElement != null) {
-			if (propertyTabAttributes != null && propertyTabAttributes.size() > 0){
-				Iterator<String> attributeIt = propertyTabAttributes.keySet().iterator(); 
-				while (attributeIt.hasNext()){
-					String attrName = attributeIt.next();
-					String attrValue = propertyTabAttributes.get(attrName);
-					propertyTabElement.setAttribute(attrName, attrValue);
-				}
+		if (propertyTabElement != null && propertyTabAttributes != null && !propertyTabAttributes.isEmpty()){
+			Iterator<String> attributeIt = propertyTabAttributes.keySet().iterator(); 
+			while (attributeIt.hasNext()){
+				String attrName = attributeIt.next();
+				String attrValue = propertyTabAttributes.get(attrName);
+				propertyTabElement.setAttribute(attrName, attrValue);
 			}
 		}
 		
@@ -158,6 +156,10 @@ public class PluginUtility {
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(pluginName);
 		IFile file = PDEProject.getManifest(project);
 		return file != null ? new WorkspacePluginModel(file, true) : null;
+	}
+
+	private PluginUtility() {
+		super();
 	}
 
 }

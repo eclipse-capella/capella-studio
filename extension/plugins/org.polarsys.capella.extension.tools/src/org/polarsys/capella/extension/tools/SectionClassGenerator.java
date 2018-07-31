@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -136,6 +136,10 @@ public class SectionClassGenerator {
 		root.appendChild(extension);
 		root.appendChild(doc.createTextNode("\n"));
 		return extension;
+	}
+
+	private SectionClassGenerator() {
+		super();
 	}
 
 }

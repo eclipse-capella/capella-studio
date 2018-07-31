@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -32,7 +32,7 @@ import org.polarsys.capella.extension.genchain.CapellaGenerationExtension;
  */
 public class CapellaTargetApplication extends TargetApplicationAdapter {
 	
-	public static CapellaTargetApplication INSTANCE = new CapellaTargetApplication();
+	public static final CapellaTargetApplication INSTANCE = new CapellaTargetApplication();
 	
 	private static final String CAPELLA_CORE_RESOURCE = "platform:/plugin/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore";//$NON-NLS-0$
 	
@@ -57,7 +57,7 @@ public class CapellaTargetApplication extends TargetApplicationAdapter {
 	 */
 	@Override
 	public List<EClass> getBasicSemanticElement() {
-		if (basicSemanticElement != null && basicSemanticElement.isEmpty() == false)
+		if (basicSemanticElement != null && !basicSemanticElement.isEmpty())
 			return basicSemanticElement;
 		
 		return Collections.emptyList();
@@ -84,7 +84,7 @@ public class CapellaTargetApplication extends TargetApplicationAdapter {
 		URI uri = URI.createURI(CAPELLA_CORE_RESOURCE);
 		Resource capellaCoreResource = set.getResource(uri, true);
 		
-		if (capellaCoreResource != null && capellaCoreResource.getContents().isEmpty() == false)
+		if (capellaCoreResource != null && !capellaCoreResource.getContents().isEmpty())
 		{
 			List<EClass> result = new ArrayList<EClass>();
 			EPackage capellaCorePkg = (EPackage) capellaCoreResource.getContents().get(0);
@@ -93,7 +93,7 @@ public class CapellaTargetApplication extends TargetApplicationAdapter {
 		}
 		else
 		{
-			throw new RuntimeException("Capella Target Applciation Core Resourse is not loaded");
+			throw new IllegalStateException("Capella Target Applciation Core Resourse is not loaded");
 		}
 	}
 }

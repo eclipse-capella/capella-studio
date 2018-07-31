@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2015 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -38,7 +38,7 @@ public class UISectionUtility {
 		if (classes != null && classes.size() == 1)
 		{
 			Class clazz = classes.get(0);
-			return clazz.getExtends() != null && clazz.getExtends().size() > 0;
+			return clazz.getExtends() != null && !clazz.getExtends().isEmpty();
 		}
 		
 		return false;
@@ -74,11 +74,17 @@ public class UISectionUtility {
 			for (Class clazz : classes) 
 			{
 				if (! result.contains(clazz))
+                                {
 					result.add(clazz);
+                                }
 			}
 		}
 		
 		return result;
+	}
+
+	private UISectionUtility() {
+		super();
 	}
 	
 }

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2017 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -39,9 +39,9 @@ import  org.polarsys.kitalpha.ad.viewpoint.dsl.generation.helper.pde.PDEUtility;
  */
 public class PluginXmlReporter implements PatternExecutionReporter {
 	
-	private static final String pluginEnd =   "</plugin>";
-	private static final String extensionEnd = "</extension>\n";
-	private static final String pluginBegin = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> \n" +
+	private static final String PLUGIN_END =   "</plugin>";
+	private static final String EXTENSION_END = "</extension>\n";
+	private static final String PLUGIN_BEGIN = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> \n" +
 						 					  "<?eclipse version=\"3.4\"?>\n" +
 						 					  "<plugin>\n";
 		
@@ -54,26 +54,26 @@ public class PluginXmlReporter implements PatternExecutionReporter {
 		ArrayList<IConfigurationElement> propertiesContributors = 
 			UIPropertiesExtensionsManager.getPropertiesContributors(targetApplication);
 
-		String propertiesSections ="";
+		StringBuilder propertiesSections = new StringBuilder();
 		
 		for (IConfigurationElement iPropertiesContributor : propertiesContributors) {
 			ArrayList<IConfigurationElement> contributors = UIPropertiesExtensionsManager.
 																	getContributors(iPropertiesContributor);
 			for (IConfigurationElement iContributor : contributors) {
 				String cID = UIPropertiesExtensionsManager.getContributorID(iContributor);
-				propertiesSections +=	
+				propertiesSections.append(	
 					"<extension\n" +
 					"	point=\"org.eclipse.ui.views.properties.tabbed.propertySections\">\n" +
 					"		<propertySections\n"+
-					"			contributorId=\""+ cID+ "\">\n";
+					"			contributorId=\"").append(cID).append("\">\n");
 
 				for (String iSection : sections) {
-					propertiesSections += iSection;
+					propertiesSections.append(iSection);
 				}
-				propertiesSections += "</propertySections>\n" + extensionEnd;
+				propertiesSections.append("</propertySections>\n").append(EXTENSION_END);
 			}
 		}
-		return propertiesSections;
+		return propertiesSections.toString();
 	}
 
 	@SuppressWarnings("unchecked")
@@ -82,11 +82,11 @@ public class PluginXmlReporter implements PatternExecutionReporter {
 		String targetApplication = VpDslConfigurationHelper.getTargetApplication(vp);
 		final IProject project = UIProjectManager.INSTANCE.getUiProject();
 		final String finalOutput = 
-			pluginBegin
+			PLUGIN_BEGIN
 			+	tabExtensions
 			+	computeSectionsOutput(targetApplication)
 			+	additionalExtensions
-			+pluginEnd;
+			+PLUGIN_END;
 		
 		try {
 			ArrayList<String> requiredBundles = new ArrayList<String>();
