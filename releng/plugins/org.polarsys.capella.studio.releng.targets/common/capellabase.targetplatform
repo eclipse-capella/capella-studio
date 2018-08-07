@@ -160,6 +160,8 @@ location sirius "http://download.eclipse.org/sirius/updates/stable/6.1.0-S201807
 	org.eclipse.sirius.aql.feature.group lazy
 	org.eclipse.sirius.aql.source.feature.group lazy
 	org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.jar lazy
+	org.eclipse.sirius.specifier.ide.ui.aql.feature.group lazy
+	
 }
 
 
