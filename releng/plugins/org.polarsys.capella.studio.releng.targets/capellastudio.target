@@ -194,7 +194,7 @@
       <unit id="org.eclipse.sirius.runtime.aql.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.runtime.aql.source.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.jar" version="0.0.0"/>
-      <repository id="sirius" location="http://download.eclipse.org/sirius/updates/stable/5.1.2-S20180518-120822/neon/"/>
+      <repository id="sirius" location="http://download.eclipse.org/sirius/updates/releases/5.1.2/neon/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.eef.sdk-feature.feature.group" version="0.0.0"/>
@@ -318,22 +318,22 @@
       <unit id="org.polarsys.kitalpha.ad.ui.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.model.common.share.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.runtime.feature.source.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-sdk" location="http://download.polarsys.org/kitalpha/updates/stable/sdk/1.2.1/"/>
+      <repository id="kitalpha-sdk" location="http://download.polarsys.org/kitalpha/updates/release/sdk/1.2.1/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.kitalpha.model.common.commands.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.model.common.commands.feature.source.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-core" location="http://download.polarsys.org/kitalpha/updates/stable/runtimecore/1.2.1/"/>
+      <repository id="kitalpha-core" location="http://download.polarsys.org/kitalpha/updates/release/runtimecore/1.2.1/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.core.egf.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.egf.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella-egf-patterns" location="http://download.polarsys.org/capella/core/updates/stable/1.2.1-S20180601-102021/org.polarsys.capella.egf.site/"/>
+      <repository id="capella-egf-patterns" location="http://download.polarsys.org/capella/core/updates/releases/1.2.1-R20180601-102021/org.polarsys.capella.egf.site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.rcp.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.rcp.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella" location="http://download.polarsys.org/capella/core/updates/stable/1.2.1-S20180601-102021/org.polarsys.capella.rcp.site/"/>
+      <repository id="capella" location="http://download.polarsys.org/capella/core/updates/releases/1.2.1-R20180601-102021/org.polarsys.capella.rcp.site/"/>
     </location>
   </locations>
 </target>
