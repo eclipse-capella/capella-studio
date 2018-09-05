@@ -114,6 +114,10 @@
           description="EMF Model Pattern" name="pattern.substitutions" invocationContracts="#_Ei09Ix_4EeCuNfuGnuOPDw">
         <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_l7ckJR_3EeCuNfuGnuOPDw"/>
       </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_43os0LETEeiOzsR6y-DSJg"
+          name="pattern.ids" invocationContracts="#_3_2wQLETEeiOzsR6y-DSJg">
+        <type xmi:type="pattern:TypePatternList" xmi:id="_580zQLETEeiOzsR6y-DSJg"/>
+      </contracts>
     </contractContainer>
     <orchestration xmi:type="fprod:ProductionPlan" xmi:id="_vtTfwB_3EeCuNfuGnuOPDw">
       <invocations xmi:id="_K5crwKMwEeCGDtMIGvx3Bw" name="Register Helper classes"
@@ -156,6 +160,8 @@
               invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.model.fcore#_uBRBMGmLEd-WDNIQ7luqOw"/>
           <invocationContracts xmi:id="_BKAnNB_4EeCuNfuGnuOPDw" sourceInvocationContract="#_Ei09JB_4EeCuNfuGnuOPDw"
               invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.model.fcore#_orkvdVjjEd-5FJ833LkcRA"/>
+          <invocationContracts xmi:id="_3_2wQLETEeiOzsR6y-DSJg" factoryComponentContract="#_43os0LETEeiOzsR6y-DSJg"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.emde.portfolio.emf.egf/egf/emf.gen.model.fcore#_f3H1sLETEeiOzsR6y-DSJg"/>
         </invocationContractContainer>
       </invocations>
     </orchestration>
@@ -167,7 +173,7 @@
         <type xmi:type="domain:TypeDomain" xmi:id="_i2DE4WiZEeifgdUU8AG3DQ"/>
       </contracts>
       <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_i2DE5miZEeifgdUU8AG3DQ"
-          description="EMF Model Pattern" name="pattern.substitutions" invocationContracts="#_zt8PFGiZEeifgdUU8AG3DQ">
+          description="EMF Model Pattern" name="pattern.substitutions">
         <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_i2DE52iZEeifgdUU8AG3DQ"/>
       </contracts>
       <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_i2DE6miZEeifgdUU8AG3DQ"
@@ -208,8 +214,16 @@
               invokedContract="#_l7ckIB_3EeCuNfuGnuOPDw"/>
           <invocationContracts xmi:id="_zt8PE2iZEeifgdUU8AG3DQ" factoryComponentContract="#_i2DE6miZEeifgdUU8AG3DQ"
               invokedContract="#_l7ckIh_3EeCuNfuGnuOPDw"/>
-          <invocationContracts xmi:id="_zt8PFGiZEeifgdUU8AG3DQ" factoryComponentContract="#_i2DE5miZEeifgdUU8AG3DQ"
-              invokedContract="#_l7ckJB_3EeCuNfuGnuOPDw"/>
+          <invocationContracts xmi:id="_zt8PFGiZEeifgdUU8AG3DQ" invokedContract="#_l7ckJB_3EeCuNfuGnuOPDw">
+            <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_KAQEgLEdEeiOzsR6y-DSJg">
+              <substitutions xmi:id="_Kf1jgLEdEeiOzsR6y-DSJg" replacedElement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_N_awYaF-EeCGDtMIGvx3Bw"/>
+              <substitutions xmi:id="_kQ_X8LEeEeiOzsR6y-DSJg" replacedElement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_AxLy0NZAEeGDE6svG499fQ"/>
+            </type>
+          </invocationContracts>
+          <invocationContracts xmi:id="_1RhhwLETEeiOzsR6y-DSJg" invokedContract="#_43os0LETEeiOzsR6y-DSJg">
+            <type xmi:type="pattern:TypePatternList" xmi:id="_9OqXcLETEeiOzsR6y-DSJg"
+                elements="pattern:Pattern platform:/plugin/org.eclipse.egf.emf.pattern/egf/EMF_Pattern.fcore#_PfcPQDG0Ed-kc8dEZsdm2w pattern:Pattern platform:/plugin/org.eclipse.egf.emf.pattern/egf/EMF_Pattern.fcore#_Pe_jUDG0Ed-kc8dEZsdm2w pattern:Pattern platform:/plugin/org.eclipse.egf.emf.pattern/egf/EMF_Pattern.fcore#_Pcm9tDG0Ed-kc8dEZsdm2w pattern:Pattern platform:/plugin/org.eclipse.egf.emf.pattern/egf/EMF_Pattern.fcore#_PdgVkDG0Ed-kc8dEZsdm2w pattern:Pattern platform:/plugin/org.eclipse.egf.emf.pattern.cdo/egf/EMF_Pattern_CDO.fcore#_Mu2cAOEzEeGFJ5Qac-Dqzg pattern:Pattern platform:/plugin/org.eclipse.egf.emf.pattern.cdo/egf/EMF_Pattern_CDO.fcore#_L1UzAOEzEeGFJ5Qac-Dqzg"/>
+          </invocationContracts>
         </invocationContractContainer>
       </invocations>
     </orchestration>

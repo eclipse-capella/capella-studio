@@ -7,7 +7,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: _tILWoGr3EeiQraq6seMfoQ
 Runtime-Version: 2.2.0.201706152316
-Save-Time: 6/8/18 10:51 AM
+Save-Time: 9/5/18 5:44 PM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
@@ -44,7 +44,7 @@ get-editor "org.eclipse.emf.examples.library.extlibrary.cdo" | get-text-viewer |
     + " org.polarsys.capella.core.data.helpers;visibility:=reexport,\n"
     + " org.eclipse.emf.cdo;visibility:=reexport,\n"
     + " org.eclipse.emf.ecore.xmi;visibility:=reexport,\n"
-    + " CDO=org.eclipse.emf.cdo;visibility:=reexport,\n"
+    + " org.eclipse.emf.cdo;visibility:=reexport,\n"
     + " org.polarsys.kitalpha.emde.xmi;visibility:=reexport\n"
     + "Bundle-ActivationPolicy: lazy" | verify-true
 get-view "Package Explorer" | get-tree 
