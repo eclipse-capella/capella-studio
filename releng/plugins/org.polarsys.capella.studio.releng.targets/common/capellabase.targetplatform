@@ -131,10 +131,8 @@ location eclipse-releases-oxygen "http://download.eclipse.org/releases/oxygen/" 
 	org.eclipse.emf.eef.sdk-feature.feature.group lazy
 }
 
-/**
- * TODO change to the last version
- */
-location sirius "http://download.eclipse.org/sirius/updates/stable/6.1.0-S20180713-103406/oxygen/" {
+
+location sirius "http://download.eclipse.org/sirius/updates/stable/6.1.0-S20180831-112606/oxygen/" {
 	org.eclipse.sirius.doc.feature.feature.group lazy
 	org.eclipse.sirius.doc.feature.source.feature.group lazy
 	org.eclipse.sirius.runtime.ide.eef.feature.group lazy
@@ -157,15 +155,15 @@ location sirius "http://download.eclipse.org/sirius/updates/stable/6.1.0-S201807
 	org.eclipse.sirius.runtime.acceleo.source.feature.group lazy
 	org.eclipse.sirius.runtime.aql.feature.group lazy
 	org.eclipse.sirius.runtime.aql.source.feature.group lazy
+	org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.jar lazy
 	org.eclipse.sirius.aql.feature.group lazy
 	org.eclipse.sirius.aql.source.feature.group lazy
-	org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.jar lazy
 	org.eclipse.sirius.specifier.ide.ui.aql.feature.group lazy
-	
+	org.eclipse.sirius.specifier.ide.ui.aql.source.feature.group lazy
 }
 
 
-location diffmerge-core-master "http://download.eclipse.org/diffmerge/releases/0.9.0/emf-diffmerge-site" {
+location diffmerge-core-master "http://download.eclipse.org/diffmerge/releases/0.11.0/emf-diffmerge-site" {
 	org.eclipse.emf.diffmerge.feature.feature.group lazy
 	org.eclipse.emf.diffmerge.feature.source.feature.group lazy
 	org.eclipse.emf.diffmerge.sirius.feature.feature.group lazy
@@ -177,21 +175,18 @@ location diffmerge-core-master "http://download.eclipse.org/diffmerge/releases/0
 	
 }
 
-location diffmerge-patterns-master "http://download.eclipse.org/diffmerge/releases/0.9.0/edm-patterns-site" {
+location diffmerge-patterns-master "http://download.eclipse.org/diffmerge/releases/0.11.0/edm-patterns-site" {
 	org.eclipse.emf.diffmerge.patterns.sdk.feature.feature.group lazy
 	org.eclipse.emf.diffmerge.patterns.sdk.feature.source.feature.group lazy
 	org.eclipse.emf.diffmerge.patterns.sirius.sdk.feature.feature.group lazy
 	org.eclipse.emf.diffmerge.patterns.sirius.sdk.feature.source.feature.group lazy
 }
 
-location coevolution "http://download.eclipse.org/diffmerge/releases/0.9.0/edm-coevolution-site/" {
+location coevolution "http://download.eclipse.org/diffmerge/releases/0.11.0/edm-coevolution-site/" {
 	 org.eclipse.emf.diffmerge.coevolution.sdk.feature.feature.group lazy
 }
 
-/**
- * TODO change to the last version
- */
-location amalgam "http://download.eclipse.org/modeling/amalgam/updates/milestones/1.9.0RC1/capella" {
+location amalgam "http://download.eclipse.org/modeling/amalgam/updates/stable/1.9.0-S20180903/capella/" {
 	org.eclipse.amalgam.explorer.activity.feature.group lazy
 	org.eclipse.amalgam.explorer.activity.source.feature.group lazy
 	org.eclipse.amalgam.explorer.contextual.feature.group lazy
@@ -217,9 +212,6 @@ location Nebula "http://download.eclipse.org/nebula/releases/1.4.0/" {
 	org.eclipse.nebula.widgets.richtext.feature.feature.group lazy
 }
 
-/**
- * TODO change to the last version
- */
 location EGFSdk "https://ci.eclipse.org/egf/job/tycho-egf-oxygen/lastSuccessfulBuild/artifact/releng/org.eclipse.egf.core.updatesite/target/repository/" {
 	org.eclipse.egf.sdk.feature.feature.group lazy
 	org.eclipse.egf.sdk.feature.source.feature.group lazy

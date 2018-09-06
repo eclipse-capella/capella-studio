@@ -78,6 +78,22 @@
    <includes
          id="org.eclipse.ecf.core.feature"
          version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.sirius.aql"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.sirius.aql.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.sirius.specifier.ide.ui.aql"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.sirius.specifier.ide.ui.aql.source"
+         version="0.0.0"/>
 
    <includes
          id="org.eclipse.ecf.core.ssl.feature"

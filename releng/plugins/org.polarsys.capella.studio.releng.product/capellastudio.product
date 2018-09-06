@@ -3,6 +3,10 @@
 
 <product name="Capella Studio Product" uid="org.polarsys.capella.studio.releng.product" id="org.polarsys.capella.studio.product.CapellaStudio" application="org.polarsys.capella.studio.product.application" version="1.3.0.qualifier" useFeatures="true" includeLaunchers="true">
 
+   <aboutInfo>
+      <image path="/org.polarsys.capella.studio.product/icons/CapellaStudioAbout.png"/>
+   </aboutInfo>
+
    <configIni use="default">
    </configIni>
 
@@ -26,7 +30,7 @@ openFile
       </vmArgsMac>
    </launcherArgs>
 
-   <windowImages/>
+   <windowImages i16="/org.polarsys.capella.studio.product/icons/CapellaStudio16x16.png" i32="/org.polarsys.capella.studio.product/icons/CapellaStudio32x32.png" i48="/org.polarsys.capella.studio.product/icons/CapellaStudio48x48.png"/>
 
    <splash
       location="org.polarsys.capella.studio.product" />
@@ -35,6 +39,7 @@ openFile
          <bmp/>
       </win>
    </launcher>
+
 
    <vm>
    </vm>
