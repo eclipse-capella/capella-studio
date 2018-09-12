@@ -12,7 +12,7 @@ target "capellastudio" with source, requirements
 
 include "common/capellabase.targetplatform"
 
-location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/stable/sdk/1.3.0/" {
+location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/nightly/sdk/latest/" {
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.source.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group lazy
@@ -131,12 +131,12 @@ location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/stable/sdk/
 	org.polarsys.kitalpha.richtext.widget.ext.feature.feature.group lazy //TODO source
 }
 
-location kitalpha-runtime "http://download.polarsys.org/kitalpha/updates/stable/runtime/1.3.0/" {
+location kitalpha-runtime "http://download.polarsys.org/kitalpha/updates/nightly/runtime/latest/" {
 	org.polarsys.kitalpha.runtime.feature.feature.group lazy
 	org.polarsys.kitalpha.runtime.feature.source.feature.group lazy
 }
 
-location kitalpha-core "http://download.polarsys.org/kitalpha/updates/stable/runtimecore/1.3.0/" {
+location kitalpha-core "http://download.polarsys.org/kitalpha/updates/nightly/runtimecore/latest/" {
 	org.polarsys.kitalpha.common.feature.feature.group lazy
 	org.polarsys.kitalpha.common.feature.source.feature.group lazy
 	org.polarsys.kitalpha.massactions.feature.feature.group lazy
