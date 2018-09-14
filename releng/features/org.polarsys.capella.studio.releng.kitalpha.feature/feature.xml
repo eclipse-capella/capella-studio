@@ -35,7 +35,7 @@
          id="org.polarsys.kitalpha.sdk.feature"
          version="0.0.0"/>
          
-  <!-- <includes
+  <includes
          id="org.polarsys.kitalpha.product.feature.source"
          version="0.0.0"/>
    
@@ -133,13 +133,13 @@
    
    <includes
          id="org.polarsys.kitalpha.accuracy.feature.source"
-         version="0.0.0"/> -->
+         version="0.0.0"/>
    
    <includes
          id="org.polarsys.kitalpha.resourcereuse.emfscheme.feature"
          version="0.0.0"/>
          
-   <!--<includes
+   <includes
          id="org.polarsys.kitalpha.resourcereuse.emfscheme.feature.source"
          version="0.0.0"/>
          
@@ -165,13 +165,13 @@
    
    <includes
          id="org.polarsys.kitalpha.ad.runtime.feature.source"
-         version="0.0.0"/> -->
+         version="0.0.0"/>
    
    <includes
          id="org.polarsys.kitalpha.doc.gen.business.core.feature"
          version="0.0.0"/>
    
-   <!-- <includes
+   <includes
          id="org.polarsys.kitalpha.doc.gen.business.core.feature.source"
          version="0.0.0"/>
    
@@ -221,15 +221,15 @@
          
    <includes
          id="org.polarsys.kitalpha.transposer.componentsample.installer.feature.source"
-         version="0.0.0"/> -->
-   <!-- 
+         version="0.0.0"/>
+   
    <includes
          id="org.polarsys.kitalpha.ad.doc.feature"
          version="0.0.0"/>
    
   <includes
          id="org.polarsys.kitalpha.ad.ui.feature.source"
-         version="0.0.0"/> -->
+         version="0.0.0"/>
          
    <includes
          id="org.polarsys.kitalpha.ad.ui.feature"
@@ -239,13 +239,13 @@
          id="org.polarsys.kitalpha.ad.af.dsl.as.feature"
          version="0.0.0"/>
          
-   <!-- <includes
+   <includes
          id="org.polarsys.kitalpha.ad.af.dsl.as.feature.source"
          version="0.0.0"/>
    
    <includes
          id="org.polarsys.kitalpha.ad.af.dsl.cs.text.feature.source"
-         version="0.0.0"/> -->
+         version="0.0.0"/>
          
    <includes
          id="org.polarsys.kitalpha.ad.af.dsl.cs.text.feature"
@@ -255,79 +255,79 @@
          id="org.polarsys.kitalpha.ad.af.dsl.generation.feature"
          version="0.0.0"/>
          
-   <!--<includes
+   <includes
          id="org.polarsys.kitalpha.ad.af.dsl.generation.feature.source"
-         version="0.0.0"/> -->
+         version="0.0.0"/>
          
    <includes
          id="org.polarsys.kitalpha.ad.af.dsl.servicies.feature"
          version="0.0.0"/>
-   <!--
+   
    <includes
          id="org.polarsys.kitalpha.ad.af.dsl.servicies.feature.source"
-         version="0.0.0"/>-->
+         version="0.0.0"/>
          
    <includes
          id="org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.feature"
          version="0.0.0"/>
-   <!--      
+   
    <includes
          id="org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.feature.source"
-         version="0.0.0"/>      -->
+         version="0.0.0"/>
          
    <includes
          id="org.polarsys.kitalpha.ad.viewpoint.dsl.feature"
          version="0.0.0"/>   
-         <!--
+         
    <includes
          id="org.polarsys.kitalpha.ad.viewpoint.dsl.feature.source"
-         version="0.0.0"/>-->
+         version="0.0.0"/>
    
    <includes
          id="org.polarsys.kitalpha.ad.viewpoint.dsl.services.feature"
          version="0.0.0"/>
          
-   <!--<includes
+   <includes
          id="org.polarsys.kitalpha.ad.viewpoint.dsl.services.feature.source"
-         version="0.0.0"/>-->
+         version="0.0.0"/>
    
    <includes
          id="org.polarsys.kitalpha.model.common.share.feature"
          version="0.0.0"/>    
-   <!--
+   
    <includes
          id="org.polarsys.kitalpha.model.common.share.feature.source"
-         version="0.0.0"/>   -->
+         version="0.0.0"/>
    
    <includes
          id="org.polarsys.kitalpha.model.detachment.ui.feature"
          version="0.0.0"/>
-   <!--
+   
    <includes
          id="org.polarsys.kitalpha.model.detachment.ui.feature.source"
-         version="0.0.0"/>-->
+         version="0.0.0"/>
    
    <includes
          id="org.polarsys.kitalpha.representation.ecore.feature"
          version="0.0.0"/>
-   <!--
+   
    <includes
          id="org.polarsys.kitalpha.representation.ecore.feature.source"
-         version="0.0.0"/>  -->
+         version="0.0.0"/>
    
    <includes
          id="org.polarsys.kitalpha.representation.egf.feature"
          version="0.0.0"/>   
-   <!--
+   
    <includes
          id="org.polarsys.kitalpha.representation.egf.feature.source"
-         version="0.0.0"/>-->
+         version="0.0.0"/>
    
    <includes
          id="org.polarsys.kitalpha.representation.emde.feature"
          version="0.0.0"/>     
          
-    <!--     
+       
    <includes
          id="org.polarsys.kitalpha.representation.emde.feature.source"
          version="0.0.0"/>
@@ -356,6 +356,6 @@
          
     <includes
          id="org.polarsys.kitalpha.massactions.feature.source"
-         version="0.0.0"/>-->
+         version="0.0.0"/>
 
 </feature>
