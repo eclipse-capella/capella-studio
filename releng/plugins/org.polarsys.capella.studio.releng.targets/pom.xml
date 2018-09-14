@@ -34,13 +34,14 @@
 		</license>
 	</licenses>
 		<properties>
-		<tycho-version>0.25.0</tycho-version>
-		<tycho-extras-version>0.25.0</tycho-extras-version>
+		<tycho-version>1.1.0</tycho-version>
+		<tycho-extras-version>1.1.0</tycho-extras-version>
 		<platform-name>neon</platform-name>
 		<targetPlatform.repository>http://mbarbero.github.com/fr.obeo.releng.targetplatform/p2/latest</targetPlatform.repository>
 		<targetPlatform.name>capellastudio.targetplatform</targetPlatform.name>
 		<converterApplication.name>fr.obeo.releng.targetplatform.targetPlatform.converter</converterApplication.name>
 	</properties>
+	<!-- Desable the target generation while build
 	<build>
 		<plugins>
 			<plugin>
@@ -60,7 +61,6 @@
 							<url>${targetPlatform.repository}</url>
 						</repository>
 					</repositories> 
-					<!-- Set dependencies to launch the application -->
  					<dependencies>
 						<dependency>
 							<artifactId>fr.obeo.releng.targetplatform-feature</artifactId>
@@ -73,7 +73,7 @@
 					</dependencies>
 				</configuration>
 				<executions>
-					<!--
+					
 					<execution>
 						<id>generate.capellastudio-nightly.target</id>
 						<phase>validate</phase>
@@ -86,7 +86,6 @@
 							<goal>eclipse-run</goal>
 						</goals>
 					</execution>
-					-->
 					<execution>
 						<id>generate.capellastudio.target</id>
 						<phase>validate</phase>
@@ -103,4 +102,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	-->
 </project>

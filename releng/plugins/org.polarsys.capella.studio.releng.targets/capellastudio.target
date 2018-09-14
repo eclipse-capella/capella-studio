@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="capellastudio" sequenceNumber="1528371528">
+<target name="capellastudio" sequenceNumber="1537166566">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
@@ -270,60 +270,133 @@
       <repository id="EGF" location="http://download.eclipse.org/egf/updates/1.5.1/neon"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.ad.dsl.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.product.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.sdk.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.richtext.widget.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.emde.genchain.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.ad.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.report.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.resourcereuse.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.ad.metadata.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.ad.integration.sirius.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.report.ui.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.resourcereuse.ui.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.ad.integration.emde.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.ad.integration.amalgam.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.cadence.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.transposer.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.emde.ui.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.emde.explorer.contextual.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.composer.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.accuracy.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.model.attachment.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.model.detachment.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.model.detachment.contrib.viewpoints.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.ad.runtime.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.doc.gen.business.core.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.patterns.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.doc.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.runtime.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.ad.sdk.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.ad.ta.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.vp.componentsample.example.installer.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.representation.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.doc.gen.business.ecore.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.emde.sdk.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.cadence.examples.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.composer.examples.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.composer.componentsample.installer.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.transposer.examples.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.transposer.componentsample.installer.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.product.feature.source.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.sdk.feature.source.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.ad.ui.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.model.common.share.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.runtime.feature.source.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-sdk" location="http://download.polarsys.org/kitalpha/updates/release/sdk/1.2.1/"/>
+      <repository id="kitalpha-runtime" location="http://download.polarsys.org/kitalpha/updates/release/runtime/1.2.1/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.polarsys.kitalpha.model.common.commands.feature.feature.group" version="0.0.0"/>
-      <unit id="org.polarsys.kitalpha.model.common.commands.feature.source.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-core" location="http://download.polarsys.org/kitalpha/updates/release/runtimecore/1.2.1/"/>
+      <unit id="org.polarsys.kitalpha.common.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.common.feature.source.feature.group" version="0.0.0"/>
+      <repository id="kitalpha-runtimeCore" location="http://download.polarsys.org/kitalpha/updates/release/runtimecore/1.2.1/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.dsl.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.dsl.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.product.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.sdk.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.genchain.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.genchain.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.report.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.report.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.metadata.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.metadata.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.integration.sirius.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.integration.sirius.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.report.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.report.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.integration.emde.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.integration.emde.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.integration.amalgam.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.integration.amalgam.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.doc.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.as.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.as.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.cs.text.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.cs.text.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.generation.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.generation.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.servicies.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.servicies.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.services.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.services.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.common.share.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.common.share.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.ecore.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.ecore.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.egf.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.egf.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.emde.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.emde.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.cadence.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.cadence.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.transposer.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.transposer.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.explorer.contextual.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.explorer.contextual.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.doc.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.composer.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.composer.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.accuracy.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.accuracy.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.attachment.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.attachment.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.common.ui.menu.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.common.ui.menu.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.contrib.viewpoints.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.contrib.viewpoints.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.runtime.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.runtime.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.doc.gen.business.core.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.doc.gen.business.core.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.patterns.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.patterns.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.doc.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.sdk.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.sdk.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.ta.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.ta.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.vp.componentsample.example.installer.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.vp.componentsample.example.installer.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.doc.gen.business.ecore.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.doc.gen.business.ecore.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.sdk.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.sdk.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.cadence.examples.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.cadence.examples.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.composer.examples.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.composer.examples.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.composer.componentsample.installer.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.composer.componentsample.installer.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.transposer.examples.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.transposer.examples.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.transposer.componentsample.installer.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.transposer.componentsample.installer.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.product.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.sdk.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.richtext.widget.doc.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.richtext.widget.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.richtext.widget.ext.feature.feature.group" version="0.0.0"/>
+      <repository id="kitalpha-sdk" location="http://download.polarsys.org/kitalpha/updates/release/sdk/1.2.1/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.core.egf.feature.feature.group" version="0.0.0"/>

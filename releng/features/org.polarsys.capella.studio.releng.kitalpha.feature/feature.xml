@@ -34,8 +34,11 @@
    <includes
          id="org.polarsys.kitalpha.sdk.feature"
          version="0.0.0"/>
+         
+  <includes
+         id="org.polarsys.kitalpha.product.feature.source"
+         version="0.0.0"/>
    
-   <!--      
    <includes
          id="org.polarsys.kitalpha.sdk.feature.source"
          version="0.0.0"/>
@@ -43,5 +46,306 @@
    <includes
          id="org.polarsys.kitalpha.runtime.feature.source"
          version="0.0.0"/>
-   -->
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.source"
+         version="0.0.0"/>     
+
+   <includes
+         id="org.polarsys.kitalpha.ad.dsl.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.emde.genchain.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.report.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.report.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.resourcereuse.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.metadata.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.integration.sirius.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.report.ui.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.resourcereuse.ui.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.integration.emde.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.integration.amalgam.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.cadence.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.transposer.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.emde.ui.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.emde.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.emde.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.emde.explorer.contextual.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.composer.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.accuracy.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.resourcereuse.emfscheme.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.resourcereuse.emfscheme.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.model.attachment.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.model.detachment.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.model.common.ui.menu.feature.source"
+         version="0.0.0"/>
+    
+   <includes
+         id="org.polarsys.kitalpha.model.detachment.contrib.viewpoints.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.ad.runtime.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.doc.gen.business.core.feature"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.doc.gen.business.core.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.patterns.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.sdk.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.ad.ta.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.vp.componentsample.example.installer.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.representation.feature.source"
+         version="0.0.0"/> 
+         
+   <includes
+         id="org.polarsys.kitalpha.doc.gen.business.ecore.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.emde.sdk.feature.source"
+         version="0.0.0"/>      
+         
+   <includes
+         id="org.polarsys.kitalpha.cadence.examples.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.composer.examples.feature.source"
+         version="0.0.0"/>  
+         
+   <includes
+         id="org.polarsys.kitalpha.composer.componentsample.installer.feature.source"
+         version="0.0.0"/> 
+         
+   <includes
+         id="org.polarsys.kitalpha.transposer.examples.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.transposer.componentsample.installer.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.ad.doc.feature"
+         version="0.0.0"/>
+   
+  <includes
+         id="org.polarsys.kitalpha.ad.ui.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.ui.feature"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.ad.af.dsl.as.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.af.dsl.as.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.ad.af.dsl.cs.text.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.af.dsl.cs.text.feature"
+         version="0.0.0"/>
+        
+   <includes
+         id="org.polarsys.kitalpha.ad.af.dsl.generation.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.af.dsl.generation.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.af.dsl.servicies.feature"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.ad.af.dsl.servicies.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.feature"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.viewpoint.dsl.feature"
+         version="0.0.0"/>   
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.viewpoint.dsl.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.ad.viewpoint.dsl.services.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.kitalpha.ad.viewpoint.dsl.services.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.model.common.share.feature"
+         version="0.0.0"/>    
+   
+   <includes
+         id="org.polarsys.kitalpha.model.common.share.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.model.detachment.ui.feature"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.model.detachment.ui.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.representation.ecore.feature"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.representation.ecore.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.representation.egf.feature"
+         version="0.0.0"/>   
+   
+   <includes
+         id="org.polarsys.kitalpha.representation.egf.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.representation.emde.feature"
+         version="0.0.0"/>     
+         
+       
+   <includes
+         id="org.polarsys.kitalpha.representation.emde.feature.source"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.emde.doc.feature"
+         version="0.0.0"/>    
+   
+   
+   <includes
+         id="org.polarsys.kitalpha.richtext.widget.doc.feature"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.polarsys.kitalpha.richtext.widget.feature"
+         version="0.0.0"/>
+    
+    <includes
+         id="org.polarsys.kitalpha.richtext.widget.ext.feature"
+         version="0.0.0"/>
 </feature>
