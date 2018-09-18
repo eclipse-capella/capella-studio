@@ -50,9 +50,17 @@
    <includes
          id="org.polarsys.capella.ta.viewpoint.dsl.feature"
          version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.capella.ta.viewpoint.dsl.feature.source"
+         version="0.0.0"/>
 
    <includes
          id="org.polarsys.capella.extension.sdk.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.capella.extension.sdk.feature.source"
          version="0.0.0"/>
 
 </feature>

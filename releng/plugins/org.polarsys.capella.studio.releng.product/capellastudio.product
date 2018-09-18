@@ -58,10 +58,8 @@ http://www.eclipse.org/legal/epl-v10.htm
 
    <features>
       <feature id="org.polarsys.capella.studio.releng.eclipse.feature" version="1.2.1.qualifier"/>
-      <feature id="org.polarsys.capella.ta.viewpoint.dsl.feature" version="1.2.1.qualifier"/>
-      <feature id="org.polarsys.capella.ta.viewpoint.dsl.feature.source" version="1.2.1.qualifier"/>
-      <feature id="org.polarsys.capella.studio.releng.capella.feature" version="1.2.1.qualifier"/>
       <feature id="org.polarsys.capella.studio.releng.kitalpha.feature" version="1.2.1.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.capella.feature" version="1.2.1.qualifier"/>
    </features>
 
    <configurations>

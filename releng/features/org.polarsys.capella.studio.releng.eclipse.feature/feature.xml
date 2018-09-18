@@ -255,6 +255,31 @@
    <includes
          id="org.eclipse.emf.databinding.edit"
          version="0.0.0"/>
+         
+   
+   <includes
+         id="org.eclipse.emf.diffmerge.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.diffmerge.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.diffmerge.sirius.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.diffmerge.sirius.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.diffmerge.gmf.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.diffmerge.gmf.feature.source"
+         version="0.0.0"/>
 
    <includes
          id="org.eclipse.emf.diffmerge.patterns.sdk.feature"
