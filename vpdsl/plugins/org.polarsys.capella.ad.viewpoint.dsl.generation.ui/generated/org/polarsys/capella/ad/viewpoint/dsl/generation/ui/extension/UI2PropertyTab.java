@@ -1,4 +1,4 @@
-//Generated with EGF 1.4.1.v20161010-1511
+//Generated with EGF 1.6.0.201805040915
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extension;
 
 import org.eclipse.egf.common.helper.*;
@@ -29,14 +29,14 @@ public class UI2PropertyTab extends org.polarsys.capella.ad.viewpoint.dsl.genera
 			+ "\tpoint=\"org.eclipse.ui.views.properties.tabbed.propertyTabs\">" + NL + "\t<propertyTabs " + NL
 			+ "\t\tcontributorId=\"";
 	protected final String TEXT_2 = "\">" + NL + "\t\t\t";
-	protected final String TEXT_3 = NL + "\t\t\t<propertyTab" + NL + "\t\t    \tafterTab=\"Base\"" + NL
-			+ "\t\t        category=\"";
-	protected final String TEXT_4 = "\"" + NL + "\t\t        id=\"";
-	protected final String TEXT_5 = "\"" + NL + "\t\t        label=\"";
-	protected final String TEXT_6 = "\">" + NL + "\t\t    </propertyTab> " + NL + "\t\t\t";
-	protected final String TEXT_7 = NL + "\t</propertyTabs>" + NL + "</extension> " + NL;
-	protected final String TEXT_8 = NL;
+	protected final String TEXT_3 = NL + "\t\t\t<propertyTab" + NL + "\t\t    \tafterTab=\"";
+	protected final String TEXT_4 = "\"" + NL + "\t\t        category=\"";
+	protected final String TEXT_5 = "\"" + NL + "\t\t        id=\"";
+	protected final String TEXT_6 = "\"" + NL + "\t\t        label=\"";
+	protected final String TEXT_7 = "\">" + NL + "\t\t    </propertyTab> " + NL + "\t\t\t";
+	protected final String TEXT_8 = NL + "\t</propertyTabs>" + NL + "</extension> " + NL;
 	protected final String TEXT_9 = NL;
+	protected final String TEXT_10 = NL;
 
 	public UI2PropertyTab() {
 		//Here is the constructor
@@ -72,8 +72,8 @@ public class UI2PropertyTab extends org.polarsys.capella.ad.viewpoint.dsl.genera
 			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
-		stringBuffer.append(TEXT_8);
 		stringBuffer.append(TEXT_9);
+		stringBuffer.append(TEXT_10);
 		return stringBuffer.toString();
 	}
 
@@ -127,6 +127,7 @@ public class UI2PropertyTab extends org.polarsys.capella.ad.viewpoint.dsl.genera
 			for (IConfigurationElement iContributor : contributors) {
 				String cID = UIPropertiesExtensionsManager.getContributorID(iContributor);
 				String cCategory = UIPropertiesExtensionsManager.getPropertyTabCategory(iContributor);
+				String cBase = UIPropertiesExtensionsManager.getBaseTabName(iContributor);
 				stringBuffer.append(TEXT_1);
 				stringBuffer.append(cID);
 				stringBuffer.append(TEXT_2);
@@ -135,14 +136,16 @@ public class UI2PropertyTab extends org.polarsys.capella.ad.viewpoint.dsl.genera
 					String uiLabel = iUI.getLabel();
 					uiLabel = (uiLabel != null && uiLabel.trim().length() > 0 ? uiLabel : ContainerName);
 					stringBuffer.append(TEXT_3);
-					stringBuffer.append(cCategory);
+					stringBuffer.append(cBase);
 					stringBuffer.append(TEXT_4);
-					stringBuffer.append(ContainerName);
+					stringBuffer.append(cCategory);
 					stringBuffer.append(TEXT_5);
-					stringBuffer.append(uiLabel);
+					stringBuffer.append(ContainerName);
 					stringBuffer.append(TEXT_6);
+					stringBuffer.append(uiLabel);
+					stringBuffer.append(TEXT_7);
 				}
-				stringBuffer.append(TEXT_7);
+				stringBuffer.append(TEXT_8);
 			}
 		}
 		InternalPatternContext ictx = (InternalPatternContext) ctx;

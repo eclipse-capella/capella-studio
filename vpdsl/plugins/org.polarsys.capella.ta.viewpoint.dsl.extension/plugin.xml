@@ -42,11 +42,13 @@
       <propertiesContributors
             targetApplication="Capella">
          <Contributor
+               baseTabName="BaseSiriusDiagram"
                id="org.eclipse.sirius.diagram.ui"
                name="Sirius diagram contribution"
                propertyTabCategory="semantic &amp; extension">
          </Contributor>
          <Contributor
+               baseTabName="BaseCapella"
                id="org.polarsys.capella.core.data.capellamodeller.properties"
                name="Capella Treeview Contribution"
                propertyTabCategory="default">
