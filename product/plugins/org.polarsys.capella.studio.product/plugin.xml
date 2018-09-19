@@ -43,8 +43,24 @@
             application="org.polarsys.capella.studio.product.application"
             name="Capella Studio Product">
          <property
+               name="windowImages"
+               value="icons/CapellaStudio16x16.png,icons/CapellaStudio32x32.png,icons/CapellaStudio48x48.png">
+         </property>
+         <property
+               name="aboutText"
+               value="%productBlurb">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/CapellaStudioAbout.png">
+         </property>
+         <property
                name="appName"
                value="Capella Studio Product">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
          </property>
       </product>
    </extension>
