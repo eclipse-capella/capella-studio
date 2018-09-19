@@ -11,7 +11,7 @@
 -->
 <feature
       id="org.polarsys.capella.studio.releng.eclipse.feature"
-      label="Feature Eclipse"
+      label="%featureName"
       version="1.3.0.qualifier"
       provider-name="%providerName">
 
@@ -78,19 +78,19 @@
    <includes
          id="org.eclipse.ecf.core.feature"
          version="0.0.0"/>
-         
+
    <includes
          id="org.eclipse.sirius.aql"
          version="0.0.0"/>
-         
+
    <includes
          id="org.eclipse.sirius.aql.source"
          version="0.0.0"/>
-         
+
    <includes
          id="org.eclipse.sirius.specifier.ide.ui.aql"
          version="0.0.0"/>
-         
+
    <includes
          id="org.eclipse.sirius.specifier.ide.ui.aql.source"
          version="0.0.0"/>
@@ -458,7 +458,7 @@
    <includes
          id="org.eclipse.sirius.specifier.ide.ui.aql"
          version="0.0.0"/>
-         
+
    <includes
          id="org.eclipse.sirius.runtime.ide.eef"
          version="0.0.0"/>

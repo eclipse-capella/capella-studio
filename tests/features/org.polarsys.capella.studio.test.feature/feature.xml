@@ -11,7 +11,7 @@
 -->
 <feature
       id="org.polarsys.capella.studio.test.feature"
-      label="JUnit test example feature"
+      label="%featureName"
       version="1.3.0.qualifier"
       provider-name="%providerName">
 
