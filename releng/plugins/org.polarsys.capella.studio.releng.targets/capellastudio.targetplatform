@@ -12,7 +12,7 @@ target "capellastudio" with source, requirements
 
 include "common/capellabase.targetplatform"
 
-location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/nightly/sdk/latest/" {
+location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/stable/sdk/1.3.0/" {
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.source.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group lazy
@@ -131,12 +131,12 @@ location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/nightly/sdk
 	org.polarsys.kitalpha.richtext.widget.ext.feature.feature.group lazy //TODO source
 }
 
-location kitalpha-runtime "http://download.polarsys.org/kitalpha/updates/nightly/runtime/latest/" {
+location kitalpha-runtime "http://download.polarsys.org/kitalpha/updates/stable/runtime/1.3.0/" {
 	org.polarsys.kitalpha.runtime.feature.feature.group lazy
 	org.polarsys.kitalpha.runtime.feature.source.feature.group lazy
 }
 
-location kitalpha-core "http://download.polarsys.org/kitalpha/updates/nightly/runtimecore/latest/" {
+location kitalpha-core "http://download.polarsys.org/kitalpha/updates/stable/runtimecore/1.3.0/" {
 	org.polarsys.kitalpha.common.feature.feature.group lazy
 	org.polarsys.kitalpha.common.feature.source.feature.group lazy
 	org.polarsys.kitalpha.massactions.feature.feature.group lazy
@@ -144,13 +144,13 @@ location kitalpha-core "http://download.polarsys.org/kitalpha/updates/nightly/ru
 }
 
 
-location capella-egf-patterns "http://download.polarsys.org/capella/core/updates/stable/1.3.0-S20180906-092805/org.polarsys.capella.egf.site/" {
+location capella-egf-patterns "http://download.polarsys.org/capella/core/updates/stable/1.3.0-S20180920-065006/org.polarsys.capella.egf.site/" {
 	org.polarsys.capella.core.egf.feature.feature.group lazy
 	org.polarsys.capella.core.egf.feature.source.feature.group lazy
 }
 
 
-location capella "http://download.polarsys.org/capella/core/updates/stable/1.3.0-S20180906-092805/org.polarsys.capella.rcp.site/" {
+location capella "http://download.polarsys.org/capella/core/updates/stable/1.3.0-S20180920-065006/org.polarsys.capella.rcp.site/" {
 	org.polarsys.capella.rcp.feature.feature.group lazy
 	org.polarsys.capella.rcp.feature.source.feature.group lazy
 }

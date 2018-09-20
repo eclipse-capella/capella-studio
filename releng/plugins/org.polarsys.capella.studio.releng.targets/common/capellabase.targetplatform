@@ -89,6 +89,7 @@ location eclipse-releases-oxygen "http://download.eclipse.org/releases/oxygen/" 
 	org.eclipse.gef.source lazy
 	org.eclipse.gmf.examples.runtime lazy
 	org.eclipse.gmf.examples.runtime.ui.pde lazy
+	org.eclipse.gmf.feature.group lazy
 	org.eclipse.gmf.runtime.notation.sdk lazy
 	org.eclipse.gmf.runtime.notation.source lazy
 	org.eclipse.gmf.runtime.sdk lazy
@@ -212,7 +213,7 @@ location Nebula "http://download.eclipse.org/nebula/releases/1.4.0/" {
 	org.eclipse.nebula.widgets.richtext.feature.feature.group lazy
 }
 
-location EGFSdk "https://ci.eclipse.org/egf/job/tycho-egf-oxygen/lastSuccessfulBuild/artifact/releng/org.eclipse.egf.core.updatesite/target/repository/" {
+location EGFSdk "http://download.eclipse.org/egf/updates/1.6.0/oxygen/" {
 	org.eclipse.egf.sdk.feature.feature.group lazy
 	org.eclipse.egf.sdk.feature.source.feature.group lazy
 }

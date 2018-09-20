@@ -27,6 +27,22 @@
       %license
    </license>
 
+   <include
+   		 id="org.polarsys.capella.rcp.feature"
+   		 version="0.0.0"/>
+   
+   <include
+   		 id="org.polarsys.capella.rcp.feature.source"
+   		 version="0.0.0"/>
+   		 
+   <include
+   		 id="org.polarsys.capella.core.egf.feature"
+   		 version="0.0.0"/>
+   
+   <include
+   		 id="org.polarsys.capella.core.egf.feature.source"
+   		 version="0.0.0"/>
+
    <includes
          id="org.polarsys.capella.studio.product.feature"
          version="0.0.0"/>
@@ -34,9 +50,17 @@
    <includes
          id="org.polarsys.capella.ta.viewpoint.dsl.feature"
          version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.capella.ta.viewpoint.dsl.feature.source"
+         version="0.0.0"/>
 
    <includes
          id="org.polarsys.capella.extension.sdk.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.capella.extension.sdk.feature.source"
          version="0.0.0"/>
 
 </feature>

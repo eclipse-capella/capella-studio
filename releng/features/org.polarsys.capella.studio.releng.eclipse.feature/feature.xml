@@ -46,7 +46,7 @@
    <includes
          id="org.eclipse.amalgam.explorer.contextual.core"
          version="0.0.0"/>
-
+         
    <includes
          id="org.eclipse.amalgam.explorer.contextual.core.source"
          version="0.0.0"/>
@@ -80,22 +80,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.sirius.aql"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.aql.source"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.specifier.ide.ui.aql"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.specifier.ide.ui.aql.source"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.ecf.core.ssl.feature"
          version="0.0.0"/>
 
@@ -116,12 +100,157 @@
          version="0.0.0"/>
 
    <includes
+         id="org.eclipse.egf.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.common.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.common.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.common.ui.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.common.ui.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.core.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.core.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.core.ui.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.core.ui.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.doc.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.edit.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.model.edit.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.fprod.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.fprod.edit.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.model.fprod.edit.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.ftask.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.ftask.edit.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.model.ftask.edit.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.model.ui.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.model.ui.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.portfolio.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.portfolio.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.portfolio.emf.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.portfolio.emf.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.portfolio.genchain.feature"
+         version="0.0.0"/>
+   
+   <includes
+         id="org.eclipse.egf.portfolio.genchain.feature.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egf.portfolio.task.ant.feature"
+         version="0.0.0"/>
+
+	<includes
+         id="org.eclipse.egf.portfolio.task.ant.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.producer.feature"
+         version="0.0.0"/>
+	
+	<includes
+         id="org.eclipse.egf.producer.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.producer.ui.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.producer.ui.feature.source"
+         version="0.0.0"/>
+
+   <includes
          id="org.eclipse.egf.sdk.feature"
          version="0.0.0"/>
 
    <includes
+         id="org.eclipse.egf.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.egf.sdk.feature.source"
+         version="0.0.0"/>
+         
+   <includes
          id="org.eclipse.egit"
          version="0.0.0"/>
+         
 
    <includes
          id="org.eclipse.emf"
@@ -142,13 +271,21 @@
    <includes
          id="org.eclipse.emf.codegen.ecore.source"
          version="0.0.0"/>
-
+         
    <includes
          id="org.eclipse.emf.codegen.ecore.ui"
          version="0.0.0"/>
 
    <includes
          id="org.eclipse.emf.codegen.ecore.ui.source"
+         version="0.0.0"/>
+
+   <include
+            id="org.eclipse.emf.codegen.ecore"
+         version="0.0.0"/>
+
+   <include
+            id="org.eclipse.emf.codegen.ecore.source"
          version="0.0.0"/>
 
    <includes
@@ -178,6 +315,31 @@
    <includes
          id="org.eclipse.emf.databinding.edit"
          version="0.0.0"/>
+         
+   
+   <includes
+         id="org.eclipse.emf.diffmerge.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.diffmerge.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.diffmerge.sirius.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.diffmerge.sirius.feature.source"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.diffmerge.gmf.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.diffmerge.gmf.feature.source"
+         version="0.0.0"/>
 
    <includes
          id="org.eclipse.emf.diffmerge.patterns.sdk.feature"
@@ -196,11 +358,11 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.diffmerge.sdk.feature"
+         id="org.eclipse.emf.diffmerge.egit.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.diffmerge.sdk.feature.source"
+         id="org.eclipse.emf.diffmerge.egit.feature.source"
          version="0.0.0"/>
 
    <includes
@@ -354,11 +516,11 @@
    <includes
          id="org.eclipse.gmf"
          version="0.0.0"/>
-
+         
    <includes
          id="org.eclipse.gmf.examples.runtime"
          version="0.0.0"/>
-
+         
    <includes
          id="org.eclipse.gmf.examples.runtime.ui.pde"
          version="0.0.0"/>
@@ -377,10 +539,6 @@
 
    <includes
          id="org.eclipse.gmf.runtime.thirdparty"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.gmf.runtime.sdk"
          version="0.0.0"/>
 
    <includes
@@ -424,6 +582,10 @@
          version="0.0.0"/>
 
    <includes
+         id="org.eclipse.sirius.doc.feature.source"
+         version="0.0.0"/>
+
+   <includes
          id="org.eclipse.sirius.runtime"
          version="0.0.0"/>
 
@@ -445,18 +607,6 @@
 
    <includes
          id="org.eclipse.sirius.runtime.aql.source"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.aql"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.aql.source"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.specifier.ide.ui.aql"
          version="0.0.0"/>
 
    <includes
@@ -621,10 +771,6 @@
 
    <includes
          id="org.eclipse.emf.validation.ocl"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.acceleo"
          version="0.0.0"/>
 
    <includes
