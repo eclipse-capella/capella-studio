@@ -33,6 +33,7 @@ public class UIPropertiesExtensionsManager {
 	private static final String CONTRIBUTOR_NAME_ATTRIBUTE = "name";
 	private static final String CONTRIBUTOR_ID_ATTRIBUTE = "id";
 	private static final String PROPERTY_TAB_CATEGORY_ATTRIBUTE = "propertyTabCategory";
+	private static final String PROPERTY_BASE_TAB_NAME_ATTRIBUTE = "baseTabName";
 	// PropertiesContributors
 	private static final String TARGET_APPLICATION_ATTRIBUTE = "targetApplication";
 	
@@ -47,6 +48,11 @@ public class UIPropertiesExtensionsManager {
 	
 	public static String getPropertyTabCategory(IConfigurationElement contributor){
 		String cat = contributor.getAttribute(PROPERTY_TAB_CATEGORY_ATTRIBUTE);
+		return XMLUtility.getValidXMLString(cat);
+	}
+	
+	public static String getBaseTabName(IConfigurationElement contributor){
+		String cat = contributor.getAttribute(PROPERTY_BASE_TAB_NAME_ATTRIBUTE);
 		return XMLUtility.getValidXMLString(cat);
 	}
 	

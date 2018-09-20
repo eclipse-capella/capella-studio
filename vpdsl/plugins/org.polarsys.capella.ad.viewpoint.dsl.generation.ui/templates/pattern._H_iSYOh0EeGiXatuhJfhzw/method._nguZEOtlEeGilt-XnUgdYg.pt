@@ -7,7 +7,8 @@ ArrayList<IConfigurationElement> propertiesContributors =
 															.getContributors(iPropertiesContributor);
 		for (IConfigurationElement iContributor : contributors) {
 			String cID = UIPropertiesExtensionsManager.getContributorID(iContributor);
-			String cCategory = UIPropertiesExtensionsManager.getPropertyTabCategory(iContributor); %>
+			String cCategory = UIPropertiesExtensionsManager.getPropertyTabCategory(iContributor); 
+			String cBase = UIPropertiesExtensionsManager.getBaseTabName(iContributor); %>
 <extension
 	point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
 	<propertyTabs 
@@ -17,7 +18,7 @@ ArrayList<IConfigurationElement> propertiesContributors =
 				String uiLabel = iUI.getLabel();
 				uiLabel = (uiLabel != null && uiLabel.trim().length() > 0 ? uiLabel : ContainerName );%>
 			<propertyTab
-		    	afterTab="Base"
+		    	afterTab="<%=cBase%>"
 		        category="<%=cCategory%>"
 		        id="<%=ContainerName%>"
 		        label="<%=uiLabel%>">
