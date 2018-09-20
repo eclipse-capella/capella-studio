@@ -30,8 +30,9 @@ public class SectionClassGenerator {
 
 	public static boolean needSection(GenClass model) {
 		for (EClass parent : model.getEcoreClass().getESuperTypes()) {
-			if (CapellacorePackage.eINSTANCE.getNsURI().equals(parent.getEPackage().getNsURI()) && CapellacorePackage.eINSTANCE.getNamedElement().getName().equals(parent.getName()))
+			if (CapellacorePackage.eINSTANCE.getNsURI().equals(parent.getEPackage().getNsURI()) && CapellacorePackage.eINSTANCE.getNamedElement().getName().equals(parent.getName())) {
 				return true;
+			}
 		}
 		return false;
 	}
@@ -70,13 +71,14 @@ public class SectionClassGenerator {
 			if (obj instanceof GenClass) {
 				GenClass genClass = (GenClass) obj;
 				HelperInfo info = HelperClassGenerator.getInfo(genClass.getEcoreClass());
-				if (info == null || info.getSectionClass() == null)
+				if (info == null || info.getSectionClass() == null) {
 					continue;
+				}
 				Element subItemContribution = doc.createElement("propertySection");
 				subItemContribution.setAttribute("class", info.getSectionClass());
 				subItemContribution.setAttribute("filter", SectionClassGenerator.getFullSectionClassname(genClass));
 				subItemContribution.setAttribute("id", MenuContributorClassGenerator.getFullClassname(genClass) + ".section");
-				subItemContribution.setAttribute("tab", "Base");
+				subItemContribution.setAttribute("tab", "BaseCapella");
 				itemContribution.appendChild(doc.createTextNode("        "));
 				itemContribution.appendChild(subItemContribution);
 				itemContribution.appendChild(doc.createTextNode("\n"));
@@ -104,14 +106,15 @@ public class SectionClassGenerator {
 			if (obj instanceof GenClass) {
 				GenClass genClass = (GenClass) obj;
 				HelperInfo info = HelperClassGenerator.getInfo(genClass.getEcoreClass());
-				if (info == null || info.getSectionClass() == null)
+				if (info == null || info.getSectionClass() == null) {
 					continue;
+				}
 				boolean needSection = SectionClassGenerator.needSection(genClass);
 				Element subItemContribution = doc.createElement("propertySection");
 				subItemContribution.setAttribute("class", needSection ? SectionClassGenerator.getFullSectionClassname(genClass) : info.getSectionClass());
 				subItemContribution.setAttribute("filter", SectionClassGenerator.getFullSectionClassname(genClass));
 				subItemContribution.setAttribute("id", SectionClassGenerator.getFullSectionClassname(genClass) + ".section");
-				subItemContribution.setAttribute("tab", "Base");
+				subItemContribution.setAttribute("tab", "BaseSiriusDiagram");
 				itemContribution.appendChild(doc.createTextNode("        "));
 				itemContribution.appendChild(subItemContribution);
 				itemContribution.appendChild(doc.createTextNode("\n"));
