@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="capellastudio" sequenceNumber="1537530329">
+<target name="capellastudio" sequenceNumber="1537537335">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
@@ -350,6 +350,12 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.rcp.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.rcp.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.common.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.common.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.core.advance.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.core.advance.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.core.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.core.feature.source.feature.group" version="0.0.0"/>
       <repository id="capella" location="http://download.polarsys.org/capella/core/updates/stable/1.3.0-S20180920-065006/org.polarsys.capella.rcp.site/"/>
     </location>
   </locations>
