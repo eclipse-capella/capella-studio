@@ -82,6 +82,10 @@
 									<include name="org.eclipse.nebula.widgets.richtext_*/org/eclipse/nebula/widgets/richtext/resources/template.html"/>
 								    <replacefilter token="&lt;meta charset=&quot;utf-8&quot;&gt;" value="&lt;meta charset=&quot;utf-8&quot;&gt;${line.separator}&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=EDGE&quot;&gt;"/>
 								</replace>
+								<replace dir="${basedir}/target/products/org.polarsys.capella.studio.releng.product/win32/win32/x86_64/plugins">
+									<include name="org.eclipse.nebula.widgets.richtext_*/org/eclipse/nebula/widgets/richtext/resources/template.html"/>
+								    <replacefilter token="&lt;meta charset=&quot;utf-8&quot;&gt;" value="&lt;meta charset=&quot;utf-8&quot;&gt;${line.separator}&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=EDGE&quot;&gt;"/>
+								</replace>
 								
 							</target>
 						</configuration>
