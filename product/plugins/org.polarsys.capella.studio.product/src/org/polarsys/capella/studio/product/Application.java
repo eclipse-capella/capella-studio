@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015 THALES GLOBAL SERVICES.
+ * Copyright (c) 2015, 2018 THALES GLOBAL SERVICES.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -29,7 +29,6 @@ import org.eclipse.equinox.app.IApplicationContext;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.osgi.service.datalocation.Location;
-import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
@@ -73,7 +72,7 @@ public class Application implements IApplication, IExecutableExtension {
 	 * A special return code that will be recognized by the launcher and used to
 	 * restart the workbench.
 	 */
-	private static final Integer EXIT_RELAUNCH = new Integer(24);
+	private static final Integer EXIT_RELAUNCH = Integer.valueOf(24);
 
 	/**
 	 * The ID of the application plug-in
