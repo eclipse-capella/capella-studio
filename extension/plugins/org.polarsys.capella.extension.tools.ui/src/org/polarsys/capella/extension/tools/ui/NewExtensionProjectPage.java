@@ -172,7 +172,7 @@ public class NewExtensionProjectPage extends WizardPage {
 				Object next = iterator.next();
 				if (next instanceof IFile) {
 					IFile file = (IFile) next;
-					if (file.getFileExtension().equals(ECORE_EXTENSION)) {
+					if (ECORE_EXTENSION.equals(file.getFileExtension())) {
 						URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), false);
 						builder.append(uri.toString());
 						builder.append(SPACE);
