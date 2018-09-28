@@ -16,6 +16,7 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.eclipse.emf.codegen.ecore.genmodel.GenClass;
@@ -134,7 +135,8 @@ public class HelperClassGenerator {
 			}
 		}
 		List<HelperInfo> result = new ArrayList<>();
-		for (String name : infos.keySet()) {
+		for (Entry<String, HelperInfo> info: infos.entrySet()) {
+			String name = info.getKey();
 			if (names.contains(name)) {
 				result.add(infos.get(name));
 			}

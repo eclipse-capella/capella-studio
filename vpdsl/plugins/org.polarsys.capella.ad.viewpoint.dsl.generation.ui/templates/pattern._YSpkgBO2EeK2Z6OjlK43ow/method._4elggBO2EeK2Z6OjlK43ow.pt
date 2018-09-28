@@ -44,10 +44,10 @@ private void generateExtensions(UI ui){
 	}
 	// Generation of the Extensions
 	if (! availableExtesionPoint.isEmpty()){
-		for (String iPoint : availableExtesionPoint.keySet()) {
-			ArrayList<String> array = availableExtesionPoint.get(iPoint); %>
+		for (Entry<String, ArrayList<String>> extension : availableExtesionPoint.entrySet()) {
+			ArrayList<String> array = extension.getValue(); %>
 <extension 
-	point="<%=iPoint%>">
+	point="<%=extension.getKey()%>">
 				<%for (String iExtension : array) { %>
 	<%=iExtension +"\n"%>
 				<%}%>

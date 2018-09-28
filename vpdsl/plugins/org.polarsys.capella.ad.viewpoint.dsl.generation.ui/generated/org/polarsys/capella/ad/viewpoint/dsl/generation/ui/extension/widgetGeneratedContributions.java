@@ -1,6 +1,7 @@
-//Generated with EGF 1.4.1.v20161010-1511
+//Generated with EGF 1.6.0.201805040915
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extension;
 
+import java.util.Map.Entry;
 import org.eclipse.egf.common.helper.*;
 import java.util.*;
 import org.eclipse.emf.ecore.*;
@@ -151,10 +152,10 @@ public class widgetGeneratedContributions {
 				}
 				// Generation of the Extensions
 				if (!availableExtesionPoint.isEmpty()) {
-					for (String iPoint : availableExtesionPoint.keySet()) {
-						ArrayList<String> array = availableExtesionPoint.get(iPoint);
+					for (Entry<String, ArrayList<String>> extension : availableExtesionPoint.entrySet()) {
+						ArrayList<String> array = extension.getValue();
 						stringBuffer.append(TEXT_2);
-						stringBuffer.append(iPoint);
+						stringBuffer.append(extension.getKey());
 						stringBuffer.append(TEXT_3);
 						for (String iExtension : array) {
 							stringBuffer.append(TEXT_4);

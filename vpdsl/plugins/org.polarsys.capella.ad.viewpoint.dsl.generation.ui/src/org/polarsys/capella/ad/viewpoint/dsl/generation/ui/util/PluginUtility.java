@@ -10,8 +10,8 @@
 *******************************************************************************/
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util;
 
-import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
@@ -46,22 +46,23 @@ public class PluginUtility {
 	public static void addPropertyTabsExtensions(String pluginName,
 												Map<String, Map<String, String>> propertyTabs) throws CoreException{
 		// If the map is empty then there no extension to create
-		if (propertyTabs == null || propertyTabs.size() == 0)
+		if (propertyTabs == null || propertyTabs.size() == 0) {
 			return;
+                }
 		
 		WorkspacePluginModel model = getWorkspacePluginModel(pluginName);
 		
-		if (model == null)
+		if (model == null) {
 			return;
+                }
 		
 		model.load();
 		
 		// Browse the map to get the Contributors ID and the Attributes Map 
 		// in order to generate propertyTabs for each one 
-		Iterator<String> contributorIt = propertyTabs.keySet().iterator(); 
-		while (contributorIt.hasNext()){
+		for(Entry<String, Map<String, String>> tab: propertyTabs.entrySet()) {
 			// Get a ContributorID from the Map
-			String contributorID = contributorIt.next();
+			String contributorID = tab.getKey();
 			// Get the attribute Map for the current ContributorID
 			Map<String, String> attrMap = propertyTabs.get(contributorID);
 			// Generate the extension
@@ -83,8 +84,9 @@ public class PluginUtility {
 			e.printStackTrace();
 		}
 		
-		if (extension == null)
+		if (extension == null) {
 			throw new IllegalStateException();
+                }
 		
 		// propertyTabs Element element creation
 		IPluginElement propertyTabsElement = createPluginElement(extension, UIConstants.CONF_ELEMENT_PROPERTY_TABS);
@@ -98,14 +100,12 @@ public class PluginUtility {
 		IPluginElement propertyTabElement = createPluginElement(propertyTabsElement, UIConstants.CONF_ELEMENT_PROPERTY_TAB);
 		
 		if (propertyTabElement != null && propertyTabAttributes != null && !propertyTabAttributes.isEmpty()){
-			Iterator<String> attributeIt = propertyTabAttributes.keySet().iterator(); 
-			while (attributeIt.hasNext()){
-				String attrName = attributeIt.next();
+			for (Entry<String, String> attribute: propertyTabAttributes.entrySet()) {
+				String attrName = attribute.getKey();
 				String attrValue = propertyTabAttributes.get(attrName);
 				propertyTabElement.setAttribute(attrName, attrValue);
 			}
 		}
-		
 		return propertyTabsElement;
 			
 	}
