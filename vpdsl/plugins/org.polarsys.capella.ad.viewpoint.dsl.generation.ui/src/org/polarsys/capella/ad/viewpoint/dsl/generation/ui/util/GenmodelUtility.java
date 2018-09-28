@@ -33,10 +33,11 @@ import org.polarsys.kitalpha.ad.viewpoint.dsl.generation.provider.resourceimpl.V
  */
 public class GenmodelUtility {
 
+	//FIXME turn the attribute to private. Client must call GenmodelUtility
 	protected static GenmodelUtility INSTANCE = null;
 	
-	private static GenPackage genPackage;
-	private static EPackage   generatedEPackage;
+	private GenPackage genPackage;
+	private EPackage   generatedEPackage;
 	
 	
 	public static GenmodelUtility getInstance(){
