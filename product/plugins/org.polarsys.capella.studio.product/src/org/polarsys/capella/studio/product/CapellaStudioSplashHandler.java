@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2007, 2009 IBM Corporation and others.
+ * Copyright (c) 2007, 2018 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -28,9 +28,13 @@ import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.branding.IProductConstants;
 import org.eclipse.ui.splash.BasicSplashHandler;
+import org.osgi.framework.Bundle;
 import org.osgi.framework.Version;
 
 public class CapellaStudioSplashHandler extends BasicSplashHandler {
+	
+	private static final String NOT_APPLICABLE = "n/a";
+	
 	/**
 	 * Copied from EclipseSplashHandler
 	 */
@@ -61,9 +65,13 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 		setForeground(new RGB((foregroundColorInteger & 0xFF0000) >> 16, (foregroundColorInteger & 0xFF00) >> 8, foregroundColorInteger & 0xFF));
 
 		// Custom
-		Version studioVersion = product.getDefiningBundle().getVersion();
-		String capellaVersion = "n/a";
-		String kitalphaVersion = "n/a";
+		Bundle definingBundle = product.getDefiningBundle();
+		Version studioVersion = null;
+		if (definingBundle != null) {
+			studioVersion = definingBundle.getVersion();
+		}
+		String capellaVersion = NOT_APPLICABLE;
+		String kitalphaVersion = NOT_APPLICABLE;
 		for (IBundleGroupProvider bundleGroupProvider : Platform.getBundleGroupProviders())
 		{
 			for (IBundleGroup bundleGroups : bundleGroupProvider.getBundleGroups())
@@ -75,10 +83,10 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 			}
 		}
 		StringBuilder builder = new StringBuilder();
-		builder.append(studioVersion.getMajor()).append('.');
-		builder.append(studioVersion.getMinor()).append('.');
-		builder.append(studioVersion.getMicro()).append('.');
-		builder.append(studioVersion.getQualifier());
+		builder.append(studioVersion != null? studioVersion.getMajor() : NOT_APPLICABLE).append('.');
+		builder.append(studioVersion != null? studioVersion.getMinor() : NOT_APPLICABLE).append('.');
+		builder.append(studioVersion != null? studioVersion.getMicro() : NOT_APPLICABLE).append('.');
+		builder.append(studioVersion != null? studioVersion.getQualifier() : NOT_APPLICABLE);
 		final String text = builder.toString();
 		final String fCapellaVersion =  "Capella  "+capellaVersion;
 		final String fKitalphaVersion = "Kitalpha "+kitalphaVersion;
