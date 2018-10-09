@@ -6,7 +6,7 @@ Element-Type: context
 Element-Version: 2.0
 Id: _nGk20J0AEeWgmKoQjPKcMA
 Runtime-Version: 2.2.0.201706152316
-Save-Time: 10/24/17 1:40 PM
+Save-Time: 10/11/18 4:54 PM
 
 ------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/icons/QualityMeasure.png-927bc79b-20f4-3b25-a072-6c557b50f294
 Content-Type: q7/binary
@@ -304,22 +304,6 @@ ZY8eUAFlBDCngOeIFewNAw7jPgRHLz3gNOgCKgFDoAzsWAgk2PTu/P8B4hYQr+SZTM0AAAAASUVORK5C
 YIJQSwcI0XPNgUMXAAA+FwAAUEsBAhQAFAAICAgAAAAhANFzzYFDFwAAPhcAAAgACQAAAAAAAAAAAAAA
 AAAAAC5jb250ZW50VVQFAAEAAAAAUEsFBgAAAAABAAEAPwAAAIIXAAAAAA==
 ------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/icons/CapellaViewpointOff.png-61503e03-7679-35a5-8f12-39729240ed7f--
-------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.activityexplorer-a3572f91-4d00-34bd-ae4b-fb2472ad8601
-Content-Type: q7/binary
-Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.activityexplorer
-
-UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAkALmNvbnRlbnRVVAUAAQAAAAC1U99r2zAQfnag/8Ph
-py0sdtwRBiGElb6vHR19HYp9dgSypUmKWzPyv+8sy4o7d4M+FPxDuvvuO33nz+lyuYAl3ErVaV4dLXzI
-P8K9FEw/dOYTXK+zTQI3QoDLGtBoULdYJEBldEWPHJ+U5I2F7ycmuO1ujEFjamxsn/7KTvYo9RZ+rNfX
-myz77IIFs7iFbJNm6zTbDEzp1YLllrdEscJnJaRGPedMRkyA/L5aRIpVaNzKLeGWKRSChbP5XFRygURu
-sTFcNhDXKGTR1bIgNOrYYXgBUleJ6mdgOpPkA1fSKpcW7IACYt8B2tDCVzcFPsMXt75raVSU982jAk2u
-ubKu9U7td4f9SHM56S497HcpJdWrSbUf+kS8JqErYtqGwwTcXZOopoqnuLJ8FViWDukoz+55RFb4qb5j
-F8sOq4bV+O9BmqN8WvVBOswWrD7hEMa8n9/4Qcf93CiP9yNkNnePhQt4Mtf/fP/k11DIQp0v8Z6Y8wZO
-54rM78iFFjVvqqmwKCJHM8IVFC2ZMGPYG55j0Bxi3Vz2A9pv/VwD9KX6ySYOiLcoTszQIBR77dQX+viE
-9YVm+jE1FjynH/9vgQTNB4cR98/eFRe3BMOE9/niov5B9/kPUEsHCJDS9u7VAQAAxAQAAFBLAQIUABQA
-CAgIAAAAIQCQ0vbu1QEAAMQEAAAIAAkAAAAAAAAAAAAAAAAAAAAuY29udGVudFVUBQABAAAAAFBLBQYA
-AAAAAQABAD8AAAAUAgAAAAA=
-------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.activityexplorer-a3572f91-4d00-34bd-ae4b-fb2472ad8601--
 ------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/.project-f6fd33ff-8a82-3665-be0c-adbd9bcc9796
 Content-Type: q7/binary
 Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.vpdsl/.project
@@ -344,6 +328,22 @@ pYXQMUsm5mIotgy15GR+92FMlTmnYa3D9ZayxD250/1Cje349bPr8ZpUZnrgFCa6OLrDTafMl7d0IXZ4
 IQB/vGdyowAAAO4AAAAIAAkAAAAAAAAAAAAAAAAAAAAuY29udGVudFVUBQABAAAAAFBLBQYAAAAAAQAB
 AD8AAADiAAAAAAA=
 ------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/plugin.properties-b113c3cf-ee47-3dc1-b9fa-49267d836067--
+------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.activityexplorer-a3572f91-4d00-34bd-ae4b-fb2472ad8601
+Content-Type: q7/binary
+Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.activityexplorer
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAkALmNvbnRlbnRVVAUAAQAAAAC1U99r2zAQfnag/8Ph
+py0sdtwRBiGElb6vHR19HYp9dgSypUmKWzPyv+8sy4o7d4M+FPxDuvvuO33nz+lyuYAl3ErVaV4dLXzI
+P8K9FEw/dOYTXK+zTQI3QoDLGtBoULdYJEBldEWPHJ+U5I2F7ycmuO1ujEFjamxsn/7KTvYo9RZ+rNfX
+myz77IIFs7iFbJNm6zTbDEzp1YLllrdEscJnJaRGPedMRkyA/L5aRIpVaNzKLeGWKRSChbP5XFRygURu
+sTFcNhDXKGTR1bIgNOrYYXgBUleJ6mdgOpPkA1fSKpcW7IACYt8B2tDCVzcFPsMXt75raVSU982jAk2u
+ubKu9U7td4f9SHM56S497HcpJdWrSbUf+kS8JqErYtqGwwTcXZOopoqnuLJ8FViWDukoz+55RFb4qb5j
+F8sOq4bV+O9BmqN8WvVBOswWrD7hEMa8n9/4Qcf93CiP9yNkNnePhQt4Mtf/fP/k11DIQp0v8Z6Y8wZO
+54rM78iFFjVvqqmwKCJHM8IVFC2ZMGPYG55j0Bxi3Vz2A9pv/VwD9KX6ySYOiLcoTszQIBR77dQX+viE
+9YVm+jE1FjynH/9vgQTNB4cR98/eFRe3BMOE9/niov5B9/kPUEsHCJDS9u7VAQAAxAQAAFBLAQIUABQA
+CAgIAAAAIQCQ0vbu1QEAAMQEAAAIAAkAAAAAAAAAAAAAAAAAAAAuY29udGVudFVUBQABAAAAAFBLBQYA
+AAAAAQABAD8AAAAUAgAAAAA=
+------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.activityexplorer-a3572f91-4d00-34bd-ae4b-fb2472ad8601--
 ------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/icons/CapellaViewpointOff-old.png-0dbcd5a1-ef0d-3c08-b0d1-d93d869a05c5
 Content-Type: q7/binary
 Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.vpdsl/icons/CapellaViewpointOff-old.png
@@ -509,26 +509,26 @@ SwUGAAAAAAEAAQA/AAAAVAIAAAAA
 Content-Type: q7/binary
 Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.vpdesc
 
-UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAkALmNvbnRlbnRVVAUAAQAAAADdWE1v4zYQvRfofyDU
-W4GKTnppjXi3ruO2AZLtFgmCvRmMNJbZpUiWpOz43++QkvUVyet1tihQIEhicuZxhvPmkfTV2+dckC0Y
-y5WcRRfxJCIgE5Vymc2i+f3i5iZ6++bbb662OgWbTB857LTi0pHnnE9rv0vvh0jSTnF8Fm2c01NKd7td
-rPIsViajH+5uahPbNdn9GCwuJ5MLNLu9TzaQsx+4tI7JBA5e1yr5HeRCyTXPCsNcWLiFopVgxu5twPrI
-HRN6wyhL6fYQM02toAMwFNNuEkheuwKzFHeLs8ywnHq0Lv5W+7GzgYcAfWnOjxSdD4CS5TCL/iqY4G4/
-txaszUG6iNiNMu7dyCzyg5Crx/era+bYGEac4mRpWhovBPOT42v6wAzXZRmqedI24ElrprWSltlhIVxK
-7SSkKyalcqGkllhVmATaG7aL3YYJsJlRhY4TldM8BZqqpPCAwa1BrDFTcIwLSz7CfhbZIs+Z2Udky0SB
-4A8bbgn+uA2Ql8GTkH1EmzDpizibuWa3VgihEl4lgo00dXuNq1XteasSJoJpy+5Q1idmIf0TPybMYH+H
-kGbRJI6/j0iJYmANBkLPBaQHZjJws4jSX6rqhn+qWJAw9IwYl88OjBwPE4vq4NmdFGa7JgfcMmiyQavx
-nkiYBiEYtqeB8tck/imefEepJ3m6FBAo1q7PSIJfu0o5MFsYsIP5n1KVi6GqrObOGf5UuLrhcuYKg9C3
-sAUxQO6v2jDDLYMLQN0vj/4PWRuVkwviFPm5lcbx9qjB/SaP863egQec7QUXPF8wBhLBtYVAGMjX/oC6
-pEvPFuTJ8h7hUGiGovRwA8xpFeGUCoWDKPU8H6vRcMKBJN1sq8bpMWYpsVrlOddr5nNDDgxElTk51n+r
-OL8qJYDJV1cHhQhkar9ETdas1pL5k3WGJe63QiahJeirkEWDfKsy7kVE5VrJnlKdgawb5PebvR2Gbkvg
-587xu1LFemd0Ndo7oI90AAoUmOHD93/W7JXsBxX8z7O96RDqjFRHqNIWnCrvRSVyjjPRk7ky9bAjB+t3
-yq3mB40hwrODiTBM6mF6DOBW7Vp+/tNR8ztIeZG3PKqBo05/8GzTcgkfOz3U3oby7kwrWa5v0nOrIXHd
-u4M/D6adh8vohT32tvVle6s7XtXlZgC8vFnMtRaoAOUC5fyiFIsmjZMh8a1VpdqLXBv1N6ZYvimQho06
-VcoUb3X8T5kYa136JbYJ/7ysvXxPvCb2Pil9rbqZ9RnhW1P6x3H12Gyhdx6Y0+vyoTi6Twof2Tuvg4/3
-d7PIGZSHL1hr4LXrH9LNLW1s3YawI9vVELfiqv+WgPa/JsDBT1BLBwiopEhn8gMAAGMQAABQSwECFAAU
-AAgICAAAACEAqKRIZ/IDAABjEAAACAAJAAAAAAAAAAAAAAAAAAAALmNvbnRlbnRVVAUAAQAAAABQSwUG
-AAAAAAEAAQA/AAAAMQQAAAAA
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAkALmNvbnRlbnRVVAUAAQAAAADdWFFv2zYQfh+w/0Bo
+bwMm2unTjHit53hbgKTrkCDYm8FIZ4krRXIkZcf/viQlS5Qsua7TocCAIInJ43d3vO8+kr5++1IwtAWl
+qeDzaBpPIgQ8ESnl2TxaPCxvb6O3v3z/3fVWpqCT2ROFnRSUG/RS0Fmz7sqts0hcz+z4PMqNkTOMd7td
+LIosFirDf9/fNia6a7J74y2uJpOpNbt7SHIoyE+Ua0N4AodVieAbmpWKGO8yWC8FI0rvtUf5SA1hMieY
+pHh7iBanmmGisc2CkkyRAjs0bNNtA09F8jvw5Wu93BzDdP1spfN9cQLHgVeluXxH7OIDICcFzKO/SsKo
+2S+0Bq0L4CZCOhfKvB+ZtfxA6Prpw/qGGDKGEad2sjKtjJeMuMlxny4wRWVViHoehQY0CWYCT5JnB0fW
+ldhxSNeEc2F8NTTSolQJhBu2i01OGOhMiVLGiShwkQK2jCgdoF/WIjaYKRhCmUYfYT+PdFkURO0jtCWs
+tOCPOdXI/pgc0HHwyGcf4TZMfBRnO9fu1tpCiITWidhGmpm9tN7q9rwTCWHeNLA7lPWZaEj/tB8Tomx/
++5Dm0SSOf4xQhaJgAwp8z3mkR6IyMPMI43d1df0/dSyWMPiCGFcvBhQfD9MW1cCLOSvMsCYH3CpolFur
+8Z5IiATGiJUBBdWvafwmnvyAsSN5umLgKRbWZyTBr12lAoguFejB/M+pynSoKuuFMYo+l6ZpuIKYUlno
+O9gCGyD3V22Y4ZaxDqDplyf3B22UKNAUGYF+DtI43R4NuNvkcb41O/BoZ3vB+ZVHjIGEUanBEwaKjTug
+rvDKscXyZPVg4azQDEXp4AaYExThnAr5Ay91PB+r0XDCniTdbOvG6TFmxW21qiOq18yXhuwZaFXm7Fj/
+q+L8KgQDwl9dHStEwFP9JWqyIY2WLJ61USQxv5U88S2BX4XMWuQ7kVEnIqKQgveU6gJk2SJ/yPd6GDqU
+wM+d4/eVivXO6Hq0d0Cf6AArUKCGD9//WbPXsu9V8Jtne9sh1AWpjlAlFJw672UtcoYS1pO5KnW/Iwfr
+98KsFweNQcyxgzA/jJphfArgTuyCde7TSfN7SGlZBCvqgZOL/qBZHizxHzs9FG5DdXfGtSw3N+mFlpCY
+7t3BnQezzsNi9MIeO9vmsr2VnVX15WYAvLpZLKRkVgEqB9X8shKLNo2zIe1bqE61F7lU4h+bYvWmsDRs
+1alWpngr43+rxEhw6ee2TejnZe34PfGa2PukdLXqZtZnhGtN7h7H9WMwQO88ZGc31YN0dJ+EfWTvnA4+
+PdzPI6OsPHyBr4FH7ewmvKWN+W0JO7JdLXFrrrpvCXD/awI7+AlQSwcI68S2EvMDAABjEAAAUEsBAhQA
+FAAICAgAAAAhAOvEthLzAwAAYxAAAAgACQAAAAAAAAAAAAAAAAAAAC5jb250ZW50VVQFAAEAAAAAUEsF
+BgAAAAABAAEAPwAAADIEAAAAAA==
 ------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.vpdesc-646378af-a86d-398e-9a23-8b69e4874005--
 ------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/icons/CapellaViewpointOn.png-330d3fed-9ffa-363d-aa58-a1b17029f46f
 Content-Type: q7/binary
@@ -671,6 +671,16 @@ nPsn/Ag/1e3umVAy33o7TX4g3kSBU0cuswNeEgm2zTfadBU0biDx7pq3Lt9hgGNTLcyquAuree/f118U
 gcMnGEH1SSwKJsXiF1BLBwjfXYwhzgAAAF8BAABQSwECFAAUAAgICAAAACEA312MIc4AAABfAQAACAAJ
 AAAAAAAAAAAAAAAAAAAALmNvbnRlbnRVVAUAAQAAAABQSwUGAAAAAAEAAQA/AAAADQEAAAAA
 ------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/META-INF/MANIFEST.MF-5e9ee201-9a99-3ae6-ae44-85c71cb7ab99--
+------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/build.properties-431eb5cc-a2e8-325f-b011-32f48dc9359a
+Content-Type: q7/binary
+Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.vpdsl/build.properties
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAkALmNvbnRlbnRVVAUAAQAAAAArzi8tSk7V01OwVSgu
+Stbnyi8tKSgtAfOTMvP0uYCEXmZeck5pSmoxUMzXNcRR19PPTV8nhosTCPSgdG5+SmoOTDAzOT+vGMYp
+yClNB5pRUJRfkFpUkplajCpekZvDBQBQSwcIfJ1p3GAAAACEAAAAUEsBAhQAFAAICAgAAAAhAHydadxg
+AAAAhAAAAAgACQAAAAAAAAAAAAAAAAAAAC5jb250ZW50VVQFAAEAAAAAUEsFBgAAAAABAAEAPwAAAJ8A
+AAAAAA==
+------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/build.properties-431eb5cc-a2e8-325f-b011-32f48dc9359a--
 ------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.spec-aadff381-6142-3cf8-bd59-4e28aed71924
 Content-Type: q7/binary
 Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.spec
@@ -683,16 +693,6 @@ ifVg2SSKmYLX8Vglg06FqtLo6ztSPGHG63iqHoRSvD8voELVdYnGS84LkmJf/5WMXZrhPyTFLvgDjSXh
 KeHCpKlc/vwCUEsHCNNJRecGAQAA1QEAAFBLAQIUABQACAgIAAAAIQDTSUXnBgEAANUBAAAIAAkAAAAA
 AAAAAAAAAAAAAAAuY29udGVudFVUBQABAAAAAFBLBQYAAAAAAQABAD8AAABFAQAAAAA=
 ------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.spec-aadff381-6142-3cf8-bd59-4e28aed71924--
-------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/build.properties-431eb5cc-a2e8-325f-b011-32f48dc9359a
-Content-Type: q7/binary
-Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.vpdsl/build.properties
-
-UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAkALmNvbnRlbnRVVAUAAQAAAAArzi8tSk7V01OwVSgu
-Stbnyi8tKSgtAfOTMvP0uYCEXmZeck5pSmoxUMzXNcRR19PPTV8nhosTCPSgdG5+SmoOTDAzOT+vGMYp
-yClNB5pRUJRfkFpUkplajCpekZvDBQBQSwcIfJ1p3GAAAACEAAAAUEsBAhQAFAAICAgAAAAhAHydadxg
-AAAAhAAAAAgACQAAAAAAAAAAAAAAAAAAAC5jb250ZW50VVQFAAEAAAAAUEsFBgAAAAABAAEAPwAAAJ8A
-AAAAAA==
-------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/build.properties-431eb5cc-a2e8-325f-b011-32f48dc9359a--
 ------=_contents/org.polarsys.capella.vp.qualityassessment.vpdsl/.classpath-92be82d9-a22d-372c-a507-c0c705a4b79c
 Content-Type: q7/binary
 Entry-Name: contents/org.polarsys.capella.vp.qualityassessment.vpdsl/.classpath

@@ -43,13 +43,13 @@
 						<explicit>
 							../../../releng/plugins/org.polarsys.capella.studio.releng.product/target/products/org.polarsys.capella.studio.releng.product/linux/gtk/x86_64/
 						</explicit>
-						<!-- <injections>
+						<injections>
 							<injection>
 								<site>
-									${project.baseUri}../../../releng/<updatesiteToInstall>/target/repository
+									https://ci.polarsys.org/kitalpha/job/Kitalpha_master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.kitalpha.releng.samplecomponent.updatesite/target/repository/
 								</site>
 							</injection>
-						</injections> -->
+						</injections>
 						<vmArgs>
 							<vmArg>${failsafeArgline}</vmArg>
 						</vmArgs>

@@ -13,7 +13,7 @@
    <launcherArgs>
       <programArgs>-showLocation
 -showsplash
-org.polarsys.kitalpha.product.kitalpha
+org.polarsys.capella.studio.product.application
 --launcher.defaultAction
 openFile
 --launcher.appendVmargs
