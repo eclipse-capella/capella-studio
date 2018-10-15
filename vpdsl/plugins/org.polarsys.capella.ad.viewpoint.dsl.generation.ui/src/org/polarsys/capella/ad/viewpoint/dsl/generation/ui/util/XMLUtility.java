@@ -18,11 +18,18 @@ public class XMLUtility {
 	private static final String[] specialCharacters = {"&", "<", ">", "\"", "\'"};
 	private static final String[] xmlValidCharacters = {"&amp;", "&lt;", "&gt;", "&quot;", "&#39;"};
 	
+	/**
+	 * Encode XML characters in input string
+	 * @param input to encode
+	 * @return encoded XML characters in input. If input is null, null is returned
+	 */
 	public static String getValidXMLString(String input){
 		String output = input;
 		
-		for (int i = 0; i < specialCharacters.length; i++) {
-			output = output.replaceAll(specialCharacters[i], xmlValidCharacters[i]);
+		if (output != null) {
+			for (int i = 0; i < specialCharacters.length; i++) {
+				output = output.replaceAll(specialCharacters[i], xmlValidCharacters[i]);
+			}
 		}
 		
 		return output;
