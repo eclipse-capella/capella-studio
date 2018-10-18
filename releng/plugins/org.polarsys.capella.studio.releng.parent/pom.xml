@@ -50,7 +50,7 @@
 		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
 		<!-- <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis> -->
 		<sonar.jacoco.release>0.7.9</sonar.jacoco.release>
-		<rcptt-maven-version>2.1.0</rcptt-maven-version>
+		<rcptt-maven-version>2.2.0</rcptt-maven-version>
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
 		<capellastudio-application>org.polarsys.capella.studio.product.application</capellastudio-application>
 		<sonar-version>3.0.2</sonar-version>

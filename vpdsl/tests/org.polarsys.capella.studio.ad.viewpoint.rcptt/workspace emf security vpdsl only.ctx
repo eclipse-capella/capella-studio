@@ -6,7 +6,7 @@ Element-Type: context
 Element-Version: 2.0
 Id: _74VB4Gh8Eeab7okcBYwVdA
 Runtime-Version: 2.2.0.201706152316
-Save-Time: 10/24/17 12:59 PM
+Save-Time: 10/11/18 5:16 PM
 
 ------=_contents/org.polarsys.kitalpha.vp.security.vpdsl/plugin.properties-541a9d4b-c4cc-354a-955a-d886a9f7e815
 Content-Type: q7/binary
@@ -72,6 +72,19 @@ S444obB2YHGRO8j0e4kCs6TZarGfb+0uYDnSGz1ren14UOW/XwoWwXhBEFxnErTvLnfE8ZoqijmpjuMV
 0ucUcjrBC+IfuCrPK9wDUEsHCBjkRGvQAAAAeAEAAFBLAQIUABQACAgIAAAAIQAY5ERr0AAAAHgBAAAI
 AAkAAAAAAAAAAAAAAAAAAAAuY29udGVudFVUBQABAAAAAFBLBQYAAAAAAQABAD8AAAAPAQAAAAA=
 ------=_contents/org.polarsys.kitalpha.vp.security.vpdsl/.classpath-9eee42a9-969c-3aee-9100-cce20899c4c6--
+------=_contents/org.polarsys.kitalpha.vp.security.vpdsl/plugin.xml-3b89758d-be0f-3fb6-882c-43d4ebe0678f
+Content-Type: q7/binary
+Entry-Name: contents/org.polarsys.kitalpha.vp.security.vpdsl/plugin.xml
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAkALmNvbnRlbnRVVAUAAQAAAADdlMFuwyAMhs/NU0Tc
+B5u2ww4kue0Jtt0ReCkaAYRJ1r79IGqarF2lVTl1vtm//dt8B3iz60w5QEDtbEUe6D0pwUqntG0r8vb6
+cvdMmrrgDUijPcLc+kifRsWbvtW2LooNh10Em9ViU+bwTttYERda6p0RAfdIP3UUxm8FDYCuDxIC9AjH
+DEmdh/mUH5xSKNcJnfYOXqEhc12rSxsGTxFkH3Tc03GKKkAZtI/pxIVDFC2OvkldlK3ooCKTw0LwIm4r
+wv64lHVOgWHLYt7D0js5OxJL/G4B4OQ619GDPGP5ruFrvP0c58/2dSizWVJiwvYLz5vEqUQUV+A8aV+H
+M5v9M5zS2Y8rcJ60r8OZzS7i5Ozwb34DUEsHCCPcd2cVAQAAgQUAAFBLAQIUABQACAgIAAAAIQAj3Hdn
+FQEAAIEFAAAIAAkAAAAAAAAAAAAAAAAAAAAuY29udGVudFVUBQABAAAAAFBLBQYAAAAAAQABAD8AAABU
+AQAAAAA=
+------=_contents/org.polarsys.kitalpha.vp.security.vpdsl/plugin.xml-3b89758d-be0f-3fb6-882c-43d4ebe0678f--
 ------=_contents/org.polarsys.kitalpha.vp.security.vpdsl/model/security.conf.vptext-0a48a2cb-bcb7-3bd6-91fc-c67d151120ab
 Content-Type: q7/binary
 Entry-Name: contents/org.polarsys.kitalpha.vp.security.vpdsl/model/security.conf.vptext
@@ -86,19 +99,6 @@ EquXtLgqA+FJaZw8ranJ7I+2J9yDZLW1/44MZZuSHPcd8IPcJvzhvTu7jVO0t3dQSwcIGL6lPGgBAABg
 AgAAUEsBAhQAFAAICAgAAAAhABi+pTxoAQAAYAIAAAgACQAAAAAAAAAAAAAAAAAAAC5jb250ZW50VVQF
 AAEAAAAAUEsFBgAAAAABAAEAPwAAAKcBAAAAAA==
 ------=_contents/org.polarsys.kitalpha.vp.security.vpdsl/model/security.conf.vptext-0a48a2cb-bcb7-3bd6-91fc-c67d151120ab--
-------=_contents/org.polarsys.kitalpha.vp.security.vpdsl/plugin.xml-3b89758d-be0f-3fb6-882c-43d4ebe0678f
-Content-Type: q7/binary
-Entry-Name: contents/org.polarsys.kitalpha.vp.security.vpdsl/plugin.xml
-
-UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAkALmNvbnRlbnRVVAUAAQAAAADdlMFuwyAMhs/NU0Tc
-B5u2ww4kue0Jtt0ReCkaAYRJ1r79IGqarF2lVTl1vtm//dt8B3iz60w5QEDtbEUe6D0pwUqntG0r8vb6
-cvdMmrrgDUijPcLc+kifRsWbvtW2LooNh10Em9ViU+bwTttYERda6p0RAfdIP3UUxm8FDYCuDxIC9AjH
-DEmdh/mUH5xSKNcJnfYOXqEhc12rSxsGTxFkH3Tc03GKKkAZtI/pxIVDFC2OvkldlK3ooCKTw0LwIm4r
-wv64lHVOgWHLYt7D0js5OxJL/G4B4OQ619GDPGP5ruFrvP0c58/2dSizWVJiwvYLz5vEqUQUV+A8aV+H
-M5v9M5zS2Y8rcJ60r8OZzS7i5Ozwb34DUEsHCCPcd2cVAQAAgQUAAFBLAQIUABQACAgIAAAAIQAj3Hdn
-FQEAAIEFAAAIAAkAAAAAAAAAAAAAAAAAAAAuY29udGVudFVUBQABAAAAAFBLBQYAAAAAAQABAD8AAABU
-AQAAAAA=
-------=_contents/org.polarsys.kitalpha.vp.security.vpdsl/plugin.xml-3b89758d-be0f-3fb6-882c-43d4ebe0678f--
 ------=_contents/org.polarsys.kitalpha.vp.security.vpdsl/model/security.data.vptext-e2c2701b-832f-3610-b56b-b50ee95e621f
 Content-Type: q7/binary
 Entry-Name: contents/org.polarsys.kitalpha.vp.security.vpdsl/model/security.data.vptext
@@ -121,26 +121,26 @@ Content-Type: q7/binary
 Entry-Name: contents/org.polarsys.kitalpha.vp.security.vpdsl/model/security.vpdesc
 
 UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAkALmNvbnRlbnRVVAUAAQAAAADtWFtv2zYUfh+w/yBo
-bwMqxum2B8Nu59mKpyJxitg12qeAlo5tbhKpkpSc/Psd6i7FdtykQYeiCBDI5DmfvnMVeQZv76LQSkEq
-JvjQ7jlntgXcFwHjm6E9mo89z3775uefBmkcgPL7Swa7WDCurbuI9Su9c6OHSFz1cX1ob7WO+4TsdjtH
-RBtHyA35eOVVIqotsnudSZyfnfVQ7HLubyGirxhXmnIfSq2J8KfAx4Kv2SaRVGcvbqDEIqRS3asM61+m
-aRhvKaEBSUvOJFAh2QND0OzaAP+5b6CKoLcY3UgaEYPWxgdfSGjhgh+yWEEGC9HaOOKcuEas1Eljg/Nk
-Mg9J5OF8unWoXAJyGqE5CvxEMn1vW2orpJ61FzGDLGuwfH87oZp2NJwA13KJXGYcUqVAFWLzQswNIQKu
-bYuulJbU10NbywRs8qjmBMlKFptwHgIpMBootyOtJVsl+hhcrYeaYschuNX3MViY4H3zMLSLsnHvNEhO
-wwp0gbtNbdTPNLcS1ifmxi+EuHOE45vKBxkOqYnUZpE9dtW7Ht8CmoaFj9Y+IH8pfBrOkxhkhoARrp6H
-NiF/FmHNHooIYF5UcSH18qOhMmkTPCdI5v+PqHzlqLgpDROqnxcZ7KffPjITkaxC+I4iwyE62Blfkm+v
-4cMXgH/9Ze4oPyUXkgE/IUu/d3+U6bHA8qD6RQ3/7WnMlknIQdIVC6vjwf+L4FgkHHvQFVCVyH0dDrA1
-KCV8lp0TD5HNRBty5XFJi+IFtuVTiadtahwxtM8c51fbynGwtYGE7AScYS2o3IA+wdCjfXgjaKhObsTZ
-i9tduGDXYeHyJIL8zNzsZt+glf7+tIAfjvRDH8J6zXyW9ZgA2acQFC3Gwn7Dldnp9pwfH7xDH7ymp6/j
-MocKT/siipHKNBSr0C287t+33VrqPOLaPHlb1dbb5+EaILup9V3DPVf+Ks5v0d0XgNoJx/O4WXKdZJ5i
-kTcyOQv4Eg9xVQZ7s4U7vfEWn2wLXYEoYXONHFMdX88uvIk7W3ijyzZAd+cozGg58i5Hf3kdjNbyUYDZ
-9ez2xn3/YTJaeNezBkRn4ziLD4u/DeELb9yFebDVaitN5+e3W1KkeXXXHakYfN2uF3MT77eGD90LtGNE
-qutwGreEi6PNHsz84zCK45D5BW6+715d1MxPhpsCL6zrkI2l+Aetyu/3mPb12KAcGThp7NTTAI5NlZ0w
-Z6g0vpzrDYTYu7E8q0HFsjHPwr/PCdb7mpmPbSXSuMUP7XqqtfdyP5DwOWES7z93yDIjw1MmBTeE3ryj
-KZ27r3rOHwNyVLDMngOGPSNG3VI3adiOYLcITFPkxkfFLKyB3pp/9Sf5HOtgPogU5M58Gpbzq85E5oR3
-7RnGmTlfYizOfh16LznJm1lNFmVohpikO8XExf8AUEsHCHkeoS8nBAAAAhUAAFBLAQIUABQACAgIAAAA
-IQB5HqEvJwQAAAIVAAAIAAkAAAAAAAAAAAAAAAAAAAAuY29udGVudFVUBQABAAAAAFBLBQYAAAAAAQAB
-AD8AAABmBAAAAAA=
+bwMqxum2B8Nu59lKpiJxitg12qeAlo5tbhKpkpSc/Psd6i75Ejdp0KEoChQOec7H71xFnsHb+yi0UpCK
+CT60e86ZbQH3RcD4emiPZmPPs9+++fmnQRoHoPz+gsE2Foxr6z5i/Urv3OghEld9XB/aG63jPiHb7dYR
+0doRck0+XnuViGqLbF9nEudnZz0Uu5r5G4joK8aVptyHUssXfMXWiaQ6O7KhH4uQSvWgMpR/maZhvKGE
+BiQt2ZJAhYQqglYwupY0IgaNoLk18UD4l8DHzz1lsgvTPgd8IaGFDH7IYgUZMEQr44hz4hqxUieNDd8n
+G71rbB7Op3sRlUtATiM0R4GfSKYfbEtthNTT9iJmkGUNFu/vJlTTjoYT4FoukcuMQ6oUqEJsVoi5IUTA
+tW3RpdKS+npoa5mATR7VnCBZyWITiUMgBUYD5W6ktWTLRB+Dq/VQU2w5BHf6IQYLE7xvfgztomzcew2S
+07ACneNuUxv1M82NhNWJufELIe4M4fi68kGGQ2oitVlkj131rsc3gKZh4aO1O+SvhE/DWRKDzBAwwtXv
+oU3In0VYsx9FBDAvqriQevnRUJm0CZ4TJPP/j6h85ai4KQ0Tqp8XGWyF3z4yE5EsQ/iOIsMhOtgZX5Jv
+r+HDF4B//WXuKD8lF5IBPyFLv3d/lOkxx/Kg+kUN/+1pzBZJyEHSJQur68H/i+BYJBx70DVQlch9HQ6w
+NSglfJZd8Q6RzUQbcuV1SYviANvyqcTbNjWOGNpnjvOrbeU42NpAQnYDzrDmVK5Bn2Do0T68FjRUJzfi
+7OB2Fy7YdVi4PIkgv+42u9k3aKW/Py3ghyO960NYrZjPsh4TIPsUgqLFWNhvuDI73Z7z44N36IPX9PRN
+XOZQ4WlfRDFSuQzFMnQLr/sPbbeWOo+4Nk/eVrX19nm4Bshean3XcM+Vv4rzW3T3BaB2wvE8bpZcJ5kv
+scgbmZwFfIGXuCqDvencvbz15p9sC12BKGFzjRxTHd9ML7yJO517o6s2QHfnKMxoMfKuRn95HYzW8lGA
+6c307tZ9/2Eymns30wZEZ+M4iw/zvw3hC2/chdnZarWVpvPz1y0p0rx6645UDL5u14t5ifdbw4HuA9ox
+ItVzOI1bwsXVZg9m/nEYxXHI/AI333evL2rmJ8NdAi+s65CNpfgHrcrf95j29digHBk4aezU0wCOTZWd
+MGeoNL6c6y2E2LuxPKtBxaIxz8J/nxOs9xUzH9tKpPGKH9r1VGvv434g4XPCJL5/7pFlRoanTApuCL15
+R1M6c1/1nD8G5KhgmT0HDHtGjLqlbtKwHcFuEZimyI2PillVA701Z+tP8nnZwXwQKcit+TQsZtedicwJ
+Z+2ZufUnwk+Mxdlfh84lJ3kzq8miDM0Qk3SnmLj4H1BLBwhoXGEnKAQAAAIVAABQSwECFAAUAAgICAAA
+ACEAaFxhJygEAAACFQAACAAJAAAAAAAAAAAAAAAAAAAALmNvbnRlbnRVVAUAAQAAAABQSwUGAAAAAAEA
+AQA/AAAAZwQAAAAA
 ------=_contents/org.polarsys.kitalpha.vp.security.vpdsl/model/security.vpdesc-148f2745-a306-34d7-95ab-2382bc42f6b6--
 ------=_.q7.content-3d2e0690-ce48-3609-83e0-c704d49f1eaf
 Content-Type: q7/binary

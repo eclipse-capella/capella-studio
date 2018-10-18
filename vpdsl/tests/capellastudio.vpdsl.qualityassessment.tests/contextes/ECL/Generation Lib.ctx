@@ -5,8 +5,8 @@ Element-Name: Generation Lib
 Element-Type: context
 Element-Version: 2.0
 Id: _KOH-MKJ5EeWqlNQu-Q0L2A
-Runtime-Version: 2.0.2.201511100828
-Save-Time: 5/11/17 11:22 AM
+Runtime-Version: 2.2.0.201706152316
+Save-Time: 10/12/18 4:28 PM
 
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
 Content-Type: text/ecl
@@ -24,13 +24,33 @@ proc generateViewpointWithSelection [val vpdescFilePath] [val generationName]{
 	}
 }
 
+proc "get-os" {
+	invoke-static -pluginId "org.eclipse.core.runtime" -className "org.eclipse.core.runtime.Platform"
+		-methodName getOS
+}
+
 /** Get the system temporary folder **/
+/*
+ * FIXME: file://tmp does not exist on linux system
+ */
 proc "getTempFolder" {
-	concat "file:/" [ get-file [ get-java-property "java.io.tmpdir"] 
-						| get uri 
-						| invoke replace "\\" "/" 
-						| invoke replace " " "%20" 
-					]
+//		switch $operatingSystem {
+//		[case "win32" {
+//				concat "file:/" [ get-file [ get-java-property "java.io.tmpdir"] 
+//							| get uri 
+//							| invoke replace "\\" "/" 
+//							| invoke replace " " "%20" 
+//					]
+//			}
+//		]
+//		[case "linux" {
+				concat "/" "tmp"
+//			}
+//		]
+//		-default {
+//			"." //current folder used as tmp
+//		}
+//	}
 }
 
 /** Get the today date with the given format **/
@@ -42,7 +62,9 @@ proc refershAllGeneratedProjects {
 	with [get-view "Project Explorer"] {
 	    get-button "Collapse All  (M1+M2+Numpad_Divide)" | click
 	    with [get-tree] {
-	        select "org.polarsys.capella.vp.qualityassessment" "org.polarsys.capella.vp.qualityassessment.af" "org.polarsys.capella.vp.qualityassessment.af.feature" "org.polarsys.capella.vp.qualityassessment.contextual.explorer" "org.polarsys.capella.vp.qualityassessment.design" "org.polarsys.capella.vp.qualityassessment.fc" "org.polarsys.capella.vp.qualityassessment.feature" "org.polarsys.capella.vp.qualityassessment.model" "org.polarsys.capella.vp.qualityassessment.model.edit" "org.polarsys.capella.vp.qualityassessment.releng" "org.polarsys.capella.vp.qualityassessment.representation.feature" "org.polarsys.capella.vp.qualityassessment.rules.analysis" "org.polarsys.capella.vp.qualityassessment.rules.computation" "org.polarsys.capella.vp.qualityassessment.rules.feature" "org.polarsys.capella.vp.qualityassessment.rules.generation" "org.polarsys.capella.vp.qualityassessment.rules.transformation" "org.polarsys.capella.vp.qualityassessment.rules.validation" "org.polarsys.capella.vp.qualityassessment.ui" "org.polarsys.capella.vp.qualityassessment.vpdsl"
+		    select "org.polarsys.capella.vp.qualityassessment"
+		    key-type "M1+a"
+//	        select "org.polarsys.capella.vp.qualityassessment.af" "org.polarsys.capella.vp.qualityassessment.af.feature" "org.polarsys.capella.vp.qualityassessment.contextual.explorer" "org.polarsys.capella.vp.qualityassessment.design" "org.polarsys.capella.vp.qualityassessment.fc" "org.polarsys.capella.vp.qualityassessment.feature" "org.polarsys.capella.vp.qualityassessment.model" "org.polarsys.capella.vp.qualityassessment.model.edit" "org.polarsys.capella.vp.qualityassessment.releng" "org.polarsys.capella.vp.qualityassessment.representation.feature" "org.polarsys.capella.vp.qualityassessment.rules.analysis" "org.polarsys.capella.vp.qualityassessment.rules.computation" "org.polarsys.capella.vp.qualityassessment.rules.feature" "org.polarsys.capella.vp.qualityassessment.rules.generation" "org.polarsys.capella.vp.qualityassessment.rules.transformation" "org.polarsys.capella.vp.qualityassessment.rules.validation" "org.polarsys.capella.vp.qualityassessment.ui" "org.polarsys.capella.vp.qualityassessment.vpdsl"
 	        get-menu Refresh | click
 	    }
 	}

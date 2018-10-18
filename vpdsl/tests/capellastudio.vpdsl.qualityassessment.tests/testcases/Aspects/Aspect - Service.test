@@ -6,8 +6,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _nKc4sJ2ZEeWgmKoQjPKcMA
-Runtime-Version: 2.0.2.201511100828
-Save-Time: 7/8/16 5:34 PM
+Runtime-Version: 2.2.0.201706152316
+Save-Time: 10/11/18 9:24 AM
 Testcase-Type: ecl
 Verifications: _xe8uEJkJEeW9roo66l64HA,_kwtycJ2fEeWgmKoQjPKcMA
 
@@ -28,72 +28,24 @@ get-window -from "CompletionProposalPopup.createProposalSelector()" | get-table 
     | click -default
 get-window "Viewpoint Services File Creation Wizard" | get-button Finish | click
 
-// Get properties specification
 get-view "Project Explorer" | get-tree 
     | select "org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.services" | double-click
 with [get-editor "QualityAssessment.services" | get-text-viewer] {
-    set-caret-pos 18 1
-    select-range 18 1 20 2
-    get-menu Copy | click
+    set-caret-pos 9 2
+    select-range 9 1 20 2
+    key-type "M1+c"
 }
-
-get-view "Project Explorer" | get-tree 
-    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.services.vptext" | double-click
-with [get-editor "QualityAssessment.services.vptext" | get-text-viewer] {
-    set-caret-pos 10 1
-    select-range 9 1 13 2
-    //hover-text 14 18
-    // key-type BackSpace
-    key-type "M1+v"
-}
-get-button "Save All (M1+M2+S)" | click
-
-// Get Rules specification
-get-view "Project Explorer" | get-tree 
-    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.services" | double-click
-with [get-editor "QualityAssessment.services" | get-text-viewer] {
-    set-caret-pos 9 1
-    select-range 9 1 12 2
-    get-menu Copy | click
-}
-
-get-view "Project Explorer" | get-tree 
-    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.services.vptext" | double-click
-with [get-editor "QualityAssessment.services.vptext" | get-text-viewer] {
-    set-caret-pos 11 2
-    key-type Enter
-    key-type "M1+v"
-}
-get-button "Save All (M1+M2+S)" | click
-
-// Get Services specification
-get-view "Project Explorer" | get-tree 
-    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.services" | double-click
-with [get-editor "QualityAssessment.services" | get-text-viewer] {
-    set-caret-pos 13 1
-    select-range 13 1 15 2
-    get-menu Copy | click
-}
-
-get-view "Project Explorer" | get-tree 
-    | select "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.services.vptext" | double-click
-with [get-editor "QualityAssessment.services.vptext" | get-text-viewer] {
-    set-caret-pos 15 2
-    key-type Enter
-    key-type "M1+v"
-}
-get-button "Save All (M1+M2+S)" | click
-
-
-// Close Artefact Editor
-//get-tab-folder | get-tab-item "QualityAssessment.services" | click
-with [get-editor "QualityAssessment.services"] {
+with [get-editor "QualityAssessment.services.vptext"] {
     click
-    close
+    with [get-text-viewer] {
+        set-caret-pos 9 2
+        select-range 9 1 13 2
+        key-type "M1+v"
+        key-type "M1+s"
+        hover-text 13 23 -with M1
+    }
 }
 
 get-view "Project Explorer" | get-tree 
     | select "org.polarsys.capella.vp.qualityassessment.vpdsl/model/QualityAssessment.vpdesc" | double-click
-//get-tab-folder | get-tab-item "QualityAssessment.services.vptext" | click
-//get-editor "QualityAssessment.services.vptext" | click
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
