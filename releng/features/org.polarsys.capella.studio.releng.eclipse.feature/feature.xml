@@ -224,6 +224,14 @@
    <includes
          id="org.eclipse.emf.diffmerge.egit.feature.source"
          version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.diffmerge.coevolution.sdk.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.eclipse.emf.diffmerge.coevolution.sdk.feature.source"
+         version="0.0.0"/>
 
    <includes
          id="org.eclipse.emf.doc"
