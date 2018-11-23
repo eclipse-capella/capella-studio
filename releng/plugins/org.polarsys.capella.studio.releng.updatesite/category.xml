@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.polarsys.capella.extension.sdk.feature_1.2.1.qualifier.jar" id="org.polarsys.capella.extension.sdk.feature" version="1.2.1.qualifier">
+   <feature url="features/org.polarsys.capella.extension.sdk.feature_1.2.2.qualifier.jar" id="org.polarsys.capella.extension.sdk.feature" version="1.2.2.qualifier">
       <category name="CapellaStudio"/>
    </feature>
-   <feature url="features/org.polarsys.capella.studio.product.feature_1.2.1.qualifier.jar" id="org.polarsys.capella.studio.product.feature" version="1.2.1.qualifier">
+   <feature url="features/org.polarsys.capella.studio.product.feature_1.2.2.qualifier.jar" id="org.polarsys.capella.studio.product.feature" version="1.2.2.qualifier">
       <category name="CapellaStudio"/>
    </feature>
-   <feature url="features/org.polarsys.capella.ta.viewpoint.dsl.feature_1.2.1.qualifier.jar" id="org.polarsys.capella.ta.viewpoint.dsl.feature" version="1.2.1.qualifier">
+   <feature url="features/org.polarsys.capella.ta.viewpoint.dsl.feature_1.2.2.qualifier.jar" id="org.polarsys.capella.ta.viewpoint.dsl.feature" version="1.2.2.qualifier">
       <category name="CapellaStudio"/>
    </feature>
-   <feature url="features/org.polarsys.capella.extension.sdk.feature.source_1.2.1.qualifier.jar" id="org.polarsys.capella.extension.sdk.feature.source" version="1.2.1.qualifier">
+   <feature url="features/org.polarsys.capella.extension.sdk.feature.source_1.2.2.qualifier.jar" id="org.polarsys.capella.extension.sdk.feature.source" version="1.2.2.qualifier">
       <category name="CapellaStudio"/>
    </feature>
-   <feature url="features/org.polarsys.capella.studio.product.feature.source_1.2.1.qualifier.jar" id="org.polarsys.capella.studio.product.feature.source" version="1.2.1.qualifier">
+   <feature url="features/org.polarsys.capella.studio.product.feature.source_1.2.2.qualifier.jar" id="org.polarsys.capella.studio.product.feature.source" version="1.2.2.qualifier">
       <category name="CapellaStudio"/>
    </feature>
-   <feature url="features/org.polarsys.capella.ta.viewpoint.dsl.feature.source_1.2.1.qualifier.jar" id="org.polarsys.capella.ta.viewpoint.dsl.feature.source" version="1.2.1.qualifier">
+   <feature url="features/org.polarsys.capella.ta.viewpoint.dsl.feature.source_1.2.2.qualifier.jar" id="org.polarsys.capella.ta.viewpoint.dsl.feature.source" version="1.2.2.qualifier">
       <category name="CapellaStudio"/>
    </feature>
    <category-def name="CapellaStudio" label="Capella Studio"/>

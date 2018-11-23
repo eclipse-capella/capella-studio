@@ -15,12 +15,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.polarsys.capella</groupId>
 	<artifactId>capellastudio</artifactId>
-	<version>1.2.1-SNAPSHOT</version>
+	<version>1.2.2-SNAPSHOT</version>
 	<packaging>eclipse-target-definition</packaging>
 	<parent>
 		<groupId>org.polarsys.capella</groupId>
 		<artifactId>org.polarsys.capella.studio.releng.parent</artifactId>
-		<version>1.2.1-SNAPSHOT</version>
+		<version>1.2.2-SNAPSHOT</version>
 		<relativePath>../org.polarsys.capella.studio.releng.parent</relativePath>
 	</parent>
 	<licenses>
