@@ -13,6 +13,8 @@ package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.codegen.ecore.genmodel.GenEnum;
 import org.eclipse.emf.codegen.ecore.genmodel.GenEnumLiteral;
 import org.eclipse.emf.codegen.ecore.genmodel.GenModel;
@@ -24,6 +26,7 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.Activator;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpdesc.AbstractAttributeType;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpdesc.AbstractFeature;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpdesc.Attribute;
@@ -100,13 +103,13 @@ public class DataWidget{
 		
 		widgetFieldTypeEnumerator = initEnumerator();
 		
-		generatedClassesImports = new ArrayList<String>();
+		generatedClassesImports = new ArrayList<>();
 		additionalImports = computeAdditionalImports();
-		PluginExtensionEntries = new ArrayList<PluginExtensionEntry>();
+		PluginExtensionEntries = new ArrayList<>();
 	}
 	
 	private ArrayList<String> computeAdditionalImports() {
-		ArrayList<String> result = new ArrayList<String>();
+		ArrayList<String> result = new ArrayList<>();
 		if (this.uiField.getType().equals(UI_Field_Type.RICHTEXT))
 		{
 			result.add("org.polarsys.kitalpha.richtext.common.intf.MDERichTextWidget");
@@ -152,7 +155,7 @@ public class DataWidget{
 	public WidgetEnumerator initEnumerator(){
 		final FieldMapping mapping = this.uiField.getMapping();
 		final AbstractFeature mappedAttribute = mapping.getUI_Field_Mapped_To();
-		if (mappedAttribute instanceof Attribute == false)
+		if ( ! (mappedAttribute instanceof Attribute))
 			return null;
 		
 		final Attribute attribute = (Attribute)mappedAttribute;
@@ -171,8 +174,8 @@ public class DataWidget{
 			final EDataType externalAttributeType = ((ExternalAttributeType) attributeType).getType();
 			final String attributeTypeName = externalAttributeType.getName();
 			// Check if the attribute type is well a generated or available enumeration
-			if (attributeTypeName.equals("EEnumerator") == false 
-					&& externalAttributeType instanceof EEnum == false)
+			if (!attributeTypeName.equals("EEnumerator")  
+					&& !(externalAttributeType instanceof EEnum))
 				return null;
 			
 			if (attributeTypeName.equals("EEnumerator")){
@@ -185,21 +188,21 @@ public class DataWidget{
 			{
 				// The case of the use of an external EEnum
 				enumName = attributeTypeName;
-				String enumEPackageNSURI = externalAttributeType.getEPackage().getNsURI().toString();
+				String enumEPackageNSURI = externalAttributeType.getEPackage().getNsURI();
 				URI genModelURI = EcorePlugin.getEPackageNsURIToGenModelLocationMap().get(enumEPackageNSURI);
 				ResourceSet rs = new ResourceSetImpl();
 				Resource r = rs.createResource(genModelURI);
 				try {
 					r.load(null);
 				} catch (IOException e) {
-					e.printStackTrace();
+					Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 				}
 				for (GenPackage genPackage : ((GenModel)r.getContents().get(0)).getGenPackages()) 
 				{
 					// check the GenPackage EEnum elements
 					for (GenEnum iGenEnum : genPackage.getGenEnums()) 
 					{
-						if (iGenEnum.getName().toLowerCase().equals(enumName.toLowerCase()) &&
+						if (iGenEnum.getName().equalsIgnoreCase(enumName) &&
 								enumEPackageNSURI.equals(genPackage.getEcorePackage().getNsURI()))
 						{
 							genEnum = iGenEnum;
@@ -216,7 +219,7 @@ public class DataWidget{
 					{
 						for (GenEnum nestedGenEnum : nestedGenPackage.getGenEnums()) 
 						{
-							if (nestedGenEnum.getName().toLowerCase().equals(enumName.toLowerCase()) )
+							if (nestedGenEnum.getName().equalsIgnoreCase(enumName) )
 							{
 								genEnum = nestedGenEnum;
 								break;
@@ -235,7 +238,7 @@ public class DataWidget{
 		
 		String genEnumName = genEnum.getClassifierAccessorName();
 		String importName = genEnum.getQualifiedName();
-		ArrayList<String> genEnumLiteralsList = new ArrayList<String>();		
+		ArrayList<String> genEnumLiteralsList = new ArrayList<>();		
 		for (GenEnumLiteral iGenEnumLiteral : genEnum.getGenEnumLiterals())
 			genEnumLiteralsList.add(iGenEnumLiteral.getEnumLiteralInstanceConstantName());
 		
@@ -249,7 +252,7 @@ public class DataWidget{
 											getFeatureETypeEPackageImport(
 													this.uiField.getMapping().getUI_Field_Mapped_To());
 		} catch (Exception e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 		
 		return ePackageImport;
@@ -262,7 +265,7 @@ public class DataWidget{
 											getFeatureContainerAccessorName(
 													this.uiField.getMapping().getUI_Field_Mapped_To());
 		} catch (Exception e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 		
 		return containerAccessorName;
@@ -275,7 +278,7 @@ public class DataWidget{
 											getFeatureContainerLiteral(
 													this.uiField.getMapping().getUI_Field_Mapped_To());
 		} catch (Exception e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 		
 		return containerLiteral;
@@ -288,7 +291,7 @@ public class DataWidget{
 											getFeatureETypeLiteral(
 													this.uiField.getMapping().getUI_Field_Mapped_To());
 		} catch (Exception e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 		
 		return eTypeName;
@@ -301,7 +304,7 @@ public class DataWidget{
 											getFeatureETypeName(
 													this.uiField.getMapping().getUI_Field_Mapped_To());
 		} catch (Exception e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 		
 		return eTypeName;
@@ -315,7 +318,7 @@ public class DataWidget{
 									getFeatureShortAccessorName(
 											this.uiField.getMapping().getUI_Field_Mapped_To());
 		} catch (Exception e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 		return "get"+accessorName+"()";
 	}
@@ -327,13 +330,13 @@ public class DataWidget{
 										getFeatureLongAccessorName(
 												this.uiField.getMapping().getUI_Field_Mapped_To());
 		} catch (Exception e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 		return GenmodelUtility.getInstance().getPackageAccessorName()+".eINSTANCE.get"+accessorName+"()";
 	}
 	
 	private ArrayList<String> computeSematicImports(){
-		ArrayList<String> result = new ArrayList<String>();
+		ArrayList<String> result = new ArrayList<>();
 		String packageImport = GenmodelUtility.getInstance().getPackageImport();
 		if (packageImport != null)
 			result.add(packageImport);
@@ -374,15 +377,15 @@ public class DataWidget{
 			case RICHTEXT:
 				return "MDERichTextWidget";
 			case CHECKBOX:
-				String checkbox_name = this.uiField.getName()+"_semanticCheckboxGroup";
-				char checkbox_first = Character.toUpperCase(checkbox_name.charAt(0));
-				checkbox_name = checkbox_first + checkbox_name.substring(1);
-				return checkbox_name;
+				String checkboxName = this.uiField.getName()+"_semanticCheckboxGroup";
+				char checkboxFirst = Character.toUpperCase(checkboxName.charAt(0));
+				checkboxName = checkboxFirst + checkboxName.substring(1);
+				return checkboxName;
 			case RADIOBOX:
-				String radiobox_name = this.uiField.getName()+"_semanticKindGroup";
-				char radiobox_first = Character.toUpperCase(radiobox_name.charAt(0));
-				radiobox_name = radiobox_first + radiobox_name.substring(1);
-				return radiobox_name;
+				String radioboxName = this.uiField.getName()+"_semanticKindGroup";
+				char radioboxFirst = Character.toUpperCase(radioboxName.charAt(0));
+				radioboxName = radioboxFirst + radioboxName.substring(1);
+				return radioboxName;
 			case SIMPLE_CHOICE_LIST:
 				return "SimpleSemanticField";
 			case MULTIPLE_CHOICE_LIST:

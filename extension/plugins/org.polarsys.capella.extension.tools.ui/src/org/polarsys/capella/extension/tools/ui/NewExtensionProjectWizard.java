@@ -174,7 +174,8 @@ public abstract class NewExtensionProjectWizard extends Wizard implements INewWi
 		try {
 			resource.save(null);
 		} catch (IOException e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
+			throw new IllegalStateException("An error has occured. See log file.");
 		}
 
 		return resource;
@@ -242,7 +243,8 @@ public abstract class NewExtensionProjectWizard extends Wizard implements INewWi
 				resource.save(null);
 				result.add(resource);
 			} catch (IOException e) {
-				e.printStackTrace();
+				Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
+				throw new IllegalStateException("An error has occured. See log file.");
 			}
 		}
 		return result;

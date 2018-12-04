@@ -11,6 +11,7 @@
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extensions;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtensionRegistry;
@@ -39,7 +40,7 @@ public class UIExtensionsManager {
 		return result;
 	}
 	
-	public static ArrayList<IConfigurationElement> getConfigurationElements(String extensionPointID, 
+	public static List<IConfigurationElement> getConfigurationElements(String extensionPointID, 
 																  			String configurationElementName){
 		
 		ArrayList<IConfigurationElement> result = new ArrayList<IConfigurationElement>();

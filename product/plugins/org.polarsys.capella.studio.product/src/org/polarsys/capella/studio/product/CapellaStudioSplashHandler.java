@@ -38,6 +38,7 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 	/**
 	 * Copied from EclipseSplashHandler
 	 */
+	@Override
 	public void init(Shell splash) {
 		super.init(splash);
 		String progressRectString = null;
@@ -112,15 +113,15 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 				FontData[] fontData = e.gc.getFont().getFontData();
 				for (int i = 0; i < fontData.length; ++i)
 					fontData[i].setHeight(height);
-				final Font newFont = new Font(e.display, fontData);
-				return newFont;
+				return new Font(e.display, fontData);
 			}
 		});
 	}
 	private String trunkQualifier(String version) {
 		int index = version.lastIndexOf('.');
-		if (index < 0)
-		return version;
+		if (index < 0) {
+			return version;
+		}
 		return version.substring(0, index);
 	}
 

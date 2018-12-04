@@ -35,7 +35,7 @@ public class CapellaGenerationExtension extends DefaultEmfGenerationExtension {
 	private static final URI PATTERN_ECORE = URIFix.createPlatformPluginURI("/org.polarsys.capella.extension.genchain/egf/capellaExtension.fcore#__Az0wCIVEeCuNfuGnuOPDw", false);
 	private static final URI PATTERN_GENMODEL = URIFix.createPlatformPluginURI("/org.polarsys.capella.extension.genchain/egf/capellaExtension.fcore#_bvRiUCIsEeCkc_7OLLz7bw", false);
 
-	private static final List<String> CONFLICT_LIST = Arrays.asList(new String[] { "basic.emf.generation", "emde.emf.generation" });
+	private static final List<String> CONFLICT_LIST = Arrays.asList("basic.emf.generation", "emde.emf.generation" );
 
 	@Override
 	public List<String> getConflictingExtensions() {

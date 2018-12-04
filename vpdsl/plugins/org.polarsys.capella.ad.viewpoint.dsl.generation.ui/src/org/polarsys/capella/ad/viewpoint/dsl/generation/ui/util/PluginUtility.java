@@ -17,6 +17,8 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.pde.core.plugin.IExtensionsModelFactory;
 import org.eclipse.pde.core.plugin.IPluginElement;
 import org.eclipse.pde.core.plugin.IPluginExtension;
@@ -25,6 +27,7 @@ import org.eclipse.pde.core.plugin.IPluginModelFactory;
 import org.eclipse.pde.core.plugin.IPluginParent;
 import org.eclipse.pde.internal.core.plugin.WorkspacePluginModel;
 import org.eclipse.pde.internal.core.project.PDEProject;
+import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.Activator;
 
 /**
  * @author Boubekeur Zendagui
@@ -81,7 +84,7 @@ public class PluginUtility {
 		try {
 			extension = createExtension(pluginModelBase, UIConstants.EXTENSION_PROPERTY_TABS__ID);
 		} catch (CoreException e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 		
 		if (extension == null) {

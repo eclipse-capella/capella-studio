@@ -164,8 +164,7 @@ public class GenmodelUtility {
 	}
 	
 	public String getFeatureETypeName(NamedElement feature) {
-		if (feature == null || 
-				! (feature instanceof AbstractAssociation)){
+		if (! (feature instanceof AbstractAssociation)){
 			return null;
 		}
 		
@@ -179,8 +178,7 @@ public class GenmodelUtility {
 	}
 	
 	public String getFeatureETypeEPackageImport(NamedElement feature) {
-		if (feature == null || 
-				! (feature instanceof AbstractAssociation)){
+		if (! (feature instanceof AbstractAssociation)){
 			return null;
 		}
 		
@@ -214,8 +212,7 @@ public class GenmodelUtility {
 	}
 	
 	public String getFeatureETypeLiteral(NamedElement feature){
-		if (feature == null || 
-				! (feature instanceof AbstractAssociation)){
+		if (! (feature instanceof AbstractAssociation)){
 			return null;
 		}
 		

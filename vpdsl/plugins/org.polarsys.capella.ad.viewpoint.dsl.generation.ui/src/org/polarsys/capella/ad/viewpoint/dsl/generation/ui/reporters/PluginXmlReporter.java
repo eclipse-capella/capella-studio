@@ -12,16 +12,19 @@ package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.reporters;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.egf.model.pattern.PatternContext;
 import org.eclipse.egf.model.pattern.PatternExecutionReporter;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-
+import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.Activator;
 import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extensions.UIPropertiesExtensionsManager;
 import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.GenmodelUtility;
 import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.UIProjectManager;
@@ -47,7 +50,7 @@ public class PluginXmlReporter implements PatternExecutionReporter {
 		
 	private String tabExtensions = "";
 	private String additionalExtensions = "";
-	private ArrayList<String> sections = new ArrayList<String>();
+	private ArrayList<String> sections = new ArrayList<>();
 	
 	private String computeSectionsOutput(String targetApplication){
 		// Get the Properties Contributors list 
@@ -57,7 +60,7 @@ public class PluginXmlReporter implements PatternExecutionReporter {
 		StringBuilder propertiesSections = new StringBuilder();
 		
 		for (IConfigurationElement iPropertiesContributor : propertiesContributors) {
-			ArrayList<IConfigurationElement> contributors = UIPropertiesExtensionsManager.
+			List<IConfigurationElement> contributors = UIPropertiesExtensionsManager.
 																	getContributors(iPropertiesContributor);
 			for (IConfigurationElement iContributor : contributors) {
 				String cID = UIPropertiesExtensionsManager.getContributorID(iContributor);
@@ -89,7 +92,7 @@ public class PluginXmlReporter implements PatternExecutionReporter {
 			+PLUGIN_END;
 		
 		try {
-			ArrayList<String> requiredBundles = new ArrayList<String>();
+			ArrayList<String> requiredBundles = new ArrayList<>();
 			requiredBundles.add(GenmodelUtility.getInstance().getModelPluginID());
 			requiredBundles.add("org.polarsys.kitalpha.ad.services");
 			requiredBundles.add("org.polarsys.capella.core.ui.properties");
@@ -101,15 +104,13 @@ public class PluginXmlReporter implements PatternExecutionReporter {
 			PDEUtility.updatePluginXml(project, finalOutput);
 			PDEUtility.updateBuild_BinInclude(project, "plugin.xml", false, new NullProgressMonitor());
 			
-		} catch (InvocationTargetException e1) {
-			e1.printStackTrace();
-		} catch (InterruptedException e1) {
-			e1.printStackTrace();
+		} catch (InvocationTargetException|InterruptedException e) {
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 		try {
 			project.refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 		} catch (CoreException e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 		sections.clear();
 	}

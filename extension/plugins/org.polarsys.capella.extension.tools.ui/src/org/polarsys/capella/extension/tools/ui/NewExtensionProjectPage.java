@@ -180,7 +180,6 @@ public class NewExtensionProjectPage extends WizardPage {
 				}
 			}
 			ecoreText.setText(builder.toString());
-			return;
 		}
 	}
 

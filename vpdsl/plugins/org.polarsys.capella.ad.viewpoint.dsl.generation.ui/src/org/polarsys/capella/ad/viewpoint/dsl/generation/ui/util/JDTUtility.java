@@ -17,13 +17,17 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.jdt.core.ToolFactory;
 import org.eclipse.jdt.core.formatter.CodeFormatter;
+import org.eclipse.jface.text.BadLocationException;
 import org.eclipse.jface.text.Document;
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.text.edits.MalformedTreeException;
 import org.eclipse.text.edits.TextEdit;
+import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.Activator;
 
 /**
  * @author Boubekeur Zendagui
@@ -44,10 +48,8 @@ public class JDTUtility {
         try {
                 te.apply(dc);
                 javaCode = dc.get();
-        } catch (MalformedTreeException e) {
-                e.printStackTrace();
-        } catch (org.eclipse.jface.text.BadLocationException e) {
-                e.printStackTrace();
+        } catch (MalformedTreeException|BadLocationException e) {
+        	Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
         }
 
 		return javaCode;
@@ -63,7 +65,7 @@ public class JDTUtility {
 				javaFile.create(outputContent, true, null);
 
 		} catch (CoreException e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 	}
 	
@@ -83,7 +85,7 @@ public class JDTUtility {
 			try {
 				src.create(true, true, null);
 			} catch (CoreException e) {
-				e.printStackTrace();
+				Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 			}
 		}
 		Path packageFolderPath = new Path(packageName.replace('.', '/'));
@@ -97,7 +99,7 @@ public class JDTUtility {
 				try {
 					curFolder.create(true, true, null);
 				} catch (CoreException e) {
-					e.printStackTrace();
+					Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 				}
 			}
 			parent = curFolder;

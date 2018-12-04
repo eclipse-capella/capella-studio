@@ -24,7 +24,7 @@ public class EPFUtility {
 	
 	/******************************** CLASS AREA *************************************/
 	
-	private static final Map<UIContainer, EPFUtility> EPF_Utility_List = new HashMap<UIContainer, EPFUtility>();
+	private static final Map<UIContainer, EPFUtility> EPF_Utility_List = new HashMap<>();
 	
 	public static EPFUtility getEPFUtilityFor(UIContainer section){
 		EPFUtility result = EPF_Utility_List.get(section);
@@ -41,8 +41,8 @@ public class EPFUtility {
 	
 	/***************************** INSTANCE OBJECT AREA ********************************/
 	// this list contains all widget
-	protected ArrayList<DataWidget> generatedWidgetList = new ArrayList<DataWidget>();
-	protected ArrayList<UIContainer> generatedGroupList = new ArrayList<UIContainer>();
+	protected ArrayList<DataWidget> generatedWidgetList = new ArrayList<>();
+	protected ArrayList<UIContainer> generatedGroupList = new ArrayList<>();
 	
 	public void registerClassToImportInMainClass(UIField uiField, String classQualifiedName){
 		DataWidget currentDataWidget = getDataOf(uiField);

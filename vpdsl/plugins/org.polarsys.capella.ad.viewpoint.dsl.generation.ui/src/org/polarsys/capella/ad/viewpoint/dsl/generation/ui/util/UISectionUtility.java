@@ -45,7 +45,7 @@ public class UISectionUtility {
 	}
 	
 	private static List<Class> getAssociatedClasses(UIContainer container){
-		List<Class> result = new BasicEList<Class>();
+		List<Class> result = new BasicEList<>();
 		
 		/**
 		 * Get Associated Classes with UI Fields

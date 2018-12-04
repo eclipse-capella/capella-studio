@@ -129,7 +129,7 @@ public class Application implements IApplication, IExecutableExtension {
 				public void preStartup() {
 					super.preStartup();
 					
-					String bundleVersion = ((String) Platform.getProduct().getDefiningBundle().getHeaders().get("Bundle-version")); //$NON-NLS-1$
+					String bundleVersion = Platform.getProduct().getDefiningBundle().getHeaders().get("Bundle-version"); //$NON-NLS-1$
 				    System.setProperty("capellaStudioVersion", bundleVersion.substring(0, 5));
 				    System.setProperty("buildId", bundleVersion.substring(6));
 					
@@ -309,7 +309,6 @@ public class Application implements IApplication, IExecutableExtension {
 				url = new URL("file", null, path); //$NON-NLS-1$
 			} catch (MalformedURLException e) {
 				MessageDialog.openError(shell, IDEWorkbenchMessages.IDEApplication_workspaceInvalidTitle, IDEWorkbenchMessages.IDEApplication_workspaceInvalidMessage);
-				continue;
 			}
 		} while (!checkValidWorkspace(shell, url));
 
@@ -341,11 +340,11 @@ public class Application implements IApplication, IExecutableExtension {
 		}
 
 		final int ide_version = Integer.parseInt(WORKSPACE_VERSION_VALUE);
-		int workspace_version = Integer.parseInt(version);
+		int workspaceVersion = Integer.parseInt(version);
 
 		// equality test is required since any version difference (newer
 		// or older) may result in data being trampled
-		if (workspace_version == ide_version) {
+		if (workspaceVersion == ide_version) {
 			return true;
 		}
 

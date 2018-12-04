@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Deque;
+
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
@@ -33,10 +34,10 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
-import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.pde.internal.core.ClasspathComputer;
 import org.eclipse.pde.internal.core.natures.PDE;
 import org.eclipse.swt.widgets.Display;
@@ -67,7 +68,7 @@ public class ResourceHelper {
 					try {
 						createProject(project, true);
 					} catch (Exception e) {
-						e.printStackTrace();
+						Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 					}
 				}
 			});
@@ -82,7 +83,7 @@ public class ResourceHelper {
 						try {
 							createFolder(folder, NULL_PROGRESS_MONITOR);
 						} catch (Exception e) {
-							e.printStackTrace();
+							Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 						}
 					}
 				});
@@ -131,14 +132,14 @@ public class ResourceHelper {
 			}
 
 		} catch (CoreException e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 		return null;
 	}
 
 	private static Collection<IFile> getFiles(IFolder folder) throws CoreException {
 		if (folder != null && folder.exists()) {
-			Collection<IFile> list = new ArrayList<IFile>();
+			Collection<IFile> list = new ArrayList<>();
 			for (IResource resource : folder.members()) {
 				if (resource instanceof IFolder) {
 					list.addAll(getFiles((IFolder) resource));
@@ -185,7 +186,7 @@ public class ResourceHelper {
 	}
 
 	private static Deque<IFolder> getStack(IFolder folder) {
-		Deque<IFolder> stack = new ArrayDeque<IFolder>();
+		Deque<IFolder> stack = new ArrayDeque<>();
 		if (folder != null && !folder.exists()) {
 			stack.push(folder);
 			IContainer parent = folder.getParent();
@@ -224,10 +225,8 @@ public class ResourceHelper {
 		if (!project.exists()) {
 			try {
 				return createProject(project, true);
-			} catch (JavaModelException e) {
-				e.printStackTrace();
 			} catch (CoreException e) {
-				e.printStackTrace();
+				Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 			}
 		} else {
 			return project;

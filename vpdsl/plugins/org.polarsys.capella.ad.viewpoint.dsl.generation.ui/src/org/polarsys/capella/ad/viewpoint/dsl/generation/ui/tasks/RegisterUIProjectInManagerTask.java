@@ -11,9 +11,12 @@
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.tasks;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.egf.core.producer.InvocationException;
 import org.eclipse.egf.ftask.producer.context.ITaskProductionContext;
 import org.eclipse.egf.ftask.producer.invocation.ITaskProduction;
+import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.Activator;
 import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.constant.GeneratorContracts;
 import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.UIProjectManager;
 
@@ -33,7 +36,7 @@ public class RegisterUIProjectInManagerTask implements ITaskProduction {
 		try {
 			UIProjectManager.INSTANCE.registerUIProject(pname);
 		} catch (Exception e) {
-			e.printStackTrace();
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
 		}
 	}
 
