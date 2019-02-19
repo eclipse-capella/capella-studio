@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018 THALES GLOBAL SERVICES.
+ * Copyright (c) 2018, 2019 THALES GLOBAL SERVICES.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -14,7 +14,7 @@ with source, requirements
 
 
 
-location eclipse-releases-oxygen "http://download.eclipse.org/releases/oxygen/" {
+location eclipse-releases-oxygen "http://download.eclipse.org/releases/oxygen/201803211000" {
 	org.eclipse.sdk.feature.group lazy
 	org.eclipse.egit.feature.group lazy
 	org.eclipse.equinox.executable.feature.group lazy
@@ -133,7 +133,7 @@ location eclipse-releases-oxygen "http://download.eclipse.org/releases/oxygen/" 
 }
 
 
-location sirius "http://download.eclipse.org/sirius/updates/stable/6.1.0-S20180831-112606/oxygen/" {
+location sirius "http://download.eclipse.org/sirius/updates/milestones/6.1.2rc3/oxygen" {
 	org.eclipse.sirius.doc.feature.feature.group lazy
 	org.eclipse.sirius.doc.feature.source.feature.group lazy
 	org.eclipse.sirius.runtime.ide.eef.feature.group lazy
@@ -187,7 +187,7 @@ location coevolution "http://download.eclipse.org/diffmerge/releases/0.11.0/edm-
 	 org.eclipse.emf.diffmerge.coevolution.sdk.feature.feature.group lazy
 }
 
-location amalgam "http://download.eclipse.org/modeling/amalgam/updates/stable/1.9.0-S20180903/capella/" {
+location amalgam "http://download.eclipse.org/modeling/amalgam/updates/stable/1.10.0-S20181119/capella" {
 	org.eclipse.amalgam.explorer.activity.feature.group lazy
 	org.eclipse.amalgam.explorer.activity.source.feature.group lazy
 	org.eclipse.amalgam.explorer.contextual.feature.group lazy

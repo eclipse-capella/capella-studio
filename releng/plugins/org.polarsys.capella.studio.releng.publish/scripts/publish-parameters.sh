@@ -1,6 +1,6 @@
 #!/bin/sh
 # ====================================================================
-# Copyright (c) 2006, 2017 THALES GLOBAL SERVICES.
+# Copyright (c) 2006, 2019 THALES GLOBAL SERVICES.
 # All rights reserved. This program and the accompanying materials
 # are made available under the terms of the Eclipse Public License v1.0
 # which accompanies this distribution, and is available at
@@ -35,7 +35,7 @@ export BUILD_TYPE=$2
 export BUILD_TYPE_PREFIX=$3
 
 # The full version (should be taken as an argument)
-export VERSION="1.3.0"
+export VERSION="1.3.1"
 
 # Streams are of the form 1.0.x: only keep major and minor version number parts
 export STREAM=$(echo "$VERSION" | sed -r -e 's/^([0-9]+\.[0-9]+\.).*$/\1x/')
