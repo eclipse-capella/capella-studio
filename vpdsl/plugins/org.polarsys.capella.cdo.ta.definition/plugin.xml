@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.polarsys.kitalpha.ad.ta.definition">
+      <definition
+            RootNsURI="http://www.polarsys.org/capella/"
+            RootProjectName="org.polarsys.capella.team.vp"
+            class="org.polarsys.capella.cdo.ta.definition.CDOForCapellaTargetApplication"
+            description="This generator specification is dedicated to Team for Capella 1.1.0 or higher"
+            name="Team for Capella">
+            <metaModel
+               nsuri="http://www.polarsys.org/capella/core/.*"
+               type="Regex">
+	         </metaModel>
+	         <metaModel
+	               nsuri="http://www.polarsys.org/capella/common/.*"
+	               type="Regex">
+	         </metaModel>
+      </definition>
+   </extension>
+   
+   <extension
+         point="org.polarsys.capella.ad.viewpoint.dsl.generation.ui.UIPropertiesContributors">
+      <propertiesContributors
+            targetApplication="Team for Capella">
+         <Contributor
+               id="org.eclipse.sirius.diagram.ui"
+               name="Sirius diagram contribution"
+               propertyTabCategory="semantic &amp; extension">
+         </Contributor>
+         <Contributor
+               id="org.polarsys.capella.core.data.capellamodeller.properties"
+               name="Capella Treeview Contribution"
+               propertyTabCategory="default">
+         </Contributor>
+      </propertiesContributors>
+   </extension>
+   
+     <extension
+         point="org.polarsys.kitalpha.ad.viewpoint.dsl.as.diagram.helper.diagramfilter">
+      <Filter
+            ModelFileExtension="melodymodeller"
+            TargetApplication="CDO for Capella">
+      </Filter>
+   </extension>
+     <extension
+           point="org.polarsys.kitalpha.ad.viewpoint.dsl.as.diagram.expression.helper.diagramExpressionLanguage">
+        <expression
+              TargetApplication="CDO for Capella"
+              language="AQL">
+        </expression>
+     </extension>
+     <extension
+           point="org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.common.externaldataloader">
+        <ExternalDataLoader
+              id="org.polarsys.capella.team.metamodels"
+              target="CDO for Capella">
+           <NamespacePattern
+                 id="CDO for Capella"
+                 value="http://www.polarsys.org/capella/.*"/>
+        </ExternalDataLoader>
+     </extension>
+
+</plugin>

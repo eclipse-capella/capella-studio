@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.polarsys.capella.cdo.ta.definition;singleton:=true
+Bundle-Version: 1.4.0.qualifier
+Bundle-Activator: org.polarsys.capella.cdo.ta.definition.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.egf.portfolio.genchain,
+ org.polarsys.kitalpha.ad.ta,
+ org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.common,
+ org.polarsys.capella.ta,
+ org.eclipse.egf.portfolio.genchain.cdo
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName

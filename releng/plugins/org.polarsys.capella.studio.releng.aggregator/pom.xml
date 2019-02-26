@@ -52,11 +52,14 @@
     <module>../../../vpdsl/plugins/org.polarsys.capella.ad.viewpoint.dsl.generation.ui</module>
     <module>../../../vpdsl/plugins/org.polarsys.capella.ta</module>
     <module>../../../vpdsl/plugins/org.polarsys.capella.ta.viewpoint.dsl.extension</module>
+    <module>../../../vpdsl/plugins/org.polarsys.capella.cdo.ta.definition</module>
+    <module>../../../vpdsl/plugins/org.polarsys.capella.cdo.ta.ext</module>
     
     <!-- Features  -->
     <module>../../../extension/features/org.polarsys.capella.extension.sdk.feature</module>
     <module>../../../product/features/org.polarsys.capella.studio.product.feature</module>
     <module>../../../vpdsl/features/org.polarsys.capella.ta.viewpoint.dsl.feature</module>
+    <module>../../../vpdsl/features/org.polarsys.capella.cdo.ta.definition.feature</module>
     <module>../../../releng/features/org.polarsys.capella.studio.releng.eclipse.feature</module>
     <module>../../../releng/features/org.polarsys.capella.studio.releng.capella.feature</module>
     <module>../../../releng/features/org.polarsys.capella.studio.releng.kitalpha.feature</module>
