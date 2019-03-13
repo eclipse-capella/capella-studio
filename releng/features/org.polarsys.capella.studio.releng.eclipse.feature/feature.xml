@@ -450,6 +450,10 @@
          version="0.0.0"/>
 
    <includes
+         id="org.eclipse.sirius.aql"
+         version="0.0.0"/>
+
+   <includes
          id="org.eclipse.sirius.doc.feature.source"
          version="0.0.0"/>
 
@@ -531,6 +535,10 @@
 
    <includes
          id="org.eclipse.sirius.specifier.ide.ui.acceleo.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.interpreter.feature"
          version="0.0.0"/>
 
    <includes
@@ -648,6 +656,14 @@
    <includes
          id="org.eclipse.sirius.query.legacy.feature"
          version="0.0.0"/>
+		 
+   <includes
+         id="org.eclipse.acceleo.ui.interpreter"
+         version="0.0.0"/>
+		 
+   <includes
+         id="org.eclipse.acceleo.query"
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.ocl.ecore"
@@ -755,24 +771,11 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.acceleo.query"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.antlr.runtime"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
-   <plugin
-         id="org.eclipse.acceleo.annotations"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
 
 </feature>
