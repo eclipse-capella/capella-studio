@@ -35,6 +35,6 @@ if [ "$LOG" = "true" ]; then
 	check_folder After $PUBLISH_FOLDER_ROOT/products/milestone
 	check_folder After $PUBLISH_FOLDER_ROOT/updates/stable/sdk
 	check_folder After $PUBLISH_FOLDER_ROOT/products/stable
-	echo "After release : df -h /home/data/httpd/download.polarsys.org/kitalpha"
+	echo "After release : df -h /home/data/httpd/download.eclipse.org/kitalpha"
 	df -h $PUBLISH_FOLDER_ROOT
 fi

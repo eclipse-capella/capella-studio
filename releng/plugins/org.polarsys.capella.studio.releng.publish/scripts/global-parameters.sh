@@ -13,7 +13,7 @@
 # ====================================================================
 #
 # This script Publish update site from runtime core build to
-# to http://download.polarsys.org/kitapha/updates
+# to http://download.eclipse.org/kitapha/updates
 #
 # ====================================================================
 
@@ -40,14 +40,14 @@ export TARGET_PATH="releng/plugins/org.polarsys.capella.studio.releng.targets"
 # Job name
 export JOB_NAME=capella-studio-master-clone1
 # The root folder for all Publish
-export PUBLISH_FOLDER_ROOT="/home/data/httpd/download.polarsys.org/capella/$PRODUCT_NAME"
+export PUBLISH_FOLDER_ROOT="/home/data/httpd/download.eclipse.org/capella/$PRODUCT_NAME"
 # The root folder for all Publish udpate sites
 export PUBLISH_UPDATES_ROOT="$PUBLISH_FOLDER_ROOT/updates"
 # The root folder for all Publish products
 export PUBLISH_PRODUCTS_ROOT="$PUBLISH_FOLDER_ROOT/products"
 # Publish url
-export URL_PUBLISH_PREFIX="http://download.polarsys.org/capella/$PRODUCT_NAME/updates"
-export URL_PRODUCT_PREFIX="http://download.polarsys.org/capella/$PRODUCT_NAME/products"
+export URL_PUBLISH_PREFIX="http://download.eclipse.org/capella/$PRODUCT_NAME/updates"
+export URL_PRODUCT_PREFIX="http://download.eclipse.org/capella/$PRODUCT_NAME/products"
 # Master Build Url
 export MASTER_BUILD_URL="https://hudson.polarsys.org/capella/job/$JOB_NAME"
 # The root folder where all the builds of the same type as this one

@@ -13,7 +13,7 @@
 # ====================================================================
 #
 # This script Publish update site from runtime core build to
-# to http://download.polarsys.org/kitapha/updates
+# to http://download.eclipse.org/kitapha/updates
 #
 # ====================================================================
 
