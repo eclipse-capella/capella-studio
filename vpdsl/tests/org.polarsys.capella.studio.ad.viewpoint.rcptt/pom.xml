@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
+  Copyright (c) 2006, 2019 THALES GLOBAL SERVICES.
   All rights reserved. This program and the accompanying materials
   are made available under the terms of the Eclipse Public License v1.0
   which accompanies this distribution, and is available at
@@ -46,7 +46,7 @@
 						<injections>
 							<injection>
 								<site>
-									https://ci.polarsys.org/kitalpha/job/Kitalpha_master/lastSuccessfulBuild/artifact/releng/plugins/org.polarsys.kitalpha.releng.samplecomponent.updatesite/target/repository/
+									https://download.eclipse.org/kitalpha/updates/nightly/component/1.4.x/
 								</site>
 							</injection>
 						</injections>

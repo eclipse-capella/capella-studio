@@ -104,7 +104,6 @@ public class CapellaEmfGenerationItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-		super.notifyChanged(notification);
 	}
 
 	/**

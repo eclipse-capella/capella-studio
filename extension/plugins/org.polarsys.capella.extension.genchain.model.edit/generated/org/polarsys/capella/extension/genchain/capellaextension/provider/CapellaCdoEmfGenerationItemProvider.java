@@ -99,7 +99,6 @@ public class CapellaCdoEmfGenerationItemProvider extends EmdeCdoGenerationItemPr
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-		super.notifyChanged(notification);
 	}
 
 	/**
