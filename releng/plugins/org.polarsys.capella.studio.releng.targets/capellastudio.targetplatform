@@ -92,8 +92,6 @@ location kitalpha-sdk "http://download.eclipse.org/kitalpha/updates/nightly/sdk/
 	org.polarsys.kitalpha.resourcereuse.emfscheme.feature.source.feature.group lazy
 	org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature.feature.group lazy
 	org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature.source.feature.group lazy
-	org.polarsys.kitalpha.model.attachment.feature.feature.group lazy
-	org.polarsys.kitalpha.model.attachment.feature.source.feature.group lazy
 	org.polarsys.kitalpha.model.detachment.feature.feature.group lazy
 	org.polarsys.kitalpha.model.detachment.feature.source.feature.group lazy
 	org.polarsys.kitalpha.model.common.ui.menu.feature.feature.group lazy 

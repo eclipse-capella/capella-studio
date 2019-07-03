@@ -56,6 +56,14 @@
          version="0.0.0"/>
 
    <includes
+         id="org.polarsys.capella.cdo.ta.definition.feature"
+         version="0.0.0"/>
+         
+   <includes
+         id="org.polarsys.capella.cdo.ta.definition.feature.source"
+         version="0.0.0"/>
+         
+   <includes
          id="org.polarsys.capella.extension.sdk.feature"
          version="0.0.0"/>
          

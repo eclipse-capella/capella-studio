@@ -7,8 +7,8 @@
             RootNsURI="http://www.polarsys.org/capella/"
             RootProjectName="org.polarsys.capella.team.vp"
             class="org.polarsys.capella.cdo.ta.definition.CDOForCapellaTargetApplication"
-            description="This generator specification is dedicated to Team for Capella 1.1.0 or higher"
-            name="Team for Capella">
+            description="This generator specification is dedicated to Team for Capella 1.4.0 or higher"
+            name="CDO for Capella">
             <metaModel
                nsuri="http://www.polarsys.org/capella/core/.*"
                type="Regex">
@@ -23,7 +23,7 @@
    <extension
          point="org.polarsys.capella.ad.viewpoint.dsl.generation.ui.UIPropertiesContributors">
       <propertiesContributors
-            targetApplication="Team for Capella">
+            targetApplication="CDO for Capella">
          <Contributor
                id="org.eclipse.sirius.diagram.ui"
                name="Sirius diagram contribution"

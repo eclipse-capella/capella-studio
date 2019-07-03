@@ -148,10 +148,6 @@
          version="0.0.0"/>
          
    <includes
-         id="org.polarsys.kitalpha.model.attachment.feature.source"
-         version="0.0.0"/>
-         
-   <includes
          id="org.polarsys.kitalpha.model.detachment.feature.source"
          version="0.0.0"/>
    
