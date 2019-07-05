@@ -158,6 +158,7 @@ location capella-egf-patterns "http://download.eclipse.org/capella/core/updates/
 location capella "http://download.eclipse.org/capella/core/updates/nightly/1.4.0/org.polarsys.capella.rcp.site/" {
 	org.polarsys.capella.rcp.feature.feature.group lazy
 	org.polarsys.capella.rcp.feature.source.feature.group lazy
+	org.polarsys.capella.cdo.mock.feature.feature.group lazy
 	org.polarsys.capella.common.ui.feature.feature.group lazy
 	org.polarsys.capella.common.ui.feature.source.feature.group lazy
 	org.polarsys.capella.core.advance.feature.feature.group lazy
