@@ -65,7 +65,7 @@
    
    <!-- Capella XHTML DocGen -->
    <includes
-         id="org.polarsys.capella.docgen.package.feature"
+         id="org.polarsys.capella.docgen.configuration.feature"
          version="0.0.0"/>
    
    <includes
