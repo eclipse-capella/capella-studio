@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="capellastudio" sequenceNumber="1537166566">
+<target name="capellastudio" sequenceNumber="1563196086">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
@@ -194,7 +194,7 @@
       <unit id="org.eclipse.sirius.runtime.aql.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.runtime.aql.source.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.jar" version="0.0.0"/>
-      <repository id="sirius" location="http://download.eclipse.org/sirius/updates/stable/5.1.4-S20181130-113030/neon"/>
+      <repository id="sirius" location="http://download.eclipse.org/sirius/updates/releases/5.1.4/neon"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.eef.sdk-feature.feature.group" version="0.0.0"/>
@@ -272,12 +272,12 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.kitalpha.runtime.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.runtime.feature.source.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-runtime" location="http://download.polarsys.org/kitalpha/updates/stable/runtime/1.2.2/"/>
+      <repository id="kitalpha-runtime" location="http://download.polarsys.org/kitalpha/updates/release/runtime/1.2.2/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.kitalpha.common.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.common.feature.source.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-runtimeCore" location="http://download.polarsys.org/kitalpha/updates/stable/runtimecore/1.2.2/"/>
+      <repository id="kitalpha-runtimeCore" location="http://download.polarsys.org/kitalpha/updates/release/runtimecore/1.2.2/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group" version="0.0.0"/>
@@ -396,17 +396,17 @@
       <unit id="org.polarsys.kitalpha.richtext.widget.doc.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.richtext.widget.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.richtext.widget.ext.feature.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-sdk" location="http://download.polarsys.org/kitalpha/updates/stable/sdk/1.2.2/"/>
+      <repository id="kitalpha-sdk" location="http://download.polarsys.org/kitalpha/updates/release/sdk/1.2.2/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.core.egf.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.egf.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella-egf-patterns" location="http://download.polarsys.org/capella/core/updates/stable/1.2.2-S20181206-153602/org.polarsys.capella.egf.site/"/>
+      <repository id="capella-egf-patterns" location="http://download.polarsys.org/capella/core/updates/releases/1.2.2-R20181206-153602/org.polarsys.capella.egf.site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.rcp.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.rcp.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella" location="http://download.polarsys.org/capella/core/updates/stable/1.2.2-S20181206-153602/org.polarsys.capella.rcp.site/"/>
+      <repository id="capella" location="http://download.polarsys.org/capella/core/updates/releases/1.2.2-R20181206-153602/org.polarsys.capella.rcp.site/"/>
     </location>
   </locations>
 </target>
