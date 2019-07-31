@@ -289,6 +289,7 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.rcp.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.rcp.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.cdo.mock.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.common.ui.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.common.ui.feature.source.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.advance.feature.feature.group" version="0.0.0"/>
