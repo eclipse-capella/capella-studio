@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2019 Thales Global Services S.A.S.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+ 
+Contributors:
+  Thales Global Services S.A.S - initial API and implementation
+-->
+<toc label="Capella Studio Documentation" topic="html/introduction.html">
+ 	<topic href="html/introduction.html" label="Introduction">
+   </topic>
+  <topic href="html/extension/cdo.html" label="Vewpoint Creation">
+     <topic href="html/extension/cdo.html" label="Generate viewpoints for CDO platforms">
+     </topic>
+  </topic>
+   <anchor id="gendocAnchor"/>
+   <anchor id="vpdslAnchor"/>
+   <topic href="html/underconstruction.html" label="FAQ">
+   </topic>
+   <topic href="html/legal.html" label="Legal">
+   </topic>
+</toc>

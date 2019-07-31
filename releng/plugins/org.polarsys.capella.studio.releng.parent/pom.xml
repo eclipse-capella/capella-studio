@@ -175,6 +175,7 @@
 						<feature id="org.polarsys.capella.studio.product.feature"/>
 						<feature id="org.polarsys.capella.ta.viewpoint.dsl.feature"/>
 						<feature id="org.polarsys.capella.extension.sdk.feature"/>
+						<feature id="org.polarsys.capella.studio.doc.feature"/>
 						<!-- Exlude all plugins and feature without source -->
 						<!-- To be configured <plugin id="org.polarsys.capella.ui.views"/> <feature id="org.eclipse.emf.diffmerge.sdk.feature"/>
 							-->

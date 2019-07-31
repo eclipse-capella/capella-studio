@@ -1,0 +1,35 @@
+
+= Introduction =
+
+
+Capella Studio provides a full-integrated development environment whitch aims at facilitating the development of extensions for Capella MBSE.
+
+It provides developers with a platform containing both:
+
+* Kitalpha and Eclipse modeling frameworks and tools
+
+* Capella models and tools
+
+===Foundations===
+[[File:img/Capella-studio-foundations.png|none|700px]]
+
+===core Features===
+* Provides an EMF generation adapted to the Capella MBSE models
+
+* Provides user-friendly tools to orchestrate a Capella EMF generation 
+
+* Provides user-friendly tools to generate EMF Java code of a Capella model extension
+
+* Facilitates the creation of a new Capella extension project
+
+* Facilitates the creation of Capella extension project based on an existing extension model
+
+* Provides Capella viewpoints developers with a tailored Target Application for Capella MBSE 
+
+* Enable developers to use Capella MBE ecore models, Sirius diagrams, etc. when specifying and generating a viewpoint 
+
+* Provides a language and generation to specify and generate Capella MBE Properties View 
+
+* Provides the ability to produce an HTML output containing documentation of the Capella project
+
+<br>
