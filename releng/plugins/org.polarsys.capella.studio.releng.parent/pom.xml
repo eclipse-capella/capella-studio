@@ -21,7 +21,7 @@
 	<name>Capella Studio</name>
 	
 	<groupId>org.polarsys.capella</groupId>
-	<artifactId>org.polarsys.capella.studio.releng.parent</artifactId>
+	<artifactId>org.polarsys.capella.studio.releng.parent.alternative</artifactId>
 	<version>1.4.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
@@ -54,6 +54,8 @@
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
 		<capellastudio-application>org.polarsys.capella.studio.product.application</capellastudio-application>
 		<sonar-version>3.0.2</sonar-version>
+		<sonar.projectKey>${project.groupId}:${artifactId}</sonar.projectKey>
+		<sonar.moduleKey>${artifactId}</sonar.moduleKey>
 	</properties>
 	<modules>
 		<!-- module TP -->
