@@ -218,6 +218,7 @@
             <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_KAQEgLEdEeiOzsR6y-DSJg">
               <substitutions xmi:id="_Kf1jgLEdEeiOzsR6y-DSJg" replacedElement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_N_awYaF-EeCGDtMIGvx3Bw"/>
               <substitutions xmi:id="_kQ_X8LEeEeiOzsR6y-DSJg" replacedElement="platform:/plugin/org.polarsys.capella.extension.tools/egf/capellaPatterns.fcore#_AxLy0NZAEeGDE6svG499fQ"/>
+              <substitutions xmi:id="_JytmIMmQEemwZMqj5tnQyw" replacedElement="platform:/plugin/org.polarsys.capella.core.egf/egf/capella.fcore#_8wxB8Ho_EeCPR-JnlvMzmg"/>
             </type>
           </invocationContracts>
           <invocationContracts xmi:id="_1RhhwLETEeiOzsR6y-DSJg" invokedContract="#_43os0LETEeiOzsR6y-DSJg">
