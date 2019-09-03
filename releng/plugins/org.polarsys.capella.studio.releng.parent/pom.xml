@@ -54,8 +54,8 @@
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
 		<capellastudio-application>org.polarsys.capella.studio.product.application</capellastudio-application>
 		<sonar-version>3.0.2</sonar-version>
-		<sonar.projectKey>${project.groupId}:${artifactId}</sonar.projectKey>
-		<sonar.moduleKey>${artifactId}</sonar.moduleKey>
+		<sonar.projectKey>${project.groupId}:${project.artifactId}</sonar.projectKey>
+		<sonar.moduleKey>${project.artifactId}</sonar.moduleKey>
 	</properties>
 	<modules>
 		<!-- module TP -->
