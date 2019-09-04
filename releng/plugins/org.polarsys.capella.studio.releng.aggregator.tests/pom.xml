@@ -47,7 +47,7 @@
     <module>../../../extension/tests/org.polarsys.capella.extension.rcptt</module>
     <module>../../../vpdsl/tests/org.polarsys.capella.ad.viewpoint.dsl.tests</module>
     <!-- Plugin Tests RCPTT Capella Studio -->
-    <module>../../../gendoc/tests/org.polarsys.capella.gen.doc.tests</module>
+    <!-- module>../../../gendoc/tests/org.polarsys.capella.gen.doc.tests</module-->
     <module>../../../vpdsl/tests/org.polarsys.capella.studio.ad.viewpoint.rcptt</module>
     <module>../../../vpdsl/tests/capellastudio.vpdsl.qualityassessment.reverse.tests</module>
     <module>../../../vpdsl/tests/capellastudio.vpdsl.qualityassessment.tests</module>
