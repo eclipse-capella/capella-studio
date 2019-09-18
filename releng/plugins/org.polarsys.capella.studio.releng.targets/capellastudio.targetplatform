@@ -14,12 +14,12 @@ target "capellastudio" with source, requirements
 
 include "https://git.polarsys.org/c/kitalpha/kitalpha.git/plain/releng/plugins/org.polarsys.kitalpha.releng.targets/kitalpha.targetplatform?h=master"
 
-location sirius-query-legacy-1.1.0 "http://download.eclipse.org/sirius/updates/legacy/1.1.0" {
+location sirius-query-legacy-1.1.0 "https://download.eclipse.org/sirius/updates/legacy/1.1.0" {
 	org.eclipse.sirius.query.legacy.feature.feature.group lazy
 	org.eclipse.sirius.query.legacy.feature.source.feature.group lazy
 }
 
-location kitalpha-sdk "http://download.eclipse.org/kitalpha/updates/stable/sdk/1.4.0RC1/" {
+location kitalpha-sdk "https://download.eclipse.org/kitalpha/updates/stable/sdk/1.4.0RC1/" {
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.source.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group lazy
@@ -136,12 +136,12 @@ location kitalpha-sdk "http://download.eclipse.org/kitalpha/updates/stable/sdk/1
 	org.polarsys.kitalpha.richtext.widget.ext.feature.feature.group lazy //TODO source
 }
 
-location kitalpha-runtime "http://download.eclipse.org/kitalpha/updates/stable/runtime/1.4.0RC1/" {
+location kitalpha-runtime "https://download.eclipse.org/kitalpha/updates/stable/runtime/1.4.0RC1/" {
 	org.polarsys.kitalpha.runtime.feature.feature.group lazy
 	org.polarsys.kitalpha.runtime.feature.source.feature.group lazy
 }
 
-location kitalpha-core "http://download.eclipse.org/kitalpha/updates/stable/runtimecore/1.4.0RC1/" {
+location kitalpha-core "https://download.eclipse.org/kitalpha/updates/stable/runtimecore/1.4.0RC1/" {
 	org.polarsys.kitalpha.common.feature.feature.group lazy
 	org.polarsys.kitalpha.common.feature.source.feature.group lazy
 	org.polarsys.kitalpha.massactions.feature.feature.group lazy
@@ -149,13 +149,13 @@ location kitalpha-core "http://download.eclipse.org/kitalpha/updates/stable/runt
 }
 
 
-location capella-egf-patterns "http://download.eclipse.org/capella/core/updates/stable/1.4.0-S20190911-171688/org.polarsys.capella.egf.site/" {
+location capella-egf-patterns "https://download.eclipse.org/capella/core/updates/stable/1.4.0-S20190911-171688/org.polarsys.capella.egf.site/" {
 	org.polarsys.capella.core.egf.feature.feature.group lazy
 	org.polarsys.capella.core.egf.feature.source.feature.group lazy
 }
 
 
-location capella "http://download.eclipse.org/capella/core/updates/stable/1.4.0-S20190911-171688/org.polarsys.capella.rcp.site/" {
+location capella "https://download.eclipse.org/capella/core/updates/stable/1.4.0-S20190911-171688/org.polarsys.capella.rcp.site/" {
 	org.polarsys.capella.rcp.feature.feature.group lazy
 	org.polarsys.capella.rcp.feature.source.feature.group lazy
 	org.polarsys.capella.cdo.mock.feature.feature.group lazy
@@ -167,7 +167,7 @@ location capella "http://download.eclipse.org/capella/core/updates/stable/1.4.0-
 	org.polarsys.capella.core.feature.source.feature.group lazy
 }
 
-location xhtml-docgen "http://download.eclipse.org/capella/addons/xhtmldocgen/updates/nightly/1.4.x/" {
+location xhtml-docgen "https://download.eclipse.org/capella/addons/xhtmldocgen/updates/nightly/1.4.x/" {
 	 org.polarsys.capella.docgen.feature.feature.group lazy
 	 org.polarsys.capella.docgen.configuration.feature.feature.group lazy
 }

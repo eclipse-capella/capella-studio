@@ -424,7 +424,23 @@
          version="0.0.0"/>
 
    <includes
+         id="org.eclipse.sirius.doc.feature"
+         version="0.0.0"/>
+
+   <includes
          id="org.eclipse.sirius.runtime"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.acceleo"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.acceleo.source"
          version="0.0.0"/>
 
    <includes
@@ -432,7 +448,15 @@
          version="0.0.0"/>
 
    <includes
+         id="org.eclipse.sirius.runtime.aql.source"
+         version="0.0.0"/>
+
+   <includes
          id="org.eclipse.sirius.runtime.ide.eef"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.eef.source"
          version="0.0.0"/>
 
    <includes
@@ -440,11 +464,47 @@
          version="0.0.0"/>
 
    <includes
+         id="org.eclipse.sirius.runtime.ide.ui.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.ui.acceleo"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.ui.acceleo.source"
+         version="0.0.0"/>
+
+   <includes
          id="org.eclipse.sirius.runtime.ide.xtext"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.sirius.specifier"
+         id="org.eclipse.sirius.runtime.ide.xtext.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ocl"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ocl.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.specifier.ide.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.specifier.ide.ui.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.specifier.ide.ui.acceleo"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.specifier.ide.ui.acceleo.source"
          version="0.0.0"/>
          
    <includes
