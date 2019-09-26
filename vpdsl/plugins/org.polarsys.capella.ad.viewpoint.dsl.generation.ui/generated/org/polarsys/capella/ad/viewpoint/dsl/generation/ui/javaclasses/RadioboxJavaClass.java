@@ -1,4 +1,4 @@
-//Generated with EGF 1.4.1.v20161010-1511
+//Generated with EGF 1.6.1.201906060805
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.javaclasses;
 
 import org.eclipse.egf.common.helper.*;
@@ -51,21 +51,19 @@ public class RadioboxJavaClass
 			+ "  @Override" + NL + "  public List<Button> getSemanticFields() {" + NL
 			+ "    List<Button> fields = new ArrayList<Button>();";
 	protected final String TEXT_15 = NL + "\tfields.add(_";
-	protected final String TEXT_16 = ");";
-	protected final String TEXT_17 = NL + "    return fields;" + NL + "  }" + NL + "" + NL + "   /**" + NL
+	protected final String TEXT_16 = NL + "    return fields;" + NL + "  }" + NL + "" + NL + "   /**" + NL
 			+ "   * <!-- begin-user-doc -->" + NL + "   * <!-- end-user-doc -->" + NL + "   * {@inheritDoc}" + NL
 			+ "   * @generated   " + NL + "   */" + NL + "  @Override" + NL
 			+ "  public Button getDefaultSemanticField() {";
-	protected final String TEXT_18 = NL + "    return _";
-	protected final String TEXT_19 = ";" + NL + "  }" + NL + "}" + NL;
-	protected final String TEXT_20 = NL + "import java.util.ArrayList;" + NL + "import java.util.List;" + NL + "" + NL
+	protected final String TEXT_17 = NL + "    return _";
+	protected final String TEXT_18 = ";" + NL + "  }" + NL + "}" + NL;
+	protected final String TEXT_19 = NL + "import java.util.ArrayList;" + NL + "import java.util.List;" + NL + "" + NL
 			+ "import org.eclipse.swt.widgets.Button;" + NL + "import org.eclipse.swt.widgets.Composite;" + NL
 			+ "import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetWidgetFactory;" + NL + "" + NL
 			+ "import org.polarsys.capella.core.ui.properties.fields.AbstractSemanticKindGroup;";
-	protected final String TEXT_21 = NL + "import ";
-	protected final String TEXT_22 = ";" + NL;
-	protected final String TEXT_23 = NL;
-	protected final String TEXT_24 = NL;
+	protected final String TEXT_20 = NL + "import ";
+	protected final String TEXT_21 = ";" + NL;
+	protected final String TEXT_22 = NL;
 
 	public RadioboxJavaClass() {
 		//Here is the constructor
@@ -101,8 +99,8 @@ public class RadioboxJavaClass
 			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
-		stringBuffer.append(TEXT_23);
-		stringBuffer.append(TEXT_24);
+		stringBuffer.append(TEXT_22);
+		stringBuffer.append(TEXT_22);
 		return stringBuffer.toString();
 	}
 
@@ -199,7 +197,7 @@ public class RadioboxJavaClass
 
 		DataWidget iDataWidget = epfUtility.getDataOf(parameter);
 		String enumName = iDataWidget.widgetFieldTypeEnumerator.enumName;
-		ArrayList<String> enumLiterals = iDataWidget.widgetFieldTypeEnumerator.enumLiterals;
+		List<String> enumLiterals = iDataWidget.widgetFieldTypeEnumerator.enumLiterals;
 		String inClassName = iDataWidget.widgetGraphicalClassName;
 
 		char first = Character.toUpperCase(inClassName.charAt(0));
@@ -233,20 +231,20 @@ public class RadioboxJavaClass
 		for (String enumLiteral : enumLiterals) {
 			stringBuffer.append(TEXT_15);
 			stringBuffer.append(enumName + "Btn" + enumLiteral);
-			stringBuffer.append(TEXT_16);
+			stringBuffer.append(TEXT_13);
 		}
-		stringBuffer.append(TEXT_17);
+		stringBuffer.append(TEXT_16);
 		String enumLiteral = enumLiterals.get(0);
-		stringBuffer.append(TEXT_18);
+		stringBuffer.append(TEXT_17);
 		stringBuffer.append(enumName + "Btn" + enumLiteral);
-		stringBuffer.append(TEXT_19);
+		stringBuffer.append(TEXT_18);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
 		new Node.DataLeaf(ictx.getNode(), getClass(), "genClass", stringBuffer.toString());
 	}
 
 	protected void method_genDefaultImport(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
-		stringBuffer.append(TEXT_20);
+		stringBuffer.append(TEXT_19);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
 		new Node.DataLeaf(ictx.getNode(), getClass(), "genDefaultImport", stringBuffer.toString());
 	}
@@ -255,9 +253,9 @@ public class RadioboxJavaClass
 			throws Exception {
 
 		DataWidget dataWidget = epfUtility.getDataOf(parameter);
-		stringBuffer.append(TEXT_21);
+		stringBuffer.append(TEXT_20);
 		stringBuffer.append(dataWidget.widgetFieldTypeEnumerator.enumImportName);
-		stringBuffer.append(TEXT_22);
+		stringBuffer.append(TEXT_21);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
 		new Node.DataLeaf(ictx.getNode(), getClass(), "genSematicImports", stringBuffer.toString());
 	}

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2019 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -32,7 +32,7 @@ import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.Activator;
 /**
  * @author Boubekeur Zendagui
  */
-public class JDTUtility {
+public final class JDTUtility {
 	
 	public static IFolder packageToFolder(IProject project, String packageName){
 		String folder = JDTUtility.getValidPackageName("src."+packageName);
@@ -45,24 +45,26 @@ public class JDTUtility {
 
         TextEdit te = cf.format(CodeFormatter.K_UNKNOWN, javaCode, 0,javaCode.length(),0,null);
         IDocument dc = new Document(javaCode);
+        String formatedCode = javaCode;
         try {
                 te.apply(dc);
-                javaCode = dc.get();
+                formatedCode = dc.get();
         } catch (MalformedTreeException|BadLocationException e) {
         	Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
         }
 
-		return javaCode;
+		return formatedCode;
 	}
 	
 	public static void writeJavaContent(IFile javaFile, String javaCode){
 		String formatedOutput = formatJavaCode(javaCode);
 		ByteArrayInputStream outputContent = new ByteArrayInputStream(formatedOutput.getBytes());
 		try {
-			if (javaFile.exists())
+			if (javaFile.exists()) {
 				javaFile.setContents(outputContent, true, false, null);
-			else
+			} else {
 				javaFile.create(outputContent, true, null);
+			}
 
 		} catch (CoreException e) {
 			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
@@ -89,8 +91,9 @@ public class JDTUtility {
 			}
 		}
 		Path packageFolderPath = new Path(packageName.replace('.', '/'));
-		if (src.getFolder(packageFolderPath).exists())
+		if (src.getFolder(packageFolderPath).exists()) {
 			return;
+		}
 		
 		IFolder parent = src;
 		for (int i = 0; i < packageFolderPath.segmentCount(); i++) {

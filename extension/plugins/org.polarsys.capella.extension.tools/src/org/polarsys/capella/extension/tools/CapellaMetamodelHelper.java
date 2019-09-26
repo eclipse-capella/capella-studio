@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2019 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -30,7 +30,9 @@ public class CapellaMetamodelHelper {
 	public static boolean hasCapellaGenClasses(GenPackage genPackage) {
 		for (GenClass genClass : genPackage.getGenClasses()) {
 			if (isCapellaGenClass(genClass))
+			{
 				return true;
+			}
 		}
 		return false;
 	}
@@ -38,7 +40,9 @@ public class CapellaMetamodelHelper {
 	public static boolean hasCapellaGenClasses(GenModel genModel) {
 		for (GenPackage genPackage : genModel.getAllGenPackagesWithClassifiers()) {
 			if (hasCapellaGenClasses(genPackage))
+			{
 				return true;
+			}
 		}
 
 		return false;
@@ -54,7 +58,9 @@ public class CapellaMetamodelHelper {
 		List<GenClass> result = new ArrayList<>(allGenClasses.size());
 		for (GenClass gen : allGenClasses) {
 			if (isCapellaGenClass(gen))
+			{
 				result.add(gen);
+			}
 		}
 		return result;
 	}
@@ -64,7 +70,9 @@ public class CapellaMetamodelHelper {
 		String nsURI = source.getEPackage().getNsURI();
 		for (EClass cls : classes) {
 			if (cls.getName().equals(name) && nsURI.equals(cls.getEPackage().getNsURI()))
+			{
 				return true;
+			}
 		}
 		return false;
 	}

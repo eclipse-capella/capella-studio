@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2019 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -13,7 +13,7 @@ package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util;
 /**
  * @author Boubekeur Zendagui
  */
-public class UIConstants {
+public final class UIConstants {
 	
 	public static final String EXTENSION_PROPERTY_TABS__ID = "org.eclipse.ui.views.properties.tabbed.propertyTabs"; ////$NON-NLS-N$
 	

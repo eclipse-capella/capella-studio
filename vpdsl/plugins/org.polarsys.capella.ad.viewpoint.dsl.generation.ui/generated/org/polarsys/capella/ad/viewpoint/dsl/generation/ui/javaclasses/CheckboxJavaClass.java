@@ -1,4 +1,4 @@
-//Generated with EGF 1.4.1.v20161010-1511
+//Generated with EGF 1.6.1.201906060805
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.javaclasses;
 
 import org.eclipse.egf.common.helper.*;
@@ -62,7 +62,6 @@ public class CheckboxJavaClass
 	protected final String TEXT_15 = NL + "\t\timport ";
 	protected final String TEXT_16 = ";" + NL + "\t";
 	protected final String TEXT_17 = NL;
-	protected final String TEXT_18 = NL;
 
 	public CheckboxJavaClass() {
 		//Here is the constructor
@@ -99,7 +98,7 @@ public class CheckboxJavaClass
 		}
 
 		stringBuffer.append(TEXT_17);
-		stringBuffer.append(TEXT_18);
+		stringBuffer.append(TEXT_17);
 		return stringBuffer.toString();
 	}
 
@@ -115,7 +114,7 @@ public class CheckboxJavaClass
 
 		method_genDefaultImport(new StringBuffer(), ictx);
 
-		method_genSematicImports(new StringBuffer(), ictx);
+		method_genSemanticImports(new StringBuffer(), ictx);
 
 		method_genClass(new StringBuffer(), ictx);
 
@@ -233,10 +232,10 @@ public class CheckboxJavaClass
 		new Node.DataLeaf(ictx.getNode(), getClass(), "genDefaultImport", stringBuffer.toString());
 	}
 
-	protected void method_genSematicImports(final StringBuffer stringBuffer, final PatternContext ctx)
+	protected void method_genSemanticImports(final StringBuffer stringBuffer, final PatternContext ctx)
 			throws Exception {
 
-		ArrayList<String> importList = epfUtility.getSematicImportsFor(parameter);
+		List<String> importList = epfUtility.getSemanticImportsFor(parameter);
 		for (String currentImport : importList) {
 			stringBuffer.append(TEXT_15);
 			stringBuffer.append(currentImport);

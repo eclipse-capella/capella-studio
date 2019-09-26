@@ -118,11 +118,11 @@ public class UI2PropertyTab extends org.polarsys.capella.ad.viewpoint.dsl.genera
 			throws Exception {
 
 		// Get the Properties Contributors list 
-		ArrayList<IConfigurationElement> propertiesContributors = UIPropertiesExtensionsManager
+		ArrayList<IConfigurationElement> propertiesContributors = (ArrayList<IConfigurationElement>) UIPropertiesExtensionsManager
 				.getPropertiesContributors(targetApplication);
 
 		for (IConfigurationElement iPropertiesContributor : propertiesContributors) {
-			ArrayList<IConfigurationElement> contributors = UIPropertiesExtensionsManager
+			ArrayList<IConfigurationElement> contributors = (ArrayList<IConfigurationElement>) UIPropertiesExtensionsManager
 					.getContributors(iPropertiesContributor);
 			for (IConfigurationElement iContributor : contributors) {
 				String cID = UIPropertiesExtensionsManager.getContributorID(iContributor);

@@ -6,7 +6,7 @@
 <%private void browseUIContainer(UIContainer container, EPFUtility epfUtility){%>
 <%	for (UIField uiField : container.getUI_fields()) {
 		DataWidget iDataWidget = epfUtility.getDataOf(uiField);
-		ArrayList<PluginExtensionEntry> pluginExtensionEntryList = iDataWidget.PluginExtensionEntries;
+		List<PluginExtensionEntry> pluginExtensionEntryList = iDataWidget.PluginExtensionEntries;
 		if (pluginExtensionEntryList != null
 				&& !pluginExtensionEntryList.isEmpty()) {
 			for (PluginExtensionEntry pluginExtensionEntry : pluginExtensionEntryList) {

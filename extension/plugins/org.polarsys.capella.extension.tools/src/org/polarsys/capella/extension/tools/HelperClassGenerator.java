@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2019 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -32,7 +32,7 @@ import org.eclipse.jdt.core.dom.Modifier;
  * @author Thomas Guiu
  * 
  */
-public class HelperClassGenerator {
+public final class HelperClassGenerator {
 
 	public static final List<String> SUPPORTED_TYPES = new ArrayList<>();
 
@@ -106,16 +106,22 @@ public class HelperClassGenerator {
 	public static HelperInfo getInfo(EClass clazz) {
 		HelperInfo result = doGetInfo(clazz);
 		if (result != null)
+		{
 			return result;
+		}
 		for (EClass superECls : clazz.getESuperTypes()) {
 			result = doGetInfo(superECls);
 			if (result != null)
+			{
 				return result;
+			}
 		}
 		for (EClass superECls : clazz.getESuperTypes()) {
 			result = getInfo(superECls);
 			if (result != null)
+			{
 				return result;
+			}
 		}
 		return null;
 	}

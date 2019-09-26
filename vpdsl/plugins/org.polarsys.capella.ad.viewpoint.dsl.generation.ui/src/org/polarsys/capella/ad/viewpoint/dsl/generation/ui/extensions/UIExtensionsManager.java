@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2019 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -20,16 +20,17 @@ import org.eclipse.core.runtime.Platform;
 /**
  * @author Boubekeur Zendagui
  */
-public class UIExtensionsManager {
+public final class UIExtensionsManager {
 	
 	private static final IExtensionRegistry _extRegistry =  Platform.getExtensionRegistry();
 	
-	public static ArrayList<IConfigurationElement> getConfigurationElements(IConfigurationElement parent, 
+	public static List<IConfigurationElement> getConfigurationElements(IConfigurationElement parent, 
   																			String configurationElementName){
 		ArrayList<IConfigurationElement> result = new ArrayList<IConfigurationElement>();
 		
-		if (parent.getChildren().length == 0)
+		if (parent.getChildren().length == 0) {
 			return null;
+		}
 		
 		for (IConfigurationElement iChild : parent.getChildren()) {
 			if (iChild.getName().equals(configurationElementName)){
@@ -46,10 +47,13 @@ public class UIExtensionsManager {
 		ArrayList<IConfigurationElement> result = new ArrayList<IConfigurationElement>();
 		IConfigurationElement[] config =  _extRegistry.getConfigurationElementsFor(extensionPointID);
 		
-		if (config.length != 0)
-			for (IConfigurationElement iConfigurationElement : config) 
-				if (iConfigurationElement.getName().equals(configurationElementName))
+		if (config.length != 0) {
+			for (IConfigurationElement iConfigurationElement : config) { 
+				if (iConfigurationElement.getName().equals(configurationElementName)) {
 					result.add(iConfigurationElement);
+				}
+			}
+		}
 		
 		return result;
 	}

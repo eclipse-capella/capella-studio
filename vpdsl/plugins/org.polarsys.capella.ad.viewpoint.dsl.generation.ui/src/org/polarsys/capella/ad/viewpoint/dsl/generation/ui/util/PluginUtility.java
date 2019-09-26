@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2019 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -33,7 +33,7 @@ import org.polarsys.capella.ad.viewpoint.dsl.generation.ui.Activator;
  * @author Boubekeur Zendagui
  */
 @SuppressWarnings("restriction")
-public class PluginUtility {
+public final class PluginUtility {
 	
 	/***
 	 * Not Used yet

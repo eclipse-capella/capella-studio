@@ -1,4 +1,4 @@
-//Generated with EGF 1.4.1.v20161010-1511
+//Generated with EGF 1.6.1.201906060805
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.javaclasses;
 
 import org.eclipse.egf.common.helper.*;
@@ -74,10 +74,8 @@ public class SimpleSemanticFieldsQueryJavaClass
 	protected final String TEXT_13 = NL + "\t\timport ";
 	protected final String TEXT_14 = ";" + NL + "\t";
 	protected final String TEXT_15 = NL + "import ";
-	protected final String TEXT_16 = ";";
-	protected final String TEXT_17 = "// create the extension";
-	protected final String TEXT_18 = NL;
-	protected final String TEXT_19 = NL;
+	protected final String TEXT_16 = "// create the extension";
+	protected final String TEXT_17 = NL;
 
 	public SimpleSemanticFieldsQueryJavaClass() {
 		//Here is the constructor
@@ -113,8 +111,8 @@ public class SimpleSemanticFieldsQueryJavaClass
 			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
-		stringBuffer.append(TEXT_18);
-		stringBuffer.append(TEXT_19);
+		stringBuffer.append(TEXT_17);
+		stringBuffer.append(TEXT_17);
 		return stringBuffer.toString();
 	}
 
@@ -254,7 +252,7 @@ public class SimpleSemanticFieldsQueryJavaClass
 	protected void method_genSemanticImport(final StringBuffer stringBuffer, final PatternContext ctx)
 			throws Exception {
 
-		ArrayList<String> importList = epfUtility.getSematicImportsFor(parameter);
+		List<String> importList = epfUtility.getSemanticImportsFor(parameter);
 		for (String currentImport : importList) {
 			stringBuffer.append(TEXT_13);
 			stringBuffer.append(currentImport);
@@ -264,7 +262,7 @@ public class SimpleSemanticFieldsQueryJavaClass
 		String associatedEStructuralFeature = iDataWidget.widgetFieldAccessorName;
 		stringBuffer.append(TEXT_15);
 		stringBuffer.append(iDataWidget.computeWidgetFieldETypeEPackage());
-		stringBuffer.append(TEXT_16);
+		stringBuffer.append(TEXT_11);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
 		new Node.DataLeaf(ictx.getNode(), getClass(), "genSemanticImport", stringBuffer.toString());
 	}
@@ -272,7 +270,7 @@ public class SimpleSemanticFieldsQueryJavaClass
 	protected void method_registerExtension(final StringBuffer stringBuffer, final PatternContext ctx)
 			throws Exception {
 
-		stringBuffer.append(TEXT_17);
+		stringBuffer.append(TEXT_16);
 
 		DataWidget iDataWidget = epfUtility.getDataOf(parameter);
 		String classQualifiedName = packagename + "." + classname;

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2019 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -33,8 +33,7 @@ import org.polarsys.kitalpha.ad.viewpoint.dsl.generation.provider.resourceimpl.V
  */
 public class GenmodelUtility {
 
-	//FIXME turn the attribute to private. Client must call GenmodelUtility
-	protected static GenmodelUtility INSTANCE = null;
+	private static GenmodelUtility INSTANCE = null;
 	
 	private GenPackage genPackage;
 	private EPackage   generatedEPackage;
@@ -75,16 +74,16 @@ public class GenmodelUtility {
 	}
 	
 	public GenEnum getGenEnum(String name){
-		for (GenEnum iGenEnum : genPackage.getGenEnums()) 
-			if (iGenEnum.getName().equalsIgnoreCase(name))
+		for (GenEnum iGenEnum : genPackage.getGenEnums()) {
+			if (iGenEnum.getName().equalsIgnoreCase(name)) {
 				return iGenEnum;
-		
+			}
+		}
 		return null;
 	}
 	
 	public String getSemanticEClassImport(NamedElement feature){
-		if (feature == null || 
-				! ((feature instanceof Attribute) || 
+		if (! ((feature instanceof Attribute) || 
 				  (feature instanceof AbstractAssociation))){
 			return null;
 		}
@@ -103,8 +102,9 @@ public class GenmodelUtility {
 	}
 	
 	public String getFeatureContainerAccessorName(AbstractFeature feature) {
-		if (feature == null)
+		if (feature == null) {
 			throw new IllegalStateException();
+		}
 		
 		// Get the generated GenClass 
 		GenClass genClass = getFeatureContainerGenClass(feature);
@@ -112,8 +112,9 @@ public class GenmodelUtility {
 	}
 	
 	public String getFeatureContainerLiteral(AbstractFeature feature) {
-		if (feature == null)
+		if (feature == null) {
 			throw new IllegalStateException();
+		}
 		
 		// Get the generated GenClass 
 		GenClass genClass = getFeatureContainerGenClass(feature);
@@ -125,8 +126,9 @@ public class GenmodelUtility {
 	}
 	
 	private GenClass getFeatureContainerGenClass(AbstractFeature feature) {
-		if (feature == null)
+		if (feature == null) {
 			throw new IllegalStateException();
+		}
 		
 		Class clazz = (Class)feature.eContainer();
 		// Get the generated EClass from the VPDesc clazz Class
@@ -136,7 +138,7 @@ public class GenmodelUtility {
 	}
 	
 	public String getFeatureShortAccessorName(AbstractFeature feature) {
-		if (feature == null){
+		if (feature == null) {
 			throw new IllegalStateException();
 		}
 		String featureName = feature.getName();
@@ -149,9 +151,8 @@ public class GenmodelUtility {
 	}
 	
 	public String getFeatureLongAccessorName(NamedElement feature) {
-		if (feature == null || 
-				! ((feature instanceof Attribute) || 
-				  (feature instanceof AbstractAssociation))){
+		if (! ((feature instanceof Attribute) || 
+				  (feature instanceof AbstractAssociation))) {
 			throw new IllegalStateException();
 		}
 		String featureName = feature.getName();
@@ -260,8 +261,9 @@ public class GenmodelUtility {
 		
 		for (GenFeature genFeature : genClass.getGenFeatures()) {
 			EStructuralFeature structuralFeature = genFeature.getEcoreFeature();
-			if (structuralFeature.getName().equals(eSFName))
+			if (structuralFeature.getName().equals(eSFName)) {
 				return genFeature;
+			}
 		}
 		return null;
 	}
@@ -277,8 +279,9 @@ public class GenmodelUtility {
 		for (GenClass genClass : genPackage.getGenClasses()) 
 		{
 			EClass clazz = genClass.getEcoreClass();
-			if (clazz.getName().equals(className) && clazz.getEPackage().getNsURI().equals(eClassPackageNsURI))
+			if (clazz.getName().equals(className) && clazz.getEPackage().getNsURI().equals(eClassPackageNsURI)) {
 				return genClass;
+			}
 		}
 		return null;
 	}

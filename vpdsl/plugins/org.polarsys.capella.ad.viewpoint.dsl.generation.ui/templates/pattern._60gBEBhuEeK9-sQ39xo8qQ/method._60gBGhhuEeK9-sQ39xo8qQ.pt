@@ -1,7 +1,7 @@
 <%
 DataWidget iDataWidget = epfUtility.getDataOf(parameter);
 String enumName = iDataWidget.widgetFieldTypeEnumerator.enumName;
-ArrayList<String> enumLiterals = iDataWidget.widgetFieldTypeEnumerator.enumLiterals;
+List<String> enumLiterals = iDataWidget.widgetFieldTypeEnumerator.enumLiterals;
 String inClassName =  iDataWidget.widgetGraphicalClassName;
 
 char first = Character.toUpperCase(inClassName.charAt(0));

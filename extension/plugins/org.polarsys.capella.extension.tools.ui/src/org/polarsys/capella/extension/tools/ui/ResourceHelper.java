@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015, 2018 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2019 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -15,6 +15,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -48,7 +49,7 @@ import org.eclipse.ui.PlatformUI;
  * @author Thomas Guiu
  * 
  */
-public class ResourceHelper {
+public final class ResourceHelper {
 
 	private static final String SUFFIX = ",\\";
 	private static final String BUILD_PROPERTIES = "build.properties";
@@ -276,7 +277,7 @@ public class ResourceHelper {
 		contents.append("Bundle-Version: 1.0.0.qualifier\n");
 		contents.append("Bundle-RequiredExecutionEnvironment: J2SE-1.5\n");
 		contents.append("\n");
-		manifest.create(new ByteArrayInputStream(contents.toString().getBytes()), false, null);
+		manifest.create(new ByteArrayInputStream(contents.toString().getBytes(StandardCharsets.UTF_8)), false, null);
 	}
 
 	private static void createBuildProperties(IProject project) throws CoreException {
@@ -287,7 +288,7 @@ public class ResourceHelper {
 		contents.append("bin.includes = META-INF/,\\\n");
 		contents.append("				.,\\\n");
 		contents.append("				model/");
-		buildProperties.create(new ByteArrayInputStream(contents.toString().getBytes()), false, null);
+		buildProperties.create(new ByteArrayInputStream(contents.toString().getBytes(StandardCharsets.UTF_8)), false, null);
 	}
 
 	public static void addNewSourceFolder(IProject project, IFolder sourceFolder, IProgressMonitor monitor) throws CoreException, IOException {

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015, 2018 THALES GLOBAL SERVICES.
+ * Copyright (c) 2015, 2019 THALES GLOBAL SERVICES.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -153,7 +153,9 @@ public class Application implements IApplication, IExecutableExtension {
 			}
 			Location instanceLoc = Platform.getInstanceLocation();
 			if (instanceLoc != null)
+			{
 				instanceLoc.release();
+			}
 		}
 	}
 
@@ -339,12 +341,12 @@ public class Application implements IApplication, IExecutableExtension {
 			return true;
 		}
 
-		final int ide_version = Integer.parseInt(WORKSPACE_VERSION_VALUE);
+		final int ideVersion = Integer.parseInt(WORKSPACE_VERSION_VALUE);
 		int workspaceVersion = Integer.parseInt(version);
 
 		// equality test is required since any version difference (newer
 		// or older) may result in data being trampled
-		if (workspaceVersion == ide_version) {
+		if (workspaceVersion == ideVersion) {
 			return true;
 		}
 
@@ -471,12 +473,16 @@ public class Application implements IApplication, IExecutableExtension {
 	public void stop() {
 		final IWorkbench workbench = PlatformUI.getWorkbench();
 		if (workbench == null)
+		{
 			return;
+		}
 		final Display display = workbench.getDisplay();
 		display.syncExec(new Runnable() {
 			public void run() {
 				if (!display.isDisposed())
+				{
 					workbench.close();
+				}
 			}
 		});
 	}

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2019 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -50,12 +50,12 @@ public class PluginXmlReporter implements PatternExecutionReporter {
 		
 	private String tabExtensions = "";
 	private String additionalExtensions = "";
-	private ArrayList<String> sections = new ArrayList<>();
+	private List<String> sections = new ArrayList<>();
 	
 	private String computeSectionsOutput(String targetApplication){
 		// Get the Properties Contributors list 
 		ArrayList<IConfigurationElement> propertiesContributors = 
-			UIPropertiesExtensionsManager.getPropertiesContributors(targetApplication);
+			(ArrayList<IConfigurationElement>) UIPropertiesExtensionsManager.getPropertiesContributors(targetApplication);
 
 		StringBuilder propertiesSections = new StringBuilder();
 		
@@ -123,14 +123,17 @@ public class PluginXmlReporter implements PatternExecutionReporter {
 		}
 
 		Object object = parameterValues.get("parameter"); 
-		if (object instanceof UIContainer && ((UIContainer)object).eContainer() instanceof UI)
+		if (object instanceof UIContainer && ((UIContainer)object).eContainer() instanceof UI) {
 			sections.add(output);
+		}
 			
-		if (object instanceof UIDescription)
+		if (object instanceof UIDescription) {
 			tabExtensions = output;
+		}
 		
-		if (object instanceof UI)
+		if (object instanceof UI) {
 			additionalExtensions += "\n"+output;
+		}
 	}
 
 }

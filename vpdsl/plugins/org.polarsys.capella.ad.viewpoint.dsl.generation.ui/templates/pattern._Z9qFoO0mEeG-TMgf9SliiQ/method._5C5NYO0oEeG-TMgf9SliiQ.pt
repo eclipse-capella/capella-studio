@@ -1,6 +1,6 @@
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
 <%class WidgetModelDependentImportGenerator{%>
-<%ArrayList<String> imported = new ArrayList<String>();%>
+<%List<String> imported = new ArrayList<String>();%>
 <%	private void init(){%>
 <%		imported.clear();%>
 <%	}%>
@@ -8,7 +8,7 @@ import org.polarsys.capella.core.data.capellacore.CapellaElement;
 <% 		//Parse all UIFields to collect data %>
 <%		for (UIField uiField : container.getUI_fields())%>
 <%		{ %>
-<%			ArrayList<String> importList = epfUtility.getSematicImportsFor(uiField); %>
+<%			List<String> importList = epfUtility.getSemanticImportsFor(uiField); %>
 <%			for(String currentImport : importList)%>
 <%			{%>
 <%				if (! imported.contains(currentImport))%>

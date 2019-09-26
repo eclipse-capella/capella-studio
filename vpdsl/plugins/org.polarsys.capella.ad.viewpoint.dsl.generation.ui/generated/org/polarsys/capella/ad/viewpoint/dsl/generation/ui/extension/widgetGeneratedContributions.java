@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.0.201805040915
+//Generated with EGF 1.6.1.201906060805
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extension;
 
 import java.util.Map.Entry;
@@ -35,7 +35,6 @@ public class widgetGeneratedContributions {
 	protected final String TEXT_7 = NL + "\t\t";
 	protected final String TEXT_8 = " ";
 	protected final String TEXT_9 = NL;
-	protected final String TEXT_10 = NL;
 
 	public widgetGeneratedContributions() {
 		//Here is the constructor
@@ -72,7 +71,7 @@ public class widgetGeneratedContributions {
 		}
 
 		stringBuffer.append(TEXT_9);
-		stringBuffer.append(TEXT_10);
+		stringBuffer.append(TEXT_9);
 		return stringBuffer.toString();
 	}
 
@@ -116,7 +115,7 @@ public class widgetGeneratedContributions {
 			private void browseUIContainer(UIContainer container, EPFUtility epfUtility) {
 				for (UIField uiField : container.getUI_fields()) {
 					DataWidget iDataWidget = epfUtility.getDataOf(uiField);
-					ArrayList<PluginExtensionEntry> pluginExtensionEntryList = iDataWidget.PluginExtensionEntries;
+					List<PluginExtensionEntry> pluginExtensionEntryList = iDataWidget.PluginExtensionEntries;
 					if (pluginExtensionEntryList != null && !pluginExtensionEntryList.isEmpty()) {
 						for (PluginExtensionEntry pluginExtensionEntry : pluginExtensionEntryList) {
 							String point = pluginExtensionEntry.extensionPoint_ID;

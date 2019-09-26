@@ -1,4 +1,4 @@
-<%ArrayList<String> importList = epfUtility.getSematicImportsFor(parameter);
+<%List<String> importList = epfUtility.getSemanticImportsFor(parameter);
 	for(String currentImport : importList){%>
 		import <%=currentImport%>;
 	<%} %>

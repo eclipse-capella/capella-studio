@@ -1,14 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Copyright (c) 2006, 2016 THALES GLOBAL SERVICES.
-  All rights reserved. This program and the accompanying materials
-  are made available under the terms of the Eclipse Public License v1.0
-  which accompanies this distribution, and is available at
-  http://www.eclipse.org/legal/epl-v10.html
- 
-  Contributors:
-     Thales - initial API and implementation
--->
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:domain="http://www.eclipse.org/egf/1.0.0/domain"
     xmlns:fcore="http://www.eclipse.org/egf/1.0.0/fcore" xmlns:fprod="http://www.eclipse.org/egf/1.0.0/fprod"
     xmlns:ftask="http://www.eclipse.org/egf/1.0.0/ftask" xmlns:javapattern="http://www.eclipse.org/egf/1.0.0/javapattern"
@@ -247,7 +237,7 @@
             <methods xmi:id="_LKX9QBIiEeKPfPYeHptq8Q" name="genPackage" patternFilePath="templates/pattern._psA7oBIXEeKPfPYeHptq8Q/method._LKX9QBIiEeKPfPYeHptq8Q.pt"/>
             <methods xmi:id="_C0oJYBIZEeKPfPYeHptq8Q" name="genClass" patternFilePath="templates/pattern._psA7oBIXEeKPfPYeHptq8Q/method._C0oJYBIZEeKPfPYeHptq8Q.pt"/>
             <methods xmi:id="_NNcTIBIgEeKPfPYeHptq8Q" name="genDefaultImport" patternFilePath="templates/pattern._psA7oBIXEeKPfPYeHptq8Q/method._NNcTIBIgEeKPfPYeHptq8Q.pt"/>
-            <methods xmi:id="_v8_bYBIgEeKPfPYeHptq8Q" name="genSematicImports" patternFilePath="templates/pattern._psA7oBIXEeKPfPYeHptq8Q/method._v8_bYBIgEeKPfPYeHptq8Q.pt"/>
+            <methods xmi:id="_v8_bYBIgEeKPfPYeHptq8Q" name="genSemanticImports" patternFilePath="templates/pattern._psA7oBIXEeKPfPYeHptq8Q/method._v8_bYBIgEeKPfPYeHptq8Q.pt"/>
             <parameters xmi:id="_wG_bABIXEeKPfPYeHptq8Q" name="parameter" type="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpui/1.0.0#//UIField"/>
             <variables xmi:id="_Uwy-kBIaEeKPfPYeHptq8Q" name="epfUtility" type="org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility"/>
             <variables xmi:id="_CUr9sBIcEeKPfPYeHptq8Q" name="section" type="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpui/1.0.0#//UIContainer"/>
@@ -281,7 +271,7 @@
             <methods xmi:id="_iYlziRImEeKPfPYeHptq8Q" name="genPackage" patternFilePath="templates/pattern._iYlzgBImEeKPfPYeHptq8Q/method._iYlziRImEeKPfPYeHptq8Q.pt"/>
             <methods xmi:id="_iYlzihImEeKPfPYeHptq8Q" name="genClass" patternFilePath="templates/pattern._iYlzgBImEeKPfPYeHptq8Q/method._iYlzihImEeKPfPYeHptq8Q.pt"/>
             <methods xmi:id="_iYlzixImEeKPfPYeHptq8Q" name="genDefaultImport" patternFilePath="templates/pattern._iYlzgBImEeKPfPYeHptq8Q/method._iYlzixImEeKPfPYeHptq8Q.pt"/>
-            <methods xmi:id="_iYlzjBImEeKPfPYeHptq8Q" name="genSematicImports" patternFilePath="templates/pattern._iYlzgBImEeKPfPYeHptq8Q/method._iYlzjBImEeKPfPYeHptq8Q.pt"/>
+            <methods xmi:id="_iYlzjBImEeKPfPYeHptq8Q" name="genSemanticImports" patternFilePath="templates/pattern._iYlzgBImEeKPfPYeHptq8Q/method._iYlzjBImEeKPfPYeHptq8Q.pt"/>
             <parameters xmi:id="_iYlzjRImEeKPfPYeHptq8Q" name="parameter" type="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpui/1.0.0#//UIField"/>
             <variables xmi:id="_iYlzjhImEeKPfPYeHptq8Q" name="epfUtility" type="org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility"/>
             <variables xmi:id="_iYlzjxImEeKPfPYeHptq8Q" name="section" type="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpui/1.0.0#//UIContainer"/>
@@ -315,7 +305,7 @@
             <methods xmi:id="_vuP2-RIvEeKPfPYeHptq8Q" name="genPackage" patternFilePath="templates/pattern._vuP28BIvEeKPfPYeHptq8Q/method._vuP2-RIvEeKPfPYeHptq8Q.pt"/>
             <methods xmi:id="_vuP2-hIvEeKPfPYeHptq8Q" name="genClass" patternFilePath="templates/pattern._vuP28BIvEeKPfPYeHptq8Q/method._vuP2-hIvEeKPfPYeHptq8Q.pt"/>
             <methods xmi:id="_vuP2-xIvEeKPfPYeHptq8Q" name="genDefaultImport" patternFilePath="templates/pattern._vuP28BIvEeKPfPYeHptq8Q/method._vuP2-xIvEeKPfPYeHptq8Q.pt"/>
-            <methods xmi:id="_vuP2_BIvEeKPfPYeHptq8Q" name="genSematicImports" patternFilePath="templates/pattern._vuP28BIvEeKPfPYeHptq8Q/method._vuP2_BIvEeKPfPYeHptq8Q.pt"/>
+            <methods xmi:id="_vuP2_BIvEeKPfPYeHptq8Q" name="genSemanticImports" patternFilePath="templates/pattern._vuP28BIvEeKPfPYeHptq8Q/method._vuP2_BIvEeKPfPYeHptq8Q.pt"/>
             <methods xmi:id="_C3-rUBO5EeK2Z6OjlK43ow" name="registerExtension" patternFilePath="templates/pattern._vuP28BIvEeKPfPYeHptq8Q/method._C3-rUBO5EeK2Z6OjlK43ow.pt"/>
             <parameters xmi:id="_vuP2_RIvEeKPfPYeHptq8Q" name="parameter" type="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpui/1.0.0#//UIField"/>
             <variables xmi:id="_vuP2_hIvEeKPfPYeHptq8Q" name="epfUtility" type="org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility"/>
@@ -388,7 +378,7 @@
             <methods xmi:id="_60gBGRhuEeK9-sQ39xo8qQ" name="genPackage" patternFilePath="templates/pattern._60gBEBhuEeK9-sQ39xo8qQ/method._60gBGRhuEeK9-sQ39xo8qQ.pt"/>
             <methods xmi:id="_60gBGhhuEeK9-sQ39xo8qQ" name="genClass" patternFilePath="templates/pattern._60gBEBhuEeK9-sQ39xo8qQ/method._60gBGhhuEeK9-sQ39xo8qQ.pt"/>
             <methods xmi:id="_60gBGxhuEeK9-sQ39xo8qQ" name="genDefaultImport" patternFilePath="templates/pattern._60gBEBhuEeK9-sQ39xo8qQ/method._60gBGxhuEeK9-sQ39xo8qQ.pt"/>
-            <methods xmi:id="_60gBHBhuEeK9-sQ39xo8qQ" name="genSematicImports" patternFilePath="templates/pattern._60gBEBhuEeK9-sQ39xo8qQ/method._60gBHBhuEeK9-sQ39xo8qQ.pt"/>
+            <methods xmi:id="_60gBHBhuEeK9-sQ39xo8qQ" name="genSemanticImports" patternFilePath="templates/pattern._60gBEBhuEeK9-sQ39xo8qQ/method._60gBHBhuEeK9-sQ39xo8qQ.pt"/>
             <parameters xmi:id="_60gBHRhuEeK9-sQ39xo8qQ" name="parameter" type="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpui/1.0.0#//UIField"/>
             <variables xmi:id="_60gBHhhuEeK9-sQ39xo8qQ" name="epfUtility" type="org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util.EPFUtility"/>
             <variables xmi:id="_60gBHxhuEeK9-sQ39xo8qQ" name="section" type="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpui/1.0.0#//UIContainer"/>

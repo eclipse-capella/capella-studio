@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2019 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -23,7 +23,7 @@ import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIField;
 /**
  * @author Boubekeur Zendagui
  */
-public class UISectionUtility {
+public final class UISectionUtility {
 	
 	public static boolean canGenerateSelectionForContainer(UIContainer container){
 		boolean isSingleClassSection = getAssociatedClasses(container).size() == 1;
@@ -60,8 +60,9 @@ public class UISectionUtility {
 				Class clazz = (feature != null && feature.eContainer() != null ? 
 													(Class)feature.eContainer() : null);
 				
-				if (clazz != null && ! result.contains(clazz))
+				if (clazz != null && ! result.contains(clazz)) {
 					result.add(clazz);
+				}
 			}
 		}
 		

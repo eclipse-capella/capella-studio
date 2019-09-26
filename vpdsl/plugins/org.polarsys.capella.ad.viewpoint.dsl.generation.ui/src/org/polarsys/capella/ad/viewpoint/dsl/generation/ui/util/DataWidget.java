@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2019 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -12,6 +12,7 @@ package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -62,25 +63,25 @@ public class DataWidget{
 	public String widgetFieldETypeName;
 	public String widgetFieldETypeLiteral;
 	// get the semantic element to import, get the class containing the attribute mapped to the widget
-	public ArrayList<String> widgetSemanticImports;
+	public List<String> widgetSemanticImports;
 	// get the graphical class used to create the widget
-	public ArrayList<String> widgetGraphicalImports;
+	public List<String> widgetGraphicalImports;
 	// This property is used in the main generated class to import the other generated EClasses
-	public ArrayList<String> generatedClassesImports;
+	public List<String> generatedClassesImports;
 	
 	// This property is used in the main generated additional imports
-	public ArrayList<String> additionalImports;
+	public List<String> additionalImports;
 	
 	// Each widget can have some extension to add to Plugin.xml. 
 	// These extensions are created by Pattern during generation
-	public ArrayList<PluginExtensionEntry> PluginExtensionEntries;
+	public List<PluginExtensionEntry> PluginExtensionEntries;
 	
-	public class WidgetEnumerator{
+	public static class WidgetEnumerator{
 		public String enumName;
 		public String enumImportName;
-		public ArrayList<String> enumLiterals;
+		public List<String> enumLiterals;
 		
-		public WidgetEnumerator(String name, String importName, ArrayList<String> literals){
+		public WidgetEnumerator(String name, String importName, List<String> literals){
 			this.enumName = name;
 			this.enumImportName = importName;
 			this.enumLiterals = literals;
@@ -108,7 +109,7 @@ public class DataWidget{
 		PluginExtensionEntries = new ArrayList<>();
 	}
 	
-	private ArrayList<String> computeAdditionalImports() {
+	private List<String> computeAdditionalImports() {
 		ArrayList<String> result = new ArrayList<>();
 		if (this.uiField.getType().equals(UI_Field_Type.RICHTEXT))
 		{
@@ -139,6 +140,7 @@ public class DataWidget{
 	private String computeWidgetParentName(){
 		UIContainer uiContainer = (UIContainer)this.uiField.eContainer();
 		if (uiContainer.eContainer() instanceof UI)
+		{
 			switch (this.uiField.getType()) {
 				case SIMPLE_CHOICE_LIST:
 				case MULTIPLE_CHOICE_LIST:
@@ -148,15 +150,20 @@ public class DataWidget{
 				default:
 					return "rootParentComposite";
 			}
+		}
 		else
+		{
 			return uiContainer.getName();
+		}
 	}
 	
 	public WidgetEnumerator initEnumerator(){
 		final FieldMapping mapping = this.uiField.getMapping();
 		final AbstractFeature mappedAttribute = mapping.getUI_Field_Mapped_To();
 		if ( ! (mappedAttribute instanceof Attribute))
+		{
 			return null;
+		}
 		
 		final Attribute attribute = (Attribute)mappedAttribute;
 		final AbstractAttributeType attributeType = attribute.getOwned_type();
@@ -176,7 +183,9 @@ public class DataWidget{
 			// Check if the attribute type is well a generated or available enumeration
 			if (!attributeTypeName.equals("EEnumerator")  
 					&& !(externalAttributeType instanceof EEnum))
+			{
 				return null;
+			}
 			
 			if (attributeTypeName.equals("EEnumerator")){
 				// The case of a generate EEnum
@@ -211,7 +220,9 @@ public class DataWidget{
 					}
 
 					if (genEnum != null)
+					{
 						break;
+					}
 
 					// FIXME: This code take only sub package of a package. It must take into account sub sub sub ... packages  
 					// check the EEnum elements of each Nested GenPackage in the current <genPackage>
@@ -228,19 +239,25 @@ public class DataWidget{
 					}
 
 					if (genEnum != null)
+					{
 						break;
+					}
 				}
 			}
 		}
 		
 		if (genEnum == null)
+		{
 			return null;
+		}
 		
 		String genEnumName = genEnum.getClassifierAccessorName();
 		String importName = genEnum.getQualifiedName();
 		ArrayList<String> genEnumLiteralsList = new ArrayList<>();		
 		for (GenEnumLiteral iGenEnumLiteral : genEnum.getGenEnumLiterals())
+		{
 			genEnumLiteralsList.add(iGenEnumLiteral.getEnumLiteralInstanceConstantName());
+		}
 		
 		return new WidgetEnumerator(genEnumName, importName, genEnumLiteralsList);
 	}
@@ -335,17 +352,21 @@ public class DataWidget{
 		return GenmodelUtility.getInstance().getPackageAccessorName()+".eINSTANCE.get"+accessorName+"()";
 	}
 	
-	private ArrayList<String> computeSematicImports(){
+	private List<String> computeSematicImports(){
 		ArrayList<String> result = new ArrayList<>();
 		String packageImport = GenmodelUtility.getInstance().getPackageImport();
 		if (packageImport != null)
+		{
 			result.add(packageImport);
+		}
 		
 		String sematicEClassImport = GenmodelUtility.getInstance().
 											getSemanticEClassImport(
 													this.uiField.getMapping().getUI_Field_Mapped_To());
 		if (sematicEClassImport != null)
+		{
 			result.add(sematicEClassImport);
+		}
 		
 		return result;
 	}

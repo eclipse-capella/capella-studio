@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2019 Thales Global Services S.A.S.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -19,7 +19,7 @@ import org.polarsys.capella.extension.tools.HelperClassGenerator.HelperInfo;
  * @author Thomas Guiu
  * 
  */
-public class MenuContributorClassGenerator {
+public final class MenuContributorClassGenerator {
 	private MenuContributorClassGenerator() {
 	}
 
@@ -37,7 +37,9 @@ public class MenuContributorClassGenerator {
 
 	public static boolean isValidTarget(GenClass obj) {
 		if (obj.isAbstract())
+		{
 			return false;
+		}
 		HelperInfo info = HelperClassGenerator.getInfo(obj.getEcoreClass());
 
 		return info != null && info.getMenuContributorBaseClass() != null;

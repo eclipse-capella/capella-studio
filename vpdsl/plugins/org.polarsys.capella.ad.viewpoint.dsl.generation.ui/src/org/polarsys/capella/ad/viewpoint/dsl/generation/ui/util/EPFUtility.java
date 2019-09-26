@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2006, 2018 THALES GLOBAL SERVICES.
+* Copyright (c) 2006, 2019 THALES GLOBAL SERVICES.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -12,6 +12,7 @@ package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.polarsys.kitalpha.ad.viewpoint.dsl.as.model.vpui.UIContainer;
@@ -41,8 +42,8 @@ public class EPFUtility {
 	
 	/***************************** INSTANCE OBJECT AREA ********************************/
 	// this list contains all widget
-	protected ArrayList<DataWidget> generatedWidgetList = new ArrayList<>();
-	protected ArrayList<UIContainer> generatedGroupList = new ArrayList<>();
+	protected List<DataWidget> generatedWidgetList = new ArrayList<>();
+	protected List<UIContainer> generatedGroupList = new ArrayList<>();
 	
 	public void registerClassToImportInMainClass(UIField uiField, String classQualifiedName){
 		DataWidget currentDataWidget = getDataOf(uiField);
@@ -52,7 +53,7 @@ public class EPFUtility {
 		}
 	}
 	
-	public ArrayList<DataWidget> getGeneratedWidgetList(){
+	public List<DataWidget> getGeneratedWidgetList(){
 		return generatedWidgetList;
 	}
 	
@@ -60,7 +61,7 @@ public class EPFUtility {
 		generatedWidgetList.add(new DataWidget(uiField));
 	}
 	
-	public ArrayList<String> getSematicImportsFor(UIField uiField){
+	public List<String> getSemanticImportsFor(UIField uiField){
 		DataWidget currentDataWidget = getDataOf(uiField);
 		return currentDataWidget.widgetSemanticImports;
 	}
@@ -86,12 +87,15 @@ public class EPFUtility {
 	}
 	
 	public DataWidget getDataOf(UIField uiField){
-		if (generatedWidgetList.isEmpty())
+		if (generatedWidgetList.isEmpty()) {
 			return null;
+		}
 		
-		for (DataWidget iWidgetData : generatedWidgetList) 
-			if (iWidgetData.uiField.equals(uiField))
+		for (DataWidget iWidgetData : generatedWidgetList) { 
+			if (iWidgetData.uiField.equals(uiField)) {
 				return iWidgetData;
+			}
+		}
 		
 		return null;
 	}

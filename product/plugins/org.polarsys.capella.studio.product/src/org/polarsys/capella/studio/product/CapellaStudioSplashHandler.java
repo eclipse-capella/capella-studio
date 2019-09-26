@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2007, 2018 IBM Corporation and others.
+ * Copyright (c) 2007, 2019 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -66,11 +66,13 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 		setForeground(new RGB((foregroundColorInteger & 0xFF0000) >> 16, (foregroundColorInteger & 0xFF00) >> 8, foregroundColorInteger & 0xFF));
 
 		// Custom
-		Bundle definingBundle = product.getDefiningBundle();
 		Version studioVersion = null;
-		if (definingBundle != null) {
-			studioVersion = definingBundle.getVersion();
-		}
+		if (product != null) {
+			Bundle definingBundle = product.getDefiningBundle();
+			if (definingBundle != null) {
+				studioVersion = definingBundle.getVersion();
+			}
+		}		
 		String capellaVersion = NOT_APPLICABLE;
 		String kitalphaVersion = NOT_APPLICABLE;
 		for (IBundleGroupProvider bundleGroupProvider : Platform.getBundleGroupProviders())
@@ -78,9 +80,16 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 			for (IBundleGroup bundleGroups : bundleGroupProvider.getBundleGroups())
 			{
 				if ("org.polarsys.capella.core.advance.feature".equals(bundleGroups.getIdentifier()))
+				{
 					capellaVersion = trunkQualifier(bundleGroups.getVersion());
-				else if ("org.polarsys.kitalpha.sdk.feature".equals(bundleGroups.getIdentifier()))
-					kitalphaVersion = trunkQualifier(bundleGroups.getVersion());
+				}
+				else
+				{
+					if ("org.polarsys.kitalpha.sdk.feature".equals(bundleGroups.getIdentifier()))
+					{
+						kitalphaVersion = trunkQualifier(bundleGroups.getVersion());
+					}
+				}
 			}
 		}
 		StringBuilder builder = new StringBuilder();
@@ -112,7 +121,9 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 			private Font computeFont(PaintEvent e, int height) {
 				FontData[] fontData = e.gc.getFont().getFontData();
 				for (int i = 0; i < fontData.length; ++i)
+				{
 					fontData[i].setHeight(height);
+				}
 				return new Font(e.display, fontData);
 			}
 		});
