@@ -5,8 +5,8 @@ Element-Name: Generation Lib
 Element-Type: context
 Element-Version: 2.0
 Id: _KOH-MKJ5EeWqlNQu-Q0L2A
-Runtime-Version: 2.2.0.201706152316
-Save-Time: 10/12/18 4:28 PM
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 10/11/19 9:49 AM
 
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
 Content-Type: text/ecl
@@ -36,15 +36,15 @@ proc "get-os" {
 proc "getTempFolder" {
 //		switch $operatingSystem {
 //		[case "win32" {
-//				concat "file:/" [ get-file [ get-java-property "java.io.tmpdir"] 
-//							| get uri 
-//							| invoke replace "\\" "/" 
-//							| invoke replace " " "%20" 
-//					]
+				concat "file:/" [ get-file [ get-java-property "java.io.tmpdir"] 
+							| get uri 
+							| invoke replace "\\" "/" 
+							| invoke replace " " "%20" 
+					]
 //			}
 //		]
 //		[case "linux" {
-				concat "/" "tmp"
+//				concat "/" "tmp"
 //			}
 //		]
 //		-default {
