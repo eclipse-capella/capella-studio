@@ -7,7 +7,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: _vOFfUJ2WEeWgmKoQjPKcMA
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 10/11/19 9:13 AM
+Save-Time: 10/21/19 4:47 PM
 Testcase-Type: ecl
 Verifications: _xe8uEJkJEeW9roo66l64HA,_CfrnoJ2eEeWgmKoQjPKcMA
 
@@ -41,7 +41,7 @@ with [get-window "Accelerator of diagram creation"] {
 
 
 with [get-editor "QualityAssessment.diagram.vptext" | get-text-viewer] {
-    select-range 11 27 11 53
+    select-range 11 27 11 38
     key-type "M1+SPACE"
     type-text PAB
     key-type Down
@@ -50,7 +50,7 @@ with [get-editor "QualityAssessment.diagram.vptext" | get-text-viewer] {
 
 with [get-editor "QualityAssessment.diagram.vptext" | get-text-viewer] {
     set-caret-pos 14 27
-    select-range 14 25 14 31
+    select-range 14 25 14 47
     key-type "M1+SPACE"
     key-type Down
     key-type Enter

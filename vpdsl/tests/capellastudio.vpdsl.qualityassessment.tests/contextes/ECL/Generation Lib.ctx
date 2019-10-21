@@ -6,7 +6,7 @@ Element-Type: context
 Element-Version: 2.0
 Id: _KOH-MKJ5EeWqlNQu-Q0L2A
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 10/11/19 9:49 AM
+Save-Time: 10/21/19 4:16 PM
 
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
 Content-Type: text/ecl
@@ -30,17 +30,14 @@ proc "get-os" {
 }
 
 /** Get the system temporary folder **/
-/*
- * FIXME: file://tmp does not exist on linux system
- */
-proc "getTempFolder" {
-//		switch $operatingSystem {
+//proc "getTempFolderIn" [val os] {
+//	switch $os
 //		[case "win32" {
-				concat "file:/" [ get-file [ get-java-property "java.io.tmpdir"] 
-							| get uri 
-							| invoke replace "\\" "/" 
-							| invoke replace " " "%20" 
-					]
+//				concat "file:/" [ get-file [ get-java-property "java.io.tmpdir"] 
+//							| get uri 
+//							| invoke replace "\\" "/" 
+//							| invoke replace " " "%20" 
+//					]
 //			}
 //		]
 //		[case "linux" {
@@ -48,9 +45,12 @@ proc "getTempFolder" {
 //			}
 //		]
 //		-default {
-//			"." //current folder used as tmp
+//			"\." //current folder used as tmp
 //		}
-//	}
+//}
+
+proc "getTempFolder" {
+	uri-from-path [ get-java-property "java.io.tmpdir" ]
 }
 
 /** Get the today date with the given format **/
@@ -70,9 +70,11 @@ proc refershAllGeneratedProjects {
 	}
 }
 
+
+
 /** Parse a folder and look for a given folder/file **/
 /** The action values are: 1= Check existence; 2= Delete; 3- echo full name; 4- echo full path. **/
-proc "lookForDropinsFolder" [val contextFolderPath] [val parentFilter] [val folderFilter] [val action 1]{
+proc "lookForDropinsFolder" [val contextFolderPath] [val parentFilter] [val folderFilter] [val action 1] {
 	get-file [ $contextFolderPath ] | get children | foreach [val item] {
 	   if [$item | get name | contains [ $parentFilter ] ]
 	   {
