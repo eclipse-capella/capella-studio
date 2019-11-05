@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
-<!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="capellastudio" sequenceNumber="1571923548">
+<!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
+<target name="capellastudio" sequenceNumber="1572948419">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.m2e.feature.feature.group" version="0.0.0"/>
@@ -304,7 +304,7 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.core.egf.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.egf.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella-egf-patterns" location="https://download.eclipse.org/capella/core/updates/stable/1.4.0-S20191023-175001/org.polarsys.capella.egf.site/"/>
+      <repository id="capella-egf-patterns" location="https://download.eclipse.org/capella/core/updates/stable/1.4.0-S20191104-160005/org.polarsys.capella.egf.site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.rcp.feature.feature.group" version="0.0.0"/>
@@ -316,7 +316,7 @@
       <unit id="org.polarsys.capella.core.advance.feature.source.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella" location="https://download.eclipse.org/capella/core/updates/stable/1.4.0-S20191023-175001/org.polarsys.capella.rcp.site/"/>
+      <repository id="capella" location="https://download.eclipse.org/capella/core/updates/stable/1.4.0-S20191104-160005/org.polarsys.capella.rcp.site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.docgen.feature.feature.group" version="0.0.0"/>

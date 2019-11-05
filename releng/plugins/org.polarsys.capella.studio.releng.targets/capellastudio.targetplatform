@@ -149,13 +149,13 @@ location kitalpha-core "https://download.eclipse.org/kitalpha/updates/stable/run
 }
 
 
-location capella-egf-patterns "https://download.eclipse.org/capella/core/updates/stable/1.4.0-S20191023-175001/org.polarsys.capella.egf.site/" {
+location capella-egf-patterns "https://download.eclipse.org/capella/core/updates/stable/1.4.0-S20191104-160005/org.polarsys.capella.egf.site/" {
 	org.polarsys.capella.core.egf.feature.feature.group lazy
 	org.polarsys.capella.core.egf.feature.source.feature.group lazy
 }
 
 
-location capella "https://download.eclipse.org/capella/core/updates/stable/1.4.0-S20191023-175001/org.polarsys.capella.rcp.site/" {
+location capella "https://download.eclipse.org/capella/core/updates/stable/1.4.0-S20191104-160005/org.polarsys.capella.rcp.site/" {
 	org.polarsys.capella.rcp.feature.feature.group lazy
 	org.polarsys.capella.rcp.feature.source.feature.group lazy
 	org.polarsys.capella.cdo.mock.feature.feature.group lazy
