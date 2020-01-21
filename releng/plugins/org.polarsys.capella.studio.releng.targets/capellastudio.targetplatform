@@ -12,7 +12,7 @@ target "capellastudio" with source, requirements
 
 //include "common/capellabase.targetplatform" NOT already used
 
-include "https://git.polarsys.org/c/kitalpha/kitalpha.git/plain/releng/plugins/org.polarsys.kitalpha.releng.targets/kitalpha.targetplatform?h=v1.3.x"
+include "https://github.com/eclipse/kitalpha/raw/v1.3.x/releng/plugins/org.polarsys.kitalpha.releng.targets/kitalpha.targetplatform"
 
 location sirius-query-legacy-1.1.0 "http://download.eclipse.org/sirius/updates/legacy/1.1.0" {
 	org.eclipse.sirius.query.legacy.feature.feature.group lazy
@@ -167,7 +167,7 @@ location capella "http://download.polarsys.org/capella/core/updates/releases/1.3
 	org.polarsys.capella.core.feature.source.feature.group lazy
 }
 
-location xhtml-docgen "http://download.eclipse.org/capella/addons/xhtmldocgen/updates/releases/1.3.1" {
+location xhtml-docgen "https://download.eclipse.org/capella/addons/xhtmldocgen/updates/release/1.3.1" {
 	org.polarsys.capella.docgen.feature.feature.group lazy
 	org.polarsys.capella.docgen.configuration.feature.feature.group lazy
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
-<!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="capellastudio" sequenceNumber="1562944615">
+<!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
+<target name="capellastudio" sequenceNumber="1579623339">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
@@ -152,7 +152,7 @@
       <unit id="org.eclipse.sirius.specifier.ide.ui.aql.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.specifier.ide.ui.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.specifier.ide.ui.source.feature.group" version="0.0.0"/>
-      <repository id="Sirus" location="https://download.eclipse.org/sirius/updates/stable/6.1.3-S20190506-061916/oxygen"/>
+      <repository id="Sirus" location="https://download.eclipse.org/sirius/updates/releases/6.1.3/oxygen/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.diffmerge.feature.feature.group" version="0.0.0"/>
@@ -192,7 +192,7 @@
       <unit id="org.eclipse.emf.ecoretools.sdk.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.ecoretools.design" version="0.0.0"/>
       <unit id="org.eclipse.emf.ecoretools.explorer.contextual.feature.group" version="0.0.0"/>
-      <repository id="EcoreTools" location="http://download.eclipse.org/ecoretools/updates/milestones/3.3.0RC4/oxygen/"/>
+      <repository id="EcoreTools" location="http://download.eclipse.org/ecoretools/updates/releases/3.3.0/oxygen/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.egf.sdk.feature.feature.group" version="0.0.0"/>
@@ -378,7 +378,7 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.docgen.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.docgen.configuration.feature.feature.group" version="0.0.0"/>
-      <repository id="xhtml-docgen" location="http://download.eclipse.org/capella/addons/xhtmldocgen/updates/releases/1.3.1"/>
+      <repository id="xhtml-docgen" location="https://download.eclipse.org/capella/addons/xhtmldocgen/updates/release/1.3.1"/>
     </location>
   </locations>
 </target>
