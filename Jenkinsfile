@@ -23,7 +23,7 @@ pipeline {
     }
     stage('Deploy') {
       when {
-        expression { return "${env.FROM_PR}".contains("false") } 
+         not { changeRequest() }
       }
       steps {
           sshagent ( ['projects-storage.eclipse.org-bot-ssh']) {
@@ -45,8 +45,8 @@ pipeline {
   }
   post {
     always {
-       archiveArtifacts artifacts: '**/*.log,*.xml,**/*.layout'
-       junit '*.xml'
+       archiveArtifacts artifacts: '**/*.log,**/*.xml,**/*.layout'
+       junit '**/target/surefire-reports/*.xml'
     }
   }
   
