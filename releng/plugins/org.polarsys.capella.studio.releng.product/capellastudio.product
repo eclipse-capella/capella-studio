@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Capella Studio Product" uid="org.polarsys.capella.studio.releng.product" id="org.polarsys.capella.studio.product.CapellaStudio" application="org.polarsys.capella.studio.product.application" version="1.3.1.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Capella Studio Product" uid="org.polarsys.capella.studio.releng.product" id="org.polarsys.capella.studio.product.CapellaStudio" application="org.polarsys.capella.studio.product.application" version="1.3.2.qualifier" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="/org.polarsys.capella.studio.product/icons/CapellaStudioAbout.png"/>
@@ -61,11 +61,11 @@ http://www.eclipse.org/legal/epl-v10.htm
    </plugins>
 
    <features>
-      <feature id="org.polarsys.capella.studio.releng.eclipse.feature" version="1.3.1.qualifier"/>
-      <feature id="org.polarsys.capella.studio.releng.kitalpha.feature" version="1.3.1.qualifier"/>
-      <feature id="org.polarsys.capella.studio.releng.capella.feature" version="1.3.1.qualifier"/>
-      <feature id="org.polarsys.capella.rcp.feature" version="1.3.1.qualifier"/>
-      <feature id="org.polarsys.capella.rcp.feature.source" version="1.3.1.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.eclipse.feature" version="1.3.2.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.kitalpha.feature" version="1.3.2.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.capella.feature" version="1.3.2.qualifier"/>
+      <feature id="org.polarsys.capella.rcp.feature" version="1.3.2.qualifier"/>
+      <feature id="org.polarsys.capella.rcp.feature.source" version="1.3.2.qualifier"/>
    </features>
 
    <configurations>
