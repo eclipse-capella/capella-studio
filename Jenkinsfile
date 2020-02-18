@@ -20,9 +20,6 @@ pipeline {
       }
     }
     stage('Deploy') {
-      when {
-        expression { return "${env.FROM_PR}".contains("false") } 
-      }
       steps {
           sshagent ( ['projects-storage.eclipse.org-bot-ssh']) {
             sh '''
@@ -39,12 +36,6 @@ pipeline {
             '''
         }
       }
-    }
-  }
-  post {
-    always {
-       archiveArtifacts artifacts: '**/*.log,*.xml,**/*.layout'
-       junit '*.xml'
     }
   }
   

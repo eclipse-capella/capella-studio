@@ -19,7 +19,7 @@ location sirius-query-legacy-1.1.0 "http://download.eclipse.org/sirius/updates/l
 	org.eclipse.sirius.query.legacy.feature.source.feature.group lazy
 }
 
-location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/release/sdk/1.3.1" {
+location kitalpha-sdk "https://download.polarsys.org/kitalpha/updates/stable/sdk/1.3.2RC1" {
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.source.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group lazy
@@ -138,25 +138,25 @@ location kitalpha-sdk "http://download.polarsys.org/kitalpha/updates/release/sdk
 	org.polarsys.kitalpha.richtext.widget.ext.feature.feature.group lazy //TODO source
 }
 
-location kitalpha-runtime "http://download.polarsys.org/kitalpha/updates/release/runtime/1.3.1" {
+location kitalpha-runtime "https://download.polarsys.org/kitalpha/updates/stable/runtime/1.3.2RC1" {
 	org.polarsys.kitalpha.runtime.feature.feature.group lazy
 	org.polarsys.kitalpha.runtime.feature.source.feature.group lazy
 }
 
-location kitalpha-core "http://download.polarsys.org/kitalpha/updates/release/runtimecore/1.3.1" {
+location kitalpha-core "https://download.polarsys.org/kitalpha/updates/stable/runtimecore/1.3.2RC1" {
 	org.polarsys.kitalpha.common.feature.feature.group lazy
 	org.polarsys.kitalpha.common.feature.source.feature.group lazy
 	org.polarsys.kitalpha.massactions.feature.feature.group lazy
 	org.polarsys.kitalpha.massactions.feature.source.feature.group lazy
 }
 
-location capella-egf-patterns "http://download.polarsys.org/capella/core/updates/releases/1.3.1-R20190520-182008/org.polarsys.capella.egf.site/" {
+location capella-egf-patterns "https://download.eclipse.org/capella/core/updates/stable/1.3.2-S20200214-094869/org.polarsys.capella.egf.site/" {
 	org.polarsys.capella.core.egf.feature.feature.group lazy
 	org.polarsys.capella.core.egf.feature.source.feature.group lazy
 }
 
 
-location capella "http://download.polarsys.org/capella/core/updates/releases/1.3.1-R20190520-182008/org.polarsys.capella.rcp.site/" {
+location capella "https://download.eclipse.org/capella/core/updates/stable/1.3.2-S20200214-094869/org.polarsys.capella.rcp.site/" {
 	org.polarsys.capella.rcp.feature.feature.group lazy
 	org.polarsys.capella.rcp.feature.source.feature.group lazy
 	org.polarsys.capella.common.ui.feature.feature.group lazy
@@ -167,7 +167,7 @@ location capella "http://download.polarsys.org/capella/core/updates/releases/1.3
 	org.polarsys.capella.core.feature.source.feature.group lazy
 }
 
-location xhtml-docgen "https://download.eclipse.org/capella/addons/xhtmldocgen/updates/release/1.3.1" {
+location xhtml-docgen "https://download.eclipse.org/capella/addons/xhtmldocgen/updates/stable/1.3.3" {
 	org.polarsys.capella.docgen.feature.feature.group lazy
 	org.polarsys.capella.docgen.configuration.feature.feature.group lazy
 }
