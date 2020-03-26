@@ -23,7 +23,7 @@
 
 		HelperClassGenerator.registerHelperAndSection(CtxPackage.eINSTANCE.getOperationalAnalysisRealization(), OperationalAnalysisRealizationHelper.class, OperationalAnalysisRealizationSection.class);
 
-		HelperClassGenerator.registerHelper(CtxPackage.eINSTANCE.getSystemAnalysis(), SysAnalysisHelper.class, SystemAnalysisItemContribution.class);
+		HelperClassGenerator.registerHelper(CtxPackage.eINSTANCE.getSystemAnalysis(), SystemAnalysisHelper.class, SystemAnalysisItemContribution.class);
 
 
 		HelperClassGenerator.registerHelperAndSection(CtxPackage.eINSTANCE.getSystemFunction(), SystemFunctionHelper.class, SystemFunctionItemContribution.class, SystemFunctionSection.class);
@@ -33,7 +33,7 @@
 		HelperClassGenerator.registerHelper(CtxPackage.eINSTANCE.getCapabilityPkg(), null, CapabilityPkgItemContribution.class);
 		HelperClassGenerator.registerHelperAndSection(CtxPackage.eINSTANCE.getSystemFunctionPkg(), null, SystemFunctionPkgItemContribution.class, SystemFunctionPkgSection.class);
 		HelperClassGenerator.registerHelperAndSection(EpbsPackage.eINSTANCE.getConfigurationItem(), ConfigurationItemHelper.class, ConfigurationItemItemContribution.class, ConfigurationItemSection.class);
-		HelperClassGenerator.registerHelperAndSection(EpbsPackage.eINSTANCE.getEPBSArchitecture(), EpbsArchitectureHelper.class, EPBSArchitectureItemContribution.class, EPBSArchitectureSection.class);
+		HelperClassGenerator.registerHelperAndSection(EpbsPackage.eINSTANCE.getEPBSArchitecture(), EPBSArchitectureHelper.class, EPBSArchitectureItemContribution.class, EPBSArchitectureSection.class);
 
 		HelperClassGenerator.registerHelperAndSection(EpbsPackage.eINSTANCE.getPhysicalArchitectureRealization(), PhysicalArchitectureRealizationHelper.class, PhysicalArchitectureRealizationSection.class);
 		HelperClassGenerator.registerHelperAndSection(EpbsPackage.eINSTANCE.getPhysicalArtifactRealization(), PhysicalArtifactRealizationHelper.class, PhysicalArtifactRealizationSection.class);
@@ -132,7 +132,7 @@
 		HelperClassGenerator.registerHelperAndSection(LaPackage.eINSTANCE.getCapabilityRealizationPkg(), null, CapabilityRealizationPkgItemContribution.class, CapabilityRealizationPkgSection.class);
 		HelperClassGenerator.registerHelperAndSection(LaPackage.eINSTANCE.getCapabilityRealization(), CapabilityRealizationHelper.class, CapabilityRealizationSection.class);
 		HelperClassGenerator.registerHelperAndSection(LaPackage.eINSTANCE.getContextInterfaceRealization(), ContextInterfaceRealizationHelper.class, ContextInterfaceRealizationSection.class);
-		HelperClassGenerator.registerHelperAndSection(LaPackage.eINSTANCE.getLogicalArchitecture(), LaArchitectureHelper.class, LogicalArchitectureItemContribution.class, LogicalArchitectureSection.class);
+		HelperClassGenerator.registerHelperAndSection(LaPackage.eINSTANCE.getLogicalArchitecture(), LogicalArchitectureHelper.class, LogicalArchitectureItemContribution.class, LogicalArchitectureSection.class);
 
 		HelperClassGenerator.registerHelperAndSection(LaPackage.eINSTANCE.getLogicalComponent(), LogicalComponentHelper.class, LogicalComponentItemContribution.class, LogicalComponentSection.class);
 
@@ -188,7 +188,7 @@
 		HelperClassGenerator.registerHelperAndSection(OaPackage.eINSTANCE.getEntity(), EntityHelper.class, EntityItemContribution.class, EntitySection.class);
 		HelperClassGenerator.registerHelperAndSection(OaPackage.eINSTANCE.getCommunicationMean(), null, CommunicationMeanItemContribution.class, CommunicationMeanSection.class);
 		HelperClassGenerator.registerHelperAndSection(OaPackage.eINSTANCE.getEntityOperationalCapabilityInvolvement(), EntityOperationalCapabilityInvolvementHelper.class, EntityOperationalCapabilityInvolvementSection.class);
-		HelperClassGenerator.registerHelperAndSection(OaPackage.eINSTANCE.getOperationalAnalysis(), OpAnalysisHelper.class, OperationalAnalysisSection.class);
+		HelperClassGenerator.registerHelperAndSection(OaPackage.eINSTANCE.getOperationalAnalysis(), OperationalAnalysisHelper.class, OperationalAnalysisSection.class);
 		HelperClassGenerator.registerHelperAndSection(OaPackage.eINSTANCE.getOperationalActivity(), OperationalActivityHelper.class, OperationalActivityItemContribution.class, OperationalActivitySection.class);
 
 		HelperClassGenerator.registerHelperAndSection(OaPackage.eINSTANCE.getOperationalCapability(), OperationalCapabilityHelper.class, OperationalCapabilitySection.class);
@@ -214,7 +214,7 @@
 		HelperClassGenerator.registerHelperAndSection(PaPackage.eINSTANCE.getLogicalArchitectureRealization(), LogicalArchitectureRealizationHelper.class, LogicalArchitectureRealizationSection.class);
 
 		HelperClassGenerator.registerHelperAndSection(PaPackage.eINSTANCE.getLogicalInterfaceRealization(), LogicalInterfaceRealizationHelper.class, LogicalInterfaceRealizationSection.class);
-		HelperClassGenerator.registerHelper(PaPackage.eINSTANCE.getPhysicalArchitecture(), PaArchitectureHelper.class);
+		HelperClassGenerator.registerHelper(PaPackage.eINSTANCE.getPhysicalArchitecture(), PhysicalArchitectureHelper.class);
 
 		HelperClassGenerator.registerHelperAndSection(PaPackage.eINSTANCE.getPhysicalComponent(), PhysicalComponentHelper.class, PhysicalComponentItemContribution.class, PhysicalComponentSection.class);
 
@@ -231,7 +231,7 @@
 		HelperClassGenerator.registerHelperAndSection(PaPackage.eINSTANCE.getPhysicalArchitecture(), null, PhysicalArchitectureItemContribution.class, PhysicalArchitectureSection.class);
 		HelperClassGenerator.registerHelperAndSection(PaPackage.eINSTANCE.getPhysicalArchitecturePkg(), null, PhysicalArchitecturePkgItemContribution.class, PhysicalArchitecturePkgSection.class);
 		HelperClassGenerator.registerHelperAndSection(PaPackage.eINSTANCE.getPhysicalFunctionPkg(), null, PhysicalFunctionPkgItemContribution.class, PhysicalFunctionPkgSection.class);
-		HelperClassGenerator.registerHelperAndSection(RequirementPackage.eINSTANCE.getRequirement(), AbstractRequirementHelper.class, RequirementSection.class);
+		HelperClassGenerator.registerHelperAndSection(RequirementPackage.eINSTANCE.getRequirement(), RequirementHelper.class, RequirementSection.class);
 		HelperClassGenerator.registerHelper(ActivityPackage.eINSTANCE.getAbstractActivity(), AbstractActivityHelper.class);
 		HelperClassGenerator.registerHelper(ActivityPackage.eINSTANCE.getActivityEdge(), ActivityEdgeHelper.class);
 		HelperClassGenerator.registerHelper(ActivityPackage.eINSTANCE.getActivityExchange(), ActivityExchangeHelper.class);
