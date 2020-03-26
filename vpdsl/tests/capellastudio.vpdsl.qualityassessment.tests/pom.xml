@@ -18,14 +18,13 @@
 	
 	<groupId>org.polarsys.capella</groupId>
 	<artifactId>capellastudio.vpdsl.qualityassessment.tests</artifactId>
-	<version>1.4.0-SNAPSHOT</version>
 	
 	<packaging>rcpttTest</packaging>
 	
 	<parent>
 		<groupId>org.polarsys.capella</groupId>
 		<artifactId>org.polarsys.capella.studio.releng.parent.alternative</artifactId>
-		<version>1.4.0-SNAPSHOT</version>
+		<version>1.4.1-SNAPSHOT</version>
 		<relativePath>../../../releng/plugins/org.polarsys.capella.studio.releng.parent</relativePath>
 	</parent>
 	
