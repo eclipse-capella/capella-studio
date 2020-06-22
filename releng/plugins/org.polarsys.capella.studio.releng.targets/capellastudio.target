@@ -316,7 +316,7 @@
       <unit id="org.polarsys.capella.core.advance.feature.source.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella-egf-patterns" location="https://download.eclipse.org/capella/core/updates/stable/1.4.1-S20200604-155604/org.polarsys.capella.egf.site/"/>
+      <repository id="capella-egf-patterns" location="https://download.eclipse.org/capella/core/updates/stable/1.4.1-S20200604-155604/org.polarsys.capella.rcp.site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.docgen.feature.feature.group" version="0.0.0"/>
