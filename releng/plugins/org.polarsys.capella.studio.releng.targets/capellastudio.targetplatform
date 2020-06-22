@@ -134,6 +134,8 @@ location kitalpha-sdk "https://download.eclipse.org/kitalpha/updates/stable/sdk/
 	org.polarsys.kitalpha.richtext.widget.doc.feature.feature.group lazy
 	org.polarsys.kitalpha.richtext.widget.feature.feature.group lazy //TODO sources
 	org.polarsys.kitalpha.richtext.widget.ext.feature.feature.group lazy //TODO source
+	org.polarsys.kitalpha.richtext.widget.tools.ext.feature.feature.group lazy
+	org.polarsys.kitalpha.richtext.widget.tools.ext.feature.source.feature.group lazy
 }
 
 location kitalpha-runtime "https://download.eclipse.org/kitalpha/updates/stable/runtime/1.4.1.IT4/" {
