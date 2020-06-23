@@ -46,7 +46,7 @@
 						<injections>
 							<injection>
 								<site>
-									https://download.eclipse.org/kitalpha/updates/nightly/component/1.4.x/
+									https://download.eclipse.org/kitalpha/updates/release/component/1.4.0/
 								</site>
 							</injection>
 						</injections>
