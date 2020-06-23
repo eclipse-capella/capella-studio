@@ -12,7 +12,7 @@ target "capellastudio" with source, requirements
 
 //include "common/capellabase.targetplatform" NOT already used
 
-include "https://download.eclipse.org/kitalpha/updates/release/sdk/1.4.0/targets/kitalpha.targetplatform"
+include "https://raw.githubusercontent.com/eclipse/kitalpha/master/releng/plugins/org.polarsys.kitalpha.releng.targets/kitalpha.targetplatform"
 
 location sirius-query-legacy-1.1.0 "https://download.eclipse.org/sirius/updates/legacy/1.1.0" {
 	org.eclipse.sirius.query.legacy.feature.feature.group lazy
