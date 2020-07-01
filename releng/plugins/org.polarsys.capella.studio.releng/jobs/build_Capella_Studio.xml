@@ -1,7 +1,0 @@
-<project name="Capella_Studio">
-
-	<echo message="Running Job Capella_Studio in Capella_Studio/releng"/>
-	<ant dir="Capella_Studio/releng"/>
-
-
-</project>
