@@ -23,7 +23,7 @@
   <parent>
     <groupId>org.polarsys.capella</groupId>
     <artifactId>org.polarsys.capella.studio.releng.parent</artifactId>
-    <version>1.3.2-SNAPSHOT</version>
+    <version>1.3.3-SNAPSHOT</version>
     <relativePath>../plugins/org.polarsys.capella.studio.releng.parent</relativePath>
   </parent>
 </project>
