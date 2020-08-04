@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %BundleName
 Bundle-SymbolicName: org.polarsys.capella.studio.doc;singleton:=true
-Bundle-Version: 1.4.1.qualifier
+Bundle-Version: 1.4.2.qualifier
 Automatic-Module-Name: org.polarsys.capella.studio.doc
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %BundleVendor

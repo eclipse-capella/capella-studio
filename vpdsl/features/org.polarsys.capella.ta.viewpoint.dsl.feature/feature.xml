@@ -12,7 +12,7 @@
 <feature
       id="org.polarsys.capella.ta.viewpoint.dsl.feature"
       label="%featureName"
-      version="1.4.1.qualifier"
+      version="1.4.2.qualifier"
       provider-name="%providerName">
 
    <description>
