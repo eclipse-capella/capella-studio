@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Capella Studio Product" uid="org.polarsys.capella.studio.releng.product" id="org.polarsys.capella.studio.product.CapellaStudio" application="org.polarsys.capella.studio.product.application" version="1.4.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Capella Studio Product" uid="org.polarsys.capella.studio.releng.product" id="org.polarsys.capella.studio.product.CapellaStudio" application="org.polarsys.capella.studio.product.application" version="1.4.2.qualifier" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="/org.polarsys.capella.studio.product/icons/CapellaStudioAbout.png"/>
@@ -62,11 +62,11 @@ http://www.eclipse.org/legal/epl-v10.htm
    </plugins>
 
    <features>
-      <feature id="org.polarsys.capella.studio.releng.eclipse.feature" version="1.4.0.qualifier"/>
-      <feature id="org.polarsys.capella.studio.releng.kitalpha.feature" version="1.4.0.qualifier"/>
-      <feature id="org.polarsys.capella.studio.releng.capella.feature" version="1.4.0.qualifier"/>
-      <feature id="org.polarsys.capella.rcp.feature" version="1.4.0.qualifier"/>
-      <feature id="org.polarsys.capella.rcp.feature.source" version="1.4.0.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.eclipse.feature" version="1.4.2.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.kitalpha.feature" version="1.4.2.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.capella.feature" version="1.4.2.qualifier"/>
+      <feature id="org.polarsys.capella.rcp.feature" version="1.4.2.qualifier"/>
+      <feature id="org.polarsys.capella.rcp.feature.source" version="1.4.2.qualifier"/>
    </features>
 
    <configurations>
@@ -77,7 +77,7 @@ http://www.eclipse.org/legal/epl-v10.htm
       <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="4" />
-      <property name="org.eclipse.update.reconcile" value="false" />     
+      <property name="org.eclipse.update.reconcile" value="false" />
    </configurations>
 
    <preferencesInfo>
