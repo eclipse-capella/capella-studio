@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Archive artifacts') {
       steps {
-        archiveArtifacts artifacts: 'releng/plugins/org.polarsys.capella.studio.releng.product/target/*.txt, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/repository/**, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/*.txt'
+        archiveArtifacts artifacts: 'releng/plugins/org.polarsys.capella.studio.releng.product/target/products/*.zip, releng/plugins/org.polarsys.capella.studio.releng.product/target/*.txt, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/repository/**, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/*.txt'
       }
     }
     stage('Deploy') {
