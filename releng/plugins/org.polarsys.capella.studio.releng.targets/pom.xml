@@ -36,7 +36,7 @@
 		<tycho-version>1.1.0</tycho-version>
 		<tycho-extras-version>1.1.0</tycho-extras-version>
 		<platform-name>oxygen</platform-name>
-		<targetPlatform.repository>http://mbarbero.github.com/fr.obeo.releng.targetplatform/p2/latest</targetPlatform.repository>
+		<targetPlatform.repository>http://pdulth.github.io/fr.obeo.releng.targetplatform/p2/latest</targetPlatform.repository>
 		<targetPlatform.name>capellastudio.targetplatform</targetPlatform.name>
 		<converterApplication.name>fr.obeo.releng.targetplatform.targetPlatform.converter</converterApplication.name>
 	</properties>
