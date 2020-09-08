@@ -12,13 +12,15 @@ pipeline {
     stage('Package & test Capella Studio') {
       steps {
       	wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
+      		env
+      		echo $env.BRANCH_NAME
         	sh 'mvn  -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore clean verify  -e -f pom.xml'
         }
       }
     }
     stage('Archive artifacts') {
       steps {
-        archiveArtifacts artifacts: 'releng/plugins/org.polarsys.capella.studio.releng.product/target/products/*.zip, releng/plugins/org.polarsys.capella.studio.releng.product/target/*.txt, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/repository/**, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/*.txt'
+        archiveArtifacts artifacts: 'releng/plugins/org.polarsys.capella.studio.releng.product/target/*.txt, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/repository/**, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/*.txt'
       }
     }
     stage('Deploy PR') {
