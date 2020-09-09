@@ -12,8 +12,8 @@ pipeline {
     stage('Package & test Capella Studio') {
       steps {
       	wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
-      		env
-      		echo $env.BRANCH_NAME
+      		sh env
+      		sh 'echo $env.BRANCH_NAME'
         	sh 'mvn  -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore clean verify  -e -f pom.xml'
         }
       }
