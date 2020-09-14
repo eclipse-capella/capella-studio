@@ -12,8 +12,6 @@ pipeline {
     stage('Package & test Capella Studio') {
       steps {
       	wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
-      		sh env
-      		sh 'echo $env.BRANCH_NAME'
         	sh 'mvn  -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore clean verify  -e -f pom.xml'
         }
       }
@@ -23,44 +21,29 @@ pipeline {
         archiveArtifacts artifacts: 'releng/plugins/org.polarsys.capella.studio.releng.product/target/*.txt, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/repository/**, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/*.txt'
       }
     }
-    stage('Deploy PR') {
-      when {
-         changeRequest()
-      }
+    stage('Deploy') {
       steps {
           sshagent ( ['projects-storage.eclipse.org-bot-ssh']) {
-            sh '''
-            	echo ${env.BRANCH_NAME}
-            	env
-            	
-			  
-            '''
-        }
-      }
-    }
-    stage('Deploy nigthly') {
-      when {
-         not { changeRequest() }
-      }
-      steps {
-          sshagent ( ['projects-storage.eclipse.org-bot-ssh']) {
-            sh '''
-            	VERSION=1.4.x
-            	DEST_UPDATESITE_DIR=/home/data/httpd/download.eclipse.org/capella/capellastudio/updates/nightly/$VERSION
-            	DEST_PRODUCT_DIR=/home/data/httpd/download.eclipse.org/capella/capellastudio/products/nightly/$VERSION
+          	script {
+          		def VERSION='1.4.x'
+          		if (changeRequest()) {
+          			VERSION=BRANCH_NAME
+          		}
+	            	
+            	def DEST_UPDATESITE_DIR='/home/data/httpd/download.eclipse.org/capella/capellastudio/updates/nightly/'+VERSION
+            	def DEST_PRODUCT_DIR='/home/data/httpd/download.eclipse.org/capella/capellastudio/products/nightly/'+VERSION
 				
-				echo "deploy update site"
-				ssh genie.capella@projects-storage.eclipse.org rm -rf $DEST_UPDATESITE_DIR
-				ssh genie.capella@projects-storage.eclipse.org mkdir -p $DEST_UPDATESITE_DIR
-				scp -r releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/repository/* genie.capella@projects-storage.eclipse.org:$DEST_UPDATESITE_DIR
+				sh "echo 'deploy update site'"
+				sh "ssh genie.capella@projects-storage.eclipse.org rm -rf ${DEST_UPDATESITE_DIR}"
+				sh "ssh genie.capella@projects-storage.eclipse.org mkdir -p ${DEST_UPDATESITE_DIR}"
+				sh "scp -r releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/repository/* genie.capella@projects-storage.eclipse.org:${DEST_UPDATESITE_DIR}"
 				
-				echo "deploy product"
-				ssh genie.capella@projects-storage.eclipse.org rm -rf $DEST_PRODUCT_DIR
-				ssh genie.capella@projects-storage.eclipse.org mkdir -p $DEST_PRODUCT_DIR
-				scp -r releng/plugins/org.polarsys.capella.studio.releng.product/target/products/*.zip genie.capella@projects-storage.eclipse.org:$DEST_PRODUCT_DIR
-			  
-            '''
-        }
+				sh "echo 'deploy product'"
+				sh "ssh genie.capella@projects-storage.eclipse.org rm -rf ${DEST_PRODUCT_DIR}"
+				sh "ssh genie.capella@projects-storage.eclipse.org mkdir -p ${DEST_PRODUCT_DIR}"
+				sh "scp -r releng/plugins/org.polarsys.capella.studio.releng.product/target/products/*.zip genie.capella@projects-storage.eclipse.org:${DEST_PRODUCT_DIR}"
+	        }
+	     }
       }
     }
   }
