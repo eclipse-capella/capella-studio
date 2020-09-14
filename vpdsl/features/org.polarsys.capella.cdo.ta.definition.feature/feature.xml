@@ -2,7 +2,7 @@
 <feature
       id="org.polarsys.capella.cdo.ta.definition.feature"
       label="Kitalpha vpDSL Target Application Definition Feature"
-      version="1.4.1.qualifier"
+      version="1.4.2.qualifier"
       provider-name="%providerName">
 
    <description url="http://www.example.com/description">
