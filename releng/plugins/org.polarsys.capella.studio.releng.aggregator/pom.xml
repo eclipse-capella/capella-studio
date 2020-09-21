@@ -70,7 +70,7 @@
     <module>../../../releng/plugins/org.polarsys.capella.studio.releng.updatesite</module>
     
     <!-- Product  -->
-    <module>../../../releng/plugins/org.polarsys.capella.studio.releng.product</module>
+    <!-- module>../../../releng/plugins/org.polarsys.capella.studio.releng.product</module-->
   </modules>
 </project>
 

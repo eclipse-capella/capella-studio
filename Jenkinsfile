@@ -9,7 +9,7 @@ pipeline {
     stage('Package & test Capella Studio') {
       steps {
       	wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
-        	sh 'mvn  -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore clean verify  -e -f pom.xml'
+        	sh 'mvn  -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore clean verify -P full -P sign -P product -e -f pom.xml'
         }
       }
     }
