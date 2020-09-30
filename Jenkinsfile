@@ -22,13 +22,13 @@ pipeline {
       steps {
           sshagent ( ['projects-storage.eclipse.org-bot-ssh']) {
           	script {
-          		def VERSION='master'
-          		if (changeRequest()) {
-          			VERSION=BRANCH_NAME
-          		}
+				def VERSION = BRANCH_NAME
+				if (VERSION.matches("v\\d\\.\\d\\.x")) {
+					VERSION = VERSION.substring(1)
+				}
 	            	
-                        def DEST_UPDATESITE_DIR='/home/data/httpd/download.eclipse.org/capella/capellastudio/updates/nightly/'+VERSION
-                        def DEST_PRODUCT_DIR='/home/data/httpd/download.eclipse.org/capella/capellastudio/products/nightly/'+VERSION
+                def DEST_UPDATESITE_DIR='/home/data/httpd/download.eclipse.org/capella/capellastudio/updates/nightly/'+VERSION
+                def DEST_PRODUCT_DIR='/home/data/httpd/download.eclipse.org/capella/capellastudio/products/nightly/'+VERSION
 				
 				sh "echo 'deploy update site'"
 				sh "ssh genie.capella@projects-storage.eclipse.org rm -rf ${DEST_UPDATESITE_DIR}"
