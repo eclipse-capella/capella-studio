@@ -12,21 +12,20 @@ target "capellastudio" with source, requirements
 
 //include "common/capellabase.targetplatform" NOT already used
 
-include "https://download.eclipse.org/kitalpha/updates/stable/runtimecore/1.4.2it2_ter/targets/kitalpha.targetplatform"
+include "https://download.eclipse.org/kitalpha/updates/stable/runtimecore/5.0.0.M1/targets/kitalpha.targetplatform"
 
 location sirius-query-legacy-1.1.0 "https://download.eclipse.org/sirius/updates/legacy/1.1.0" {
 	org.eclipse.sirius.query.legacy.feature.feature.group lazy
 	org.eclipse.sirius.query.legacy.feature.source.feature.group lazy
 }
 
-location kitalpha-sdk "https://download.eclipse.org/kitalpha/updates/stable/sdk/1.4.2it2_ter/" {
+location kitalpha-sdk "https://download.eclipse.org/kitalpha/updates/stable/sdk/5.0.0.M1/" {
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.source.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.source.feature.group lazy
 	org.polarsys.kitalpha.ad.dsl.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.dsl.feature.source.feature.group lazy
-	org.polarsys.kitalpha.product.feature.feature.group lazy
 	org.polarsys.kitalpha.sdk.feature.feature.group lazy
 	org.polarsys.kitalpha.emde.genchain.feature.feature.group lazy
 	org.polarsys.kitalpha.emde.genchain.feature.source.feature.group lazy
@@ -129,7 +128,6 @@ location kitalpha-sdk "https://download.eclipse.org/kitalpha/updates/stable/sdk/
 	org.polarsys.kitalpha.transposer.examples.feature.source.feature.group lazy
 	org.polarsys.kitalpha.transposer.componentsample.installer.feature.feature.group lazy
 	org.polarsys.kitalpha.transposer.componentsample.installer.feature.source.feature.group lazy
-	org.polarsys.kitalpha.product.feature.source.feature.group lazy
 	org.polarsys.kitalpha.sdk.feature.source.feature.group lazy
 	org.polarsys.kitalpha.richtext.widget.doc.feature.feature.group lazy
 	org.polarsys.kitalpha.richtext.widget.feature.feature.group lazy //TODO sources
@@ -138,26 +136,26 @@ location kitalpha-sdk "https://download.eclipse.org/kitalpha/updates/stable/sdk/
 	org.polarsys.kitalpha.richtext.widget.tools.ext.feature.source.feature.group lazy
 }
 
-location kitalpha-runtime "https://download.eclipse.org/kitalpha/updates/stable/runtime/1.4.2it2_ter/" {
+location kitalpha-runtime "https://download.eclipse.org/kitalpha/updates/stable/runtime/5.0.0.M1/" {
 	org.polarsys.kitalpha.runtime.feature.feature.group lazy
 	org.polarsys.kitalpha.runtime.feature.source.feature.group lazy
 }
 
-location kitalpha-core "https://download.eclipse.org/kitalpha/updates/stable/runtimecore/1.4.2it2_ter/" {
+location kitalpha-core "https://download.eclipse.org/kitalpha/updates/stable/runtimecore/5.0.0.M1/" {
 	org.polarsys.kitalpha.common.feature.feature.group lazy
 	org.polarsys.kitalpha.common.feature.source.feature.group lazy
 	org.polarsys.kitalpha.massactions.feature.feature.group lazy
 	org.polarsys.kitalpha.massactions.feature.source.feature.group lazy
 }
 
-location capella-egf-patterns "https://download.eclipse.org/capella/core/updates/stable/1.4.2-S20200908-160104/org.polarsys.capella.egf.site/" {
+location capella-egf-patterns "https://download.eclipse.org/capella/core/updates/stable/5.0.0-S20201102-100610/org.polarsys.capella.egf.site/" {
 	org.polarsys.capella.core.egf.feature.feature.group lazy
 	org.polarsys.capella.core.egf.feature.source.feature.group lazy
 }
 
-location capella "https://download.eclipse.org/capella/core/updates/stable/1.4.2-S20200908-160104/org.polarsys.capella.rcp.site/" {
-	org.polarsys.capella.rcp.feature.feature.group lazy
-	org.polarsys.capella.rcp.feature.source.feature.group lazy
+location capella "https://download.eclipse.org/capella/core/updates/stable/5.0.0-S20201102-100610/org.polarsys.capella.rcp.site/" {
+	org.polarsys.capella.rcp.feature.group lazy
+	org.polarsys.capella.rcp.source.feature.group lazy
 	org.polarsys.capella.cdo.mock.feature.feature.group lazy
 	org.polarsys.capella.common.ui.feature.feature.group lazy
 	org.polarsys.capella.common.ui.feature.source.feature.group lazy
