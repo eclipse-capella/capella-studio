@@ -1,0 +1,35 @@
+--- RCPTT verification ---
+Format-Version: 1.0
+Element-Name: genchain_04_generated_manifest
+Element-Type: verification
+Element-Version: 2.0
+Id: _xAJnEB89EeuuNI1Jnifmrw
+Save-Time: 11/5/20, 9:07 AM
+Verification-Type: org.eclipse.rcptt.verifications.workspace
+
+------=_contents/org.eclipse.emf.examples.library.extlibrary.cdo/META-INF/MANIFEST.MF-b524d65b-5d67-3c0f-986b-4f23fa5f612a
+Content-Type: q7/binary
+Entry-Name: contents/org.eclipse.emf.examples.library.extlibrary.cdo/META-INF/MANIFEST.MF
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAkALmNvbnRlbnRVVAUAAQAAAACdUj1vwjAQ3SPlP2Tp
+1lgFqUsQQ1tlaFUqVKTuh3PAibMdbCdK+PV1CE1BFRWtvNh+H/fO5xloWqHz6QdaR0ZnyUjcxdFjpQvG
+dHZEB3A8QG+gMEtuSq7WpLvDgCxatTRMsmcYuxYomUqHAtVKYAOqZHSCaWnBtuHCf21lYSaO9JrRh2JT
+b6tv19N8Ye0qYFoR2oHwxODcHPwmS8SJShfGdjmtqalAe5b01cjgsgd/MO5bGcB33FVkscgblFXHyHVN
+1miF2mfJy3iRpyNxH0d5Uxrr0znILaz/2DAFJI6e1b8d4ugYM+1Tn4ulsShspT0pvI2jn8YdYVKToyUx
++TabWsRDOxfZolH0q6I0DNa1TkgokRn6EAV4EBvkMkzx6oLdd7iq1JY8cLmBoCouJxwm+yA91Yehz7t/
+2mYJwz485SdQSwcIvbCHCEEBAAAMAwAAUEsBAhQAFAAICAgAAAAhAL2whwhBAQAADAMAAAgACQAAAAAA
+AAAAAAAAAAAAAC5jb250ZW50VVQFAAEAAAAAUEsFBgAAAAABAAEAPwAAAIABAAAAAA==
+------=_contents/org.eclipse.emf.examples.library.extlibrary.cdo/META-INF/MANIFEST.MF-b524d65b-5d67-3c0f-986b-4f23fa5f612a--
+------=_.q7.content-3d2e0690-ce48-3609-83e0-c704d49f1eaf
+Content-Type: q7/binary
+Entry-Name: .q7.content
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAkALmNvbnRlbnRVVAUAAQAAAACdkcFOwzAMQO9I/EOV
++5INcRhVyzSkTuqk7cIE3KosdbtAk1SpS8vf44125YbEzYmfn+0kWvWmCj7BN9rZmC34nAVglcu1LWPW
+YjFbstXj7U3kfMlBVbpugHtVI3KFPe+c/2hqqSB8HaMX8LrQSiIJg97o8Cq/O8upnW1Cuo/ZCbEOhei6
+jjtTcuog3nbpiPzR8Fo+MufyCyeIE1eOBVYaokva6iS1zeb3GcXgJUKeGWl1AQ2yQOcxy/r11iZPy4cE
+2nafLraUNL5jtH8QRMpZBIuXAx1r795BYTP4f48LpuDQS1NX0PBKH730X3SBY6hyxwYNiQpX5fREg2eX
+HNazdL+ZgDOiyTQC6326SZ4PfLehr+pBtSiPFSXQt8DE5BWDeBxYjBP/rCOmfSLxr9+lym9QSwcIhBqx
+czIBAAA/AgAAUEsBAhQAFAAICAgAAAAhAIQasXMyAQAAPwIAAAgACQAAAAAAAAAAAAAAAAAAAC5jb250
+ZW50VVQFAAEAAAAAUEsFBgAAAAABAAEAPwAAAHEBAAAAAA==
+------=_.q7.content-3d2e0690-ce48-3609-83e0-c704d49f1eaf--
