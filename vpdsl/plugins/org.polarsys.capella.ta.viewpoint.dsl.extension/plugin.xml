@@ -25,7 +25,7 @@
    <extension
          point="org.polarsys.kitalpha.ad.viewpoint.dsl.as.diagram.helper.diagramfilter">
       <Filter
-            ModelFileExtension="melodymodeller"
+            ModelFileExtension="capella"
             TargetApplication="Capella">
       </Filter>
    </extension>
