@@ -5,8 +5,7 @@ Element-Name: Generation Lib
 Element-Type: context
 Element-Version: 2.0
 Id: _KOH-MKJ5EeWqlNQu-Q0L2A
-Runtime-Version: 2.4.3.201909171500
-Save-Time: 10/21/19 4:16 PM
+Save-Time: 11/12/20, 10:20 AM
 
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
 Content-Type: text/ecl
@@ -58,7 +57,7 @@ proc "getDate" [val format "yyyyMMdd"] {
 	get-time | format-time -format $format
 }
 
-proc refershAllGeneratedProjects {
+proc refreshAllGeneratedProjects {
 	with [get-view "Project Explorer"] {
 	    get-button "Collapse All  (M1+M2+Numpad_Divide)" | click
 	    with [get-tree] {

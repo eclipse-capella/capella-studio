@@ -1,13 +1,12 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
-Contexts: _F3m-YJkMEeW9roo66l64HA,_KOH-MKJ5EeWqlNQu-Q0L2A
+Contexts: _F3m-YJkMEeW9roo66l64HA,_KOH-MKJ5EeWqlNQu-Q0L2A,_0Bj7EM4lEeicFpuYOY6hVw
 Element-Name: Viewpoint Generation
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _c7qCQJjfEeW9rYo66l64HA
-Runtime-Version: 2.0.1.201508250612
-Save-Time: 1/21/16 6:09 PM
+Save-Time: 11/12/20, 10:08 AM
 Testcase-Type: ecl
 Verifications: _xe8uEJkJEeW9roo66l64HA,_M7PyQJ6IEeWls8gZXhaHLg,_VOn9sJ6IEeWls8gZXhaHLg,_dnEPUJ6IEeWls8gZXhaHLg,_i1TOwJ6IEeWls8gZXhaHLg,_4Y_ZsJ6IEeWls8gZXhaHLg,_8NXqQJ6IEeWls8gZXhaHLg,_JQcLwJ_5EeWTy5kdXs0erQ,_JP_f0J_5EeWTy5kdXs0erQ,_JO8-AJ_5EeWTy5kdXs0erQ,_JOgSEJ_5EeWTy5kdXs0erQ,_JPiz4J_5EeWTy5kdXs0erQ,__rjVIJ_4EeWTy5kdXs0erQ
 
@@ -37,6 +36,7 @@ OpenAndValidateModel "org.polarsys.capella.vp.qualityassessment/models/QualityAs
 
 // ODesign model validation
 OpenAndValidateModel "org.polarsys.capella.vp.qualityassessment.design/description/QualityAssessment.odesign" "QualityAssessment.odesign"
+					 -selection "platform:\\/resource\\/org.polarsys.capella.vp.qualityassessment.design\\/description\\/QualityAssessment.odesign/QualityAssessment"
 
 // VP model validation
 OpenAndValidateModel "org.polarsys.capella.vp.qualityassessment.af/model/QualityAssessment.vp" "QualityAssessment.vp"
