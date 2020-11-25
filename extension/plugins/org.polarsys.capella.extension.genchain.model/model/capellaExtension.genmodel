@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    copyrightText="Copyright (c) 2015 Thales Global Services S.A.S.&#xD;&#xA;This program and the accompanying materials are made available under the&#xD;&#xA;terms of the Eclipse Public License 2.0 which is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-2.0&#xD;&#xA;&#xD;&#xA;SPDX-License-Identifier: EPL-2.0&#xD;&#xA;  &#xD;&#xA;Contributors:&#xD;&#xA;  Thales Global Services S.A.S - initial API and implementation&#xD;&#xA;"
+    copyrightText="Copyright (c) 2015, 2020 Thales Global Services S.A.S.&#xD;&#xA;This program and the accompanying materials are made available under the&#xD;&#xA;terms of the Eclipse Public License 2.0 which is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-2.0&#xD;&#xA;&#xD;&#xA;SPDX-License-Identifier: EPL-2.0&#xD;&#xA;  &#xD;&#xA;Contributors:&#xD;&#xA;  Thales Global Services S.A.S - initial API and implementation&#xD;&#xA;"
     modelDirectory="/org.polarsys.capella.extension.genchain.model/generated" editDirectory="/org.polarsys.capella.extension.genchain.model.edit/generated"
     modelPluginID="org.polarsys.capella.extension.genchain.model" modelName="capellaextension"
     editPluginClass="org.polarsys.capella.extension.genchain.capellaextension.provider.CapellaExtensionEditPlugin"
