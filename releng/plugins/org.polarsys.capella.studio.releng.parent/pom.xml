@@ -42,7 +42,6 @@
 	<properties>
 		<tycho-version>2.0.0</tycho-version>
 		<tycho-extras-version>2.0.0</tycho-extras-version>
-		<platform-version-name>oxygen</platform-version-name>
 		<tycho.scmUrl>scm:git:https://git.polarsys.org/r/kitalpha/kitalpha</tycho.scmUrl>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -50,8 +49,7 @@
 		<testFiltreClass>**/AllTests.java</testFiltreClass>
 		<coverage.skip>false</coverage.skip>
 		<coverage.destFile>./target/jacoco.exec</coverage.destFile>
-		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-		<!-- <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis> -->
+		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 		<sonar.jacoco.release>0.8.6</sonar.jacoco.release>
 		<rcptt-maven-version>2.4.3</rcptt-maven-version>
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
@@ -143,9 +141,26 @@
 			</properties>
 			<modules>
 				<module>../../../releng/plugins/org.polarsys.capella.studio.releng.product</module>
-				<module>../org.polarsys.capella.studio.releng.aggregator.tests</module>
 				
 				<!--module>../../../releng/plugins/org.polarsys.capella.studio.releng.targets</module-->
+			</modules>
+		</profile>
+		<profile>
+			<id>ju_tests</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>../org.polarsys.capella.studio.releng.aggregator.tests.ju</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>rcptt_tests</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>../org.polarsys.capella.studio.releng.aggregator.tests.rcptt</module>
 			</modules>
 		</profile>
 	</profiles>
@@ -275,22 +290,12 @@
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
-						<configuration>
-							<skip>${coverage.skip}</skip>
-							<destFile>${sonar.jacoco.reportPath}</destFile>
-							<propertyName>failsafeArgline</propertyName>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<plugin>
-					<groupId>org.sonarsource.scanner.maven</groupId>
-					<artifactId>sonar-maven-plugin</artifactId>
-					<version>${sonar-version}</version>
-				</plugin>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>target-platform-configuration</artifactId>
