@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright (c) 2006, 2020 THALES GLOBAL SERVICES.
+  Copyright (c) 2006, 2021 THALES GLOBAL SERVICES.
   This program and the accompanying materials are made available under the
   terms of the Eclipse Public License 2.0 which is available at
   http://www.eclipse.org/legal/epl-2.0
@@ -23,7 +23,7 @@
 	
 	<groupId>org.polarsys.capella</groupId>
 	<artifactId>org.polarsys.capella.studio</artifactId>
-	<version>5.0.0-SNAPSHOT</version>
+	<version>5.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
 	<licenses>
@@ -185,7 +185,7 @@
 						<artifact>
 							<groupId>org.polarsys.capella</groupId>
 							<artifactId>capellastudio</artifactId>
-							<version>5.0.0-SNAPSHOT</version>
+							<version>5.1.0-SNAPSHOT</version>
 							<classifier>../../../releng/plugins/org.polarsys.capella.studio.releng.targets/${target-platform-name}</classifier>
 						</artifact>
 					</target>
