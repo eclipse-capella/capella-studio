@@ -6,7 +6,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _vOFfUJ2WEeWgmKoQjPKcMA
-Save-Time: 11/5/20 4:34 PM
+Save-Time: 3/25/21, 12:24 PM
 Testcase-Type: ecl
 Verifications: _xe8uEJkJEeW9roo66l64HA,_CfrnoJ2eEeWgmKoQjPKcMA
 
@@ -40,7 +40,7 @@ with [get-window "Accelerator of diagram creation"] {
 
 
 with [get-editor "QualityAssessment.diagram.vptext" | get-text-viewer] {
-    select-range 11 27 11 44
+    select-range 11 27 11 55
     key-type "M1+SPACE"
     type-text PAB
     key-type Down
