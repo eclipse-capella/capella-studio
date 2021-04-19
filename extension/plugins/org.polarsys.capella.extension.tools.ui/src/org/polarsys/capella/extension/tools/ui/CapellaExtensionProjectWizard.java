@@ -27,7 +27,7 @@ public class CapellaExtensionProjectWizard extends NewExtensionProjectWizard {
 	/**
 	 * Adding the page to the wizard.
 	 */
-
+	@Override
 	public void addPages() {
 		page = new NewExtensionProjectPage(selection, "org.polarsys.capella.viewpoint");
 		addPage(page);
