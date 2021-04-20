@@ -39,6 +39,9 @@
 				<configuration>
 					<runner>
 						<version>${rcptt-maven-version}</version>
+						<vmArgs>
+							<vmArg>-Xmx2g</vmArg>
+						</vmArgs>
 					</runner>
 					<aut>
 						<explicit>
@@ -51,11 +54,10 @@
 								</site>
 							</injection>
 						</injections>
-						<vmArgs>
-							<vmArg>${failsafeArgline}</vmArg>
-						</vmArgs>
+						<args>
+							<arg>-autArgs</arg>
+						</args>
 					</aut>
-					<!-- The main configuration section goes here -->
 				</configuration>
 			</plugin>
 		</plugins>
