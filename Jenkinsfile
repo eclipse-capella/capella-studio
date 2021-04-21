@@ -65,7 +65,7 @@ pipeline {
 			steps {
 				withEnv(['MAVEN_OPTS=-Xmx4g']) {
 					script {
-						def jacocoParameters = "-Dsonar.java.coveragePlugin=jacoco -Dsonar.core.codeCoveragePlugin=jacoco "
+						def jacocoParameters = "-Dsonar.coverage.jacoco.xmlReportPaths='target/site/jacoco/jacoco.xml' -Dsonar.java.coveragePlugin=jacoco -Dsonar.core.codeCoveragePlugin=jacoco "
 						def javaVersion = "8"
 						def sonarCommon = "sonar:sonar -Dsonar.projectKey=eclipse_capella-studio -Dsonar.organization=eclipse -Dsonar.host.url=https://sonarcloud.io -Dsonar.login='$SONARCLOUD_TOKEN' -Dsonar.skipDesign=true -Dsonar.dynamic=reuseReports -Dsonar.java.source=${javaVersion} -Dsonar.scanner.force-deprecated-java-version=true "
 						def sonarBranchAnalysis = "-Dsonar.branch.name=${BRANCH_NAME}"
@@ -73,7 +73,7 @@ pipeline {
 						def sonar = sonarCommon + jacocoParameters + ("${BRANCH_NAME}".contains('PR-') ? sonarPullRequestAnalysis : sonarBranchAnalysis)
 						sh "mvn ${sonar} -P full -P test -e -f pom.xml"
 					}
-				}                      
+				}
 			}
 		}
 	}
