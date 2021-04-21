@@ -130,7 +130,7 @@
 						<enabled>true</enabled>
 					</releases>
 					<snapshots>
-						<enabled>true</enabled>
+						<enabled>false</enabled>
 					</snapshots>
 				</pluginRepository>
 			</pluginRepositories>
@@ -145,8 +145,6 @@
 			</properties>
 			<modules>
 				<module>../../../releng/plugins/org.polarsys.capella.studio.releng.product</module>
-				
-				<!--module>../../../releng/plugins/org.polarsys.capella.studio.releng.targets</module-->
 			</modules>
 		</profile>
 		<profile>
@@ -275,32 +273,9 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- Enabling use of jacoco 
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>${sonar.jacoco.release}</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-						<configuration>
-							<skip>${coverage.skip}</skip>
-							<destFile>${sonar.jacoco.reportPath}</destFile>
-							<propertyName>failsafeArgline</propertyName>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin> -->
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!-- <plugin>
-					<groupId>org.sonarsource.scanner.maven</groupId>
-					<artifactId>sonar-maven-plugin</artifactId>
-					<version>${sonar-version}</version>
-				</plugin>  -->
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>target-platform-configuration</artifactId>
