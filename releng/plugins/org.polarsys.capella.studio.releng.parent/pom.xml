@@ -43,13 +43,13 @@
 		<tycho-version>2.0.0</tycho-version>
 		<tycho-extras-version>2.0.0</tycho-extras-version>
 		<platform-version-name>oxygen</platform-version-name>
-		<tycho.scmUrl>scm:git:https://git.polarsys.org/r/kitalpha/kitalpha</tycho.scmUrl>
+		<tycho.scmUrl>scm:git:https://github.com/eclipse/capella-studio</tycho.scmUrl>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<sourcePhase>package</sourcePhase>
 		<testFiltreClass>**/AllTests.java</testFiltreClass>
 		<coverage.skip>false</coverage.skip>
-		<coverage.destFile>./target/jacoco.exec</coverage.destFile>
+		<!-- <coverage.destFile>./target/jacoco.exec</coverage.destFile> -->
 		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
 		<!-- <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis> -->
 		<sonar.jacoco.release>0.8.6</sonar.jacoco.release>
@@ -265,7 +265,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- Enabling use of jacoco -->
+			<!-- Enabling use of jacoco 
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -282,15 +282,15 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<plugin>
+				<!-- <plugin>
 					<groupId>org.sonarsource.scanner.maven</groupId>
 					<artifactId>sonar-maven-plugin</artifactId>
 					<version>${sonar-version}</version>
-				</plugin>
+				</plugin>  -->
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>target-platform-configuration</artifactId>
