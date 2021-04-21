@@ -46,14 +46,16 @@
 		<tycho.scmUrl>scm:git:https://github.com/eclipse/capella-studio</tycho.scmUrl>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		
 		<sourcePhase>package</sourcePhase>
 		<testFiltreClass>**/AllTests.java</testFiltreClass>
 		<coverage.skip>false</coverage.skip>
-		<!-- <coverage.destFile>./target/jacoco.exec</coverage.destFile> -->
-		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-		<!-- <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis> -->
+
 		<sonar.jacoco.release>0.8.6</sonar.jacoco.release>
+		
 		<rcptt-maven-version>2.4.3</rcptt-maven-version>
+		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/stable/component/5.1.0-S202104201726/</rcptt-kitalpha-components-site>
+		
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
 		<capellastudio-application>org.polarsys.capella.studio.product.application</capellastudio-application>
 	</properties>
