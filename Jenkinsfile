@@ -10,8 +10,8 @@ pipeline {
 			steps {
 				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
 					script {
-						def jacocoPrepareAgent = "-Djacoco.destFile=${WORKSPACE}/jacoco.exec org.jacoco:jacoco-maven-plugin:0.8.6:prepare-agent"
-						sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} clean verify -P full -P sign -P product -e -f pom.xml"    
+						def jacocoPrepareAgent = "-Djacoco.destFile=${WORKSPACE}/jacoco.exec -Djacoco.append=true org.jacoco:jacoco-maven-plugin:0.8.6:prepare-agent"
+						sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} clean verify -P full -P sign -P product -P test -e -f pom.xml"
 					}  		
 				}
 			}
@@ -55,7 +55,7 @@ pipeline {
 		stage('Publish tests results') {
 			steps {
 				junit allowEmptyResults: true, testResults: '*.xml,**/target/surefire-reports/*.xml'
-				sh "mvn -Djacoco.dataFile=${WORKSPACE}/jacoco.exec org.jacoco:jacoco-maven-plugin:0.8.6:report -P full -e -f pom.xml"
+				sh "mvn -Djacoco.dataFile=${WORKSPACE}/jacoco.exec org.jacoco:jacoco-maven-plugin:0.8.6:report -P full -P test -e -f pom.xml"
 			}
 		}
 		stage('Perform Sonar analysis') {
@@ -71,7 +71,7 @@ pipeline {
 						def sonarBranchAnalysis = "-Dsonar.branch.name=${BRANCH_NAME}"
 						def sonarPullRequestAnalysis = ("${BRANCH_NAME}".contains('PR-') ? "-Dsonar.pullrequest.provider=GitHub -Dsonar.pullrequest.github.repository=eclipse/capella-studio -Dsonar.pullrequest.key=${CHANGE_ID} -Dsonar.pullrequest.branch=${CHANGE_BRANCH}" : "")
 						def sonar = sonarCommon + jacocoParameters + ("${BRANCH_NAME}".contains('PR-') ? sonarPullRequestAnalysis : sonarBranchAnalysis)
-						sh "mvn ${sonar} -P full -e -f pom.xml"
+						sh "mvn ${sonar} -P full -P test -e -f pom.xml"
 					}
 				}                      
 			}

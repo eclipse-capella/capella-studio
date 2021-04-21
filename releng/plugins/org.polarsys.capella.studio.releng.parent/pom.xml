@@ -143,9 +143,17 @@
 			</properties>
 			<modules>
 				<module>../../../releng/plugins/org.polarsys.capella.studio.releng.product</module>
-				<module>../org.polarsys.capella.studio.releng.aggregator.tests</module>
 				
 				<!--module>../../../releng/plugins/org.polarsys.capella.studio.releng.targets</module-->
+			</modules>
+		</profile>
+		<profile>
+			<id>test</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>../org.polarsys.capella.studio.releng.aggregator.tests</module>
 			</modules>
 		</profile>
 	</profiles>
