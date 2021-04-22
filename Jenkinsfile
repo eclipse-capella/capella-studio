@@ -66,8 +66,8 @@ pipeline {
 		stage('Perform Sonar analysis') {
 			environment {
 			    PROJECT_NAME = 'capella-studio'
-	    		SONARCLOUD_TOKEN = credentials('sonar-token-$PROJECT_NAME')
-			    SONAR_PROJECT_KEY = 'eclipse_$PROJECT_NAME'
+	    		SONARCLOUD_TOKEN = credentials('sonar-token-capella-studio')
+			    SONAR_PROJECT_KEY = 'eclipse_capella-studio'
 			}
 			steps {
 				withEnv(['MAVEN_OPTS=-Xmx4g']) {
