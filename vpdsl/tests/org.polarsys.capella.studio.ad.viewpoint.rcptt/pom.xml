@@ -39,6 +39,9 @@
 				<configuration>
 					<runner>
 						<version>${rcptt-maven-version}</version>
+						<vmArgs>
+							<vmArg>-Xmx2g</vmArg>
+						</vmArgs>
 					</runner>
 					<aut>
 						<explicit>
@@ -47,15 +50,14 @@
 						<injections>
 							<injection>
 								<site>
-									https://download.eclipse.org/kitalpha/updates/release/component/1.4.0/
+									${rcptt-kitalpha-components-site}
 								</site>
 							</injection>
 						</injections>
-						<vmArgs>
-							<vmArg>${failsafeArgline}</vmArg>
-						</vmArgs>
+						<args>
+							<arg>-autArgs</arg>
+						</args>
 					</aut>
-					<!-- The main configuration section goes here -->
 				</configuration>
 			</plugin>
 		</plugins>

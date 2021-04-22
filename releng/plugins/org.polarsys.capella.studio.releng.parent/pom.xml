@@ -43,17 +43,19 @@
 		<tycho-version>2.0.0</tycho-version>
 		<tycho-extras-version>2.0.0</tycho-extras-version>
 		<platform-version-name>oxygen</platform-version-name>
-		<tycho.scmUrl>scm:git:https://git.polarsys.org/r/kitalpha/kitalpha</tycho.scmUrl>
+		<tycho.scmUrl>scm:git:https://github.com/eclipse/capella-studio</tycho.scmUrl>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		
 		<sourcePhase>package</sourcePhase>
 		<testFiltreClass>**/AllTests.java</testFiltreClass>
 		<coverage.skip>false</coverage.skip>
-		<coverage.destFile>./target/jacoco.exec</coverage.destFile>
-		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-		<!-- <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis> -->
+
 		<sonar.jacoco.release>0.8.6</sonar.jacoco.release>
+		
 		<rcptt-maven-version>2.4.3</rcptt-maven-version>
+		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/stable/component/5.1.0-S202104201726/</rcptt-kitalpha-components-site>
+		
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
 		<capellastudio-application>org.polarsys.capella.studio.product.application</capellastudio-application>
 	</properties>
@@ -128,7 +130,7 @@
 						<enabled>true</enabled>
 					</releases>
 					<snapshots>
-						<enabled>true</enabled>
+						<enabled>false</enabled>
 					</snapshots>
 				</pluginRepository>
 			</pluginRepositories>
@@ -143,9 +145,15 @@
 			</properties>
 			<modules>
 				<module>../../../releng/plugins/org.polarsys.capella.studio.releng.product</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>test</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
 				<module>../org.polarsys.capella.studio.releng.aggregator.tests</module>
-				
-				<!--module>../../../releng/plugins/org.polarsys.capella.studio.releng.targets</module-->
 			</modules>
 		</profile>
 	</profiles>
@@ -265,32 +273,9 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- Enabling use of jacoco -->
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>${sonar.jacoco.release}</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-						<configuration>
-							<skip>${coverage.skip}</skip>
-							<destFile>${sonar.jacoco.reportPath}</destFile>
-							<propertyName>failsafeArgline</propertyName>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<plugin>
-					<groupId>org.sonarsource.scanner.maven</groupId>
-					<artifactId>sonar-maven-plugin</artifactId>
-					<version>${sonar-version}</version>
-				</plugin>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>target-platform-configuration</artifactId>
