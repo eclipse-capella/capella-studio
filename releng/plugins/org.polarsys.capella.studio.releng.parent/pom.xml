@@ -197,13 +197,15 @@
 							<classifier>../../../releng/plugins/org.polarsys.capella.studio.releng.targets/${target-platform-name}</classifier>
 						</artifact>
 					</target>
-					<extraRequirements>
-						<requirement>
-               				<type>p2-installable-unit</type>
-               				<id>org.polarsys.capella.rcp</id>
-              				<versionRange>0.0.0</versionRange>
-            			</requirement>
-					</extraRequirements>
+					<dependency-resolution>
+						<extraRequirements>
+							<requirement>
+	               				<type>p2-installable-unit</type>
+	               				<id>org.polarsys.capella.rcp</id>
+	              				<versionRange>0.0.0</versionRange>
+	            			</requirement>
+						</extraRequirements>
+					</dependency-resolution>
 				</configuration>
 			</plugin>
 			<plugin>

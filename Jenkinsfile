@@ -65,18 +65,19 @@ pipeline {
 		}
 		stage('Perform Sonar analysis') {
 			environment {
-			    SONARCLOUD_TOKEN = credentials('sonar-token-capella-studio')
-	    		SONAR_PROJECT_KEY = 'eclipse_capella-studio'
+			    PROJECT_NAME = 'capella-studio'
+	    		SONARCLOUD_TOKEN = credentials('sonar-token-capella-studio')
+			    SONAR_PROJECT_KEY = 'eclipse_capella-studio'
 			}
 			steps {
 				withEnv(['MAVEN_OPTS=-Xmx4g']) {
 					script {
 						def jacocoParameters = "-Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml -Dsonar.java.coveragePlugin=jacoco -Dsonar.core.codeCoveragePlugin=jacoco "
-						def sonarExclusions = "-Dsonar.exclusions='**/generated/**/*.java,**/src-gen/**/*.java' -Dsonar.test.exclusions='**/tests/**/*.java,**/test/**/*.java' "
+						def sonarExclusions = "-Dsonar.exclusions='**/generated/**/*.java,**/src-gen/**/*.java' "
 						def javaVersion = "8"
 						def sonarCommon = "sonar:sonar -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.organization=eclipse -Dsonar.host.url=https://sonarcloud.io -Dsonar.login='$SONARCLOUD_TOKEN' -Dsonar.skipDesign=true -Dsonar.dynamic=reuseReports -Dsonar.java.source=${javaVersion} -Dsonar.scanner.force-deprecated-java-version=true "
 						def sonarBranchAnalysis = "-Dsonar.branch.name=${BRANCH_NAME}"
-						def sonarPullRequestAnalysis = "-Dsonar.pullrequest.provider=GitHub -Dsonar.pullrequest.github.repository=eclipse/capella-studio -Dsonar.pullrequest.key=${CHANGE_ID} -Dsonar.pullrequest.branch=${CHANGE_BRANCH}"
+						def sonarPullRequestAnalysis = ("${BRANCH_NAME}".contains('PR-') ? "-Dsonar.pullrequest.provider=GitHub -Dsonar.pullrequest.github.repository=eclipse/$PROJECT_NAME -Dsonar.pullrequest.key=${CHANGE_ID} -Dsonar.pullrequest.branch=${CHANGE_BRANCH}" : "" )
 						def sonar = sonarCommon + jacocoParameters + sonarExclusions + ("${BRANCH_NAME}".contains('PR-') ? sonarPullRequestAnalysis : sonarBranchAnalysis)
 						sh "mvn ${sonar} $MVN_QUALITY_PROFILES -e -f pom.xml"
 					}
