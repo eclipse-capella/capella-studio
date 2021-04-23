@@ -27,12 +27,6 @@ pipeline {
 			}
 		}
 		stage('Deploy') {
-			when {
-				anyOf {
-					branch pattern : "v\\d\\.\\d\\.x", comparator: "REGEXP";
-					branch 'master'
-				}
-			}
 			steps {
 				sshagent ( ['projects-storage.eclipse.org-bot-ssh']) {
 					script {
