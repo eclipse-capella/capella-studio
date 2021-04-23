@@ -6,7 +6,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _QhqE0DYqEeeb38NqTlPkJA
-Save-Time: 3/25/21, 12:28 PM
+Save-Time: 4/23/21, 4:13 PM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
@@ -17,14 +17,14 @@ generateViewpointWithSelection -vpdescFilePath "org.polarsys.capella.vp.qualitya
 
 // Open the first generated section and check the existence of the null check
 get-view "Project Explorer" | get-tree 
-    | select "org.polarsys.capella.vp.qualityassessment.ui/src/org.polarsys.capella.vp.qualityassessment.ui.sections/QualityAssessment_QualityAssessment_QualityAssessment_QualityAssessment_Section.java"  
+    | select "org.polarsys.capella.vp.qualityassessment.ui/src/org/polarsys/capella/vp/qualityassessment/ui/sections/QualityAssessment_QualityAssessment_QualityAssessment_QualityAssessment_Section.java"  
     | double-click
 
 findTextInFile -fileName "QualityAssessment_QualityAssessment_QualityAssessment_QualityAssessment_Section.java" -text "if (eObjectToTest == null) {"
 
 // Do the same for the second generated section
 get-view "Project Explorer" | get-tree 
-    | select "org.polarsys.capella.vp.qualityassessment.ui/src/org.polarsys.capella.vp.qualityassessment.ui.sections/QualityAssessment_QualityMeasure_QualityAssessment_QualityMeasure_Section.java" 
+    | select "org.polarsys.capella.vp.qualityassessment.ui/src/org/polarsys/capella/vp/qualityassessment/ui/sections/QualityAssessment_QualityMeasure_QualityAssessment_QualityMeasure_Section.java" 
     | double-click
 
 findTextInFile -fileName "QualityAssessment_QualityMeasure_QualityAssessment_QualityMeasure_Section.java" -text "if (eObjectToTest == null) {"

@@ -6,7 +6,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _i8QSwJjfEeW9rYo66l64HA
-Save-Time: 11/12/20, 10:21 AM
+Save-Time: 4/23/21, 3:56 PM
 Testcase-Type: ecl
 Verifications: _xe8uEJkJEeW9roo66l64HA,_JQcLwJ_5EeWTy5kdXs0erQ,_JP_f0J_5EeWTy5kdXs0erQ,_JO8-AJ_5EeWTy5kdXs0erQ,_JPiz4J_5EeWTy5kdXs0erQ,_JOgSEJ_5EeWTy5kdXs0erQ,_dnEPUJ6IEeWls8gZXhaHLg,_i1TOwJ6IEeWls8gZXhaHLg,_M7PyQJ6IEeWls8gZXhaHLg,_8NXqQJ6IEeWls8gZXhaHLg,_4Y_ZsJ6IEeWls8gZXhaHLg,_VOn9sJ6IEeWls8gZXhaHLg,__rjVIJ_4EeWTy5kdXs0erQ
 
@@ -30,7 +30,29 @@ loop {
 	}
 }
 
+loop {
+	try -catch {} -command{
+		get-view "Project Explorer" | get-tree | select "/org.polarsys.capella.vp.qualityassessment/META-INF/MANIFEST.MF"
+		get-view "Project Explorer" | get-tree | select "/org.polarsys.capella.vp.qualityassessment.af/META-INF/MANIFEST.MF"
+		get-view "Project Explorer" | get-tree | select "/org.polarsys.capella.vp.qualityassessment.model.edit/META-INF/MANIFEST.MF"
+		get-view "Project Explorer" | get-tree | select "org.polarsys.capella.vp.qualityassessment.rules.validation/META-INF/MANIFEST.MF"
+		get-view "Project Explorer" | get-tree | select "/org.polarsys.capella.vp.qualityassessment.rules.computation/META-INF/MANIFEST.MF"
+		get-view "Project Explorer" | get-tree | select "/org.polarsys.capella.vp.qualityassessment.releng/META-INF/MANIFEST.MF"
+		get-view "Project Explorer" | get-tree | select "/org.polarsys.capella.vp.qualityassessment.design/META-INF/MANIFEST.MF"
+		wait 100
+		recur
+	}
+}
+
 refreshAllGeneratedProjects
+
+loop {
+	try -catch {} -command{
+		get-window "Build application"
+		wait 100
+		recur
+	}
+}
 
 // Check if a folder was created by the Generate and Package Viewpoint
 assert-true [ lookForDropinsFolder -contextFolderPath   [ getTempFolder ] 
