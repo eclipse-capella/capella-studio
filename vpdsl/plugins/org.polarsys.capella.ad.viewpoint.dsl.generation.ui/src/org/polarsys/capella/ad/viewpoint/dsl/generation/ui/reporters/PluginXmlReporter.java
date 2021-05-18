@@ -107,6 +107,7 @@ public class PluginXmlReporter implements PatternExecutionReporter {
 			
 		} catch (InvocationTargetException|InterruptedException e) {
 			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "", e));
+			Thread.currentThread().interrupt();
 		}
 		try {
 			project.refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());

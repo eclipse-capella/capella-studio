@@ -27,6 +27,9 @@ tmp/
 # PDT-specific
 .buildpath
 
+# SonarLint
+org.sonarlint.eclipse.core.prefs
+
 ########
 ## Sonar
 ########
