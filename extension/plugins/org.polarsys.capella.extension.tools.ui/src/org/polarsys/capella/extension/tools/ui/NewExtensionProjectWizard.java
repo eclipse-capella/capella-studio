@@ -86,6 +86,7 @@ public abstract class NewExtensionProjectWizard extends Wizard implements INewWi
 		try {
 			getContainer().run(true, false, op);
 		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
 			return false;
 		} catch (InvocationTargetException e) {
 			Throwable realException = e.getTargetException();
