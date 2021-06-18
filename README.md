@@ -20,4 +20,4 @@ mvn clean verify -P full -P product
 ```
 from the top-level directory.
 
-The resulting product can be found in `releng/plugins/org.polarsys.kitalpha.releng.sdk.product/target/products/`.
+The resulting product can be found in `releng/plugins/org.polarsys.capella.studio.releng.product/target/products/`.
