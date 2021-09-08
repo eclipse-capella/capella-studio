@@ -21,7 +21,7 @@ openFile
       <programArgsLin>--launcher.GTK_version
 2
       </programArgsLin>
-      <vmArgs>-Dosgi.requiredJavaVersion=1.8
+      <vmArgs>-Dosgi.requiredJavaVersion=11
 -Dosgi.dataAreaRequiresExplicitInit=true
 -Xms512m
 -Xmx2048m
