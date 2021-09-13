@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fcore:FactoryComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fcore="http://www.eclipse.org/egf/1.0.0/fcore"
+    xmlns:javapattern="http://www.eclipse.org/egf/1.0.0/javapattern" xmlns:pattern="http://www.eclipse.org/egf/1.0.0/pattern"
+    xmi:id="_SaNU8BIKEeKYHMigmt5qAQ" name="capellaConnectorExtension">
+  <viewpointContainer xmi:id="_bc0k8BIKEeKYHMigmt5qAQ">
+    <viewpoints xmi:type="pattern:PatternViewpoint" xmi:id="_c3krsBIKEeKYHMigmt5qAQ">
+      <libraries xmi:id="_dVYCABIKEeKYHMigmt5qAQ" name="org.polarsys.capella.cdoxml.ta.genchain">
+        <elements xmi:id="_heLDYBIKEeKYHMigmt5qAQ" name="CapellaConnector" headerMethod="#_heLDYhIKEeKYHMigmt5qAQ"
+            conditionMethod="#_heLDZBIKEeKYHMigmt5qAQ" initMethod="#_heLDYxIKEeKYHMigmt5qAQ"
+            footerMethod="#_heLDZhIKEeKYHMigmt5qAQ">
+          <nature xmi:type="javapattern:JavaNature" xmi:id="_heLDYRIKEeKYHMigmt5qAQ"
+              name="Java"/>
+          <methods xmi:id="_heLDYhIKEeKYHMigmt5qAQ" name="header" patternFilePath="templates/pattern._heLDYBIKEeKYHMigmt5qAQ/method._heLDYhIKEeKYHMigmt5qAQ.pt"/>
+          <methods xmi:id="_heLDYxIKEeKYHMigmt5qAQ" name="init" patternFilePath="templates/pattern._heLDYBIKEeKYHMigmt5qAQ/method._heLDYxIKEeKYHMigmt5qAQ.pt"/>
+          <methods xmi:id="_heLDZBIKEeKYHMigmt5qAQ" name="preCondition" patternFilePath="templates/pattern._heLDYBIKEeKYHMigmt5qAQ/method._heLDZBIKEeKYHMigmt5qAQ.pt"/>
+          <methods xmi:id="_heLDZRIKEeKYHMigmt5qAQ" name="body" patternFilePath="templates/pattern._heLDYBIKEeKYHMigmt5qAQ/method._heLDZRIKEeKYHMigmt5qAQ.pt"/>
+          <methods xmi:id="_heLDZhIKEeKYHMigmt5qAQ" name="footer" patternFilePath="templates/pattern._heLDYBIKEeKYHMigmt5qAQ/method._heLDZhIKEeKYHMigmt5qAQ.pt"/>
+          <parameters xmi:id="_Z6L4EBILEeKYHMigmt5qAQ" name="parameter" type="http://www.polarsys.org/capella/cdoxml/genchain/extension/connector/1.0.0#//ConnectorGeneration"/>
+          <orchestration xmi:type="pattern:MethodCall" xmi:id="_EhYHcBILEeKYHMigmt5qAQ"
+              called="#_heLDZRIKEeKYHMigmt5qAQ"/>
+        </elements>
+      </libraries>
+    </viewpoints>
+  </viewpointContainer>
+</fcore:FactoryComponent>

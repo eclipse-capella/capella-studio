@@ -54,6 +54,11 @@
     <module>../../../vpdsl/plugins/org.polarsys.capella.ta.viewpoint.dsl.extension</module>
     <module>../../../vpdsl/plugins/org.polarsys.capella.cdo.ta.definition</module>
     <module>../../../vpdsl/plugins/org.polarsys.capella.cdo.ta.ext</module>
+    <module>../../../vpdsl/plugins/org.polarsys.capella.cdoxml.ta</module>
+    <module>../../../vpdsl/plugins/org.polarsys.capella.cdoxml.ta.genchain</module>
+    <module>../../../vpdsl/plugins/org.polarsys.capella.cdoxml.ta.genchain.model</module>
+    <module>../../../vpdsl/plugins/org.polarsys.capella.cdoxml.ta.genchain.model.edit</module>
+    <module>../../../vpdsl/plugins/org.polarsys.capella.cdoxml.ta.portfolio</module>
     <module>../../../doc/plugins/org.polarsys.capella.studio.doc</module>
     
     <!-- Features  -->
@@ -61,6 +66,7 @@
     <module>../../../product/features/org.polarsys.capella.studio.product.feature</module>
     <module>../../../vpdsl/features/org.polarsys.capella.ta.viewpoint.dsl.feature</module>
     <module>../../../vpdsl/features/org.polarsys.capella.cdo.ta.definition.feature</module>
+    <module>../../../vpdsl/features/org.polarsys.capella.cdoxml.ta.definition.feature</module>
     <module>../../../releng/features/org.polarsys.capella.studio.releng.eclipse.feature</module>
     <module>../../../releng/features/org.polarsys.capella.studio.releng.capella.feature</module>
     <module>../../../releng/features/org.polarsys.capella.studio.releng.kitalpha.feature</module>

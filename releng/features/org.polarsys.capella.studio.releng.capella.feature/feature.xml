@@ -84,4 +84,12 @@
          id="org.polarsys.capella.docgen.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.polarsys.capella.cdoxml.ta.definition.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.polarsys.capella.cdoxml.ta.definition.feature.source"
+         version="0.0.0"/>
+
 </feature>

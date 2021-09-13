@@ -24,5 +24,11 @@
    <feature id="org.polarsys.capella.cdo.ta.definition.feature.source" version="0.0.0">
       <category name="CapellaStudio"/>
    </feature>
+   <feature id="org.polarsys.capella.cdoxml.ta.definition.feature" version="0.0.0">
+      <category name="CapellaStudio"/>
+   </feature>
+   <feature id="org.polarsys.capella.cdoxml.ta.definition.feature.source" version="0.0.0">
+      <category name="CapellaStudio"/>
+   </feature>
    <category-def name="CapellaStudio" label="Capella Studio"/>
 </site>
