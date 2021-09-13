@@ -2,7 +2,7 @@
 = Introduction =
 
 
-Capella Studio provides a full-integrated development environment whitch aims at facilitating the development of extensions for Capella MBSE.
+Capella Studio provides a full-integrated development environment which aims at facilitating the development of extensions for Capella MBSE.
 
 It provides developers with a platform containing both:
 

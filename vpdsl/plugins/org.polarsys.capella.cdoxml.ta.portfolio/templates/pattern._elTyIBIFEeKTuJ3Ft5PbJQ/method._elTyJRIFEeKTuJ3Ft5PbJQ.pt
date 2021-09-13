@@ -1,0 +1,6 @@
+for (EReference eReference : eClass.getEAllReferences()) {
+	EAnnotation eAnnotation = EcoreFactory.eINSTANCE.createEAnnotation();
+	eAnnotation.setSource("http://com.thalesgroup.mde/simplifiedM2/Navigable");
+	eReference.getEAnnotations().add(eAnnotation);
+	eClass.eResource().save(java.util.Collections.EMPTY_MAP);
+}
