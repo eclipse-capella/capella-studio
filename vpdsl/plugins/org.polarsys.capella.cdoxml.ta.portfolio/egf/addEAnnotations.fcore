@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fcore:FactoryComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:domain="http://www.eclipse.org/egf/1.0.0/domain"
+    xmlns:fcore="http://www.eclipse.org/egf/1.0.0/fcore" xmlns:fprod="http://www.eclipse.org/egf/1.0.0/fprod"
+    xmlns:ftask="http://www.eclipse.org/egf/1.0.0/ftask" xmlns:javapattern="http://www.eclipse.org/egf/1.0.0/javapattern"
+    xmlns:pattern="http://www.eclipse.org/egf/1.0.0/pattern" xmi:id="_3jrwsRIEEeKTuJ3Ft5PbJQ" name="addEAnnotations">
+  <contractContainer xmi:id="_5zB9IBIEEeKTuJ3Ft5PbJQ">
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_6MXqMBIEEeKTuJ3Ft5PbJQ"
+        name="ecoreModel" invocationContracts="#_CuElghIFEeKTuJ3Ft5PbJQ">
+      <type xmi:type="domain:TypeDomain" xmi:id="_7Bt90BIEEeKTuJ3Ft5PbJQ"/>
+    </contracts>
+  </contractContainer>
+  <viewpointContainer xmi:id="_GdF08BIFEeKTuJ3Ft5PbJQ">
+    <viewpoints xmi:type="pattern:PatternViewpoint" xmi:id="_G07tMBIFEeKTuJ3Ft5PbJQ">
+      <libraries xmi:id="_Hsg1cBIFEeKTuJ3Ft5PbJQ" name="org.polarsys.capella.cdoxml.ta.portfolio">
+        <elements xmi:id="_elTyIBIFEeKTuJ3Ft5PbJQ" name="AddEAnnotations" headerMethod="#_elTyIhIFEeKTuJ3Ft5PbJQ"
+            conditionMethod="#_elTyJBIFEeKTuJ3Ft5PbJQ" initMethod="#_elTyIxIFEeKTuJ3Ft5PbJQ"
+            footerMethod="#_elTyJhIFEeKTuJ3Ft5PbJQ">
+          <nature xmi:type="javapattern:JavaNature" xmi:id="_elTyIRIFEeKTuJ3Ft5PbJQ"
+              name="Java"/>
+          <methods xmi:id="_elTyIhIFEeKTuJ3Ft5PbJQ" name="header" patternFilePath="templates/pattern._elTyIBIFEeKTuJ3Ft5PbJQ/method._elTyIhIFEeKTuJ3Ft5PbJQ.pt"/>
+          <methods xmi:id="_elTyIxIFEeKTuJ3Ft5PbJQ" name="init" patternFilePath="templates/pattern._elTyIBIFEeKTuJ3Ft5PbJQ/method._elTyIxIFEeKTuJ3Ft5PbJQ.pt"/>
+          <methods xmi:id="_elTyJBIFEeKTuJ3Ft5PbJQ" name="preCondition" patternFilePath="templates/pattern._elTyIBIFEeKTuJ3Ft5PbJQ/method._elTyJBIFEeKTuJ3Ft5PbJQ.pt"/>
+          <methods xmi:id="_elTyJRIFEeKTuJ3Ft5PbJQ" name="body" patternFilePath="templates/pattern._elTyIBIFEeKTuJ3Ft5PbJQ/method._elTyJRIFEeKTuJ3Ft5PbJQ.pt"/>
+          <methods xmi:id="_elTyJhIFEeKTuJ3Ft5PbJQ" name="footer" patternFilePath="templates/pattern._elTyIBIFEeKTuJ3Ft5PbJQ/method._elTyJhIFEeKTuJ3Ft5PbJQ.pt"/>
+          <parameters xmi:id="_hjcXMBIFEeKTuJ3Ft5PbJQ" name="eClass" type="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+          <orchestration xmi:type="pattern:MethodCall" xmi:id="_ipL3QBIFEeKTuJ3Ft5PbJQ"
+              called="#_elTyJRIFEeKTuJ3Ft5PbJQ"/>
+        </elements>
+      </libraries>
+    </viewpoints>
+  </viewpointContainer>
+  <orchestration xmi:type="fprod:ProductionPlan" xmi:id="_-1qJgBIEEeKTuJ3Ft5PbJQ">
+    <invocations xmi:id="_CuElgBIFEeKTuJ3Ft5PbJQ" invokedActivity="ftask:Task platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Model_driven_pattern_strategy_task.fcore#_8FZ3aof6eEd64XYPo3s6sPg">
+      <invocationContractContainer xmi:id="_CuElgRIFEeKTuJ3Ft5PbJQ">
+        <invocationContracts xmi:id="_CuElghIFEeKTuJ3Ft5PbJQ" factoryComponentContract="#_6MXqMBIEEeKTuJ3Ft5PbJQ"
+            invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Model_driven_pattern_strategy_task.fcore#_DgB2IP6fEd64XaYPo3s6sPg"/>
+        <invocationContracts xmi:id="_CuElgxIFEeKTuJ3Ft5PbJQ" invokedContract="platform:/plugin/org.eclipse.egf.pattern.ftask/egf/Model_driven_pattern_strategy_task.fcore#_nz1HkSCaEd-Sse0r9LJWbA">
+          <type xmi:type="pattern:TypePatternList" xmi:id="_uB3KQBIGEeKTuJ3Ft5PbJQ"
+              elements="#_elTyIBIFEeKTuJ3Ft5PbJQ"/>
+        </invocationContracts>
+      </invocationContractContainer>
+    </invocations>
+  </orchestration>
+</fcore:FactoryComponent>

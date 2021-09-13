@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.polarsys.capella.cdoxml.ta.genchain;singleton:=true
+Bundle-Version: 5.2.0.qualifier
+Bundle-Vendor: %providerName
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.egf.portfolio.genchain,
+ org.polarsys.capella.cdoxml.ta.genchain.model,
+ org.eclipse.egf.pattern;visibility:=reexport,
+ org.eclipse.egf.pattern.ftask;visibility:=reexport,
+ org.eclipse.egf.model.fprod,
+ org.eclipse.egf.portfolio.genchain.tools,
+ org.polarsys.capella.cdoxml.ta.portfolio;bundle-version="5.2.0"
+Export-Package: org.polarsys.capella.cdoxml.ta.genchain
+Automatic-Module-Name: org.polarsys.capella.cdoxml.ta.genchain
+Bundle-Localization: plugin

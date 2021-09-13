@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.polarsys.capella.cdoxml.ta.genchain.model/src"
+    editDirectory="/org.polarsys.capella.cdoxml.ta.genchain.model.edit/src" editorDirectory="/org.polarsys.capella.cdoxml.ta.genchain.model.editor/src"
+    modelPluginID="org.polarsys.capella.cdoxml.ta.genchain.model" modelName="ConnectorExtension"
+    editPluginClass="org.polarsys.capella.cdoxml.ta.genchain.connectorextension.provider.ConnectorExtensionEditPlugin"
+    editorPluginClass="org.polarsys.capella.cdoxml.ta.genchain.connectorextension.presentation.ConnectorExtensionEditorPlugin"
+    testSuiteClass="org.polarsys.capella.cdoxml.ta.genchain.connectorextension.tests.ConnectorExtensionAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    editPluginID="org.polarsys.capella.cdoxml.ta.genchain.model.edit" editorPluginID="org.polarsys.capella.cdoxml.ta.genchain.model.editor"
+    usedGenPackages="platform:/plugin/org.eclipse.egf.portfolio.genchain/model/generationChain.genmodel#//generationChain"
+    eclipsePlatformVersion="2020-06">
+  <foreignModel>connectorExtension.ecore</foreignModel>
+  <genPackages prefix="ConnectorExtension" basePackage="org.polarsys.capella.cdoxml.ta.genchain"
+      disposableProviderFactory="true" childCreationExtenders="true" ecorePackage="connectorExtension.ecore#/">
+    <genClasses ecoreClass="connectorExtension.ecore#//ConnectorGeneration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute connectorExtension.ecore#//ConnectorGeneration/addConnectorEAnnotations"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

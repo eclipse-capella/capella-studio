@@ -1,0 +1,23 @@
+package PACKAGE;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.egf.model.pattern.Node;
+import org.eclipse.egf.model.pattern.PatternContext;
+import org.eclipse.egf.pattern.execution.InternalPatternContext;
+import org.eclipse.egf.pattern.execution.OutputManager;
+import org.eclipse.egf.pattern.query.IQuery;
+import org.eclipse.emf.ecore.EAnnotation;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcoreFactory;
+
+
+public class CLASS {
+
+	public CLASS() {
+		//Here is the constructor
+	}
+
+

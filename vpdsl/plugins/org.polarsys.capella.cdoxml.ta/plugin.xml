@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2021 THALES GLOBAL SERVICES.
+  This program and the accompanying materials are made available under the
+  terms of the Eclipse Public License 2.0 which is available at
+  http://www.eclipse.org/legal/epl-2.0
+
+  SPDX-License-Identifier: EPL-2.0
+ 
+  Contributors:
+     Thales Global Services S.A.S - initial API and implementation
+-->
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.polarsys.kitalpha.ad.ta.definition">
+      <definition
+            RootNsURI="http://www.polarsys.org/capella/"
+            RootProjectName="org.polarsys.capella.cdoxml"
+            class="org.polarsys.capella.cdoxml.ta.CapellaCDOandXMLTargetApplication"
+            description="Capella target application (TA) with XML metadata. It is based on Capella TA and includes generation of connector xml files"
+            name="CDO and XML Metadata for Capella">
+            <metaModel
+               nsuri="http://www.polarsys.org/capella/core/.*"
+               type="Regex">
+	         </metaModel>
+	         <metaModel
+	               nsuri="http://www.polarsys.org/capella/common/.*"
+	               type="Regex">
+	         </metaModel>
+      </definition>
+   </extension>
+   
+   <extension
+         point="org.polarsys.capella.ad.viewpoint.dsl.generation.ui.UIPropertiesContributors">
+      <propertiesContributors
+            targetApplication="CDO and XML Metadata for Capella">
+         <Contributor
+               baseTabName="BaseSiriusDiagram"
+               id="org.eclipse.sirius.diagram.ui"
+               name="Sirius diagram contribution"
+               propertyTabCategory="semantic &amp; extension">
+         </Contributor>
+         <Contributor
+               baseTabName="BaseCapella"
+               id="org.polarsys.capella.core.data.capellamodeller.properties"
+               name="Capella Treeview Contribution"
+               propertyTabCategory="default">
+         </Contributor>
+      </propertiesContributors>
+   </extension>
+   
+    <extension
+         point="org.polarsys.kitalpha.ad.viewpoint.dsl.as.diagram.helper.diagramfilter">
+      <Filter
+            ModelFileExtension="capella"
+            TargetApplication="CDO and XML Metadata for Capella">
+      </Filter>
+   </extension>
+    <extension
+          point="org.polarsys.kitalpha.ad.viewpoint.dsl.as.diagram.expression.helper.diagramExpressionLanguage">
+       <expression
+             TargetApplication="CDO and XML Metadata for Capella"
+             language="AQL">
+       </expression>
+    </extension>
+    <extension
+          point="org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.common.externaldataloader">
+       <ExternalDataLoader
+             id="org.polarsys.capella.metamodels"
+             target="CDO and XML Metadata for Capella">
+          <NamespacePattern
+                id="Capella"
+                value="http://www.polarsys.org/capella/.*"></NamespacePattern>
+       </ExternalDataLoader>
+    </extension>
+    
+    <extension
+          point="org.polarsys.kitalpha.ad.viewpoint.dsl.generation.core.ExtensionLauncher">
+      <launcher
+            category="Aspect"
+            description="This generation enables to generate Capella user interfaces "
+            fcore="platform:/plugin/org.polarsys.capella.ad.viewpoint.dsl.generation.ui/egf/vpUIGenerator.fcore#_kjswEehsEeGiXatuhJfhzw"
+            name="Capella UI generation">
+      </launcher>
+      <filter
+            TargetApplication="CDO and XML Metadata for Capella"
+            java="org.polarsys.capella.cdoxml.ta.UIAspectFilter">
+      </filter>
+    </extension>
+
+</plugin>

@@ -1,0 +1,1 @@
+<objectType name="<%=eClass.getName()%>" iconRelativePath="<%=eClass.getName()%>.gif" isExpandable="false" isNavigable="true" isExtractable="true" isTraceable="true"/>
