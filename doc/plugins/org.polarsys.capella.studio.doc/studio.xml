@@ -16,6 +16,8 @@ Contributors:
   <topic href="html/extension/cdo.html" label="Vewpoint Creation">
      <topic href="html/extension/cdo.html" label="Generate viewpoints for CDO platforms">
      </topic>
+     <topic href="html/extension/cdoxml.html" label="Generate viewpoints for CDO platforms and XML metadata">
+     </topic>
   </topic>
    <anchor id="gendocAnchor"/>
    <anchor id="vpdslAnchor"/>

@@ -1,0 +1,5 @@
+  <TYPE id="Capella<%=eClass.getName()%>" name="Capella <%=eClass.getName()%>" extends="AbstractMelodyDefaultType">
+    <PROPERTIES>
+      <PROPERTY name="indexable" defaultValue="<%=eClass.getName()%>" type="string" nature="publicationAttribute" category="Generation/Index" />
+    </PROPERTIES>
+  </TYPE>

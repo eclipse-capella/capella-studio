@@ -1,0 +1,33 @@
+		Map<GenerationElement, FactoryComponent> fcs = (Map<GenerationElement, FactoryComponent>) ctx.getValue(FcoreBuilderConstants.CURRENT_FCORE);
+		FactoryComponent fc = fcs.get((GenerationElement) (parameter.eContainer()));
+
+		ProductionPlan pp = (ProductionPlan) fc.getOrchestration();
+		DomainViewpoint dvp = (DomainViewpoint) fc.getViewpointContainer().getViewpoint(DomainViewpoint.class);
+		ResourceSet resourceSet = fc.eResource().getResourceSet();
+
+		URI uri = URI.createPlatformResourceURI(parameter.getModelPath(), false);
+		EMFDomain ecoreDomain = ActivityInvocationHelper.getDomain(dvp, uri);
+		
+		if (parameter.isAddConnectorEAnnotations()) {
+			Map<String, Type> contracts1 = new HashMap<String, Type>();
+			Map<String, OrchestrationParameter> parameters1 = new HashMap<String, OrchestrationParameter>();
+	
+			TypeDomain typeDomain1 = DomainFactory.eINSTANCE.createTypeDomain();
+			typeDomain1.setDomain(ecoreDomain);
+			contracts1.put("ecoreModel", typeDomain1);
+
+			String activity1 = "platform:/plugin/org.polarsys.capella.cdoxml.ta.portfolio/egf/addEAnnotations.fcore#_3jrwsRIEEeKTuJ3Ft5PbJQ";
+			ActivityInvocationHelper.addInvocation(pp, (Activity) resourceSet.getEObject(URI.createURI(activity1, false), true), contracts1, parameters1);
+		}
+		
+		
+		Map<String, Type> contracts2 = new HashMap<String, Type>();
+		Map<String, OrchestrationParameter> parameters2 = new HashMap<String, OrchestrationParameter>();
+
+		TypeDomain typeDomain2 = DomainFactory.eINSTANCE.createTypeDomain();
+		typeDomain2.setDomain(ecoreDomain);
+		contracts2.put("ecoreModel", typeDomain2);
+
+		String activity2 = "platform:/plugin/org.polarsys.capella.cdoxml.ta.portfolio/egf/connectorAdditionalDescription.fcore#_n2ZGgBIGEeKTuJ3Ft5PbJQ";
+		ActivityInvocationHelper.addInvocation(pp, (Activity) resourceSet.getEObject(URI.createURI(activity2, false), true), contracts2, parameters2);
+		
