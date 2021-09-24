@@ -12,29 +12,26 @@
  *******************************************************************************/
 package org.polarsys.capella.studio.product;
 
-
-
-import org.eclipse.core.runtime.IBundleGroup;
-import org.eclipse.core.runtime.IBundleGroupProvider;
 import org.eclipse.core.runtime.IProduct;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.resource.StringConverter;
-import org.eclipse.swt.events.PaintEvent;
-import org.eclipse.swt.events.PaintListener;
-import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.graphics.Rectangle;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.branding.IProductConstants;
 import org.eclipse.ui.splash.BasicSplashHandler;
 import org.osgi.framework.Bundle;
+import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.Version;
 
 public class CapellaStudioSplashHandler extends BasicSplashHandler {
 	
 	private static final String NOT_APPLICABLE = "n/a";
+	private static final String FOREGROUND_COLOR_HTML = "262057";
 	
 	/**
 	 * Copied from EclipseSplashHandler
@@ -44,12 +41,10 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 		super.init(splash);
 		String progressRectString = null;
 		String messageRectString = null;
-		String foregroundColorString = null;
 		IProduct product = Platform.getProduct();
 		if (product != null) {
 			progressRectString = product.getProperty(IProductConstants.STARTUP_PROGRESS_RECT);
 			messageRectString = product.getProperty(IProductConstants.STARTUP_MESSAGE_RECT);
-			foregroundColorString = product.getProperty(IProductConstants.STARTUP_FOREGROUND_COLOR);
 		}
 		Rectangle progressRect = StringConverter.asRectangle(progressRectString, new Rectangle(1, 10, 452, 15));
 		setProgressRect(progressRect);
@@ -59,7 +54,7 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 
 		int foregroundColorInteger;
 		try {
-			foregroundColorInteger = Integer.parseInt(foregroundColorString, 16);
+			foregroundColorInteger = Integer.parseInt(FOREGROUND_COLOR_HTML, 16);
 		} catch (Exception ex) {
 			foregroundColorInteger = 0x726ba6; // off white
 		}
@@ -73,62 +68,52 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 			if (definingBundle != null) {
 				studioVersion = definingBundle.getVersion();
 			}
-		}		
+		}
 		String capellaVersion = NOT_APPLICABLE;
 		String kitalphaVersion = NOT_APPLICABLE;
-		for (IBundleGroupProvider bundleGroupProvider : Platform.getBundleGroupProviders())
-		{
-			for (IBundleGroup bundleGroups : bundleGroupProvider.getBundleGroups())
-			{
-				if ("org.polarsys.capella.core.advance.feature".equals(bundleGroups.getIdentifier()))
-				{
-					capellaVersion = trunkQualifier(bundleGroups.getVersion());
-				}
-				else
-				{
-					if ("org.polarsys.kitalpha.sdk.feature".equals(bundleGroups.getIdentifier()))
-					{
-						kitalphaVersion = trunkQualifier(bundleGroups.getVersion());
-					}
-				}
-			}
+		
+		Bundle kitalphaAdServicesBundle = FrameworkUtil.getBundle(org.polarsys.kitalpha.ad.services.ToolIntegrationHelper.class);
+		if (kitalphaAdServicesBundle != null) {
+			String kitalphaAdServicesBundleVersion = kitalphaAdServicesBundle.getVersion().toString();
+			kitalphaVersion = trunkQualifier(kitalphaAdServicesBundleVersion);
 		}
+		
+		Bundle capellaPerspectiveBundle = FrameworkUtil.getBundle(org.polarsys.capella.core.platform.sirius.ui.perspective.CapellaSplashHandler.class);
+		if (capellaPerspectiveBundle != null) {
+			String capellaPerspectiveBundleVersion = capellaPerspectiveBundle.getVersion().toString();
+			capellaVersion = trunkQualifier(capellaPerspectiveBundleVersion);
+		}
+		
 		StringBuilder builder = new StringBuilder();
 		builder.append(studioVersion != null? studioVersion.getMajor() : NOT_APPLICABLE).append('.');
 		builder.append(studioVersion != null? studioVersion.getMinor() : NOT_APPLICABLE).append('.');
 		builder.append(studioVersion != null? studioVersion.getMicro() : NOT_APPLICABLE).append('.');
 		builder.append(studioVersion != null? studioVersion.getQualifier() : NOT_APPLICABLE);
-		final String text = builder.toString();
-		final String fCapellaVersion =  "Capella  "+capellaVersion;
-		final String fKitalphaVersion = "Kitalpha "+kitalphaVersion;
+		final String fCapellaStudioVersion = "Version " + builder.toString();
+		final String fCapellaVersion =  "Capella  "+ capellaVersion;
+		final String fKitalphaVersion = "Kitalpha "+ kitalphaVersion;
+		
+		Font font = new Font(getContent().getDisplay(), new FontData("Arial", 11, SWT.BOLD));
+		
+		Label versionLabel = new Label(getContent(), SWT.RIGHT);
+		versionLabel.setForeground(getForeground());
+		versionLabel.setFont(font);
+		versionLabel.setBounds(220, 250, 210, 20);
+		versionLabel.setText(fCapellaStudioVersion);
 
-		getContent().addPaintListener(new PaintListener() {
+		Label capellaVersionLabel = new Label(getContent(), SWT.LEFT);
+		capellaVersionLabel.setForeground(getForeground());
+		capellaVersionLabel.setFont(font);
+		capellaVersionLabel.setBounds(20, 250, 100, 20);
+		capellaVersionLabel.setText(fCapellaVersion);
 
-			public void paintControl(PaintEvent e) {
-
-				e.gc.setForeground(new Color(getSplash().getShell().getDisplay(), new RGB(38, 32, 87)));
-				Font newFont = computeFont(e, 11);
-				e.gc.setFont(newFont);
-				e.gc.drawText(text, 325, 185, true);
-				
-				e.gc.setForeground(getForeground());
-				newFont = computeFont(e, 9);
-				e.gc.setFont(newFont);
-				e.gc.drawText(fCapellaVersion, 10, 255, true);
-				e.gc.drawText(fKitalphaVersion, 10, 275, true);
-				newFont.dispose();
-			}
-
-			private Font computeFont(PaintEvent e, int height) {
-				FontData[] fontData = e.gc.getFont().getFontData();
-				for (int i = 0; i < fontData.length; ++i)
-				{
-					fontData[i].setHeight(height);
-				}
-				return new Font(e.display, fontData);
-			}
-		});
+		Label kitalphaVersionLabel = new Label(getContent(), SWT.LEFT);
+		kitalphaVersionLabel.setForeground(getForeground());
+		kitalphaVersionLabel.setFont(font);
+		kitalphaVersionLabel.setBounds(20, 270, 100, 20);
+		kitalphaVersionLabel.setText(fKitalphaVersion);
 	}
+	
 	private String trunkQualifier(String version) {
 		int index = version.lastIndexOf('.');
 		if (index < 0) {
