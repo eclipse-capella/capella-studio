@@ -45,14 +45,17 @@
 						</vmArgs>
 					</runner>
 					<aut>
-						<explicit>
-							../../../releng/plugins/org.polarsys.capella.studio.releng.product/target/products/org.polarsys.capella.studio.releng.product/linux/gtk/x86_64/
-						</explicit>
+						<groupId>org.polarsys.capella</groupId>
+						<artifactId>org.polarsys.capella.studio.releng.product</artifactId>
+						<version>${project.version}</version>
 						<args>
 							<arg>-autArgs</arg>
+							<arg>-nosplash</arg>
 						</args>
 						<vmArgs>
 							<vmArg>${argLine}</vmArg>
+							<vmArg>-Dorg.eclipse.swt.internal.gtk.cairoGraphics=false</vmArg>
+							<vmArg>-Dorg.eclipse.swt.browser.DefaultType=mozilla</vmArg>
 						</vmArgs>
 					</aut>
 				</configuration>
