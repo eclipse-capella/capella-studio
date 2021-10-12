@@ -36,8 +36,6 @@
 		</license>
 	</licenses>
 	<properties>
-		<tycho-version>2.0.0</tycho-version>
-		<tycho-extras-version>2.0.0</tycho-extras-version>
 		<platform-name>oxygen</platform-name>
 		<targetPlatform.repository>http://pdulth.github.io/fr.obeo.releng.targetplatform/p2/latest</targetPlatform.repository>
 		<targetPlatform.name>capellastudio.targetplatform</targetPlatform.name>

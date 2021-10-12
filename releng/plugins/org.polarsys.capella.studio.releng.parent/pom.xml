@@ -40,8 +40,8 @@
 	</licenses>
 	
 	<properties>
-		<tycho-version>2.0.0</tycho-version>
-		<tycho-extras-version>2.0.0</tycho-extras-version>
+		<tycho-version>2.2.0</tycho-version>
+		<tycho-extras-version>${tycho-version}</tycho-extras-version>
 		<platform-version-name>oxygen</platform-version-name>
 		<tycho.scmUrl>scm:git:https://github.com/eclipse/capella-studio</tycho.scmUrl>
 		<maven.compiler.source>1.8</maven.compiler.source>

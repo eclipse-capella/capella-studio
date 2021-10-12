@@ -49,12 +49,9 @@
 						<version>${project.version}</version>
 						<args>
 							<arg>-autArgs</arg>
-							<arg>-nosplash</arg>
 						</args>
 						<vmArgs>
 							<vmArg>${argLine}</vmArg>
-							<vmArg>-Dorg.eclipse.swt.internal.gtk.cairoGraphics=false</vmArg>
-							<vmArg>-Dorg.eclipse.swt.browser.DefaultType=mozilla</vmArg>
 						</vmArgs>
 					</aut>
 				</configuration>
