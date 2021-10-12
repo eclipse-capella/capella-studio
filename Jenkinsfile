@@ -1,5 +1,5 @@
 pipeline {
-	agent { label 'migration' }
+	agent { label 'migration-6gb' }
 
 	tools {
 		maven 'apache-maven-latest'
