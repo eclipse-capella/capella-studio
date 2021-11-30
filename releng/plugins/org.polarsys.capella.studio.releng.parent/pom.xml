@@ -53,8 +53,8 @@
 
 		<sonar.jacoco.release>0.8.6</sonar.jacoco.release>
 		
-		<rcptt-maven-version>2.5.1</rcptt-maven-version>
-		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/stable/component/5.2.0.S202109131249/</rcptt-kitalpha-components-site>
+		<rcptt-maven-version>2.5.2-SNAPSHOT</rcptt-maven-version>
+		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/stable/component/5.2.0.S202111291638/</rcptt-kitalpha-components-site>
 		
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
 		<capellastudio-application>org.polarsys.capella.studio.product.application</capellastudio-application>

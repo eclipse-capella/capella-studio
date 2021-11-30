@@ -39,9 +39,6 @@
 				<configuration>
 					<runner>
 						<version>${rcptt-maven-version}</version>
-						<vmArgs>
-							<vmArg>-Xmx2g</vmArg>
-						</vmArgs>
 					</runner>
 					<aut>
 						<groupId>org.polarsys.capella</groupId>
@@ -54,15 +51,6 @@
 								</site>
 							</injection>
 						</injections>
-						<args>
-							<arg>-autArgs</arg>
-							<arg>-nosplash</arg>
-						</args>
-						<vmArgs>
-							<vmArg>${argLine}</vmArg>
-							<vmArg>-Dorg.eclipse.swt.internal.gtk.cairoGraphics=false</vmArg>
-							<vmArg>-Dorg.eclipse.swt.browser.DefaultType=mozilla</vmArg>
-						</vmArgs>
 					</aut>
 				</configuration>
 			</plugin>
