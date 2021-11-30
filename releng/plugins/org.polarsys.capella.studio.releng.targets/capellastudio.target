@@ -114,7 +114,7 @@
       <unit id="org.eclipse.sirius.samples.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.specifier.properties.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.specifier.feature.group" version="0.0.0"/>
-      <repository id="sirius" location="https://download.eclipse.org/sirius/updates/stable/6.6.0-S20210906-045606/2020-06/"/>
+      <repository id="sirius" location="https://download.eclipse.org/sirius/updates/stable/6.6.0-S20211126-081944/2020-06"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.diffmerge.feature.feature.group" version="0.0.0"/>
@@ -125,19 +125,19 @@
       <unit id="org.eclipse.emf.diffmerge.gmf.feature.source.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.diffmerge.egit.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.diffmerge.egit.feature.source.feature.group" version="0.0.0"/>
-      <repository id="EMF-DiffMerge" location="https://download.eclipse.org/diffmerge/stable/0.13.1-M3/emf-diffmerge-site/"/>
+      <repository id="EMF-DiffMerge" location="https://download.eclipse.org/diffmerge/releases/0.13.1/emf-diffmerge-site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.diffmerge.patterns.sdk.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.diffmerge.patterns.sdk.feature.source.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.diffmerge.patterns.sirius.sdk.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.diffmerge.patterns.sirius.sdk.feature.source.feature.group" version="0.0.0"/>
-      <repository id="EDM-Patterns" location="https://download.eclipse.org/diffmerge/stable/0.13.1-M3/edm-patterns-site/"/>
+      <repository id="EDM-Patterns" location="https://download.eclipse.org/diffmerge/releases/0.13.1/edm-patterns-site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.diffmerge.coevolution.sdk.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.diffmerge.coevolution.sdk.feature.source.feature.group" version="0.0.0"/>
-      <repository id="coevolution" location="https://download.eclipse.org/diffmerge/stable/0.13.1-M3/edm-coevolution-site/"/>
+      <repository id="coevolution" location="https://download.eclipse.org/diffmerge/releases/0.13.1/edm-coevolution-site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.amalgam.explorer.activity.feature.group" version="0.0.0"/>
@@ -148,7 +148,7 @@
       <unit id="org.eclipse.amalgam.explorer.contextual.sirius.source.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.amalgam.explorer.contextual.core.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.amalgam.explorer.contextual.core.source.feature.group" version="0.0.0"/>
-      <repository id="amalgam" location="https://download.eclipse.org/modeling/amalgam/updates/stable/1.12.1-S20210330/capella"/>
+      <repository id="amalgam" location="https://download.eclipse.org/modeling/amalgam/updates/releases/1.12.1/capella"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.egf.sdk.feature.feature.group" version="0.0.0"/>
@@ -289,24 +289,24 @@
       <unit id="org.polarsys.kitalpha.richtext.widget.ext.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.richtext.widget.tools.ext.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.richtext.widget.tools.ext.feature.source.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-sdk" location="https://download.eclipse.org/kitalpha/updates/stable/sdk/5.2.0.S202109131249/"/>
+      <repository id="kitalpha-sdk" location="https://download.eclipse.org/kitalpha/updates/stable/sdk/5.2.0.S202111291638/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.kitalpha.runtime.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.runtime.feature.source.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-runtime" location="https://download.eclipse.org/kitalpha/updates/stable/runtime/5.2.0.S202109131249/"/>
+      <repository id="kitalpha-runtime" location="https://download.eclipse.org/kitalpha/updates/stable/runtime/5.2.0.S202111291638/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.kitalpha.common.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.common.feature.source.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.massactions.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.massactions.feature.source.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-core" location="https://download.eclipse.org/kitalpha/updates/stable/runtimecore/5.2.0.S202109131249/"/>
+      <repository id="kitalpha-core" location="https://download.eclipse.org/kitalpha/updates/stable/runtimecore/5.2.0.S202111291638/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.core.egf.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.egf.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella-egf-patterns" location="https://download.eclipse.org/capella/core/updates/stable/5.2.0-S20210916-110701/org.polarsys.capella.egf.site/"/>
+      <repository id="capella-egf-patterns" location="https://download.eclipse.org/capella/core/updates/stable/5.2.0-S20211130-125709/org.polarsys.capella.egf.site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.rcp.feature.group" version="0.0.0"/>
@@ -318,7 +318,7 @@
       <unit id="org.polarsys.capella.core.advance.feature.source.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.feature.source.feature.group" version="0.0.0"/>
-      <repository id="capella" location="https://download.eclipse.org/capella/core/updates/stable/5.2.0-S20210916-110701/org.polarsys.capella.rcp.site/"/>
+      <repository id="capella" location="https://download.eclipse.org/capella/core/updates/stable/5.2.0-S20211130-125709/org.polarsys.capella.rcp.site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.docgen.feature.feature.group" version="0.0.0"/>
