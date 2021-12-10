@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.0.201805040915
+//Generated with EGF 1.6.3.202110291409
 package org.polarsys.capella.extension.genchain.patterns;
 
 import java.util.HashMap;
@@ -110,7 +110,8 @@ public class CapellaCdoGenerationPattern {
 
 	protected org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration parameter;
 
-	public void set_parameter(org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration parameter) {
+	public void set_parameter(
+			org.polarsys.capella.extension.genchain.capellaextension.CapellaCdoEmfGeneration parameter) {
 		this.parameter = parameter;
 	}
 

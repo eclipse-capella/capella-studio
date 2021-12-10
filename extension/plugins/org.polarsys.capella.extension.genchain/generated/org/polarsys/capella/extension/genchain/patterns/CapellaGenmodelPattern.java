@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.0.201805040915
+//Generated with EGF 1.6.3.202110291409
 package org.polarsys.capella.extension.genchain.patterns;
 
 import java.util.HashMap;
@@ -44,6 +44,7 @@ public class CapellaGenmodelPattern {
 	public CapellaGenmodelPattern() {
 		//Here is the constructor
 		// add initialisation of the pattern variables (declaration has been already done).
+
 	}
 
 	public void generate(Object argument) throws Exception {
