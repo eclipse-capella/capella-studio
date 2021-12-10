@@ -1,4 +1,4 @@
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.6.3.202110291409
 package org.polarsys.capella.extension.tools.patterns.model.generation;
 
 import java.util.*;
@@ -11,12 +11,12 @@ import org.polarsys.capella.extension.tools.*;
 import org.polarsys.capella.extension.tools.HelperClassGenerator.*;
 import org.eclipse.emf.codegen.ecore.genmodel.GenPackage;
 
-public class ManifestMFPattern extends
-		org.polarsys.kitalpha.emde.egf.model.ManifestMF {
+public class ManifestMFPattern extends org.polarsys.kitalpha.emde.egf.model.ManifestMF {
 
 	public ManifestMFPattern() {
 		//Here is the constructor
 		// add initialisation of the pattern variables (declaration has been already done).
+
 	}
 
 	public void generate(Object argument) throws Exception {
@@ -38,8 +38,7 @@ public class ManifestMFPattern extends
 			}
 		}
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 	}
 
@@ -54,20 +53,16 @@ public class ManifestMFPattern extends
 			parameterValues.put("genModel", this.genModel);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
 
-	protected void method_addRequirements(final StringBuffer out,
-			final PatternContext ctx) throws Exception {
-		genModel.getModelPluginVariables().add(
-				"org.polarsys.capella.core.data.helpers");
+	protected void method_addRequirements(final StringBuffer out, final PatternContext ctx) throws Exception {
+		genModel.getModelPluginVariables().add("org.polarsys.capella.core.data.helpers");
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "addRequirements",
-				out.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "addRequirements", out.toString());
 	}
 
 	public Map<String, Object> getParameters() {

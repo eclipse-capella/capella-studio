@@ -1,4 +1,4 @@
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.6.3.202110291409
 package org.polarsys.capella.extension.tools.patterns.edit.icons.generation;
 
 import org.eclipse.egf.emf.pattern.base.CodegenGeneratorAdapter;
@@ -10,23 +10,18 @@ import org.eclipse.egf.model.pattern.*;
 import org.eclipse.egf.pattern.execution.*;
 import org.eclipse.egf.pattern.query.*;
 
-public class CreateChildIconsPattern extends
-		org.eclipse.egf.emf.pattern.edit.CreateChildIconsForGenClass {
+public class CreateChildIconsPattern extends org.eclipse.egf.emf.pattern.edit.CreateChildIconsForGenClass {
 	protected static String nl;
 
-	public static synchronized CreateChildIconsPattern create(
-			String lineSeparator) {
+	public static synchronized CreateChildIconsPattern create(String lineSeparator) {
 		nl = lineSeparator;
 		CreateChildIconsPattern result = new CreateChildIconsPattern();
 		nl = null;
 		return result;
 	}
 
-	public final String NL = nl == null ? (System.getProperties()
-			.getProperty("line.separator")) : nl;
+	public final String NL = nl == null ? (System.getProperties().getProperty("line.separator")) : nl;
 	protected final String TEXT_1 = NL;
-	protected final String TEXT_2 = NL;
-	protected final String TEXT_3 = NL;
 
 	public CreateChildIconsPattern() {
 		//Here is the constructor
@@ -59,12 +54,11 @@ public class CreateChildIconsPattern extends
 		}
 		ctx.setNode(currentNode);
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
-		stringBuffer.append(TEXT_2);
-		stringBuffer.append(TEXT_3);
+		stringBuffer.append(TEXT_1);
+		stringBuffer.append(TEXT_1);
 		return stringBuffer.toString();
 	}
 
@@ -78,8 +72,7 @@ public class CreateChildIconsPattern extends
 			parameterValues.put("parameter", this.parameter);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
@@ -90,30 +83,24 @@ public class CreateChildIconsPattern extends
 		return parameters;
 	}
 
-	protected void method_doGenerate(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_doGenerate(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		GenClass genClass = parameter;
 		GenModel genModel = genClass.getGenModel();
 		if (genModel.isCreationCommands() && genModel.isCreationIcons()) {
-			for (GenFeature feature : genClass
-					.getAllCreateChildFeaturesIncludingDelegation()) {
+			for (GenFeature feature : genClass.getAllCreateChildFeaturesIncludingDelegation()) {
 				for (GenClass childClass : genClass.getChildrenClasses(feature)) {
 					GenClass parentClass = feature.getGenClass();
 					if (childClass.equals(parameter))
-						new CodegenGeneratorAdapter(parameter)
-								.generateGIF("edit/CreateChild.gif", genClass
-										.getCreateChildIconFileName(feature,
-												childClass),
-										genClass.getName(), childClass
-												.getName(), false);
+						new CodegenGeneratorAdapter(parameter).generateGIF("edit/CreateChild.gif",
+								genClass.getCreateChildIconFileName(feature, childClass), genClass.getName(),
+								childClass.getName(), false);
 				}
 			}
 		}
 
 		stringBuffer.append(TEXT_1);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "doGenerate",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "doGenerate", stringBuffer.toString());
 	}
 }

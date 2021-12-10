@@ -1,4 +1,4 @@
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.6.3.202110291409
 package org.polarsys.capella.extension.tools.patterns.model.generation;
 
 import java.util.*;
@@ -12,12 +12,12 @@ import org.eclipse.emf.codegen.ecore.genmodel.GenPackage;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-public class HelperExtension extends
-		org.polarsys.kitalpha.emde.egf.model.ModelPluginXMLExtension {
+public class HelperExtension extends org.polarsys.kitalpha.emde.egf.model.ModelPluginXMLExtension {
 
 	public HelperExtension() {
 		//Here is the constructor
 		// add initialisation of the pattern variables (declaration has been already done).
+
 	}
 
 	public void generate(Object argument) throws Exception {
@@ -44,8 +44,7 @@ public class HelperExtension extends
 			}
 		}
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 	}
 
@@ -60,30 +59,24 @@ public class HelperExtension extends
 			parameterValues.put("genModel", this.genModel);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
 
-	protected void method_run(final StringBuffer out, final PatternContext ctx)
-			throws Exception {
+	protected void method_run(final StringBuffer out, final PatternContext ctx) throws Exception {
 		Document doc = root.getOwnerDocument();
 
-		for (GenPackage genPackage : genModel
-				.getAllGenPackagesWithClassifiers()) {
+		for (GenPackage genPackage : genModel.getAllGenPackagesWithClassifiers()) {
 			root.appendChild(doc.createTextNode("\n"));
 			root.appendChild(doc.createComment("@generated"));
 			root.appendChild(doc.createTextNode("\n  "));
 			Element extension = doc.createElement("extension");
-			extension.setAttribute("point",
-					"org.polarsys.capella.common.model.helpers.helper");
+			extension.setAttribute("point", "org.polarsys.capella.common.model.helpers.helper");
 			extension.appendChild(doc.createTextNode("\n    "));
 			Element helper = doc.createElement("helperImpl");
-			helper.setAttribute("class",
-					HelperClassGenerator.getHelperFullClassname(genPackage));
-			helper.setAttribute("nsURI", genPackage.getEcorePackage()
-					.getNsURI());
+			helper.setAttribute("class", HelperClassGenerator.getHelperFullClassname(genPackage));
+			helper.setAttribute("nsURI", genPackage.getEcorePackage().getNsURI());
 			extension.appendChild(helper);
 			extension.appendChild(doc.createTextNode("\n  "));
 			root.appendChild(extension);

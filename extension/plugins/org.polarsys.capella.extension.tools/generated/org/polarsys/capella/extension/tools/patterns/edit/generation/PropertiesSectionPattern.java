@@ -1,4 +1,4 @@
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.6.3.202110291409
 package org.polarsys.capella.extension.tools.patterns.edit.generation;
 
 import org.eclipse.emf.codegen.ecore.genmodel.*;
@@ -11,55 +11,31 @@ import org.eclipse.egf.model.pattern.*;
 import org.eclipse.egf.pattern.execution.*;
 import org.eclipse.egf.pattern.query.*;
 
-public class PropertiesSectionPattern extends
-		org.eclipse.egf.emf.pattern.base.GenClassJava {
+public class PropertiesSectionPattern extends org.eclipse.egf.emf.pattern.base.GenClassJava {
 	protected static String nl;
 
-	public static synchronized PropertiesSectionPattern create(
-			String lineSeparator) {
+	public static synchronized PropertiesSectionPattern create(String lineSeparator) {
 		nl = lineSeparator;
 		PropertiesSectionPattern result = new PropertiesSectionPattern();
 		nl = null;
 		return result;
 	}
 
-	public final String NL = nl == null ? (System.getProperties()
-			.getProperty("line.separator")) : nl;
+	public final String NL = nl == null ? (System.getProperties().getProperty("line.separator")) : nl;
 	protected final String TEXT_1 = "package ";
-	protected final String TEXT_2 = ";"
-			+ NL
-			+ ""
-			+ NL
-			+ "import org.eclipse.emf.ecore.EObject;"
-			+ NL
-			+ "import org.polarsys.capella.core.data.core.properties.sections.NamedElementSection;"
-			+ NL
-			+ "import org.polarsys.capella.core.model.handler.helpers.CapellaAdapterHelper;"
-			+ NL + "import ";
+	protected final String TEXT_2 = ";" + NL + "" + NL + "import org.eclipse.emf.ecore.EObject;" + NL
+			+ "import org.polarsys.capella.core.data.core.properties.sections.NamedElementSection;" + NL
+			+ "import org.polarsys.capella.core.model.handler.helpers.CapellaAdapterHelper;" + NL + "import ";
 	protected final String TEXT_3 = ";" + NL + "" + NL + "/**" + NL
 			+ " * This is the item provider adapter for a {@link ";
-	protected final String TEXT_4 = "} object." + NL
-			+ " * <!-- begin-user-doc -->" + NL + " * <!-- end-user-doc -->"
+	protected final String TEXT_4 = "} object." + NL + " * <!-- begin-user-doc -->" + NL + " * <!-- end-user-doc -->"
 			+ NL + " * @generated" + NL + " */" + NL + "public class ";
-	protected final String TEXT_5 = " extends NamedElementSection"
-			+ NL
-			+ "{"
-			+ NL
-			+ "\t/**"
-			+ NL
-			+ "\t * @generated"
-			+ NL
-			+ "\t */"
-			+ NL
-			+ "\t@Override"
-			+ NL
-			+ "\tpublic boolean select(Object toTest) {"
-			+ NL
-			+ "\t\tEObject obj = CapellaAdapterHelper.resolveSemanticObject(toTest);"
-			+ NL + "\t\t" + NL + "\t\treturn ";
+	protected final String TEXT_5 = " extends NamedElementSection" + NL + "{" + NL + "\t/**" + NL + "\t * @generated"
+			+ NL + "\t */" + NL + "\t@Override" + NL + "\tpublic boolean select(Object toTest) {" + NL
+			+ "\t\tEObject obj = CapellaAdapterHelper.resolveSemanticObject(toTest);" + NL + "\t\t" + NL
+			+ "\t\treturn ";
 	protected final String TEXT_6 = ";" + NL + "\t}" + NL + "}" + NL + NL;
 	protected final String TEXT_7 = NL;
-	protected final String TEXT_8 = NL;
 
 	public PropertiesSectionPattern() {
 		//Here is the constructor
@@ -92,12 +68,11 @@ public class PropertiesSectionPattern extends
 		}
 		ctx.setNode(currentNode);
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
 		stringBuffer.append(TEXT_7);
-		stringBuffer.append(TEXT_8);
+		stringBuffer.append(TEXT_7);
 		return stringBuffer.toString();
 	}
 
@@ -113,8 +88,7 @@ public class PropertiesSectionPattern extends
 			parameterValues.put("parameter", this.parameter);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
@@ -125,8 +99,7 @@ public class PropertiesSectionPattern extends
 		return parameters;
 	}
 
-	protected void method_doGenerate(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_doGenerate(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		stringBuffer.append(TEXT_1);
 		stringBuffer.append(packageName);
@@ -140,12 +113,11 @@ public class PropertiesSectionPattern extends
 		stringBuffer.append(SectionClassGenerator.getFilterTest(parameter));
 		stringBuffer.append(TEXT_6);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "doGenerate",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "doGenerate", stringBuffer.toString());
 	}
 
-	protected void method_setReporterVariables(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_setReporterVariables(final StringBuffer stringBuffer, final PatternContext ctx)
+			throws Exception {
 
 		GenClass genClass = parameter;
 		targetPath = genClass.getGenModel().getEditDirectory();
@@ -153,8 +125,7 @@ public class PropertiesSectionPattern extends
 		className = SectionClassGenerator.getClassname(genClass);
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "setReporterVariables",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "setReporterVariables", stringBuffer.toString());
 	}
 
 	public boolean preCondition(PatternContext ctx) throws Exception {
