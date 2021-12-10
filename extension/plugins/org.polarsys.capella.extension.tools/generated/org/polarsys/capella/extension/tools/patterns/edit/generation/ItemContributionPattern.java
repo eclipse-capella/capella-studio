@@ -1,4 +1,4 @@
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.6.3.202110291409
 package org.polarsys.capella.extension.tools.patterns.edit.generation;
 
 import org.polarsys.capella.extension.tools.HelperClassGenerator.HelperInfo;
@@ -18,54 +18,34 @@ import org.eclipse.egf.model.pattern.*;
 import org.eclipse.egf.pattern.execution.*;
 import org.eclipse.egf.pattern.query.*;
 
-public class ItemContributionPattern extends
-		org.eclipse.egf.emf.pattern.base.GenClassJava {
+public class ItemContributionPattern extends org.eclipse.egf.emf.pattern.base.GenClassJava {
 	protected static String nl;
 
-	public static synchronized ItemContributionPattern create(
-			String lineSeparator) {
+	public static synchronized ItemContributionPattern create(String lineSeparator) {
 		nl = lineSeparator;
 		ItemContributionPattern result = new ItemContributionPattern();
 		nl = null;
 		return result;
 	}
 
-	public final String NL = nl == null ? (System.getProperties()
-			.getProperty("line.separator")) : nl;
-	protected final String TEXT_1 = NL
-			+ "/**"
-			+ NL
-			+ " * <copyright>"
-			+ NL
-			+ " *"
-			+ NL
-			+ " * Copyright (c) 2002-2007 IBM Corporation and others."
-			+ NL
-			+ " * All rights reserved.   This program and the accompanying materials"
-			+ NL
-			+ " * are made available under the terms of the Eclipse Public License v1.0"
-			+ NL
-			+ " * which accompanies this distribution, and is available at"
-			+ NL + " * http://www.eclipse.org/legal/epl-v10.html" + NL + " *"
-			+ NL + " * Contributors:" + NL
-			+ " *   IBM - Initial API and implementation" + NL + " *" + NL
-			+ " * </copyright>" + NL + " */" + NL;
+	public final String NL = nl == null ? (System.getProperties().getProperty("line.separator")) : nl;
+	protected final String TEXT_1 = NL + "/**" + NL + " * <copyright>" + NL + " *" + NL
+			+ " * Copyright (c) 2002-2007 IBM Corporation and others." + NL
+			+ " * All rights reserved.   This program and the accompanying materials" + NL
+			+ " * are made available under the terms of the Eclipse Public License v1.0" + NL
+			+ " * which accompanies this distribution, and is available at" + NL
+			+ " * http://www.eclipse.org/legal/epl-v10.html" + NL + " *" + NL + " * Contributors:" + NL
+			+ " *   IBM - Initial API and implementation" + NL + " *" + NL + " * </copyright>" + NL + " */" + NL;
 	protected final String TEXT_2 = NL;
 	protected final String TEXT_3 = NL + "package ";
 	protected final String TEXT_4 = ";" + NL + NL;
-	protected final String TEXT_5 = NL + NL + "/**" + NL
-			+ " * This is the item provider adapter for a {@link ";
-	protected final String TEXT_6 = "} object." + NL
-			+ " * <!-- begin-user-doc -->" + NL + " * <!-- end-user-doc -->"
+	protected final String TEXT_5 = NL + NL + "/**" + NL + " * This is the item provider adapter for a {@link ";
+	protected final String TEXT_6 = "} object." + NL + " * <!-- begin-user-doc -->" + NL + " * <!-- end-user-doc -->"
 			+ NL + " * @generated" + NL + " */" + NL + "public class ";
 	protected final String TEXT_7 = " extends ";
-	protected final String TEXT_8 = NL + "{" + NL + "  /**" + NL
-			+ "   * @generated" + NL + "   */" + NL + "  @Override" + NL
-			+ "  public EClass getMetaclass() {" + NL + "    return ";
+	protected final String TEXT_8 = NL + "{" + NL + "  /**" + NL + "   * @generated" + NL + "   */" + NL + "  @Override"
+			+ NL + "  public EClass getMetaclass() {" + NL + "    return ";
 	protected final String TEXT_9 = ";" + NL + "  }" + NL + "}";
-	protected final String TEXT_10 = NL;
-	protected final String TEXT_11 = NL;
-	protected final String TEXT_12 = NL;
 
 	public ItemContributionPattern() {
 		//Here is the constructor
@@ -98,12 +78,11 @@ public class ItemContributionPattern extends
 		}
 		ctx.setNode(currentNode);
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
-		stringBuffer.append(TEXT_11);
-		stringBuffer.append(TEXT_12);
+		stringBuffer.append(TEXT_2);
+		stringBuffer.append(TEXT_2);
 		return stringBuffer.toString();
 	}
 
@@ -128,8 +107,7 @@ public class ItemContributionPattern extends
 			parameterValues.put("parameter", this.parameter);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
@@ -146,49 +124,40 @@ public class ItemContributionPattern extends
 		return parameters;
 	}
 
-	protected void method_setReporterVariables(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_setReporterVariables(final StringBuffer stringBuffer, final PatternContext ctx)
+			throws Exception {
 
 		GenClass genClass = parameter;
 		targetPath = genClass.getGenModel().getEditDirectory();
 		packageName = MenuContributorClassGenerator.getPackagename(genClass);
 		className = MenuContributorClassGenerator.getClassname(genClass);
-		HelperInfo info = HelperClassGenerator
-				.getInfo(genClass.getEcoreClass());
-		menuContributorBaseClass = info == null ? "no_type" : info
-				.getMenuContributorBaseClass();
+		HelperInfo info = HelperClassGenerator.getInfo(genClass.getEcoreClass());
+		menuContributorBaseClass = info == null ? "no_type" : info.getMenuContributorBaseClass();
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "setReporterVariables",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "setReporterVariables", stringBuffer.toString());
 	}
 
-	protected void method_setArgument(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_setArgument(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		GenClass genClass = parameter;
 		argument = parameter;
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "setArgument",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "setArgument", stringBuffer.toString());
 	}
 
-	protected void method_ensureProjectExists(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_ensureProjectExists(final StringBuffer stringBuffer, final PatternContext ctx)
+			throws Exception {
 
-		new CodegenGeneratorAdapter(parameter).ensureProjectExists(
-				genModel.getEditDirectory(), genModel,
-				GenBaseGeneratorAdapter.EDIT_PROJECT_TYPE,
-				genModel.isUpdateClasspath(), new BasicMonitor());
+		new CodegenGeneratorAdapter(parameter).ensureProjectExists(genModel.getEditDirectory(), genModel,
+				GenBaseGeneratorAdapter.EDIT_PROJECT_TYPE, genModel.isUpdateClasspath(), new BasicMonitor());
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "ensureProjectExists",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "ensureProjectExists", stringBuffer.toString());
 	}
 
-	protected void method_doGenerate(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_doGenerate(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		stringBuffer.append(TEXT_1);
 		GenClass genClass = (GenClass) argument;
@@ -199,17 +168,14 @@ public class ItemContributionPattern extends
 			//<%@ egf:patternCall patternId="platform:/plugin/org.eclipse.egf.emf.pattern.base/egf/EMF_Pattern_Base.fcore#LogicalName=org.eclipse.egf.emf.pattern.base.HeaderJava" args="parameter:argument"%>
 
 			InternalPatternContext ictx = (InternalPatternContext) ctx;
-			new Node.DataLeaf(ictx.getNode(), getClass(), null,
-					stringBuffer.toString());
+			new Node.DataLeaf(ictx.getNode(), getClass(), null, stringBuffer.toString());
 			stringBuffer.setLength(0);
 
 			final Map<String, Object> callParameters = new HashMap<String, Object>();
 			callParameters.put("argument", parameter);
-			CallHelper
-					.executeWithParameterInjection(
-							"platform:/plugin/org.eclipse.egf.emf.pattern.base/egf/EMF_Pattern_Base.fcore#_XHLrsCwtEd-jc5T-XaRJlg",
-							new ExecutionContext((InternalPatternContext) ctx),
-							callParameters);
+			CallHelper.executeWithParameterInjection(
+					"platform:/plugin/org.eclipse.egf.emf.pattern.base/egf/EMF_Pattern_Base.fcore#_XHLrsCwtEd-jc5T-XaRJlg",
+					new ExecutionContext((InternalPatternContext) ctx), callParameters);
 			stringBuffer.setLength(0);
 		}
 
@@ -224,8 +190,8 @@ public class ItemContributionPattern extends
 		genModel.addImport("org.eclipse.emf.edit.provider.IItemPropertySource");
 		genModel.addImport("org.eclipse.emf.edit.provider.IStructuredItemContentProvider");
 		genModel.addImport("org.eclipse.emf.edit.provider.ITreeItemContentProvider");
-		String _List = genModel
-				.getImportedName(genModel.useGenerics() ? "java.util.List<org.eclipse.emf.edit.provider.IItemPropertyDescriptor>"
+		String _List = genModel.getImportedName(
+				genModel.useGenerics() ? "java.util.List<org.eclipse.emf.edit.provider.IItemPropertyDescriptor>"
 						: "java.util.List");
 		genModel.markImportLocation(stringBuffer);
 		stringBuffer.append(TEXT_5);
@@ -238,10 +204,9 @@ public class ItemContributionPattern extends
 		stringBuffer.append(genClass.getQualifiedClassifierAccessor());
 		stringBuffer.append(TEXT_9);
 		genModel.emitSortedImports();
-		stringBuffer.append(TEXT_10);
+		stringBuffer.append(TEXT_2);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "doGenerate",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "doGenerate", stringBuffer.toString());
 	}
 
 	public boolean preCondition(PatternContext ctx) throws Exception {
@@ -249,8 +214,7 @@ public class ItemContributionPattern extends
 		genModel = parameter.getGenModel();
 		boolean canGenerate = new CodegenGeneratorAdapter(parameter)
 				.canGenerate("org.eclipse.emf.codegen.ecore.genmodel.generator.EditProject");
-		canGenerate = canGenerate
-				&& MenuContributorClassGenerator.isValidTarget(parameter);
+		canGenerate = canGenerate && MenuContributorClassGenerator.isValidTarget(parameter);
 		return canGenerate;
 	}
 }

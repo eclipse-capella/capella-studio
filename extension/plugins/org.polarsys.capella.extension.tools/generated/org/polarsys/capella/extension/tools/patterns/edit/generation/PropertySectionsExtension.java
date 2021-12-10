@@ -1,4 +1,4 @@
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.6.3.202110291409
 package org.polarsys.capella.extension.tools.patterns.edit.generation;
 
 import java.util.HashMap;
@@ -21,12 +21,12 @@ import org.polarsys.capella.extension.tools.HelperClassGenerator;
 import org.polarsys.capella.extension.tools.HelperClassGenerator.HelperInfo;
 import org.polarsys.capella.extension.tools.SectionClassGenerator;
 
-public class PropertySectionsExtension extends
-		org.polarsys.kitalpha.emde.egf.edit.EditPluginXMLExtension {
+public class PropertySectionsExtension extends org.polarsys.kitalpha.emde.egf.edit.EditPluginXMLExtension {
 
 	public PropertySectionsExtension() {
 		//Here is the constructor
 		// add initialisation of the pattern variables (declaration has been already done).
+
 	}
 
 	public void generate(Object argument) throws Exception {
@@ -53,8 +53,7 @@ public class PropertySectionsExtension extends
 			}
 		}
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 	}
 
@@ -69,14 +68,12 @@ public class PropertySectionsExtension extends
 			parameterValues.put("genModel", this.genModel);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
 
-	protected void method_run(final StringBuffer out, final PatternContext ctx)
-			throws Exception {
+	protected void method_run(final StringBuffer out, final PatternContext ctx) throws Exception {
 
 		SectionClassGenerator.declareSections(root, genModel);
 

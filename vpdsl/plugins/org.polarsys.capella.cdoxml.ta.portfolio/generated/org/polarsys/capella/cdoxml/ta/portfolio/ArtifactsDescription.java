@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.2.202001031546
+//Generated with EGF 1.6.3.202110291409
 package org.polarsys.capella.cdoxml.ta.portfolio;
 
 import org.eclipse.egf.common.helper.*;

@@ -1,4 +1,4 @@
-//Generated with EGF 1.2.0.v20150211-1405
+//Generated with EGF 1.6.3.202110291409
 package org.polarsys.capella.extension.tools.patterns.model.generation;
 
 import org.polarsys.capella.extension.tools.HelperClassGenerator.HelperInfo;
@@ -12,8 +12,7 @@ import org.eclipse.egf.model.pattern.*;
 import org.eclipse.egf.pattern.execution.*;
 import org.eclipse.egf.pattern.query.*;
 
-public class HelperPackagePattern extends
-		org.eclipse.egf.emf.pattern.base.GenPackageJava {
+public class HelperPackagePattern extends org.eclipse.egf.emf.pattern.base.GenPackageJava {
 	protected static String nl;
 
 	public static synchronized HelperPackagePattern create(String lineSeparator) {
@@ -23,42 +22,27 @@ public class HelperPackagePattern extends
 		return result;
 	}
 
-	public final String NL = nl == null ? (System.getProperties()
-			.getProperty("line.separator")) : nl;
-	protected final String TEXT_1 = "/**" + NL + " * <copyright>" + NL + " *"
-			+ NL + " * </copyright>" + NL + " */" + NL + "" + NL + "package ";
-	protected final String TEXT_2 = ";" + NL + "" + NL
-			+ "import org.eclipse.emf.common.util.BasicEList;" + NL + "" + NL
-			+ "import org.eclipse.emf.ecore.EAnnotation;" + NL
-			+ "import org.eclipse.emf.ecore.EObject;" + NL
+	public final String NL = nl == null ? (System.getProperties().getProperty("line.separator")) : nl;
+	protected final String TEXT_1 = "/**" + NL + " * <copyright>" + NL + " *" + NL + " * </copyright>" + NL + " */" + NL
+			+ "" + NL + "package ";
+	protected final String TEXT_2 = ";" + NL + "" + NL + "import org.eclipse.emf.common.util.BasicEList;" + NL + "" + NL
+			+ "import org.eclipse.emf.ecore.EAnnotation;" + NL + "import org.eclipse.emf.ecore.EObject;" + NL
 			+ "import org.eclipse.emf.ecore.EStructuralFeature;" + NL + "" + NL
 			+ "import org.polarsys.capella.common.model.helpers.IHelper;" + NL;
 	protected final String TEXT_3 = NL + "\timport ";
 	protected final String TEXT_4 = ".";
 	protected final String TEXT_5 = ";";
-	protected final String TEXT_6 = NL + "/**" + NL + " * @generated " + NL
-			+ " */" + NL + "public class ";
-	protected final String TEXT_7 = " implements  IHelper {"
-			+ NL
-			+ ""
-			+ NL
-			+ "\t/**"
-			+ NL
-			+ "\t * @generated"
-			+ NL
-			+ "\t */"
-			+ NL
-			+ "\tpublic Object getValue(EObject object, EStructuralFeature feature, EAnnotation annotation) {"
-			+ NL + "\t\tObject ret = null;" + NL + "\t\t" + NL;
-	protected final String TEXT_8 = NL
-			+ "if (ret == null && object instanceof ";
+	protected final String TEXT_6 = NL + "/**" + NL + " * @generated " + NL + " */" + NL + "public class ";
+	protected final String TEXT_7 = " implements  IHelper {" + NL + "" + NL + "\t/**" + NL + "\t * @generated" + NL
+			+ "\t */" + NL
+			+ "\tpublic Object getValue(EObject object, EStructuralFeature feature, EAnnotation annotation) {" + NL
+			+ "\t\tObject ret = null;" + NL + "\t\t" + NL;
+	protected final String TEXT_8 = NL + "if (ret == null && object instanceof ";
 	protected final String TEXT_9 = ")" + NL + "{" + NL + "\tret = ";
 	protected final String TEXT_10 = ".getInstance().doSwitch((";
 	protected final String TEXT_11 = ")object, feature);" + NL + "}";
-	protected final String TEXT_12 = NL + "\t\t\treturn ret;" + NL + "\t}" + NL
-			+ "" + NL + "}" + NL;
+	protected final String TEXT_12 = NL + "\t\t\treturn ret;" + NL + "\t}" + NL + "" + NL + "}" + NL;
 	protected final String TEXT_13 = NL;
-	protected final String TEXT_14 = NL;
 
 	public HelperPackagePattern() {
 		//Here is the constructor
@@ -91,12 +75,11 @@ public class HelperPackagePattern extends
 		}
 		ctx.setNode(currentNode);
 		if (ctx.useReporter()) {
-			ctx.getReporter().executionFinished(
-					OutputManager.computeExecutionOutput(ctx), ctx);
+			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
 		stringBuffer.append(TEXT_13);
-		stringBuffer.append(TEXT_14);
+		stringBuffer.append(TEXT_13);
 		return stringBuffer.toString();
 	}
 
@@ -112,8 +95,7 @@ public class HelperPackagePattern extends
 			parameterValues.put("parameter", this.parameter);
 			String outputWithCallBack = OutputManager.computeLoopOutput(ictx);
 			String loop = OutputManager.computeLoopOutputWithoutCallback(ictx);
-			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx,
-					parameterValues);
+			ictx.getReporter().loopFinished(loop, outputWithCallBack, ictx, parameterValues);
 		}
 		return null;
 	}
@@ -124,8 +106,8 @@ public class HelperPackagePattern extends
 		return parameters;
 	}
 
-	protected void method_setReporterVariables(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_setReporterVariables(final StringBuffer stringBuffer, final PatternContext ctx)
+			throws Exception {
 
 		GenPackage genPackage = parameter;
 		targetPath = genPackage.getGenModel().getModelDirectory();
@@ -134,19 +116,16 @@ public class HelperPackagePattern extends
 		//className = genPackage.getPrefix()+"Helper"; 
 
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "setReporterVariables",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "setReporterVariables", stringBuffer.toString());
 	}
 
-	protected void method_doGenerate(final StringBuffer stringBuffer,
-			final PatternContext ctx) throws Exception {
+	protected void method_doGenerate(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
 		stringBuffer.append(TEXT_1);
 		stringBuffer.append(packageName);
 		stringBuffer.append(TEXT_2);
 
-		for (GenClass feature : CapellaMetamodelHelper
-				.getCapellaGenClasses(parameter.getGenClasses())) {
+		for (GenClass feature : CapellaMetamodelHelper.getCapellaGenClasses(parameter.getGenClasses())) {
 
 			stringBuffer.append(TEXT_3);
 			stringBuffer.append(parameter.getInterfacePackageName());
@@ -160,14 +139,12 @@ public class HelperPackagePattern extends
 		stringBuffer.append(className);
 		stringBuffer.append(TEXT_7);
 
-		for (GenClass feature : CapellaMetamodelHelper
-				.getCapellaGenClasses(parameter.getGenClasses())) {
+		for (GenClass feature : CapellaMetamodelHelper.getCapellaGenClasses(parameter.getGenClasses())) {
 
 			stringBuffer.append(TEXT_8);
 			stringBuffer.append(feature.getInterfaceName());
 			stringBuffer.append(TEXT_9);
-			stringBuffer.append(HelperClassGenerator
-					.getHelperClassname(feature));
+			stringBuffer.append(HelperClassGenerator.getHelperClassname(feature));
 			stringBuffer.append(TEXT_10);
 			stringBuffer.append(feature.getInterfaceName());
 			stringBuffer.append(TEXT_11);
@@ -176,8 +153,7 @@ public class HelperPackagePattern extends
 
 		stringBuffer.append(TEXT_12);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "doGenerate",
-				stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "doGenerate", stringBuffer.toString());
 	}
 
 	public boolean preCondition(PatternContext ctx) throws Exception {
