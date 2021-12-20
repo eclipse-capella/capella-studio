@@ -6,8 +6,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _h6Y4QGVSEeafoPkljqA9vA
-Runtime-Version: 2.0.2.201511100828
-Save-Time: 8/22/16 3:35 PM
+Runtime-Version: 2.5.2.202109092356
+Save-Time: 12/20/21, 5:35 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -21,7 +21,7 @@ Content-Type: text/ecl
 Entry-Name: .content
 
 get-view "Project Explorer" | get-tree | get-menu "New/Other..." | click
-with [get-window New] {
+with [get-window "Select a wizard"] {
     get-editbox -after [get-label "Wizards:"] | set-text dsl
     get-tree | select "Kitalpha/Architecture description/Viewpoint DSL project" | double-click
 }
