@@ -6,7 +6,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _vOFfUJ2WEeWgmKoQjPKcMA
-Save-Time: 6/16/21 10:39 AM
+Runtime-Version: 2.5.2.202109092356
+Save-Time: 12/21/21, 10:14 AM
 Testcase-Type: ecl
 Verifications: _xe8uEJkJEeW9roo66l64HA,_CfrnoJ2eEeWgmKoQjPKcMA
 
@@ -42,6 +43,7 @@ with [get-window "Accelerator of diagram creation"] {
 with [get-editor "QualityAssessment.diagram.vptext" | get-text-viewer] {
     set-caret-pos 11 27
     key-type "M2+END"
+    key-type BackSpace
     key-type "M1+SPACE"
     type-text PAB
     key-type Down
@@ -49,8 +51,9 @@ with [get-editor "QualityAssessment.diagram.vptext" | get-text-viewer] {
 }
 
 with [get-editor "QualityAssessment.diagram.vptext" | get-text-viewer] {
-    set-caret-pos 14 27
-    select-range 14 25 14 31
+    set-caret-pos 14 25
+    key-type "M2+END"
+    key-type BackSpace
     key-type "M1+SPACE"
     key-type Down
     key-type Enter
