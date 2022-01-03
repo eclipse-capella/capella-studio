@@ -16,3 +16,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
+Export-Package: org.polarsys.capella.cdo.ta.definition
