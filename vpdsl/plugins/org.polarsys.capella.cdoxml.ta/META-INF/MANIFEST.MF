@@ -15,7 +15,8 @@ Require-Bundle: org.eclipse.ui,
  org.polarsys.kitalpha.ad.viewpoint.dsl.generation.core,
  org.polarsys.kitalpha.ad.viewpoint.dsl.as.desc.model,
  org.polarsys.kitalpha.ad.viewpoint.dsl.as.ui.model,
- org.polarsys.capella.cdoxml.ta.genchain
+ org.polarsys.capella.cdoxml.ta.genchain,
+ org.polarsys.capella.extension.genchain
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: org.polarsys.capella.cdoxml.ta
 Bundle-ActivationPolicy: lazy

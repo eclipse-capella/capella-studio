@@ -12,18 +12,18 @@
 package org.polarsys.capella.cdoxml.ta;
 
 import org.polarsys.capella.cdoxml.ta.genchain.CapellaConnectorExtension;
+import org.polarsys.capella.extension.genchain.CapellaCdoGenerationExtension;
 import org.polarsys.capella.ta.definition.CapellaTargetApplication;
 
 import java.util.List;
 import org.eclipse.egf.portfolio.genchain.extension.ExtensionHelper;
-import org.eclipse.egf.portfolio.genchain.cdo.CdoGenerationExtension;
 
 public class CapellaCDOandXMLTargetApplication extends CapellaTargetApplication  {
 
 	@Override
 	public List<ExtensionHelper> getGenerationExtensionHelpers() {
 		List<ExtensionHelper> generationExtensionHelpers = super.getGenerationExtensionHelpers();
-		generationExtensionHelpers.add(new CdoGenerationExtension());
+		generationExtensionHelpers.add(new CapellaCdoGenerationExtension());
 		generationExtensionHelpers.add(new CapellaConnectorExtension());
 		return generationExtensionHelpers;
 	}
