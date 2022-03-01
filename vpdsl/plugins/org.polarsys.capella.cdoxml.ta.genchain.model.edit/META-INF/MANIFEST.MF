@@ -6,7 +6,7 @@ Bundle-Version: 6.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.polarsys.capella.cdoxml.ta.genchain.connectorextension.provider.ConnectorExtensionEditPlugin$Implementation
 Bundle-Vendor: %providerName
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.polarsys.capella.cdoxml.ta.genchain.connectorextension.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.polarsys.capella.cdoxml.ta.genchain.model;visibility:=reexport,
