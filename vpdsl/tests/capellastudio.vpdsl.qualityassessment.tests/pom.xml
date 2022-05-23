@@ -46,6 +46,10 @@
 						<artifactId>org.polarsys.capella.studio.releng.product</artifactId>
 						<version>${project.version}</version>
 					</aut>
+					<testOptions>
+					    <execTimeout>1200</execTimeout>
+					    <testExecTimeout>900</testExecTimeout>
+					</testOptions>
 				</configuration>
 			</plugin>
 		</plugins>
