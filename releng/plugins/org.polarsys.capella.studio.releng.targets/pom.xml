@@ -15,7 +15,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.polarsys.capella</groupId>
-	<artifactId>capellastudio</artifactId>
+	<artifactId>org.polarsys.capella.studio.releng.targets</artifactId>
 	<packaging>eclipse-target-definition</packaging>
 	<parent>
 		<groupId>org.polarsys.capella</groupId>
@@ -36,8 +36,6 @@
 		</license>
 	</licenses>
 	<properties>
-		<platform-name>oxygen</platform-name>
-		<targetPlatform.repository>http://pdulth.github.io/fr.obeo.releng.targetplatform/p2/latest</targetPlatform.repository>
 		<targetPlatform.name>capellastudio.targetplatform</targetPlatform.name>
 		<converterApplication.name>fr.obeo.releng.targetplatform.targetPlatform.converter</converterApplication.name>
 	</properties>
@@ -50,14 +48,14 @@
 				<configuration>
 					<repositories>
 						<repository>
-							<id>${platform-name}</id>
+							<id>targetplatform-tp</id>
 							<layout>p2</layout>
-							<url>http://download.eclipse.org/releases/${platform-name}</url>
+							<url>http://download.eclipse.org/releases/oxygen/201709271000</url>
 						</repository>
 						<repository>
 							<id>targetplatform</id>
 							<layout>p2</layout>
-							<url>${targetPlatform.repository}</url>
+							<url>http://pdulth.github.io/fr.obeo.releng.targetplatform/p2/latest</url>
 						</repository>
 					</repositories> 
 					<!-- Set dependencies to launch the application -->
@@ -73,33 +71,19 @@
 					</dependencies>
 				</configuration>
 				<executions>
-					<!--
 					<execution>
-						<id>generate.capellastudio-nightly.target</id>
-						<phase>validate</phase>
-						<configuration>
-							<applicationsArgs>
-								<args>-application ${converterApplication.name} nightly/${targetPlatform.name}</args>
-							</applicationsArgs>
-						</configuration>
-						<goals>
-							<goal>eclipse-run</goal>
-						</goals>
-					</execution>
-					-->
-					<!--execution>
-						<id>generate.capellastudio.target</id>
+						<id>generate.target</id>
 						<phase>validate</phase>
 						<configuration>
 							<applicationsArgs>
 								<args>-application ${converterApplication.name} ${targetPlatform.name}</args>
 							</applicationsArgs>
+							<executionEnvironment>JavaSE-1.8</executionEnvironment>
 						</configuration>
 						<goals>
 							<goal>eclipse-run</goal>
 						</goals>
 					</execution>
-					-->
 				</executions>
 			</plugin>
 		</plugins>

@@ -11,6 +11,15 @@ pipeline {
 	    JACOCO_EXEC_FILE_PATH = '${WORKSPACE}/jacoco.exec'
 	}
 	stages {
+	
+		stage('Generate Target Platform') {
+	    	steps {        
+	        	script {
+		        	sh 'mvn clean verify -f releng/plugins/org.polarsys.capella.studio.releng.targets/pom.xml'
+	       		}
+	     	}
+	    }
+	    
 		stage('Package & Test Capella Studio') {
 			steps {
 				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
