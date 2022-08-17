@@ -13,10 +13,28 @@ Contributors:
 <toc label="Capella Studio Documentation" topic="html/introduction.html">
  	<topic href="html/introduction.html" label="Introduction">
    </topic>
-  <topic href="html/extension/cdo.html" label="Vewpoint Creation">
-     <topic href="html/extension/cdo.html" label="Generate viewpoints for CDO platforms">
+  <topic href="html/extension/viewpointdevelopment.html" label="Viewpoint Development">
+     <topic href="html/extension/viewpointdevelopment.html#Introduction" label="Introduction">
      </topic>
-     <topic href="html/extension/cdoxml.html" label="Generate viewpoints for CDO platforms and XML metadata">
+     <topic href="html/extension/viewpointdevelopment.html#Development_Environment" label="Development Environment">
+     </topic>
+     <topic href="html/extension/viewpointdevelopment.html#Working_with_a_viewpoint" label="Working with a viewpoint">
+        <topic href="html/extension/viewpointdevelopment.html#Create_a_new_viewpoint" label="Create a new viewpoint">
+        </topic>
+        <topic href="html/extension/viewpointdevelopment.html#Import_existing_viewpoint" label="Import existing viewpoint">
+        </topic>
+        <topic href="html/extension/viewpointdevelopment.html#Viewpoint_description" label="Viewpoint description">
+        </topic>
+        <topic href="html/extension/viewpointdevelopment.html#Generate_viewpoint" label="Generate viewpoint">
+           <topic href="html/extension/cdo.html" label="Generate viewpoints for CDO platforms">
+           </topic>
+           <topic href="html/extension/cdoxml.html" label="Generate viewpoints for CDO platforms and XML metadata">
+           </topic>
+        </topic>
+        <topic href="html/extension/viewpointdevelopment.html#Customizations" label="Customizations">
+        </topic>
+     </topic>
+     <topic href="html/extension/viewpointdevelopment.html#Technical_guidelines" label="Technical guidelines">
      </topic>
   </topic>
    <anchor id="gendocAnchor"/>

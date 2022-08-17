@@ -1,0 +1,139 @@
+
+=Viewpoints development=
+
+==Introduction==
+
+The abstract principles to develop viewpoints are explained in [https://github.com/eclipse/kitalpha/wiki/Viewpoint-development Kitalpha].
+
+Access to the page of the [https://github.com/eclipse/capella-basic-vp/wiki Basic Viewpoints] for existing viewpoint samples.
+
+==Development Environment==
+
+Setting up the development environment is described in the [https://github.com/eclipse/capella/wiki/Development-Environment Capella wiki].
+
+==Working with a viewpoint==
+There is 2 means to start working with a viewpoint in a workspace:
+
+* Creating a new viewpoint
+* Importing a sample viewpoint for inspiration
+
+==Create a new viewpoint==
+
+Open Capella studio and apply the commands: '''File/New…/Project – Viewpoint DSL Project'''
+As target application can select:
+* CDO and XML Metadata for Capella
+* CDO for Capella
+* Capella
+* EMF
+
+[[Image:img/viewpoint-creation.png|900x315px]] 
+
+Set the name, choose Capella. An Eclipse plugin is generated and the following files are present (in model):
+
+[[Image:img/generated-vp-mass.png|227x267px]]
+
+You can check the [https://github.com/eclipse/capella-basic-vp/blob/master/massviewpoint/plugins/org.polarsys.capella.vp.mass.vpdsl/model capella-basic-vp] example.
+
+===Viewpoint Aspects ===
+
+The '''spec.vptext''' is the root file containing the VPDSL information.
+
+===Configuration===
+The '''conf.vptext''' will contain the configuration of the viewpoint. <br>
+Target is the targeted application. This can be Capella, CDO for Capella (targeting for instance Team for Capella), XML (generating additional files).
+
+[[Image:img/conf.vptext.png|368x90px]]
+
+===Data===
+The Data aspect is essential because information of some other aspects (e.g., UI, Diagram) is deducted from the data description.
+
+[[Image:img/mass.data.png|404x267px]]
+
+In this figure, the classes Mass and PartMass have attributes and no association.
+
+====Inheritance====
+
+Inheritance is identified by the key word superClass, such as for PartMass. Mass has no inheritance. Due to the "Capella" Target Application, during the generation of the ecore file (Cf. org.polarsys.capella.vp.mass plugin), a class without superclass inherits from the Capella NamedElement class.
+
+The mechanism of inheritance enables to a have complete inheritance at the viewpoint level, not only from the data but also for the diagrams for instance.
+
+====Extension====
+
+An extension creates extension elements in an extended element. For Basic Mass, PartMass extends (Capella) Part. All the PartMass elements are contained by a Part element
+[[Image:img/extension.png|650x217px]]
+
+===Create a new Aspect===
+To create a new aspect, need to use the '''mass.spec.vptext'''.
+
+{| border="1"
+|-
+| 
+Hit CTRL+Space: choose the new aspect to be created
+<br>
+Modify the name of the aspect file and Finish.
+|}
+
+* UI Aspect
+[[Image:img/mass.spec.vptext-ui.png|900x400px]]
+
+* Diagram Aspect
+[[Image:img/mass.diagram.vptext.png|918x395px]]
+
+
+====User Interface (Property views)====
+The UI contents is empty at the beginning. Populate it by '''CTRL-Space''' and selection of the '''"UI - Generate User Interface for all classes"''' option in the menu.
+<br>
+The generated contents is deduced from the data description. The generation is not incremental. This means that when the Data aspect part evolves, a new generation is produced apart and ignores the previous one.
+<br>
+By CTRL-Mouse on an attribute (e.g. mass.data.Mass.value), it is possible to navigate toward the attribute defined in the Data aspect.
+[[Image:img/mass.ui.png|735x212px]]
+
+====Diagram====
+A diagram is made of three parts: 
+# the diagram extension when a diagram extends an existing one,
+# the mapping of the data onto diagram elements,
+# the actions applicable on the diagram.
+
+[[Image:img/mass.diagram.png|807x180px]]
+
+<br>
+'''Note:''' Even if it is possible to generate a skeleton for diagram tools using VPDSL, the odesign file will be the place to edit and maintain diagram representations.<br>
+See [https://github.com/eclipse/capella/wiki/Tutorials Sirius Tutorials].
+
+==Import existing viewpoint==
+Import the vpdsl project in the Capella Studio workspace.
+
+Open the '''vptext''' file by double-click. If an error occurs, this means that the vptext is not recognized automatically. In this case, on the vptext file, right-click and Open With Data / User Interface / Diagram / Configuration for the data / ui / diagram / conf vptext files.
+
+==Viewpoint description==
+The viewpoint description with Kitalpha is stored in a model (.vpdesc file) and edited with a set of editors dedicated by aspect.
+
+[[Image:img/viewpoint-description.png|788x180px]]
+
+==Generate viewpoint==
+===From vptext===
+Select the file '''conf.vptext''' '''-> Viewpoint DSL -> Generate Viewpoint'''.
+
+[[Image:img/generate-vp.png|875x256px]]
+
+===From fcore===
+Some addons M2 are not generated from a .vptext but directly from an '''.fcore'''.
+<br>
+In this case, open the '''.fcore''', right click on the last FactoryComponent, and select '''"Run EGF Activity..."'''.
+
+===Customizations===
+* [https://github.com/eclipse/capella/wiki/Semantic-Browser Semantic Browser]
+
+==Technical guidelines==
+*See [https://github.com/eclipse/capella/blob/master/doc/plugins/org.polarsys.capella.developer.doc/html/Viewpoint%20Guidelines.mediawiki Viewpoint Guidelines]
+
+*For CDO for Capella, due to #141, the generated code may not be directly compliant with the targeted application. If you inherit from a ModelElement, please ensure that the viewpoint Factory is initializing the id within the constructor, like FilteringFactoryImpl**
+
+
+
+
+
+
+
+
+
