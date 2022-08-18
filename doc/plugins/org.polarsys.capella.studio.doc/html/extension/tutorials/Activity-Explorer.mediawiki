@@ -1,0 +1,13 @@
+=Activity Explorer=
+
+One can define new Pages, Sections or Activites for the Activity Explorer.
+
+[[Image:img/activity-explorer.png|484x233px]]
+
+==Contribute to Activity Explorer==
+
+Contributions to Activity Explorer can be defined using VPDSL.<br>
+
+Contributions to Activity Explorer are defined the .activityexplorer.vptext file of the VPDSL plugin.
+
+More information can be found following the [https://github.com/eclipse/amalgam/wiki/Activity-Explorer Activity Explorer] tutorial and in the [[../help/topic/org.polarsys.capella.studio.doc/html/extension/viewpointdevelopment.html|Viewpoint Development]] section.

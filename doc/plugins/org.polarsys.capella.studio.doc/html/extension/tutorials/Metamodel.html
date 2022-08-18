@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Metamodel</title>
+		<link type="text/css" rel="stylesheet" href="PLUGINS_ROOT/org.polarsys.capella.studio.doc/html/style/style.css"/>
+	</head>
+	<body>
+		<h1 id="metamodel">Metamodel</h1>
+		<h2 id="retrieve-type-of-an-element">Retrieve type of an element</h2>
+		<p>When developping an addon, knowing by heart all metamodels is not relevant, and many of us doesn't know it either.</p>
+		<p>To manipulate or create an element with a simple API, you just need to know its type. 
+			It is often displayed on the top left of Property views when you click on an element.</p>
+		<p>With its type, for instance, a 
+			<code>PhysicalFunction</code>, you will be able to retrieve its sub functions 
+			<code>((PhysicalFunction)function).getOwnedFunctions()</code>.
+		</p>
+		<p>To create a 
+			<code>PhysicalFunction</code>, you will need to know from which metamodel part it is defined. Using 
+			<code>Open Type</code> wizard with 
+			<code>Ctrl+Shift+T</code> and writing the type, you will find its metamodel.
+		</p>
+		<p>For instance, with 
+			<code>PhysicalFunction</code>, you will see org.polarsys.capella.xxx.
+			<strong>pa</strong>.PhysicalFunction, meaning it is coming from 
+			<code>pa</code> metamodel (Physical Architecture)
+		</p>
+		<p>Using 
+			<strong>Pa</strong>Factory, you will have access to 
+			<code>PaFactory.eINSTANCE.createPhysicalFunction()</code> allowing you to create a Physical Function. 
+		</p>
+		<blockquote>
+			<p>To open Open Type wizard, you have to be in Capella Studio, Eclipse development platform or at least within Capella with Java features enabled (see 
+				<a target="_blank" href="https://github.com/eclipse/capella/wiki/Development-Environment">Development Environment</a>)  (Make sure you have the view 
+				<code>Package Explorer</code> active and not the 
+				<code>Project Explorer</code>)
+			</p>
+		</blockquote>
+		<blockquote>
+			<p>Don't forget to add some dependencies to your plugin, at least 
+				<code>org.polarsys.capella.core.model.helpers</code> 
+				<code>org.polarsys.capella.core.model.handler</code> will do the job.
+			</p>
+		</blockquote>
+		<h2 id="metamodels">Metamodels</h2>
+	
+	<div>
+		<table>
+    <tr>
+        <td>Name</td>
+        <td>Package prefix</td>
+        <td>Java ePackage</td>
+        <td>Java eFactory</td>
+    </tr>
+    <tr>
+        <td>Capella Modeller</td>
+        <td>capellamodeller</td>
+        <td>CapellamodellerPackage</td>
+        <td>CapellamodellerFactory</td>
+    </tr>
+    <tr>
+        <td>Capella Core</td>
+        <td>capellacore</td>
+        <td>CapellacorePackage</td>
+        <td>CapellacoreFactory</td>
+    </tr>
+    <tr>
+        <td>Capella Common</td>
+        <td>capellacommon</td>
+        <td>CapellacommonPackage</td>
+        <td>CapellacommonFactory</td>
+    </tr>
+    <tr>
+        <td>Composite Structure</td>
+        <td>cs</td>
+        <td>CsPackage</td>
+        <td>CsFactory</td>
+    </tr>
+    <tr>
+        <td>Operational Analysis</td>
+        <td>oa</td>
+        <td>OaPackage</td>
+        <td>OaFactory</td>
+    </tr>
+    <tr>
+        <td>System Analysis</td>
+        <td>ctx</td>
+        <td>CtxPackage</td>
+        <td>CtxFactory</td>
+    </tr>
+    <tr>
+        <td>Logical Architecture</td>
+        <td>la</td>
+        <td>LaPackage</td>
+        <td>LaFactory</td>
+    </tr>
+    <tr>
+        <td>Physical Architecture</td>
+        <td>pa</td>
+        <td>PaPackage</td>
+        <td>PaFactory</td>
+    </tr>
+    <tr>
+        <td>Deployment</td>
+        <td>deployment</td>
+        <td>DeploymentPackage</td>
+        <td>DeploymentFactory</td>
+    </tr>
+    <tr>
+        <td>EPBS</td>
+        <td>epbs</td>
+        <td>EpbsPackage</td>
+        <td>EpbsFactory</td>
+    </tr>
+    <tr>
+        <td>Functional Analysis</td>
+        <td>fa</td>
+        <td>FaPackage</td>
+        <td>FaFactory</td>
+    </tr>
+    <tr>
+        <td>Shared Model</td>
+        <td>sharedmodel</td>
+        <td>SharedmodelPackage</td>
+        <td>SharedmodelFactory</td>
+    </tr>
+    <tr>
+        <td>Requirement</td>
+        <td>requirement</td>
+        <td>RequirementPackage</td>
+        <td>RequirementFactory</td>
+    </tr>
+    <tr>
+        <td>Interaction</td>
+        <td>interaction</td>
+        <td>InteractionPackage</td>
+        <td>InteractionFactory</td>
+    </tr>
+    <tr>
+        <td>Information</td>
+        <td>information</td>
+        <td>InformationPackage</td>
+        <td>InformationFactory</td>
+    </tr>
+    <tr>
+        <td>Communication</td>
+        <td>communication</td>
+        <td>CommunicationPackage</td>
+        <td>CommunicationFactory</td>
+    </tr>
+    <tr>
+        <td>Data Type</td>
+        <td>datatype</td>
+        <td>DatatypePackage</td>
+        <td>DatatypeFactory</td>
+    </tr>
+    <tr>
+        <td>Data Value</td>
+        <td>datavalue</td>
+        <td>DatavaluePackage</td>
+        <td>DatavalueFactory</td>
+    </tr>
+    <tr>
+        <td>Modelling Core</td>
+        <td>modellingcore</td>
+        <td>ModellingcorePackage</td>
+        <td>ModellingcoreFactory</td>
+    </tr>
+    <tr>
+        <td>Behavior</td>
+        <td>behavior</td>
+        <td>BehaviorPackage</td>
+        <td>BehaviorFactory</td>
+    </tr>
+    <tr>
+        <td>Activity</td>
+        <td>activity</td>
+        <td>ActivityPackage</td>
+        <td>ActivityFactory</td>
+    </tr>
+    <tr>
+        <td>Replicable Elements</td>
+        <td>Re</td>
+        <td>RePackage</td>
+        <td>ReFactory</td>
+    </tr>
+    <tr>
+        <td>Libraries</td>
+        <td>libraries</td>
+        <td>LibrariesPackage</td>
+        <td>LibrariesFactory</td>
+    </tr>
+</table>
+</div>
+
+
+
+		<h2 id="getting-the-metamodel">Getting the Metamodel</h2>
+		<p>Metamodel are defined in ecore files located under plugins ending by *.gen</p>
+		<h2 id="browse">Browse</h2>
+		<p>
+			<a href="https://github.com/eclipse/capella/blob/master/doc/plugins/org.polarsys.capella.ui.doc/html/12.%20Model%20Analysis/12.5.2%20Acceleo%202%20Queries.mediawiki#advanced-queries">Model Analysis documentation</a>
+		</p>
+		<blockquote>
+			<p>One easiest way to retrieve references or attributes is to open the Properties View and go the Expert tab then choose relevant references/attributes for your query </p>
+			<p>
+				<img alt="" border="0" src="img/metamodel-system-analysis.png"/>
+			</p>
+			<p>You just have to write the reference name in a camelCaseFormat to use it with Aql (e.g. Available In States =&gt; availableInStates) or in some case with the corresponding getter function getAvailableInStates</p>
+		</blockquote>
+	</body>
+</html>

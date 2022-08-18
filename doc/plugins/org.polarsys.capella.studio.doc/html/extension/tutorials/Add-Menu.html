@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Add Menu</title>
+		<link type="text/css" rel="stylesheet" href="PLUGINS_ROOT/org.polarsys.capella.studio.doc/html/style/style.css"/>
+	</head>
+	<body>
+		<h1 id="add-menu">Add Menu</h1>
+		<h2 id="extensions-points">Extensions Points</h2>
+		<p>Add some dependencies to your plugins, as 
+			<a href="https://github.com/eclipse/capella/wiki/Create-Addons#how-to-create-an-basic-addon-adding-a-menu" target="_blank">Create Basic Addon</a>
+		</p>
+		<p>
+			<strong>org.eclipse.ui.commands</strong>
+		</p>
+		<pre class="language-java"><code class="language-java">&lt;extension point="org.eclipse.ui.commands"&gt;
+   &lt;command
+         id="org.polarsys.capella.xxxx.command1"
+         defaultHandler="org.polarsys.capella.xxxx.handlers.Command1Handler"
+         name="Command 1"&gt;
+   &lt;/command&gt;
+&lt;/extension&gt;</code></pre>
+		<p>
+			<strong>org.eclipse.ui.menus</strong>
+		</p>
+		<pre class="language-java"><code class="language-java">&lt;extension point="org.eclipse.ui.menu"&gt;
+   &lt;!-- Create an empty --&gt;
+   &lt;menuContribution locationURI="popup:org.eclipse.ui.popup.any?after=additions"&gt;
+      &lt;menu id="org.polarsys.capella.xxxx"
+           label="XXXXXX"&gt;
+           &lt;separator visible="true" name="mainCommands"/&gt;
+      &lt;/menu&gt;
+   &lt;/menuContribution&gt;
+
+   &lt;!-- Add a command to this menu --&gt;
+   &lt;menuContribution locationURI="popup:org.polarsys.capella.xxxx?after=mainCommands"&gt;
+      &lt;command
+            commandId="org.polarsys.capella.xxxx.command1"
+            id="org.polarsys.capella.xxxx.command1"
+            style="push"&gt;
+      &lt;/command&gt;
+   &lt;/menuContribution&gt;
+
+&lt;/extension&gt;</code></pre>
+		<h2 id="command-handler">Command Handler</h2>
+		<p>Create a class for your command in the src folder (with java packages) similar to:</p>
+		<pre class="language-java"><code class="language-java">import java.util.Collection;
+
+import org.eclipse.core.commands.AbstractHandler;
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.ui.handlers.HandlerUtil;
+import org.polarsys.capella.common.ef.command.ICommand;
+import org.polarsys.capella.common.helpers.TransactionHelper;
+import org.polarsys.capella.core.model.handler.helpers.CapellaAdapterHelper;
+import org.polarsys.capella.common.ef.command.AbstractReadWriteCommand;
+import org.polarsys.capella.core.data.ctx.SystemFunction;
+
+public class Command1Handler extends AbstractHandler {
+
+  //Execute command from createCommand on the selected model elements
+  public Object execute(final ExecutionEvent event) throws ExecutionException {
+    IStructuredSelection selection = (IStructuredSelection) HandlerUtil.getCurrentSelection(event);
+    Collection&lt;EObject&gt; semanticElements = CapellaAdapterHelper.resolveSemanticObjects(selection.toList());
+
+    ICommand cmd = createCommand(semanticElements);
+    TransactionHelper.getExecutionManager(semanticElements).execute(cmd);
+    return null;
+  }
+
+  protected ICommand createCommand(Collection&lt;EObject&gt; selection) {
+
+    //Rename the selected System Function
+    return new AbstractReadWriteCommand() {
+
+      @Override
+      public void run() {
+        System.out.println(selection.toString());
+
+        for (EObject object : selection) {
+          if (object instanceof SystemFunction) {
+            ((SystemFunction) object).setName("new name");
+          }
+        }
+      }
+
+    };
+  }
+}</code></pre>
+		<p>Don't forget, this class shall be referenced into the 
+			<code>defaultHandler</code> section of the command in the plugin.xml file (there shall have no warning)
+		</p>
+		<h2 id="fine-menu-tuning">Fine menu tuning</h2>
+		<h3 id="location-of-menu">Location of menu</h3>
+		<p>Now that the menu appears, you can choose to put it somewhere more convenient.</p>
+		<p>In the locationURI of your menu, 
+			<code>locationURI="popup:org.eclipse.ui.popup.any?after=additions"</code>, instead of 
+			<code>additions</code>, you can choose 
+			<code>group.showIn</code> allowing you to add a menu aside 
+			<code>Show in Project Explorer</code>
+		</p>
+		<p>If you want to restrict the menu to a dedicated view, instead of 
+			<code>org.eclipse.ui.popup.any</code>, you can choose 
+			<code>capella.project.explorer#PopupMenu</code>
+		</p>
+		<p>
+			<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.platform.sirius.ui.navigator/plugin.xml#L32" target="_blank">List of insertion points in Project Explorer</a>
+		</p>
+		<p>
+			<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.platform.sirius.ui.menu/plugin.xml#L17" target="_blank">List of insertion points and id of existing views</a>
+		</p>
+		<p>The most important insertion points 
+			<code>group.showIn</code> and 
+			<code>group.sendTo</code> are available on most of views (see above).
+		</p>
+		<p>If you create a new View, you will also be able to display all menus registered under these insertion points by registering them like other views did (
+			<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.platform.sirius.ui.menu/plugin.xml#L72" target="_blank">Semantic Browser</a>).
+		</p>
+		<h3 id="visibility-of-commands">Visibility of commands</h3>
+		<p>In your menu, where you choose to add a command, you can add conditions on command visibility.</p>
+		<pre class="language-java"><code class="language-java">&lt;command commandId="org.polarsys.capella.xxxx.command1" id="org.polarsys.capella.xxxx.command1" style="push"&gt;
+  &lt;visibleWhen checkEnabled="false"&gt;
+           &lt;with variable="activeMenuSelection"&gt;
+              &lt;iterate ifEmpty="false"&gt;
+                 &lt;or&gt;
+                &lt;!-- Enable on Diagram elements --&gt;
+                &lt;instanceof value="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart"&gt;
+                &lt;/instanceof&gt;
+
+                &lt;!-- Enable on Model elements --&gt;
+                &lt;instanceof value="org.eclipse.emf.ecore.EObject"&gt;
+                &lt;/instanceof&gt;
+
+                &lt;!-- Enable on Aird file --&gt;
+                &lt;adapt type="org.eclipse.core.resources.IResource"&gt;
+                          &lt;test property="org.eclipse.core.resources.extension" value="aird" /&gt;
+                      &lt;/adapt&gt;
+            &lt;/or&gt;
+              &lt;/iterate&gt;
+           &lt;/with&gt;
+    &lt;/visibleWhen&gt;
+
+&lt;/command&gt;</code></pre>
+		<h3 id="command-icon">Command icon</h3>
+		<p>You can add an icon on your command</p>
+		<p>
+			<strong>org.eclipse.ui.commandImages</strong>
+		</p>
+		<pre class="language-java"><code class="language-java">&lt;extension point="org.eclipse.ui.commandImages"&gt;
+    
+     &lt;image commandId="org.polarsys.capella.xxxx.command1"
+            icon="icons/full/etool16/add_element.gif"&gt;
+     &lt;/image&gt;
+
+&lt;/extension&gt;</code></pre>
+		<h3 id="command-category">Command category</h3>
+		<p>You can add an category on your command, regrouping all your commands</p>
+		<p>
+			<strong>org.eclipse.ui.commands</strong>
+		</p>
+		<pre class="language-java"><code class="language-java">&lt;extension point="org.eclipse.ui.commands"&gt;
+   &lt;category
+         id="org.polarsys.capella.xxxx.category1"
+         name="Extension commands"&gt;
+   &lt;/category&gt;
+   &lt;command
+         id="org.polarsys.capella.xxxx.command1"
+         categoryId="org.polarsys.capella.xxxx.category1"
+         &lt;!-- ... --&gt;
+         &gt;
+   &lt;/command&gt;
+&lt;/extension&gt;</code></pre>
+	</body>
+</html>

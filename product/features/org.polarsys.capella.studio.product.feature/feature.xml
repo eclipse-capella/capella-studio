@@ -29,6 +29,10 @@
       %license
    </license>
 
+	<includes
+         id="org.polarsys.capella.studio.doc.feature"
+    version="0.0.0"/>
+
    <requires>
       <import feature="org.polarsys.kitalpha.sdk.feature" />
    </requires>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Migration</title>
+		<link type="text/css" rel="stylesheet" href="PLUGINS_ROOT/org.polarsys.capella.studio.doc/html/style/style.css"/>
+	</head>
+	<body>
+		<h1 id="migration">Migration</h1>
+		<p>Capella offers a migration mechanism. This migration is available through a contextual menu command and is launched between version.</p>
+		<p>Specific migration contributions can be contributed through an extension point.</p>
+		<p>The extension points provide two possibilities 
+			<code>migrationContributions</code> and 
+			<code>migrationContributors</code>:
+		</p>
+		<ul>
+			<li>the plug-in org.polarsys.capella.core.data.migration</li>
+			<li>and its identifier constraintProviders.</li>
+		</ul>
+		<p>The contribution to the extension point is done in the plugin.xml file of the plugin. Open this file and focus on the plugin.xml tab:</p>
+		<h2 id="migrationcontributions">Migration Contributions</h2>
+		<p>This allows to contribute to the migration of the common files 
+			<code>.capella</code>, 
+			<code>.aird</code>, and all migrated files.
+		</p>
+		<pre class="language-xml"><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?eclipse version="3.2"?&gt;
+&lt;plugin&gt;
+   &lt;extension
+         point="org.polarsys.capella.core.data.migration.migrationContributions"&gt;
+      &lt;migrationContribution
+            class="xxx"&gt;
+      &lt;/migrationContribution&gt;
+   &lt;/extension&gt;
+&lt;/plugin&gt;</code></pre>
+		<h3 id="detail-of-the-different-fields">Detail of the different fields</h3>
+		<ul>
+			<li>
+				<code>class</code>: 
+				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.migration/src/org/polarsys/capella/core/data/migration/contribution/IMigrationContribution.java">org.polarsys.capella.core.data.migration.contribution.IMigrationContribution</a>
+			</li>
+		</ul>
+		<h2 id="migrationcontributors">MigrationContributors</h2>
+		<p>This allows to contribute to the migration of additional files while the migration process.</p>
+		<pre class="language-xml"><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?eclipse version="3.2"?&gt;
+&lt;plugin&gt;
+   &lt;extension
+         point="org.polarsys.capella.core.data.migration.migrationContributors"&gt;
+      &lt;migrationContributor
+            class="xxx"&gt;
+      &lt;/migrationContributor&gt;</code></pre>
+		<h3 id="detail-of-the-different-fields2">Detail of the different fields</h3>
+		<ul>
+			<li>
+				<code>class</code>: 
+				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.migration/src/org/polarsys/capella/core/data/migration/contributor/AbstractMigrationContributor.java">org.polarsys.capella.core.data.migration.contributor.AbstractMigrationContributor</a>
+			</li>
+		</ul>
+		<h2 id="migration-contribution">Migration contribution</h2>
+		<p>In the major cases, you will contribute to the exiting Capella migration by adding a Migration Contribution.</p>
+		<h2 id="sample">Sample</h2>
+		<p>The addon filtering had contributed to migration</p>
+		<ul>
+			<li>The 
+				<a target="_blank" href="https://github.com/eclipse/capella-filtering/blob/v1.5.2/plugins/org.polarsys.capella.filtering.migration/src/org/polarsys/capella/filtering/migration/contribution/FilteringMigrationContribution.java#L28-L32">Java class</a> defining the contribution. In this case, it says that when we migrate a model refering to the previous version of Filtering, we retrieve the current one. (This has for effect to allow upgrade of nsUri of the Filtering viewpoint)
+			</li>
+			<li>Its registration within 
+				<a target="_blank" href="https://github.com/eclipse/capella-filtering/blob/v1.5.0/plugins/org.polarsys.capella.filtering.migration/plugin.xml#L19-L21">plugin.xml</a>
+			</li>
+			<li>In 
+				<a target="_blank" href="https://github.com/eclipse/capella-filtering/blob/v1.5.0/plugins/org.polarsys.capella.filtering.migration/META-INF/MANIFEST.MF#L11">MANIFEST/MANIFEST.MF</a> file we need to depends on 
+				<code>org.polarsys.capella.core.data.migration</code>
+			</li>
+		</ul>
+	</body>
+</html>

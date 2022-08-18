@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Project Explorer Filters</title>
+		<link type="text/css" rel="stylesheet" href="PLUGINS_ROOT/org.polarsys.capella.studio.doc/html/style/style.css"/>
+	</head>
+	<body>
+		<h1 id="Project_Explorer_Filters">Project Explorer Filters</h1>
+		<p>When defining new kind of model elements, those new elements will be by default displayed in the Capella Project Explorer.</p>
+		<p>Capella includes a default mechanism of filter on the Project Explorer in order to avoid unnecessary complexity for users.</p>
+		<p>
+			<img height="536" width="460" border="0" src="img/filters-customization.png"/>
+		</p>
+		<h3 id="Contribute_to_Capella_Project_Explorer_filters">Contribute to Capella Project Explorer filters</h3>
+		<p>One can define contributions to Capella Project Explorer filter mechanism by creating a plugin which contributes to the following extension points:</p>
+		<ul>
+			<li>org.eclipse.ui.navigator.navigatorContent</li>
+			<li>org.eclipse.ui.navigator.viewer</li>
+		</ul>
+		<ol>
+			<li>The first extension point defines the new filters to be applied. It allows to define if the filter is applied by default and if it is visible in the filter view. </li>
+		</ol>
+		<p>
+			<br/>The filter is defined by referring to the Java class implementing the type of model element:
+		</p>
+		<p>
+			<img height="155" width="1032" border="0" src="img/filters-ep1.png"/>
+		</p>
+		<ol>
+			<li>The second extension point is used to map the filters previously defined to the Capella Project Explorer:</li>
+		</ol>
+		<p>
+			<img height="155" width="1032" border="0" src="img/filters-ep2.png"/>
+		</p>
+	</body>
+</html>

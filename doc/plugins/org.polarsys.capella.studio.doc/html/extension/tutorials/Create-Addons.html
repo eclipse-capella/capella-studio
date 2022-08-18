@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Create Addons</title>
+		<link type="text/css" rel="stylesheet" href="PLUGINS_ROOT/org.polarsys.capella.studio.doc/html/style/style.css"/>
+	</head>
+	<body>
+		<h1 id="create-addons">Create Addons</h1>
+		<h2 id="development-platform">Development Platform</h2>
+		<p>See 
+			<a href="https://github.com/eclipse/capella/wiki/Development-Environment" target="_blank">Development Environment</a> to use an IDE for development.
+		</p>
+		<h2 id="how-to-create-an-basic-addon-adding-a-menu">How to create an basic addon adding a menu</h2>
+		<ul>
+			<li>Do 
+				<code>File</code> &gt; 
+				<code>New</code> &gt; 
+				<code>Others</code> &gt; 
+				<code>Plugin Project</code>, then follow the wizard. Give a name 
+				<code>org.polarsys.capella.addonXX</code> for instance.
+				(There is some templates on the last page, but you can click on Finish after the second page).
+			</li>
+			<li>In the opened editor, (this editor can opened again if you double click on Manifest.mf file)</li>
+			<li>in Dependencies, add for instance 
+				<code>org.eclipse.ui</code> 
+				<code>org.polarsys.capella.core.model.helpers</code> 
+				<code>org.polarsys.capella.core.model.handler</code>
+			</li>
+			<li>in Extensions, click Add, and untick 
+				<code>show only extensions point from requiring plugin</code>
+			</li>
+			<ul>
+				<li>add 
+					<code>org.eclipse.ui.commands</code>, 
+					<code>org.eclipse.ui.menus</code> (when eclipse ask you to add them as dependencies, answer Yes)
+				</li>
+			</ul>
+			<li>if you go to 
+				<code>plugin.xml</code> tab, you will see similar xml sections like in 
+				<a href="https://github.com/eclipse/capella/wiki/Add-Menu">Add a Menu todo</a>
+			</li>
+			<li>based on these extensions points, you will create a command, a menu containing the command, then a handler, which is java code done when user click the command.</li>
+			<ul>
+				<li>The 
+					<code>Command1Handler</code> in the sample sets the name of a System Function. In this class, you can manipulate capella model elements as you want. (see 
+					<a href="https://github.com/eclipse/capella/wiki/Add-Menu#command-handler">command-handler todo</a> and API 
+					<a href="https://github.com/eclipse/capella/wiki/Edit">Edit an Element todo</a>)
+				</li>
+			</ul>
+		</ul>
+		<h2 id="test-you-addon-in-capella-as-debug">Test you addon in Capella as Debug</h2>
+		<p>In the 
+			<code>Run</code> menu, 
+			<code>Debug Configuration</code>, double click on 
+			<code>Eclipse Application</code>. Ensure that 
+			<code>org.polarsys.capella.rcp.product</code> is selected in 
+			<code>Product to Run</code> in the right pane, then 
+			<code>Debug</code> it will launch a Capella in debug mode, with you new menu in it. If you click on an element of your model in the 
+			<code>Project Explorer</code> then menu shall appear.
+		</p>
+		<h2 id="export-as-deployable-plugin">Export as deployable plugin</h2>
+		<ul>
+			<li>If you want to deploy your plugin, use 
+				<code>File &gt; Export &gt; Plugin Development &gt; Deployable plug-ins and fragments</code> to export it as a jar.
+			</li>
+		</ul>
+		<blockquote>
+			<p>Note 
+				<code>File &gt; Export &gt; Java &gt; JAR</code> will not export it as a valid plugin.
+			</p>
+		</blockquote>
+		<h2 id="deploy-an-addon">Deploy an addon</h2>
+		<p>If you have several plugins, you can export the whole content by creating a 
+			<code>Feature</code>.
+		</p>
+		<ul>
+			<li>Create a new 
+				<code>Feature Project</code>.
+			</li>
+			<li>In the 
+				<code>Included Plugins</code>, add the one you created
+			</li>
+			<li>In the 
+				<code>Overview</code> tab, you can click on 
+				<code>Exporting</code> &gt; 
+				<code>Export Wizard</code>.
+			</li>
+			<li>In the output folder, you will have all the files necessary.</li>
+			<li>Embed the files in a Addon/eclipse/ folder, and your users will be able to install it in a dropin folder of capella, like any other addons.</li>
+		</ul>
+		<h2 id="automatic-deployment">Automatic deployment</h2>
+		<p>Of course, this is a first step, then you will have to create some automatic packaging, automatic tests, using Jenkins for instance</p>
+		<p>You can inspire from existing addons to see how it can be done :</p>
+		<p>
+			<strong>Existing addons</strong>
+		</p>
+		<ul>
+			<li>https://github.com/eclipse/capella-sss-transition</li>
+			<li>https://github.com/eclipse/capella-filtering</li>
+			<li>https://github.com/eclipse/capella-requirements-vp</li>
+		</ul>
+	</body>
+</html>

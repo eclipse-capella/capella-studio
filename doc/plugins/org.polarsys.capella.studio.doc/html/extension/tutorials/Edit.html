@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Edit</title>
+		<link type="text/css" rel="stylesheet" href="PLUGINS_ROOT/org.polarsys.capella.studio.doc/html/style/style.css"/>
+	</head>
+	<body>
+		<h1 id="edit">Edit</h1>
+		<h2 id="access-to-session-executionmanager-editingdomain">Access to Session/ExecutionManager/EditingDomain</h2>
+		<p>When we open an aird (doucle click on it),</p>
+		<p>A 
+			<code>Session</code> is created containing a 
+			<code>TransactionalEditingDomain</code> which contains a 
+			<code>ResourceSet</code> containing all 
+			<code>Resource(s)</code> loaded, containing all EObjects. It is editable through a 
+			<code>ExecutionManager</code>.
+		</p>
+		<ul>
+			<li>
+				<code>EObject</code> is the EMF element (Function, Component, graphical element, etc)
+			</li>
+			<li>
+				<code>Resource</code> is the EMF representation of the XML files (aird, melodymodeller) containing all EObject
+			</li>
+			<li>
+				<code>ResourceSet</code> is the list of all Resources loaded (melodymodeller, aird, odesign, etc)
+			</li>
+			<li>
+				<code>TransactionalEditingDomain</code> allows to access element/model/diagrams in a Thread-safe environnement. All modifications in Capella are done within it.
+			</li>
+			<li>
+				<code>ExecutionManager</code> is the API main access to be able to edit an element.
+			</li>
+			<li>
+				<code>Session</code> is the API main access to Diagrams
+			</li>
+		</ul>
+		<h2 id="session">Session</h2>
+		<p>
+			<a target="_blank" href="http://git.eclipse.org/c/sirius/org.eclipse.sirius.git/tree/plugins/org.eclipse.sirius/src/org/eclipse/sirius/business/api/session/Session.java">Session</a>
+		</p>
+		<p>
+			<a target="_blank" href="http://git.eclipse.org/c/sirius/org.eclipse.sirius.git/tree/plugins/org.eclipse.sirius/src/org/eclipse/sirius/business/api/session/SessionManager.java">SessionManager</a>
+		</p>
+		<p>
+			<a target="_blank" href="http://git.eclipse.org/c/sirius/org.eclipse.sirius.git/tree/plugins/org.eclipse.sirius/src/org/eclipse/sirius/business/api/dialect/DialectManager.java">DialectManager</a>
+		</p>
+		<p>
+			<a target="_blank" href="http://git.eclipse.org/c/sirius/org.eclipse.sirius.git/tree/plugins/org.eclipse.sirius/src/org/eclipse/sirius/business/api/query">org.eclipse.sirius.business.api.query</a>
+		</p>
+		<p>
+			<a target="_blank" href="http://git.eclipse.org/c/sirius/org.eclipse.sirius.git/tree/plugins/org.eclipse.sirius.diagram/src-gen/org/eclipse/sirius/diagram">org.eclipse.sirius.diagram</a>
+		</p>
+		<p>
+			<a target="_blank" href="https://git.eclipse.org/c/sirius/org.eclipse.sirius.git/tree/plugins/org.eclipse.sirius.diagram/src-core/org/eclipse/sirius/diagram/business/api/query">org.eclipse.sirius.diagram.business.api.query</a>
+		</p>
+		<pre class="language-java"><code class="language-java">Session session = SessionManager.INSTANCE.getSession(EObject object);
+Session session = SessionManager.INSTANCE.getExistingSession(EcoreUtil2.getURI(airdFile));
+TransactionalEditingDomain domain = session.getTransactionalEditingDomain();</code></pre>
+		<h2 id="transactionaleditingdomain">TransactionalEditingDomain</h2>
+		<p>
+			<a target="_blank" href="https://git.eclipse.org/c/emf-transaction/org.eclipse.emf.transaction.git/tree/org.eclipse.emf.transaction/src/org/eclipse/emf/transaction/TransactionalEditingDomain.java">TransactionalEditingDomain</a>
+		</p>
+		<p>
+			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/TransactionHelper.java">TransactionHelper</a>
+		</p>
+		<pre class="language-java"><code class="language-java">TransactionalEditingDomain domain = TransactionHelper.getEditingDomain(element)
+TransactionalEditingDomain domain = TransactionHelper.getEditingDomain(resource)</code></pre>
+		<p>
+			<a target="_blank" href="http://git.eclipse.org/c/emf-transaction/org.eclipse.emf.transaction.git/tree/org.eclipse.emf.transaction/src/org/eclipse/emf/transaction/util/TransactionUtil.java">TransactionUtil</a>
+		</p>
+		<p>
+			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/EObjectExt.java">EObjectExt</a>
+		</p>
+		<pre class="language-java"><code class="language-java">Collection&lt;EObject&gt; subComponents = EObjectExt.getAll(element, CsPackage.Literals.COMPONENT)</code></pre>
+		<h2 id="executionmanager">ExecutionManager</h2>
+		<p>
+			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.ef/src/org/polarsys/capella/common/ef/ExecutionManager.java">ExecutionManager</a>
+		</p>
+		<p>
+			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/TransactionHelper.java">TransactionHelper</a>
+		</p>
+		<p>
+			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.ef/src/org/polarsys/capella/common/ef/command/AbstractReadWriteCommand.java">AbstractReadWriteCommand</a>
+		</p>
+		<pre class="language-java"><code class="language-java">ExecutionManager manager = TransactionHelper.getExecutionManager(element)
+ExecutionManager manager = TransactionHelper.getExecutionManager(resource)</code></pre>
+		<p>Create a new TransactionalEditingDomain for Capella models:</p>
+		<pre class="language-java"><code class="language-java">ExecutionManager manager = ExecutionManagerRegistry.getInstance().addNewManager();
+TransactionalEditingDomain domain = manager.getEditingDomain();</code></pre>
+		<h2 id="ifile-resource">IFile/Resource</h2>
+		<p>
+			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common/src/org/polarsys/capella/common/helpers/EcoreUtil2.java">EcoreUtil2</a>
+		</p>
+		<pre class="language-java"><code class="language-java">EcoreUtil2.getFile(Resource)
+EcoreUtil2.getURI(file)</code></pre>
+		<pre class="language-java"><code class="language-java">element.eResource()</code></pre>
+		<p>
+			<a target="_blank" href="https://git.eclipse.org/c/platform/eclipse.platform.resources.git/tree/bundles/org.eclipse.core.resources/src/org/eclipse/core/resources/ResourcesPlugin.java">ResourcesPlugin</a>
+		</p>
+		<pre class="language-java"><code class="language-java">ResourcesPlugin.getWorkspace().getRoot().getProject("project").getFile("toto.melodymodeller");</code></pre>
+		<h2 id="helpers">Helpers</h2>
+		<p>Many helpers exist in Capella, they are mainly located inside following plugins and have *Ext name</p>
+		<p>
+			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.helpers">org.polarsys.capella.core.data.helpers</a>
+		</p>
+		<p>
+			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.model.helpers">org.polarsys.capella.core.model.helpers</a>
+		</p>
+		<p>
+			<code>CapellaElementExt.creationService(x)</code> Helps to create additional elements like if it was created from Add Element menu. (for instance, the Part aside the Component, or min/max cardinalities on a Property)
+		</p>
+		<p>For instance</p>
+		<p>
+			<code>FunctionExt, FunctionalExchangeExt, ComponentExt</code>
+		</p>
+		<p>All capella elements have derived methods allowing direct access to other interesting elements. For instance, for an actor, actor.getAllocatedFunctions() retrieve the list of the allocated functions). These methods are computed in :</p>
+		<pre><code>org.polarsys.capella.core.data.helpers
+org.polarsys.capella.core.data.helpers.*.delegates.**Helper</code></pre>
+		<p>It can be interesting to see how these methods are computed to understand how a reference between two element is stocked in the model. </p>
+		<h2 id="access-all-diagrams">Access all diagrams</h2>
+		<pre class="language-java"><code class="language-java">IFile airdFile = ...
+Session session = SessionManager.INSTANCE.getExistingSession(EcoreUtil2.getURI(airdFile));
+for (DRepresentationDescriptor descriptor :  DialectManager.INSTANCE.getAllRepresentationDescriptors(session)) {
+   descriptor.getRepresentation(); //will return the diagram
+   descriptor.getTarget()); //will return the element owning the diagram (for instance, the PhysicalComponent in a PAB diagram)
+}</code></pre>
+		<h2 id="access-all-graphical-elements-in-a-diagram">Access all graphical elements in a diagram</h2>
+		<pre class="language-java"><code class="language-java">DDiagram diagram = (DDiagram)descriptor.getRepresentation(); //warning! directCast but there may have also DTable, DTree..
+for (DDiagramElement element: diagram.getDiagramElements()) { //for all main elements in diagram
+   System.out.println(element); //here we have the graphical element
+
+   if (element instanceof DEdge) {
+     DEdge edge = (DEdge)element;
+     edge.getSourceNode()
+     edge.getTargetNode()
+     edge.getStyle()
+
+   } else if (element instanceof DNodeContainer, DNode, DNodeList) {
+     ((DNodeContainer/DNode/DNodeList)element).getOwnedBorderedNodes()
+     ((DNodeContainer/DNode/DNodeList)element).getStyle()
+
+     Node a = SiriusGMFHelper.getGmfNode(element); //here we have the GMF graphical element
+     System.out.println("located: "+a.getLayoutConstraint()); //display the location of the element
+   }
+
+}</code></pre>
+		<h2 id="edit-an-element">Edit an element</h2>
+		<p>All editions in Capella is made through an TransactionalEditingDomain that guarantee a Thread-safe environnement. Any modification on model, diagram must be done through a command, like :</p>
+		<pre class="language-java"><code class="language-java">EObject element = ...
+ExecutionManager manager = TransactionHelper.getExecutionManager(element).execute(new AbstractReadWriteCommand() {
+            
+  @Override
+  public void run() {
+    if (element instanceof PhysicalComponent) {
+      PhysicalComponent pc = (PhysicalComponent)element;
+      pc.setName("toto");
+      CapellaElementExt.creationService(pc); //to create the related part
+    }
+  }
+});</code></pre>
+		<h2 id="create-an-element">Create an element</h2>
+		<p>To create an element, you need to know its type (for instance by looking at the properties view) and know from which metamodel it comes from. 
+			<a target="_blank" href="https://github.com/eclipse/capella/wiki/Metamodel">See Metamodel Tutorial</a>
+		</p>
+		<pre class="language-java"><code class="language-java">EObject element = ... //an element from physical layer
+ExecutionManager manager = TransactionHelper.getExecutionManager(element).execute(new AbstractReadWriteCommand() {
+            
+  @Override
+  public void run() {
+    BlockArchitecture physicalArchitecture = BlockArchitectureExt.getRootBlockArchitexture(element);
+    PhysicalFunction pf = (PhysicalFunction)BlockArchitectureExt.getRootFunction(physicalArchitecture);
+
+    PhysicalFunction myNewFunc = PaFactory.eINSTANCE.createPhysicalFunction("new function");
+    pf.getOwnedPhysicalFunctions().add(myNewFunc);
+
+  }
+});</code></pre>
+		<h2 id="emf-api-generic-access">EMF API (Generic access)</h2>
+		<p>
+			<a target="_blank" href="https://git.eclipse.org/c/emf/org.eclipse.emf.git/tree/plugins/org.eclipse.emf.ecore/src/org/eclipse/emf/ecore/EObject.java">EObject</a>
+		</p>
+		<p>
+			<a target="_blank" href="https://git.eclipse.org/c/emf/org.eclipse.emf.git/tree/plugins/org.eclipse.emf.ecore/src/org/eclipse/emf/ecore/EClass.java">EClass</a>
+		</p>
+		<p>
+			<a target="_blank" href="https://git.eclipse.org/c/emf/org.eclipse.emf.git/tree/plugins/org.eclipse.emf.ecore/src/org/eclipse/emf/ecore/EStructuralFeature.java">EStructuralFeature</a>
+		</p>
+		<p>
+			<a target="_blank" href="https://git.eclipse.org/c/emf/org.eclipse.emf.git/tree/plugins/org.eclipse.emf.ecore/src/org/eclipse/emf/ecore/resource/Resource.java">Resource</a>
+		</p>
+		<p>
+			<a target="_blank" href="https://git.eclipse.org/c/emf/org.eclipse.emf.git/tree/plugins/org.eclipse.emf.ecore/src/org/eclipse/emf/ecore/resource/ResourceSet.java">ResourceSet</a>
+		</p>
+		<pre class="language-java"><code class="language-java">EObject object = ...
+
+element.eResource()
+
+object.eContents() //returns all direct children of the element
+
+object.eAllContents() //returns all children recursively
+
+object.eClass() //returns the Metaclass of the given element
+
+object.eClass().getAllReferences() //returns the Metaclass references of the given element
+
+object.eClass().getAllAttributes() //returns the Metaclass references of the given element
+
+object.eGet(object.eClass().getEStructuralFeature("name")) // returns the name of the element
+
+//BUT, if you know the metaclass, it's faster to use getName() method. ((PhysicalFunction)object.getName()) for instance
+
+object.eSet(object.eClass().getEStructuralFeature("name"), "newName") //set the name of the element
+
+((EList)object.eGet(object.eClass().getEStructuralFeature("ownedElements"))).add(element) //add element to object.ownedElements 
+</code></pre>
+	</body>
+</html>

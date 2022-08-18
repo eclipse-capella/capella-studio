@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Quick Fixesr</title>
+		<link type="text/css" rel="stylesheet" href="PLUGINS_ROOT/org.polarsys.capella.studio.doc/html/style/style.css"/>
+	</head>
+	<body>
+		<h1 id="quickfixes">Quickfixes</h1>
+		<p>Capella offers a quickfix functionality. This functionality helps users to resolve some problems thrown by model validation warnings or errors. The quickfixes are available through a contextual menu command on a selected message (in the view Information) that provides one, or several, resolution proposals. The set of resolution proposals can be extended with additional specific quickfixes that can be contributed through an extension point. </p>
+		<p> The extension point is provided by:</p>
+		<ul>
+			<li>org.polarsys.capella.core.validation.ui.ide</li>
+			<li>and its identifier is capellaQuickFix</li>
+		</ul>
+		<p>The contribution to the extension point is done in the plugin.xml file of the plugin. Open this file and focus on the plugin.xml tab:</p>
+		<pre class="language-xml"><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?eclipse version="3.4"?&gt;
+&lt;plugin&gt;
+   &lt;extension point="org.polarsys.capella.core.validation.ui.ide.capellaQuickFix"&gt;
+      &lt;resolver
+            class=""
+            desc=""
+            icon=""
+            label=""&gt;
+         &lt;rules ruleId=""/&gt;
+      &lt;/resolver&gt;
+   &lt;/extension&gt;
+&lt;/plugin&gt;</code></pre>
+		<h2 id="detail-of-the-different-fields">Detail of the different fields</h2>
+		<ul>
+			<li>
+				<code>class</code>: the resolver class (generated, see below for more details)
+			</li>
+			<li>
+				<code>icon</code>: path to the icon to override the default one
+			</li>
+			<li>
+				<code>label</code>: a short name for the quickfix
+			</li>
+			<li>
+				<code>ruleId</code>: the identifier of the rule the quickfix is related to 
+			</li>
+		</ul>
+		<h2 id="quickfix-implementation">Quickfix implementation</h2>
+		<p>The 
+			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.validation.ui.ide/src/org/polarsys/capella/core/validation/ui/ide/quickfix/AbstractCapellaMarkerResolution.java">AbstractCapellaMarkerResolution</a> class provides some facilities to manage messages.
+		</p>
+		<h2 id="sample">Sample</h2>
+		<p>The quickfix for the rule 
+			<code>DWF_D_41</code> set the given Class as Abstract
+		</p>
+		<ul>
+			<li>The 
+				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.information.ui.quickfix/src/org/polarsys/capella/core/data/information/ui/quickfix/resolver/DWFD41Resolver.java">Java class</a> defining the quickfix
+			</li>
+			<li>Its registration within 
+				<a target="_blank" href="https://github.com/eclipse/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.data.information.ui.quickfix/plugin.xml#L146">plugin.xml</a>
+			</li>
+			<li>In 
+				<a target="_blank" href="https://github.com/eclipse/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.data.information.ui.quickfix/META-INF/MANIFEST.MF#L13">MANIFEST/MANIFEST.MF</a> file we need to depends on 
+				<code>org.polarsys.capella.core.validation.ui.ide</code>
+			</li>
+		</ul>
+	</body>
+</html>
