@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Semantic Browser</title>
+		<link type="text/css" rel="stylesheet" href="PLUGINS_ROOT/org.polarsys.capella.studio.doc/html/style/style.css"/>
+	</head>
+	<body>
+		<h1 id="semantic-browser">Semantic Browser</h1>
+		<p>By providing queries on Semantic Browser, these queries will be also available as a column on 
+			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/doc/plugins/org.polarsys.capella.common.ui.massactions.doc/html/Introduction.mediawiki">Mass Visualization table</a> or accessible in Title Block.
+		</p>
+		<p>The extension point is provided by:</p>
+		<ul>
+			<li>the plug-in org.polarsys.capella.common.ui.toolkit.browser</li>
+			<li>and its identifier contentProviderCategory.</li>
+		</ul>
+		<p>The contribution to the extension point is done in the plugin.xml file of the plugin. Open this file and focus on the plugin.xml tab:</p>
+		<pre class="language-xml"><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?eclipse version="3.4"?&gt;
+
+&lt;extension
+         point="org.polarsys.capella.common.ui.toolkit.browser.contentProviderCategory"&gt;
+  &lt;category
+      id="org.polarsys.capella.core.semantic.queries.SystemFunctionInvolvingCapabilities"
+      isTopLevel="true"
+      name="Involving Capabilities"&gt;
+      &lt;availableForType
+         class="org.polarsys.capella.core.data.ctx.SystemFunction"&gt;
+      &lt;/availableForType&gt;
+      &lt;targetBrowserId
+         id="ReferencingElementBrowser"&gt;
+      &lt;/targetBrowserId&gt;
+      &lt;categoryQuery&gt;
+      &lt;basicQuery class="org.polarsys.capella.core.semantic.queries.basic.queries.SystemFunctionInvolvingCapabilities"&gt;
+      &lt;/basicQuery&gt;
+      &lt;/categoryQuery&gt;
+
+      &lt;!-- optional --&gt;
+      &lt;itemQueries&gt;
+         &lt;basicQuery class="org.polarsys.capella.core.semantic.queries.basic.queries.ExchangesItemExchangeItemElements"&gt;
+         &lt;/basicQuery&gt;
+      &lt;/itemQueries&gt;
+  &lt;/category&gt;
+&lt;/extension&gt;</code></pre>
+		<h2 id="detail-of-the-different-fields">Detail of the different fields</h2>
+		<ul>
+			<li>
+				<code>availableForType: class</code>: an EClass class on which the query will be applied
+			</li>
+			<li>
+				<code>targetBrowserId</code>: one of 
+				<code>ReferencingElementBrowser</code> - 
+				<code>CurrentElementBrowser</code> - 
+				<code>ReferencedElementBrowser</code> 
+			</li>
+			<li>
+				<code>basicQuery: class</code>: a java class inheriting of 
+				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/query/IQuery.java">org.polarsys.capella.common.helpers.query.IQuery</a>
+			</li>
+			<li>
+				<code>itemQueries.basicQuery: class</code>: a sub query applied on all retrieved elements. For intance, for a Function, you can retrieve the outgoing exchanges, and displaying for them their target functions.
+			</li>
+		</ul>
+		<h2 id="sample">Sample</h2>
+		<p>For a Functional Exchange, we display its allocated Exchange Items and their data. </p>
+		<ul>
+			<li>The 
+				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.semantic.queries/src/org/polarsys/capella/core/semantic/queries/basic/queries/FunctionalExchangeExchangesItems.java">Java class</a> retrieving the Exchange Items
+			</li>
+			<li>The secondary 
+				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.semantic.queries/src/org/polarsys/capella/core/semantic/queries/basic/queries/ExchangesItemExchangeItemElements.java">Java class</a> retrieving the Exchange Items Elements for Exchange Items
+			</li>
+			<li>Its registration within 
+				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.semantic.queries/plugin.xml#L1351">plugin.xml</a>
+			</li>
+			<li>In 
+				<a target="_blank" href="https://github.com/eclipse/capella/blob/6ef8e899f3503c655a1c528a2d33442dc722e90d/core/plugins/org.polarsys.capella.core.semantic.queries/META-INF/MANIFEST.MF#L9">MANIFEST/MANIFEST.MF</a> file we need to depend on 
+				<code>org.polarsys.capella.core.model.helpers</code> 
+			</li>
+		</ul>
+	</body>
+</html>

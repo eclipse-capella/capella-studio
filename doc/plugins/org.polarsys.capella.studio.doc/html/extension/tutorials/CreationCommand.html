@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Creation Command</title>
+		<link type="text/css" rel="stylesheet" href="PLUGINS_ROOT/org.polarsys.capella.studio.doc/html/style/style.css"/>
+	</head>
+	<body>
+		<h1 id="creation-command">Creation command</h1>
+		<h2 id="creation-of-elements-contribution">Creation of elements contribution</h2>
+		<p>It is possible to extends default creation of objects (to create another elements while creating one, to rename a newly created element or other.)</p>
+		<ul>
+			<li>Creation tools: covered by this extension point -- Diagram Palette -- Add Element in project explorer -- Programatic calls such as modeling accelerators (i think of 'generation of component exchanges')</li>
+			<li>Other programmatic calls: (calling only the generic "constructor" of a model element) are not covered by this extension point -- Copy paste of an element -- Transitions, Patterns, REC/RPL -- other transformation mechanism</li>
+		</ul>
+		<p>The extension point is provided by:</p>
+		<ul>
+			<li>the plug-in org.polarsys.capella.common.menu.dynamic</li>
+			<li>and its identifier MDEMenuItemContribution.</li>
+		</ul>
+		<p>The contribution to the extension point is done in the plugin.xml file of the plugin. Open this file and focus on the plugin.xml tab:</p>
+		<pre class="language-xml"><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?eclipse version="3.4"?&gt;
+&lt;extension point="org.polarsys.capella.common.menu.dynamic.MDEMenuItemContribution"&gt;
+  &lt;MDEMenuItemContribution
+            class=""
+            id=""&gt;
+  &lt;/MDEMenuItemContribution&gt;
+&lt;/extension&gt;</code></pre>
+		<h3 id="detail-of-the-different-fields">Detail of the different fields</h3>
+		<ul>
+			<li>
+				<code>class</code>: a java class inheriting of 
+				<a href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.menu.dynamic/src/org/polarsys/capella/common/menu/dynamic/contributions/IMDEMenuItemContribution.java" target="_blank">org.polarsys.capella.common.menu.dynamic.contributions.IMDEMenuItemContribution</a>
+			</li>
+			<li>
+				<code>id</code>: an unique identifier for the contribution
+			</li>
+		</ul>
+		<h2 id="sample">Sample</h2>
+		<p>When creating a State Machine, we create an inner Region</p>
+		<ul>
+			<li>The 
+				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.menu.contributions/src/org/polarsys/capella/core/data/menu/contributions/capellacommon/StateMachineItemContribution.java" target="_blank">Java class</a> defining the contribution
+			</li>
+			<li>Its registration within 
+				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.menu.contributions/plugin.xml#L361" target="_blank">plugin.xml</a>
+			</li>
+			<li>In 
+				<a href="https://github.com/eclipse/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.data.menu.contributions/META-INF/MANIFEST.MF#L8" target="_blank">MANIFEST/MANIFEST.MF</a> file we need to depend on 
+				<code>org.polarsys.capella.core.menu.dynamic</code> which export 
+				<code>org.polarsys.capella.common.menu.dynamic</code>
+			</li>
+		</ul>
+	</body>
+</html>

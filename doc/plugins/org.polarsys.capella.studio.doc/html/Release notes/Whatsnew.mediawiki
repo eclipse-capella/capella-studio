@@ -1,0 +1,15 @@
+<!--
+	Copyright © 2022 Thales Global Services SAS
+	
+	Licensed under the Thales Inner Source Software License:
+	Version 1.2, InnerOpen - Distribution Controlled
+	
+	You may not use this file except in compliance with the License.
+	You may obtain a copy of the License at https://gitlab.thalesdigital.io/Tiss-Organization/tiss-licenses
+	See the License for the specific language governing permissions and limitations under the License.
+-->
+= What's new =
+
+Release notes describing enhancements and fixes done per release are available online on each dedicated release pages.
+
+* [https://github.com/eclipse/capella-studio/releases Capella Studio releases]

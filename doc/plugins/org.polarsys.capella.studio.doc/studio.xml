@@ -10,31 +10,160 @@ SPDX-License-Identifier: EPL-2.0
 Contributors:
   Thales Global Services S.A.S - initial API and implementation
 -->
-<toc label="Capella Studio Documentation" topic="html/introduction.html">
+<toc label="Capella Studio Guide" topic="html/introduction.html">
+   <topic label="Release Notes">
+      <topic href="html/Release notes/Whatsnew.html" label="What's new">
+      </topic>
+      <topic href="html/Release notes/KnownIssues.html" label="Known issues">
+      </topic>
+      <topic href="html/Release notes/Limitations.html" label="Limitations">
+      </topic>
+   </topic>
  	<topic href="html/introduction.html" label="Introduction">
    </topic>
-  <topic href="html/extension/viewpointdevelopment.html" label="Viewpoint Development">
-     <topic href="html/extension/viewpointdevelopment.html#Introduction" label="Introduction">
-     </topic>
+  <topic href="html/extension/viewpointdevelopment.html#Viewpoint_Development" label="Viewpoint Development">
      <topic href="html/extension/viewpointdevelopment.html#Development_Environment" label="Development Environment">
      </topic>
-     <topic href="html/extension/viewpointdevelopment.html#Working_with_a_viewpoint" label="Working with a viewpoint">
-        <topic href="html/extension/viewpointdevelopment.html#Create_a_new_viewpoint" label="Create a new viewpoint">
-        </topic>
-        <topic href="html/extension/viewpointdevelopment.html#Import_existing_viewpoint" label="Import existing viewpoint">
-        </topic>
-        <topic href="html/extension/viewpointdevelopment.html#Viewpoint_description" label="Viewpoint description">
-        </topic>
-        <topic href="html/extension/viewpointdevelopment.html#Generate_viewpoint" label="Generate viewpoint">
-           <topic href="html/extension/cdo.html" label="Generate viewpoints for CDO platforms">
+     <topic href="html/extension/viewpointdevelopment.html#Working_with_a_Viewpoint" label="Working with a Viewpoint">
+        <topic href="html/extension/viewpointdevelopment.html#Create_a_new_Viewpoint" label="Create a new Viewpoint">
+           <topic href="html/extension/viewpointdevelopment.html#Viewpoint_Aspects" label="Viewpoint Aspects">
            </topic>
-           <topic href="html/extension/cdoxml.html" label="Generate viewpoints for CDO platforms and XML metadata">
+           <topic href="html/extension/viewpointdevelopment.html#Configuration" label="Configuration">
+           </topic>
+           <topic href="html/extension/viewpointdevelopment.html#Data" label="Data">
+              <topic href="html/extension/viewpointdevelopment.html#Inheritance" label="Inheritance">
+              </topic>
+              <topic href="html/extension/viewpointdevelopment.html#Extension" label="Extension">
+              </topic>
+           </topic>
+           <topic href="html/extension/viewpointdevelopment.html#Create_a_new_Aspect" label="Create a new Aspect">
+           </topic>
+           <topic href="html/extension/viewpointdevelopment.html#Property_Views" label="Property Views">
+              <topic href="html/extension/viewpointdevelopment.html#Sirius_Property_Views" label="Sirius Property Views">
+              </topic>
+           </topic>
+           <topic href="html/extension/viewpointdevelopment.html#Diagram" label="Diagram">
+           </topic>
+        </topic>
+        <topic href="html/extension/viewpointdevelopment.html#Import_existing_Viewpoint" label="Import existing Viewpoint">
+        </topic>
+        <topic href="html/extension/viewpointdevelopment.html#Viewpoint_Description" label="Viewpoint Description">
+        </topic>
+        <topic href="html/extension/viewpointdevelopment.html#Generate_Viewpoint" label="Generate Viewpoint">
+           <topic href="html/extension/viewpointdevelopment.html#From_vptext" label="From vptext">
+           </topic>
+           <topic href="html/extension/viewpointdevelopment.html#From_fcore" label="From fcore">
            </topic>
         </topic>
         <topic href="html/extension/viewpointdevelopment.html#Customizations" label="Customizations">
         </topic>
      </topic>
-     <topic href="html/extension/viewpointdevelopment.html#Technical_guidelines" label="Technical guidelines">
+     <topic href="html/extension/viewpointdevelopment.html#Technical_Guidelines" label="Technical Guidelines">
+     	<topic href="html/extension/viewpointdevelopment.html#Use_representation_descriptor_instead_of_representation" label="Use representation descriptor instead of representation"></topic>
+			<topic href="html/extension/viewpointdevelopment.html#Diagram_extensions" label="Diagram extensions">
+				<topic href="html/extension/viewpointdevelopment.html#Expressions_in_.odesigns" label="Expressions in .odesigns"></topic>
+				<topic href="html/extension/viewpointdevelopment.html#Semantic_Candidate_Expression" label="Semantic Candidate Expression"></topic>
+				<topic href="html/extension/viewpointdevelopment.html#Create_Generic_Viewpoints" label="Create Generic Viewpoints"></topic>
+			</topic>
+			<topic href="html/extension/viewpointdevelopment.html#Migrating_your_Viewpoints" label="Migrating your Viewpoints">
+				<topic href="html/extension/viewpointdevelopment.html#Contributing_to_the_Capella_Migration_mechanism" label="Contributing to the Capella Migration mechanism"></topic>
+			</topic>
+			<topic href="html/extension/viewpointdevelopment.html#Avoid_EObject.eResource_calls" label="Avoid EObject.eResource calls"></topic>
+			<topic href="html/extension/viewpointdevelopment.html#Contribute_an_ID_handler" label="Contribute an ID handler"></topic>
+     </topic>
+     <topic label="Tutorials">
+        <topic href="html/extension/tutorials/Create-Addons.html" label="Create Addons">
+			<topic href="html/extension/tutorials/Create-Addons.html#development-platform" label="Development Platform"></topic>
+			<topic href="html/extension/tutorials/Create-Addons.html#how-to-create-an-basic-addon-adding-a-menu" label="How to create an basic addon adding a menu"></topic>
+			<topic href="html/extension/tutorials/Create-Addons.html#test-you-addon-in-capella-as-debug" label="Test you addon in Capella as Debug"></topic>
+			<topic href="html/extension/tutorials/Create-Addons.html#export-as-deployable-plugin" label="Export as deployable plugin"></topic>
+			<topic href="html/extension/tutorials/Create-Addons.html#deploy-an-addon" label="Deploy an addon"></topic>
+			<topic href="html/extension/tutorials/Create-Addons.html#automatic-deployment" label="Automatic deployment"></topic>
+        </topic>
+        <topic href="html/extension/tutorials/Add-Menu.html" label="Add Menu">
+	        <topic href="html/extension/tutorials/Add-Menu.html" label="Extensions Points"></topic>
+			<topic href="html/extension/tutorials/Add-Menu.html#command-handler" label="Command Handler"></topic>
+			<topic href="html/extension/tutorials/Add-Menu.html#fine-menu-tuning" label="Fine menu tuning">
+			<topic href="html/extension/tutorials/Add-Menu.html#location-of-menu" label="Location of menu"></topic>
+			<topic href="html/extension/tutorials/Add-Menu.html#visibility-of-commands" label="Visibility of commands"></topic>
+			<topic href="html/extension/tutorials/Add-Menu.html#command-icon" label="Command icon"></topic>
+			<topic href="html/extension/tutorials/Add-Menu.html#command-category" label="Command category"></topic>
+		</topic>
+        </topic>
+        <topic href="html/extension/tutorials/Edit.html" label="Access and Edit elements">
+			<topic href="html/extension/tutorials/Edit.html" label="Access to Session/ExecutionManager/EditingDomain"></topic>
+			<topic href="html/extension/tutorials/Edit.html#session" label="Session"></topic>
+			<topic href="html/extension/tutorials/Edit.html#transactionaleditingdomain" label="TransactionalEditingDomain"></topic>
+			<topic href="html/extension/tutorials/Edit.html#executionmanager" label="ExecutionManager"></topic>
+			<topic href="html/extension/tutorials/Edit.html#ifile-resource" label="IFile/Resource"></topic>
+			<topic href="html/extension/tutorials/Edit.html#helpers" label="Helpers"></topic>
+			<topic href="html/extension/tutorials/Edit.html#access-all-diagrams" label="Access all diagrams"></topic>
+			<topic href="html/extension/tutorials/Edit.html#access-all-graphical-elements-in-a-diagram" label="Access all graphical elements in a diagram"></topic>
+			<topic href="html/extension/tutorials/Edit.html#edit-an-element" label="Edit an element"></topic>
+			<topic href="html/extension/tutorials/Edit.html#create-an-element" label="Create an element"></topic>
+			<topic href="html/extension/tutorials/Edit.html#emf-api-generic-access" label="EMF API (Generic access)"></topic>
+        </topic>
+        <topic href="html/extension/tutorials/Metamodel.html" label="Metamodel">
+			<topic href="html/extension/tutorials/Metamodel.html" label="Retrieve type of an element"></topic>
+			<topic href="html/extension/tutorials/Metamodel.html#metamodels" label="Metamodels"></topic>
+			<topic href="html/extension/tutorials/Metamodel.html#getting-the-metamodel" label="Getting the Metamodel"></topic>
+			<topic href="html/extension/tutorials/Metamodel.html#browse" label="Browse"></topic>
+        </topic>
+        <topic href="html/extension/tutorials/Semantic-Browser.html" label="Query(Semantic Browser/Mass Visualization)">
+        	<topic href="html/extension/tutorials/Semantic-Browser.html#detail-of-the-different-fields" label="Detail of the different fields"></topic>
+            <topic href="html/extension/tutorials/Semantic-Browser.html#sample" label="Sample"></topic>
+        </topic>
+        <topic href="html/extension/tutorials/Validation-Rules.html" label="Validation Rules">
+			<topic href="html/extension/tutorials/Validation-Rules.html" label="Model Validation Rules">
+				<topic href="html/extension/tutorials/Validation-Rules.html#detail-of-the-different-fields" label="Detail of the different fields"></topic>
+			</topic>
+			<topic href="html/extension/tutorials/Validation-Rules.html#validation-rule-implementation" label="Validation Rule implementation"></topic>
+			<topic href="html/extension/tutorials/Validation-Rules.html#sample" label="Sample"></topic>
+        </topic>
+        <topic href="html/extension/tutorials/Quickfixes.html#quick-fixes" label="Quick Fixes">
+			<topic href="html/extension/tutorials/Quickfixes.html#detail-of-the-different-fields" label="Detail of the different fields"></topic>
+			<topic href="html/extension/tutorials/Quickfixes.html#quickfix-implementation" label="Quickfix implementation"></topic>
+			<topic href="html/extension/tutorials/Quickfixes.html#sample" label="Sample"></topic>
+        </topic>
+        <topic href="html/extension/tutorials/CreationCommand.html" label="Command Line">
+			<topic href="html/extension/tutorials/CreationCommand.html#detail-of-the-different-fields" label="Detail of the different fields"></topic>
+			<topic href="html/extension/tutorials/CreationCommand.html#sample" label="Sample"></topic>
+        </topic>
+        <topic href="html/extension/tutorials/XHTML-Documentation-Generation.html" label="XHTML-Documentation-Generation">
+        	<topic href="html/extension/tutorials/XHTML-Documentation-Generation.html" label="Extending the Generation"></topic>
+        </topic>
+        <topic href="html/extension/tutorials/Delete.html" label="Delete">
+			<topic href="html/extension/tutorials/Delete.html#detail-of-the-different-fields" label="Detail of the different fields"></topic>
+			<topic href="html/extension/tutorials/Delete.html#sample" label="Sample"></topic>
+        </topic>
+        <topic href="html/extension/tutorials/Migration.html" label="Migration">
+			<topic href="html/extension/tutorials/Migration.html#migrationcontributions" label="MigrationContributions">
+				<topic href="html/extension/tutorials/Migration.html#detail-of-the-different-fields" label="Detail of the different fields"></topic>
+			</topic>
+			<topic href="html/extension/tutorials/Migration.html#migrationcontributors" label="MigrationContributors">
+				<topic href="html/extension/tutorials/Migration.html#detail-of-the-different-fields2" label="Detail of the different fields"></topic>
+			</topic>
+			<topic href="html/extension/tutorials/Migration.html#migration-contribution" label="Migration contribution"></topic>
+			<topic href="html/extension/tutorials/Migration.html#sample" label="Sample"></topic>
+        </topic>
+        <topic href="html/extension/tutorials/Write-Junit.html" label="Write Junits">
+			<topic href="html/extension/tutorials/Write-Junit.html#sample-on-semantic-tests" label="Sample on semantic tests"></topic>
+			<topic href="html/extension/tutorials/Write-Junit.html#sample-on-diagram-tests" label="Sample on diagram tests"></topic>
+        </topic>
+        <topic href="html/extension/tutorials/Project-Explorer-Filters.html" label="Project Explorer Filters">
+			<topic href="html/extension/tutorials/Project-Explorer-Filters.html#Contribute_to_Capella_Project_Explorer_filters" label="Contribute to Capella Project Explorer filters"></topic>
+        </topic>
+        <topic href="html/extension/tutorials/Diagram-Layers.html" label="Diagram Layers">
+	        <topic href="html/extension/tutorials/Diagram-Layers.html" label="Define new Diagram Layers">
+				<topic href="html/extension/tutorials/Diagram-Layers.html#Using_VPDSL" label="Using VPDSL"></topic>
+				<topic href="html/extension/tutorials/Diagram-Layers.html#Using_Sirius_odesign_files" label="Using Sirius odesign files"></topic>
+			</topic>
+        </topic>
+        <topic href="html/extension/tutorials/Activity-Explorer.html" label="Activity Explorer">
+           <topic href="html/extension/tutorials/Activity-Explorer.html#Contribute_to_Activity_Explorer" label="Contribute to Activity Explorer">
+           </topic>
+        </topic>
+        
      </topic>
   </topic>
    <anchor id="gendocAnchor"/>

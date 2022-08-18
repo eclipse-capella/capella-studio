@@ -1,0 +1,23 @@
+=Project Explorer Filters=
+
+When defining new kind of model elements, those new elements will be by default displayed in the Capella Project Explorer.
+
+Capella includes a default mechanism of filter on the Project Explorer in order to avoid unnecessary complexity for users.
+
+[[Image:img/filters-customization.png|460x536px]]
+
+===Contribute to Capella Project Explorer filters===
+
+One can define contributions to Capella Project Explorer filter mechanism by creating a plugin which contributes to the following extension points:
+
+*org.eclipse.ui.navigator.navigatorContent
+*org.eclipse.ui.navigator.viewer
+
+#The first extension point defines the new filters to be applied. It allows to define if the filter is applied by default and if it is visible in the filter view. 
+<br>The filter is defined by referring to the Java class implementing the type of model element:
+
+[[Image:img/filters-ep1.png|1032x155px]]
+
+#The second extension point is used to map the filters previously defined to the Capella Project Explorer:
+
+[[Image:img/filters-ep2.png|1032x155px]]
