@@ -22,31 +22,152 @@ Using **Pa**Factory, you will have access to `PaFactory.eINSTANCE.createPhysical
 
 ## Metamodels
 
-| Name  | Package prefix | Java ePackage | Java eFactory |
-|---|---|---|---|
-Capella Modeller  | capellamodeller  | CapellamodellerPackage  | CapellamodellerFactory |
-Capella Core  | capellacore  | CapellacorePackage  | CapellacoreFactory |
-Capella Common  | capellacommon  | CapellacommonPackage  | CapellacommonFactory |
-Composite Structure  | cs  | CsPackage  | CsFactory |
-Operational Analysis  | oa  | OaPackage  | OaFactory |
-System Analysis  | ctx  | CtxPackage  | CtxFactory |
-Logical Architecture  | la  | LaPackage  | LaFactory |
-Physical Architecture  | pa  | PaPackage  | PaFactory |
-Deployment  | deployment  | DeploymentPackage  | DeploymentFactory  |
-EPBS  | epbs  | EpbsPackage  | EpbsFactory  |
-Functional Analysis  | fa  | FaPackage  | FaFactory  |
-Shared Model  | sharedmodel  | SharedmodelPackage  | SharedmodelFactory  |
-Requirement  | requirement  | RequirementPackage  | RequirementFactory  |
-Interaction  | interaction  | InteractionPackage  | InteractionFactory  |
-Information  | information  | InformationPackage  | InformationFactory  |
-Communication  | communication  | CommunicationPackage  | CommunicationFactory  |
-Data Type  | datatype  | DatatypePackage  | DatatypeFactory  |
-Data Value  | datavalue  | DatavaluePackage  | DatavalueFactory  |
-Modelling Core  | modellingcore  | ModellingcorePackage  | ModellingcoreFactory  |
-Behavior  | behavior  | BehaviorPackage  | BehaviorFactory  |
-Activity  | activity  | ActivityPackage  | ActivityFactory  |
-Replicable Elements  | Re  | RePackage  | ReFactory  |
-Libraries  | libraries  | LibrariesPackage  | LibrariesFactory  |
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Package prefix</th>
+        <th>Java ePackage</th>
+        <th>Java eFactory</th>
+    </tr>
+    <tr>
+        <td>Capella Modeller</td>
+        <td>capellamodeller</td>
+        <td>CapellamodellerPackage</td>
+        <td>CapellamodellerFactory</td>
+    </tr>
+    <tr>
+        <td>Capella Core</td>
+        <td>capellacore</td>
+        <td>CapellacorePackage</td>
+        <td>CapellacoreFactory</td>
+    </tr>
+    <tr>
+        <td>Capella Common</td>
+        <td>capellacommon</td>
+        <td>CapellacommonPackage</td>
+        <td>CapellacommonFactory</td>
+    </tr>
+    <tr>
+        <td>Composite Structure</td>
+        <td>cs</td>
+        <td>CsPackage</td>
+        <td>CsFactory</td>
+    </tr>
+    <tr>
+        <td>Operational Analysis</td>
+        <td>oa</td>
+        <td>OaPackage</td>
+        <td>OaFactory</td>
+    </tr>
+    <tr>
+        <td>System Analysis</td>
+        <td>ctx</td>
+        <td>CtxPackage</td>
+        <td>CtxFactory</td>
+    </tr>
+    <tr>
+        <td>Logical Architecture</td>
+        <td>la</td>
+        <td>LaPackage</td>
+        <td>LaFactory</td>
+    </tr>
+    <tr>
+        <td>Physical Architecture</td>
+        <td>pa</td>
+        <td>PaPackage</td>
+        <td>PaFactory</td>
+    </tr>
+    <tr>
+        <td>Deployment</td>
+        <td>deployment</td>
+        <td>DeploymentPackage</td>
+        <td>DeploymentFactory</td>
+    </tr>
+    <tr>
+        <td>EPBS</td>
+        <td>epbs</td>
+        <td>EpbsPackage</td>
+        <td>EpbsFactory</td>
+    </tr>
+    <tr>
+        <td>Functional Analysis</td>
+        <td>fa</td>
+        <td>FaPackage</td>
+        <td>FaFactory</td>
+    </tr>
+    <tr>
+        <td>Shared Model</td>
+        <td>sharedmodel</td>
+        <td>SharedmodelPackage</td>
+        <td>SharedmodelFactory</td>
+    </tr>
+    <tr>
+        <td>Requirement</td>
+        <td>requirement</td>
+        <td>RequirementPackage</td>
+        <td>RequirementFactory</td>
+    </tr>
+    <tr>
+        <td>Interaction</td>
+        <td>interaction</td>
+        <td>InteractionPackage</td>
+        <td>InteractionFactory</td>
+    </tr>
+    <tr>
+        <td>Information</td>
+        <td>information</td>
+        <td>InformationPackage</td>
+        <td>InformationFactory</td>
+    </tr>
+    <tr>
+        <td>Communication</td>
+        <td>communication</td>
+        <td>CommunicationPackage</td>
+        <td>CommunicationFactory</td>
+    </tr>
+    <tr>
+        <td>Data Type</td>
+        <td>datatype</td>
+        <td>DatatypePackage</td>
+        <td>DatatypeFactory</td>
+    </tr>
+    <tr>
+        <td>Data Value</td>
+        <td>datavalue</td>
+        <td>DatavaluePackage</td>
+        <td>DatavalueFactory</td>
+    </tr>
+    <tr>
+        <td>Modelling Core</td>
+        <td>modellingcore</td>
+        <td>ModellingcorePackage</td>
+        <td>ModellingcoreFactory</td>
+    </tr>
+    <tr>
+        <td>Behavior</td>
+        <td>behavior</td>
+        <td>BehaviorPackage</td>
+        <td>BehaviorFactory</td>
+    </tr>
+    <tr>
+        <td>Activity</td>
+        <td>activity</td>
+        <td>ActivityPackage</td>
+        <td>ActivityFactory</td>
+    </tr>
+    <tr>
+        <td>Replicable Elements</td>
+        <td>Re</td>
+        <td>RePackage</td>
+        <td>ReFactory</td>
+    </tr>
+    <tr>
+        <td>Libraries</td>
+        <td>libraries</td>
+        <td>LibrariesPackage</td>
+        <td>LibrariesFactory</td>
+    </tr>
+</table>
 
 ## Getting the Metamodel
 

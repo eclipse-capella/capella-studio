@@ -10,10 +10,7 @@ It provides developers with a platform containing both:
 
 * Capella models and tools
 
-===Foundations===
-[[File:img/Capella-studio-foundations.png|none|700px]]
-
-===core Features===
+===Features===
 * Provides an EMF generation adapted to the Capella MBSE models
 
 * Provides user-friendly tools to orchestrate a Capella EMF generation 

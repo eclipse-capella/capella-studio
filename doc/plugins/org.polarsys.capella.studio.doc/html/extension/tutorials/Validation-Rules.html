@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<title>Validation Rules</title>
+		<title>Validation-Rules</title>
 		<link type="text/css" rel="stylesheet" href="PLUGINS_ROOT/org.polarsys.capella.studio.doc/html/style/style.css"/>
 	</head>
 	<body>
@@ -47,11 +47,11 @@
 		<ul>
 			<li>
 				<code>namespaceUri</code>: Namespace URI of one of the Capella metamodel subset. 
-				<a target="_blank" href="https://github.com/eclipse/capella/wiki/Metamodel">see Metamodel</a>
+				<a href="https://github.com/eclipse/capella/wiki/Metamodel" target="_blank">see Metamodel</a>
 			</li>
 			<li>
 				<code>categories</code>: 
-				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.validation/plugin.xml">See definition of all categories</a>
+				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.validation/plugin.xml" target="_blank">See definition of all categories</a>
 			</li>
 		</ul>
 		<pre><code>    capella.category/quality
@@ -118,7 +118,7 @@
 		</ul>
 		<h2 id="validation-rule-implementation">Validation Rule implementation</h2>
 		<p>The 
-			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.validation/src/org/polarsys/capella/core/validation/rule/AbstractValidationRule.java">AbstractValidationRule</a> class provides some facilities to manage messages.
+			<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.validation/src/org/polarsys/capella/core/validation/rule/AbstractValidationRule.java" target="_blank">AbstractValidationRule</a> class provides some facilities to manage messages.
 		</p>
 		<p>
 			<strong>Notes:</strong>
@@ -138,13 +138,13 @@
 		</p>
 		<ul>
 			<li>The 
-				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.fa.validation/src/org/polarsys/capella/core/data/fa/validation/function/LFCompAllocationLeastwise.java">Java class</a> defining the rule
+				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.fa.validation/src/org/polarsys/capella/core/data/fa/validation/function/LFCompAllocationLeastwise.java" target="_blank">Java class</a> defining the rule
 			</li>
 			<li>Its registration within 
-				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.fa.validation/plugin.xml#L29">plugin.xml</a>
+				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.fa.validation/plugin.xml#L29" target="_blank">plugin.xml</a>
 			</li>
 			<li>In 
-				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.fa.validation/META-INF/MANIFEST.MF#L8">MANIFEST/MANIFEST.MF</a> file we need to depends on 
+				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.fa.validation/META-INF/MANIFEST.MF#L8" target="_blank">MANIFEST/MANIFEST.MF</a> file we need to depends on 
 				<code>org.polarsys.capella.core.validation</code>
 			</li>
 		</ul>
