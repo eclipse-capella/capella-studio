@@ -16,8 +16,6 @@ Contributors:
       </topic>
       <topic href="html/Release notes/KnownIssues.html" label="Known issues">
       </topic>
-      <topic href="html/Release notes/Limitations.html" label="Limitations">
-      </topic>
    </topic>
  	<topic href="html/introduction.html" label="Introduction">
    </topic>
@@ -168,8 +166,4 @@ Contributors:
   </topic>
    <anchor id="gendocAnchor"/>
    <anchor id="vpdslAnchor"/>
-   <topic href="html/underconstruction.html" label="FAQ">
-   </topic>
-   <topic href="html/legal.html" label="Legal">
-   </topic>
 </toc>

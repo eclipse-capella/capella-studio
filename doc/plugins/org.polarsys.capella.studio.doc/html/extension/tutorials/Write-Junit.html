@@ -2,31 +2,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<title>Write Junit</title>
+		<title>Write-Junit</title>
 		<link type="text/css" rel="stylesheet" href="PLUGINS_ROOT/org.polarsys.capella.studio.doc/html/style/style.css"/>
 	</head>
 	<body>
 		<h1 id="write-junits">Write Junits</h1>
 		<p>The plugin 
-			<a target="_blank" href="https://github.com/eclipse/capella/tree/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.framework">org.polarsys.capella.test.framework</a> define basic test cases and tests suite.
+			<a href="https://github.com/eclipse/capella/tree/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.framework" target="_blank">org.polarsys.capella.test.framework</a> define basic test cases and tests suite.
 		</p>
 		<blockquote>
 			<p>Capella exisiting junits are currently written with JUnit3. Note that this will evolve at some point</p>
 		</blockquote>
 		<ul>
 			<li>In 
-				<a target="_blank" href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.navigator.ju/META-INF/MANIFEST.MF#L9">MANIFEST/MANIFEST.MF</a> file we need to depend on 
+				<a href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.navigator.ju/META-INF/MANIFEST.MF#L9" target="_blank">MANIFEST/MANIFEST.MF</a> file we need to depend on 
 				<code>org.polarsys.capella.test.framework</code>
 			</li>
 			<li>
-				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/tests/plugins/org.polarsys.capella.test.framework/src/org/polarsys/capella/test/framework/api/BasicTestCase.java">BasicTestCase</a>
+				<a href="https://github.com/eclipse/capella/blob/master/tests/plugins/org.polarsys.capella.test.framework/src/org/polarsys/capella/test/framework/api/BasicTestCase.java" target="_blank">BasicTestCase</a>
 			</li>
 		</ul>
 		<pre class="language-java"><code class="language-java">public abstract void test() throws Exception; //content of the test
 public List&lt;String&gt; getRequiredTestModels(); //list of models to import before the test</code></pre>
 		<ul>
 			<li>
-				<a target="_blank" href="https://github.com/eclipse/capella/blob/master/tests/plugins/org.polarsys.capella.test.framework/src/org/polarsys/capella/test/framework/api/BasicTestSuite.java">BasicTestSuite</a>
+				<a href="https://github.com/eclipse/capella/blob/master/tests/plugins/org.polarsys.capella.test.framework/src/org/polarsys/capella/test/framework/api/BasicTestSuite.java" target="_blank">BasicTestSuite</a>
 			</li>
 		</ul>
 		<pre class="language-java"><code class="language-java">protected List&lt;BasicTestCase&gt; getTests();  //list of tests to run
@@ -36,14 +36,14 @@ public List&lt;String&gt; getRequiredTestModels(); //OPTIONAL, list of models to
 		</blockquote>
 		<h2 id="sample-on-semantic-tests">Sample on semantic tests</h2>
 		<p>Test for the creation of elements in the Project Explorer: 
-			<a target="_blank" href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.navigator.ju/src/org/polarsys/capella/test/navigator/ju/CreateElement.java">CreateElement.java</a>
+			<a href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.navigator.ju/src/org/polarsys/capella/test/navigator/ju/CreateElement.java" target="_blank">CreateElement.java</a>
 		</p>
 		<ul>
 			<li>List of models to load 
-				<a target="_blank" href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.navigator.ju/src/org/polarsys/capella/test/navigator/ju/CreateElement.java#L54">getRequiredTestModels</a>
+				<a href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.navigator.ju/src/org/polarsys/capella/test/navigator/ju/CreateElement.java#L54" target="_blank">getRequiredTestModels</a>
 			</li>
 			<li>Content of the test method 
-				<a target="_blank" href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.navigator.ju/src/org/polarsys/capella/test/navigator/ju/CreateElement.java#L72">test</a>
+				<a href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.navigator.ju/src/org/polarsys/capella/test/navigator/ju/CreateElement.java#L72" target="_blank">test</a>
 				In this method, we use 
 				<code>getSession</code> to retrieve the opened session on the model. With a 
 				<code>Session</code> we have access to the 
@@ -52,44 +52,44 @@ public List&lt;String&gt; getRequiredTestModels(); //OPTIONAL, list of models to
 			</li>
 		</ul>
 		<p>By looking at how to 
-			<a target="_blank" href="https://github.com/eclipse/capella/wiki/Edit#edit-an-element">Edit an element</a>, it is possible to do some modification on the model (command to test) and then asserting that result is correct.
+			<a href="https://github.com/eclipse/capella/wiki/Edit#edit-an-element" target="_blank">Edit an element</a>, it is possible to do some modification on the model (command to test) and then asserting that result is correct.
 		</p>
 		<p>For instance, doing a 
-			<a target="_blank" href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.model.ju/src/org/polarsys/capella/test/model/ju/dnd/DnDComponentAndPart.java">Drag and Drop</a> 
+			<a href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.model.ju/src/org/polarsys/capella/test/model/ju/dnd/DnDComponentAndPart.java" target="_blank">Drag and Drop</a> 
 			or 
-			<a target="_blank" href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.recrpl.ju/src/org/polarsys/capella/test/recrpl/ju/testcases/CreateRPL_SimpleCase.java">Creating a REC/RPL</a> ensuring that all references are created 
-			<a target="_blank" href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.recrpl.ju/src/org/polarsys/capella/test/recrpl/ju/RecRplTestCase.java#L156">here</a>
+			<a href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.recrpl.ju/src/org/polarsys/capella/test/recrpl/ju/testcases/CreateRPL_SimpleCase.java" target="_blank">Creating a REC/RPL</a> ensuring that all references are created 
+			<a href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.recrpl.ju/src/org/polarsys/capella/test/recrpl/ju/RecRplTestCase.java#L156" target="_blank">here</a>
 		</p>
 		<h2 id="sample-on-diagram-tests">Sample on diagram tests</h2>
 		<p>Diagram tests are more complicated to do, as it requires to open diagram, perform some manipulations and things like that.</p>
 		<ul>
 			<li>The plugin 
-				<a target="_blank" href="https://github.com/eclipse/capella/tree/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.common.ju">org.polarsys.capella.test.diagram.common.ju</a> define some helpers.
+				<a href="https://github.com/eclipse/capella/tree/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.common.ju" target="_blank">org.polarsys.capella.test.diagram.common.ju</a> define some helpers.
 			</li>
 		</ul>
 		<p>In this plugin, many 
 			<code>DiagramContext</code> defining all tools 
 
-			<a target="_blank" href="https://github.com/eclipse/capella/tree/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.common.ju/src/org/polarsys/capella/test/diagram/common/ju/context">org.polarsys.capella.test.diagram.common.ju.context</a>, like 
-			<a target="_blank" href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.common.ju/src/org/polarsys/capella/test/diagram/common/ju/context/IDBDiagram.java">Interface Diagram Blank</a>
+			<a href="https://github.com/eclipse/capella/tree/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.common.ju/src/org/polarsys/capella/test/diagram/common/ju/context" target="_blank">org.polarsys.capella.test.diagram.common.ju.context</a>, like 
+			<a href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.common.ju/src/org/polarsys/capella/test/diagram/common/ju/context/IDBDiagram.java" target="_blank">Interface Diagram Blank</a>
 		</p>
 		<ul>
 			<li>In the context, we will be able to execute all existing tools, 
-				<a target="_blank" href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.common.ju/src/org/polarsys/capella/test/diagram/common/ju/context/DiagramContext.java#L166">retrieve views</a>, retrieve 
-				<a target="_blank" href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.common.ju/src/org/polarsys/capella/test/diagram/common/ju/context/DiagramContext.java#L125">semantic elements</a>. 
+				<a href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.common.ju/src/org/polarsys/capella/test/diagram/common/ju/context/DiagramContext.java#L166" target="_blank">retrieve views</a>, retrieve 
+				<a href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.common.ju/src/org/polarsys/capella/test/diagram/common/ju/context/DiagramContext.java#L125" target="_blank">semantic elements</a>. 
 			</li>
 		</ul>
 		<p>In a Junit, a use of this diagram context, 
-			<a target="_blank" href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.tools.ju/src/org/polarsys/capella/test/diagram/tools/ju/idb/CreateInterface.java">CreateInterface.java</a> testing that the tool is enabled and create correct element in the right container. (All the asserts are done in super implementations, so the test is readable even if we think it does nothing).
+			<a href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.tools.ju/src/org/polarsys/capella/test/diagram/tools/ju/idb/CreateInterface.java" target="_blank">CreateInterface.java</a> testing that the tool is enabled and create correct element in the right container. (All the asserts are done in super implementations, so the test is readable even if we think it does nothing).
 		</p>
 		<p>Some other samples, 
-			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/tests/plugins/org.polarsys.capella.test.diagram.tools.ju/src/org/polarsys/capella/test/diagram/tools/ju/xab/CreateFunction.java">CreateFunction.java</a>
+			<a href="https://github.com/eclipse/capella/blob/master/tests/plugins/org.polarsys.capella.test.diagram.tools.ju/src/org/polarsys/capella/test/diagram/tools/ju/xab/CreateFunction.java" target="_blank">CreateFunction.java</a>
 			or 
-			<a target="_blank" href="https://github.com/eclipse/capella/blob/master/tests/plugins/org.polarsys.capella.test.diagram.misc.ju/src/org/polarsys/capella/test/diagram/misc/ju/testcases/PABStyleChecksDiagramElements.java">PABStyleChecksDiagramElements.java</a>
+			<a href="https://github.com/eclipse/capella/blob/master/tests/plugins/org.polarsys.capella.test.diagram.misc.ju/src/org/polarsys/capella/test/diagram/misc/ju/testcases/PABStyleChecksDiagramElements.java" target="_blank">PABStyleChecksDiagramElements.java</a>
 		</p>
 		<ul>
 			<li>In 
-				<a target="_blank" href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.tools.ju/META-INF/MANIFEST.MF#L9">MANIFEST/MANIFEST.MF</a> file we need to depend on 
+				<a href="https://github.com/eclipse/capella/blob/91bc87ffa88a17ac5058e1d0d7f546e4ff5fc448/tests/plugins/org.polarsys.capella.test.diagram.tools.ju/META-INF/MANIFEST.MF#L9" target="_blank">MANIFEST/MANIFEST.MF</a> file we need to depend on 
 				<code>org.polarsys.capella.test.diagram.common.ju</code>
 			</li>
 		</ul>
