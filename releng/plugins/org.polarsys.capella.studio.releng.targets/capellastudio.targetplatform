@@ -144,12 +144,12 @@ location kitalpha-runtime "https://download.eclipse.org/kitalpha/updates/stable/
 	org.polarsys.kitalpha.massactions.feature.source.feature.group lazy
 }
 
-location capella-egf-patterns "https://download.eclipse.org/capella/core/updates/stable/6.0.0-S20220824-141612/org.polarsys.capella.egf.site/" {
+location capella-egf-patterns "https://download.eclipse.org/capella/core/updates/stable/6.0.0-S20220909-080000/org.polarsys.capella.egf.site/" {
 	org.polarsys.capella.core.egf.feature.feature.group lazy
 	org.polarsys.capella.core.egf.feature.source.feature.group lazy
 }
 
-location capella "https://download.eclipse.org/capella/core/updates/stable/6.0.0-S20220824-141612/org.polarsys.capella.rcp.site/" {
+location capella "https://download.eclipse.org/capella/core/updates/stable/6.0.0-S20220909-080000/org.polarsys.capella.rcp.site/" {
 	org.polarsys.capella.rcp.feature.group lazy
 	org.polarsys.capella.rcp.source.feature.group lazy
 	org.polarsys.capella.cdo.mock.feature.feature.group lazy
