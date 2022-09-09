@@ -44,8 +44,8 @@ pipeline {
 							VERSION = VERSION.substring(1)
 						}
 
-						def DEST_UPDATESITE_DIR='/home/data/httpd/download.eclipse.org/capella/capellastudio/updates/nightly/'+VERSION
-						def DEST_PRODUCT_DIR='/home/data/httpd/download.eclipse.org/capella/capellastudio/products/nightly/'+VERSION
+						def DEST_UPDATESITE_DIR='/home/data/httpd/download.eclipse.org/capella/studio/updates/nightly/'+VERSION
+						def DEST_PRODUCT_DIR='/home/data/httpd/download.eclipse.org/capella/studio/products/nightly/'+VERSION
 
 						sh "echo 'deploy update site'"
 						sh "ssh genie.capella@projects-storage.eclipse.org rm -rf ${DEST_UPDATESITE_DIR}"
