@@ -135,7 +135,7 @@ location kitalpha-sdk "https://download.eclipse.org/kitalpha/updates/nightly/sdk
 	org.polarsys.kitalpha.richtext.widget.tools.ext.feature.source.feature.group lazy
 }
 
-location kitalpha-runtime "https://download.eclipse.org/kitalpha/updates/nightly/sdk/master/" {
+location kitalpha-runtime "https://download.eclipse.org/kitalpha/updates/nightly/runtime/master/" {
 	org.polarsys.kitalpha.runtime.feature.feature.group lazy
 	org.polarsys.kitalpha.runtime.feature.source.feature.group lazy
 	org.polarsys.kitalpha.common.feature.feature.group lazy
