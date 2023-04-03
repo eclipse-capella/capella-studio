@@ -1,0 +1,39 @@
+/**
+ * Copyright (c) PolarSys, 2015. All rights reserved. 
+ *
+ *	Viewpoint QualityAssessment
+ *	@author: S0030391
+ *	@date: 02/12/15
+ *
+ */ Data
+QualityAssessment.data { 
+	Class QualityAssessment {
+		description: "Quality Assessment"
+		icon: "QualityAssessment.png"
+		extends fa.AbstractFunction , la.LogicalComponent , pa.PhysicalComponent
+		Annotation "http://wwww.thalesgroup.com/mde/documentation" {
+			key: summary value: "This is the Quality Assessment Class"
+		}
+
+		Attributes:
+			maturityLevel type ecore.EString changeable: true ordered: true unique: true
+			Annotation "http://wwww.thalesgroup.com/mde/documentation" {
+				key: note value: "Value from 1 to 9"
+			}
+			confidenceLevel enum ConfidentialLevel changeable: true ordered: true unique: true
+			assessed type ecore.EBoolean changeable: true ordered: true unique: true
+		Associations:
+			basedOn refers [0,*] QualityAssessment changeable: true ordered: true unique: true
+			context refers [0,*] external capellacore.NamedElement changeable: true ordered: true unique: true
+			measures contains [0,*] QualityMeasure changeable: true ordered: true unique: true
+	}
+	Class QualityMeasure {
+		icon: "QualityMeasure.png"
+		Attributes:
+			criterion type ecore.EString changeable: true ordered: true unique: true
+			measureValue type ecore.EInt changeable: true ordered: true unique: true
+	}
+	Enumeration ConfidentialLevel {
+		Not_Assessed literal "Not Assessed" , Low literal Low , Medium literal Medium , High literal High
+	}
+}

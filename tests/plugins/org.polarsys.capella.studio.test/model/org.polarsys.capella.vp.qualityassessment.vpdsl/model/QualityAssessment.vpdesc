@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ASCII"?>
+<vpdesc:Viewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configuration="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdiagram/conf/1.0.0" xmlns:docGenConfiguration="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/DocGenConfiguration/1.0.0" xmlns:vpconf="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpconf/1.0.0" xmlns:vpdesc="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdesc/1.0.0" xmlns:vpui="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpui/1.0.0" name="QualityAssessment" shortName="QualityAssessment">
+  <VP_Data name="QualityAssessment.data">
+    <VP_Classes name="QualityAssessment" description="Quality Assessment" icon="QualityAssessment.png">
+      <owned_annotations source="http://wwww.thalesgroup.com/mde/documentation">
+        <owned_details key="summary" value="This is the Quality Assessment Class"/>
+      </owned_annotations>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="basedOn" cardinality="0..*" type="reference" LocalTarget="//@VP_Data/@VP_Classes.0"/>
+      <VP_Classes_Associations xsi:type="vpdesc:ExternalClassAssociation" name="context" cardinality="0..*" type="reference">
+        <ExternalTarget href="http://www.polarsys.org/capella/core/core/6.0.0#//NamedElement"/>
+      </VP_Classes_Associations>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="measures" cardinality="0..*" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Class_Attributes name="maturityLevel">
+        <owned_annotations source="http://wwww.thalesgroup.com/mde/documentation">
+          <owned_details key="note" value="Value from 1 to 9"/>
+        </owned_annotations>
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </owned_type>
+      </VP_Class_Attributes>
+      <VP_Class_Attributes name="confidenceLevel">
+        <owned_type xsi:type="vpdesc:LocalAttributeType" type="//@VP_Data/@VP_Enumerations.0"/>
+      </VP_Class_Attributes>
+      <VP_Class_Attributes name="assessed">
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        </owned_type>
+      </VP_Class_Attributes>
+      <extends href="http://www.polarsys.org/capella/core/fa/6.0.0#//AbstractFunction"/>
+      <extends href="http://www.polarsys.org/capella/core/la/6.0.0#//LogicalComponent"/>
+      <extends href="http://www.polarsys.org/capella/core/pa/6.0.0#//PhysicalComponent"/>
+    </VP_Classes>
+    <VP_Classes name="QualityMeasure" icon="QualityMeasure.png">
+      <VP_Class_Attributes name="criterion">
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </owned_type>
+      </VP_Class_Attributes>
+      <VP_Class_Attributes name="measureValue">
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </owned_type>
+      </VP_Class_Attributes>
+    </VP_Classes>
+    <VP_Enumerations name="ConfidentialLevel">
+      <ownedValues name="Not_Assessed" literal="Not Assessed"/>
+      <ownedValues name="Low" literal="Low"/>
+      <ownedValues name="Medium" literal="Medium"/>
+      <ownedValues name="High" literal="High"/>
+    </VP_Enumerations>
+  </VP_Data>
+  <VP_Aspects xsi:type="vpui:UIDescription" name="QualityAssessment.ui">
+    <UIs name="QualityAssessment_QualityAssessment" label="Quality Assessment">
+      <UI_Containers name="QualityAssessment_QualityAssessment_Section">
+        <subContainers name="QualityAssessment_QualityAssessment_AttributeGroup" label="Quality Assessment Attributes">
+          <UI_fields name="maturityLevelField" label="Maturity Level">
+            <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.0"/>
+          </UI_fields>
+          <UI_fields name="ConfidentialLevelField" label="Confidential Level" type="radiobox">
+            <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.1"/>
+          </UI_fields>
+          <UI_fields name="assessedField" label="Assessed" type="checkbox">
+            <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.0/@VP_Class_Attributes.2"/>
+          </UI_fields>
+        </subContainers>
+        <subContainers name="QualityAssessment_QualityAssessment_AssociationGroup" label="Quality Assessment Associations">
+          <UI_fields name="basedOnAssociation" label="Based On" type="multipleChoiceList">
+            <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.0/@VP_Classes_Associations.0"/>
+          </UI_fields>
+          <UI_fields name="contextAssociation" label="Context" type="multipleChoiceList">
+            <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.0/@VP_Classes_Associations.1"/>
+          </UI_fields>
+          <UI_fields name="measuresAssociation" label="Measures" type="multipleChoiceList">
+            <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.0/@VP_Classes_Associations.2"/>
+          </UI_fields>
+        </subContainers>
+      </UI_Containers>
+    </UIs>
+    <UIs name="QualityAssessment_QualityMeasure" label="Quality Assessment">
+      <UI_Containers name="QualityAssessment_QualityMeasure_Section">
+        <subContainers name="QualityAssessment_QualityMeasure_AttributeGroup" label="Quality Measure Attributes">
+          <UI_fields name="criterionField" label="Criterion">
+            <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.1/@VP_Class_Attributes.0"/>
+          </UI_fields>
+          <UI_fields name="measureValueField" label="Measure Value">
+            <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.1/@VP_Class_Attributes.1"/>
+          </UI_fields>
+        </subContainers>
+      </UI_Containers>
+    </UIs>
+  </VP_Aspects>
+  <VP_Aspects xsi:type="vpconf:Configuration" name="QualityAssessment.conf">
+    <vpConfigurationElements xsi:type="vpconf:TargetApplication" type="CDO for Capella"/>
+    <vpConfigurationElements xsi:type="vpconf:GenerationConfiguration" projectName="org.polarsys.capella.vp.qualityassessment" nsuri="http://www.polarsys.org/capella/QualityAssessment"/>
+    <vpConfigurationElements xsi:type="vpconf:Generation">
+      <ownedDataGenerationConf/>
+      <ownedExtensionGenConf xsi:type="configuration:DiagramGenerationConfiguration" overwriteVSM="true"/>
+      <ownedExtensionGenConf xsi:type="docGenConfiguration:DocumentationGenerationConfiguration"/>
+    </vpConfigurationElements>
+  </VP_Aspects>
+</vpdesc:Viewpoint>

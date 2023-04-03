@@ -15,11 +15,13 @@ package org.polarsys.capella.studio.test.suite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
+import org.polarsys.capella.studio.test.viewpoint.GenerateVPDSLTest;
 import org.polarsys.capella.studio.test.viewpoint.SiriusExpressionInterpreter;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-	SiriusExpressionInterpreter.class
+	SiriusExpressionInterpreter.class,
+	GenerateVPDSLTest.class
 })
 public class AllTests {
 
