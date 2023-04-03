@@ -1,0 +1,29 @@
+/**
+ * Copyright (c) PolarSys, 2015. All rights reserved. 
+ *
+ *	Viewpoint QualityAssessment
+ *	@author: S0030391
+ *	@date: 02/12/15
+ *
+ */
+Configuration QualityAssessment.conf {
+	target "CDO for Capella"
+	project org.polarsys.capella.vp.qualityassessment
+	nsuri "http://www.polarsys.org/capella/QualityAssessment"
+	generation {
+		data (
+			Model: true
+			Edit: true
+			Editor: false
+			Test: false
+			Javadoc: false
+			OverwriteEcore: true
+		)
+		diagram (
+			OverwriteOdesign: true
+		)
+		documentation (
+			EcoreToHtml: false
+		)
+	}
+}
