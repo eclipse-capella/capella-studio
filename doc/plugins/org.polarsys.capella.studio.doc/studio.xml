@@ -118,6 +118,11 @@ Contributors:
 			<topic href="html/extension/tutorials/Validation-Rules.html#validation-rule-implementation" label="Validation Rule implementation"></topic>
 			<topic href="html/extension/tutorials/Validation-Rules.html#sample" label="Sample"></topic>
         </topic>
+        <topic href="html/extension/tutorials/Properties.html#properties" label="Properties">
+			<topic href="html/extension/tutorials/Properties.html#detail-of-the-different-fields" label="Detail of the different fields"></topic>
+			<topic href="html/extension/tutorials/Properties.html#properties-implementation" label="Properties implementation"></topic>
+			<topic href="html/extension/tutorials/Properties.html#sample" label="Sample"></topic>
+        </topic>
         <topic href="html/extension/tutorials/Quickfixes.html#quick-fixes" label="Quick Fixes">
 			<topic href="html/extension/tutorials/Quickfixes.html#detail-of-the-different-fields" label="Detail of the different fields"></topic>
 			<topic href="html/extension/tutorials/Quickfixes.html#quickfix-implementation" label="Quickfix implementation"></topic>
