@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Properties</title>
+		<link type="text/css" rel="stylesheet" href="PLUGINS_ROOT/org.polarsys.capella.studio.doc/html/style/style.css"/>
+	</head>
+	<body>
+		<h1 id="properties">Properties</h1>
+		<p>Capella provides a Properties View to help system architects to edit their model elements. This Property View is composed of different tabs for various concerns. New tabs can be contributed to provide new specific edition facilities.. </p>
+		<p>The extension point is provided by:</p>
+		<ul>
+			<li>the plug-in org.eclipse.ui.views.properties.tabbed</li>
+			<li>and its identifier propertySections.</li>
+		</ul>
+		<p>The contribution to the extension point is done in the plugin.xml file of the plugin. Open this file and focus on the plugin.xml tab:</p>
+		<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?eclipse version="3.4"?&gt;
+&lt;plugin&gt;
+   &lt;extension point="org.eclipse.ui.views.properties.tabbed.propertySections"&gt;
+      &lt;propertySections contributorId=" "&gt;
+         &lt;propertySection
+               class=" "
+               filter=" "
+               id=" "
+               tab=" "&gt;
+            &lt;input
+                  type=" "&gt;
+            &lt;/input&gt;
+         &lt;/propertySection&gt;
+      &lt;/propertySections&gt;
+   &lt;/extension&gt;
+&lt;/plugin&gt;</code></pre>
+		<h2 id="detail-of-the-different-fields">Detail of the different fields</h2>
+		<ul>
+			<li>
+				<code>contributorId</code>: a string defining on which active editor the tab shall appear
+			</li>
+			<li>
+				<code>id</code>: an unique identifier for the command
+			</li>
+			<li>
+				<code>class</code>: an unique identifier for the command
+			</li>
+			<li>
+				<code>filter</code>: a class filter inheriting from org.eclipse.jface.viewers.IFilter
+			</li>
+			<li>or use 
+				<code>input/type</code>: a classname
+			</li>
+			<li>
+				<code>tab</code>: an unique identifier for the tab on which the section shall appear
+			</li>
+		</ul>
+		<h3 id="tab-per-contributorid">
+			<code>tab</code> per 
+			<code>contributorId</code>
+		</h3>
+		<p>| tab \ contributorId	|	
+			<code>org.polarsys.capella.core.data.capellamodeller.properties</code>	| 	
+			<code>org.eclipse.sirius.diagram.ui</code> | 		
+			<code>org.eclipse.sirius.table.ui.EditorID</code>| 
+			| ----	| 	----	| ----| ----| 
+			| 	 	Capella	| 
+			<code>BaseCapella</code>| 
+			<code>BaseSiriusDiagram</code>|
+			<code>BaseSiriusTable</code> | 
+			| 		Management	| 
+			<code>ManagementCapella</code>| 
+			<code>ManagementSiriusDiagram</code>| 
+			<code>ManagementSiriusTable</code>| 
+			| 		Description	| 
+			<code>DescriptionCapella</code>| 
+			<code>DescriptionSiriusDiagram</code>| 
+			<code>DescriptionSiriusTable</code>| 
+			| 		Extensions	| 
+			<code>ExtensionsCapella</code>| 
+			<code>ExtensionsSiriusDiagram</code>|
+			<code>ExtensionsSiriusTable</code> | 
+		</p>
+		<h2 id="properties-implementation">Properties implementation</h2>
+		<p>The 
+			<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.ui.properties/src/org/polarsys/capella/core/ui/properties/sections/AbstractSection.java" target="_blank">org.polarsys.capella.core.ui.properties.AbstractSection</a> class provides some facilities to manage section.
+		</p>
+		<h2 id="sample">Sample</h2>
+		<ul>
+			<li>The 
+				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.validation.commandline/src/org/polarsys/capella/core/validation/commandline/ValidationCommandLine.java" target="_blank">Java class</a> defining the section
+			</li>
+			<li>Its registration within plugin.xml 
+				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.ctx.properties/plugin.xml#L17-L23" target="_blank">for Capella views</a>, 
+				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.ctx.properties/plugin.xml#L110-L117" target="_blank">for Diagrams</a>, 
+				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.ctx.properties/plugin.xml#L204-L211" target="_blank">for Tables</a>
+			</li>
+			<li>In 
+				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.common.properties/META-INF/MANIFEST.MF#L8" target="_blank">MANIFEST/MANIFEST.MF</a> file we need to depend on 
+				<code>org.polarsys.capella.core.ui.properties</code>
+			</li>
+		</ul>
+	</body>
+</html>
