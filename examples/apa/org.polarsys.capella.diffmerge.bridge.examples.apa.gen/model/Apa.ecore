@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="apa" nsURI="http://www.eclipse.org/emf/diffmerge/bridge/apa/1.0.0"
+    nsPrefix="org.polarsys.capella.diffmerge.bridge.examples.apa.gen">
+  <eClassifiers xsi:type="ecore:EClass" name="ANamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AScope" eSuperTypes="#//ANamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
+        eType="#//ANode" containment="true" eOpposite="#//ANode/owningScope"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exchanges" upperBound="-1"
+        eType="#//AExchange" containment="true" eOpposite="#//AExchange/owningScope"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ANode" eSuperTypes="#//ANamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owningScope" lowerBound="1"
+        eType="#//AScope" eOpposite="#//AScope/nodes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviors" upperBound="-1"
+        eType="#//ABehavior" containment="true" eOpposite="#//ABehavior/owningNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ABehavior" eSuperTypes="#//ANamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owningNode" lowerBound="1"
+        eType="#//ANode" eOpposite="#//ANode/behaviors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functions" upperBound="-1"
+        eType="#//AFunction" containment="true" eOpposite="#//AFunction/owningBehavior"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AFunction" eSuperTypes="#//ANamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owningBehavior" lowerBound="1"
+        eType="#//ABehavior" eOpposite="#//ABehavior/functions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" upperBound="-1"
+        eType="#//AExchange" eOpposite="#//AExchange/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" upperBound="-1"
+        eType="#//AExchange" eOpposite="#//AExchange/source"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AExchange" eSuperTypes="#//ANamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owningScope" lowerBound="1"
+        eType="#//AScope" eOpposite="#//AScope/exchanges"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//AFunction" eOpposite="#//AFunction/outgoing"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//AFunction" eOpposite="#//AFunction/incoming"/>
+  </eClassifiers>
+</ecore:EPackage>
