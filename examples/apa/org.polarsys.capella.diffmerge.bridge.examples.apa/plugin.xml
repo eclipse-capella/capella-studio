@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2014-2019 Thales Global Services S.A.S.
+  This program and the accompanying materials are made
+  available under the terms of the Eclipse Public License 2.0
+  which is available at https://www.eclipse.org/legal/epl-2.0/
+  
+  SPDX-License-Identifier: EPL-2.0
+  
+   Contributors:
+  Thales Global Services S.A.S - initial API and implementation
+-->
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="org.polarsys.capella.diffmerge.bridge.examples.apa.diagramActions"
+            objectClass="org.eclipse.gef.EditPart">
+         <menu
+               id="org.polarsys.capella.diffmerge.bridge.examples.menu"
+               label="Bridge"
+               path="additions">
+            <groupMarker
+                  name="group">
+            </groupMarker>
+         </menu>
+         <action
+               class="org.polarsys.capella.diffmerge.bridge.examples.apa.actions.APABridgeAction"
+               enablesFor="1"
+               id="org.polarsys.capella.diffmerge.bridge.examples.apa.actions.GoUp"
+               label="To APA with Mapping"
+               menubarPath="org.polarsys.capella.diffmerge.bridge.examples.menu/group">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.polarsys.capella.diffmerge.bridge.examples.apa.gen.edit;singleton:=true
+Bundle-Version: 0.14.1.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.polarsys.capella.diffmerge.bridge.examples.apa.provider
+Require-Bundle: org.eclipse.core.runtime,
+ org.polarsys.capella.diffmerge.bridge.examples.apa.gen;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy
+Eclipse-LazyStart: true
+Bundle-Activator: org.polarsys.capella.diffmerge.bridge.examples.apa.provider.ApaEditPlugin$Implementation
+Automatic-Module-Name: org.polarsys.capella.diffmerge.bridge.examples.apa.gen.edit

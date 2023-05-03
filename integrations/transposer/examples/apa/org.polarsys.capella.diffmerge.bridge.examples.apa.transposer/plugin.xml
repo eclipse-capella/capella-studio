@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.mapping"
+         point="org.polarsys.kitalpha.transposer.rules.handler.mapping">
+      <mapping
+            description="Capella to Apa"
+            domainHelper="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.init.CapellaDomainHelper"
+            mappingName="Capella to Apa"
+            mappingPurpose="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.purpose"
+            private="false">
+         <mappingPackage
+               name="MainRules">
+            <mappingElement
+                  domainMetaClass="org.polarsys.capella.core.data.pa.PhysicalComponent"
+                  name="PC2AScope"
+                  reuseExtendedElementDefaultPossibility="true"
+                  reuseExtendedElementPossibilities="true">
+               <defaultMappingPossibility
+                     completeRule="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.rules.PC2AScope"
+                     enabled="true">
+               </defaultMappingPossibility>
+            </mappingElement>
+            <mappingElement
+                  domainMetaClass="org.polarsys.capella.core.data.cs.Part"
+                  name="Part2ANode"
+                  reuseExtendedElementDefaultPossibility="true"
+                  reuseExtendedElementPossibilities="true">
+               <defaultMappingPossibility
+                     completeRule="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.rules.Part2ANode"
+                     enabled="true">
+               </defaultMappingPossibility>
+            </mappingElement>
+            <mappingElement
+                  domainMetaClass="org.polarsys.capella.core.data.pa.deployment.PartDeploymentLink"
+                  name="PartDeploymentLink2ABehavior"
+                  reuseExtendedElementDefaultPossibility="true"
+                  reuseExtendedElementPossibilities="true">
+               <defaultMappingPossibility
+                     completeRule="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.rules.PDL2ABehavior"
+                     enabled="true">
+               </defaultMappingPossibility>
+            </mappingElement>
+            <mappingElement
+                  domainMetaClass="org.polarsys.capella.core.data.pa.PhysicalFunction"
+                  name="Function2AFunction"
+                  reuseExtendedElementDefaultPossibility="true"
+                  reuseExtendedElementPossibilities="true">
+               <defaultMappingPossibility
+                     completeRule="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.rules.Function2AFunction"
+                     enabled="true">
+               </defaultMappingPossibility>
+            </mappingElement>
+            <mappingElement
+                  domainMetaClass="org.polarsys.capella.core.data.fa.FunctionalExchange"
+                  name="FunctionalExchange2AExchange"
+                  reuseExtendedElementDefaultPossibility="true"
+                  reuseExtendedElementPossibilities="true">
+               <defaultMappingPossibility
+                     completeRule="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.rules.FE2AExchange"
+                     enabled="true">
+               </defaultMappingPossibility>
+            </mappingElement>
+         </mappingPackage>
+      </mapping>
+   </extension>
+   
+   <extension
+         point="org.polarsys.kitalpha.cadence.core.activity.declaration">
+      <ActivityDeclaration
+            ActivityClass="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.init.CapellaModelInitializer"
+            Identifier="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.CapellaInit"
+            Multiple="false"
+            Name="Capella Model Loading"
+            WorkflowElementIdentifier="org.polarsys.kitalpha.transposer.before.analysis"
+            WorkflowIdentifier="org.polarsys.kitalpha.transposer.workflow">
+         <Description>
+            The loading and initialization of a Capella model.
+         </Description>
+      </ActivityDeclaration>
+   </extension>
+
+</plugin>
