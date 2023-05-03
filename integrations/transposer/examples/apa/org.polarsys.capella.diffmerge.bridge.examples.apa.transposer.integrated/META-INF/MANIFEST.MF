@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Transposer Integration Example Plug-In (Incubation)
+Bundle-SymbolicName: org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.integrated;singleton:=true
+Bundle-Version: 0.14.1.qualifier
+Bundle-Activator: org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.integrated.TransposerIntegrationApaPlugin
+Bundle-Vendor: Eclipse Modeling Project
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.gef,
+ org.eclipse.gmf.runtime.notation,
+ org.polarsys.capella.diffmerge.bridge.examples.apa.transposer,
+ org.polarsys.kitalpha.diffmerge.bridge.integration.transposer,
+ org.eclipse.emf.diffmerge.bridge.interactive
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-ActivationPolicy: lazy
+Export-Package: org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.integrated
+Automatic-Module-Name: org.eclipse.emf.diffmerge.bridge.examples.apa.transposer.integrated
