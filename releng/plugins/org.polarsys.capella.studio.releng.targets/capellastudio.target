@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde?>
+<!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
+<target name="capellastudio" sequenceNumber="1678785311">
+  <locations>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.gmf.runtime.notation.sdk.feature.group" version="0.0.0"/>
+      <repository id="GMF-Notation-1.13.1" location="https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R202211151334"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.gmf.runtime.sdk.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.gmf.runtime.thirdparty.feature.group" version="0.0.0"/>
+      <repository id="GMF-Runtime-1.15.3" location="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/R202211041032/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.gef.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.gef.sdk.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.draw2d.sdk.feature.group" version="0.0.0"/>
+      <repository id="GEF-Classic" location="https://download.eclipse.org/tools/gef/classic/releases/3.15.0"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.m2e.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.egit.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.uml2.sdk.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.xtext.sdk.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.validation.ocl" version="0.0.0"/>
+      <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.transaction.doc.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.ui.ide" version="0.0.0"/>
+      <unit id="org.eclipse.ui.workbench" version="0.0.0"/>
+      <unit id="lpg.runtime.java.source" version="0.0.0"/>
+      <unit id="org.eclipse.ocl.common.source" version="0.0.0"/>
+      <unit id="org.eclipse.ocl.ecore.source" version="0.0.0"/>
+      <unit id="org.eclipse.ocl.source" version="0.0.0"/>
+      <unit id="org.eclipse.xtend.source" version="0.0.0"/>
+      <unit id="org.eclipse.xpand.source" version="0.0.0"/>
+      <unit id="org.eclipse.emf.mwe.core.source" version="0.0.0"/>
+      <unit id="org.eclipse.xtend.typesystem.emf.source" version="0.0.0"/>
+      <unit id="org.eclipse.emf.mwe.utils.source" version="0.0.0"/>
+      <unit id="org.eclipse.emf.mwe2.runtime.source" version="0.0.0"/>
+      <unit id="org.eclipse.e4.rcp.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.core.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.filetransfer.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.filetransfer.httpclient45.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.equinox.p2.core.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.equinox.p2.core.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.equinox.p2.extras.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.equinox.p2.rcp.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.equinox.p2.user.ui.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.help.source" version="0.0.0"/>
+      <unit id="org.eclipse.jdt.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.jgit" version="0.0.0"/>
+      <unit id="org.eclipse.ocl.all.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.cvs.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.pde.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.platform.source" version="0.0.0"/>
+      <unit id="org.eclipse.rcp.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.uml2.doc" version="0.0.0"/>
+      <unit id="org.eclipse.xsd.ecore.converter.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.xsd.edit.source" version="0.0.0"/>
+      <unit id="org.eclipse.xsd.editor.source" version="0.0.0"/>
+      <unit id="org.eclipse.xsd.mapping.editor.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.xsd.mapping.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.xsd.sdk.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.xsd.source" version="0.0.0"/>
+      <unit id="org.eclipse.xtend.sdk.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.xtext.docs.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.xtext.ui.source" version="0.0.0"/>
+      <unit id="org.eclipse.xtext.xbase.lib.source" version="0.0.0"/>
+      <unit id="org.eclipse.xtext.xbase.source" version="0.0.0"/>
+      <unit id="org.eclipse.xtext.xtext.ui.source" version="0.0.0"/>
+      <unit id="org.eclipse.emf.eef.sdk-feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.ecoretools.sdk.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.ecoretools.design.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.sdk.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.cdo.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.collections.feature.source.feature.group" version="0.0.0"/>
+      <repository id="Eclipse-2021-06" location="https://download.eclipse.org/releases/2021-06/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.acceleo.source.feature.group" version="3.7.11.202102190929"/>
+      <unit id="org.eclipse.acceleo.doc" version="3.7.11.202102190929"/>
+      <repository id="acceleo" location="https://download.eclipse.org/acceleo/updates/releases/3.7/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.sirius.doc.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.acceleo.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.acceleo.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.aql.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.aql.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.ide.eef.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.ide.ui.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.ide.xtext.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.ocl.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.ocl.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.specifier.ide.ui.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.specifier.ide.ui.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.specifier.ide.ui.acceleo.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.interpreter.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.properties.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.aql.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.ide.eef.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.ide.ui.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.ide.xtext.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.runtime.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.samples.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.specifier.properties.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.specifier.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.tests.feature.group" version="0.0.0"/>
+      <repository id="sirius" location="https://download.eclipse.org/sirius/updates/stable/7.1.0-S20230302-034329/2021-06/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.emf.diffmerge.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.diffmerge.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.diffmerge.sirius.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.diffmerge.sirius.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.diffmerge.gmf.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.diffmerge.gmf.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.diffmerge.egit.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.diffmerge.egit.feature.source.feature.group" version="0.0.0"/>
+      <repository id="EMF-DiffMerge" location="https://download.eclipse.org/diffmerge/stable/0.14.1-S20230308/emf-diffmerge-site/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.emf.diffmerge.patterns.sdk.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.diffmerge.patterns.sdk.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.diffmerge.patterns.sirius.sdk.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.diffmerge.patterns.sirius.sdk.feature.source.feature.group" version="0.0.0"/>
+      <repository id="EDM-Patterns" location="https://download.eclipse.org/diffmerge/stable/0.14.1-S20230308/edm-patterns-site/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.emf.diffmerge.coevolution.sdk.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.diffmerge.coevolution.sdk.feature.source.feature.group" version="0.0.0"/>
+      <repository id="coevolution" location="https://download.eclipse.org/diffmerge/stable/0.14.1-S20230308/edm-coevolution-site/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.amalgam.explorer.activity.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.amalgam.explorer.activity.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.amalgam.explorer.contextual.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.amalgam.explorer.contextual.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.amalgam.explorer.contextual.sirius.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.amalgam.explorer.contextual.sirius.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.amalgam.explorer.contextual.core.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.amalgam.explorer.contextual.core.source.feature.group" version="0.0.0"/>
+      <repository id="amalgam" location="https://download.eclipse.org/modeling/amalgam/updates/releases/1.13.0/capella"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.egf.sdk.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.egf.sdk.feature.source.feature.group" version="0.0.0"/>
+      <repository id="EGFSdk" location="https://download.eclipse.org/egf/updates/stable/1.6.3/2021-06/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.nebula.widgets.richtext.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.nebula.widgets.tablecombo.feature.feature.group" version="0.0.0"/>
+      <repository id="Nebula" location="https://download.eclipse.org/nebula/releases/2.3.0/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.nebula.widgets.nattable.core.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.extension.glazedlists.feature.feature.group" version="0.0.0"/>
+      <repository id="Nattable" location="https://download.eclipse.org/nattable/releases/2.0.1/repository/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="ca.odell.glazedlists" version="0.0.0"/>
+      <repository id="Orbit" location="https://download.eclipse.org/tools/orbit/downloads/drops/R20210602031627/repository"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.sirius.query.legacy.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.query.legacy.feature.source.feature.group" version="0.0.0"/>
+      <repository id="sirius-query-legacy-1.1.0" location="https://download.eclipse.org/sirius/updates/legacy/1.1.0"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.dsl.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.dsl.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.sdk.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.genchain.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.genchain.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.report.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.report.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.metadata.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.metadata.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.integration.sirius.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.integration.sirius.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.report.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.report.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.integration.emde.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.integration.emde.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.integration.amalgam.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.integration.amalgam.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.doc.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.as.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.as.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.cs.text.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.cs.text.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.generation.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.generation.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.servicies.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.af.dsl.servicies.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.services.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.viewpoint.dsl.services.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.common.share.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.common.share.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.ecore.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.ecore.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.egf.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.egf.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.emde.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.emde.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.cadence.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.cadence.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.transposer.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.transposer.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.explorer.contextual.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.explorer.contextual.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.doc.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.composer.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.composer.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.accuracy.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.accuracy.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.common.ui.menu.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.common.ui.menu.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.contrib.viewpoints.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.contrib.viewpoints.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.runtime.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.runtime.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.doc.gen.business.core.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.doc.gen.business.core.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.patterns.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.patterns.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.doc.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.sdk.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.sdk.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.ta.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.ad.ta.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.vp.componentsample.example.installer.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.vp.componentsample.example.installer.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.representation.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.doc.gen.business.ecore.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.doc.gen.business.ecore.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.sdk.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.emde.sdk.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.cadence.examples.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.cadence.examples.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.composer.examples.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.composer.examples.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.composer.componentsample.installer.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.composer.componentsample.installer.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.transposer.examples.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.transposer.examples.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.transposer.componentsample.installer.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.transposer.componentsample.installer.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.sdk.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.richtext.widget.doc.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.richtext.widget.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.richtext.widget.ext.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.richtext.widget.tools.ext.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.richtext.widget.tools.ext.feature.source.feature.group" version="0.0.0"/>
+      <repository id="kitalpha-sdk" location="https://download.eclipse.org/kitalpha/updates/stable/sdk/6.0.0.S202207151131/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.polarsys.kitalpha.runtime.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.runtime.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.common.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.common.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.massactions.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.kitalpha.massactions.feature.source.feature.group" version="0.0.0"/>
+      <repository id="kitalpha-runtime" location="https://download.eclipse.org/kitalpha/updates/stable/runtime/6.0.0.S202207151131/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.polarsys.capella.core.egf.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.core.egf.feature.source.feature.group" version="0.0.0"/>
+      <repository id="capella-egf-patterns" location="https://download.eclipse.org/capella/core/updates/releases/6.0.0/org.polarsys.capella.egf.site/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.polarsys.capella.rcp.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.rcp.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.cdo.mock.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.common.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.common.ui.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.core.advance.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.core.advance.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.core.feature.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.core.feature.source.feature.group" version="0.0.0"/>
+      <repository id="capella" location="https://download.eclipse.org/capella/core/updates/releases/6.0.0/org.polarsys.capella.rcp.site/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.polarsys.capella.test.feature.feature.group" version="0.0.0"/>
+      <repository id="capella-test" location="https://download.eclipse.org/capella/core/updates/releases/6.0.0/org.polarsys.capella.test.site/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.polarsys.capella.docgen.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.polarsys.capella.docgen.configuration.feature.source.feature.group" version="0.0.0"/>
+      <repository id="xhtml-docgen" location="https://download.eclipse.org/capella/addons/xhtmldocgen/updates/stable/6.0.0-S202207151132/"/>
+    </location>
+  </locations>
+</target>
