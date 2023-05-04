@@ -11,7 +11,7 @@ Require-Bundle: org.eclipse.ui,
  org.polarsys.capella.ad.viewpoint.dsl.generation.ui,
  org.polarsys.capella.extension.genchain
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-Vendor: %providerName
 Export-Package: org.polarsys.capella.ta,
  org.polarsys.capella.ta.definition
