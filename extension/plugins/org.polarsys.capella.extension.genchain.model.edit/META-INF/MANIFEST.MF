@@ -8,7 +8,7 @@ Bundle-SymbolicName: org.polarsys.capella.extension.genchain.model.edit;singleto
 Automatic-Module-Name: org.polarsys.capella.extension.genchain.model.edit
 Bundle-ClassPath: .
 Bundle-Activator: org.polarsys.capella.extension.genchain.capellaextension.provider.CapellaExtensionEditPlugin$Implementation
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.polarsys.capella.extension.genchain.capellaextension.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.polarsys.capella.extension.genchain.model;visibility:=reexport,

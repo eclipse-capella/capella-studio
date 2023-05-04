@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.capella.cdoxml.ta.genchain;singleton:=true
 Bundle-Version: 6.1.0.qualifier
 Bundle-Vendor: %providerName
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.eclipse.egf.portfolio.genchain,
  org.polarsys.capella.cdoxml.ta.genchain.model,
  org.eclipse.egf.pattern;visibility:=reexport,

@@ -37,7 +37,7 @@ Require-Bundle: org.eclipse.egf.pattern;visibility:=reexport,
  org.polarsys.capella.core.data.menu.contributions,
  org.polarsys.capella.core.ui.properties,
  org.polarsys.capella.core.egf
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy
 Export-Package: org.polarsys.capella.extension.tools,
  org.polarsys.capella.extension.tools.patterns.capellaElement.generation,

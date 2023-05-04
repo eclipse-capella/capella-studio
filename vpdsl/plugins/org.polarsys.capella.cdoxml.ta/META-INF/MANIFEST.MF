@@ -18,7 +18,7 @@ Require-Bundle: org.eclipse.ui,
  org.polarsys.capella.cdoxml.ta.genchain,
  org.polarsys.capella.extension.genchain,
  org.polarsys.capella.cdo.ta.definition
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Automatic-Module-Name: org.polarsys.capella.cdoxml.ta
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin

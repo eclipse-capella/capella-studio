@@ -6,7 +6,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-ClassPath: .
 Bundle-SymbolicName: org.polarsys.capella.extension.genchain;singleton:=true
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.polarsys.capella.extension.genchain,
  org.polarsys.capella.extension.genchain.patterns
 Require-Bundle: org.eclipse.core.runtime,
