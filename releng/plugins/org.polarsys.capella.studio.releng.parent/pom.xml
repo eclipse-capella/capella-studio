@@ -23,7 +23,7 @@
 	
 	<groupId>org.polarsys.capella</groupId>
 	<artifactId>org.polarsys.capella.studio</artifactId>
-	<version>6.1.0-SNAPSHOT</version>
+	<version>7.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
 	<licenses>
@@ -194,7 +194,7 @@
 						<artifact>
 							<groupId>org.polarsys.capella</groupId>
 							<artifactId>org.polarsys.capella.studio.releng.targets</artifactId>
-							<version>6.1.0-SNAPSHOT</version>
+							<version>7.0.0-SNAPSHOT</version>
 							<classifier>../../../releng/plugins/org.polarsys.capella.studio.releng.targets/${target-platform-name}</classifier>
 						</artifact>
 					</target>
