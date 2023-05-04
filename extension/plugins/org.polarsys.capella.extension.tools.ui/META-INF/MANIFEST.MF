@@ -14,5 +14,5 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.egf.portfolio.genchain.tools.ui,
  org.polarsys.capella.extension.genchain,
  org.polarsys.kitalpha.emde
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy

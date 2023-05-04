@@ -44,14 +44,14 @@
 		<tycho-extras-version>2.2.0</tycho-extras-version>
 		<platform-version-name>oxygen</platform-version-name>
 		<tycho.scmUrl>scm:git:https://github.com/eclipse/capella-studio</tycho.scmUrl>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 		
 		<sourcePhase>package</sourcePhase>
 		<testFiltreClass>**/AllTests.java</testFiltreClass>
 		<coverage.skip>false</coverage.skip>
 
-		<sonar.jacoco.release>0.8.6</sonar.jacoco.release>
+		<sonar.jacoco.release>0.8.8</sonar.jacoco.release>
 		
 		<rcptt-maven-version>2.5.4</rcptt-maven-version>
 		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/stable/component/6.0.0.S202112171603/</rcptt-kitalpha-components-site>
@@ -188,7 +188,7 @@
 				<version>${tycho-version}</version>
 				<configuration>
 					<targetDefinitionIncludeSource>honor</targetDefinitionIncludeSource>
-					<executionEnvironment>JavaSE-14</executionEnvironment>
+					<executionEnvironment>JavaSE-17</executionEnvironment>
 					<pomDependencies>consider</pomDependencies>
 					<target>
 						<artifact>

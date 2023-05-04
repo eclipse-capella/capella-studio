@@ -6,7 +6,7 @@ Bundle-Version: 0.14.1.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.polarsys.capella.diffmerge.bridge.examples.apa.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.polarsys.capella.diffmerge.bridge.examples.apa.gen;visibility:=reexport,
