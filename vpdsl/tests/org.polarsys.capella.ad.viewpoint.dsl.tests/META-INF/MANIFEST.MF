@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.egf.portfolio.genchain,
  org.polarsys.capella.ta,
  org.polarsys.kitalpha.ad.ta
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin

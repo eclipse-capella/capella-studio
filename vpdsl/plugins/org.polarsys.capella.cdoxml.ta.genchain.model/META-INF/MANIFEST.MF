@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.polarsys.capella.cdoxml.ta.genchain.model;singleton:=tr
 Bundle-Version: 6.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.polarsys.capella.cdoxml.ta.genchain.connectorextension,
  org.polarsys.capella.cdoxml.ta.genchain.connectorextension.impl,
  org.polarsys.capella.cdoxml.ta.genchain.connectorextension.util

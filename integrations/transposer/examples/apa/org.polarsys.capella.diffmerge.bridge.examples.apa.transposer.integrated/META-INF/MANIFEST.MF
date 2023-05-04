@@ -12,7 +12,7 @@ Require-Bundle: org.eclipse.ui,
  org.polarsys.capella.diffmerge.bridge.examples.apa.transposer,
  org.polarsys.kitalpha.diffmerge.bridge.integration.transposer,
  org.eclipse.emf.diffmerge.bridge.interactive
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy
 Export-Package: org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.integrated
 Automatic-Module-Name: org.eclipse.emf.diffmerge.bridge.examples.apa.transposer.integrated

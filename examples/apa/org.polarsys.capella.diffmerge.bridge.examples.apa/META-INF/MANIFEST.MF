@@ -14,6 +14,6 @@ Require-Bundle: org.eclipse.ui,
  org.polarsys.capella.diffmerge.bridge.examples.apa.gen,
  org.eclipse.emf.diffmerge.bridge.interactive,
  org.eclipse.emf.diffmerge.bridge.mapping
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: org.polarsys.capella.diffmerge.bridge.examples.apa
