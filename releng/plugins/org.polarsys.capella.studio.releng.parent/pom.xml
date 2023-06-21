@@ -40,8 +40,8 @@
 	</licenses>
 	
 	<properties>
-		<tycho-version>2.2.0</tycho-version>
-		<tycho-extras-version>2.2.0</tycho-extras-version>
+		<tycho-version>2.7.5</tycho-version>
+		<tycho-extras-version>2.7.5</tycho-extras-version>
 		<platform-version-name>oxygen</platform-version-name>
 		<tycho.scmUrl>scm:git:https://github.com/eclipse/capella-studio</tycho.scmUrl>
 		<maven.compiler.source>17</maven.compiler.source>
@@ -51,10 +51,10 @@
 		<testFiltreClass>**/AllTests.java</testFiltreClass>
 		<coverage.skip>false</coverage.skip>
 
-		<sonar.jacoco.release>0.8.8</sonar.jacoco.release>
+		<sonar.jacoco.release>0.8.10</sonar.jacoco.release>
 		
 		<rcptt-maven-version>2.5.4</rcptt-maven-version>
-		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/stable/component/6.0.0.S202112171603/</rcptt-kitalpha-components-site>
+		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/stable/component/7.0.0.20230607/</rcptt-kitalpha-components-site>
 		
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
 		<capellastudio-application>org.polarsys.capella.studio.product.application</capellastudio-application>
