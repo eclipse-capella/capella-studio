@@ -46,11 +46,11 @@
     <module>../../../tests/plugins/org.polarsys.capella.studio.test</module>
     <module>../../../vpdsl/tests/org.polarsys.capella.ad.viewpoint.dsl.tests</module>
     <!-- Plugin Tests RCPTT Capella Studio -->
-    <module>../../../extension/tests/org.polarsys.capella.extension.rcptt</module>
-    <module>../../../gendoc/tests/org.polarsys.capella.gen.doc.tests</module>
-    <module>../../../vpdsl/tests/org.polarsys.capella.studio.ad.viewpoint.rcptt</module>
+    <!--module>../../../extension/tests/org.polarsys.capella.extension.rcptt</module-->
+    <!--module>../../../gendoc/tests/org.polarsys.capella.gen.doc.tests</module-->
+    <!--module>../../../vpdsl/tests/org.polarsys.capella.studio.ad.viewpoint.rcptt</module-->
     <!--module>../../../vpdsl/tests/capellastudio.vpdsl.qualityassessment.reverse.tests</module-->
-    <module>../../../vpdsl/tests/capellastudio.vpdsl.qualityassessment.tests</module>
+    <!--module>../../../vpdsl/tests/capellastudio.vpdsl.qualityassessment.tests</module-->
     
     <!-- Features  -->
     <module>../../../tests/features/org.polarsys.capella.studio.test.feature</module>

@@ -40,6 +40,10 @@
 				<configuration>
 					<runner>
 						<version>${rcptt-maven-version}</version>
+						 <vmArgs>
+						  <vmArg>-Xmx3g</vmArg>
+						  <vmArg>-XX:MaxMetaspaceSize=1024m</vmArg>
+					   </vmArgs>
 					</runner>
 					<aut>
 						<groupId>org.polarsys.capella</groupId>
