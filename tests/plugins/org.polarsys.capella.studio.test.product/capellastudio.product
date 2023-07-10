@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Capella Studio RCPTT Test Product" uid="org.polarsys.capella.studio.test.product" id="org.polarsys.capella.studio.product.CapellaStudio" application="org.polarsys.capella.studio.product.application" version="7.0.0.qualifier" useFeatures="true" includeLaunchers="true" autoIncludeRequirements="true">
+
+   <aboutInfo>
+      <image path="/org.polarsys.capella.studio.product/icons/CapellaStudioAbout.png"/>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-showLocation
+-showsplash
+org.polarsys.capella.studio.product.application
+--launcher.defaultAction
+openFile
+--launcher.appendVmargs
+      </programArgs>
+      <vmArgs>-Dosgi.requiredJavaVersion=17
+-Dosgi.dataAreaRequiresExplicitInit=true
+-Dpde.jreProfile=JavaSE-17
+-Xmx3g
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="/org.polarsys.capella.studio.product/icons/CapellaStudio16x16.png" i32="/org.polarsys.capella.studio.product/icons/CapellaStudio32x32.png" i48="/org.polarsys.capella.studio.product/icons/CapellaStudio48x48.png"/>
+
+   <splash
+      location="org.polarsys.capella.studio.product" />
+   <launcher>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+      <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17</linux>
+      <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17</macos>
+      <solaris include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17</solaris>
+      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17</windows>
+   </vm>
+
+   <license>
+        <text>
+   Eclipse Public License 2.0
+
+This program and the accompanying materials are made available under the
+terms of the Eclipse Public License 2.0 which is available at
+http://www.eclipse.org/legal/epl-2.0
+
+SPDX-License-Identifier: EPL-2.0
+         </text>
+   </license>
+
+   <plugins>
+      <plugin id="org.eclipse.update.configurator"/>
+   </plugins>
+
+   <features>
+      <feature id="org.polarsys.capella.studio.releng.eclipse.feature" version="7.0.0.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.kitalpha.feature" version="7.0.0.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.capella.feature" version="7.0.0.qualifier"/>
+      <feature id="org.eclipse.rcptt.core" installMode="root"/>
+      <feature id="org.eclipse.rcptt.ecl.core" installMode="root"/>
+      <feature id="org.eclipse.rcptt.ecl.platform" installMode="root"/>
+      <feature id="org.eclipse.rcptt.ecl.platform.ui" installMode="root"/>
+      <feature id="org.eclipse.rcptt.ecl.server" installMode="root"/>
+      <feature id="org.eclipse.rcptt.external.dependencies.feature" installMode="root"/>
+      <feature id="org.eclipse.rcptt.launching" installMode="root"/>
+      <feature id="org.eclipse.rcptt.module.nebula" installMode="root"/>
+      <feature id="org.eclipse.rcptt.module.testrail" installMode="root"/>
+      <feature id="org.eclipse.rcptt.platform" installMode="root"/>
+      <feature id="org.eclipse.rcptt.rap.ui.feature" installMode="root"/>
+      <feature id="org.eclipse.rcptt.tesla" installMode="root"/>
+      <feature id="org.eclipse.rcptt.tesla.ecl" installMode="root"/>
+      <feature id="org.eclipse.rcptt.updates" installMode="root"/>
+      <feature id="org.eclipse.rcptt.watson" installMode="root"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="4" />
+      <property name="org.eclipse.update.reconcile" value="false" />
+   </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
+
+</product>

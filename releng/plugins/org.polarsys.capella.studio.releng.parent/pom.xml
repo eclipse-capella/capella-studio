@@ -16,7 +16,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<prerequisites>
-		<maven>3.3</maven>
+		<maven>3.0</maven>
 	</prerequisites>
 	
 	<name>Capella Studio</name>
@@ -58,13 +58,12 @@
 		
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
 		<capellastudio-application>org.polarsys.capella.studio.product.application</capellastudio-application>
+		<targetPlatform.id>full</targetPlatform.id>
+		<targetPlatform.name>capellastudio.targetplatform</targetPlatform.name>
 	</properties>
 	<profiles>
 		<profile>
 			<id>full</id>
-			<properties>
-				<target-platform-name>capellastudio</target-platform-name>
-			</properties>
 			<modules>
 				<!-- module TP -->
 				<module>../org.polarsys.capella.studio.releng.targets</module>
@@ -139,12 +138,13 @@
 			<id>product</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
-			</activation>
+			</activation>	
 			<properties>
-				<target-platform-name>capellastudio</target-platform-name>
-			</properties>
+					<targetPlatform.id>test</targetPlatform.id>
+					<targetPlatform.name>capellastudio_rcptt</targetPlatform.name>
+				</properties>			
 			<modules>
-				<module>../../../releng/plugins/org.polarsys.capella.studio.releng.product</module>
+				<module>../../../tests/plugins/org.polarsys.capella.studio.test.product</module>
 			</modules>
 		</profile>
 		<profile>
@@ -178,7 +178,7 @@
 					</includes>
 					<useUIHarness>true</useUIHarness>
 					<testRuntime>p2Installed</testRuntime>
-					<work>${session.executionRootDirectory}/releng/plugins/org.polarsys.capella.studio.releng.product/target/products/org.polarsys.capella.studio.releng.product/linux/gtk/x86_64</work>
+					<work>${session.executionRootDirectory}/tests/plugins/org.polarsys.capella.studio.test.product/target/products/org.polarsys.capella.studio.test.product/linux/gtk/x86_64</work>
 					<profileName>SDKProfile</profileName>
 				</configuration>
 			</plugin>
@@ -187,6 +187,7 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
+					<resolver>p2</resolver>
 					<targetDefinitionIncludeSource>honor</targetDefinitionIncludeSource>
 					<executionEnvironment>JavaSE-17</executionEnvironment>
 					<pomDependencies>consider</pomDependencies>
@@ -195,7 +196,7 @@
 							<groupId>org.polarsys.capella</groupId>
 							<artifactId>org.polarsys.capella.studio.releng.targets</artifactId>
 							<version>7.0.0-SNAPSHOT</version>
-							<classifier>../../../releng/plugins/org.polarsys.capella.studio.releng.targets/${target-platform-name}</classifier>
+							<classifier>../org.polarsys.capella.studio.releng.targets/${targetPlatform.id}/${targetPlatform.name}</classifier>
 						</artifact>
 					</target>
 					<dependency-resolution>

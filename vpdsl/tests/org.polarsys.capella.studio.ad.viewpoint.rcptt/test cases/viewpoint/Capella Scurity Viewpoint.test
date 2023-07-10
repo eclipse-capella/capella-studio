@@ -1,13 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
-Contexts: _smWEoGVSEeafoPkljqA9vA,_dmcVkGhtEeab7okcBYwVdA
+Contexts: _dmcVkGhtEeab7okcBYwVdA
 Element-Name: Capella Scurity Viewpoint
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _ZNVScGVbEeafoPkljqA9vA
-Runtime-Version: 2.5.2.202109092356
-Save-Time: 12/20/21, 5:35 PM
+Runtime-Version: 2.5.5.202306261357
+Save-Time: 7/3/23, 2:59 PM
 Testcase-Type: ecl
 Verifications: _GOPwsCTJEeuLhsTI3sCxLA
 
@@ -28,20 +28,8 @@ with [get-window "New Viewpoint DSL Project"] {
 }
 
 with [get-editor "security4Capella.spec.vptext" | get-text-viewer] {
-    set-caret-pos 10 29
-    key-type Enter
-    key-type "M1+SPACE"
-    key-type Down -times 3
-    key-type Enter
-    type-text " "
-    key-type "M1+SPACE"
-    key-type Enter
-    set-caret-pos 12 20
-    key-type "M1+s"
-}
-with [get-editor "security4Capella.spec.vptext" | get-text-viewer] {
-    set-caret-pos 12 20
-    key-type F3
+    set-caret-pos 11 29
+ 	key-type F3
 }
 get-view "Project Explorer" | get-tree | select "project.tmp/capella/data" | double-click
 with [get-editor data | get-text-viewer] {
@@ -74,11 +62,10 @@ with [get-editor "security4Capella.vpdesc" | get-tree] {
 get-editor "security4Capella.vpdesc" | close
 get-tab-folder -index 2 | get-tab-item "security4Capella.spec.vptext" | click
 with [get-editor "security4Capella.spec.vptext" | get-text-viewer] {
-    set-caret-pos 12 31
+    set-caret-pos 11 31
     key-type Enter
     key-type "M1+SPACE"
     key-type Down -times 6
-    key-type Enter
 }
 
 get-window "Viewpoint UI File Creation Wizard" | get-button Finish | click

@@ -21,10 +21,10 @@ openFile
       <programArgsLin>--launcher.GTK_version
 2
       </programArgsLin>
-      <vmArgs>-Dosgi.requiredJavaVersion=11
+      <vmArgs>-Dosgi.requiredJavaVersion=17
 -Dosgi.dataAreaRequiresExplicitInit=true
 -Xms512m
--Xmx2048m
+-Xmx3g
 -XX:PermSize=256M
 -XX:-UseGCOverheadLimit
       </vmArgs>

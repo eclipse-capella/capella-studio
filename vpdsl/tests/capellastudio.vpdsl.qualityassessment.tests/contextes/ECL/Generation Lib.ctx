@@ -5,7 +5,8 @@ Element-Name: Generation Lib
 Element-Type: context
 Element-Version: 2.0
 Id: _KOH-MKJ5EeWqlNQu-Q0L2A
-Save-Time: 11/12/20, 10:20 AM
+Runtime-Version: 2.5.5.202306261357
+Save-Time: 6/30/23, 3:11 PM
 
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
 Content-Type: text/ecl
@@ -77,6 +78,7 @@ proc "lookForDropinsFolder" [val contextFolderPath] [val parentFilter] [val fold
 	get-file [ $contextFolderPath ] | get children | foreach [val item] {
 	   if [$item | get name | contains [ $parentFilter ] ]
 	   {
+	  	 if [$item | get isDirectory]{
 	   		get-file [$item | get uri] | get children | foreach [val sitem] 
 	   		{
 	   			if [ $sitem | get name | contains [ $folderFilter ] ]
@@ -96,8 +98,11 @@ proc "lookForDropinsFolder" [val contextFolderPath] [val parentFilter] [val fold
 								}]
 	   			}
 			}
-	   }
-	}        
+	   
+		  }
+		}        
+	}
+	
 }
 
 // Prepare model to validation

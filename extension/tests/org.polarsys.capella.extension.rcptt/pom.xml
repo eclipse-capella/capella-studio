@@ -29,6 +29,22 @@
 		<relativePath>../../../releng/plugins/org.polarsys.capella.studio.releng.parent</relativePath>
 	</parent>
 	
+	<pluginRepositories>
+		<pluginRepository>
+			<id>rcptt-releases</id>
+			<name>RCPTT Maven repository</name>
+			<url>https://repo.eclipse.org/content/repositories/rcptt-releases/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>rcptt-snapshots</id>
+			<name>RCPTT Maven Snapshots repository</name>
+			<snapshots>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+			<url>https://repo.eclipse.org/content/repositories/rcptt-snapshots/</url>
+		</pluginRepository>
+	</pluginRepositories>
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -41,13 +57,22 @@
 						<version>${rcptt-maven-version}</version>
 						 <vmArgs>
 						  <vmArg>-Xmx3g</vmArg>
-						  <vmArg>-XX:MaxMetaspaceSize=1024m</vmArg>
+						  <vmArg>--add-modules=ALL-SYSTEM</vmArg>
+						  <vmArg>-Djava.security.manager=allow</vmArg>
 					   </vmArgs>
 					</runner>
+					<testOptions>
+						<execTimeout>3600</execTimeout>
+						<testExecTimeout>300</testExecTimeout>
+					</testOptions>
+					<suites>
+						<suite>GenChain</suite>
+					</suites>
 					<aut>
-						<groupId>org.polarsys.capella</groupId>
-						<artifactId>org.polarsys.capella.studio.releng.product</artifactId>
-						<version>${project.version}</version>
+						<args>
+							<arg>-autArgs</arg>
+						</args>
+						<explicit>../../../tests/plugins/org.polarsys.capella.studio.test.product/target/products/capella-studio-test-[platform].zip</explicit>
 					</aut>
 				</configuration>
 			</plugin>

@@ -203,7 +203,7 @@
 		<echo file="${compilation.problem.marker}" message="org.polarsys.capella.vp.qualityassessment.vpdsl_1.0.0.202304031013${line.separator}compilation.error.occured=${compilation.error.occured}"/>
 		<eclipse.logCompileError log="${compilation.prereq.log}" bundle="org.polarsys.capella.vp.qualityassessment.vpdsl_1.0.0.202304031013">
 			<include name="C:/Eclipse/2022-06-commiters/git/kitalpha/resource reuse/plugins/org.polarsys.kitalpha.resourcereuse/compilation.problem"/>
-			<include name="${pluginTemp}/org.polarsys.kitalpha.resourcereuse_6.1.0.202304031013/compilation.problem"/>
+			<include name="${pluginTemp}/org.polarsys.kitalpha.resourcereuse_7.0.0.202304031013/compilation.problem"/>
 		</eclipse.logCompileError>
 	</target>
 

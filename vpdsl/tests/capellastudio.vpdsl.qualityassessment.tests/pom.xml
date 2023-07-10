@@ -47,13 +47,13 @@
 					</runner>
 					<aut>
 						<groupId>org.polarsys.capella</groupId>
-						<artifactId>org.polarsys.capella.studio.releng.product</artifactId>
+						<artifactId>org.polarsys.capella.studio.test.product</artifactId>
 						<version>${project.version}</version>
+						<args>
+							<arg>-autArgs</arg>
+						</args>
+						<explicit>../../../tests/plugins/org.polarsys.capella.studio.test.product/target/products/capella-studio-test-[platform].zip</explicit>
 					</aut>
-					<testOptions>
-					    <execTimeout>1200</execTimeout>
-					    <testExecTimeout>900</testExecTimeout>
-					</testOptions>
 				</configuration>
 			</plugin>
 		</plugins>

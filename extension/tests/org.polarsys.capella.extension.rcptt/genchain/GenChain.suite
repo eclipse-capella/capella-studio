@@ -1,0 +1,19 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: GenChain
+Element-Type: testsuite
+Element-Version: 2.0
+Id: _Hci-QBr8Ee6nHqCu8j06LQ
+Runtime-Version: 2.5.5.202306261357
+Save-Time: 7/5/23, 8:21 AM
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
+Content-Type: text/testcase
+Entry-Name: testcase-items
+
+_GfqzEGrnEeiQraq6seMfoQ	// kind: 'test' name: 'genchain_01' path: 'genchain_01.test'
+_gYc8sGrsEeiQraq6seMfoQ	// kind: 'test' name: 'genchain_02' path: 'genchain_02.test'
+_h_-IkGr2EeiQraq6seMfoQ	// kind: 'test' name: 'genchain_03' path: '../target/projects/org.polarsys.capella.extension.rcptt/genchain/genchain_03.test'
+_tILWoGr3EeiQraq6seMfoQ	// kind: 'test' name: 'genchain_04' path: '../target/projects/org.polarsys.capella.extension.rcptt/genchain/genchain_04.test'
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--
