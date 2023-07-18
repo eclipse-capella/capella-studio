@@ -56,7 +56,7 @@
 					<runner>
 						<version>${rcptt-maven-version}</version>
 						 <vmArgs>
-						  <vmArg>-Xmx3g</vmArg>
+						  <vmArg>-Xmx2g</vmArg>
 						  <vmArg>--add-modules=ALL-SYSTEM</vmArg>
 						  <vmArg>-Djava.security.manager=allow</vmArg>
 					   </vmArgs>
