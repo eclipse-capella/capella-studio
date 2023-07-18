@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.diagramActions"
+            objectClass="org.eclipse.gef.EditPart">
+         <menu
+               id="org.polarsys.capella.diffmerge.bridge.examples.menu"
+               label="Bridge"
+               path="additions">
+            <groupMarker
+                  name="group">
+            </groupMarker>
+         </menu>
+         <action
+               class="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.integrated.TransposerAPABridgeAction"
+               enablesFor="1"
+               id="org.polarsys.capella.diffmerge.bridge.examples.apa.transposer.actions.GoUp"
+               label="To APA with Transposer"
+               menubarPath="org.polarsys.capella.diffmerge.bridge.examples.menu/group">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

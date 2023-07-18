@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+  Copyright (c) 2015-2019 Thales Global Services S.A.S.
+  This program and the accompanying materials are made
+  available under the terms of the Eclipse Public License 2.0
+  which is available at https://www.eclipse.org/legal/epl-2.0/
+  
+  SPDX-License-Identifier: EPL-2.0
+  
+   Contributors:
+  Thales Global Services S.A.S - initial API and implementation
+-->
+<plugin>
+  <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.polarsys.capella.diffmerge.bridge.examples.apa2capella.Apa2CapellaBridgeHandler"
+            description="Generate Capella Model from APA Model"
+            id="org.polarsys.capella.diffmerge.bridge.example.ui.command"
+            name="Generate Capella Model from APA model">
+      </command>
+   </extension>
+   <extension
+        point="org.eclipse.ui.menus">
+     <menuContribution
+           allPopups="false"
+           locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+        <command
+              commandId="org.polarsys.capella.diffmerge.bridge.example.ui.command"
+              label="APA-to-Capella Bridge"
+              style="push">
+     	 <visibleWhen
+       		checkEnabled="false">
+		   <with variable="activeMenuSelection">
+		      <iterate
+		           ifEmpty="false">
+		         <adapt type="org.eclipse.core.resources.IResource">
+		              <test property="org.eclipse.core.resources.extension" value="apa" />
+		         </adapt>
+		      </iterate>
+		   </with>
+		</visibleWhen>
+        </command>
+     </menuContribution> 
+  </extension>
+</plugin>

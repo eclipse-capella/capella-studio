@@ -2,11 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.capella.cdoxml.ta.genchain.model.edit;singleton:=true
-Bundle-Version: 6.1.0.qualifier
+Bundle-Version: 7.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.polarsys.capella.cdoxml.ta.genchain.connectorextension.provider.ConnectorExtensionEditPlugin$Implementation
 Bundle-Vendor: %providerName
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.polarsys.capella.cdoxml.ta.genchain.connectorextension.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.polarsys.capella.cdoxml.ta.genchain.model;visibility:=reexport,
