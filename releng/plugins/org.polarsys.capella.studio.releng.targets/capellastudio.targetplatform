@@ -168,6 +168,10 @@ location capella "https://download.eclipse.org/capella/core/updates/stable/7.0.0
 	org.polarsys.capella.core.feature.source.feature.group lazy
 }
 
+location capella-tests "https://download.eclipse.org/capella/core/updates/stable/7.0.0-S20230717/org.polarsys.capella.test.site" {
+	org.polarsys.capella.test.feature.feature.group
+}
+
 location xhtml-docgen "https://download.eclipse.org/capella/addons/xhtmldocgen/updates/nightly/master/" {
 	 org.polarsys.capella.docgen.feature.source.feature.group lazy
 	 org.polarsys.capella.docgen.configuration.feature.source.feature.group lazy
