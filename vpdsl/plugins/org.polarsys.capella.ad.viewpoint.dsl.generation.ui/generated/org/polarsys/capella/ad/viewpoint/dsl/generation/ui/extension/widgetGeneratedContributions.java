@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.1.201906060805
+//Generated with EGF 1.6.4.202309201142
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extension;
 
 import java.util.Map.Entry;

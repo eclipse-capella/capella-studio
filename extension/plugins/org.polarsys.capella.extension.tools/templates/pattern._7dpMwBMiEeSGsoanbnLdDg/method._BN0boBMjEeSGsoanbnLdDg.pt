@@ -2,7 +2,6 @@
 		genModel.getEditPluginVariables().add("org.polarsys.capella.core.menu.dynamic");
 		genModel.getEditPluginVariables().add("org.polarsys.capella.core.ui.properties");
 		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.sharedmodel.properties");
-		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.requirement.properties");
 		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.common.properties");
 		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.core.properties");
 		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.cs.properties");

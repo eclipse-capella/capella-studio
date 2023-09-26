@@ -1,4 +1,4 @@
-//Generated with EGF 1.4.1.v20161010-1511
+//Generated with EGF 1.6.4.202309201142
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extension;
 
 import org.eclipse.egf.common.helper.*;
@@ -34,7 +34,6 @@ public class UIContainer2PropertySection
 	protected final String TEXT_7 = "\">" + NL + "               </input>";
 	protected final String TEXT_8 = NL + "\t\t    </propertySection> " + NL + "\t\t    ";
 	protected final String TEXT_9 = NL;
-	protected final String TEXT_10 = NL;
 
 	public UIContainer2PropertySection() {
 		//Here is the constructor
@@ -71,7 +70,7 @@ public class UIContainer2PropertySection
 		}
 
 		stringBuffer.append(TEXT_9);
-		stringBuffer.append(TEXT_10);
+		stringBuffer.append(TEXT_9);
 		return stringBuffer.toString();
 	}
 

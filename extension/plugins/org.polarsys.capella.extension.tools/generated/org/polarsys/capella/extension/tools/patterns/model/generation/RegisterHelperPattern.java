@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.3.202110291409
+//Generated with EGF 1.6.4.202309201142
 package org.polarsys.capella.extension.tools.patterns.model.generation;
 
 import java.util.HashMap;
@@ -228,7 +228,6 @@ import org.polarsys.capella.core.data.helpers.pa.delegates.PhysicalComponentHelp
 import org.polarsys.capella.core.data.helpers.pa.delegates.PhysicalFunctionHelper;
 import org.polarsys.capella.core.data.helpers.pa.delegates.PhysicalNodeHelper;
 import org.polarsys.capella.core.data.helpers.pa.delegates.PortInstanceHelper;
-import org.polarsys.capella.core.data.helpers.requirement.delegates.RequirementHelper;
 import org.polarsys.capella.core.data.information.InformationPackage;
 import org.polarsys.capella.core.data.information.communication.CommunicationPackage;
 import org.polarsys.capella.core.data.information.communication.properties.sections.CommunicationItemSection;
@@ -439,11 +438,8 @@ import org.polarsys.capella.core.data.pa.properties.sections.PhysicalComponentSe
 import org.polarsys.capella.core.data.pa.properties.sections.PhysicalFunctionPkgSection;
 import org.polarsys.capella.core.data.pa.properties.sections.PhysicalFunctionSection;
 import org.polarsys.capella.core.data.pa.properties.sections.PhysicalNodeSection;
-import org.polarsys.capella.core.data.requirement.RequirementPackage;
-import org.polarsys.capella.core.data.requirement.properties.sections.RequirementSection;
 import org.polarsys.capella.extension.tools.HelperClassGenerator;
 
-import org.polarsys.capella.extension.tools.HelperClassGenerator;
 
 public class RegisterHelperPattern {
 
@@ -926,8 +922,6 @@ public class RegisterHelperPattern {
 				PhysicalArchitecturePkgItemContribution.class, PhysicalArchitecturePkgSection.class);
 		HelperClassGenerator.registerHelperAndSection(PaPackage.eINSTANCE.getPhysicalFunctionPkg(), null,
 				PhysicalFunctionPkgItemContribution.class, PhysicalFunctionPkgSection.class);
-		HelperClassGenerator.registerHelperAndSection(RequirementPackage.eINSTANCE.getRequirement(),
-				RequirementHelper.class, RequirementSection.class);
 		HelperClassGenerator.registerHelper(ActivityPackage.eINSTANCE.getAbstractActivity(),
 				AbstractActivityHelper.class);
 		HelperClassGenerator.registerHelper(ActivityPackage.eINSTANCE.getActivityEdge(), ActivityEdgeHelper.class);

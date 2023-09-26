@@ -231,7 +231,6 @@
 		HelperClassGenerator.registerHelperAndSection(PaPackage.eINSTANCE.getPhysicalArchitecture(), null, PhysicalArchitectureItemContribution.class, PhysicalArchitectureSection.class);
 		HelperClassGenerator.registerHelperAndSection(PaPackage.eINSTANCE.getPhysicalArchitecturePkg(), null, PhysicalArchitecturePkgItemContribution.class, PhysicalArchitecturePkgSection.class);
 		HelperClassGenerator.registerHelperAndSection(PaPackage.eINSTANCE.getPhysicalFunctionPkg(), null, PhysicalFunctionPkgItemContribution.class, PhysicalFunctionPkgSection.class);
-		HelperClassGenerator.registerHelperAndSection(RequirementPackage.eINSTANCE.getRequirement(), RequirementHelper.class, RequirementSection.class);
 		HelperClassGenerator.registerHelper(ActivityPackage.eINSTANCE.getAbstractActivity(), AbstractActivityHelper.class);
 		HelperClassGenerator.registerHelper(ActivityPackage.eINSTANCE.getActivityEdge(), ActivityEdgeHelper.class);
 		HelperClassGenerator.registerHelper(ActivityPackage.eINSTANCE.getActivityExchange(), ActivityExchangeHelper.class);
