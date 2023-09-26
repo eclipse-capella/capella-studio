@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.1.201906060805
+//Generated with EGF 1.6.4.202309201142
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.javaclasses;
 
 import org.eclipse.egf.common.helper.*;
@@ -267,7 +267,7 @@ public class MultipleSemanticFieldsQueryJavaClass
 		stringBuffer.append(iDataWidget.computeWidgetFieldETypeEPackage());
 		stringBuffer.append(TEXT_2);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "genSematicImports", stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "genSemanticImports", stringBuffer.toString());
 	}
 
 	protected void method_registerExtension(final StringBuffer stringBuffer, final PatternContext ctx)

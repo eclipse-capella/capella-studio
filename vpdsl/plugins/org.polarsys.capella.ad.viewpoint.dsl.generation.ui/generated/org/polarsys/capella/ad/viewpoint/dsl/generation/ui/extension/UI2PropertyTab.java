@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.0.201805040915
+//Generated with EGF 1.6.4.202309201142
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.extension;
 
 import org.eclipse.egf.common.helper.*;
@@ -36,7 +36,6 @@ public class UI2PropertyTab extends org.polarsys.capella.ad.viewpoint.dsl.genera
 	protected final String TEXT_7 = "\">" + NL + "\t\t    </propertyTab> " + NL + "\t\t\t";
 	protected final String TEXT_8 = NL + "\t</propertyTabs>" + NL + "</extension> " + NL;
 	protected final String TEXT_9 = NL;
-	protected final String TEXT_10 = NL;
 
 	public UI2PropertyTab() {
 		//Here is the constructor
@@ -73,7 +72,7 @@ public class UI2PropertyTab extends org.polarsys.capella.ad.viewpoint.dsl.genera
 		}
 
 		stringBuffer.append(TEXT_9);
-		stringBuffer.append(TEXT_10);
+		stringBuffer.append(TEXT_9);
 		return stringBuffer.toString();
 	}
 

@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.1.201906060805
+//Generated with EGF 1.6.4.202309201142
 package org.polarsys.capella.ad.viewpoint.dsl.generation.ui.javaclasses;
 
 import org.eclipse.egf.common.helper.*;
@@ -116,7 +116,7 @@ public class RadioboxJavaClass
 
 		method_genDefaultImport(new StringBuffer(), ictx);
 
-		method_genSematicImports(new StringBuffer(), ictx);
+		method_genSemanticImports(new StringBuffer(), ictx);
 
 		method_genClass(new StringBuffer(), ictx);
 
@@ -249,7 +249,7 @@ public class RadioboxJavaClass
 		new Node.DataLeaf(ictx.getNode(), getClass(), "genDefaultImport", stringBuffer.toString());
 	}
 
-	protected void method_genSematicImports(final StringBuffer stringBuffer, final PatternContext ctx)
+	protected void method_genSemanticImports(final StringBuffer stringBuffer, final PatternContext ctx)
 			throws Exception {
 
 		DataWidget dataWidget = epfUtility.getDataOf(parameter);
@@ -257,7 +257,7 @@ public class RadioboxJavaClass
 		stringBuffer.append(dataWidget.widgetFieldTypeEnumerator.enumImportName);
 		stringBuffer.append(TEXT_21);
 		InternalPatternContext ictx = (InternalPatternContext) ctx;
-		new Node.DataLeaf(ictx.getNode(), getClass(), "genSematicImports", stringBuffer.toString());
+		new Node.DataLeaf(ictx.getNode(), getClass(), "genSemanticImports", stringBuffer.toString());
 	}
 
 	public boolean preCondition(PatternContext ctx) throws Exception {

@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.3.202110291409
+//Generated with EGF 1.6.4.202309201142
 package org.polarsys.capella.extension.tools.patterns.edit.generation;
 
 import org.polarsys.capella.extension.tools.HelperClassGenerator.HelperInfo;

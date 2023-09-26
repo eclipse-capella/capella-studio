@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.3.202110291409
+//Generated with EGF 1.6.4.202309201142
 package org.polarsys.capella.extension.tools.patterns.edit.generation;
 
 import java.util.*;
@@ -60,7 +60,6 @@ public class ManifestMFPattern extends org.polarsys.kitalpha.emde.egf.edit.Manif
 		genModel.getEditPluginVariables().add("org.polarsys.capella.core.menu.dynamic");
 		genModel.getEditPluginVariables().add("org.polarsys.capella.core.ui.properties");
 		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.sharedmodel.properties");
-		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.requirement.properties");
 		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.common.properties");
 		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.core.properties");
 		genModel.getEditPluginVariables().add("org.polarsys.capella.core.data.cs.properties");

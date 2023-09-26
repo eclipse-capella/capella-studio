@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.3.202110291409
+//Generated with EGF 1.6.4.202309201142
 package org.polarsys.capella.extension.tools.patterns.edit.icons.generation;
 
 import org.eclipse.emf.codegen.ecore.genmodel.*;
@@ -143,7 +143,6 @@ public class PluginPattern extends org.eclipse.egf.emf.pattern.edit.Plugin {
 	protected final String TEXT_70 = "\".equals(key)) return IMAGES.";
 	protected final String TEXT_71 = "return key;" + NL + "\t}" + NL;
 	protected final String TEXT_72 = NL + "}";
-	protected final String TEXT_73 = NL;
 
 	public PluginPattern() {
 		//Here is the constructor
@@ -179,8 +178,8 @@ public class PluginPattern extends org.eclipse.egf.emf.pattern.edit.Plugin {
 			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
-		stringBuffer.append(TEXT_73);
-		stringBuffer.append(TEXT_73);
+		stringBuffer.append(TEXT_14);
+		stringBuffer.append(TEXT_14);
 		return stringBuffer.toString();
 	}
 
