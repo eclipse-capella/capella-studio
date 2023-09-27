@@ -102,12 +102,6 @@ Using **Pa**Factory, you will have access to `PaFactory.eINSTANCE.createPhysical
         <td>SharedmodelFactory</td>
     </tr>
     <tr>
-        <td>Requirement</td>
-        <td>requirement</td>
-        <td>RequirementPackage</td>
-        <td>RequirementFactory</td>
-    </tr>
-    <tr>
         <td>Interaction</td>
         <td>interaction</td>
         <td>InteractionPackage</td>
