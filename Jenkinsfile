@@ -9,6 +9,7 @@ pipeline {
 	    JACOCO_VERSION = "0.8.10"
 	    MVN_QUALITY_PROFILES = '-P full -P test'
 	    JACOCO_EXEC_FILE_PATH = '${WORKSPACE}/jacoco.exec'
+		CAPELLA_STUDIO_PRODUCT_PATH = "${WORKSPACE}/releng/plugins/org.polarsys.capella.studio.releng.product/target/products/org.polarsys.capella.studio.releng.product/linux/gtk/x86_64/"
 	}
 	stages {
 	
@@ -26,6 +27,17 @@ pipeline {
 					withEnv(['MAVEN_OPTS=-Xmx3g']) {
 						script {						
 							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"
+							sh" ls ${WORKSPACE}/releng"
+							sh" ls ${WORKSPACE}/releng/plugins/"
+							sh" ls ${WORKSPACE}/releng/plugins/org.polarsys.capella.studio.releng.product"
+							sh" ls ${WORKSPACE}/releng/plugins/org.polarsys.capella.studio.releng.product/target"
+							sh" ls ${WORKSPACE}/releng/plugins/org.polarsys.capella.studio.releng.product/target/products"
+							sh" ls ${WORKSPACE}/releng/plugins/org.polarsys.capella.studio.releng.product/target/products/org.polarsys.capella.studio.releng.product/"
+							sh "chmod 755 ${CAPELLA_STUDIO_PRODUCT_PATH}"
+	        			    def updateSite = "https://arm.prz.tgs.eu-west-1.aws.thales/artifactory/eclipse-p2-remote/releases/2023-03/"
+							def featureName = 'org.antlr.runtime/3.2.0.v201101311130'
+							eclipse.installFeature("${CAPELLA_STUDIO_PRODUCT_PATH}", updateSite, featureName, '-Xmx3g -Djavax.net.ssl.trustStore=d:/data/cacerts')
+
 							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} clean verify -P full -P sign -P product -P test -e -f pom.xml"
 						}
 					}
