@@ -16,7 +16,7 @@ For instance, with `PhysicalFunction`, you will see org.polarsys.capella.xxx.**p
 
 Using **Pa**Factory, you will have access to `PaFactory.eINSTANCE.createPhysicalFunction()` allowing you to create a Physical Function. 
 
-> To open Open Type wizard, you have to be in Capella Studio, Eclipse development platform or at least within Capella with Java features enabled (see [Development Environment](https://github.com/eclipse/capella/wiki/Development-Environment))  (Make sure you have the view `Package Explorer` active and not the `Project Explorer`)
+> To open Open Type wizard, you have to be in Capella Studio, Eclipse development platform or at least within Capella with Java features enabled (see [Development Environment](https://github.com/eclipse-capella/capella/wiki/Development-Environment))  (Make sure you have the view `Package Explorer` active and not the `Project Explorer`)
 
 > Don't forget to add some dependencies to your plugin, at least `org.polarsys.capella.core.model.helpers` `org.polarsys.capella.core.model.handler` will do the job.
 
@@ -169,7 +169,7 @@ Metamodel are defined in ecore files located under plugins ending by *.gen
 
 ## Browse
 
-[Model Analysis documentation](https://github.com/eclipse/capella/blob/master/doc/plugins/org.polarsys.capella.ui.doc/html/12.%20Model%20Analysis/12.5.2%20Acceleo%202%20Queries.mediawiki#advanced-queries)
+[Model Analysis documentation](https://github.com/eclipse-capella/capella/blob/master/doc/plugins/org.polarsys.capella.ui.doc/html/12.%20Model%20Analysis/12.5.2%20Acceleo%202%20Queries.mediawiki#advanced-queries)
 
 > One easiest way to retrieve references or attributes is to open the Properties View and go the Expert tab then choose relevant references/attributes for your query 
 > 

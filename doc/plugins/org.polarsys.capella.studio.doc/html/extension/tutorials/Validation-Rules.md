@@ -45,9 +45,9 @@ The contribution to the extension point is done in the plugin.xml file of the pl
 
 ## Detail of the different fields
 
-* `namespaceUri`: Namespace URI of one of the Capella metamodel subset. [see Metamodel](https://github.com/eclipse/capella/wiki/Metamodel)
+* `namespaceUri`: Namespace URI of one of the Capella metamodel subset. [see Metamodel](https://github.com/eclipse-capella/capella/wiki/Metamodel)
 
-* `categories`: [See definition of all categories](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.validation/plugin.xml)
+* `categories`: [See definition of all categories](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.validation/plugin.xml)
 
 ```
     capella.category/quality
@@ -95,7 +95,7 @@ The contribution to the extension point is done in the plugin.xml file of the pl
 
 ## Validation Rule implementation
 
-The [AbstractValidationRule](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.validation/src/org/polarsys/capella/core/validation/rule/AbstractValidationRule.java) class provides some facilities to manage messages.
+The [AbstractValidationRule](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.validation/src/org/polarsys/capella/core/validation/rule/AbstractValidationRule.java) class provides some facilities to manage messages.
 
 **Notes:**
 
@@ -113,8 +113,8 @@ The parameters are the validation context and a set of parameters that will be p
 
 The rule `DCOM_11` checks that a Function is allocated to a Component
 
-* The [Java class](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.fa.validation/src/org/polarsys/capella/core/data/fa/validation/function/LFCompAllocationLeastwise.java) defining the rule
+* The [Java class](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.fa.validation/src/org/polarsys/capella/core/data/fa/validation/function/LFCompAllocationLeastwise.java) defining the rule
 
-* Its registration within [plugin.xml](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.fa.validation/plugin.xml#L29)
+* Its registration within [plugin.xml](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.fa.validation/plugin.xml#L29)
 
-* In [MANIFEST/MANIFEST.MF](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.fa.validation/META-INF/MANIFEST.MF#L8) file we need to depends on `org.polarsys.capella.core.validation`
+* In [MANIFEST/MANIFEST.MF](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.fa.validation/META-INF/MANIFEST.MF#L8) file we need to depends on `org.polarsys.capella.core.validation`

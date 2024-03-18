@@ -63,7 +63,7 @@ TransactionalEditingDomain domain = session.getTransactionalEditingDomain();</co
 			<a href="https://git.eclipse.org/c/emf-transaction/org.eclipse.emf.transaction.git/tree/org.eclipse.emf.transaction/src/org/eclipse/emf/transaction/TransactionalEditingDomain.java" target="_blank">TransactionalEditingDomain</a>
 		</p>
 		<p>
-			<a href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/TransactionHelper.java" target="_blank">TransactionHelper</a>
+			<a href="https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/TransactionHelper.java" target="_blank">TransactionHelper</a>
 		</p>
 		<pre class="language-java"><code class="language-java">TransactionalEditingDomain domain = TransactionHelper.getEditingDomain(element)
 TransactionalEditingDomain domain = TransactionHelper.getEditingDomain(resource)</code></pre>
@@ -71,18 +71,18 @@ TransactionalEditingDomain domain = TransactionHelper.getEditingDomain(resource)
 			<a href="http://git.eclipse.org/c/emf-transaction/org.eclipse.emf.transaction.git/tree/org.eclipse.emf.transaction/src/org/eclipse/emf/transaction/util/TransactionUtil.java" target="_blank">TransactionUtil</a>
 		</p>
 		<p>
-			<a href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/EObjectExt.java" target="_blank">EObjectExt</a>
+			<a href="https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/EObjectExt.java" target="_blank">EObjectExt</a>
 		</p>
 		<pre class="language-java"><code class="language-java">Collection&lt;EObject&gt; subComponents = EObjectExt.getAll(element, CsPackage.Literals.COMPONENT)</code></pre>
 		<h2 id="executionmanager">ExecutionManager</h2>
 		<p>
-			<a href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.ef/src/org/polarsys/capella/common/ef/ExecutionManager.java" target="_blank">ExecutionManager</a>
+			<a href="https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common.ef/src/org/polarsys/capella/common/ef/ExecutionManager.java" target="_blank">ExecutionManager</a>
 		</p>
 		<p>
-			<a href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/TransactionHelper.java" target="_blank">TransactionHelper</a>
+			<a href="https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/TransactionHelper.java" target="_blank">TransactionHelper</a>
 		</p>
 		<p>
-			<a href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.ef/src/org/polarsys/capella/common/ef/command/AbstractReadWriteCommand.java" target="_blank">AbstractReadWriteCommand</a>
+			<a href="https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common.ef/src/org/polarsys/capella/common/ef/command/AbstractReadWriteCommand.java" target="_blank">AbstractReadWriteCommand</a>
 		</p>
 		<pre class="language-java"><code class="language-java">ExecutionManager manager = TransactionHelper.getExecutionManager(element)
 ExecutionManager manager = TransactionHelper.getExecutionManager(resource)</code></pre>
@@ -91,7 +91,7 @@ ExecutionManager manager = TransactionHelper.getExecutionManager(resource)</code
 TransactionalEditingDomain domain = manager.getEditingDomain();</code></pre>
 		<h2 id="ifile-resource">IFile/Resource</h2>
 		<p>
-			<a href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common/src/org/polarsys/capella/common/helpers/EcoreUtil2.java" target="_blank">EcoreUtil2</a>
+			<a href="https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common/src/org/polarsys/capella/common/helpers/EcoreUtil2.java" target="_blank">EcoreUtil2</a>
 		</p>
 		<pre class="language-java"><code class="language-java">EcoreUtil2.getFile(Resource)
 EcoreUtil2.getURI(file)</code></pre>
@@ -103,10 +103,10 @@ EcoreUtil2.getURI(file)</code></pre>
 		<h2 id="helpers">Helpers</h2>
 		<p>Many helpers exist in Capella, they are mainly located inside following plugins and have *Ext name</p>
 		<p>
-			<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.helpers" target="_blank">org.polarsys.capella.core.data.helpers</a>
+			<a href="https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.helpers" target="_blank">org.polarsys.capella.core.data.helpers</a>
 		</p>
 		<p>
-			<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.model.helpers" target="_blank">org.polarsys.capella.core.model.helpers</a>
+			<a href="https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.model.helpers" target="_blank">org.polarsys.capella.core.model.helpers</a>
 		</p>
 		<p>
 			<code>CapellaElementExt.creationService(x)</code> Helps to create additional elements like if it was created from Add Element menu. (for instance, the Part aside the Component, or min/max cardinalities on a Property)
@@ -162,7 +162,7 @@ ExecutionManager manager = TransactionHelper.getExecutionManager(element).execut
 });</code></pre>
 		<h2 id="create-an-element">Create an element</h2>
 		<p>To create an element, you need to know its type (for instance by looking at the properties view) and know from which metamodel it comes from. 
-			<a href="https://github.com/eclipse/capella/wiki/Metamodel" target="_blank">See Metamodel Tutorial</a>
+			<a href="https://github.com/eclipse-capella/capella/wiki/Metamodel" target="_blank">See Metamodel Tutorial</a>
 		</p>
 		<pre class="language-java"><code class="language-java">EObject element = ... //an element from physical layer
 ExecutionManager manager = TransactionHelper.getExecutionManager(element).execute(new AbstractReadWriteCommand() {

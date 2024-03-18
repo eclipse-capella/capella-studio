@@ -2,11 +2,11 @@
 
 The abstract principles to develop viewpoints are explained in [https://github.com/eclipse/kitalpha/wiki/Viewpoint-development Kitalpha].
 
-Access to the page of the [https://github.com/eclipse/capella-basic-vp/wiki Basic Viewpoints] for existing viewpoint samples.
+Access to the page of the [https://github.com/eclipse-capella/capella-basic-vp/wiki Basic Viewpoints] for existing viewpoint samples.
 
 ==Development Environment==
 
-Setting up the development environment is described in the [https://github.com/eclipse/capella/wiki/Development-Environment Capella wiki].
+Setting up the development environment is described in the [https://github.com/eclipse-capella/capella/wiki/Development-Environment Capella wiki].
 
 ==Working with a Viewpoint==
 There is 2 means to start working with a viewpoint in a workspace:
@@ -29,7 +29,7 @@ Set the name, choose Capella. An Eclipse plugin is generated and the following f
 
 [[Image:img/generated-vp-mass.png|227x267px]]
 
-You can check the [https://github.com/eclipse/capella-basic-vp/blob/master/massviewpoint/plugins/org.polarsys.capella.vp.mass.vpdsl/model capella-basic-vp] example.
+You can check the [https://github.com/eclipse-capella/capella-basic-vp/blob/master/massviewpoint/plugins/org.polarsys.capella.vp.mass.vpdsl/model capella-basic-vp] example.
 
 ===Prerequisite '''CDO for Capella''' target===
 If '''CDO for Capella''' is selected as target then one of the generated bundles is specific to the CDO platforms. Thus, it requires the bundle org.eclipse.emf.cdo which is not available into Capella Studio and the following steps are necessary:
@@ -127,7 +127,7 @@ A diagram is made of three parts:
 
 <br>
 '''Note:''' Even if it is possible to generate a skeleton for diagram tools using VPDSL, the odesign file will be the place to edit and maintain diagram representations.<br>
-See [https://github.com/eclipse/capella/wiki/Tutorials Sirius Tutorials].
+See [https://github.com/eclipse-capella/capella/wiki/Tutorials Sirius Tutorials].
 
 ==Import existing Viewpoint==
 Import the vpdsl project in the Capella Studio workspace.

@@ -2,7 +2,7 @@
 
 ## Development Platform
 
-See [Development Environment](https://github.com/eclipse/capella/wiki/Development-Environment) to use an IDE for development.
+See [Development Environment](https://github.com/eclipse-capella/capella/wiki/Development-Environment) to use an IDE for development.
 
 ## How to create an basic addon adding a menu
 
@@ -12,9 +12,9 @@ See [Development Environment](https://github.com/eclipse/capella/wiki/Developmen
   * in Dependencies, add for instance `org.eclipse.ui` `org.polarsys.capella.core.model.helpers` `org.polarsys.capella.core.model.handler`
   * in Extensions, click Add, and untick `show only extensions point from requiring plugin`
      * add `org.eclipse.ui.commands`, `org.eclipse.ui.menus` (when eclipse ask you to add them as dependencies, answer Yes)
-  * if you go to `plugin.xml` tab, you will see similar xml sections like in [Add a Menu](https://github.com/eclipse/capella/wiki/Add-Menu)
+  * if you go to `plugin.xml` tab, you will see similar xml sections like in [Add a Menu](https://github.com/eclipse-capella/capella/wiki/Add-Menu)
   * based on these extensions points, you will create a command, a menu containing the command, then a handler, which is java code done when user click the command.
-     * The `Command1Handler` in the sample sets the name of a System Function. In this class, you can manipulate capella model elements as you want. (see [command-handler](https://github.com/eclipse/capella/wiki/Add-Menu#command-handler) and API [Edit an Element](https://github.com/eclipse/capella/wiki/Edit))
+     * The `Command1Handler` in the sample sets the name of a System Function. In this class, you can manipulate capella model elements as you want. (see [command-handler](https://github.com/eclipse-capella/capella/wiki/Add-Menu#command-handler) and API [Edit an Element](https://github.com/eclipse-capella/capella/wiki/Edit))
 
 ## Test you addon in Capella as Debug
 
@@ -45,7 +45,7 @@ Of course, this is a first step, then you will have to create some automatic pac
 You can inspire from existing addons to see how it can be done :
 
 **Existing addons**
-* https://github.com/eclipse/capella-sss-transition
-* https://github.com/eclipse/capella-filtering
-* https://github.com/eclipse/capella-requirements-vp
+* https://github.com/eclipse-capella/capella-sss-transition
+* https://github.com/eclipse-capella/capella-filtering
+* https://github.com/eclipse-capella/capella-requirements-vp
 

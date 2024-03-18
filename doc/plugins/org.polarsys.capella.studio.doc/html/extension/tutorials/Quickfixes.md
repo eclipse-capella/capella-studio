@@ -34,14 +34,14 @@ The contribution to the extension point is done in the plugin.xml file of the pl
 
 ## Quickfix implementation
 
-The [AbstractCapellaMarkerResolution](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.validation.ui.ide/src/org/polarsys/capella/core/validation/ui/ide/quickfix/AbstractCapellaMarkerResolution.java) class provides some facilities to manage messages.
+The [AbstractCapellaMarkerResolution](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.validation.ui.ide/src/org/polarsys/capella/core/validation/ui/ide/quickfix/AbstractCapellaMarkerResolution.java) class provides some facilities to manage messages.
 
 ## Sample
 
 The quickfix for the rule `DWF_D_41` set the given Class as Abstract
 
-* The [Java class](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.information.ui.quickfix/src/org/polarsys/capella/core/data/information/ui/quickfix/resolver/DWFD41Resolver.java) defining the quickfix
+* The [Java class](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.information.ui.quickfix/src/org/polarsys/capella/core/data/information/ui/quickfix/resolver/DWFD41Resolver.java) defining the quickfix
 
-* Its registration within [plugin.xml](https://github.com/eclipse/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.data.information.ui.quickfix/plugin.xml#L146)
+* Its registration within [plugin.xml](https://github.com/eclipse-capella/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.data.information.ui.quickfix/plugin.xml#L146)
 
-* In [MANIFEST/MANIFEST.MF](https://github.com/eclipse/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.data.information.ui.quickfix/META-INF/MANIFEST.MF#L13) file we need to depends on `org.polarsys.capella.core.validation.ui.ide`
+* In [MANIFEST/MANIFEST.MF](https://github.com/eclipse-capella/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.data.information.ui.quickfix/META-INF/MANIFEST.MF#L13) file we need to depends on `org.polarsys.capella.core.validation.ui.ide`

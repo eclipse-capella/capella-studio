@@ -42,7 +42,7 @@ TransactionalEditingDomain domain = session.getTransactionalEditingDomain();
 
 [TransactionalEditingDomain](https://git.eclipse.org/c/emf-transaction/org.eclipse.emf.transaction.git/tree/org.eclipse.emf.transaction/src/org/eclipse/emf/transaction/TransactionalEditingDomain.java)
 
-[TransactionHelper](https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/TransactionHelper.java)
+[TransactionHelper](https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/TransactionHelper.java)
 
 ```java
 TransactionalEditingDomain domain = TransactionHelper.getEditingDomain(element)
@@ -51,7 +51,7 @@ TransactionalEditingDomain domain = TransactionHelper.getEditingDomain(resource)
 
 [TransactionUtil](http://git.eclipse.org/c/emf-transaction/org.eclipse.emf.transaction.git/tree/org.eclipse.emf.transaction/src/org/eclipse/emf/transaction/util/TransactionUtil.java)
 
-[EObjectExt](https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/EObjectExt.java)
+[EObjectExt](https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/EObjectExt.java)
 
 ```java
 Collection<EObject> subComponents = EObjectExt.getAll(element, CsPackage.Literals.COMPONENT)
@@ -59,11 +59,11 @@ Collection<EObject> subComponents = EObjectExt.getAll(element, CsPackage.Literal
 
 ## ExecutionManager
 
-[ExecutionManager](https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.ef/src/org/polarsys/capella/common/ef/ExecutionManager.java)
+[ExecutionManager](https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common.ef/src/org/polarsys/capella/common/ef/ExecutionManager.java)
 
-[TransactionHelper](https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/TransactionHelper.java)
+[TransactionHelper](https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/TransactionHelper.java)
 
-[AbstractReadWriteCommand](https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.ef/src/org/polarsys/capella/common/ef/command/AbstractReadWriteCommand.java)
+[AbstractReadWriteCommand](https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common.ef/src/org/polarsys/capella/common/ef/command/AbstractReadWriteCommand.java)
 
 ```java
 ExecutionManager manager = TransactionHelper.getExecutionManager(element)
@@ -79,7 +79,7 @@ TransactionalEditingDomain domain = manager.getEditingDomain();
 
 ## IFile/Resource
 
-[EcoreUtil2](https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common/src/org/polarsys/capella/common/helpers/EcoreUtil2.java)
+[EcoreUtil2](https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common/src/org/polarsys/capella/common/helpers/EcoreUtil2.java)
 
 ```java
 EcoreUtil2.getFile(Resource)
@@ -101,9 +101,9 @@ ResourcesPlugin.getWorkspace().getRoot().getProject("project").getFile("toto.mel
 
 Many helpers exist in Capella, they are mainly located inside following plugins and have *Ext name
 
-[org.polarsys.capella.core.data.helpers](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.helpers)
+[org.polarsys.capella.core.data.helpers](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.helpers)
 
-[org.polarsys.capella.core.model.helpers](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.model.helpers)
+[org.polarsys.capella.core.model.helpers](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.model.helpers)
 
 `CapellaElementExt.creationService(x)` Helps to create additional elements like if it was created from Add Element menu. (for instance, the Part aside the Component, or min/max cardinalities on a Property)
 
@@ -177,7 +177,7 @@ ExecutionManager manager = TransactionHelper.getExecutionManager(element).execut
 
 ## Create an element
 
-To create an element, you need to know its type (for instance by looking at the properties view) and know from which metamodel it comes from. [See Metamodel Tutorial](https://github.com/eclipse/capella/wiki/Metamodel)
+To create an element, you need to know its type (for instance by looking at the properties view) and know from which metamodel it comes from. [See Metamodel Tutorial](https://github.com/eclipse-capella/capella/wiki/Metamodel)
 
 ```java
 EObject element = ... //an element from physical layer

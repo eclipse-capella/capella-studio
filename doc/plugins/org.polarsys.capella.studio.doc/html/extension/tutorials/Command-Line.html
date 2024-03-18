@@ -29,7 +29,7 @@
 		<ul>
 			<li>
 				<code>class</code>: a java class inheriting of 
-				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.commandline.core/src/org/polarsys/capella/core/commandline/core/ICommandLine.java" target="_blank">org.polarsys.capelle.core.commandline.core.ICommandLine</a>
+				<a href="https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.commandline.core/src/org/polarsys/capella/core/commandline/core/ICommandLine.java" target="_blank">org.polarsys.capelle.core.commandline.core.ICommandLine</a>
 			</li>
 			<li>
 				<code>id</code>: an unique identifier for the command
@@ -37,23 +37,23 @@
 		</ul>
 		<h2 id="commandline-implementation">CommandLine implementation</h2>
 		<p>The 
-			<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.commandline.core/src/org/polarsys/capella/core/commandline/core/ICommandLine.java" target="_blank">org.polarsys.capelle.core.commandline.core.ICommandLine</a> class provides some facilities to manage messages.
+			<a href="https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.commandline.core/src/org/polarsys/capella/core/commandline/core/ICommandLine.java" target="_blank">org.polarsys.capelle.core.commandline.core.ICommandLine</a> class provides some facilities to manage messages.
 		</p>
 		<p>You can also inherits of
 			<br/>
-			<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.commandline.core/src/org/polarsys/capella/core/commandline/core/AbstractCommandLine.java" target="_blank">org.polarsys.capelle.core.commandline.core.AbstractCommandLine</a> providing some helpers.
+			<a href="https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.commandline.core/src/org/polarsys/capella/core/commandline/core/AbstractCommandLine.java" target="_blank">org.polarsys.capelle.core.commandline.core.AbstractCommandLine</a> providing some helpers.
 		</p>
 		<h2 id="sample">Sample</h2>
 		<p>The validation can be triggered by command line</p>
 		<ul>
 			<li>The 
-				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.validation.commandline/src/org/polarsys/capella/core/validation/commandline/ValidationCommandLine.java" target="_blank">Java class</a> defining the quickfix
+				<a href="https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.validation.commandline/src/org/polarsys/capella/core/validation/commandline/ValidationCommandLine.java" target="_blank">Java class</a> defining the quickfix
 			</li>
 			<li>Its registration within 
-				<a href="https://github.com/eclipse/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.validation.commandline/plugin.xml#L14" target="_blank">plugin.xml</a>
+				<a href="https://github.com/eclipse-capella/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.validation.commandline/plugin.xml#L14" target="_blank">plugin.xml</a>
 			</li>
 			<li>In 
-				<a href="https://github.com/eclipse/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.validation.commandline/META-INF/MANIFEST.MF#L9" target="_blank">MANIFEST/MANIFEST.MF</a> file we need to depend on 
+				<a href="https://github.com/eclipse-capella/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.validation.commandline/META-INF/MANIFEST.MF#L9" target="_blank">MANIFEST/MANIFEST.MF</a> file we need to depend on 
 				<code>org.polarsys.capella.core.commandline.core</code>
 			</li>
 		</ul>

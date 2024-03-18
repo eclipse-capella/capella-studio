@@ -29,7 +29,7 @@ The contribution to the extension point is done in the plugin.xml file of the pl
 
 ### Detail of the different fields
 
-* `class`: a java class inheriting of [org.polarsys.capella.common.menu.dynamic.contributions.IMDEMenuItemContribution](https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.menu.dynamic/src/org/polarsys/capella/common/menu/dynamic/contributions/IMDEMenuItemContribution.java)
+* `class`: a java class inheriting of [org.polarsys.capella.common.menu.dynamic.contributions.IMDEMenuItemContribution](https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common.menu.dynamic/src/org/polarsys/capella/common/menu/dynamic/contributions/IMDEMenuItemContribution.java)
 * `id`: an unique identifier for the contribution
 
 
@@ -37,8 +37,8 @@ The contribution to the extension point is done in the plugin.xml file of the pl
 
 When creating a State Machine, we create an inner Region
 
-* The [Java class](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.menu.contributions/src/org/polarsys/capella/core/data/menu/contributions/capellacommon/StateMachineItemContribution.java) defining the contribution
+* The [Java class](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.menu.contributions/src/org/polarsys/capella/core/data/menu/contributions/capellacommon/StateMachineItemContribution.java) defining the contribution
 
-* Its registration within [plugin.xml](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.menu.contributions/plugin.xml#L361)
+* Its registration within [plugin.xml](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.menu.contributions/plugin.xml#L361)
 
-* In [MANIFEST/MANIFEST.MF](https://github.com/eclipse/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.data.menu.contributions/META-INF/MANIFEST.MF#L8) file we need to depend on `org.polarsys.capella.core.menu.dynamic` which export `org.polarsys.capella.common.menu.dynamic`
+* In [MANIFEST/MANIFEST.MF](https://github.com/eclipse-capella/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.data.menu.contributions/META-INF/MANIFEST.MF#L8) file we need to depend on `org.polarsys.capella.core.menu.dynamic` which export `org.polarsys.capella.common.menu.dynamic`

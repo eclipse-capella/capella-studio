@@ -1,7 +1,7 @@
 #Add Menu
 
 ## Extensions Points
-Add some dependencies to your plugins, as [Create Basic Addon](https://github.com/eclipse/capella/wiki/Create-Addons#how-to-create-an-basic-addon-adding-a-menu)
+Add some dependencies to your plugins, as [Create Basic Addon](https://github.com/eclipse-capella/capella/wiki/Create-Addons#how-to-create-an-basic-addon-adding-a-menu)
 
 **org.eclipse.ui.commands**
 
@@ -103,13 +103,13 @@ In the locationURI of your menu, `locationURI="popup:org.eclipse.ui.popup.any?af
 
 If you want to restrict the menu to a dedicated view, instead of `org.eclipse.ui.popup.any`, you can choose `capella.project.explorer#PopupMenu`
 
-[List of insertion points in Project Explorer](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.platform.sirius.ui.navigator/plugin.xml#L32)
+[List of insertion points in Project Explorer](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.platform.sirius.ui.navigator/plugin.xml#L32)
 
-[List of insertion points and id of existing views](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.platform.sirius.ui.menu/plugin.xml#L17)
+[List of insertion points and id of existing views](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.platform.sirius.ui.menu/plugin.xml#L17)
 
 The most important insertion points `group.showIn` and `group.sendTo` are available on most of views (see above).
 
-If you create a new View, you will also be able to display all menus registered under these insertion points by registering them like other views did ([Semantic Browser](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.platform.sirius.ui.menu/plugin.xml#L72)).
+If you create a new View, you will also be able to display all menus registered under these insertion points by registering them like other views did ([Semantic Browser](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.platform.sirius.ui.menu/plugin.xml#L72)).
 
 
 ### Visibility of commands

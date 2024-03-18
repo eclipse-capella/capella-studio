@@ -8,7 +8,7 @@
 	<body>
 		<h1 id="semantic-browser">Semantic Browser</h1>
 		<p>By providing queries on Semantic Browser, these queries will be also available as a column on 
-			<a href="https://github.com/eclipse/capella/blob/master/doc/plugins/org.polarsys.capella.common.ui.massactions.doc/html/Introduction.mediawiki" target="_blank">Mass Visualization table</a> or accessible in Title Block.
+			<a href="https://github.com/eclipse-capella/capella/blob/master/doc/plugins/org.polarsys.capella.common.ui.massactions.doc/html/Introduction.mediawiki" target="_blank">Mass Visualization table</a> or accessible in Title Block.
 		</p>
 		<p>The extension point is provided by:</p>
 		<ul>
@@ -56,7 +56,7 @@
 			</li>
 			<li>
 				<code>basicQuery: class</code>: a java class inheriting of 
-				<a href="https://github.com/eclipse/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/query/IQuery.java" target="_blank">org.polarsys.capella.common.helpers.query.IQuery</a>
+				<a href="https://github.com/eclipse-capella/capella/blob/master/common/plugins/org.polarsys.capella.common.helpers/src/org/polarsys/capella/common/helpers/query/IQuery.java" target="_blank">org.polarsys.capella.common.helpers.query.IQuery</a>
 			</li>
 			<li>
 				<code>itemQueries.basicQuery: class</code>: a sub query applied on all retrieved elements. For intance, for a Function, you can retrieve the outgoing exchanges, and displaying for them their target functions.
@@ -66,16 +66,16 @@
 		<p>For a Functional Exchange, we display its allocated Exchange Items and their data. </p>
 		<ul>
 			<li>The 
-				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.semantic.queries/src/org/polarsys/capella/core/semantic/queries/basic/queries/FunctionalExchangeExchangesItems.java" target="_blank">Java class</a> retrieving the Exchange Items
+				<a href="https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.semantic.queries/src/org/polarsys/capella/core/semantic/queries/basic/queries/FunctionalExchangeExchangesItems.java" target="_blank">Java class</a> retrieving the Exchange Items
 			</li>
 			<li>The secondary 
-				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.semantic.queries/src/org/polarsys/capella/core/semantic/queries/basic/queries/ExchangesItemExchangeItemElements.java" target="_blank">Java class</a> retrieving the Exchange Items Elements for Exchange Items
+				<a href="https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.semantic.queries/src/org/polarsys/capella/core/semantic/queries/basic/queries/ExchangesItemExchangeItemElements.java" target="_blank">Java class</a> retrieving the Exchange Items Elements for Exchange Items
 			</li>
 			<li>Its registration within 
-				<a href="https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.semantic.queries/plugin.xml#L1351" target="_blank">plugin.xml</a>
+				<a href="https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.semantic.queries/plugin.xml#L1351" target="_blank">plugin.xml</a>
 			</li>
 			<li>In 
-				<a href="https://github.com/eclipse/capella/blob/6ef8e899f3503c655a1c528a2d33442dc722e90d/core/plugins/org.polarsys.capella.core.semantic.queries/META-INF/MANIFEST.MF#L9" target="_blank">MANIFEST/MANIFEST.MF</a> file we need to depend on 
+				<a href="https://github.com/eclipse-capella/capella/blob/6ef8e899f3503c655a1c528a2d33442dc722e90d/core/plugins/org.polarsys.capella.core.semantic.queries/META-INF/MANIFEST.MF#L9" target="_blank">MANIFEST/MANIFEST.MF</a> file we need to depend on 
 				<code>org.polarsys.capella.core.model.helpers</code> 
 			</li>
 		</ul>

@@ -29,7 +29,7 @@ This allows to contribute to the migration of the common files `.capella`, `.air
 
 ### Detail of the different fields
 
-* `class`: [org.polarsys.capella.core.data.migration.contribution.IMigrationContribution](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.migration/src/org/polarsys/capella/core/data/migration/contribution/IMigrationContribution.java)
+* `class`: [org.polarsys.capella.core.data.migration.contribution.IMigrationContribution](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.migration/src/org/polarsys/capella/core/data/migration/contribution/IMigrationContribution.java)
 
 ## MigrationContributors
 This allows to contribute to the migration of additional files while the migration process.
@@ -47,7 +47,7 @@ This allows to contribute to the migration of additional files while the migrati
 
 ### Detail of the different fields
 
-* `class`: [org.polarsys.capella.core.data.migration.contributor.AbstractMigrationContributor](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.migration/src/org/polarsys/capella/core/data/migration/contributor/AbstractMigrationContributor.java)
+* `class`: [org.polarsys.capella.core.data.migration.contributor.AbstractMigrationContributor](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.migration/src/org/polarsys/capella/core/data/migration/contributor/AbstractMigrationContributor.java)
 
 ## Migration contribution
 
@@ -57,8 +57,8 @@ In the major cases, you will contribute to the exiting Capella migration by addi
 
 The addon filtering had contributed to migration
 
-* The [Java class](https://github.com/eclipse/capella-filtering/blob/v1.5.2/plugins/org.polarsys.capella.filtering.migration/src/org/polarsys/capella/filtering/migration/contribution/FilteringMigrationContribution.java#L28-L32) defining the contribution. In this case, it says that when we migrate a model refering to the previous version of Filtering, we retrieve the current one. (This has for effect to allow upgrade of nsUri of the Filtering viewpoint)
+* The [Java class](https://github.com/eclipse-capella/capella-filtering/blob/v1.5.2/plugins/org.polarsys.capella.filtering.migration/src/org/polarsys/capella/filtering/migration/contribution/FilteringMigrationContribution.java#L28-L32) defining the contribution. In this case, it says that when we migrate a model refering to the previous version of Filtering, we retrieve the current one. (This has for effect to allow upgrade of nsUri of the Filtering viewpoint)
 
-* Its registration within [plugin.xml](https://github.com/eclipse/capella-filtering/blob/v1.5.0/plugins/org.polarsys.capella.filtering.migration/plugin.xml#L19-L21)
+* Its registration within [plugin.xml](https://github.com/eclipse-capella/capella-filtering/blob/v1.5.0/plugins/org.polarsys.capella.filtering.migration/plugin.xml#L19-L21)
 
-* In [MANIFEST/MANIFEST.MF](https://github.com/eclipse/capella-filtering/blob/v1.5.0/plugins/org.polarsys.capella.filtering.migration/META-INF/MANIFEST.MF#L11) file we need to depends on `org.polarsys.capella.core.data.migration`
+* In [MANIFEST/MANIFEST.MF](https://github.com/eclipse-capella/capella-filtering/blob/v1.5.0/plugins/org.polarsys.capella.filtering.migration/META-INF/MANIFEST.MF#L11) file we need to depends on `org.polarsys.capella.core.data.migration`

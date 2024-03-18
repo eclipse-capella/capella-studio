@@ -26,22 +26,22 @@ The contribution to the extension point is done in the plugin.xml file of the pl
 
 ## Detail of the different fields
 
-* `class`: a java class inheriting of [org.polarsys.capelle.core.commandline.core.ICommandLine](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.commandline.core/src/org/polarsys/capella/core/commandline/core/ICommandLine.java)
+* `class`: a java class inheriting of [org.polarsys.capelle.core.commandline.core.ICommandLine](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.commandline.core/src/org/polarsys/capella/core/commandline/core/ICommandLine.java)
 * `id`: an unique identifier for the command
 
 ## CommandLine implementation
 
-The [org.polarsys.capelle.core.commandline.core.ICommandLine](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.commandline.core/src/org/polarsys/capella/core/commandline/core/ICommandLine.java) class provides some facilities to manage messages.
+The [org.polarsys.capelle.core.commandline.core.ICommandLine](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.commandline.core/src/org/polarsys/capella/core/commandline/core/ICommandLine.java) class provides some facilities to manage messages.
 
-You can also inherits of  [org.polarsys.capelle.core.commandline.core.AbstractCommandLine](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.commandline.core/src/org/polarsys/capella/core/commandline/core/AbstractCommandLine.java) providing some helpers.
+You can also inherits of  [org.polarsys.capelle.core.commandline.core.AbstractCommandLine](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.commandline.core/src/org/polarsys/capella/core/commandline/core/AbstractCommandLine.java) providing some helpers.
 
 ## Sample
 
 The validation can be triggered by command line
 
-* The [Java class](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.validation.commandline/src/org/polarsys/capella/core/validation/commandline/ValidationCommandLine.java) defining the quickfix
+* The [Java class](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.validation.commandline/src/org/polarsys/capella/core/validation/commandline/ValidationCommandLine.java) defining the quickfix
 
-* Its registration within [plugin.xml](https://github.com/eclipse/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.validation.commandline/plugin.xml#L14)
+* Its registration within [plugin.xml](https://github.com/eclipse-capella/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.validation.commandline/plugin.xml#L14)
 
-* In [MANIFEST/MANIFEST.MF](https://github.com/eclipse/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.validation.commandline/META-INF/MANIFEST.MF#L9) file we need to depend on `org.polarsys.capella.core.commandline.core`
+* In [MANIFEST/MANIFEST.MF](https://github.com/eclipse-capella/capella/blob/c55af03da4a1e2ba1aa1cc78632a365fc4fc3e51/core/plugins/org.polarsys.capella.core.validation.commandline/META-INF/MANIFEST.MF#L9) file we need to depend on `org.polarsys.capella.core.commandline.core`
 
