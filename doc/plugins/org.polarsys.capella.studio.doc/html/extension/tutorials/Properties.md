@@ -53,13 +53,13 @@ The contribution to the extension point is done in the plugin.xml file of the pl
 
 ## Properties implementation
 
-The [org.polarsys.capella.core.ui.properties.AbstractSection](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.ui.properties/src/org/polarsys/capella/core/ui/properties/sections/AbstractSection.java) class provides some facilities to manage section.
+The [org.polarsys.capella.core.ui.properties.AbstractSection](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.ui.properties/src/org/polarsys/capella/core/ui/properties/sections/AbstractSection.java) class provides some facilities to manage section.
 
 ## Sample
 
-* The [Java class](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.validation.commandline/src/org/polarsys/capella/core/validation/commandline/ValidationCommandLine.java) defining the section
+* The [Java class](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.validation.commandline/src/org/polarsys/capella/core/validation/commandline/ValidationCommandLine.java) defining the section
 
-* Its registration within plugin.xml [for Capella views](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.ctx.properties/plugin.xml#L17-L23), [for Diagrams](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.ctx.properties/plugin.xml#L110-L117), [for Tables](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.ctx.properties/plugin.xml#L204-L211)
+* Its registration within plugin.xml [for Capella views](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.ctx.properties/plugin.xml#L17-L23), [for Diagrams](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.ctx.properties/plugin.xml#L110-L117), [for Tables](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.ctx.properties/plugin.xml#L204-L211)
 
-* In [MANIFEST/MANIFEST.MF](https://github.com/eclipse/capella/blob/master/core/plugins/org.polarsys.capella.core.data.common.properties/META-INF/MANIFEST.MF#L8) file we need to depend on `org.polarsys.capella.core.ui.properties`
+* In [MANIFEST/MANIFEST.MF](https://github.com/eclipse-capella/capella/blob/master/core/plugins/org.polarsys.capella.core.data.common.properties/META-INF/MANIFEST.MF#L8) file we need to depend on `org.polarsys.capella.core.ui.properties`
 

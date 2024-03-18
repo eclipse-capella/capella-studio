@@ -53,10 +53,10 @@
 				<a href="https://github.com/eclipse/kitalpha/wiki/Viewpoint-development" target="_blank">Kitalpha</a>.
 			</li>
 			<li>The 
-				<a href="https://github.com/eclipse/capella/wiki#development" target="_blank">Technical Information section</a> will help you to setup a development environment
+				<a href="https://github.com/eclipse-capella/capella/wiki#development" target="_blank">Technical Information section</a> will help you to setup a development environment
 			</li>
 			<li>Access to the page of the 
-				<a href="https://github.com/eclipse/capella-basic-vp/wiki" target="_blank">Basic Viewpoints</a> for existing viewpoint samples.
+				<a href="https://github.com/eclipse-capella/capella-basic-vp/wiki" target="_blank">Basic Viewpoints</a> for existing viewpoint samples.
 			</li>
 		</ul>
 		<h3 id="first-steps">First Steps</h3>
@@ -140,7 +140,7 @@ Modify the name of the aspect file and Finish </code></pre>
 		</p>
 		<p>ðŸš© Even if it is possible to generate a skeleton for diagram tools using VPDSL , the 
 			<code>odesign</code> file will be the place to edit and maintain diagram representations. See 
-			<a href="https://github.com/eclipse/capella/wiki/Tutorials" target="_blank">Sirius Tutorials</a>
+			<a href="https://github.com/eclipse-capella/capella/wiki/Tutorials" target="_blank">Sirius Tutorials</a>
 		</p>
 		<h3 id="option-2-import-of-the-basic-mass-viewpoint">Option #2: Import of the Basic Mass viewpoint</h3>
 		<p>This first option is to import the viewpoint as depicted below from the Plug-ins view, with the "Import As"/"Source Project" command. </p>
@@ -159,15 +159,15 @@ Modify the name of the aspect file and Finish </code></pre>
 		</p>
 		<h2 id="viewpoint-technical-guidelines">Viewpoint Technical Guidelines</h2>
 		<p>âš¡ See 
-			<a href="https://github.com/eclipse/capella/blob/master/doc/plugins/org.polarsys.capella.developer.doc/html/Viewpoint%20Guidelines.mediawiki" target="_blank">Viewpoint Guidelines</a>
+			<a href="https://github.com/eclipse-capella/capella/blob/master/doc/plugins/org.polarsys.capella.developer.doc/html/Viewpoint%20Guidelines.mediawiki" target="_blank">Viewpoint Guidelines</a>
 		</p>
 		<p>âš¡ For CDO for Capella, due to 
-			<a href="https://github.com/eclipse/capella-studio/issues/141" target="_blank">#141</a>, the generated code may not be directly compliant with the targeted application.
+			<a href="https://github.com/eclipse-capella/capella-studio/issues/141" target="_blank">#141</a>, the generated code may not be directly compliant with the targeted application.
 		</p>
 		<ul>
 			<li>If you inherit from a 
 				<code>ModelElement</code>, please ensure that the viewpoint Factory is initializing the id within the contructor, like 
-				<a href="https://github.com/eclipse/capella-filtering/blob/master/plugins/org.polarsys.capella.filtering.model.cdo/src/org/polarsys/capella/filtering/impl/FilteringFactoryImpl.java#L144-L146" target="_blank">FilteringFactoryImpl</a>**
+				<a href="https://github.com/eclipse-capella/capella-filtering/blob/master/plugins/org.polarsys.capella.filtering.model.cdo/src/org/polarsys/capella/filtering/impl/FilteringFactoryImpl.java#L144-L146" target="_blank">FilteringFactoryImpl</a>**
 			</li>
 		</ul>
 	</body>

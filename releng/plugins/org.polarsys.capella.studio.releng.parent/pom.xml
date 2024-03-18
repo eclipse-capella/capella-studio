@@ -43,7 +43,7 @@
 		<tycho-version>2.7.5</tycho-version>
 		<tycho-extras-version>2.7.5</tycho-extras-version>
 		<platform-version-name>oxygen</platform-version-name>
-		<tycho.scmUrl>scm:git:https://github.com/eclipse/capella-studio</tycho.scmUrl>
+		<tycho.scmUrl>scm:git:https://github.com/eclipse-capella/capella-studio</tycho.scmUrl>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		
