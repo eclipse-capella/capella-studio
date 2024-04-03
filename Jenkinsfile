@@ -7,7 +7,7 @@ pipeline {
 	}
 	environment {
 	    JACOCO_VERSION = "0.8.10"
-	    MVN_QUALITY_PROFILES = '-P full -P test'
+	    MVN_QUALITY_PROFILES = '-P full -P test -P rcptt'
 	    JACOCO_EXEC_FILE_PATH = '${WORKSPACE}/jacoco.exec'
 	}
 	stages {
@@ -20,21 +20,18 @@ pipeline {
 	     	}
 	    }
 	    
-		stage('Package & Test Capella Studio') {
+		stage('Package & Install Capella Studio') {
 			steps {
-				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
-					withEnv(['MAVEN_OPTS=-Xmx3g']) {
-						script {						
-							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"
-							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} clean verify -P full -P sign -P product -P test -e -f pom.xml"
-						}
+				withEnv(['MAVEN_OPTS=-Xmx3g']) {
+					script {		
+						sh "mvn clean install -P full -P sign -P product -e "
 					}
-				}
+				}				
 			}
 		}
 		stage('Archive artifacts') {
 			steps {
-				archiveArtifacts artifacts: 'releng/plugins/org.polarsys.capella.studio.releng.product/target/*.txt, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/repository/**, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/*.txt'
+				archiveArtifacts artifacts: 'releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/repository/**'
 			}
 		}
 		stage('Deploy') {
@@ -62,6 +59,32 @@ pipeline {
 				}
 			}
 		}
+		
+		stage('Run RCPTT Tests') {
+			steps {
+				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
+					withEnv(['MAVEN_OPTS=-Xmx3g']) {
+						script {						
+							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"						
+							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} verify -P rcptt -e "
+						}
+					}
+				}
+			}
+		}
+		stage('Run JUnit Tests') {
+			steps {
+				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
+					withEnv(['MAVEN_OPTS=-Xmx3g']) {
+						script {
+							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"											
+							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} verify -P full -P product -P test -e "
+						}
+					}
+				}
+			}
+		}		
+		
 		stage('Publish tests results') {
 			steps {
 				junit allowEmptyResults: true, testResults: '*.xml,**/target/surefire-reports/*.xml'
@@ -72,15 +95,15 @@ pipeline {
 			environment {
 			    PROJECT_NAME = 'capella-studio'
 	    		SONARCLOUD_TOKEN = credentials('sonar-token-capella-studio')
-			    SONAR_PROJECT_KEY = 'eclipse_capella-studio'
+			    SONAR_PROJECT_KEY = 'eclipse-capella_capella-studio'
 			}
 			steps {
-				withEnv(['MAVEN_OPTS=-Xmx4g']) {
+				withEnv(['MAVEN_OPTS=-Xmx3g']) {
 					script {
 						def jacocoParameters = "-Dsonar.coverage.jacoco.xmlReportPaths='target/site/jacoco/jacoco.xml,target/surefire-reports/TEST*.xml' -Dsonar.java.coveragePlugin=jacoco -Dsonar.core.codeCoveragePlugin=jacoco "
 						def sonarExclusions = "-Dsonar.exclusions='**/generated/**/*.java,**/src-gen/**/*.java' "
 						def javaVersion = "8"
-						def sonarCommon = "sonar:sonar -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.organization=eclipse -Dsonar.host.url=https://sonarcloud.io -Dsonar.login='$SONARCLOUD_TOKEN' -Dsonar.skipDesign=true -Dsonar.dynamic=reuseReports -Dsonar.java.source=${javaVersion} -Dsonar.scanner.force-deprecated-java-version=true "
+						def sonarCommon = "sonar:sonar -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.organization=eclipse-capella -Dsonar.host.url=https://sonarcloud.io -Dsonar.login='$SONARCLOUD_TOKEN' -Dsonar.skipDesign=true -Dsonar.dynamic=reuseReports -Dsonar.java.source=${javaVersion} -Dsonar.scanner.force-deprecated-java-version=true "
 						def sonarBranchAnalysis = "-Dsonar.branch.name=${BRANCH_NAME}"
 						def sonarPullRequestAnalysis = ("${BRANCH_NAME}".contains('PR-') ? "-Dsonar.pullrequest.provider=GitHub -Dsonar.pullrequest.github.repository=eclipse/$PROJECT_NAME -Dsonar.pullrequest.key=${CHANGE_ID} -Dsonar.pullrequest.branch=${CHANGE_BRANCH}" : "" )
 						def sonar = sonarCommon + jacocoParameters + sonarExclusions + ("${BRANCH_NAME}".contains('PR-') ? sonarPullRequestAnalysis : sonarBranchAnalysis)

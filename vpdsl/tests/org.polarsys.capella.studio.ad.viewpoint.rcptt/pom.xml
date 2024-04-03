@@ -54,6 +54,9 @@
 									${rcptt-kitalpha-components-site}
 								</site>
 							</injection>
+							<injection>
+									<site>https://download.eclipse.org/rcptt/milestone/2.5.5/MO/repository</site>
+							</injection>	
 						</injections>
 					</aut>
 				</configuration>

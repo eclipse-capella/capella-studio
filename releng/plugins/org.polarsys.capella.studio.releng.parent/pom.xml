@@ -14,11 +14,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
-	<prerequisites>
-		<maven>3.3</maven>
-	</prerequisites>
-	
 	<name>Capella Studio</name>
 	
 	<groupId>org.polarsys.capella</groupId>
@@ -53,18 +48,16 @@
 
 		<sonar.jacoco.release>0.8.10</sonar.jacoco.release>
 		
-		<rcptt-maven-version>2.5.4</rcptt-maven-version>
-		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/stable/component/7.0.0.20230607/</rcptt-kitalpha-components-site>
+		<rcptt-maven-version>2.5.5-MO</rcptt-maven-version>
+		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/stable/component/7.0.0.20240319/</rcptt-kitalpha-components-site>
 		
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
 		<capellastudio-application>org.polarsys.capella.studio.product.application</capellastudio-application>
+		<target-platform-name>capellastudio</target-platform-name>
 	</properties>
 	<profiles>
 		<profile>
 			<id>full</id>
-			<properties>
-				<target-platform-name>capellastudio</target-platform-name>
-			</properties>
 			<modules>
 				<!-- module TP -->
 				<module>../org.polarsys.capella.studio.releng.targets</module>
@@ -140,9 +133,6 @@
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
-			<properties>
-				<target-platform-name>capellastudio</target-platform-name>
-			</properties>
 			<modules>
 				<module>../../../releng/plugins/org.polarsys.capella.studio.releng.product</module>
 			</modules>
@@ -154,6 +144,15 @@
 			</activation>
 			<modules>
 				<module>../org.polarsys.capella.studio.releng.aggregator.tests</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>rcptt</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>../org.polarsys.capella.studio.releng.aggregator.tests.rcptt</module>
 			</modules>
 		</profile>
 	</profiles>
@@ -195,18 +194,9 @@
 							<groupId>org.polarsys.capella</groupId>
 							<artifactId>org.polarsys.capella.studio.releng.targets</artifactId>
 							<version>7.0.0-SNAPSHOT</version>
-							<classifier>../../../releng/plugins/org.polarsys.capella.studio.releng.targets/${target-platform-name}</classifier>
+							<classifier>../org.polarsys.capella.studio.releng.targets/${target-platform-name}</classifier>
 						</artifact>
 					</target>
-					<dependency-resolution>
-						<extraRequirements>
-							<requirement>
-	               				<type>p2-installable-unit</type>
-	               				<id>org.polarsys.capella.rcp</id>
-	              				<versionRange>0.0.0</versionRange>
-	            			</requirement>
-						</extraRequirements>
-					</dependency-resolution>
 				</configuration>
 			</plugin>
 			<plugin>
