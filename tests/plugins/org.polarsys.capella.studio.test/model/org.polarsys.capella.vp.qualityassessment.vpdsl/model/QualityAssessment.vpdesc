@@ -7,7 +7,7 @@
       </owned_annotations>
       <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="basedOn" cardinality="0..*" type="reference" LocalTarget="//@VP_Data/@VP_Classes.0"/>
       <VP_Classes_Associations xsi:type="vpdesc:ExternalClassAssociation" name="context" cardinality="0..*" type="reference">
-        <ExternalTarget href="http://www.polarsys.org/capella/core/core/6.0.0#//NamedElement"/>
+        <ExternalTarget href="http://www.polarsys.org/capella/core/core/7.0.0#//NamedElement"/>
       </VP_Classes_Associations>
       <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="measures" cardinality="0..*" LocalTarget="//@VP_Data/@VP_Classes.1"/>
       <VP_Class_Attributes name="maturityLevel">
@@ -26,9 +26,9 @@
           <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
         </owned_type>
       </VP_Class_Attributes>
-      <extends href="http://www.polarsys.org/capella/core/fa/6.0.0#//AbstractFunction"/>
-      <extends href="http://www.polarsys.org/capella/core/la/6.0.0#//LogicalComponent"/>
-      <extends href="http://www.polarsys.org/capella/core/pa/6.0.0#//PhysicalComponent"/>
+      <extends href="http://www.polarsys.org/capella/core/fa/7.0.0#//AbstractFunction"/>
+      <extends href="http://www.polarsys.org/capella/core/la/7.0.0#//LogicalComponent"/>
+      <extends href="http://www.polarsys.org/capella/core/pa/7.0.0#//PhysicalComponent"/>
     </VP_Classes>
     <VP_Classes name="QualityMeasure" icon="QualityMeasure.png">
       <VP_Class_Attributes name="criterion">
