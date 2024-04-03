@@ -14,11 +14,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
-	<prerequisites>
-		<maven>3.3</maven>
-	</prerequisites>
-	
+		
 	<name>Capella Studio</name>
 	
 	<groupId>org.polarsys.capella</groupId>
@@ -196,9 +192,8 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<targetDefinitionIncludeSource>honor</targetDefinitionIncludeSource>
+					<targetDefinitionIncludeSource>force</targetDefinitionIncludeSource>
 					<executionEnvironment>JavaSE-17</executionEnvironment>
-					<pomDependencies>consider</pomDependencies>
 					<target>
 						<artifact>
 							<groupId>org.polarsys.capella</groupId>
@@ -207,15 +202,33 @@
 							<classifier>../../../releng/plugins/org.polarsys.capella.studio.releng.targets/${target-platform-name}</classifier>
 						</artifact>
 					</target>
-					<dependency-resolution>
-						<extraRequirements>
-							<requirement>
-	               				<type>p2-installable-unit</type>
-	               				<id>org.polarsys.capella.rcp</id>
-	              				<versionRange>0.0.0</versionRange>
-	            			</requirement>
-						</extraRequirements>
-					</dependency-resolution>
+					<environments>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>aarch64</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>aarch64</arch>
+						</environment>
+					</environments>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -263,8 +276,6 @@
 						<addMavenDescriptor>false</addMavenDescriptor>
 					</archive>
 					<excludes>
-						<plugin id="org.antlr.runtime"/>
-						<plugin id="com.google.guava"/>
 						<feature id="org.polarsys.capella.studio.releng.capella.feature"/>
 						<feature id="org.polarsys.capella.studio.product.feature"/>
 						<feature id="org.polarsys.capella.ta.viewpoint.dsl.feature"/>
@@ -288,40 +299,6 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<plugin>
-					<groupId>org.eclipse.tycho</groupId>
-					<artifactId>target-platform-configuration</artifactId>
-					<version>${tycho-version}</version>
-					<configuration>
-						<environments>
-							<environment>
-								<os>linux</os>
-								<ws>gtk</ws>
-								<arch>x86_64</arch>
-							</environment>
-							<environment>
-								<os>linux</os>
-								<ws>gtk</ws>
-								<arch>aarch64</arch>
-							</environment>
-							<environment>
-								<os>win32</os>
-								<ws>win32</ws>
-								<arch>x86_64</arch>
-							</environment>
-							<environment>
-								<os>macosx</os>
-								<ws>cocoa</ws>
-								<arch>x86_64</arch>
-							</environment>
-							<environment>
-								<os>macosx</os>
-								<ws>cocoa</ws>
-								<arch>aarch64</arch>
-							</environment>
-						</environments>
-					</configuration>
-				</plugin>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>tycho-compiler-plugin</artifactId>
