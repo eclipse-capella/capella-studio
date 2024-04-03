@@ -19,7 +19,8 @@
 	
 	<groupId>org.polarsys.capella</groupId>
 	<artifactId>org.polarsys.capella.extension.rcptt</artifactId>
-		
+	<version>7.0.0-SNAPSHOT</version>
+	
 	<packaging>rcpttTest</packaging>
 	
 	<parent>
@@ -41,7 +42,6 @@
 						<version>${rcptt-maven-version}</version>
 						 <vmArgs>
 						  <vmArg>-Xmx3g</vmArg>
-						  <vmArg>-XX:MaxMetaspaceSize=1024m</vmArg>
 					   </vmArgs>
 					</runner>
 					<aut>
@@ -49,6 +49,9 @@
 						<artifactId>org.polarsys.capella.studio.releng.product</artifactId>
 						<version>${project.version}</version>
 					</aut>
+					<args>
+							<arg>-autArgs</arg>
+					</args>
 				</configuration>
 			</plugin>
 		</plugins>

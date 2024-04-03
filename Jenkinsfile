@@ -7,7 +7,7 @@ pipeline {
 	}
 	environment {
 	    JACOCO_VERSION = "0.8.10"
-	    MVN_QUALITY_PROFILES = '-P full -P test'
+	    MVN_QUALITY_PROFILES = '-P full -P test -P rcptt'
 	    JACOCO_EXEC_FILE_PATH = '${WORKSPACE}/jacoco.exec'
 	}
 	stages {
@@ -20,18 +20,40 @@ pipeline {
 	     	}
 	    }
 	    
-		stage('Package & Test Capella Studio') {
+		stage('Package & Install Capella Studio') {
+			steps {
+				withEnv(['MAVEN_OPTS=-Xmx3g']) {
+					script {		
+						sh "mvn clean install -P full -P sign -P product -e "
+					}
+				}				
+			}
+		}
+		stage('Run RCPTT Tests') {
 			steps {
 				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
 					withEnv(['MAVEN_OPTS=-Xmx3g']) {
 						script {						
 							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"
-							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} clean verify -P full -P sign -P product -P test -e -f pom.xml"
+							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} verify -P rcptt -e "
 						}
 					}
 				}
 			}
 		}
+		stage('Run JUnit Tests') {
+			steps {
+				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
+					withEnv(['MAVEN_OPTS=-Xmx3g']) {
+						script {						
+							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"
+							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} verify -P test -e "
+						}
+					}
+				}
+			}
+		}
+		
 		stage('Archive artifacts') {
 			steps {
 				archiveArtifacts artifacts: 'releng/plugins/org.polarsys.capella.studio.releng.product/target/*.txt, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/repository/**, releng/plugins/org.polarsys.capella.studio.releng.updatesite/target/*.txt'
@@ -72,7 +94,7 @@ pipeline {
 			environment {
 			    PROJECT_NAME = 'capella-studio'
 	    		SONARCLOUD_TOKEN = credentials('sonar-token-capella-studio')
-			    SONAR_PROJECT_KEY = 'eclipse_capella-studio'
+			    SONAR_PROJECT_KEY = 'eclipse-capella_capella-studio'
 			}
 			steps {
 				withEnv(['MAVEN_OPTS=-Xmx4g']) {
