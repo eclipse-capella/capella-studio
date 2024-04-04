@@ -50,17 +50,15 @@
 		<sonar.jacoco.release>0.8.10</sonar.jacoco.release>
 		
 		<rcptt-maven-version>2.5.5-MO</rcptt-maven-version>
-		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/stable/component/7.0.0.20230607/</rcptt-kitalpha-components-site>
+		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/stable/component/7.0.0.20240319/</rcptt-kitalpha-components-site>
 		
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
 		<capellastudio-application>org.polarsys.capella.studio.product.application</capellastudio-application>
+		<target-platform-name>capellastudio</target-platform-name>
 	</properties>
 	<profiles>
 		<profile>
 			<id>full</id>
-			<properties>
-				<target-platform-name>capellastudio</target-platform-name>
-			</properties>
 			<modules>
 				<!-- module TP -->
 				<module>../org.polarsys.capella.studio.releng.targets</module>
@@ -136,9 +134,6 @@
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
-			<properties>
-				<target-platform-name>capellastudio</target-platform-name>
-			</properties>
 			<modules>
 				<module>../../../releng/plugins/org.polarsys.capella.studio.releng.product</module>
 			</modules>
@@ -192,14 +187,15 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<targetDefinitionIncludeSource>force</targetDefinitionIncludeSource>
+					<targetDefinitionIncludeSource>honor</targetDefinitionIncludeSource>
 					<executionEnvironment>JavaSE-17</executionEnvironment>
+					<pomDependencies>consider</pomDependencies>
 					<target>
 						<artifact>
 							<groupId>org.polarsys.capella</groupId>
 							<artifactId>org.polarsys.capella.studio.releng.targets</artifactId>
 							<version>7.0.0-SNAPSHOT</version>
-							<classifier>../../../releng/plugins/org.polarsys.capella.studio.releng.targets/${target-platform-name}</classifier>
+							<classifier>../org.polarsys.capella.studio.releng.targets/${target-platform-name}</classifier>
 						</artifact>
 					</target>
 					<environments>
