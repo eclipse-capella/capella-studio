@@ -22,7 +22,7 @@ pipeline {
 	    
 		stage('Package & Install Capella Studio') {
 			steps {
-				withEnv(['MAVEN_OPTS=-Xmx3g']) {
+				withEnv(['MAVEN_OPTS=-Xmx2g']) {
 					script {		
 						sh "mvn clean install -P full -P sign -P product -e "
 					}
@@ -32,7 +32,7 @@ pipeline {
 		stage('Run RCPTT Tests') {
 			steps {
 				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
-					withEnv(['MAVEN_OPTS=-Xmx3g']) {
+					withEnv(['MAVEN_OPTS=-Xmx2g']) {
 						script {						
 							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"
 							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} verify -P rcptt -e "
@@ -44,7 +44,7 @@ pipeline {
 		stage('Run JUnit Tests') {
 			steps {
 				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
-					withEnv(['MAVEN_OPTS=-Xmx3g']) {
+					withEnv(['MAVEN_OPTS=-Xmx2g']) {
 						script {						
 							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"
 							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} verify -P test -e "

@@ -41,7 +41,7 @@
 					<runner>
 						<version>${rcptt-maven-version}</version>
 						 <vmArgs>
-						  <vmArg>-Xmx3g</vmArg>
+						  <vmArg>-Xmx2g</vmArg>
 					   </vmArgs>
 					</runner>
 					<aut>
