@@ -191,21 +191,3 @@ location Mylyn-3.26 "https://download.eclipse.org/mylyn/releases/3.26/" {
 location "https://download.eclipse.org/tools/orbit/downloads/2023-03/" {
 	ch.qos.logback.slf4j
 }
-
-location RCPTT2.5.5 "https://download.eclipse.org/rcptt/milestone/2.5.5/MO/repository"{
-	org.eclipse.rcptt.core.feature.group lazy
-	org.eclipse.rcptt.ecl.core.feature.group lazy
-	org.eclipse.rcptt.ecl.platform.ui.feature.group lazy
-	org.eclipse.rcptt.ecl.platform.feature.group lazy
-	org.eclipse.rcptt.ecl.server.feature.group lazy
-	org.eclipse.rcptt.external.dependencies.feature.feature.group lazy
-	org.eclipse.rcptt.launching.feature.group lazy
-	org.eclipse.rcptt.module.nebula.feature.group lazy
-	org.eclipse.rcptt.module.testrail.feature.group lazy
-	org.eclipse.rcptt.platform.feature.group lazy
-	org.eclipse.rcptt.rap.ui.feature.feature.group lazy
-	org.eclipse.rcptt.tesla.ecl.feature.group lazy
-	org.eclipse.rcptt.tesla.feature.group lazy
-	org.eclipse.rcptt.updates.feature.group lazy
-	org.eclipse.rcptt.watson.feature.group lazy
-}

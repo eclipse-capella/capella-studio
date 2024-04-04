@@ -358,23 +358,5 @@
       <unit id="ch.qos.logback.slf4j" version="1.2.3.v20221112-0806"/>
       <repository location="https://download.eclipse.org/tools/orbit/downloads/2023-03/"/>
     </location>
-    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.rcptt.core.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.ecl.core.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.ecl.platform.ui.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.ecl.platform.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.ecl.server.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.external.dependencies.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.launching.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.module.nebula.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.module.testrail.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.platform.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.rap.ui.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.tesla.ecl.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.tesla.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.updates.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.rcptt.watson.feature.group" version="0.0.0"/>
-      <repository id="RCPTT2.5.5" location="https://download.eclipse.org/rcptt/milestone/2.5.5/MO/repository"/>
-    </location>
   </locations>
 </target>
