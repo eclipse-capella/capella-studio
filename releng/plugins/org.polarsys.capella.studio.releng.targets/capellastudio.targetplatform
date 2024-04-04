@@ -11,7 +11,7 @@
  *******************************************************************************/
 target "capellastudio" with source, requirements
 
-include "https://download.eclipse.org/kitalpha/updates/stable/runtime/7.0.0.20230926/targets/kitalpha.targetplatform"
+include "https://download.eclipse.org/kitalpha/updates/stable/runtime/7.0.0.20240319/targets/kitalpha.targetplatform"
 
 location sirius-query-legacy-1.1.0 "https://download.eclipse.org/sirius/updates/legacy/1.1.0" {
 	org.eclipse.sirius.query.legacy.feature.feature.group lazy
@@ -19,9 +19,9 @@ location sirius-query-legacy-1.1.0 "https://download.eclipse.org/sirius/updates/
 	
 }
 
+
 location Eclipse-2023-03 "https://download.eclipse.org/releases/2023-03/" {
 	org.eclipse.emf.query.sdk.feature.group lazy
-	org.eclipse.equinox.core.sdk.feature.group lazy	
 }
 
 location kitalpha-sdk "https://download.eclipse.org/kitalpha/updates/stable/sdk/7.0.0.20230926/" {
@@ -190,4 +190,22 @@ location Mylyn-3.26 "https://download.eclipse.org/mylyn/releases/3.26/" {
 
 location "https://download.eclipse.org/tools/orbit/downloads/2023-03/" {
 	ch.qos.logback.slf4j
+}
+
+location RCPTT2.5.5 "https://download.eclipse.org/rcptt/milestone/2.5.5/MO/repository"{
+	org.eclipse.rcptt.core.feature.group lazy
+	org.eclipse.rcptt.ecl.core.feature.group lazy
+	org.eclipse.rcptt.ecl.platform.ui.feature.group lazy
+	org.eclipse.rcptt.ecl.platform.feature.group lazy
+	org.eclipse.rcptt.ecl.server.feature.group lazy
+	org.eclipse.rcptt.external.dependencies.feature.feature.group lazy
+	org.eclipse.rcptt.launching.feature.group lazy
+	org.eclipse.rcptt.module.nebula.feature.group lazy
+	org.eclipse.rcptt.module.testrail.feature.group lazy
+	org.eclipse.rcptt.platform.feature.group lazy
+	org.eclipse.rcptt.rap.ui.feature.feature.group lazy
+	org.eclipse.rcptt.tesla.ecl.feature.group lazy
+	org.eclipse.rcptt.tesla.feature.group lazy
+	org.eclipse.rcptt.updates.feature.group lazy
+	org.eclipse.rcptt.watson.feature.group lazy
 }

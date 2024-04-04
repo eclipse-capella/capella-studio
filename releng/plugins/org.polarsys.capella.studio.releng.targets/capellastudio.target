@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="capellastudio" sequenceNumber="1712147542">
+<target name="capellastudio" sequenceNumber="1712227677">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.gmf.runtime.notation.sdk.feature.group" version="0.0.0"/>
@@ -10,13 +10,13 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.gmf.runtime.sdk.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.gmf.runtime.thirdparty.feature.group" version="0.0.0"/>
-      <repository id="GMF-Runtime-1.15.3" location="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/R202211041032/"/>
+      <repository id="GMF-Runtime-1.16.3" location="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/milestones/S202401081627/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.gef.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.gef.sdk.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.draw2d.sdk.feature.group" version="0.0.0"/>
-      <repository id="GEF-Classic" location="https://download.eclipse.org/tools/gef/classic/releases/3.15.0"/>
+      <repository id="GEF-Classic" location="https://download.eclipse.org/tools/gef/classic/releases/3.17.0"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.cvs.feature.group" version="0.0.0"/>
@@ -60,8 +60,8 @@
       <unit id="org.eclipse.sirius.samples.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.specifier.properties.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.specifier.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.sirius.tests.junit.support" version="7.2.0.202306070701"/>
-      <repository id="sirius" location="https://download.eclipse.org/sirius/updates/releases/7.2.0/2023-03"/>
+      <unit id="org.eclipse.sirius.tests.junit.support" version="7.4.1.202403190821"/>
+      <repository id="sirius" location="https://download.eclipse.org/sirius/updates/stable/7.4.1-S20240319-042018/2023-03"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.diffmerge.feature.feature.group" version="0.0.0"/>
@@ -100,7 +100,7 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.egf.sdk.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.egf.sdk.feature.source.feature.group" version="0.0.0"/>
-      <repository id="EGFSdk" location="https://download.eclipse.org/egf/updates/stable/1.6.4/2023-03/"/>
+      <repository id="EGFSdk" location="https://download.eclipse.org/egf/updates/1.6.4/2023-03/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.nebula.widgets.richtext.feature.feature.group" version="0.0.0"/>
@@ -123,7 +123,6 @@
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.query.sdk.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.equinox.core.sdk.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.m2e.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.egit.feature.group" version="0.0.0"/>
@@ -337,7 +336,7 @@
       <repository id="capella" location="https://download.eclipse.org/capella/core/updates/nightly/master/org.polarsys.capella.rcp.site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.polarsys.capella.test.feature.feature.group" version="7.0.0.202403281039"/>
+      <unit id="org.polarsys.capella.test.feature.feature.group" version="7.0.0.202404031459"/>
       <repository id="capella-tests" location="https://download.eclipse.org/capella/core/updates/nightly/master/org.polarsys.capella.test.site"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
@@ -358,6 +357,24 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="ch.qos.logback.slf4j" version="1.2.3.v20221112-0806"/>
       <repository location="https://download.eclipse.org/tools/orbit/downloads/2023-03/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.rcptt.core.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.ecl.core.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.ecl.platform.ui.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.ecl.platform.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.ecl.server.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.external.dependencies.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.launching.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.module.nebula.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.module.testrail.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.platform.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.rap.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.tesla.ecl.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.tesla.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.updates.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcptt.watson.feature.group" version="0.0.0"/>
+      <repository id="RCPTT2.5.5" location="https://download.eclipse.org/rcptt/milestone/2.5.5/MO/repository"/>
     </location>
   </locations>
 </target>
