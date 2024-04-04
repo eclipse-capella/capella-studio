@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Capella Studio Product" uid="org.polarsys.capella.studio.releng.product" id="org.polarsys.capella.studio.product.CapellaStudio" application="org.polarsys.capella.studio.product.application" version="7.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Capella Studio Product" uid="org.polarsys.capella.studio.releng.product" id="org.polarsys.capella.studio.product.CapellaStudio" application="org.polarsys.capella.studio.product.application" version="7.0.0.qualifier" useFeatures="true" includeLaunchers="true" autoIncludeRequirements="true">
 
    <aboutInfo>
       <image path="/org.polarsys.capella.studio.product/icons/CapellaStudioAbout.png"/>
@@ -28,7 +28,7 @@ openFile
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
-	   <vmArgsWin>-Dorg.eclipse.swt.browser.DefaultType=edge
+      <vmArgsWin>-Dorg.eclipse.swt.browser.DefaultType=edge
       </vmArgsWin>
    </launcherArgs>
 
@@ -65,21 +65,6 @@ SPDX-License-Identifier: EPL-2.0
       <feature id="org.polarsys.capella.studio.releng.eclipse.feature" version="7.0.0.qualifier"/>
       <feature id="org.polarsys.capella.studio.releng.kitalpha.feature" version="7.0.0.qualifier"/>
       <feature id="org.polarsys.capella.studio.releng.capella.feature" version="7.0.0.qualifier"/>
-	  <feature id="org.eclipse.rcptt.core" installMode="root"/>
-      <feature id="org.eclipse.rcptt.ecl.core" installMode="root"/>
-      <feature id="org.eclipse.rcptt.ecl.platform" installMode="root"/>
-      <feature id="org.eclipse.rcptt.ecl.platform.ui" installMode="root"/>
-      <feature id="org.eclipse.rcptt.ecl.server" installMode="root"/>
-      <feature id="org.eclipse.rcptt.external.dependencies.feature" installMode="root"/>
-      <feature id="org.eclipse.rcptt.launching" installMode="root"/>
-      <feature id="org.eclipse.rcptt.module.nebula" installMode="root"/>
-      <feature id="org.eclipse.rcptt.module.testrail" installMode="root"/>
-      <feature id="org.eclipse.rcptt.platform" installMode="root"/>
-      <feature id="org.eclipse.rcptt.rap.ui.feature" installMode="root"/>
-      <feature id="org.eclipse.rcptt.tesla" installMode="root"/>
-      <feature id="org.eclipse.rcptt.tesla.ecl" installMode="root"/>
-      <feature id="org.eclipse.rcptt.updates" installMode="root"/>
-      <feature id="org.eclipse.rcptt.watson" installMode="root"/>
    </features>
 
    <configurations>

@@ -48,6 +48,11 @@
 						<groupId>org.polarsys.capella</groupId>
 						<artifactId>org.polarsys.capella.studio.releng.product</artifactId>
 						<version>${project.version}</version>
+						<injections>
+							<injection>
+								<site>https://download.eclipse.org/rcptt/milestone/2.5.5/MO/repository</site>
+							</injection>
+						</injections>
 					</aut>
 					<args>
 							<arg>-autArgs</arg>
