@@ -62,7 +62,7 @@ pipeline {
 		
 		stage('Run RCPTT Tests') {
 			steps {
-				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
+				wrap([$class: 'Xvnc', takeScreenshot: true, useXauthority: true]) {
 					withEnv(['MAVEN_OPTS=-Xmx3g']) {
 						script {						
 							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"						
