@@ -24,7 +24,7 @@ location Eclipse-2023-03 "https://download.eclipse.org/releases/2023-03/" {
 	org.eclipse.equinox.core.sdk.feature.group lazy	
 }
 
-location kitalpha-sdk "https://download.eclipse.org/kitalpha/updates/stable/sdk/7.0.0.20230926/" {
+location kitalpha-sdk "https://download.eclipse.org/kitalpha/updates/stable/sdk/7.0.0.20240319/" {
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.generation.feature.source.feature.group lazy
 	org.polarsys.kitalpha.ad.viewpoint.dsl.as.feature.feature.group lazy
@@ -142,7 +142,7 @@ location kitalpha-sdk "https://download.eclipse.org/kitalpha/updates/stable/sdk/
 	org.polarsys.kitalpha.diffmerge.bridge.integration.transposer lazy
 }
 
-location kitalpha-runtime "https://download.eclipse.org/kitalpha/updates/stable/runtime/7.0.0.20230926/" {
+location kitalpha-runtime "https://download.eclipse.org/kitalpha/updates/stable/runtime/7.0.0.20240319/" {
 	org.polarsys.kitalpha.runtime.feature.feature.group lazy
 	org.polarsys.kitalpha.runtime.feature.source.feature.group lazy
 	org.polarsys.kitalpha.common.feature.feature.group lazy
