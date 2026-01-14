@@ -94,7 +94,7 @@ pipeline {
 		stage('Perform Sonar analysis') {
 			environment {
 			    PROJECT_NAME = 'capella-studio'
-	    		SONARCLOUD_TOKEN = credentials('sonar-token-capella-studio')
+	    		SONARCLOUD_TOKEN = credentials('sonarcloud-token-capella')
 			    SONAR_PROJECT_KEY = 'eclipse-capella_capella-studio'
 			}
 			steps {
