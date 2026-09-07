@@ -3,7 +3,7 @@ pipeline {
 
 	tools {
 		maven 'apache-maven-latest'
-		jdk 'openjdk-jdk17-latest'
+		jdk 'openjdk-jdk21-latest'
 	}
 	environment {
 	    JACOCO_VERSION = "0.8.10"
