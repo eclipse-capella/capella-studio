@@ -71,7 +71,11 @@
 							<type>eclipse-feature</type>
 						</dependency>
 					</dependencies>
-					<executionEnvironment>JavaSE-17</executionEnvironment>
+					<executionEnvironment>JavaSE-21</executionEnvironment>
+					<jvmArgs>
+						<arg>-Dosgi.requiredJavaVersion=21</arg>
+						<arg>--add-modules=ALL-SYSTEM</arg>
+					</jvmArgs>
 				</configuration>
 				<executions>
 					<execution>
@@ -81,7 +85,7 @@
 							<applicationsArgs>
 								<args>-application ${converterApplication.name} ${targetPlatform.name}</args>
 							</applicationsArgs>
-							<executionEnvironment>JavaSE-17</executionEnvironment>
+							<executionEnvironment>JavaSE-21</executionEnvironment>
 						</configuration>
 						<goals>
 							<goal>eclipse-run</goal>
