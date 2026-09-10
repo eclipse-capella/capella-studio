@@ -35,8 +35,8 @@
 	</licenses>
 	
 	<properties>
-		<tycho-version>2.7.5</tycho-version>
-		<tycho-extras-version>2.7.5</tycho-extras-version>
+		<tycho-version>4.0.13</tycho-version>
+		<tycho-extras-version>4.0.13</tycho-extras-version>
 		<platform-version-name>oxygen</platform-version-name>
 		<tycho.scmUrl>scm:git:https://github.com/eclipse-capella/capella-studio</tycho.scmUrl>
 		<maven.compiler.source>17</maven.compiler.source>
@@ -216,6 +216,30 @@
 							<goal>plugin-source</goal>
 						</goals>
 					</execution>
+					<execution>
+						<id>source-feature</id>
+						<phase>${sourcePhase}</phase>
+						<goals>
+							<goal>source-feature</goal>
+						</goals>
+						<configuration>
+							<archive>
+								<addMavenDescriptor>false</addMavenDescriptor>
+							</archive>
+							<excludes>
+								<plugin id="org.antlr.runtime"/>
+								<plugin id="com.google.guava"/>
+								<feature id="org.polarsys.capella.studio.releng.capella.feature"/>
+								<feature id="org.polarsys.capella.studio.product.feature"/>
+								<feature id="org.polarsys.capella.ta.viewpoint.dsl.feature"/>
+								<feature id="org.polarsys.capella.extension.sdk.feature"/>
+								<feature id="org.polarsys.capella.studio.doc.feature"/>
+								<!-- Exlude all plugins and feature without source -->
+								<!-- To be configured <plugin id="org.polarsys.capella.ui.views"/> <feature id="org.eclipse.emf.diffmerge.sdk.feature"/>
+									-->
+							</excludes>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>
@@ -223,6 +247,10 @@
 				<artifactId>tycho-packaging-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
+					<skipPomGeneration>true</skipPomGeneration>
+					<archive>
+						<addMavenDescriptor>false</addMavenDescriptor>
+					</archive>
 					<sourceReferences>
 						<generate>true</generate>
 					</sourceReferences>
@@ -234,37 +262,6 @@
 						<version>${tycho-extras-version}</version>
 					</dependency>
 				</dependencies>
-			</plugin>
-			<plugin>
-				<groupId>org.eclipse.tycho.extras</groupId>
-				<artifactId>tycho-source-feature-plugin</artifactId>
-				<version>${tycho-extras-version}</version>
-				<configuration>
-					<archive>
-						<addMavenDescriptor>false</addMavenDescriptor>
-					</archive>
-					<excludes>
-						<plugin id="org.antlr.runtime"/>
-						<plugin id="com.google.guava"/>
-						<feature id="org.polarsys.capella.studio.releng.capella.feature"/>
-						<feature id="org.polarsys.capella.studio.product.feature"/>
-						<feature id="org.polarsys.capella.ta.viewpoint.dsl.feature"/>
-						<feature id="org.polarsys.capella.extension.sdk.feature"/>
-						<feature id="org.polarsys.capella.studio.doc.feature"/>
-						<!-- Exlude all plugins and feature without source -->
-						<!-- To be configured <plugin id="org.polarsys.capella.ui.views"/> <feature id="org.eclipse.emf.diffmerge.sdk.feature"/>
-							-->
-					</excludes>
-				</configuration>
-				<executions>
-					<execution>
-						<id>source-feature</id>
-						<phase>${sourcePhase}</phase>
-						<goals>
-							<goal>source-feature</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 		<pluginManagement>

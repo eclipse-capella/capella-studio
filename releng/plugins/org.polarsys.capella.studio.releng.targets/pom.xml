@@ -36,6 +36,8 @@
 		</license>
 	</licenses>
 	<properties>
+    	<sonar.skip>true</sonar.skip>
+		<tycho-version>4.0.13</tycho-version>
 		<targetPlatform.name>capellastudio.targetplatform</targetPlatform.name>
 		<converterApplication.name>org.eclipse.cbi.targetplatform.tpd.converter</converterApplication.name>
 	</properties>
