@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015, 2020 Thales Global Services S.A.S.
+ * Copyright (c) 2015, 2026 Thales Global Services S.A.S.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0
@@ -41,7 +41,6 @@ import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.pde.internal.core.ClasspathComputer;
-import org.eclipse.pde.internal.core.natures.PDE;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
@@ -51,6 +50,8 @@ import org.eclipse.ui.PlatformUI;
  * 
  */
 public final class ResourceHelper {
+	
+	private static final String PDE_PLUGIN_NATURE = "org.eclipse.pde.PluginNature";
 
 	private static final String SUFFIX = ",\\";
 	private static final String BUILD_PROPERTIES = "build.properties";
@@ -208,7 +209,7 @@ public final class ResourceHelper {
 		project.create(null);
 		project.open(null);
 		if (pde) {
-			addNatureToProject(project, PDE.PLUGIN_NATURE, null);
+			addNatureToProject(project, PDE_PLUGIN_NATURE, null);
 			setupJava(project, true);
 			IFolder metaFolder = project.getFolder("META-INF");
 			metaFolder.create(true, true, null);
