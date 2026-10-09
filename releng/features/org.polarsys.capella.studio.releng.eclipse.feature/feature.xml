@@ -61,10 +61,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.cvs"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.draw2d"
          version="0.0.0"/>
 
@@ -78,18 +74,6 @@
 
    <includes
          id="org.eclipse.ecf.core.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.ecf.core.ssl.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.ecf.filetransfer.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.ecf.filetransfer.ssl.feature"
          version="0.0.0"/>
 
    <includes
@@ -237,10 +221,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecoretools.sdk"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.edit"
          version="0.0.0"/>
 
@@ -282,22 +262,6 @@
 
    <includes
          id="org.eclipse.emf.mapping.ui"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.query"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.query.doc"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.query.ocl"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.query.sdk"
          version="0.0.0"/>
 
    <includes
@@ -436,13 +400,6 @@
          id="org.eclipse.sirius.runtime.source"
          version="0.0.0"/>
 
-   <includes
-         id="org.eclipse.sirius.runtime.acceleo"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.runtime.acceleo.source"
-         version="0.0.0"/>
 
    <includes
          id="org.eclipse.sirius.runtime.aql"
@@ -452,13 +409,6 @@
          id="org.eclipse.sirius.runtime.aql.source"
          version="0.0.0"/>
 
-   <includes
-         id="org.eclipse.sirius.runtime.ide.eef"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.runtime.ide.eef.source"
-         version="0.0.0"/>
 
    <includes
          id="org.eclipse.sirius.runtime.ide.ui"
@@ -466,14 +416,6 @@
 
    <includes
          id="org.eclipse.sirius.runtime.ide.ui.source"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.runtime.ide.ui.acceleo"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.runtime.ide.ui.acceleo.source"
          version="0.0.0"/>
 
    <includes
@@ -485,27 +427,11 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.sirius.runtime.ocl"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.runtime.ocl.source"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.sirius.specifier.ide.ui"
          version="0.0.0"/>
 
    <includes
          id="org.eclipse.sirius.specifier.ide.ui.source"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.specifier.ide.ui.acceleo"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.specifier.ide.ui.acceleo.source"
          version="0.0.0"/>
          
    <includes
@@ -681,28 +607,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.xtend"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.xpand"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.emf.mwe.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.xtend.typesystem.emf"
          download-size="0"
          install-size="0"
          version="0.0.0"
