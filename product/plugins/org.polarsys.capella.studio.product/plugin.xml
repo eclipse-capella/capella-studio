@@ -52,6 +52,10 @@
                value="%productBlurb">
          </property>
          <property
+               name="capellaStudioVersion"
+               value="2026.9.0">
+         </property>
+         <property
                name="aboutImage"
                value="icons/CapellaStudioAbout.png">
          </property>

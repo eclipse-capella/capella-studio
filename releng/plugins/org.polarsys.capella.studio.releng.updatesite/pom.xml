@@ -29,6 +29,6 @@
     <relativePath>../org.polarsys.capella.studio.releng.parent</relativePath>
   </parent>
 	<build>
-		<finalName>${project.artifactId}-${qualifiedVersion}</finalName>
+		<finalName>${project.artifactId}-${calversion}.${buildQualifier}</finalName>
 	</build>
 </project>

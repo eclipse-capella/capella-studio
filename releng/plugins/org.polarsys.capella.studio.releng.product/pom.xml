@@ -54,7 +54,7 @@
 				<products>
 					<product>
 						<id>org.polarsys.capella.studio.releng.product</id>
-						<archiveFileName>capella-studio-${qualifiedVersion}</archiveFileName>
+						<archiveFileName>capella-studio-${calversion}.${buildQualifier}</archiveFileName>
 						<rootFolders>
 								<macosx>Capella-Studio.app</macosx>
 							</rootFolders>

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015, 2020 THALES GLOBAL SERVICES.
+ * Copyright (c) 2015, 2026 THALES GLOBAL SERVICES.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0
@@ -22,6 +22,7 @@ import java.util.Properties;
 
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExecutableExtension;
+import org.eclipse.core.runtime.IProduct;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.Status;
@@ -45,6 +46,7 @@ import org.eclipse.ui.internal.ide.StatusUtil;
 import org.eclipse.ui.internal.ide.application.DelayedEventsProcessor;
 import org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor;
 import org.polarsys.kitalpha.ad.services.ToolIntegrationHelper;
+import org.osgi.framework.Version;
 
 /**
  * The whole class has been copied from
@@ -55,6 +57,21 @@ import org.polarsys.kitalpha.ad.services.ToolIntegrationHelper;
  * 
  */
 public class Application implements IApplication, IExecutableExtension {
+
+	static String getProductVersion(IProduct product) {
+		if (product == null) {
+			return "n/a"; //$NON-NLS-1$
+		}
+		String productVersion = product.getProperty("capellaStudioVersion"); //$NON-NLS-1$
+		if (productVersion != null && !productVersion.isBlank()) {
+			return productVersion;
+		}
+		if (product.getDefiningBundle() == null) {
+			return "n/a"; //$NON-NLS-1$
+		}
+		Version bundleVersion = product.getDefiningBundle().getVersion();
+		return bundleVersion.getMajor() + "." + bundleVersion.getMinor() + "." + bundleVersion.getMicro(); //$NON-NLS-1$ //$NON-NLS-2$
+	}
 
 	/**
 	 * The name of the folder containing metadata information for the workspace.
@@ -130,9 +147,9 @@ public class Application implements IApplication, IExecutableExtension {
 				public void preStartup() {
 					super.preStartup();
 					
-					String bundleVersion = Platform.getProduct().getDefiningBundle().getHeaders().get("Bundle-version"); //$NON-NLS-1$
-				    System.setProperty("capellaStudioVersion", bundleVersion.substring(0, 5));
-				    System.setProperty("buildId", bundleVersion.substring(6));
+					IProduct product = Platform.getProduct();
+					System.setProperty("capellaStudioVersion", getProductVersion(product)); //$NON-NLS-1$
+					System.setProperty("buildId", product.getDefiningBundle().getVersion().getQualifier()); //$NON-NLS-1$
 					
 					ToolIntegrationHelper.loadTools();
 				}
