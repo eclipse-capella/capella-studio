@@ -60,9 +60,9 @@ SPDX-License-Identifier: EPL-2.0
    </plugins>
 
    <features>
-      <feature id="org.polarsys.capella.studio.releng.eclipse.feature" version="7.0.0.qualifier"/>
-      <feature id="org.polarsys.capella.studio.releng.kitalpha.feature" version="7.0.0.qualifier"/>
-      <feature id="org.polarsys.capella.studio.releng.capella.feature" version="7.0.0.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.eclipse.feature" version="7.2.0.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.kitalpha.feature" version="7.2.0.qualifier"/>
+      <feature id="org.polarsys.capella.studio.releng.capella.feature" version="7.2.0.qualifier"/>
    </features>
 
    <configurations>
