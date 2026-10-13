@@ -38,6 +38,7 @@
 		<tycho-version>4.0.13</tycho-version>
 		<tycho-extras-version>4.0.13</tycho-extras-version>
 		<platform-version-name>2025-09</platform-version-name>
+		<calversion>2026.9.0</calversion>
 		<tycho.scmUrl>scm:git:https://github.com/eclipse-capella/capella-studio</tycho.scmUrl>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2007, 2020 IBM Corporation and others.
+ * Copyright (c) 2007, 2026 IBM Corporation and others.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0
@@ -84,12 +84,10 @@ public class CapellaStudioSplashHandler extends BasicSplashHandler {
 			capellaVersion = trunkQualifier(capellaPerspectiveBundleVersion);
 		}
 		
-		StringBuilder builder = new StringBuilder();
-		builder.append(studioVersion != null? studioVersion.getMajor() : NOT_APPLICABLE).append('.');
-		builder.append(studioVersion != null? studioVersion.getMinor() : NOT_APPLICABLE).append('.');
-		builder.append(studioVersion != null? studioVersion.getMicro() : NOT_APPLICABLE).append('.');
-		builder.append(studioVersion != null? studioVersion.getQualifier() : NOT_APPLICABLE);
-		final String fCapellaStudioVersion = "Version " + builder.toString();
+		String productVersion = Application.getProductVersion(product);
+		String qualifier = studioVersion != null ? studioVersion.getQualifier() : "";
+		final String fCapellaStudioVersion = "Version " + productVersion
+				+ (qualifier.isEmpty() ? "" : "." + qualifier);
 		final String fCapellaVersion =  "Capella  "+ capellaVersion;
 		final String fKitalphaVersion = "Kitalpha "+ kitalphaVersion;
 		
