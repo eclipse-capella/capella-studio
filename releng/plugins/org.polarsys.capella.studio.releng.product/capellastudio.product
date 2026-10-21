@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Capella Studio Product" uid="org.polarsys.capella.studio.releng.product" id="org.polarsys.capella.studio.product.CapellaStudio" application="org.polarsys.capella.studio.product.application" version="2026.9.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Capella Studio Product" uid="org.polarsys.capella.studio.releng.product" id="org.polarsys.capella.studio.product.CapellaStudio" application="org.polarsys.capella.studio.product.application" version="2026.9.0.qualifier" type="features" includeLaunchers="true" autoIncludeRequirements="true">
 
    <aboutInfo>
       <image path="/org.polarsys.capella.studio.product/icons/CapellaStudioAbout.png"/>
@@ -21,10 +21,14 @@ openFile
       <programArgsLin>--launcher.GTK_version
 2
       </programArgsLin>
-      <vmArgs>-Dosgi.requiredJavaVersion=17
+      <vmArgs>-Dosgi.requiredJavaVersion=21
 -Dosgi.dataAreaRequiresExplicitInit=true
+-Declipse.e4.inject.javax.warning=false
+-Dpde.jreProfile=JavaSE-21
 -Xms512m
 -Xmx2048m
+-Dorg.slf4j.simpleLogger.defaultLogLevel=off
+-XX:+UseG1GC
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
@@ -56,6 +60,8 @@ SPDX-License-Identifier: EPL-2.0
    </license>
 
    <plugins>
+      <plugin id="org.apache.felix.scr"/>
+      <plugin id="org.apache.aries.spifly.dynamic.bundle"/>
       <plugin id="org.eclipse.update.configurator"/>
    </plugins>
 
@@ -66,14 +72,16 @@ SPDX-License-Identifier: EPL-2.0
    </features>
 
    <configurations>
+      <plugin id="ch.qos.logback.classic" autoStart="true" startLevel="3" />
+      <plugin id="org.apache.aries.spifly.dynamic.bundle" autoStart="true" startLevel="2" />
       <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="4" />
-      <property name="org.eclipse.update.reconcile" value="false" />
+      <property name="osgi.bundles.defaultStartLevel" value="4" />
    </configurations>
 
    <preferencesInfo>
