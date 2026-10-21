@@ -178,12 +178,11 @@ location xhtml-docgen "https://download.eclipse.org/capella/addons/xhtmldocgen/u
 	 org.polarsys.capella.docgen.configuration.feature.source.feature.group lazy
 }
 
-location Orbit "https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/2025-09" {
+location Orbit-2026-06 "https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/2026-06" {
 	slf4j.api lazy
 	ch.qos.logback.classic lazy
 	ch.qos.logback.core lazy
 	org.apache.log4j lazy
-	com.google.guava lazy
 }
 
 location Maven-Jetty-12.1.14 "https://download.eclipse.org/tools/orbit/simrel/maven-jetty/release/12.1.14" {
