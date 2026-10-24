@@ -229,26 +229,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.eef.codegen.ecore-feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.eef.edt-feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.eef.extended-feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.eef.runtime-feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.eef.sdk-feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.mapping"
          version="0.0.0"/>
 
