@@ -74,18 +74,6 @@ spec:
 			}
 		}
 		
-		stage('Run RCPTT Tests') {
-			steps {
-				wrap([$class: 'Xvnc', takeScreenshot: true, useXauthority: true]) {
-					withEnv(['MAVEN_OPTS=-Xmx3g']) {
-						script {						
-							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"						
-							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} verify -P rcptt -e "
-						}
-					}
-				}
-			}
-		}
 		stage('Run JUnit Tests') {
 			steps {
 				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
@@ -99,6 +87,18 @@ spec:
 			}
 		}		
 		
+		stage('Run RCPTT Tests') {
+			steps {
+				wrap([$class: 'Xvnc', takeScreenshot: true, useXauthority: true]) {
+					withEnv(['MAVEN_OPTS=-Xmx3g']) {
+						script {						
+							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"						
+							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} verify -P rcptt -e "
+						}
+					}
+				}
+			}
+		}
 		stage('Publish tests results') {
 			steps {
 				junit allowEmptyResults: true, testResults: '*.xml,**/target/surefire-reports/*.xml'
