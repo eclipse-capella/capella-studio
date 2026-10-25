@@ -50,6 +50,7 @@
 		<sonar.jacoco.release>0.8.12</sonar.jacoco.release>
 		
 		<rcptt-maven-version>2.7.4</rcptt-maven-version>
+		<rcptt-aut-extension>tar.gz</rcptt-aut-extension>
 		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/nightly/component/master/</rcptt-kitalpha-components-site>
 		
 		<capellastudio-product-id>org.polarsys.capella.studio.product.CapellaStudio</capellastudio-product-id>
@@ -267,6 +268,15 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.eclipse.rcptt</groupId>
+					<artifactId>rcptt-maven-plugin</artifactId>
+					<configuration>
+						<aut>
+							<extension>${rcptt-aut-extension}</extension>
+						</aut>
+					</configuration>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-install-plugin</artifactId>

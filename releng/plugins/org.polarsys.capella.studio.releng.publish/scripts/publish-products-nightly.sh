@@ -65,8 +65,11 @@ export BUILD_TYPE_PREFIX="N"
 echo "Cmd line : mkdir -p $TARGET_DIR_PRODUCT"
 mkdir -p "$TARGET_DIR_PRODUCT"
 # The actual publication of products
-echo "Cmd line : cp -dR "$WORKSPACE/$PRODUCTS_FOLDER/"*.zip $TARGET_DIR_PRODUCT"
-cp -dR "$WORKSPACE/$PRODUCTS_FOLDER/"*.zip "$TARGET_DIR_PRODUCT"
+for f in "$WORKSPACE/$PRODUCTS_FOLDER/"*.zip "$WORKSPACE/$PRODUCTS_FOLDER/"*.tar.gz ; do
+	[ -f "$f" ] || continue
+	echo "Cmd line : cp -dR $f $TARGET_DIR_PRODUCT"
+	cp -dR "$f" "$TARGET_DIR_PRODUCT"
+done
 
 # Manifest file
 MANIFEST_NAME="Manifest$COMPONENT_NAME.txt"
@@ -78,7 +81,8 @@ echo "IC Build number : $BUILD_NUMBER" > $MANIFEST_FILE
 echo "IC Build url : $MASTER_BUILD_URL/$BUILD_NUMBER/" >> $MANIFEST_FILE
 echo "Products nightly path : $TARGET_DIR_PRODUCT" >>  $MANIFEST_FILE
 echo "Products nightly url list :  " >>  $MANIFEST_FILE
-for f in "$WORKSPACE/$PRODUCTS_FOLDER/"*.zip ; do
+for f in "$WORKSPACE/$PRODUCTS_FOLDER/"*.zip "$WORKSPACE/$PRODUCTS_FOLDER/"*.tar.gz ; do
+	[ -f "$f" ] || continue
 	echo "    $URL_PRODUCT_PREFIX/$BUILD_TYPE/$FULL_VERSION/$(basename $f)" >> $MANIFEST_FILE
 done
 echo "Products nightly manifest url :  $URL_PRODUCT_PREFIX/$BUILD_TYPE/$FULL_VERSION/$MANIFEST_NAME" >>  $MANIFEST_FILE

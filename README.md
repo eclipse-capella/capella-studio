@@ -14,10 +14,25 @@ For more details see [the project page](http://www.eclipse.org/Capella) and [the
 
 # Building
 
-The build uses [Tycho](http://www.eclipse.org/tycho/). To build the product, issue
-```
-mvn clean verify -P full -P product
-```
-from the top-level directory.
+The build uses [Tycho](https://www.eclipse.org/tycho/) and requires Java 21 and Maven. From the top-level directory, generate the target platform, then build and install the unsigned products:
 
-The resulting product can be found in `releng/plugins/org.polarsys.capella.studio.releng.product/target/products/`.
+```sh
+MAVEN_OPTS=-Xmx3g mvn clean verify -f releng/plugins/org.polarsys.capella.studio.releng.targets/pom.xml
+MAVEN_OPTS=-Xmx3g mvn clean install -P 'full,product,!sign' -e
+```
+
+The resulting archives are in `releng/plugins/org.polarsys.capella.studio.releng.product/target/products/`:
+
+- Linux x86_64 and aarch64: `.tar.gz`
+- macOS x86_64 and aarch64: `.tar.gz`
+- Windows x86_64: `.zip`
+
+Product copy and publishing commands must include both `*.zip` and `*.tar.gz`.
+
+After installation, run RCPTT tests on a host with a graphical display (Jenkins uses Xvnc):
+
+```sh
+MAVEN_OPTS=-Xmx3g mvn verify -P rcptt -Dtycho.localArtifacts=ignore -e
+```
+
+RCPTT resolves the installed product for the host platform. Its AUT archive extension defaults to `tar.gz` for Linux and macOS; on Windows, add `-Drcptt-aut-extension=zip` to the RCPTT command. Run `install` before starting RCPTT so the product archive is available in the local Maven repository.
