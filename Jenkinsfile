@@ -68,7 +68,7 @@ spec:
 						sh "echo 'deploy product'"
 						sh "ssh genie.capella@projects-storage.eclipse.org rm -rf ${DEST_PRODUCT_DIR}"
 						sh "ssh genie.capella@projects-storage.eclipse.org mkdir -p ${DEST_PRODUCT_DIR}"
-						sh "scp -r releng/plugins/org.polarsys.capella.studio.releng.product/target/products/*.zip genie.capella@projects-storage.eclipse.org:${DEST_PRODUCT_DIR}"
+						sh "scp -r releng/plugins/org.polarsys.capella.studio.releng.product/target/products/*.zip releng/plugins/org.polarsys.capella.studio.releng.product/target/products/*.tar.gz genie.capella@projects-storage.eclipse.org:${DEST_PRODUCT_DIR}"
 					}
 				}
 			}
