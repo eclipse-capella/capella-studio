@@ -1,5 +1,19 @@
 pipeline {
-	agent { label 'migration' }
+	agent {
+		kubernetes {
+			inheritFrom 'ubuntu-2404'
+			yaml """
+spec:
+  containers:
+  - name: jnlp
+    resources:
+      requests:
+        memory: "6Gi"
+      limits:
+        memory: "6Gi"
+"""
+		}
+	}
 
 	tools {
 		maven 'apache-maven-latest'
