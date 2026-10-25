@@ -50,7 +50,7 @@
 						<version>${project.version}</version>
 						<injections>
 							<injection>
-								<site>https://download.eclipse.org/rcptt/milestone/2.5.5/MO/repository</site>
+								<site>https://download.eclipse.org/rcptt/release/${rcptt-maven-version}/repository</site>
 							</injection>
 						</injections>
 					</aut>
