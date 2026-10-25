@@ -75,5 +75,5 @@ $RECYCLE.BIN/
 ## Pomless
 ###########
 target
-.polyglot.build.properties
+.polyglot.*
 
