@@ -65,7 +65,6 @@
 			<plugin>
 				<!-- Copy ziped component in zips -->
 				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.7</version>
 				<executions>
 					<execution>
 						<id>create-dropin-folders</id>
