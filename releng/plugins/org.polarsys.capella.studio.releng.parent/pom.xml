@@ -49,7 +49,7 @@
 
 		<sonar.jacoco.release>0.8.12</sonar.jacoco.release>
 		
-		<rcptt-maven-version>2.7.4</rcptt-maven-version>
+		<rcptt-maven-version>2.8.2</rcptt-maven-version>
 		<rcptt-aut-extension>tar.gz</rcptt-aut-extension>
 		<rcptt-kitalpha-components-site>https://download.eclipse.org/kitalpha/updates/nightly/component/master/</rcptt-kitalpha-components-site>
 		
