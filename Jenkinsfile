@@ -20,7 +20,7 @@ spec:
 		jdk 'openjdk-jdk21-latest'
 	}
 	environment {
-	    JACOCO_VERSION = "0.8.10"
+	    JACOCO_VERSION = "0.8.15"
 	    MVN_QUALITY_PROFILES = '-P full -P test -P rcptt'
 	    JACOCO_EXEC_FILE_PATH = '${WORKSPACE}/jacoco.exec'
 	}
