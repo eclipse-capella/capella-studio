@@ -47,7 +47,7 @@
 		<testFiltreClass>**/AllTests.java</testFiltreClass>
 		<coverage.skip>false</coverage.skip>
 
-		<sonar.jacoco.release>0.8.12</sonar.jacoco.release>
+		<sonar.jacoco.release>0.8.15</sonar.jacoco.release>
 		
 		<rcptt-maven-version>2.8.2</rcptt-maven-version>
 		<rcptt-aut-extension>tar.gz</rcptt-aut-extension>
