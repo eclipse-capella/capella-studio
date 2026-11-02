@@ -25,7 +25,7 @@ with [get-window "New Capella Project"] {
     get-button Cancel | click
 }
 get-view "Project Explorer" | get-tree | get-menu -path "New/Other..." | click
-with [get-window "Select a wizard"] {
+with [get-window "New"] {
     get-tree | select "Other/New Component sample project"
     get-button "Next >" | click
 }

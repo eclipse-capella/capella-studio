@@ -28,7 +28,7 @@ get-editor "QualityAssessment.data.vptext" | get-text-viewer | set-caret-pos 10 
 get-view "Project Explorer" | get-tree 
     | select "org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.data" 
     | select "org.polarsys.capella.vp.qualityassessment.vpdsl/test-artefact/QualityAssessment.data" 
-    | get-menu "Open With/Text Editor" | click
+    | get-menu "Open With/Plain Text Editor" | click
 with [get-editor "QualityAssessment.data"] {
     with [get-text-viewer] {
         set-caret-pos 11 5
