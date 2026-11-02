@@ -16,7 +16,7 @@ Content-Type: text/ecl
 Entry-Name: .content
 
 get-view "Project Explorer" | get-tree | get-menu "New/Other..." | click
-with [get-window "Select a wizard"] {
+with [get-window "New"] {
     get-editbox -after [get-label "Wizards:"] | set-text ds
     get-tree | select "Kitalpha/Architecture description/Viewpoint DSL project" | double-click
 }

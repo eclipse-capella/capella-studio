@@ -17,7 +17,7 @@ with [get-view "Package Explorer"] {
     click
     get-tree | select "org.eclipse.emf.examples.library/model/extlibrary.ecore" | get-menu -path "New/Other..." | click
 }
-with [get-window "Select a wizard"] {
+with [get-window "New"] {
     get-tree | select "EGF/GenerationChain Model"
     get-button "Next >" | click
 }
