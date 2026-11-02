@@ -15,7 +15,7 @@ Content-Type: text/ecl
 Entry-Name: .content
 
 get-view "Project Explorer" | get-tree | get-menu "New/Other..." | click
-with [get-window "Select a wizard"] {
+with [get-window "New"] {
     get-editbox -after [get-label "Wizards:"] | set-text architec
     get-tree | select "Kitalpha/Architecture description/Architecture Framework DSL Project"
     get-button "Next >" | click
