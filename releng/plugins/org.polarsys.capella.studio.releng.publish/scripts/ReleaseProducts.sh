@@ -152,8 +152,12 @@ echo "<<< RELEASE MANIFEST<<<"  >> $MANIFEST_FILE
 echo "Update release path : $TARGET_DIR_RELEASE_PRODUCT" >>  $MANIFEST_FILE
 echo "Update release url :  $URL_PUBLISH_PREFIX/$BUILD_TYPE/$COMPONENT_NAME/$VERSION" >>  $MANIFEST_FILE
 echo "Products release url list :  " >>  $MANIFEST_FILE
-for f in "$PRODUCT_FOLDER_TO_RELEASE/"*.zip "$PRODUCT_FOLDER_TO_RELEASE/"*.tar.gz ; do
+for f in "$PRODUCT_FOLDER_TO_RELEASE/"*.zip "$PRODUCT_FOLDER_TO_RELEASE/"*.tar.gz "$PRODUCT_FOLDER_TO_RELEASE/"*.dmg ; do
 	[ -f "$f" ] || continue
+	# Prefer the DMG over its intermediate macOS archive.
+	case "$f" in
+		*-macosx*.tar.gz) [ ! -f "${f%.tar.gz}.dmg" ] || continue ;;
+	esac
 	echo "    $URL_PRODUCT_PREFIX/$BUILD_TYPE/$VERSION/$(basename $f)" >> $MANIFEST_FILE
 done
 echo "Products release manifest url :  $URL_PUBLISH_PREFIX/$BUILD_TYPE/$VERSION/$MANIFEST_NAME" >>  $MANIFEST_FILE
@@ -171,8 +175,12 @@ if [ "$LOG" = "true" ]; then
 fi
 
 echo "Release this night build  '$PRODUCT_FOLDER_TO_RELEASE' to publish folder '$TARGET_DIR_RELEASE_PRODUCT/$BUILD_VERSION'" 
-for f in "$PRODUCT_FOLDER_TO_RELEASE/"*.zip "$PRODUCT_FOLDER_TO_RELEASE/"*.tar.gz ; do
+for f in "$PRODUCT_FOLDER_TO_RELEASE/"*.zip "$PRODUCT_FOLDER_TO_RELEASE/"*.tar.gz "$PRODUCT_FOLDER_TO_RELEASE/"*.dmg ; do
 	[ -f "$f" ] || continue
+	# Prefer the DMG over its intermediate macOS archive.
+	case "$f" in
+		*-macosx*.tar.gz) [ ! -f "${f%.tar.gz}.dmg" ] || continue ;;
+	esac
 	echo "		Url Product $(basename $f) release : $URL_PRODUCT_PREFIX/$BUILD_TYPE/$VERSION/$(basename $f)" >> $MANIFEST_FILE
 done
 

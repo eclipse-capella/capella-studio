@@ -65,8 +65,12 @@ export BUILD_TYPE_PREFIX="N"
 echo "Cmd line : mkdir -p $TARGET_DIR_PRODUCT"
 mkdir -p "$TARGET_DIR_PRODUCT"
 # The actual publication of products
-for f in "$WORKSPACE/$PRODUCTS_FOLDER/"*.zip "$WORKSPACE/$PRODUCTS_FOLDER/"*.tar.gz ; do
+for f in "$WORKSPACE/$PRODUCTS_FOLDER/"*.zip "$WORKSPACE/$PRODUCTS_FOLDER/"*.tar.gz "$WORKSPACE/$PRODUCTS_FOLDER/"*.dmg ; do
 	[ -f "$f" ] || continue
+	# Prefer the DMG over its intermediate macOS archive.
+	case "$f" in
+		*-macosx*.tar.gz) [ ! -f "${f%.tar.gz}.dmg" ] || continue ;;
+	esac
 	echo "Cmd line : cp -dR $f $TARGET_DIR_PRODUCT"
 	cp -dR "$f" "$TARGET_DIR_PRODUCT"
 done
@@ -81,8 +85,12 @@ echo "IC Build number : $BUILD_NUMBER" > $MANIFEST_FILE
 echo "IC Build url : $MASTER_BUILD_URL/$BUILD_NUMBER/" >> $MANIFEST_FILE
 echo "Products nightly path : $TARGET_DIR_PRODUCT" >>  $MANIFEST_FILE
 echo "Products nightly url list :  " >>  $MANIFEST_FILE
-for f in "$WORKSPACE/$PRODUCTS_FOLDER/"*.zip "$WORKSPACE/$PRODUCTS_FOLDER/"*.tar.gz ; do
+for f in "$WORKSPACE/$PRODUCTS_FOLDER/"*.zip "$WORKSPACE/$PRODUCTS_FOLDER/"*.tar.gz "$WORKSPACE/$PRODUCTS_FOLDER/"*.dmg ; do
 	[ -f "$f" ] || continue
+	# Prefer the DMG over its intermediate macOS archive.
+	case "$f" in
+		*-macosx*.tar.gz) [ ! -f "${f%.tar.gz}.dmg" ] || continue ;;
+	esac
 	echo "    $URL_PRODUCT_PREFIX/$BUILD_TYPE/$FULL_VERSION/$(basename $f)" >> $MANIFEST_FILE
 done
 echo "Products nightly manifest url :  $URL_PRODUCT_PREFIX/$BUILD_TYPE/$FULL_VERSION/$MANIFEST_NAME" >>  $MANIFEST_FILE

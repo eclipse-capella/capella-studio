@@ -21,7 +21,7 @@ spec:
 	}
 	environment {
 	    JACOCO_VERSION = "0.8.15"
-	    MVN_QUALITY_PROFILES = '-P full -P test -P rcptt'
+	    MVN_QUALITY_PROFILES = "-P 'full,test,rcptt,!sign'"
 	    JACOCO_EXEC_FILE_PATH = '${WORKSPACE}/jacoco.exec'
 	}
 	stages {
@@ -38,9 +38,27 @@ spec:
 			steps {
 				withEnv(['MAVEN_OPTS=-Xmx3g']) {
 					script {		
-						sh "mvn clean install -P full -P sign -P product -e "
+						def sign = github.isPullRequest() ? '!sign' : 'sign'
+						sh "mvn clean install -P 'full,product,${sign}' -e"
 					}
 				}				
+			}
+		}
+		stage('Notarize macOS products') {
+			when {
+				expression { !github.isPullRequest() }
+			}
+			options {
+				timeout(time: 90, unit: 'MINUTES')
+			}
+			steps {
+				macOsNotarizer(
+					"${WORKSPACE}/releng/plugins/org.polarsys.capella.studio.releng.product/target/products",
+					[
+						'capella-studio-*-macosx.cocoa.x86_64.dmg',
+						'capella-studio-*-macosx.cocoa.aarch64.dmg'
+					]
+				)
 			}
 		}
 		stage('Archive artifacts') {
@@ -68,7 +86,9 @@ spec:
 						sh "echo 'deploy product'"
 						sh "ssh genie.capella@projects-storage.eclipse.org rm -rf ${DEST_PRODUCT_DIR}"
 						sh "ssh genie.capella@projects-storage.eclipse.org mkdir -p ${DEST_PRODUCT_DIR}"
-						sh "scp -r releng/plugins/org.polarsys.capella.studio.releng.product/target/products/*.zip releng/plugins/org.polarsys.capella.studio.releng.product/target/products/*.tar.gz genie.capella@projects-storage.eclipse.org:${DEST_PRODUCT_DIR}"
+						def productsDirectory = 'releng/plugins/org.polarsys.capella.studio.releng.product/target/products'
+						def macOsPattern = github.isPullRequest() ? '*-macosx.*.tar.gz' : '*-macosx.*.dmg'
+						sh "scp ${productsDirectory}/*.zip ${productsDirectory}/*-linux.*.tar.gz ${productsDirectory}/${macOsPattern} genie.capella@projects-storage.eclipse.org:${DEST_PRODUCT_DIR}"
 					}
 				}
 			}
@@ -80,7 +100,7 @@ spec:
 					withEnv(['MAVEN_OPTS=-Xmx3g']) {
 						script {
 							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"											
-							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} verify -P full -P product -P test -e "
+							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} verify -P 'full,product,test,!sign' -e "
 						}
 					}
 				}
@@ -93,7 +113,7 @@ spec:
 					withEnv(['MAVEN_OPTS=-Xmx3g']) {
 						script {						
 							def jacocoPrepareAgent = "-Djacoco.destFile=$JACOCO_EXEC_FILE_PATH -Djacoco.append=true org.jacoco:jacoco-maven-plugin:$JACOCO_VERSION:prepare-agent"						
-							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} verify -P rcptt -e "
+							sh "mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore ${jacocoPrepareAgent} verify -P 'rcptt,!sign' -e "
 						}
 					}
 				}
