@@ -27,7 +27,22 @@ The resulting archives are in `releng/plugins/org.polarsys.capella.studio.releng
 - macOS x86_64 and aarch64: `.tar.gz`
 - Windows x86_64: `.zip`
 
-Product copy and publishing commands must include both `*.zip` and `*.tar.gz`.
+Jenkins branch builds enable the `sign` profile: Eclipse CBI signs both
+`Capella-Studio.app` bundles with the JVM/native-library entitlements, then packages
+signed `capella-studio-<version>.<qualifier>-macosx.cocoa.<arch>.dmg` images with
+volume name `Capella Studio`. The shared `macOsNotarizer` step notarizes and staples
+both images before deployment, with a 90-minute timeout. A signing, packaging or
+notarization failure stops publication; notarization logs are archived by Jenkins.
+The Studio job must have access to the same Capella Pipeline Library and Eclipse
+CBI services as the Capella build. The notarizer needs Bash 4.4+, curl, jq and GNU
+checksum tools on the Linux agent.
+
+Branch builds publish macOS DMGs; pull-request builds disable signing and publish
+macOS `.tar.gz` archives. Linux `.tar.gz` and Windows `.zip` publication is unchanged.
+Legacy publication scripts also accept `.dmg` and prefer it over a matching macOS
+archive. Tycho still installs the `.tar.gz` artifacts in Maven for RCPTT. Local
+unsigned builds need no signing or notarization service; the existing external
+Java 21 requirement is unchanged.
 
 After installation, run RCPTT tests on a host with a graphical display (Jenkins uses Xvnc):
 
@@ -36,3 +51,17 @@ MAVEN_OPTS=-Xmx3g mvn verify -P rcptt -Dtycho.localArtifacts=ignore -e
 ```
 
 RCPTT resolves the installed product for the host platform. Its AUT archive extension defaults to `tar.gz` for Linux and macOS; on Windows, add `-Drcptt-aut-extension=zip` to the RCPTT command. Run `install` before starting RCPTT so the product archive is available in the local Maven repository.
+
+Packaging regression checks require Python 3.9+, Ant and GNU cp (`gcp` on macOS),
+without contacting CBI:
+
+```sh
+python3 -m unittest discover -s releng/tests -v
+```
+
+With Groovy installed, check the Jenkins publication and failure paths without
+running Maven or deploying anything:
+
+```sh
+groovy releng/tests/JenkinsfileTest.groovy .
+```
